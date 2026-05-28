@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ST:CC Strategy Compendium</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:        #0a0e1a;
+    --bg2:       #0f1628;
+    --bg3:       #141c35;
+    --blue:      #4a9fd4;
+    --blue2:     #7ec8f0;
+    --red:       #d44a4a;
+    --red2:      #f07e7e;
+    --gold:      #c8a84b;
+    --text:      #ccd6f0;
+    --muted:     #7a8aaa;
+    --green:     #4ac48a;
+    --purple:    #9b6ecf;
+    --border:    rgba(74,159,212,0.2);
+    --border-r:  rgba(212,74,74,0.2);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 300;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(160deg, #040810 0%, #0a1830 40%, #061020 100%);
+    border-bottom: 2px solid var(--blue);
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(74,159,212,0.03) 80px, rgba(74,159,212,0.03) 81px),
+      repeating-linear-gradient(0deg,  transparent, transparent 80px, rgba(74,159,212,0.03) 80px, rgba(74,159,212,0.03) 81px);
+  }
+  .hero-eyebrow {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--blue);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .hero-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.8rem, 6vw, 3.5rem);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 60px rgba(74,159,212,0.4);
+    line-height: 1.2;
+  }
+  .hero-title span { color: var(--blue2); }
+  .hero-sub {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  .hero-note {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    border: 1px solid rgba(74,159,212,0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 2px;
+  }
+
+  /* ── Layout ── */
+  .toc {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 5rem;
+  }
+
+  /* ── Box banners ── */
+  .box-banner {
+    border-radius: 8px;
+    padding: 1.1rem 1.4rem;
+    margin: 2.5rem 0 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .box-banner.blue {
+    background: rgba(74,159,212,0.08);
+    border: 1px solid rgba(74,159,212,0.3);
+  }
+  .box-banner.red {
+    background: rgba(212,74,74,0.08);
+    border: 1px solid rgba(212,74,74,0.3);
+  }
+  .box-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .blue .box-dot { background: var(--blue); box-shadow: 0 0 8px var(--blue); }
+  .red  .box-dot { background: var(--red);  box-shadow: 0 0 8px var(--red);  }
+  .box-banner-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+  .blue .box-banner-title { color: var(--blue2); }
+  .red  .box-banner-title { color: var(--red2);  }
+  .box-banner-sub {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 0.1rem;
+  }
+
+  /* ── Section label ── */
+  .section-label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding-bottom: 0.4rem;
+    margin: 1.75rem 0 1rem;
+  }
+
+  /* ── Card grid ── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.75rem;
+  }
+
+  /* ── Entry card ── */
+  .entry {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem 1.1rem;
+    text-decoration: none;
+    color: var(--text);
+    display: block;
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    position: relative;
+  }
+  .entry:hover:not(.soon) {
+    background: var(--bg3);
+    transform: translateY(-2px);
+  }
+  .entry.blue-box:hover:not(.soon) { border-color: var(--blue); }
+  .entry.red-box:hover:not(.soon)  { border-color: var(--red);  }
+  .entry.soon { opacity: 0.4; cursor: default; }
+
+  .entry-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #fff;
+    margin-bottom: 0.35rem;
+    padding-right: 2.5rem;
+  }
+  .entry-sub {
+    font-size: 0.75rem;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+  .entry-badge {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.7rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
+    padding: 0.15rem 0.4rem;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+  .badge-live {
+    background: rgba(74,196,138,0.15);
+    color: var(--green);
+    border: 1px solid rgba(74,196,138,0.4);
+  }
+  .badge-soon {
+    background: rgba(122,138,170,0.08);
+    color: var(--muted);
+    border: 1px solid rgba(122,138,170,0.2);
+  }
+
+  /* faction left border — blue box */
+  .blue-box[data-faction="starfleet"] { border-left: 3px solid #4a9fd4; }
+  .blue-box[data-faction="andorian"]  { border-left: 3px solid #7ec8f0; }
+  .blue-box[data-faction="klingon"]   { border-left: 3px solid #c8a84b; }
+  .blue-box[data-faction="romulan"]   { border-left: 3px solid #e05a5a; }
+  .blue-box[data-faction="neutral"]   { border-left: 3px solid #4ac48a; }
+
+  /* faction left border — red box */
+  .red-box[data-faction="starfleet"]  { border-left: 3px solid #4a9fd4; }
+  .red-box[data-faction="vulcan"]     { border-left: 3px solid #4ac48a; }
+  .red-box[data-faction="terran"]     { border-left: 3px solid #d44a4a; }
+  .red-box[data-faction="augment"]    { border-left: 3px solid #9b6ecf; }
+  .red-box[data-faction="neutral"]    { border-left: 3px solid #7a8aaa; }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  footer a { color: var(--blue); text-decoration: none; }
+
+  @media (max-width: 500px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+    .hero { padding: 2.5rem 1rem 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-eyebrow">Community Strategy Resource</div>
+  <h1 class="hero-title">Star Trek<br><span>Captain's Chair</span><br>Compendium</h1>
+  <p class="hero-sub">Strategy guides for every captain, card type, and mechanic — compiled from the BGG community for easier reading and in-game reference.</p>
+  <div class="hero-note">Content by mdmccu2 &amp; BGG community · Formatted for the web</div>
+</header>
+
+<main class="toc">
+
+  <!-- ═══════════════════ BOX 1 — CAPTAIN'S CHAIR ═══════════════════ -->
+  <div class="box-banner blue">
+    <div class="box-dot"></div>
+    <div>
+      <div class="box-banner-title">Box 1 — Captain's Chair</div>
+      <div class="box-banner-sub">Base game guides</div>
+    </div>
+  </div>
+
+  <div class="section-label">Captains</div>
+  <div class="card-grid">
+
+    <a href="shran.html" class="entry blue-box" data-faction="andorian">
+      <span class="entry-badge badge-live">Live</span>
+      <div class="entry-name">Shran</div>
+      <div class="entry-sub">Andorian · Imperial</div>
+    </a>
+
+    <a href="picard.html" class="entry blue-box soon" data-faction="starfleet">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Picard</div>
+      <div class="entry-sub">Starfleet · Federation</div>
+    </a>
+
+    <a href="burnham.html" class="entry blue-box soon" data-faction="starfleet">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Burnham</div>
+      <div class="entry-sub">Starfleet · Discovery</div>
+    </a>
+
+    <a href="sisko.html" class="entry blue-box soon" data-faction="starfleet">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Sisko</div>
+      <div class="entry-sub">Starfleet · Bajoran</div>
+    </a>
+
+    <a href="sela.html" class="entry blue-box soon" data-faction="romulan">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Sela</div>
+      <div class="entry-sub">Romulan · Military</div>
+    </a>
+
+    <a href="koloth.html" class="entry blue-box soon" data-faction="klingon">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Koloth</div>
+      <div class="entry-sub">Klingon · Imperial</div>
+    </a>
+
+  </div>
+
+  <div class="section-label">Market Card Guides</div>
+  <div class="card-grid">
+
+    <a href="allies.html" class="entry blue-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Ally Deck</div>
+      <div class="entry-sub"></div>
+    </a>
+
+    <a href="ships.html" class="entry blue-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Ship Deck</div>
+      <div class="entry-sub"></div>
+    </a>
+
+    <a href="cargo.html" class="entry blue-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Cargo Deck</div>
+      <div class="entry-sub"></div>
+    </a>
+
+    <a href="locations.html" class="entry blue-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Location Deck</div>
+      <div class="entry-sub"></div>
+    </a>
+
+    <a href="encounters-incidents.html" class="entry blue-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Encounters &amp; Incidents</div>
+      <div class="entry-sub"></div>
+    </a>
+
+  </div>
+
+  <div class="section-label">Strategy Guides</div>
+  <div class="card-grid">
+
+    <a href="solo.html" class="entry blue-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Solo Play</div>
+      <div class="entry-sub"></div>
+    </a>
+
+    <a href="five-year-mission.html" class="entry blue-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">5-Year Mission</div>
+      <div class="entry-sub"></div>
+    </a>
+
+    <a href="vs-picard.html" class="entry blue-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Playing Against Picard</div>
+      <div class="entry-sub"></div>
+    </a>
+
+  </div>
+
+
+  <!-- ═══════════════════ BOX 2 — TO BOLDLY GO ═══════════════════ -->
+  <div class="box-banner red">
+    <div class="box-dot"></div>
+    <div>
+      <div class="box-banner-title">Box 2 — To Boldly Go</div>
+      <div class="box-banner-sub">Expansion guides — guides coming as content is written</div>
+    </div>
+  </div>
+
+  <div class="section-label">Captains</div>
+  <div class="card-grid">
+
+    <a href="georgiou.html" class="entry red-box soon" data-faction="terran">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Georgiou</div>
+      <div class="entry-sub">Terran · Imperial</div>
+    </a>
+
+    <a href="soval.html" class="entry red-box soon" data-faction="vulcan">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Soval</div>
+      <div class="entry-sub">Vulcan</div>
+    </a>
+
+    <a href="kirk.html" class="entry red-box soon" data-faction="starfleet">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Kirk</div>
+      <div class="entry-sub">Starfleet · Enterprise</div>
+    </a>
+
+    <a href="archer.html" class="entry red-box soon" data-faction="starfleet">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Archer</div>
+      <div class="entry-sub">Starfleet · Enterprise</div>
+    </a>
+
+    <a href="rebner.html" class="entry red-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Rebner</div>
+      
+    </a>
+
+    <a href="khan.html" class="entry red-box soon" data-faction="augment">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Khan</div>
+      <div class="entry-sub">Augment</div>
+    </a>
+
+  </div>
+
+</main>
+
+<footer>
+  Content by <a href="https://boardgamegeek.com/user/mdmccu2" target="_blank">mdmccu2</a> and the BGG community ·
+  Compiled for the web · Not affiliated with <a href="https://www.chiptheorygames.com" target="_blank">Chip Theory Games</a>
+</footer>
+
+</body>
+</html>
