@@ -1,24 +1,24 @@
 # ST:CC Compendium — Workflow Summary
-## For continuity across chat sessions
+## For continuity across sessions
 
 ---
 
 ## Project Overview
 
-A community strategy compendium for **Star Trek: Captain's Chair** hosted at:
+A strategy compendium for **Star Trek: Captain's Chair** hosted at:
 **https://periodic-agent.github.io/stcc-strategy/**
 
 GitHub repo: **https://github.com/periodic-agent/stcc-strategy**
 
 Content by **Matthew McCue (mdmccu2)** from BGG forums.
-Formatted by **Periodic_agent**.
+Formatted by **Periodic_agent** using Claude Sonnet 4.6 Pro
 
 ---
 
-## Critical Rules
+##  Rules
 
 1. **Zero text edits.** McCue's text is reproduced verbatim — no summarizing, no rewriting, no restructuring. Format only: headings, paragraph breaks, image placement.
-2. **Paragraph breaks** must be identified by asking for the last sentence of each paragraph when the source text runs together (BGG strips formatting).
+2. **Paragraph breaks** must sometimes be identified by asking for the last sentence of each paragraph when the source text runs together (BGG strips formatting).
 3. **Image credit** footer on every guide: `Card images © WizKids.`
 4. **Attribution** footer on every guide: `Content by Matthew McCue (mdmccu2) · Formatting by Periodic_agent`
 5. **Back to Compendium** link at top and bottom of every guide.
@@ -52,6 +52,7 @@ Formatted by **Periodic_agent**.
 - Claude extracts CDN URLs from the SingleFile HTML and produces the script
 - Images batch-download from BGG CDN to local folder
 - Upload all images to Claude in next chat
+- Note: BGG switched to embedding base64 WebP directly in newer threads vs older CDN-hosted JPEGs, so new guides will note require manual downloads. 
 
 ### Step 3 — Send to Claude
 Upload:
