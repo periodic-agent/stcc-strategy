@@ -37,7 +37,7 @@ Formatted by **Periodic_agent** using Claude Sonnet 4.6 Pro
 | Sela | `sela.html` |
 | Koloth | `koloth.html` |
 | TBG captain guides | `tbg-[name].html` |
-| Market guides | `allies.html`, `ships.html`, `cargo.html`, `locations.html`, `encounters-incidents.html` |
+| Market guides | `persons.html`, `allies.html`, `ships.html`, `cargo.html`, `locations.html`, `encounters-incidents.html` |
 | Strategy guides | `solo.html`, `five-year-mission.html`, `vs-picard.html` |
 
 ---
@@ -122,6 +122,7 @@ Top and bottom of every guide. Top nav goes **before** `<header>`.
 </footer>
 ```
 The date is the day the guide was built/rebuilt. Update it whenever the source guide is edited on BGG and reimported.
+The date is the day the guide was built/rebuilt. Update it whenever the source guide is edited on BGG and reimported.
 
 ### Lightbox
 ```html
@@ -190,8 +191,8 @@ Copy this verbatim for every Captain's Chair guide. Swap blue vars for red equiv
 
 ```
 Box 1 — Captain's Chair (blue)
-  Captains: Shran✓, Picard, Burnham✓, Sisko, Sela, Koloth✓
-  Location & Market: Allies, Ships, Cargo, Locations✓, Encounters & Incidents✓
+  Captains: Shran✓, Picard✓, Burnham✓, Sisko✓, Sela✓, Koloth✓
+  Location & Market: Persons✓, Allies✓, Ships✓, Cargo✓, Locations✓, Encounters & Incidents✓
   Strategy: Solo, 5-Year Mission, Playing Against Picard
 
 Box 2 — To Boldly Go (red)
@@ -239,25 +240,26 @@ Alt text from the SingleFile HTML is used to name files meaningfully
 | Guide | File | Status |
 |---|---|---|
 | Shran Strategy Guide | `shran.html` | ✅ Live |
-| TBG Location Guide | `tbg-locations.html` | ✅ Live |
+| Picard Strategy Guide | `picard.html` | ✅ Live |
 | Burnham Strategy Guide | `burnham.html` | ✅ Live |
+| Sisko Strategy Guide | `sisko.html` | ✅ Live |
+| Sela Strategy Guide | `sela.html` | ✅ Live |
 | Koloth Strategy Guide | `koloth.html` | ✅ Live |
-| Encounter & Incident Decks | `encounters-incidents.html` | ✅ Live |
+| Person Deck Guide | `persons.html` | ✅ Live |
+| Cargo Deck Guide | `cargo.html` | ✅ Live |
+| Ship Deck Guide | `ships.html` | ✅ Live |
+| Ally Deck Guide | `allies.html` | ✅ Live |
 | Location Deck Guide | `locations.html` | ✅ Live |
+| Encounter & Incident Decks | `encounters-incidents.html` | ✅ Live |
+| TBG Location Guide | `tbg-locations.html` | ✅ Live |
 
 ---
 
 ## Pending — Known Guides to Add (from BGG)
 
-- Captain's Chair - Captains - Picard
-- Captain's Chair - Captains - Sela
-- Captain's Chair - Captains - Sisko
 - Captain's Chair - Playing against Picard (multiplayer + solo)
 - Captain's Chair - Guide to 5-Year Mission Strategies
 - Captain's Chair - Guide to Solo
-- Captain's Chair - Market - Ally Deck
-- Captain's Chair - Market - Ship Deck
-- Captain's Chair - Market - Cargo Deck
 - To Boldly Go - Captains (6 captains, see index)
 
 ---
@@ -278,4 +280,4 @@ Example prompt:
 - Images stay as **base64 in HTML** until the library grows large enough to justify an `images/` folder with file references.
 - The 3 missing TBG location images (Cold Station 12, Tanuga IV, Tellar Prime) load from BGG CDN — acceptable for now.
 - `crop_cards.py` (perspective transform tool) exists for future individual card extraction — on hold pending McCue's agreement.
-- McCue has confirmed he took photos of cards with permission from WizKids.
+- Pictures taken with permission from WizKids.
