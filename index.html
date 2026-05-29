@@ -210,10 +210,15 @@
 
   /* faction left border — blue box */
   .blue-box[data-faction="starfleet"] { border-left: 3px solid #4a9fd4; }
-  .blue-box[data-faction="andorian"]  { border-left: 3px solid #7ec8f0; }
-  .blue-box[data-faction="klingon"]   { border-left: 3px solid #c8a84b; }
+  .blue-box[data-faction="andorian"]  { border-left: 3px solid #c8a84b; }
+  .blue-box[data-faction="klingon"]   { border-left: 3px solid #e05a5a; }
   .blue-box[data-faction="romulan"]   { border-left: 3px solid #e05a5a; }
   .blue-box[data-faction="neutral"]   { border-left: 3px solid #4ac48a; }
+  .blue-box[data-faction="ally"]      { border-left: 3px solid #9b6ecf; }
+  .blue-box[data-faction="ship"]      { border-left: 3px solid #7a8aaa; }
+  .blue-box[data-faction="cargo"]     { border-left: 3px solid #3a6aaa; }
+  .blue-box[data-faction="location"]  { border-left: 3px solid #4ac48a; }
+  .blue-box[data-faction="incident"]  { border-left: 3px solid #d4699f; }
 
   /* faction left border — red box */
   .red-box[data-faction="starfleet"]  { border-left: 3px solid #4a9fd4; }
@@ -221,6 +226,7 @@
   .red-box[data-faction="terran"]     { border-left: 3px solid #d44a4a; }
   .red-box[data-faction="augment"]    { border-left: 3px solid #9b6ecf; }
   .red-box[data-faction="neutral"]    { border-left: 3px solid #7a8aaa; }
+  .red-box[data-faction="location"]   { border-left: 3px solid #4ac48a; }
 
   /* ── Footer ── */
   footer {
@@ -299,34 +305,34 @@
 
   </div>
 
-  <div class="section-label">Market Card Guides</div>
+  <div class="section-label">Location &amp; Market Guides</div>
   <div class="card-grid">
 
-    <a href="allies.html" class="entry blue-box soon" data-faction="neutral">
+    <a href="allies.html" class="entry blue-box soon" data-faction="ally">
       <span class="entry-badge badge-soon">Soon</span>
       <div class="entry-name">Ally Deck</div>
       <div class="entry-sub"></div>
     </a>
 
-    <a href="ships.html" class="entry blue-box soon" data-faction="neutral">
+    <a href="ships.html" class="entry blue-box soon" data-faction="ship">
       <span class="entry-badge badge-soon">Soon</span>
       <div class="entry-name">Ship Deck</div>
       <div class="entry-sub"></div>
     </a>
 
-    <a href="cargo.html" class="entry blue-box soon" data-faction="neutral">
+    <a href="cargo.html" class="entry blue-box soon" data-faction="cargo">
       <span class="entry-badge badge-soon">Soon</span>
       <div class="entry-name">Cargo Deck</div>
       <div class="entry-sub"></div>
     </a>
 
-    <a href="locations.html" class="entry blue-box soon" data-faction="neutral">
+    <a href="locations.html" class="entry blue-box soon" data-faction="location">
       <span class="entry-badge badge-soon">Soon</span>
       <div class="entry-name">Location Deck</div>
       <div class="entry-sub"></div>
     </a>
 
-    <a href="encounters-incidents.html" class="entry blue-box" data-faction="neutral">
+    <a href="encounters-incidents.html" class="entry blue-box" data-faction="incident">
       <span class="entry-badge badge-live">Live</span>
       <div class="entry-name">Encounters &amp; Incidents</div>
       <div class="entry-sub"></div>
@@ -411,9 +417,9 @@
   <div class="section-label">Location &amp; Market Guides</div>
   <div class="card-grid">
 
-    <a href="tbg-locations.html" class="entry red-box" data-faction="neutral">
+    <a href="tbg-locations.html" class="entry red-box" data-faction="location">
       <span class="entry-badge badge-live">Live</span>
-      <div class="entry-name">TBG Locations</div>
+      <div class="entry-name">Location Deck</div>
       <div class="entry-sub">Starting &amp; Advanced Locations</div>
     </a>
 
