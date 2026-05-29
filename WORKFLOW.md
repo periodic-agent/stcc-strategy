@@ -65,6 +65,7 @@ Claude will:
 - Embed images as base64 (or CDN ref if base64 not available)
 - Produce styled `guidename.html` using the canonical CSS below
 - **Automatically update `index.html`** — flip the matching entry from Soon → Live
+- **Set `Last updated` date** in the footer to today's date
 
 ### Step 4 — Upload to GitHub
 - Drop new `.html` + updated `index.html` in repo root
@@ -116,9 +117,10 @@ Top and bottom of every guide. Top nav goes **before** `<header>`.
 ```html
 <footer>
   Card images © WizKids.<br>
-  Content by Matthew McCue (mdmccu2) · Formatting by Periodic_agent
+  Content by Matthew McCue (mdmccu2) · Formatting by Periodic_agent · Last updated DD-MM-YYYY
 </footer>
 ```
+The date is the day the guide was built/rebuilt. Update it whenever the source guide is edited on BGG and reimported.
 
 ### Lightbox
 ```html
