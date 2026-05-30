@@ -41,6 +41,16 @@
   #lightbox img{max-width:90vw;max-height:90vh;border-radius:8px;box-shadow:0 0 60px rgba(74,159,212,0.4);}
   footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:0.75rem;color:var(--muted);line-height:1.8;}
   @media(max-width:600px){.chapter-header{padding:2rem 1rem 1.5rem;}.img-pair{grid-template-columns:1fr;}}
+
+  .yt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:1.25rem 0 2rem;}
+  .yt-card{text-decoration:none;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:var(--bg2);transition:border-color 0.2s,transform 0.2s;}
+  .yt-card:hover{border-color:var(--blue);transform:translateY(-3px);}
+  .yt-thumb{position:relative;}
+  .yt-thumb img{width:100%;display:block;}
+  .yt-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#fff;text-shadow:0 0 12px rgba(0,0,0,0.8);opacity:0.85;}
+  .yt-card:hover .yt-play{opacity:1;}
+  .yt-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.08em;color:var(--text);padding:0.6rem 0.75rem 0.2rem;}
+  .yt-sub{font-size:0.72rem;color:var(--muted);padding:0 0.75rem 0.75rem;}
 </style>
 </head>
 <body>
@@ -64,6 +74,7 @@
     <li><a href="#neutral">The Neutral Zone Game</a></li>
     <li><a href="#market">The Market Game</a></li>
     <li><a href="#conspiracy">Conspiracy</a></li>
+    <li><a href="#video-playthroughs">Video Playthroughs</a></li>
   </ol>
 </nav>
 
@@ -164,6 +175,34 @@
 
   <p>There have been games (not many) that I have played with Conspiracy where it never comes up, usually because the Bot logs it early on. Sometimes it has a huge impact, and sometimes it's not a factor at all. Would I recommend using it? Certainly if you're one of those players who crushes it constantly at Admiral difficulty, sure, why not? But I don't actually think it has an enormous impact on gameplay. It simply slows down your ability to take actions and cycle your deck, and in the wrong circumstances it could be pretty devastating. I would say Burnham is the best equipped to deal with Conspiracy early on due to how many person cards she has in her starting deck. But the captains who are least equipped have limited logging options from their deck and person cards they can't afford to discard.</p>
   <a href="#top" class="back-top">↑ back to top</a>
+
+</main>
+
+
+  <h2 id="video-playthroughs">Video Playthroughs</h2>
+
+  <p>Official solo tutorials by Paul Grogan (Gaming Rules!):</p>
+
+  <div class="yt-grid">
+
+    <a href="https://www.youtube.com/live/XBHZl0Qdveg" target="_blank" class="yt-card">
+      <div class="yt-thumb">
+        <img src="https://img.youtube.com/vi/XBHZl0Qdveg/mqdefault.jpg" alt="Solo Tutorial — Part 1 thumbnail">
+        <div class="yt-play">▶</div>
+      </div>
+      <div class="yt-label">Solo Tutorial — Part 1</div>
+      <div class="yt-sub">Official · Gaming Rules!</div>
+    </a>
+    <a href="https://www.youtube.com/live/goYrEDVUSC4" target="_blank" class="yt-card">
+      <div class="yt-thumb">
+        <img src="https://img.youtube.com/vi/goYrEDVUSC4/mqdefault.jpg" alt="Solo Training Mode — Part 2 thumbnail">
+        <div class="yt-play">▶</div>
+      </div>
+      <div class="yt-label">Solo Training Mode — Part 2</div>
+      <div class="yt-sub">Official · Gaming Rules!</div>
+    </a>
+
+  </div>
 
 </main>
 

@@ -48,6 +48,16 @@
 
   .back-top{display:block;text-align:right;font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-top:0.25rem;margin-bottom:0.5rem;}
   .back-top:hover{color:var(--blue);}
+
+  .yt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:1.25rem 0 2rem;}
+  .yt-card{text-decoration:none;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:var(--bg2);transition:border-color 0.2s,transform 0.2s;}
+  .yt-card:hover{border-color:var(--blue);transform:translateY(-3px);}
+  .yt-thumb{position:relative;}
+  .yt-thumb img{width:100%;display:block;}
+  .yt-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#fff;text-shadow:0 0 12px rgba(0,0,0,0.8);opacity:0.85;}
+  .yt-card:hover .yt-play{opacity:1;}
+  .yt-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.08em;color:var(--text);padding:0.6rem 0.75rem 0.2rem;}
+  .yt-sub{font-size:0.72rem;color:var(--muted);padding:0 0.75rem 0.75rem;}
 </style>
 </head>
 <body>
@@ -72,6 +82,7 @@
     <li><a href="#sela-s-reserve-cards">Sela's Reserve Cards</a></li>
     <li><a href="#sela-s-development-cards">Sela's Development Cards</a></li>
     <li><a href="#putting-it-all-together">Putting It All Together</a></li>
+    <li><a href="#video-playthroughs">Video Playthroughs</a></li>
   </ol>
 </nav>
 
@@ -251,6 +262,26 @@
   <p>Overall, Sela has a pretty on-rails start based on what you draw, but she can diverge pretty significantly in quick fashion. Deciding how to interact with the market, when to push the endgame, and what order you should empty out your developments and control locations with the Scimitar is the balancing act here. If you know you have a slower Starfleet opponent, I would control locations consistently, recalling ships from the discard when possible and preventing your opponent from gaining locations without a fight. Forcing the game into a match on your terms is key, because if they ignore you and start eating up significant market card and encounter points, you won't catch up as quickly. As for playing the bots, I would evaluate the aggressiveness and let that guide strategy, while also continuing to police the neutral zone, which is thematically appropriate for the cold war with the Romulans.</p>
 
   <p>Thanks for reading my Sela Strategy Guide. Please feel free to add thoughts and strategies below. I always subscribe to my posts and look forward to conversing about Sela in the comments. I continue to enjoy making these guides and look forward to the mountain of theory-crafting that Second Contact and To Boldly Go will provide.</p>
+
+</main>
+
+
+  <h2 id="video-playthroughs">Video Playthroughs</h2>
+
+  <p>Playthrough by Paul Grogan (Gaming Rules!) featuring Sela:</p>
+
+  <div class="yt-grid">
+
+    <a href="https://youtu.be/L0U4rMzRcJY" target="_blank" class="yt-card">
+      <div class="yt-thumb">
+        <img src="https://img.youtube.com/vi/L0U4rMzRcJY/mqdefault.jpg" alt="Sela vs Sisko thumbnail">
+        <div class="yt-play">▶</div>
+      </div>
+      <div class="yt-label">Sela vs Sisko</div>
+      <div class="yt-sub">Two-player · Gaming Rules!</div>
+    </a>
+
+  </div>
 
 </main>
 

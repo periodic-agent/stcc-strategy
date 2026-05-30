@@ -48,6 +48,16 @@
 
   .back-top{display:block;text-align:right;font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-top:0.25rem;margin-bottom:0.5rem;}
   .back-top:hover{color:var(--blue);}
+
+  .yt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:1.25rem 0 2rem;}
+  .yt-card{text-decoration:none;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:var(--bg2);transition:border-color 0.2s,transform 0.2s;}
+  .yt-card:hover{border-color:var(--blue);transform:translateY(-3px);}
+  .yt-thumb{position:relative;}
+  .yt-thumb img{width:100%;display:block;}
+  .yt-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#fff;text-shadow:0 0 12px rgba(0,0,0,0.8);opacity:0.85;}
+  .yt-card:hover .yt-play{opacity:1;}
+  .yt-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.08em;color:var(--text);padding:0.6rem 0.75rem 0.2rem;}
+  .yt-sub{font-size:0.72rem;color:var(--muted);padding:0 0.75rem 0.75rem;}
 </style>
 </head>
 <body>
@@ -72,6 +82,7 @@
     <li><a href="#sisko-s-reserve-cards">Sisko's Reserve Cards</a></li>
     <li><a href="#sisko-s-development-cards">Sisko's Development Cards</a></li>
     <li><a href="#putting-it-all-together">Putting It All Together</a></li>
+    <li><a href="#video-playthroughs">Video Playthroughs</a></li>
   </ol>
 </nav>
 
@@ -239,6 +250,36 @@
   <p>Because Sisko has so many away teams, it's unlikely you'll have to worry about whether you should send away teams to neutral locations from your controlled ones. You can easily keep three for card draw and three for controlling neutral locations. If you do decide to use Strange New Worlds (which I assume you will at least a few times a game) try to make sure you can keep at least one away team on Bajor so that card draw can continue. Also remember that you do lose a point for every controlled location that ends up logged, because Sisko won't score them for his endgame points. Still, that trade off for an Encounter is almost universally worth it.</p>
 
   <p>You've got some decent attacks with Kira, Worf, Garak, and the Defiant, so you don't necessarily need to be seeking more immediately. I think that Sisko does a good job with somewhat mutually assured destruction, as his cards are good threats to an opponent but also can be used to help both players or for non-aggressive actions. Kira providing an opponent with an Influence, Worf and Self-Replicating Mines being used for defense, etc. And that's very thematic for Sisko. When he's threatening something, it's intimidating. But you know he'll follow through and maybe drag the entire quadrant into a war. Unless we choose a different path. Thankfully, he has a lot of extremely viable paths forward for success.</p>
+
+</main>
+
+
+  <h2 id="video-playthroughs">Video Playthroughs</h2>
+
+  <p>Playthroughs by Paul Grogan (Gaming Rules!) featuring Sisko:</p>
+
+  <div class="yt-grid">
+
+    <a href="https://youtu.be/MbuPbqFmk0s" target="_blank" class="yt-card">
+      <div class="yt-thumb">
+        <img src="https://img.youtube.com/vi/MbuPbqFmk0s/mqdefault.jpg" alt="Koloth vs Sisko playthrough thumbnail">
+        <div class="yt-play">▶</div>
+      </div>
+      <div class="yt-label">Koloth vs Sisko</div>
+      <div class="yt-sub">Two-player · Gaming Rules!</div>
+    </a>
+
+    <a href="https://youtu.be/L0U4rMzRcJY" target="_blank" class="yt-card">
+      <div class="yt-thumb">
+        <img src="https://img.youtube.com/vi/L0U4rMzRcJY/mqdefault.jpg" alt="Sela vs Sisko playthrough thumbnail">
+        <div class="yt-play">▶</div>
+      </div>
+      <div class="yt-label">Sela vs Sisko</div>
+      <div class="yt-sub">Two-player · Gaming Rules!</div>
+    </a>
+
+  </div>
+
 
 </main>
 
