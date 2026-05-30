@@ -67,6 +67,7 @@ Claude will:
 - Produce styled `guidename.html` using the canonical CSS below
 - **Automatically update `index.html`** — flip the matching entry from Soon → Live
 - **Set `Last updated` date** in the footer to today's date
+- **Generate TOC** — pill grid for market guides, section list for captain guides, with back-to-top links
 
 ### Step 4 — Upload to GitHub
 - Drop new `.html` + updated `index.html` in repo root
@@ -140,6 +141,74 @@ document.addEventListener('keydown', e => {
 </script>
 ```
 All images use `onclick="openLightbox(this)"`.
+
+### Navigation — Table of Contents & Back to Top
+
+**Market guides** (Person, Ally, Ship, Cargo, Location, Encounters & Incidents) get a **pill grid** below the header. Each pill links to its h3 card anchor. Color matches the deck's index color:
+
+| Deck | Color |
+|---|---|
+| Person | `#e8a94a` amber |
+| Ally | `#9b6ecf` purple |
+| Ship | `#7a8aaa` gray |
+| Cargo | `#3a6aaa` dark blue |
+| Location | `#4ac48a` green |
+| Encounter | `#d4699f` pink |
+| Incident | `#e05a5a` red |
+
+For Encounters & Incidents, pill color is set per-pill via inline `style=` (pink for Encounters, red for Incidents).
+
+```html
+<nav class="toc-grid">
+  <div class="toc-grid-label">Jump to card</div>
+  <div class="toc-cards">
+    <a href="#slug" class="toc-card">Card Name</a>
+    ...
+  </div>
+</nav>
+```
+
+**Captain guides** get a **section list** below the header (Introduction excluded):
+
+```html
+<nav class="toc-list">
+  <div class="toc-list-label">Contents</div>
+  <ol>
+    <li><a href="#slug">Section Name</a></li>
+    ...
+  </ol>
+</nav>
+```
+
+**Back-to-top links** appear after every card entry (after the last `</p>` before the next `<h3>` or `<h2>`):
+
+```html
+<a href="#top" class="back-top">↑ back to top</a>
+```
+
+The top nav-bar must have `id="top"` for the anchor to work:
+```html
+<div id="top" class="nav-bar"><a href="index.html">← Back to Compendium</a></div>
+```
+
+**Required CSS additions** (append to canonical CSS block):
+```css
+  .toc-grid{max-width:860px;margin:1.5rem auto 0;padding:0 1.5rem;}
+  .toc-grid-label{font-family:'Orbitron',sans-serif;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem;}
+  .toc-cards{display:flex;flex-wrap:wrap;gap:0.4rem;}
+  .toc-card{font-family:'Exo 2',sans-serif;font-size:0.75rem;font-weight:400;padding:0.2rem 0.6rem;border:1px solid [COLOR]55;border-radius:3px;color:[COLOR];text-decoration:none;background:var(--bg2);transition:background 0.15s,border-color 0.15s;}
+  .toc-card:hover{background:var(--bg3);border-color:[COLOR];}
+  .toc-list{max-width:860px;margin:1.5rem auto 0;padding:0 1.5rem;}
+  .toc-list-label{font-family:'Orbitron',sans-serif;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem;}
+  .toc-list ol{list-style:none;display:flex;flex-wrap:wrap;gap:0.3rem 1.5rem;padding:0 0 0 1rem;margin:0;border-left:2px solid var(--border);}
+  .toc-list li{font-size:0.8rem;}
+  .toc-list a{color:var(--blue2);text-decoration:none;}
+  .toc-list a:hover{color:#fff;text-decoration:underline;}
+  .back-top{display:block;text-align:right;font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-top:0.25rem;margin-bottom:0.5rem;}
+  .back-top:hover{color:var(--blue);}
+```
+
+
 
 ---
 
