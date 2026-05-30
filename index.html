@@ -239,6 +239,24 @@
   }
   footer a { color: var(--blue); text-decoration: none; }
 
+
+  .box-banner.amber {
+    background: rgba(200,168,75,0.08);
+    border: 1px solid rgba(200,168,75,0.3);
+  }
+  .amber .box-dot { background: var(--gold); box-shadow: 0 0 8px var(--gold); }
+  .amber .box-banner-title { color: #e8c96a; }
+  .box-banner.gray {
+    background: rgba(122,138,170,0.08);
+    border: 1px solid rgba(122,138,170,0.3);
+  }
+  .gray .box-dot { background: var(--muted); box-shadow: 0 0 8px var(--muted); }
+  .gray .box-banner-title { color: #aabbd0; }
+  .amber-box { border: 1px solid rgba(200,168,75,0.2); }
+  .amber-box:hover:not(.soon) { border-color: var(--gold); }
+  .gray-box { border: 1px solid rgba(122,138,170,0.2); }
+  .gray-box:hover:not(.soon) { border-color: var(--muted); }
+
   @media (max-width: 500px) {
     .card-grid { grid-template-columns: 1fr 1fr; }
     .hero { padding: 2.5rem 1rem 2rem; }
@@ -260,8 +278,8 @@
   <div class="box-banner blue">
     <div class="box-dot"></div>
     <div>
-      <div class="box-banner-title">Box 1 — Captain's Chair</div>
-      <div class="box-banner-sub">Base game guides</div>
+      <div class="box-banner-title">Star Trek: Captain's Chair</div>
+      <div class="box-banner-sub">Stand alone — Box 1</div>
     </div>
   </div>
 
@@ -315,9 +333,9 @@
       <div class="entry-sub"></div>
     </a>
 
-    <a href="allies.html" class="entry blue-box" data-faction="ally">
+    <a href="cargo.html" class="entry blue-box" data-faction="cargo">
       <span class="entry-badge badge-live">Live</span>
-      <div class="entry-name">Ally Deck</div>
+      <div class="entry-name">Cargo Deck</div>
       <div class="entry-sub"></div>
     </a>
 
@@ -327,15 +345,9 @@
       <div class="entry-sub"></div>
     </a>
 
-    <a href="cargo.html" class="entry blue-box" data-faction="cargo">
+    <a href="allies.html" class="entry blue-box" data-faction="ally">
       <span class="entry-badge badge-live">Live</span>
-      <div class="entry-name">Cargo Deck</div>
-      <div class="entry-sub"></div>
-    </a>
-
-    <a href="locations.html" class="entry blue-box" data-faction="location">
-      <span class="entry-badge badge-live">Live</span>
-      <div class="entry-name">Location Deck</div>
+      <div class="entry-name">Ally Deck</div>
       <div class="entry-sub"></div>
     </a>
 
@@ -345,38 +357,22 @@
       <div class="entry-sub"></div>
     </a>
 
-  </div>
-
-  <div class="section-label">Strategy Guides</div>
-  <div class="card-grid">
-
-    <a href="solo.html" class="entry blue-box soon" data-faction="neutral">
-      <span class="entry-badge badge-soon">Soon</span>
-      <div class="entry-name">Solo Play</div>
-      <div class="entry-sub"></div>
-    </a>
-
-    <a href="five-year-mission.html" class="entry blue-box soon" data-faction="neutral">
-      <span class="entry-badge badge-soon">Soon</span>
-      <div class="entry-name">5-Year Mission</div>
-      <div class="entry-sub"></div>
-    </a>
-
-    <a href="vs-picard.html" class="entry blue-box soon" data-faction="neutral">
-      <span class="entry-badge badge-soon">Soon</span>
-      <div class="entry-name">Playing Against Picard</div>
+    <a href="locations.html" class="entry blue-box" data-faction="location">
+      <span class="entry-badge badge-live">Live</span>
+      <div class="entry-name">Location Deck</div>
       <div class="entry-sub"></div>
     </a>
 
   </div>
+
 
 
   <!-- ═══════════════════ BOX 2 — TO BOLDLY GO ═══════════════════ -->
   <div class="box-banner red">
     <div class="box-dot"></div>
     <div>
-      <div class="box-banner-title">Box 2 — To Boldly Go</div>
-      <div class="box-banner-sub">Expansion guides — guides coming as content is written</div>
+      <div class="box-banner-title">Star Trek: Captain's Chair — To Boldly Go</div>
+      <div class="box-banner-sub">Stand alone — Box 2</div>
     </div>
   </div>
 
@@ -424,6 +420,36 @@
   <div class="section-label">Location &amp; Market Guides</div>
   <div class="card-grid">
 
+    <a href="tbg-persons.html" class="entry red-box soon" data-faction="person">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Person Deck</div>
+      <div class="entry-sub"></div>
+    </a>
+
+    <a href="tbg-cargo.html" class="entry red-box soon" data-faction="cargo">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Cargo Deck</div>
+      <div class="entry-sub"></div>
+    </a>
+
+    <a href="tbg-ships.html" class="entry red-box soon" data-faction="ship">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Ship Deck</div>
+      <div class="entry-sub"></div>
+    </a>
+
+    <a href="tbg-allies.html" class="entry red-box soon" data-faction="ally">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Ally Deck</div>
+      <div class="entry-sub"></div>
+    </a>
+
+    <a href="tbg-encounters-incidents.html" class="entry red-box soon" data-faction="incident">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Encounters &amp; Incidents</div>
+      <div class="entry-sub"></div>
+    </a>
+
     <a href="tbg-locations.html" class="entry red-box" data-faction="location">
       <span class="entry-badge badge-live">Live</span>
       <div class="entry-name">Location Deck</div>
@@ -431,6 +457,93 @@
     </a>
 
   </div>
+
+  <!-- ═══════════════════ BOX 3 — SECOND CONTACT ═══════════════════ -->
+  <div class="box-banner amber">
+    <div class="box-dot"></div>
+    <div>
+      <div class="box-banner-title">Star Trek: Captain's Chair — Second Contact</div>
+      <div class="box-banner-sub">Expansion</div>
+    </div>
+  </div>
+
+  <div class="section-label">Captains</div>
+  <div class="card-grid">
+
+    <a href="#" class="entry amber-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Captains</div>
+      <div class="entry-sub">Coming soon</div>
+    </a>
+
+  </div>
+
+  <div class="section-label">Location &amp; Market Guides</div>
+  <div class="card-grid">
+
+    <a href="sc-commons.html" class="entry amber-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Commons</div>
+      <div class="entry-sub"></div>
+    </a>
+
+    <a href="sc-locations.html" class="entry amber-box soon" data-faction="location">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Location Deck</div>
+      <div class="entry-sub"></div>
+    </a>
+
+    <a href="sc-rewards.html" class="entry amber-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Rewards</div>
+      <div class="entry-sub"></div>
+    </a>
+
+  </div>
+
+
+  <!-- ═══════════════════ BOX 4 — STRATEGY GUIDES ═══════════════════ -->
+  <div class="box-banner gray">
+    <div class="box-dot"></div>
+    <div>
+      <div class="box-banner-title">Strategy Guides</div>
+    </div>
+  </div>
+
+  <div class="card-grid">
+
+    <a href="solo.html" class="entry gray-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Solo Play</div>
+      <div class="entry-sub"></div>
+    </a>
+
+    <a href="five-year-mission.html" class="entry gray-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">5-Year Mission</div>
+      <div class="entry-sub"></div>
+    </a>
+
+    <a href="vs-picard.html" class="entry gray-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">Playing Against Picard</div>
+      <div class="entry-sub"></div>
+    </a>
+
+    <a href="combining-markets.html" class="entry gray-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">First Impressions of Combining Markets</div>
+      <div class="entry-sub"></div>
+    </a>
+
+    <a href="wesley-crusher-guide.html" class="entry gray-box soon" data-faction="neutral">
+      <span class="entry-badge badge-soon">Soon</span>
+      <div class="entry-name">The Ultimate Guide to Wesley Crusher</div>
+      <div class="entry-sub"></div>
+    </a>
+
+  </div>
+
 
 </main>
 
