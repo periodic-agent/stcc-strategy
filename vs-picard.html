@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Playing Against Picard — ST:CC Compendium</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0a0e1a;--bg2:#0f1628;--bg3:#141c35;--blue:#4a9fd4;--blue2:#7ec8f0;--gold:#c8a84b;--text:#ccd6f0;--muted:#7a8aaa;--green:#4ac48a;--border:rgba(74,159,212,0.25);}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:var(--text);line-height:1.75;font-size:1rem;}
+  .nav-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:0.75rem 1.5rem;}
+  .nav-bar a{font-family:'Orbitron',sans-serif;font-size:0.65rem;letter-spacing:0.15em;color:var(--blue);text-decoration:none;text-transform:uppercase;}
+  .chapter-header{background:linear-gradient(135deg,#061020 0%,#0d1e3a 50%,#061020 100%);border-bottom:2px solid var(--blue);padding:3rem 2rem 2rem;text-align:center;position:relative;overflow:hidden;}
+  .chapter-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(74,159,212,0.03) 60px,rgba(74,159,212,0.03) 61px);}
+  .chapter-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.25em;color:var(--blue);text-transform:uppercase;margin-bottom:0.75rem;}
+  .chapter-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.6rem,5vw,2.8rem);font-weight:700;color:#fff;letter-spacing:0.05em;text-shadow:0 0 40px rgba(74,159,212,0.5);}
+  .chapter-title span{color:var(--blue2);}
+  .chapter-meta{margin-top:1rem;font-size:0.8rem;color:var(--muted);letter-spacing:0.1em;}
+  .chapter-tags{display:flex;justify-content:center;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;}
+  .tag{font-family:'Orbitron',sans-serif;font-size:0.6rem;letter-spacing:0.1em;padding:0.2rem 0.6rem;border:1px solid var(--blue);color:var(--blue);border-radius:2px;}
+  .content{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem;}
+  h2{font-family:'Orbitron',sans-serif;font-size:1rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue2);border-left:3px solid var(--blue);padding-left:0.75rem;margin:2.5rem 0 1rem;}
+  h3{font-family:'Orbitron',sans-serif;font-size:0.8rem;font-weight:400;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;margin:1.75rem 0 0.5rem;}
+  p{margin-bottom:1rem;}
+  ul{margin:0 0 1rem 1.5rem;line-height:1.9;}
+  li{margin-bottom:0.4rem;}
+  li strong{color:var(--blue2);}
+  .guide-img{max-width:100%;border-radius:6px;border:1px solid var(--border);margin:1rem 0 1.5rem;cursor:zoom-in;transition:transform 0.2s,box-shadow 0.2s;display:block;}
+  .guide-img:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(74,159,212,0.25);border-color:var(--blue);}
+  .img-pair{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0 1.5rem;}
+  .img-pair img{width:100%;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;transition:transform 0.2s,box-shadow 0.2s;}
+  .img-pair img:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(74,159,212,0.25);border-color:var(--blue);}
+  .toc-list{max-width:860px;margin:1.5rem auto 0;padding:0 1.5rem;}
+  .toc-list-label{font-family:'Orbitron',sans-serif;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem;}
+  .toc-list ol{list-style:none;display:flex;flex-wrap:wrap;gap:0.3rem 1.5rem;padding:0 0 0 1rem;margin:0;border-left:2px solid var(--border);}
+  .toc-list li{font-size:0.8rem;}
+  .toc-list a{color:var(--blue2);text-decoration:none;}
+  .toc-list a:hover{color:#fff;text-decoration:underline;}
+  .back-top{display:block;text-align:right;font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-top:0.25rem;margin-bottom:0.5rem;}
+  .back-top:hover{color:var(--blue);}
+  #lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:1000;align-items:center;justify-content:center;cursor:zoom-out;}
+  #lightbox.open{display:flex;}
+  #lightbox img{max-width:90vw;max-height:90vh;border-radius:8px;box-shadow:0 0 60px rgba(74,159,212,0.4);}
+  footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:0.75rem;color:var(--muted);line-height:1.8;}
+  @media(max-width:600px){.chapter-header{padding:2rem 1rem 1.5rem;}.img-pair{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div id="top" class="nav-bar"><a href="index.html">← Back to Compendium</a></div>
+
+<header class="chapter-header">
+  <div class="chapter-label">Strategy Guide</div>
+  <h1 class="chapter-title">Playing Against <span>Picard</span></h1>
+  <div class="chapter-meta">By Matthew McCue (mdmccu2)</div>
+  <div class="chapter-tags"><span class="tag">Multiplayer</span><span class="tag">Solo</span><span class="tag">All Captains</span></div>
+</header>
+
+<nav class="toc-list">
+  <div class="toc-list-label">Contents</div>
+  <ol>
+    <li><a href="#multiplayer">Multiplayer</a></li>
+    <li><a href="#strengths">Strengths</a></li>
+    <li><a href="#weaknesses">Weaknesses</a></li>
+    <li><a href="#tempo">Tempo</a></li>
+    <li><a href="#neutral">Neutral Zone</a></li>
+    <li><a href="#market">Market</a></li>
+    <li><a href="#solo">Solo Bot</a></li>
+    <li><a href="#traits">Trait Analysis</a></li>
+    <li><a href="#no-do">No Duty Officer</a></li>
+    <li><a href="#do">With Duty Officer</a></li>
+  </ol>
+</nav>
+
+<main class="content">
+
+  <h2>Introduction</h2>
+
+  <p>Today's guide is for playing against Jean Luc Picard, the lowest complexity captain in the core box. I've already posted a guide to playing as Picard and considering that it was the first guide I worked on, it could probably use a bit of updating. Thankfully, this guide should help clarify some of those Picard strategies as we learn how to counter this deck. I'll start by giving recommendations for Multiplayer and then discuss strategies to consider when facing the Solo bot.</p>
+
+  <h2 id="multiplayer">Playing Against Picard — Multiplayer</h2>
+
+  <p>Just because the complexity is low doesn't mean Picard isn't an absolute powerhouse in a game of Captain's Chair. Some have argued it's one of the best decks in the game thus far, and there are certainly a lot of strategies that can mess with an opponent. Today we're going to try to delve into ways to negate the inherent advantages Picard has, and maybe slow him down enough to end his game before he can get his warp drive running.</p>
+
+  <h3 id="strengths">Strengths</h3>
+
+  <ul>
+    <li><strong>Straightforward Available Cards</strong> — Picard has a toolbox that is well balanced for gaining what you need, when you need it. He's got decent card draw via Set a Course and Diplomacy, and can gain more via Farpoint. While it can be tough to log directives, he still has his whole basic toolkit from the start of the game (including Strange New Worlds) and can gain encounters pretty quickly.</li>
+    <li><strong>Strong Duty Officers</strong> — Riker and Worf are pretty powerful. Riker becomes more powerful as you start to control stronger locations, and his ability to grab ships out of Picard's discard or free play a Starfleet ship make him dangerous to an opponent. And Worf, despite costing an Incident, can send two Away Teams at once which is likewise quite dangerous for Picard's opponent. Likewise, Worf can remove your Away Teams and gain Glory, which is why controlling locations with ships can be beneficial against Picard.</li>
+    <li><strong>Powerful Mission Rewards</strong> — Picard can gain four cards and four Dilithium, a Glory, influence or military, and an Action token, or an Encounter all from his missions. That's an incredibly useful set of benefits, especially if timed correctly.</li>
+    <li><strong>Ally Card Focus</strong> — Picard has several cards in his deck that help him get Ally cards, and he is encouraged on either side of his player board to focus on gaining Ally cards to gain Glory and complete his first mission. That means he's naturally going to be scoring three points per most ally cards, meaning that for every four allies he gets it will take twelve person cards or six ship/cargo cards to match the printed points scoring. This alone gives him a scoring advantage.</li>
+    <li><strong>Thin Reserve</strong> — With only four cards in the Reserve, it doesn't take long to get to Picard's developments. With a well-timed move and a thin deck, you could see developments pretty early on from a Picard opponent.</li>
+    <li><strong>Powerhouse Developments</strong> — Once they get to those Developments, they can be devastating. Deanna Troi, Phasing Cloak, and Geordi La Forge can be extremely useful, and there's already been much discussion of fighting the combination of Daystrom Institute unleashed with a Moriarty (or B-4 or Peanut Hamper) against an opponent. Bruce Maddox allows you to find and free play a Synthetic making him even more dangerous with Picard.</li>
+    <li><strong>Flexible Strategies</strong> — The best part for the Picard player is that this toolbox is incredibly versatile, meaning that what you throw at them can often be countered, all while continuing to rack up focus scoring, completing missions, and gaining Ally cards.</li>
+  </ul>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h3 id="weaknesses">Weaknesses</h3>
+
+  <ul>
+    <li><strong>Limited Neutral Zone Control</strong> — Picard only has two ships in his deck that can be used to control locations. His reliance on the Enterprise-D for its wild skill and the ability to beam Ally cards for mission completion makes it tough to repeatedly dismiss it for location control. By overwhelming Picard with ships, it can make the neutral zone very difficult for him to make progress in.</li>
+    <li><strong>Duty Officer Reliance</strong> — If you have a lot of cards that dismiss Duty Officers, Picard can't pull off his combinations as reliably. Weapon cards work fairly well against Picard, and Lirpa in particular will guarantee consistent Duty Officer dismissal.</li>
+    <li><strong>Late Game Ship Economy</strong> — Picard has a tough decision early on. If he doesn't invest in Ships early, he might have a hard time controlling the neutral zone. But if he waits until the rest of the engine is up and running, it could be too late. Because of that, he struggles against a captain like Sisko or Sela in the late game when it comes to his number of Ships, unless he focuses on that right from the beginning.</li>
+    <li><strong>Limited Acceleration</strong> — Picard can't push the game towards endgame against an opponent that needs time to get their engine set up. If he's not able to bridge the point gap, Picard can find himself in real trouble because of a game that goes on a little too long against an opponent who is really pushing things forward.</li>
+    <li><strong>Strategies Limited by Reserve</strong> — Picard's order of cards that pop up in his Reserve really affect which route he can go down. For example, if Data is the first card to pop up, it can often suggest a log-heavy gameplay strategy. But if Picard starts logging early anticipating Data, it can take a few turns to get him out of the Reserve and thus the strategy is a bit less effective.</li>
+    <li><strong>Relatively Difficult Missions</strong> — Picard's mission rewards are fantastic, but accomplishing them can be a little difficult. Getting three Ally cards on the Enterprise-D is fine, but also focusing on increasing tracks can mean Picard's waited to use the Enterprise-D to control locations but can't quite complete Peace Negotiations yet. Similarly, having three Klingons on the same ship requires two more, which is not always the easiest to find especially when your opponent is looking for Klingons too.</li>
+  </ul>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h3 id="tempo">Tempo</h3>
+
+  <p>Picard has a pretty slow Glory-acquisition tempo solely from his deck of cards. Deanna, Worf, Beverly, and Geordi can all only take one Glory with their Play/Table operations. Tamarians allow for up to six Glory, but you have to be able to discard the right cards to pull it off. His best way to gain Glory is through his captain Reaction through gaining Ally cards, but this will only be once a turn typically (unless he can get Lwaxana Troi, who is actually quite good for him as a free refresh). Picard is not likely to be ending the game quickly, and more importantly, he doesn't have a ton of good ways to catch up if you're able to speed towards the finish.</p>
+
+  <p>Yes, his four-card Reserve is small enough that Picard can get into Developments fast, but if you can bog him down with attacks it may slow his progress and prevent him from scoring well off those Developments.</p>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h3 id="neutral">Neutral Zone</h3>
+
+  <p>Picard can't really blockade the Neutral Zone with just one ship, and it's unlikely that he'll be building up an early game ability to control much. Your opponent can mess with you, block your ability to control locations, but that will usually be at the expense of taking some themselves. A Worf-heavy early strategy can allow them to send away teams or remove yours, so it would be good to have some counter-attacks of your own ready to go. Whether it be defensive weapons like Phasers or simply focusing on getting a lot of Ships so Picard can't send away teams and Worf can't use his Activation, there are lots of ways to slow a Picard player from gaining the points and abilities that come with the Neutral Zone.</p>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h3 id="market">Market</h3>
+
+  <p>A skilled Picard player can score using any track, but focusing on depriving them of Blue Research focus scoring or Yellow Influence is a good preventative measure. If they're putting Glory out on Ally cards I would try my best to scoop those up so they don't have a 5+ gain in points (three from the card, one from Picard's reaction, plus any more on the card). If you can keep track of the racial traits Picard has already, you can also try to mess with his ability to accomplish his second and third missions.</p>
+
+  <p>Here are some of the cards and traits you might want to deprive Picard of, if you can:</p>
+
+  <ul>
+    <li><strong>Synthetic Traits — Moriarty, Peanut Hamper, B-4:</strong> These cards will attack you and benefit from each other, not to mention they can be found with Daystrom and repeatedly used against you every turn.</li>
+    <li><strong>Captain Dorg, Lursa:</strong> In addition to being Klingons, they also have attacks that send away teams, and Picard can benefit a lot from this due to his limited Ship numbers.</li>
+    <li><strong>Forced Singularity:</strong> Has a blue focus scoring and allows you to have more Duty Officers out, meaning Picard can get up to three with Starbase 74.</li>
+    <li><strong>Cloaking Device:</strong> Has Military focus scoring and helps Picard send out more away teams.</li>
+    <li><strong>Borg Spatial Projector:</strong> Has a similar benefit considering his access to Person cards.</li>
+    <li><strong>All Starfleet ships:</strong> The Enterprise-C benefits everyone, but all of these can be free-played by Riker for devastating combos.</li>
+    <li><strong>Any Ally with a trait:</strong> Try to stop Picard from his missions where you can. There will be only so much you can do to stop him from gaining Ally cards, but trying to avoid giving him Tholians or Organians can help.</li>
+  </ul>
+
+  <p>Your strategy will always be driven, first and foremost, by your captain deck. But knowing these strengths for Picard's deck will help you avoid falling into a trap you can't dig yourself out of. Control the neutral zone, speed the game up, have a way to gain some card draw back, and you'll have a good competitive fight against the legendary Jean Luc Picard.</p>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="solo">Playing Against Picard — Solo Bot</h2>
+
+  <p>For the solo game, I thought I'd not repeat a bunch from above and instead go through an analysis of the solo captain trait and suit resolutions. Here's a summary of the cards and my limited insights on how to approach playing PicardBot.</p>
+
+  <img src="https://cf.geekdo-images.com/WIAgTOCPNe1cpqIJNP7-6w__medium/img/-QbEnxV1pIwbufLJGveSoLLn_fo=/fit-in/500x500/filters:no_upscale():strip_icc()/pic9238823.jpg" alt="Picard Bot Trait Card" class="guide-img" onclick="openLightbox(this)">
+
+  <h3 id="traits">Trait Analysis</h3>
+
+  <ul>
+    <li><strong>Synthetic/Android:</strong> This trait reflects the main Android archetype of logging a card and, similar to Data, gains PicardBot some skills and promotes the resolved card to Duty Officer.</li>
+    <li><strong>Klingon:</strong> PicardBot will discard three cards, send an Away Team, and then you remove an away team. If you're not able to remove one, the bot will gain a Glory and an Incident.</li>
+    <li><strong>Alien:</strong> PicardBot will discard the top card of the deck, gain an Influence, and if they have five or more influence, will also gain a Research and Cargo. Then, like many Ally cards, you will log the resolved card.</li>
+    <li><strong>Doctor:</strong> The Doctor trait discards two cards and returns an Incident, if able, from the bot's discard pile. If they can't do that, they gain two Glory and a Research, and if it's a person this card gets promoted to Duty Officer.</li>
+    <li><strong>Attack:</strong> An away team is sent, and a Ship is put on top of the Bot deck from the discard, and if you can't PicardBot gains an Influence. Then if this is a Person card it gets promoted to Duty Officer.</li>
+  </ul>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h3 id="no-do">Picard with No Duty Officer</h3>
+
+  <img src="https://cf.geekdo-images.com/4ciH8zuQRF3bEU9_gAXWZQ__medium/img/qyOkqbxdx7QN47RVXTbBlA3pOog=/fit-in/500x500/filters:no_upscale():strip_icc()/pic9238834.jpg" alt="Picard Solo Bot — No Duty Officer" class="guide-img" onclick="openLightbox(this)">
+
+  <ul>
+    <li><strong>Incident:</strong> Log the top card of the Bot deck, gain a Person card and return.</li>
+    <li><strong>Ship:</strong> Deploy, explore, and if there's a Person in the Bot discard pile, send an away team.</li>
+    <li><strong>Ally:</strong> Discard two cards of the Bot deck, and gain an Influence for each Person in the bot's discard pile, and send an away team for every ship. Since the Shuttlecraft gets to count for this, this could be potentially devastating — I did have a turn where PicardBot gained six Influence recently.</li>
+    <li><strong>Cargo:</strong> Discard the top two cards of the Bot deck, gain two Glory, take a Person, and log this card.</li>
+    <li><strong>Person:</strong> Log the top card of the Bot deck, gain Research or Influence (whichever is lower) and send an away team to a neutral location, promoting this card.</li>
+    <li><strong>Directive:</strong> If able, gain a Klingon, otherwise gain a Ship or Ally and take an Incident. Gain Research or Influence (whichever is lower) and send an away team to a neutral location.</li>
+    <li><strong>Encounter:</strong> Log the top two cards of the Bot deck, take a ship, and log this card.</li>
+    <li><strong>Location:</strong> Log the top card of the Bot deck and discard the top three cards of the Bot deck.</li>
+  </ul>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h3 id="do">Picard with Duty Officer</h3>
+
+  <img src="https://cf.geekdo-images.com/kriMwYe0-qS_Y8InCOI2KQ__medium/img/sGRB61ZRHnPXJyJ6zfQFNHD_XRo=/fit-in/500x500/filters:no_upscale():strip_icc()/pic9238824.jpg" alt="Picard Solo Bot — With Duty Officer" class="guide-img" onclick="openLightbox(this)">
+
+  <ul>
+    <li><strong>Incident:</strong> Discard the top two cards of the bot deck, gain one Research, and return.</li>
+    <li><strong>Ship:</strong> Gain an Influence, deploy, explore, and send an away team to a neutral location.</li>
+    <li><strong>Ally:</strong> Discard the top card of the Bot deck and gain a Klingon, or a Person/Ship/Ally. Log Duty Officer and log this card.</li>
+    <li><strong>Cargo:</strong> Log the top card of the Bot deck and discard the top two cards, gain a Ship, and deploy/explore, and log Duty Officer.</li>
+    <li><strong>Person:</strong> Log the top card of the bot deck, gain Research or Influence (whichever is lower) and send an away team to a neutral location.</li>
+    <li><strong>Directive:</strong> If able to do both, log a controlled Location and remove two away teams to take the top encounter, then log this Directive. Otherwise, gain a Research Focus Scoring card, Alien, or Cargo/Ally.</li>
+    <li><strong>Encounter:</strong> Gain Research or Influence (whichever is higher) and take a Klingon, an Ally, or a Ship. Log this card.</li>
+    <li><strong>Location:</strong> Log the top two cards of the bot deck, gain a Research and log the Duty Officer.</li>
+  </ul>
+
+  <p>PicardBot favors getting Ally and Person cards, like Picard proper does. However, there's also a focus on gaining Ships that doesn't necessarily benefit a human Picard player. You can easily lose a neutral zone planet early to PicardBot's away team barrage, but you can also find that mid-game he has a lot of ships that don't log and are really gumming up the works. Since they're always exploring, they can be a real pain when they blockade the entire neutral zone.</p>
+
+  <p>The only way for PicardBot to get Cargo is through a Directive with a duty officer (where the Cargo is more valuable than the Ally card and none of the other elements succeed) or with an Alien card when he has more than five Influence. So, all else being equal, placing Glory on Cargo against PicardBot is a pretty good move to limit how much Glory they can take from the market. Ships are second best, but again, consider that it's more common than you'd expect from a human Picard opponent.</p>
+
+  <p>Picard also has no way to advance on the Military track. So putting Glory on cards with Military is only going to turn it from a one point gain to a two point gain. Watch out for a PicardBot that has a lot of Doctor cards. He's not going to get them from the cargo deck most likely, but even with just Beverly that's a way to speed up the conclusion of the game. Picard also has several ways to grab Klingons and it's more annoying than anything else to have to keep removing Away teams, so at least taking the opportunity to junk those Klingons from the market can be beneficial.</p>
+
+  <p>It's also worth noting how quickly a solo deck can turn into a Burn loss. Unless incidents are getting returned right away (which is common) you can see scenarios where Picard plays multiple Directives in a row over and over again. Three Directives with no duty officers is a three-Incident gain, which could easily lead to a Burn if you're not careful. Beyond that, PicardBot scores well for all those Ally cards, so try to use the amount of time you have for the game to play just a little bit better than he does, before time runs out. Taking the time to build a better engine can make a big difference.</p>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+</main>
+
+<div class="nav-bar"><a href="index.html">← Back to Compendium</a></div>
+
+<footer>
+  Card images &copy; WizKids.<br>
+  Content by Matthew McCue (mdmccu2) &middot; Formatting by Periodic_agent &middot; Last updated 30-05-2026
+</footer>
+
+<div id="lightbox" onclick="this.classList.remove('open')">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+function openLightbox(img) {
+  document.getElementById('lightbox-img').src = img.src;
+  document.getElementById('lightbox').classList.add('open');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') document.getElementById('lightbox').classList.remove('open'); });
+</script>
+
+</body>
+</html>
