@@ -11,7 +11,7 @@ A strategy compendium for **Star Trek: Captain's Chair** hosted at:
 GitHub repo: **https://github.com/periodic-agent/stcc-strategy**
 
 Content by **Matthew McCue (mdmccu2)** from BGG forums.
-Formatted by **Periodic_agent**.
+Formatted by **Periodic_agent** using Claude Sonnet 4.6 Pro
 
 ---
 
