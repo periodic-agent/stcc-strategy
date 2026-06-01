@@ -344,6 +344,143 @@ Example prompt:
 
 ---
 
+## Lore & Cut Paragraphs
+
+When importing a guide, certain paragraphs need to be removed or styled as lore:
+
+**To cut:** provide the first few words — Claude removes the full paragraph.
+
+**To make lore:** provide the first few words — Claude wraps the paragraph in `<p class="lore">`.
+
+Lore paragraphs are used for:
+- McCue's personal reflections on Star Trek canon
+- Series/episode context and thematic observations
+- Self-referential comments about the guide series
+
+BGG-specific paragraphs to always cut:
+- Opening "Welcome to part N of my guides..." sentences
+- Closing calls to comment, subscribe, or follow future guides
+- References to upcoming guides or posting schedules
+
+### Lore CSS (add to every guide)
+```css
+  .lore{font-style:italic;color:#a8b8d0;border-left:3px solid rgba(200,168,75,0.4);padding-left:1rem;margin-bottom:1rem;line-height:1.8;}
+```
+
+---
+
+## Posted & Edited Dates
+
+Every guide header shows the original BGG posting date and last edited date (if any), sourced from the BGG thread.
+
+### Header structure
+```html
+<div class="chapter-meta">By Matthew McCue (mdmccu2)</div>
+<div class="chapter-date">Posted DD Mon YYYY · Last edited DD Mon YYYY</div>
+```
+If never edited, omit the "· Last edited" part.
+
+### chapter-date CSS (add to every guide)
+```css
+  .chapter-date{font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;margin-top:0.3rem;}
+```
+
+### Footer
+Footer no longer includes a date — just attribution:
+```html
+<footer>
+  Card images © WizKids.<br>
+  Content by Matthew McCue (mdmccu2) · Formatting by Periodic_agent
+</footer>
+```
+
+---
+
+## Video Playthroughs Section
+
+Guides with a Gaming Rules! playthrough get a **Video Playthroughs** section at the bottom (before the bottom nav-bar), with YouTube thumbnail cards.
+
+Current mapping:
+| Guide | Video | URL |
+|---|---|---|
+| shran.html | Shran vs Sisko | `youtu.be/fpGOnYvySBY` |
+| koloth.html | Koloth vs Sisko | `youtu.be/MbuPbqFmk0s` |
+| sisko.html | Koloth vs Sisko + Sela vs Sisko | `youtu.be/MbuPbqFmk0s` + `youtu.be/L0U4rMzRcJY` |
+| sela.html | Sela vs Sisko | `youtu.be/L0U4rMzRcJY` |
+| solo.html | Solo Tutorial pt.1 + pt.2 | `youtube.com/live/XBHZl0Qdveg` + `youtube.com/live/goYrEDVUSC4` |
+| vs-picard.html | Two-player tutorial + Riker vs Picard Bot | `youtube.com/live/qZnTVD4yOpU` + `youtu.be/CWhCX4qdp6Y` |
+
+TBG guides — add when built:
+| Future guide | Video | URL |
+|---|---|---|
+| georgiou.html | Georgiou solo | `youtu.be/WUWw63FQ_Vk` |
+| rebner.html | Freeman vs Rebner | `youtu.be/5g1vaB_wxiw` |
+| archer.html | Archer vs Soval | `youtu.be/BAHNWO2Yuuw` |
+| soval.html | Archer vs Soval | `youtu.be/BAHNWO2Yuuw` |
+| kirk.html | Kirk vs Khan | `youtu.be/Pc0k1oeT1r8` |
+| khan.html | Kirk vs Khan | `youtu.be/Pc0k1oeT1r8` |
+
+Second Contact (pending):
+- Pike solo: `youtu.be/YawshG7D0JU`
+
+### YouTube card HTML template
+```html
+<h2 id="video-playthroughs">Video Playthroughs</h2>
+<p>Playthrough(s) by Paul Grogan (Gaming Rules!):</p>
+<div class="yt-grid">
+  <a href="VIDEO_URL" target="_blank" class="yt-card">
+    <div class="yt-thumb">
+      <img src="https://img.youtube.com/vi/VIDEO_ID/mqdefault.jpg" alt="Title thumbnail">
+      <div class="yt-play">▶</div>
+    </div>
+    <div class="yt-label">Video Title</div>
+    <div class="yt-sub">Type · Gaming Rules!</div>
+  </a>
+</div>
+```
+
+### YouTube CSS
+```css
+  .yt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:1.25rem 0 2rem;}
+  .yt-card{text-decoration:none;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:var(--bg2);transition:border-color 0.2s,transform 0.2s;}
+  .yt-card:hover{border-color:var(--blue);transform:translateY(-3px);}
+  .yt-thumb{position:relative;}
+  .yt-thumb img{width:100%;display:block;}
+  .yt-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#fff;text-shadow:0 0 12px rgba(0,0,0,0.8);opacity:0.85;}
+  .yt-card:hover .yt-play{opacity:1;}
+  .yt-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.08em;color:var(--text);padding:0.6rem 0.75rem 0.2rem;}
+  .yt-sub{font-size:0.72rem;color:var(--muted);padding:0 0.75rem 0.75rem;}
+```
+
+### Index badge
+Guides with a playthrough get a green ▶ badge in the index:
+```html
+<span class="entry-badge badge-video">▶</span>
+```
+```css
+  .badge-video{background:rgba(74,199,120,0.15);color:#4ac478;border:1px solid rgba(74,199,120,0.4);}
+```
+Add this badge alongside the guide entry in index.html. No badge = live but no video. Soon entries have no badge until guide goes live.
+
+---
+
+## Index Author Blurb
+
+Below the main title, above Box 1:
+```html
+<div class="author-blurb">
+  <p>Welcome to a compendium of my Star Trek: Captain's Chair strategy guides, compiled and formatted by Periodic_agent with permission. My vision for these guides was always collaborative, where edits and updates can be made in order to have a living strategy guide that develops with the shared experience of the community. Please feel free to add your thoughts on specific guides to the <a href="https://boardgamegeek.com/threads/user/1264099?parenttype=boardgame&sort=recent" target="_blank">original BGG posts</a>, or join the Captain's Chair Discord to continue the discussion.</p>
+</div>
+```
+```css
+  .author-blurb{max-width:860px;margin:0 auto 2rem;padding:1.25rem 1.5rem;border-left:3px solid rgba(200,168,75,0.4);background:rgba(200,168,75,0.04);}
+  .author-blurb p{font-style:italic;color:#a8b8d0;font-size:0.9rem;line-height:1.8;margin:0;}
+  .author-blurb a{color:var(--gold);text-decoration:none;}
+  .author-blurb a:hover{text-decoration:underline;}
+```
+
+---
+
 ## Notes
 
 - Images stay as **base64 in HTML** until the library grows large enough to justify an `images/` folder with file references.
