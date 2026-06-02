@@ -481,6 +481,95 @@ Below the main title, above Box 1:
 
 ---
 
+## Naming & Header Conventions
+
+### Chapter label (above h1)
+- Core Box guides: `Captain's Chair`
+- TBG guides: `To Boldly Go`
+- Never include "Strategy Guide" or "Strategy Compendium"
+
+### Guide titles (h1)
+- Captain guides: full captain name only, no "Strategy Guide"
+  - e.g. `Jean-Luc <span>Picard</span>`, `Thy'Lek <span>Shran</span>`, `Koloth, <span>the Dahar Master</span>`
+- Market guides: deck name + "Guide" — e.g. `<span>Person Deck</span> Guide`
+- Strategy guides: descriptive title only — e.g. `Guide to <span>5-Year Mission</span> Strategies`
+- TBG Location guide: `<span>Location</span> Guide` with chapter-label `To Boldly Go`
+
+---
+
+## TBG Locations Card Format (template for future card guides)
+
+Each card section follows this structure:
+
+```html
+<h3 id="slug">Card Name</h3>
+<div class="card-img"><img src="..." alt="Card Name"></div>
+<ul class="card-props">
+  <li><strong>N Skill</strong></li>
+  <li><strong>Traits:</strong> X, Y</li>
+  <li><strong>Control:</strong> text</li>
+  <li><strong>Resupply:</strong> text</li>
+  <li><strong>Reaction:</strong> text</li>
+  <li><strong>Endgame:</strong> text</li>
+  <li><strong>N Points</strong></li>
+  <li><strong>Notable Appearances:</strong> SHOW:NxN: Title</li>
+</ul>
+<p>Guide text — all strategy sentences merged into one paragraph.</p>
+<p class="lore">Lore/thematic observations in italic gold-border style.</p>
+<a href="#top" class="back-top">↑ back to top</a>
+```
+
+**Rules:**
+- Remove repeated card name from start of Para 1 (already in h3)
+- Properties split across multiple BGG paragraphs → merge into one `<ul>`
+- Notable Appearances boundary: ends at last episode reference (`NxN` pattern); description follows
+- All strategy sentences → one merged `<p>`
+- Lore/thematic text → `<p class="lore">`
+
+### card-props CSS
+```css
+  .card-props{list-style:none;padding:0;margin:0.75rem 0 1rem;display:flex;flex-direction:column;gap:0.35rem;}
+  .card-props li{font-size:0.85rem;line-height:1.5;padding-left:1rem;position:relative;color:var(--text);}
+  .card-props li::before{content:'—';position:absolute;left:0;color:var(--gold);font-weight:600;}
+  .card-props li strong{color:var(--blue2);}
+```
+
+---
+
+## Image Extraction Notes — Unquoted src= Attribute
+
+Some BGG SingleFile images use unquoted attributes: `src=data:image/webp;base64,...` (no quotes). The correct extraction regex is:
+
+```python
+re.search(r'src=data:image/webp;base64,([^ >]+)', content[pos:])
+```
+
+**Not** `src="data:..."` — the quoted version will fail and bleed adjacent attributes into the base64 string, causing broken images.
+
+---
+
+## External Image Dependencies
+
+These images load from external URLs (not base64 embedded):
+- **TBG Locations** — Cold Station 12, Tanuga IV, Tellar Prime load from BGG CDN
+- **Solo & Conspiracy** — bot card images load from BGG CDN
+- **Video Playthroughs** — YouTube thumbnails load from `img.youtube.com`
+
+All other images are base64 embedded and fully self-contained.
+
+---
+
+## Structural Safety Rules
+
+When inserting sections (Video Playthroughs, etc.) always insert **before** `</main>`:
+```python
+html = html.replace('\n</main>', new_section + '\n</main>', 1)
+```
+Never append after `</main>` — causes duplicate content bugs.
+
+
+---
+
 ## Notes
 
 - Images stay as **base64 in HTML** until the library grows large enough to justify an `images/` folder with file references.
