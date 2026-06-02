@@ -570,6 +570,39 @@ Never append after `</main>` — causes duplicate content bugs.
 
 ---
 
+## Memory Alpha Episode Links
+
+Episode references in lore paragraphs should link to Memory Alpha. This applies to TBG and future guides.
+
+### URL format
+```
+https://memory-alpha.fandom.com/wiki/Episode_Title_(episode)
+```
+- Replace spaces with underscores
+- Always append `_(episode)` disambiguator
+- Commas in titles stay as-is (e.g. `The_War_Without,_The_War_Within_(episode)`)
+- Hyphens in titles stay as-is (e.g. `Four-and-a-Half_Vulcans_(episode)`)
+- For multi-episode arcs (e.g. `2x1-2`), link to Part 1
+
+### Link styling (add to guide CSS)
+```css
+  .lore a{color:#c8a84b;text-decoration:none;border-bottom:1px dotted rgba(200,168,75,0.5);}
+  .lore a:hover{color:#e8c878;border-bottom-color:#e8c878;}
+```
+
+### Automation notes
+The regex `([A-Z]+[^:]*\d+x\d+:\s+)([A-Za-z][^,&<\n]+?)` catches most single-episode references automatically. The following patterns require manual linking:
+- Second episode in a `A & B` pair (no show code prefix on B)
+- Episode codes with ranges: `2x1-2`, `1x9-10`, `2x15-16`
+- Episodes without colon separator: `ENT 3x6 Exile`
+- Titles containing numbers: `Cold Station 12`
+- Multi-part titles with commas: `The War Without, The War Within`
+
+Always do a pass after automation to catch the misses.
+
+
+---
+
 ## Notes
 
 - Images stay as **base64 in HTML** until the library grows large enough to justify an `images/` folder with file references.
