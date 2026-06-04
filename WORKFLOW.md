@@ -4,17 +4,26 @@ Files live on GitHub Pages at:
 - **Live site:** https://periodic-agent.github.io/stcc-strategy/
 - **Raw files:** https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/[filename]
 
-At the start of each session, fetch the files you'll be editing using web_fetch:
+At the start of each session, fetch the files you'll be editing using `web_fetch`:
 ```
-https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/index.html
-https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/shran.html
-https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/WORKFLOW.md
+web_fetch("https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/index.html")
+web_fetch("https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/shran.html")
 ... etc.
 ```
 
+Do NOT fetch WORKFLOW.md — it lives in project knowledge and is always current there.
+
 Always work from the fetched live version. Never assume file content from memory or previous sessions.
 
-After editing, save to /mnt/user-data/outputs/ and present the file for the user to download and push to GitHub manually.
+After editing, save to `/mnt/user-data/outputs/` and call `present_files` to surface the file for download. Never render files inline in chat.
+
+```python
+# Correct output pattern
+bash: write file to /mnt/user-data/outputs/filename.html
+present_files(["/mnt/user-data/outputs/filename.html"])
+```
+
+Periodic_agent pushes to GitHub manually after downloading.
 
 ---
 
@@ -31,11 +40,11 @@ A strategy compendium for **Star Trek: Captain's Chair** hosted at:
 GitHub repo: **https://github.com/periodic-agent/stcc-strategy**
 
 Content by **Matthew McCue (mdmccu2)** from BGG forums.
-Formatted by **Periodic_agent** using Claude Sonnet 4.6 Pro
+Formatted by **Periodic_agent**
 
 ---
 
-##  Rules
+## Rules
 
 1. **Zero text edits.** McCue's text is reproduced verbatim — no summarizing, no rewriting, no restructuring. Format only: headings, paragraph breaks, image placement.
 2. **Paragraph breaks** must sometimes be identified by asking for the last sentence of each paragraph when the source text runs together (BGG strips formatting).
@@ -72,7 +81,7 @@ Formatted by **Periodic_agent** using Claude Sonnet 4.6 Pro
 - Claude extracts CDN URLs from the SingleFile HTML and produces the script
 - Images batch-download from BGG CDN to local folder
 - Upload all images to Claude in next chat
-- Note: BGG switched to embedding base64 WebP directly in newer threads vs older CDN-hosted JPEGs, so new guides will note require manual downloads. 
+- Note: BGG switched to embedding base64 WebP directly in newer threads vs older CDN-hosted JPEGs, so new guides will not require manual downloads.
 
 ### Step 3 — Send to Claude
 Upload:
@@ -108,6 +117,10 @@ Claude will:
 - Header gradient: `#160608 → #2a0e10`
 - Border: `rgba(212,74,74,0.25)`
 
+### Box 3 — Second Contact: **Amber**
+- Accent: `#c8a84b` / `#e8c96a`
+- Border: `rgba(200,168,75,0.25)`
+
 ### Fonts
 - Headers: `Orbitron` (Google Fonts)
 - Body: `Exo 2` (Google Fonts)
@@ -139,11 +152,15 @@ Top and bottom of every guide. Top nav goes **before** `<header>`.
 ```html
 <footer>
   Card images © WizKids.<br>
-  Content by Matthew McCue (mdmccu2) · Formatting by Periodic_agent · Last updated DD-MM-YYYY
+  Content by Matthew McCue (mdmccu2) · Formatting by Periodic_agent
 </footer>
 ```
 The date is the day the guide was built/rebuilt. Update it whenever the source guide is edited on BGG and reimported.
-The date is the day the guide was built/rebuilt. Update it whenever the source guide is edited on BGG and reimported.
+
+### chapter-date CSS (add to every guide)
+```css
+  .chapter-date{font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;margin-top:0.3rem;}
+```
 
 ### Lightbox
 ```html
@@ -164,77 +181,9 @@ All images use `onclick="openLightbox(this)"`.
 
 ### Navigation — Table of Contents & Back to Top
 
-**Market guides** (Person, Ally, Ship, Cargo, Location, Encounters & Incidents) get a **pill grid** below the header. Each pill links to its h3 card anchor. Color matches the deck's index color:
+**Market guides** (Person, Ally, Ship, Cargo, Location, Encounters & Incidents) get a **pill grid** below the header.
 
-| Deck | Color |
-|---|---|
-| Person | `#e8a94a` amber |
-| Ally | `#9b6ecf` purple |
-| Ship | `#7a8aaa` gray |
-| Cargo | `#3a6aaa` dark blue |
-| Location | `#4ac48a` green |
-| Encounter | `#d4699f` pink |
-| Incident | `#e05a5a` red |
-
-For Encounters & Incidents, pill color is set per-pill via inline `style=` (pink for Encounters, red for Incidents).
-
-```html
-<nav class="toc-grid">
-  <div class="toc-grid-label">Jump to card</div>
-  <div class="toc-cards">
-    <a href="#slug" class="toc-card">Card Name</a>
-    ...
-  </div>
-</nav>
-```
-
-**Captain guides** get a **section list** below the header (Introduction excluded):
-
-```html
-<nav class="toc-list">
-  <div class="toc-list-label">Contents</div>
-  <ol>
-    <li><a href="#slug">Section Name</a></li>
-    ...
-  </ol>
-</nav>
-```
-
-**Back-to-top links** appear after every card entry (after the last `</p>` before the next `<h3>` or `<h2>`):
-
-```html
-<a href="#top" class="back-top">↑ back to top</a>
-```
-
-The top nav-bar must have `id="top"` for the anchor to work:
-```html
-<div id="top" class="nav-bar"><a href="index.html">← Back to Compendium</a></div>
-```
-
-**Required CSS additions** (append to canonical CSS block):
-```css
-  .toc-grid{max-width:860px;margin:1.5rem auto 0;padding:0 1.5rem;}
-  .toc-grid-label{font-family:'Orbitron',sans-serif;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem;}
-  .toc-cards{display:flex;flex-wrap:wrap;gap:0.4rem;}
-  .toc-card{font-family:'Exo 2',sans-serif;font-size:0.75rem;font-weight:400;padding:0.2rem 0.6rem;border:1px solid [COLOR]55;border-radius:3px;color:[COLOR];text-decoration:none;background:var(--bg2);transition:background 0.15s,border-color 0.15s;}
-  .toc-card:hover{background:var(--bg3);border-color:[COLOR];}
-  .toc-list{max-width:860px;margin:1.5rem auto 0;padding:0 1.5rem;}
-  .toc-list-label{font-family:'Orbitron',sans-serif;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem;}
-  .toc-list ol{list-style:none;display:flex;flex-wrap:wrap;gap:0.3rem 1.5rem;padding:0 0 0 1rem;margin:0;border-left:2px solid var(--border);}
-  .toc-list li{font-size:0.8rem;}
-  .toc-list a{color:var(--blue2);text-decoration:none;}
-  .toc-list a:hover{color:#fff;text-decoration:underline;}
-  .back-top{display:block;text-align:right;font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-top:0.25rem;margin-bottom:0.5rem;}
-  .back-top:hover{color:var(--blue);}
-```
-
-
-
----
-
-## Canonical CSS — Box 1 (Blue)
-
-Copy this verbatim for every Captain's Chair guide. Swap blue vars for red equivalents for TBG guides.
+Swap blue vars for red equivalents for TBG guides.
 
 ```css
 <style>
@@ -250,24 +199,6 @@ Copy this verbatim for every Captain's Chair guide. Swap blue vars for red equiv
   .chapter-title span{color:var(--blue2);}
   .chapter-meta{margin-top:1rem;font-size:0.8rem;color:var(--muted);letter-spacing:0.1em;}
   .chapter-tags{display:flex;justify-content:center;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;}
-  .tag{font-family:'Orbitron',sans-serif;font-size:0.6rem;letter-spacing:0.1em;padding:0.2rem 0.6rem;border:1px solid var(--blue);color:var(--blue);border-radius:2px;}
-  .content{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem;}
-  h2{font-family:'Orbitron',sans-serif;font-size:1rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue2);border-left:3px solid var(--blue);padding-left:0.75rem;margin:2.5rem 0 1rem;}
-  h3{font-family:'Orbitron',sans-serif;font-size:0.8rem;font-weight:400;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;margin:1.75rem 0 0.5rem;}
-  p{margin-bottom:1rem;}
-  .card-row{display:flex;gap:0.75rem;overflow-x:auto;padding:1rem 0 0.5rem;margin:1rem 0 1.5rem;scrollbar-width:thin;scrollbar-color:var(--blue) var(--bg2);}
-  .card-row::-webkit-scrollbar{height:4px;}
-  .card-row::-webkit-scrollbar-track{background:var(--bg2);}
-  .card-row::-webkit-scrollbar-thumb{background:var(--blue);border-radius:2px;}
-  .card-row img{height:220px;width:auto;border-radius:6px;border:1px solid var(--border);flex-shrink:0;transition:transform 0.2s,box-shadow 0.2s;cursor:zoom-in;}
-  .card-row img:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 12px 30px rgba(74,159,212,0.3);border-color:var(--blue);}
-  .board-pair{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.25rem 0;}
-  .board-pair img{width:100%;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;transition:transform 0.2s,box-shadow 0.2s;}
-  .board-pair img:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 12px 30px rgba(74,159,212,0.3);border-color:var(--blue);}
-  .board-label{font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.15em;color:var(--muted);text-align:center;margin-top:0.4rem;text-transform:uppercase;}
-  #lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:1000;align-items:center;justify-content:center;cursor:zoom-out;}
-  #lightbox.open{display:flex;}
-  #lightbox img{max-width:90vw;max-height:90vh;border-radius:8px;box-shadow:0 0 60px rgba(74,159,212,0.4);}
   footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:0.75rem;color:var(--muted);line-height:1.8;}
   footer a{color:var(--blue);text-decoration:none;}
   @media(max-width:600px){.chapter-header{padding:2rem 1rem 1.5rem;}.card-row img{height:170px;}.board-pair{grid-template-columns:1fr;}}
@@ -282,45 +213,24 @@ Copy this verbatim for every Captain's Chair guide. Swap blue vars for red equiv
 Box 1 — Captain's Chair (blue)
   Captains: Shran✓, Picard✓, Burnham✓, Sisko✓, Sela✓, Koloth✓
   Location & Market: Persons✓, Allies✓, Ships✓, Cargo✓, Locations✓, Encounters & Incidents✓
-  Strategy: Solo, 5-Year Mission, Playing Against Picard
 
 Box 2 — To Boldly Go (red)
-  Captains: Georgiou, Soval, Kirk, Archer, Rebner, Khan
-  Location & Market: TBG Locations✓
+  Captains: Georgiou, Soval, Kirk, Archer, Rebner, Khan (all Soon)
+  Location & Market: TBG Persons✓, TBG Locations✓, Cargo/Ships/Allies/E&I (Soon)
+
+Box 3 — Second Contact (amber)
+  Captains: (Soon)
+  Location & Market: Commons, Locations, Rewards (all Soon)
+
+Box 4 — Strategy Guides (gray)
+  Solo & Conspiracy✓, 5-Year Mission✓, Playing Against Picard✓
+  Combining Markets (Soon), Wesley Crusher Guide (Soon)
 ```
 
 To flip an entry from Soon → Live:
-- Change class `entry blue-box soon` → `entry blue-box` (or `red-box`)
-- Change `badge-soon` → `badge-live`
-- Change `href` to correct filename
-
----
-
-## Image Extraction Notes
-
-### BGG SingleFile HTML — two image formats encountered:
-1. **CSS `--sf-img-N` variables with CDN `content=""` URLs** (Shran guide)
-   → Extract URLs → run `download_images.py` → upload → embed as base64
-2. **Base64 WebP in `src=""` attribute** (TBG Locations guide)
-   → Extract directly from HTML with Python/base64
-3. **CDN-only fallback** (some images only have `content=` URL, no base64)
-   → Use CDN URL as `<img src="">` directly — works on GitHub Pages
-
-### Image download script pattern
-Claude generates `download_[guide]_images.py` per guide by extracting CDN URLs
-from the SingleFile HTML. Script uses stdlib only (`urllib.request`), no deps.
-Alt text from the SingleFile HTML is used to name files meaningfully
-(e.g. `burnham_board_basic.jpg`, `burnham_1.jpg` … `burnham_7.jpg`).
-
-### Shran guide images (already in repo as base64):
-`shran_board_basic`, `shran_board_advanced`, `shran_available_1/2/3`,
-`shran_reinforcement`, `shran_development_1/2`
-
-### TBG Locations images:
-6 embedded WebP + 3 CDN (Cold Station 12, Tanuga IV, Tellar Prime)
-
-### Burnham guide images (9 total, base64 embedded):
-`burnham_board_basic`, `burnham_board_advanced`, `burnham_1` through `burnham_7`
+- Remove `soon` from class: `entry blue-box soon` → `entry blue-box`
+- Remove `<span class="entry-badge badge-soon">Soon</span>`
+- Set `href` to correct filename
 
 ---
 
@@ -342,6 +252,11 @@ Alt text from the SingleFile HTML is used to name files meaningfully
 | Encounter & Incident Decks | `encounters-incidents.html` | ✅ Live |
 | TBG Location Guide | `tbg-locations.html` | ✅ Live |
 | TBG Person Deck Guide | `tbg-persons.html` | ✅ Live |
+| Solo & Conspiracy | `solo.html` | ✅ Live |
+| 5-Year Mission | `five-year-mission.html` | ✅ Live |
+| Playing Against Picard | `vs-picard.html` | ✅ Live |
+
+> **Note:** Always verify live count by fetching `index.html` at session start — project knowledge may lag behind.
 
 ---
 
@@ -353,17 +268,11 @@ Alt text from the SingleFile HTML is used to name files meaningfully
 
 ### Second Contact
 - Pike, Freeman captains
-- Full market guides
+- Full market guides: Commons, Locations, Rewards
 
 ### Strategy Guides
-- Combining Markets
-- Wesley Crusher Guide
-
-### Index — Box Structure
-- Box 1: Core Box (blue)
-- Box 2: To Boldly Go (red)
-- Box 3: Second Contact (amber)
-- Box 4: Strategy Guides (gray)
+- Combining Markets (`combining-markets.html`)
+- Wesley Crusher Guide (`wesley-crusher-guide.html`)
 
 ---
 
@@ -386,47 +295,47 @@ When importing a guide, certain paragraphs need to be removed or styled as lore:
 
 **To make lore:** provide the first few words — Claude wraps the paragraph in `<p class="lore">`.
 
-Lore paragraphs are used for:
-- McCue's personal reflections on Star Trek canon
-- Series/episode context and thematic observations
-- Self-referential comments about the guide series
+---
 
-BGG-specific paragraphs to always cut:
-- Opening "Welcome to part N of my guides..." sentences
-- Closing calls to comment, subscribe, or follow future guides
-- References to upcoming guides or posting schedules
+## Structural Safety Rules
 
-### Lore CSS (add to every guide)
-```css
-  .lore{font-style:italic;color:#a8b8d0;border-left:3px solid rgba(200,168,75,0.4);padding-left:1rem;margin-bottom:1rem;line-height:1.8;}
+When inserting sections (Video Playthroughs, etc.) always insert **before** `</main>`:
+```python
+html = html.replace('\n</main>', new_section + '\n</main>', 1)
 ```
+Never append after `</main>` — causes duplicate content bugs.
 
 ---
 
-## Posted & Edited Dates
+## Memory Alpha Episode Links
 
-Every guide header shows the original BGG posting date and last edited date (if any), sourced from the BGG thread.
+Episode references in lore paragraphs should link to Memory Alpha.
 
-### Header structure
-```html
-<div class="chapter-meta">By Matthew McCue (mdmccu2)</div>
-<div class="chapter-date">Posted DD Mon YYYY · Last edited DD Mon YYYY</div>
+### URL format
 ```
-If never edited, omit the "· Last edited" part.
+https://memory-alpha.fandom.com/wiki/Episode_Title_(episode)
+```
+- Replace spaces with underscores
+- Always append `_(episode)` disambiguator
+- Commas in titles stay as-is
+- Hyphens in titles stay as-is
+- For multi-episode arcs (e.g. `2x1-2`), link to Part 1
 
-### chapter-date CSS (add to every guide)
+### Link styling (add to guide CSS)
 ```css
-  .chapter-date{font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;margin-top:0.3rem;}
+  .lore a{color:#c8a84b;text-decoration:none;border-bottom:1px dotted rgba(200,168,75,0.5);}
+  .lore a:hover{color:#e8c878;border-bottom-color:#e8c878;}
 ```
 
-### Footer
-Footer no longer includes a date — just attribution:
-```html
-<footer>
-  Card images © WizKids.<br>
-  Content by Matthew McCue (mdmccu2) · Formatting by Periodic_agent
-</footer>
-```
+### Automation notes
+The regex `([A-Z]+[^:]*\d+x\d+:\s+)([A-Za-z][^,&<\n]+?)` catches most single-episode references automatically. The following patterns require manual linking:
+- Second episode in a `A & B` pair
+- Episode codes with ranges: `2x1-2`, `1x9-10`, `2x15-16`
+- Episodes without colon separator: `ENT 3x6 Exile`
+- Titles containing numbers: `Cold Station 12`
+- Multi-part titles with commas: `The War Without, The War Within`
+
+Always do a pass after automation to catch the misses.
 
 ---
 
@@ -457,189 +366,24 @@ TBG guides — add when built:
 Second Contact (pending):
 - Pike solo: `youtu.be/YawshG7D0JU`
 
-### YouTube card HTML template
-```html
-<h2 id="video-playthroughs">Video Playthroughs</h2>
-<p>Playthrough(s) by Paul Grogan (Gaming Rules!):</p>
-<div class="yt-grid">
-  <a href="VIDEO_URL" target="_blank" class="yt-card">
-    <div class="yt-thumb">
-      <img src="https://img.youtube.com/vi/VIDEO_ID/mqdefault.jpg" alt="Title thumbnail">
-      <div class="yt-play">▶</div>
-    </div>
-    <div class="yt-label">Video Title</div>
-    <div class="yt-sub">Type · Gaming Rules!</div>
-  </a>
-</div>
-```
-
-### YouTube CSS
-```css
-  .yt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:1.25rem 0 2rem;}
-  .yt-card{text-decoration:none;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:var(--bg2);transition:border-color 0.2s,transform 0.2s;}
-  .yt-card:hover{border-color:var(--blue);transform:translateY(-3px);}
-  .yt-thumb{position:relative;}
-  .yt-thumb img{width:100%;display:block;}
-  .yt-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#fff;text-shadow:0 0 12px rgba(0,0,0,0.8);opacity:0.85;}
-  .yt-card:hover .yt-play{opacity:1;}
-  .yt-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.08em;color:var(--text);padding:0.6rem 0.75rem 0.2rem;}
-  .yt-sub{font-size:0.72rem;color:var(--muted);padding:0 0.75rem 0.75rem;}
-```
-
-### Index badge
-Guides with a playthrough get a green ▶ badge in the index:
-```html
-<span class="entry-badge badge-video">▶</span>
-```
-```css
-  .badge-video{background:rgba(74,199,120,0.15);color:#4ac478;border:1px solid rgba(74,199,120,0.4);}
-```
-Add this badge alongside the guide entry in index.html. No badge = live but no video. Soon entries have no badge until guide goes live.
-
 ---
 
-## Index Author Blurb
+## Image Extraction Notes
 
-Below the main title, above Box 1:
-```html
-<div class="author-blurb">
-  <p>Welcome to a compendium of my Star Trek: Captain's Chair strategy guides, compiled and formatted by Periodic_agent with permission. My vision for these guides was always collaborative, where edits and updates can be made in order to have a living strategy guide that develops with the shared experience of the community. Please feel free to add your thoughts on specific guides to the <a href="https://boardgamegeek.com/threads/user/1264099?parenttype=boardgame&sort=recent" target="_blank">original BGG posts</a>, or join the Captain's Chair Discord to continue the discussion.</p>
-</div>
-```
-```css
-  .author-blurb{max-width:860px;margin:0 auto 2rem;padding:1.25rem 1.5rem;border-left:3px solid rgba(200,168,75,0.4);background:rgba(200,168,75,0.04);}
-  .author-blurb p{font-style:italic;color:#a8b8d0;font-size:0.9rem;line-height:1.8;margin:0;}
-  .author-blurb a{color:var(--gold);text-decoration:none;}
-  .author-blurb a:hover{text-decoration:underline;}
-```
+### BGG SingleFile HTML — two image formats encountered:
+1. **CSS `--sf-img-N` variables with CDN `content=""` URLs** (Shran guide)
+   → Extract URLs → run `download_images.py` → upload → embed as base64
+2. **Base64 WebP in `src=""` attribute** (TBG Locations guide)
+   → Extract directly from HTML with Python/base64
+3. **CDN-only fallback** (some images only have `content=` URL, no base64)
+   → Use CDN URL as `<img src="">` directly — works on GitHub Pages
 
----
+### Image download script pattern
+Claude generates `download_[guide]_images.py` per guide by extracting CDN URLs from the SingleFile HTML. Script uses stdlib only (`urllib.request`), no deps. Alt text from the SingleFile HTML is used to name files meaningfully (e.g. `burnham_board_basic.jpg`).
 
-## Naming & Header Conventions
+### Known image sets
+- **Shran:** `shran_board_basic`, `shran_board_advanced`, `shran_available_1/2/3`, `shran_reinforcement`, `shran_development_1/2`
+- **Burnham:** `burnham_board_basic`, `burnham_board_advanced`, `burnham_1` through `burnham_7`
+- **TBG Locations:** 6 embedded WebP + 3 CDN (Cold Station 12, Tanuga IV, Tellar Prime)
 
-### Chapter label (above h1)
-- Core Box guides: `Captain's Chair`
-- TBG guides: `To Boldly Go`
-- Never include "Strategy Guide" or "Strategy Compendium"
-
-### Guide titles (h1)
-- Captain guides: full captain name only, no "Strategy Guide"
-  - e.g. `Jean-Luc <span>Picard</span>`, `Thy'Lek <span>Shran</span>`, `Koloth, <span>the Dahar Master</span>`
-- Market guides: deck name + "Guide" — e.g. `<span>Person Deck</span> Guide`
-- Strategy guides: descriptive title only — e.g. `Guide to <span>5-Year Mission</span> Strategies`
-- TBG Location guide: `<span>Location</span> Guide` with chapter-label `To Boldly Go`
-
----
-
-## TBG Locations Card Format (template for future card guides)
-
-Each card section follows this structure:
-
-```html
-<h3 id="slug">Card Name</h3>
-<div class="card-img"><img src="..." alt="Card Name"></div>
-<ul class="card-props">
-  <li><strong>N Skill</strong></li>
-  <li><strong>Traits:</strong> X, Y</li>
-  <li><strong>Control:</strong> text</li>
-  <li><strong>Resupply:</strong> text</li>
-  <li><strong>Reaction:</strong> text</li>
-  <li><strong>Endgame:</strong> text</li>
-  <li><strong>N Points</strong></li>
-  <li><strong>Notable Appearances:</strong> SHOW:NxN: Title</li>
-</ul>
-<p>Guide text — all strategy sentences merged into one paragraph.</p>
-<p class="lore">Lore/thematic observations in italic gold-border style.</p>
-<a href="#top" class="back-top">↑ back to top</a>
-```
-
-**Rules:**
-- Remove repeated card name from start of Para 1 (already in h3)
-- Properties split across multiple BGG paragraphs → merge into one `<ul>`
-- Notable Appearances boundary: ends at last episode reference (`NxN` pattern); description follows
-- All strategy sentences → one merged `<p>`
-- Lore/thematic text → `<p class="lore">`
-
-### card-props CSS
-```css
-  .card-props{list-style:none;padding:0;margin:0.75rem 0 1rem;display:flex;flex-direction:column;gap:0.35rem;}
-  .card-props li{font-size:0.85rem;line-height:1.5;padding-left:1rem;position:relative;color:var(--text);}
-  .card-props li::before{content:'—';position:absolute;left:0;color:var(--gold);font-weight:600;}
-  .card-props li strong{color:var(--blue2);}
-```
-
----
-
-## Image Extraction Notes — Unquoted src= Attribute
-
-Some BGG SingleFile images use unquoted attributes: `src=data:image/webp;base64,...` (no quotes). The correct extraction regex is:
-
-```python
-re.search(r'src=data:image/webp;base64,([^ >]+)', content[pos:])
-```
-
-**Not** `src="data:..."` — the quoted version will fail and bleed adjacent attributes into the base64 string, causing broken images.
-
----
-
-## External Image Dependencies
-
-These images load from external URLs (not base64 embedded):
-- **TBG Locations** — Cold Station 12, Tanuga IV, Tellar Prime load from BGG CDN
-- **Solo & Conspiracy** — bot card images load from BGG CDN
-- **Video Playthroughs** — YouTube thumbnails load from `img.youtube.com`
-
-All other images are base64 embedded and fully self-contained.
-
----
-
-## Structural Safety Rules
-
-When inserting sections (Video Playthroughs, etc.) always insert **before** `</main>`:
-```python
-html = html.replace('\n</main>', new_section + '\n</main>', 1)
-```
-Never append after `</main>` — causes duplicate content bugs.
-
-
----
-
-## Memory Alpha Episode Links
-
-Episode references in lore paragraphs should link to Memory Alpha. This applies to TBG and future guides.
-
-### URL format
-```
-https://memory-alpha.fandom.com/wiki/Episode_Title_(episode)
-```
-- Replace spaces with underscores
-- Always append `_(episode)` disambiguator
-- Commas in titles stay as-is (e.g. `The_War_Without,_The_War_Within_(episode)`)
-- Hyphens in titles stay as-is (e.g. `Four-and-a-Half_Vulcans_(episode)`)
-- For multi-episode arcs (e.g. `2x1-2`), link to Part 1
-
-### Link styling (add to guide CSS)
-```css
-  .lore a{color:#c8a84b;text-decoration:none;border-bottom:1px dotted rgba(200,168,75,0.5);}
-  .lore a:hover{color:#e8c878;border-bottom-color:#e8c878;}
-```
-
-### Automation notes
-The regex `([A-Z]+[^:]*\d+x\d+:\s+)([A-Za-z][^,&<\n]+?)` catches most single-episode references automatically. The following patterns require manual linking:
-- Second episode in a `A & B` pair (no show code prefix on B)
-- Episode codes with ranges: `2x1-2`, `1x9-10`, `2x15-16`
-- Episodes without colon separator: `ENT 3x6 Exile`
-- Titles containing numbers: `Cold Station 12`
-- Multi-part titles with commas: `The War Without, The War Within`
-
-Always do a pass after automation to catch the misses.
-
-
----
-
-## Notes
-
-- Images stay as **base64 in HTML** until the library grows large enough to justify an `images/` folder with file references.
-- The 3 missing TBG location images (Cold Station 12, Tanuga IV, Tellar Prime) load from BGG CDN — acceptable for now.
-- `crop_cards.py` (perspective transform tool) exists for future individual card extraction — on hold pending McCue's agreement.
-- Pictures taken with permission from WizKids.
+> Images stay as **base64 in HTML** until the library grows large enough to justify an `images/` folder.
