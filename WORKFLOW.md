@@ -1,3 +1,23 @@
+## Session Startup
+
+Files live on GitHub Pages at:
+- **Live site:** https://periodic-agent.github.io/stcc-strategy/
+- **Raw files:** https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/[filename]
+
+At the start of each session, fetch the files you'll be editing using web_fetch:
+```
+https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/index.html
+https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/shran.html
+https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/WORKFLOW.md
+... etc.
+```
+
+Always work from the fetched live version. Never assume file content from memory or previous sessions.
+
+After editing, save to /mnt/user-data/outputs/ and present the file for the user to download and push to GitHub manually.
+
+---
+
 # ST:CC Compendium — Workflow Summary
 ## For continuity across sessions
 
@@ -321,15 +341,29 @@ Alt text from the SingleFile HTML is used to name files meaningfully
 | Location Deck Guide | `locations.html` | ✅ Live |
 | Encounter & Incident Decks | `encounters-incidents.html` | ✅ Live |
 | TBG Location Guide | `tbg-locations.html` | ✅ Live |
+| TBG Person Deck Guide | `tbg-persons.html` | ✅ Live |
 
 ---
 
 ## Pending — Known Guides to Add (from BGG)
 
-- Captain's Chair - Playing against Picard (multiplayer + solo)
-- Captain's Chair - Guide to 5-Year Mission Strategies
-- Captain's Chair - Guide to Solo
-- To Boldly Go - Captains (6 captains, see index)
+### To Boldly Go
+- 6 captain guides: Georgiou, Soval, Kirk, Archer, Rebner, Khan
+- Cargo, Ships, Ally, Encounters & Incidents market guides
+
+### Second Contact
+- Pike, Freeman captains
+- Full market guides
+
+### Strategy Guides
+- Combining Markets
+- Wesley Crusher Guide
+
+### Index — Box Structure
+- Box 1: Core Box (blue)
+- Box 2: To Boldly Go (red)
+- Box 3: Second Contact (amber)
+- Box 4: Strategy Guides (gray)
 
 ---
 
