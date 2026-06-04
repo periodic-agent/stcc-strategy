@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ST:CC Card Browser — Mockup</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0e1a;--bg2:#0f1628;--bg3:#141c35;
+  --blue:#4a9fd4;--blue2:#7ec8f0;--gold:#c8a84b;
+  --text:#ccd6f0;--muted:#7a8aaa;--border:rgba(74,159,212,0.25);
+  --person:#e8a94a;--ally:#9b6ecf;--ship:#7a8aaa;
+  --cargo:#3a6aaa;--location:#4ac48a;--encounter:#d4699f;--incident:#e05a5a;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:var(--text);min-height:100vh;}
+
+/* NAV */
+.nav-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:0.75rem 1.5rem;}
+.nav-bar a{font-family:'Orbitron',sans-serif;font-size:0.65rem;letter-spacing:0.15em;color:var(--blue);text-decoration:none;text-transform:uppercase;}
+
+/* HEADER */
+.chapter-header{background:linear-gradient(135deg,#061020 0%,#0d1e3a 50%,#061020 100%);border-bottom:2px solid var(--blue);padding:2.5rem 2rem 2rem;text-align:center;position:relative;overflow:hidden;}
+.chapter-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(74,159,212,0.03) 60px,rgba(74,159,212,0.03) 61px);}
+.chapter-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.25em;color:var(--blue);text-transform:uppercase;margin-bottom:0.6rem;}
+.chapter-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:700;color:#fff;letter-spacing:0.05em;text-shadow:0 0 40px rgba(74,159,212,0.5);}
+.chapter-title span{color:var(--blue2);}
+.chapter-meta{margin-top:0.6rem;font-size:0.78rem;color:var(--muted);letter-spacing:0.08em;}
+
+/* CONTROLS */
+.controls{max-width:1000px;margin:1.5rem auto 0;padding:0 1.5rem;}
+
+.search-row{display:flex;gap:0.75rem;align-items:center;margin-bottom:1.25rem;}
+.search-box{flex:1;background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:0.55rem 0.9rem;font-family:'Exo 2',sans-serif;font-size:0.9rem;color:var(--text);outline:none;transition:border-color 0.2s;}
+.search-box::placeholder{color:var(--muted);}
+.search-box:focus{border-color:var(--blue);}
+.clear-btn{font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;background:transparent;border:1px solid var(--border);color:var(--muted);padding:0.4rem 0.8rem;border-radius:3px;cursor:pointer;transition:color 0.15s,border-color 0.15s;white-space:nowrap;}
+.clear-btn:hover{color:var(--text);border-color:var(--blue);}
+
+.filter-section{margin-bottom:1rem;}
+.filter-label{font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;}
+.pill-row{display:flex;flex-wrap:wrap;gap:0.35rem;}
+
+/* SUIT PILLS */
+.suit-pill{font-family:'Exo 2',sans-serif;font-size:0.72rem;font-weight:400;padding:0.22rem 0.65rem;border-radius:3px;border:1px solid;cursor:pointer;transition:background 0.15s,opacity 0.15s;user-select:none;}
+.suit-pill[data-suit="Person"]{border-color:var(--person);color:var(--person);}
+.suit-pill[data-suit="Ally"]{border-color:var(--ally);color:var(--ally);}
+.suit-pill[data-suit="Ship"]{border-color:var(--ship);color:var(--ship);}
+.suit-pill[data-suit="Cargo"]{border-color:var(--cargo);color:var(--cargo);}
+.suit-pill[data-suit="Location"]{border-color:var(--location);color:var(--location);}
+.suit-pill[data-suit="Encounter"]{border-color:var(--encounter);color:var(--encounter);}
+.suit-pill[data-suit="Incident"]{border-color:var(--incident);color:var(--incident);}
+.suit-pill.active[data-suit="Person"]{background:var(--person);color:#000;}
+.suit-pill.active[data-suit="Ally"]{background:var(--ally);color:#fff;}
+.suit-pill.active[data-suit="Ship"]{background:var(--ship);color:#fff;}
+.suit-pill.active[data-suit="Cargo"]{background:var(--cargo);color:#fff;}
+.suit-pill.active[data-suit="Location"]{background:var(--location);color:#000;}
+.suit-pill.active[data-suit="Encounter"]{background:var(--encounter);color:#fff;}
+.suit-pill.active[data-suit="Incident"]{background:var(--incident);color:#fff;}
+
+/* TAG PILLS */
+.tag-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;font-weight:400;padding:0.18rem 0.55rem;border-radius:3px;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:background 0.15s,color 0.15s,border-color 0.15s;user-select:none;}
+.tag-pill:hover{border-color:var(--blue2);color:var(--blue2);}
+.tag-pill.active{background:rgba(74,159,212,0.15);border-color:var(--blue);color:var(--blue2);}
+
+/* SKILL PILLS */
+.skill-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;font-weight:400;padding:0.18rem 0.55rem;border-radius:3px;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:background 0.15s,color 0.15s,border-color 0.15s;user-select:none;}
+.skill-pill:hover{border-color:var(--gold);color:var(--gold);}
+.skill-pill.active{background:rgba(200,168,75,0.1);border-color:var(--gold);color:var(--gold);}
+
+/* RESULTS */
+.results-bar{max-width:1000px;margin:0 auto;padding:0 1.5rem 0.6rem;display:flex;align-items:center;justify-content:space-between;}
+.result-count{font-family:'Orbitron',sans-serif;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);}
+.result-count span{color:var(--blue2);}
+
+/* CARD GRID */
+.card-grid{max-width:1000px;margin:0 auto;padding:0 1.5rem 3rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;}
+
+.card-entry{background:var(--bg2);border:1px solid var(--border);border-radius:5px;padding:0.75rem;transition:border-color 0.15s,transform 0.15s;cursor:default;}
+.card-entry:hover{border-color:var(--blue);transform:translateY(-2px);}
+
+.card-suit-bar{display:flex;align-items:center;gap:0.4rem;margin-bottom:0.45rem;}
+.suit-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.suit-name{font-family:'Orbitron',sans-serif;font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;}
+
+.card-name{font-family:'Exo 2',sans-serif;font-size:0.88rem;font-weight:600;color:#fff;line-height:1.3;margin-bottom:0.5rem;}
+
+.card-tags{display:flex;flex-wrap:wrap;gap:0.25rem;margin-bottom:0.4rem;}
+.card-tag{font-size:0.62rem;padding:0.1rem 0.35rem;border-radius:2px;background:var(--bg3);color:var(--muted);border:1px solid rgba(255,255,255,0.06);}
+.card-tag.match{background:rgba(74,159,212,0.12);color:var(--blue2);border-color:rgba(74,159,212,0.3);}
+
+.card-skills{display:flex;flex-wrap:wrap;gap:0.25rem;}
+.card-skill{font-size:0.62rem;padding:0.1rem 0.35rem;border-radius:2px;background:rgba(200,168,75,0.08);color:var(--gold);border:1px solid rgba(200,168,75,0.2);}
+.card-skill.match{background:rgba(200,168,75,0.2);border-color:var(--gold);}
+
+/* Suit colors on card */
+.suit-dot[data-suit="Person"],.suit-name[data-suit="Person"]{background:var(--person);color:var(--person);}
+.suit-name[data-suit="Person"]{background:transparent;}
+.suit-dot[data-suit="Ally"]{background:var(--ally);}
+.suit-name[data-suit="Ally"]{color:var(--ally);}
+.suit-dot[data-suit="Ship"]{background:var(--ship);}
+.suit-name[data-suit="Ship"]{color:var(--ship);}
+.suit-dot[data-suit="Cargo"]{background:var(--cargo);}
+.suit-name[data-suit="Cargo"]{color:var(--cargo);}
+.suit-dot[data-suit="Location"]{background:var(--location);}
+.suit-name[data-suit="Location"]{color:var(--location);}
+.suit-dot[data-suit="Encounter"]{background:var(--encounter);}
+.suit-name[data-suit="Encounter"]{color:var(--encounter);}
+.suit-dot[data-suit="Incident"]{background:var(--incident);}
+.suit-name[data-suit="Incident"]{color:var(--incident);}
+
+.card-entry[data-suit="Person"]{border-left:2px solid var(--person);}
+.card-entry[data-suit="Ally"]{border-left:2px solid var(--ally);}
+.card-entry[data-suit="Ship"]{border-left:2px solid var(--ship);}
+.card-entry[data-suit="Cargo"]{border-left:2px solid var(--cargo);}
+.card-entry[data-suit="Location"]{border-left:2px solid var(--location);}
+.card-entry[data-suit="Encounter"]{border-left:2px solid var(--encounter);}
+.card-entry[data-suit="Incident"]{border-left:2px solid var(--incident);}
+
+.no-results{grid-column:1/-1;text-align:center;padding:3rem;color:var(--muted);font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.15em;}
+
+footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:center;font-size:0.72rem;color:var(--muted);line-height:1.8;}
+</style>
+</head>
+<body>
+
+<div class="nav-bar"><a href="index.html">← Back to Compendium</a></div>
+
+<header class="chapter-header">
+  <div class="chapter-label">Captain's Chair · Box 1</div>
+  <h1 class="chapter-title"><span>Common Card</span> Browser</h1>
+  <div class="chapter-meta">106 common market cards · Filter by suit, trait, or skill</div>
+</header>
+
+<div class="controls">
+  <div class="search-row">
+    <input type="text" class="search-box" id="searchInput" placeholder="Search by card name…" autocomplete="off">
+    <button class="clear-btn" onclick="clearAll()">Clear all filters</button>
+  </div>
+
+  <div class="filter-section">
+    <div class="filter-label">Suit</div>
+    <div class="pill-row" id="suitFilters"></div>
+  </div>
+
+  <div class="filter-section">
+    <div class="filter-label">Traits / Tags</div>
+    <div class="pill-row" id="tagFilters"></div>
+  </div>
+
+  <div class="filter-section">
+    <div class="filter-label">Skills</div>
+    <div class="pill-row" id="skillFilters"></div>
+  </div>
+</div>
+
+<div class="results-bar">
+  <div class="result-count">Showing <span id="countDisplay">106</span> cards</div>
+</div>
+
+<div class="card-grid" id="cardGrid"></div>
+
+<footer>Card images © WizKids.<br>Content by Matthew McCue (mdmccu2) · Formatting by Periodic_agent</footer>
+
+<script>
+const CARDS = [{"suit":"Person","name":"Admiral Jarok","tags":["Romulan"],"skills":[]},{"suit":"Person","name":"Admiral Necheyev","tags":["Human","Starfleet"],"skills":["Influence Focus"]},{"suit":"Person","name":"Admiral Pressman","tags":["Human","Shady","Starfleet"],"skills":["Military Focus"]},{"suit":"Person","name":"Ambassador Kamarag","tags":["Ambassador","Imperial","Klingon"],"skills":[]},{"suit":"Person","name":"B-4","tags":["Android","Attack","Synthetic"],"skills":[]},{"suit":"Person","name":"Bruce Maddox","tags":["Engineer","Human","Scientist","Starfleet"],"skills":["Research Focus","Research Skill"]},{"suit":"Person","name":"Captain Dorg","tags":["Attack","Klingon","Shady"],"skills":["Military Focus"]},{"suit":"Person","name":"Harry Mudd","tags":["Attack","Human","Shady","Time Travel"],"skills":[]},{"suit":"Person","name":"Joret Dal","tags":["Cardassian","Spy","Starfleet"],"skills":[]},{"suit":"Person","name":"Laas","tags":["Changeling"],"skills":[]},{"suit":"Person","name":"Laris","tags":["Romulan"],"skills":[]},{"suit":"Person","name":"Lenara Kahn","tags":["Scientist","Trill"],"skills":["Research Focus"]},{"suit":"Person","name":"Lursa","tags":["Klingon","Shady"],"skills":["Military Focus"]},{"suit":"Person","name":"Lwaxana Troi","tags":["Ambassador","Betazoid","Telepath"],"skills":[]},{"suit":"Person","name":"Mirok","tags":["Attack","Romulan"],"skills":["Research Focus"]},{"suit":"Person","name":"Moriarty","tags":["Attack","Hologram","Shady","Synthetic"],"skills":[]},{"suit":"Person","name":"Peanut Hamper","tags":["Synthetic"],"skills":[]},{"suit":"Person","name":"Phlox","tags":["Doctor"],"skills":[]},{"suit":"Person","name":"Riva","tags":["Ambassador","Communication","Telepath"],"skills":["Influence Focus","Influence Skill"]},{"suit":"Person","name":"Rom","tags":["Engineer","Ferengi"],"skills":[]},{"suit":"Person","name":"Sakonna","tags":["Maquis","Vulcan"],"skills":[]},{"suit":"Person","name":"Su'Kal","tags":["Kelpien"],"skills":[]},{"suit":"Person","name":"Talok","tags":["Attack","Romulan","Spy","Vulcan"],"skills":["Influence Focus"]},{"suit":"Person","name":"Tevrin Krit","tags":["Business","Tellarite"],"skills":[]},{"suit":"Person","name":"Zephram Cochrane","tags":["Engineer","Human","Pilot"],"skills":[]},{"suit":"Cargo","name":"Biobed","tags":["Doctor"],"skills":["Research Focus","Research Skill"]},{"suit":"Cargo","name":"Borg Spatial Trajector","tags":["Borg","Scientist"],"skills":[]},{"suit":"Cargo","name":"Cloaking Device","tags":["Cloak","Ongoing"],"skills":["Military Focus"]},{"suit":"Cargo","name":"Ferengi Wine","tags":["Beverage","Ferengi"],"skills":[]},{"suit":"Cargo","name":"Forced Singularity","tags":["Anomaly","Ongoing","Romulan"],"skills":["Research Focus"]},{"suit":"Cargo","name":"Holosuite","tags":["Business","Hologram"],"skills":[]},{"suit":"Cargo","name":"Horta","tags":["Alien","Creature","Ongoing"],"skills":[]},{"suit":"Cargo","name":"Lirpa","tags":["Attack","Vulcan","Weapon"],"skills":[]},{"suit":"Cargo","name":"Mek'Leth","tags":["Attack","Klingon","Weapon"],"skills":[]},{"suit":"Cargo","name":"Orb Of Time","tags":["Bajoran","Time Travel"],"skills":["Influence Focus"]},{"suit":"Cargo","name":"Phasers","tags":["Ongoing","Security","Starfleet","Weapon"],"skills":[]},{"suit":"Cargo","name":"Plasma Manifold","tags":["Engineer"],"skills":["Military Focus"]},{"suit":"Cargo","name":"Sehlat","tags":["Attack","Creature","Vulcan"],"skills":[]},{"suit":"Cargo","name":"Tachyon Detection Grid","tags":["Attack","Communication"],"skills":["Influence Focus"]},{"suit":"Cargo","name":"Tribbles","tags":["Attack","Creature"],"skills":[]},{"suit":"Cargo","name":"Type III Disruptor Pistols","tags":["Attack","Weapon"],"skills":[]},{"suit":"Cargo","name":"Unstable Wormhole","tags":["Anomaly"],"skills":[]},{"suit":"Ship","name":"Bird Of Prey","tags":["Attack","Cloak","Imperial","Romulan"],"skills":["Influence Skill"]},{"suit":"Ship","name":"Borg Probe","tags":["Borg"],"skills":[]},{"suit":"Ship","name":"D'Kyr Cruiser","tags":["Scientist","Vulcan"],"skills":[]},{"suit":"Ship","name":"Holographic Drone Ship","tags":["Aenar","Hologram","Romulan","Weapon"],"skills":["Influence Focus"]},{"suit":"Ship","name":"K'Tinga Battlecruiser","tags":["Imperial","Klingon"],"skills":["Military Focus","Military Skill"]},{"suit":"Ship","name":"Kazon Raider","tags":["Attack","Shady"],"skills":["Influence Focus"]},{"suit":"Ship","name":"Pakled Freighter","tags":["Business","Pakled","Aenar"],"skills":[]},{"suit":"Ship","name":"Son'A Battlecruiser","tags":["Attack","Dominion","Shady"],"skills":[]},{"suit":"Ship","name":"U.S.S. Enterprise-B","tags":["Starfleet"],"skills":[]},{"suit":"Ship","name":"U.S.S. Enterprise-C","tags":["Ambassador","Starfleet","Time Travel"],"skills":["Research Focus"]},{"suit":"Ship","name":"U.S.S. Pasteur","tags":["Communication","Doctor","Starfleet"],"skills":["Research Focus"]},{"suit":"Ship","name":"U.S.S. Reliant","tags":["Starfleet"],"skills":[]},{"suit":"Ship","name":"Voth Research Vessel","tags":["Alien","Anomaly"],"skills":["Research Skill"]},{"suit":"Ship","name":"Xindi-Reptillian Battleship","tags":["Xindi"],"skills":["Military Focus"]},{"suit":"Ally","name":"Arin'Sen","tags":["Klingon"],"skills":[]},{"suit":"Ally","name":"Bolian","tags":[],"skills":[]},{"suit":"Ally","name":"Bynars","tags":["Alien","Engineer"],"skills":[]},{"suit":"Ally","name":"Denobulans","tags":[],"skills":[]},{"suit":"Ally","name":"Edosians","tags":["Alien"],"skills":[]},{"suit":"Ally","name":"Emerald Chain","tags":["Andorian","Attack","Orion","Shady"],"skills":[]},{"suit":"Ally","name":"Halkan Council","tags":["Aenar"],"skills":[]},{"suit":"Ally","name":"Karemma","tags":["Business","Dominion"],"skills":[]},{"suit":"Ally","name":"Kelpien","tags":["Kelpien"],"skills":["Research Focus"]},{"suit":"Ally","name":"Letheans","tags":["Attack","Shady","Telepath"],"skills":["Military Focus"]},{"suit":"Ally","name":"Organians","tags":["Anomaly","Transcendent"],"skills":[]},{"suit":"Ally","name":"Suliban","tags":["Alien","Time Travel"],"skills":["Influence Focus"]},{"suit":"Ally","name":"Tholians","tags":["Alien"],"skills":[]},{"suit":"Location","name":"Armagosa Observatory","tags":["Scientist","Starbase"],"skills":["Research Skill"]},{"suit":"Location","name":"Ancient Relay Station","tags":["Alien","Communication"],"skills":["Research Skill"]},{"suit":"Location","name":"Archer IV","tags":[],"skills":["Influence Skill"]},{"suit":"Location","name":"Ba'Ku","tags":["Anomaly"],"skills":[]},{"suit":"Location","name":"Betazed","tags":["Betazoid"],"skills":["Influence Skill"]},{"suit":"Location","name":"Corvan II","tags":["Business","Human","Starfleet"],"skills":["Military Skill"]},{"suit":"Location","name":"Deep Space K-7","tags":["Starbase"],"skills":["Influence Focus"]},{"suit":"Location","name":"Delta Vega","tags":[],"skills":["Military Skill"]},{"suit":"Location","name":"Derna","tags":["Bajoran","Doctor","Romulan"],"skills":[]},{"suit":"Location","name":"Dozaria","tags":["Breen"],"skills":["Military Skill"]},{"suit":"Location","name":"Freecloud","tags":["Business","Shady","Aenar"],"skills":[]},{"suit":"Location","name":"Indri VIII","tags":["Anomaly"],"skills":["Influence Skill","Research Skill"]},{"suit":"Location","name":"Kelvas Docks","tags":["Cardassian","Dominion","Engineer","Starbase"],"skills":["Military Focus"]},{"suit":"Location","name":"Memory Alpha","tags":["Communication","Starfleet"],"skills":[]},{"suit":"Location","name":"Regula I","tags":["Scientist","Starbase","Starfleet"],"skills":["Research Skill"]},{"suit":"Location","name":"Risa","tags":["Business"],"skills":["Influence Skill"]},{"suit":"Location","name":"Solum","tags":["Alien","Aenar"],"skills":[]},{"suit":"Location","name":"Tulgana IV","tags":["Ambassador","Business","Klingon","Starfleet"],"skills":[]},{"suit":"Location","name":"Verex III","tags":["Orion","Shady"],"skills":["Influence Skill"]},{"suit":"Location","name":"Xahea","tags":[],"skills":["Research Focus","Military Skill"]},{"suit":"Encounter","name":"Ancient Gene Fragments","tags":["Anomaly","Augment"],"skills":["Military Focus"]},{"suit":"Encounter","name":"Boltzmann Brain","tags":["Doctor","Telepath"],"skills":[]},{"suit":"Encounter","name":"Guardian Of Forever","tags":["Andorian","Ongoing","Time Travel","Transcendent"],"skills":[]},{"suit":"Encounter","name":"Iconian Gateway","tags":["Alien","Imperial"],"skills":["Influence Focus"]},{"suit":"Encounter","name":"Koala","tags":["Wildcard"],"skills":[]},{"suit":"Encounter","name":"Omega Particle","tags":["Scientist"],"skills":["Research Focus"]},{"suit":"Encounter","name":"Sha Ka Ree","tags":["Attack","Ongoing","Transcendent","Vulcan"],"skills":[]},{"suit":"Encounter","name":"V'Ger","tags":["Synthetic"],"skills":[]},{"suit":"Encounter","name":"Wesley Crusher","tags":["Human","Pilot","Starfleet","Transcendent"],"skills":["Wild Skill","Wild Skill"]},{"suit":"Incident","name":"Energy Drain","tags":[],"skills":[]},{"suit":"Incident","name":"Flight Training Accident","tags":["Surprise"],"skills":[]},{"suit":"Incident","name":"Hostile Contact","tags":[],"skills":[]},{"suit":"Incident","name":"Political Crisis","tags":[],"skills":[]},{"suit":"Incident","name":"Red Alert","tags":[],"skills":[]},{"suit":"Incident","name":"Subspace Phenomenon","tags":[],"skills":[]},{"suit":"Incident","name":"Trade Embargo","tags":[],"skills":[]},{"suit":"Incident","name":"Whale Probe Incursion","tags":["Alien","Attack","Surprise"],"skills":[]}];
+
+const SUITS = ["Person","Ally","Ship","Cargo","Location","Encounter","Incident"];
+
+// Collect unique tags and skills
+const allTags = [...new Set(CARDS.flatMap(c=>c.tags))].sort();
+const allSkills = [...new Set(CARDS.flatMap(c=>c.skills))].sort();
+
+let activeSuits = new Set();
+let activeTags = new Set();
+let activeSkills = new Set();
+let searchText = '';
+
+// Build suit filters
+const suitContainer = document.getElementById('suitFilters');
+SUITS.forEach(s=>{
+  const p = document.createElement('span');
+  p.className='suit-pill';
+  p.dataset.suit=s;
+  p.textContent=s;
+  p.onclick=()=>{
+    if(activeSuits.has(s)) activeSuits.delete(s); else activeSuits.add(s);
+    p.classList.toggle('active');
+    render();
+  };
+  suitContainer.appendChild(p);
+});
+
+// Build tag filters
+const tagContainer = document.getElementById('tagFilters');
+allTags.forEach(t=>{
+  const p = document.createElement('span');
+  p.className='tag-pill';
+  p.textContent=t;
+  p.onclick=()=>{
+    if(activeTags.has(t)) activeTags.delete(t); else activeTags.add(t);
+    p.classList.toggle('active');
+    render();
+  };
+  tagContainer.appendChild(p);
+});
+
+// Build skill filters
+const skillContainer = document.getElementById('skillFilters');
+allSkills.forEach(s=>{
+  const p = document.createElement('span');
+  p.className='skill-pill';
+  p.textContent=s;
+  p.onclick=()=>{
+    if(activeSkills.has(s)) activeSkills.delete(s); else activeSkills.add(s);
+    p.classList.toggle('active');
+    render();
+  };
+  skillContainer.appendChild(p);
+});
+
+// Search input
+document.getElementById('searchInput').addEventListener('input', e=>{
+  searchText = e.target.value.toLowerCase().trim();
+  render();
+});
+
+function clearAll(){
+  activeSuits.clear(); activeTags.clear(); activeSkills.clear();
+  searchText='';
+  document.getElementById('searchInput').value='';
+  document.querySelectorAll('.suit-pill,.tag-pill,.skill-pill').forEach(p=>p.classList.remove('active'));
+  render();
+}
+
+function render(){
+  const grid = document.getElementById('cardGrid');
+  const matched = CARDS.filter(c=>{
+    if(activeSuits.size && !activeSuits.has(c.suit)) return false;
+    if(searchText && !c.name.toLowerCase().includes(searchText)) return false;
+    if(activeTags.size && ![...activeTags].every(t=>c.tags.includes(t))) return false;
+    if(activeSkills.size && ![...activeSkills].every(s=>c.skills.includes(s))) return false;
+    return true;
+  });
+
+  document.getElementById('countDisplay').textContent = matched.length;
+  grid.innerHTML='';
+
+  if(!matched.length){
+    const no = document.createElement('div');
+    no.className='no-results';
+    no.textContent='No cards match the current filters.';
+    grid.appendChild(no);
+    return;
+  }
+
+  matched.forEach(c=>{
+    const el = document.createElement('div');
+    el.className='card-entry';
+    el.dataset.suit=c.suit;
+
+    const tagHTML = c.tags.map(t=>`<span class="card-tag${activeTags.has(t)?' match':''}">${t}</span>`).join('');
+    const skillHTML = c.skills.map(s=>`<span class="card-skill${activeSkills.has(s)?' match':''}">${s}</span>`).join('');
+
+    el.innerHTML=`
+      <div class="card-suit-bar">
+        <div class="suit-dot" data-suit="${c.suit}"></div>
+        <div class="suit-name" data-suit="${c.suit}">${c.suit}</div>
+      </div>
+      <div class="card-name">${c.name}</div>
+      ${tagHTML ? `<div class="card-tags">${tagHTML}</div>` : ''}
+      ${skillHTML ? `<div class="card-skills">${skillHTML}</div>` : ''}
+    `;
+    grid.appendChild(el);
+  });
+}
+
+render();
+</script>
+</body>
+</html>
