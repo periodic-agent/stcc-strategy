@@ -64,13 +64,17 @@ a{color:var(--blue);text-decoration:none;}
 /* DECK PILLS */
 .deck-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;padding:0.18rem 0.6rem;border-radius:3px;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:all 0.15s;user-select:none;}
 .deck-pill.core{border-color:rgba(74,159,212,0.4);color:#4a9fd4;}
-.deck-pill.core:hover,.deck-pill.core.active{background:rgba(74,159,212,0.15);border-color:#4a9fd4;color:#7ec8f0;}
+.deck-pill.core:hover{background:rgba(74,159,212,0.15);border-color:#4a9fd4;color:#7ec8f0;}
+.deck-pill.core.active{background:#4a9fd4;border-color:#4a9fd4;color:#000;font-weight:600;}
 .deck-pill.tbg{border-color:rgba(192,57,43,0.4);color:#c0392b;}
-.deck-pill.tbg:hover,.deck-pill.tbg.active{background:rgba(192,57,43,0.15);border-color:#e05a5a;color:#ff8080;}
+.deck-pill.tbg:hover{background:rgba(192,57,43,0.15);border-color:#e05a5a;color:#ff8080;}
+.deck-pill.tbg.active{background:#c0392b;border-color:#c0392b;color:#fff;font-weight:600;}
 .deck-pill.second{border-color:rgba(200,168,75,0.4);color:#c8a84b;}
-.deck-pill.second:hover,.deck-pill.second.active{background:rgba(200,168,75,0.15);border-color:#e8c96a;color:#f0d878;}
+.deck-pill.second:hover{background:rgba(200,168,75,0.15);border-color:#e8c96a;color:#f0d878;}
+.deck-pill.second.active{background:#c8a84b;border-color:#c8a84b;color:#000;font-weight:600;}
 .deck-pill.common{border-color:rgba(74,159,212,0.4);color:#4a9fd4;}
-.deck-pill.common:hover,.deck-pill.common.active{background:rgba(74,159,212,0.15);border-color:#4a9fd4;color:#7ec8f0;}
+.deck-pill.common:hover{background:rgba(74,159,212,0.15);border-color:#4a9fd4;color:#7ec8f0;}
+.deck-pill.common.active{background:#4a9fd4;border-color:#4a9fd4;color:#000;font-weight:600;}
 
 /* SUIT PILLS */
 .suit-pill{font-family:'Exo 2',sans-serif;font-size:0.72rem;padding:0.22rem 0.65rem;border-radius:3px;border:1px solid;cursor:pointer;transition:background 0.15s;user-select:none;}
@@ -405,10 +409,11 @@ function cardMatches(c){
   // Box / promo membership
   if(c.deck==='Promo'){
     if(!activePromos.has(c.box)) return false;
+    // Promo cards skip the deck filter -- showing them is controlled by promo selection alone
   } else {
     if(!activeBoxes.has(c.box)) return false;
+    if(!activeDecks.has(c.deck)) return false;
   }
-  if(!activeDecks.has(c.deck)) return false;
   if(activeSuits.size && !activeSuits.has(c.suit)) return false;
   if(searchText && !c.name.toLowerCase().includes(searchText)) return false;
   const allTags=[...c.species,...c.regular,...c.other];
@@ -443,9 +448,12 @@ function updateSearchPlaceholder(total){
 
 function getPoolWithout(excludeTag, excludeSkill){
   return ALL_CARDS.filter(c=>{
-    if(c.deck==='Promo'){ if(!activePromos.has(c.box)) return false; }
-    else { if(!activeBoxes.has(c.box)) return false; }
-    if(!activeDecks.has(c.deck)) return false;
+    if(c.deck==='Promo'){
+      if(!activePromos.has(c.box)) return false;
+    } else {
+      if(!activeBoxes.has(c.box)) return false;
+      if(!activeDecks.has(c.deck)) return false;
+    }
     if(activeSuits.size && !activeSuits.has(c.suit)) return false;
     if(searchText && !c.name.toLowerCase().includes(searchText)) return false;
     const allTags=[...c.species,...c.regular,...c.other];
