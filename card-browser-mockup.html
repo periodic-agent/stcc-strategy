@@ -168,8 +168,8 @@ a{color:var(--blue);text-decoration:none;}
 
 .collapsible-header{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:0.3rem 0;user-select:none;}
 .collapsible-header:hover .filter-label{color:var(--blue2);}
-.collapsible-arrow{font-size:0.6rem;color:var(--muted);transition:transform 0.2s;margin-left:0.5rem;flex-shrink:0;}
-.collapsible-header.open .collapsible-arrow{transform:rotate(90deg);}
+.collapsible-arrow{font-size:0.7rem;color:var(--muted);transition:transform 0.2s;margin-left:0.5rem;flex-shrink:0;display:inline-block;}
+.collapsible-header.open .collapsible-arrow{transform:rotate(180deg);}
 .active-summary{font-size:0.6rem;color:var(--sp-tx);margin-left:0.5rem;font-family:'Exo 2',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:300px;}
 .active-summary.regular{color:var(--rg-tx);}
 .active-summary.other{color:var(--ot-tx);}
@@ -194,7 +194,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 <div class="controls">
 
   <div class="search-row">
-    <input type="text" class="search-box" id="searchInput" placeholder="Search by card name…" autocomplete="off">
+    <input type="text" class="search-box" id="searchInput" placeholder="Search by card name…" autocomplete="off" id="searchInput">
     <button class="clear-btn" onclick="clearAll()">Clear all</button>
   </div>
 
@@ -222,53 +222,57 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   </div>
 
   <div class="filter-section">
-    <div class="collapsible-header" onclick="toggleSection(this,'speciesBody','speciesSummary')">
+    <div class="collapsible-header open" onclick="toggleSection(this,'speciesBody','speciesSummary')">
       <div style="display:flex;align-items:center;gap:0.4rem;">
-        <div class="filter-label">Species Traits</div>
+        <div class="filter-label">Species Traits
+    </div>
         <span class="active-summary" id="speciesSummary"></span>
       </div>
-      <span class="collapsible-arrow">&#9654;</span>
+      <span class="collapsible-arrow">&#9660;</span>
     </div>
-    <div class="collapsible-body" id="speciesBody">
+    <div class="collapsible-body open" id="speciesBody">
       <div class="pill-row" id="speciesFilters"></div>
     </div>
   </div>
 
   <div class="filter-section">
-    <div class="collapsible-header" onclick="toggleSection(this,'regularBody','regularSummary')">
+    <div class="collapsible-header open" onclick="toggleSection(this,'regularBody','regularSummary')">
       <div style="display:flex;align-items:center;gap:0.4rem;">
-        <div class="filter-label">Regular Traits</div>
+        <div class="filter-label">Regular Traits
+    </div>
         <span class="active-summary regular" id="regularSummary"></span>
       </div>
-      <span class="collapsible-arrow">&#9654;</span>
+      <span class="collapsible-arrow">&#9660;</span>
     </div>
-    <div class="collapsible-body" id="regularBody">
+    <div class="collapsible-body open" id="regularBody">
       <div class="pill-row" id="regularFilters"></div>
     </div>
   </div>
 
   <div class="filter-section">
-    <div class="collapsible-header" onclick="toggleSection(this,'otherBody','otherSummary')">
+    <div class="collapsible-header open" onclick="toggleSection(this,'otherBody','otherSummary')">
       <div style="display:flex;align-items:center;gap:0.4rem;">
-        <div class="filter-label">Other Traits</div>
+        <div class="filter-label">Other Traits
+    </div>
         <span class="active-summary other" id="otherSummary"></span>
       </div>
-      <span class="collapsible-arrow">&#9654;</span>
+      <span class="collapsible-arrow">&#9660;</span>
     </div>
-    <div class="collapsible-body" id="otherBody">
+    <div class="collapsible-body open" id="otherBody">
       <div class="pill-row" id="otherFilters"></div>
     </div>
   </div>
 
   <div class="filter-section">
-    <div class="collapsible-header" onclick="toggleSection(this,'skillsBody','skillsSummary')">
+    <div class="collapsible-header open" onclick="toggleSection(this,'skillsBody','skillsSummary')">
       <div style="display:flex;align-items:center;gap:0.4rem;">
-        <div class="filter-label">Skills</div>
+        <div class="filter-label">Skills
+    </div>
         <span class="active-summary skill" id="skillsSummary"></span>
       </div>
-      <span class="collapsible-arrow">&#9654;</span>
+      <span class="collapsible-arrow">&#9660;</span>
     </div>
-    <div class="collapsible-body" id="skillsBody">
+    <div class="collapsible-body open" id="skillsBody">
       <div class="pill-row" id="skillFilters"></div>
     </div>
   </div>
@@ -452,6 +456,65 @@ function updateSummaries(){
   document.getElementById('skillsSummary').textContent=sk.length?sk.join(', '):'';
 }
 
+function updateSearchPlaceholder(totalShown){
+  const input=document.getElementById('searchInput');
+  const parts=[];
+  if(activeTags.size) parts.push([...activeTags].join(' + '));
+  if(activeSkills.size) parts.push([...activeSkills].join(' + '));
+  if(activeSuits.size) parts.push([...activeSuits].join(' + '));
+  if(parts.length){
+    input.placeholder=parts.join(' · ') + ' · ' + totalShown + ' card'+(totalShown!==1?'s':'');
+  } else {
+    input.placeholder='Search by card name…';
+  }
+}
+
+function getFilteredWithout(excludeTag, excludeSkill){
+  // Count cards matching current filters but ignoring one specific tag/skill
+  // Used for dynamic badge counts
+  return ALL_CARDS.filter(c=>{
+    if(!activeBoxes.has(c.box)) return false;
+    if(!activeDecks.has(c.deck)) return false;
+    if(activeSuits.size && !activeSuits.has(c.suit)) return false;
+    if(searchText && !c.name.toLowerCase().includes(searchText)) return false;
+    const allTags=[...c.species,...c.regular,...c.other];
+    const tagsToCheck=[...activeTags].filter(t=>t!==excludeTag);
+    if(tagsToCheck.length && !tagsToCheck.every(t=>allTags.includes(t))) return false;
+    const skillsToCheck=[...activeSkills].filter(s=>s!==excludeSkill);
+    if(skillsToCheck.length && !skillsToCheck.every(s=>c.skills.includes(s))) return false;
+    return true;
+  });
+}
+
+function updateBadges(){
+  // For each trait/skill pill, compute count of matching cards if that pill were active
+  const updatePillCounts = (containerid, items, isSkill) => {
+    const container = document.getElementById(containerid);
+    if(!container) return;
+    const pills = container.querySelectorAll('span');
+    pills.forEach((pill, i) => {
+      const val = items[i];
+      if(!val) return;
+      // Get pool: current filters minus this specific tag, then count cards having this tag
+      const pool = isSkill
+        ? getFilteredWithout(null, activeSkills.has(val)?val:null)
+        : getFilteredWithout(activeTags.has(val)?val:null, null);
+      const count = pool.filter(c=>{
+        if(isSkill) return c.skills.includes(val);
+        return [...c.species,...c.regular,...c.other].includes(val);
+      }).length;
+      // Update pill text
+      const base = val;
+      pill.textContent = count > 0 ? base+' ('+count+')' : base;
+      pill.style.opacity = count > 0 ? '1' : '0.35';
+    });
+  };
+  updatePillCounts('speciesFilters', allSpecies, false);
+  updatePillCounts('regularFilters', allRegular, false);
+  updatePillCounts('otherFilters', allOther, false);
+  updatePillCounts('skillFilters', allSkills, true);
+}
+
 function render(){
   updateSummaries();
   const groups=document.getElementById('deckGroups');
@@ -474,6 +537,8 @@ function render(){
     groups.appendChild(section);
   });
   document.getElementById('countDisplay').textContent=total;
+  updateSearchPlaceholder(total);
+  updateBadges();
   if(!total){
     groups.innerHTML='<div class="no-results">No cards match the current filters.</div>';
   }
