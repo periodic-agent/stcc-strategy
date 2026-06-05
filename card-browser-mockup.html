@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ST:CC Card Browser — Mockup</title>
+<title>ST:CC Card Browser — Core Box</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -12,35 +12,63 @@
   --text:#ccd6f0;--muted:#7a8aaa;--border:rgba(74,159,212,0.25);
   --person:#e8a94a;--ally:#9b6ecf;--ship:#7a8aaa;
   --cargo:#3a6aaa;--location:#4ac48a;--encounter:#d4699f;--incident:#e05a5a;
-  --species-bg:rgba(220,140,60,0.12);--species-border:rgba(220,140,60,0.45);--species-text:#e09050;
-  --regular-bg:rgba(74,159,212,0.10);--regular-border:rgba(74,159,212,0.35);--regular-text:#7ec8f0;
-  --other-bg:rgba(200,60,60,0.10);--other-border:rgba(200,60,60,0.35);--other-text:#e05a5a;
+  --sp-bg:rgba(220,140,60,0.12);--sp-bd:rgba(220,140,60,0.45);--sp-tx:#e09050;
+  --rg-bg:rgba(74,159,212,0.10);--rg-bd:rgba(74,159,212,0.35);--rg-tx:#7ec8f0;
+  --ot-bg:rgba(200,60,60,0.10);--ot-bd:rgba(200,60,60,0.35);--ot-tx:#e05a5a;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:var(--text);min-height:100vh;}
+a{color:var(--blue);text-decoration:none;}
 
+/* NAV */
 .nav-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:0.75rem 1.5rem;}
-.nav-bar a{font-family:'Orbitron',sans-serif;font-size:0.65rem;letter-spacing:0.15em;color:var(--blue);text-decoration:none;text-transform:uppercase;}
+.nav-bar a{font-family:'Orbitron',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;}
 
+/* HEADER */
 .chapter-header{background:linear-gradient(135deg,#061020 0%,#0d1e3a 50%,#061020 100%);border-bottom:2px solid var(--blue);padding:2.5rem 2rem 2rem;text-align:center;position:relative;overflow:hidden;}
 .chapter-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(74,159,212,0.03) 60px,rgba(74,159,212,0.03) 61px);}
 .chapter-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.25em;color:var(--blue);text-transform:uppercase;margin-bottom:0.6rem;}
 .chapter-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:700;color:#fff;letter-spacing:0.05em;text-shadow:0 0 40px rgba(74,159,212,0.5);}
 .chapter-title span{color:var(--blue2);}
-.chapter-meta{margin-top:0.6rem;font-size:0.78rem;color:var(--muted);letter-spacing:0.08em;}
+.chapter-meta{margin-top:0.6rem;font-size:0.78rem;color:var(--muted);}
 
-.controls{max-width:1000px;margin:1.5rem auto 0;padding:0 1.5rem;}
+/* CONTROLS */
+.controls{max-width:1100px;margin:1.5rem auto 0;padding:0 1.5rem;}
+.filter-section{margin-bottom:1rem;}
+.filter-label{font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;}
+.pill-row{display:flex;flex-wrap:wrap;gap:0.35rem;}
 
+/* SEARCH ROW */
 .search-row{display:flex;gap:0.75rem;align-items:center;margin-bottom:1.25rem;}
 .search-box{flex:1;background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:0.55rem 0.9rem;font-family:'Exo 2',sans-serif;font-size:0.9rem;color:var(--text);outline:none;transition:border-color 0.2s;}
 .search-box::placeholder{color:var(--muted);}
 .search-box:focus{border-color:var(--blue);}
-.clear-btn{font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;background:transparent;border:1px solid var(--border);color:var(--muted);padding:0.4rem 0.8rem;border-radius:3px;cursor:pointer;transition:color 0.15s,border-color 0.15s;white-space:nowrap;}
+
+/* VIEW TOGGLE */
+.view-toggle{display:flex;gap:0.35rem;}
+.vtoggle{font-family:'Orbitron',sans-serif;font-size:0.52rem;letter-spacing:0.1em;text-transform:uppercase;background:transparent;border:1px solid var(--border);color:var(--muted);padding:0.35rem 0.7rem;border-radius:3px;cursor:pointer;transition:all 0.15s;}
+.vtoggle.active{border-color:var(--blue);color:var(--blue2);background:rgba(74,159,212,0.1);}
+
+.clear-btn{font-family:'Orbitron',sans-serif;font-size:0.52rem;letter-spacing:0.1em;text-transform:uppercase;background:transparent;border:1px solid var(--border);color:var(--muted);padding:0.35rem 0.7rem;border-radius:3px;cursor:pointer;transition:all 0.15s;white-space:nowrap;}
 .clear-btn:hover{color:var(--text);border-color:var(--blue);}
 
-.filter-section{margin-bottom:1rem;}
-.filter-label{font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;}
-.pill-row{display:flex;flex-wrap:wrap;gap:0.35rem;}
+/* BOX PILLS */
+.box-pill{font-family:'Exo 2',sans-serif;font-size:0.72rem;padding:0.22rem 0.75rem;border-radius:3px;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:all 0.15s;user-select:none;}
+.box-pill:hover{border-color:var(--blue2);color:var(--blue2);}
+.box-pill.active{background:rgba(74,159,212,0.15);border-color:var(--blue);color:#fff;}
+.box-pill[data-box="core"]{border-color:#4a9fd4;color:#4a9fd4;}
+.box-pill[data-box="core"].active{background:rgba(74,159,212,0.15);border-color:#4a9fd4;color:#fff;}
+.box-pill[data-box="tbg"]{border-color:#c0392b;color:#c0392b;}
+.box-pill[data-box="tbg"]:hover{border-color:#e05a5a;color:#e05a5a;}
+.box-pill[data-box="tbg"].active{background:rgba(192,57,43,0.15);border-color:#e05a5a;color:#fff;}
+.box-pill[data-box="2nd"]{border-color:#c8a84b;color:#c8a84b;}
+.box-pill[data-box="2nd"]:hover{border-color:#e8c96a;color:#e8c96a;}
+.box-pill[data-box="2nd"].active{background:rgba(200,168,75,0.15);border-color:#e8c96a;color:#fff;}
+
+/* DECK PILLS */
+.deck-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;padding:0.18rem 0.6rem;border-radius:3px;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:all 0.15s;user-select:none;}
+.deck-pill:hover{border-color:var(--blue2);color:var(--blue2);}
+.deck-pill.active{background:rgba(74,159,212,0.12);border-color:var(--blue);color:var(--blue2);}
 
 /* SUIT PILLS */
 .suit-pill{font-family:'Exo 2',sans-serif;font-size:0.72rem;padding:0.22rem 0.65rem;border-radius:3px;border:1px solid;cursor:pointer;transition:background 0.15s;user-select:none;}
@@ -59,35 +87,29 @@ body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:v
 .suit-pill.active[data-suit="Encounter"]{background:var(--encounter);color:#fff;}
 .suit-pill.active[data-suit="Incident"]{background:var(--incident);color:#fff;}
 
-/* SPECIES TRAIT PILLS — light orange */
-.species-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;padding:0.18rem 0.55rem;border-radius:3px;border:1px solid var(--species-border);color:var(--species-text);background:var(--species-bg);cursor:pointer;transition:background 0.15s,border-color 0.15s;user-select:none;}
-.species-pill:hover{border-color:#e09050;background:rgba(220,140,60,0.2);}
-.species-pill.active{background:rgba(220,140,60,0.3);border-color:#e09050;color:#f0b070;}
+.species-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;padding:0.18rem 0.55rem;border-radius:3px;border:1px solid var(--sp-bd);color:var(--sp-tx);background:var(--sp-bg);cursor:pointer;transition:all 0.15s;user-select:none;}
+.species-pill:hover,.species-pill.active{background:rgba(220,140,60,0.25);border-color:#e09050;color:#f0b070;}
+.regular-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;padding:0.18rem 0.55rem;border-radius:3px;border:1px solid var(--rg-bd);color:var(--rg-tx);background:var(--rg-bg);cursor:pointer;transition:all 0.15s;user-select:none;}
+.regular-pill:hover,.regular-pill.active{background:rgba(74,159,212,0.22);border-color:var(--blue2);color:#fff;}
+.other-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;padding:0.18rem 0.55rem;border-radius:3px;border:1px solid var(--ot-bd);color:var(--ot-tx);background:var(--ot-bg);cursor:pointer;transition:all 0.15s;user-select:none;}
+.other-pill:hover,.other-pill.active{background:rgba(200,60,60,0.22);border-color:#e05a5a;color:#ff8080;}
+.skill-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;padding:0.18rem 0.55rem;border-radius:3px;border:1px solid rgba(200,168,75,0.3);color:var(--gold);background:rgba(200,168,75,0.06);cursor:pointer;transition:all 0.15s;user-select:none;}
+.skill-pill:hover,.skill-pill.active{background:rgba(200,168,75,0.2);border-color:var(--gold);color:#e8c96a;}
 
-/* REGULAR TRAIT PILLS — light blue */
-.regular-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;padding:0.18rem 0.55rem;border-radius:3px;border:1px solid var(--regular-border);color:var(--regular-text);background:var(--regular-bg);cursor:pointer;transition:background 0.15s,border-color 0.15s;user-select:none;}
-.regular-pill:hover{border-color:var(--blue2);background:rgba(74,159,212,0.2);}
-.regular-pill.active{background:rgba(74,159,212,0.25);border-color:var(--blue2);color:#fff;}
-
-/* OTHER TRAIT PILLS — red */
-.other-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;padding:0.18rem 0.55rem;border-radius:3px;border:1px solid var(--other-border);color:var(--other-text);background:var(--other-bg);cursor:pointer;transition:background 0.15s,border-color 0.15s;user-select:none;}
-.other-pill:hover{border-color:#e05a5a;background:rgba(200,60,60,0.2);}
-.other-pill.active{background:rgba(200,60,60,0.25);border-color:#e05a5a;color:#ff8080;}
-
-/* SKILL PILLS */
-.skill-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;padding:0.18rem 0.55rem;border-radius:3px;border:1px solid rgba(200,168,75,0.3);color:var(--gold);background:rgba(200,168,75,0.06);cursor:pointer;transition:background 0.15s,border-color 0.15s;user-select:none;}
-.skill-pill:hover{border-color:var(--gold);background:rgba(200,168,75,0.15);}
-.skill-pill.active{background:rgba(200,168,75,0.2);border-color:var(--gold);color:#e8c96a;}
-
-/* RESULTS */
-.results-bar{max-width:1000px;margin:0 auto;padding:0.5rem 1.5rem 0.6rem;display:flex;align-items:center;}
+/* RESULTS BAR */
+.results-bar{max-width:1100px;margin:0.5rem auto 0;padding:0 1.5rem 0.5rem;display:flex;align-items:center;justify-content:space-between;}
 .result-count{font-family:'Orbitron',sans-serif;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);}
 .result-count span{color:var(--blue2);}
 
-/* CARD GRID */
-.card-grid{max-width:1000px;margin:0 auto;padding:0 1.5rem 3rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;}
+/* DECK GROUPS */
+.deck-groups{max-width:1100px;margin:0 auto;padding:0 1.5rem 3rem;}
+.deck-group{margin-bottom:1.5rem;}
+.deck-group-header{font-family:'Orbitron',sans-serif;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);border-bottom:1px solid var(--border);padding-bottom:0.4rem;margin-bottom:0.6rem;display:flex;align-items:center;gap:0.5rem;}
+.deck-count{color:var(--muted);font-size:0.55rem;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0.6rem;}
 
-.card-entry{background:var(--bg2);border:1px solid var(--border);border-radius:5px;padding:0.75rem;transition:border-color 0.15s,transform 0.15s;}
+/* PILL VIEW CARD */
+.card-entry{background:var(--bg2);border:1px solid var(--border);border-radius:5px;padding:0.7rem;transition:border-color 0.15s,transform 0.15s;}
 .card-entry:hover{border-color:var(--blue);transform:translateY(-2px);}
 .card-entry[data-suit="Person"]{border-left:2px solid var(--person);}
 .card-entry[data-suit="Ally"]{border-left:2px solid var(--ally);}
@@ -96,8 +118,8 @@ body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:v
 .card-entry[data-suit="Location"]{border-left:2px solid var(--location);}
 .card-entry[data-suit="Encounter"]{border-left:2px solid var(--encounter);}
 .card-entry[data-suit="Incident"]{border-left:2px solid var(--incident);}
-
-.card-suit-bar{display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem;}
+.card-entry[data-suit=""]{border-left:2px solid var(--muted);}
+.card-suit-bar{display:flex;align-items:center;gap:0.35rem;margin-bottom:0.35rem;}
 .suit-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
 .suit-dot[data-suit="Person"]{background:var(--person);}
 .suit-dot[data-suit="Ally"]{background:var(--ally);}
@@ -106,7 +128,8 @@ body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:v
 .suit-dot[data-suit="Location"]{background:var(--location);}
 .suit-dot[data-suit="Encounter"]{background:var(--encounter);}
 .suit-dot[data-suit="Incident"]{background:var(--incident);}
-.suit-label{font-family:'Orbitron',sans-serif;font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;}
+.suit-dot[data-suit=""]{background:var(--muted);}
+.suit-label{font-family:'Orbitron',sans-serif;font-size:0.48rem;letter-spacing:0.15em;text-transform:uppercase;}
 .suit-label[data-suit="Person"]{color:var(--person);}
 .suit-label[data-suit="Ally"]{color:var(--ally);}
 .suit-label[data-suit="Ship"]{color:var(--ship);}
@@ -114,25 +137,30 @@ body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:v
 .suit-label[data-suit="Location"]{color:var(--location);}
 .suit-label[data-suit="Encounter"]{color:var(--encounter);}
 .suit-label[data-suit="Incident"]{color:var(--incident);}
-
-.card-name{font-family:'Exo 2',sans-serif;font-size:0.88rem;font-weight:600;color:#fff;line-height:1.3;margin-bottom:0.5rem;}
-
-.card-tags{display:flex;flex-wrap:wrap;gap:0.25rem;margin-bottom:0.35rem;}
-
-/* Inline card tag badges by category */
-.ctag{font-size:0.6rem;padding:0.08rem 0.32rem;border-radius:2px;}
+.suit-label[data-suit=""]{color:var(--muted);}
+.card-name{font-family:'Exo 2',sans-serif;font-size:0.85rem;font-weight:600;color:#fff;line-height:1.3;margin-bottom:0.45rem;}
+.card-tags{display:flex;flex-wrap:wrap;gap:0.22rem;margin-bottom:0.3rem;}
+.ctag{font-size:0.58rem;padding:0.07rem 0.3rem;border-radius:2px;}
 .ctag-species{background:rgba(220,140,60,0.15);color:#d09060;border:1px solid rgba(220,140,60,0.3);}
 .ctag-species.match{background:rgba(220,140,60,0.3);color:#f0b070;border-color:#e09050;}
 .ctag-regular{background:rgba(74,159,212,0.10);color:#6ab8e0;border:1px solid rgba(74,159,212,0.25);}
 .ctag-regular.match{background:rgba(74,159,212,0.25);color:#9ed8f5;border-color:var(--blue2);}
 .ctag-other{background:rgba(200,60,60,0.10);color:#c06060;border:1px solid rgba(200,60,60,0.25);}
 .ctag-other.match{background:rgba(200,60,60,0.25);color:#ff8080;border-color:#e05a5a;}
-
-.card-skills{display:flex;flex-wrap:wrap;gap:0.25rem;}
-.card-skill{font-size:0.6rem;padding:0.08rem 0.32rem;border-radius:2px;background:rgba(200,168,75,0.08);color:var(--gold);border:1px solid rgba(200,168,75,0.2);}
+.card-skills{display:flex;flex-wrap:wrap;gap:0.22rem;}
+.card-skill{font-size:0.58rem;padding:0.07rem 0.3rem;border-radius:2px;background:rgba(200,168,75,0.08);color:var(--gold);border:1px solid rgba(200,168,75,0.2);}
 .card-skill.match{background:rgba(200,168,75,0.22);border-color:var(--gold);color:#e8c96a;}
+.no-data{font-size:0.62rem;color:var(--muted);font-style:italic;}
 
-.no-results{grid-column:1/-1;text-align:center;padding:3rem;color:var(--muted);font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.15em;}
+/* IMAGE VIEW */
+.img-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:0.6rem;}
+.card-img-entry{background:var(--bg2);border:1px solid var(--border);border-radius:5px;overflow:hidden;transition:border-color 0.15s,transform 0.15s;text-align:center;}
+.card-img-entry:hover{border-color:var(--blue);transform:translateY(-2px);}
+.card-img-entry img{width:100%;display:block;background:var(--bg3);}
+.card-img-name{font-size:0.65rem;padding:0.3rem 0.4rem;color:var(--text);line-height:1.2;}
+.img-placeholder{width:100%;aspect-ratio:5/7;background:var(--bg3);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.6rem;font-family:'Orbitron',sans-serif;letter-spacing:0.1em;}
+
+.no-results{text-align:center;padding:3rem;color:var(--muted);font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.15em;}
 
 footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:center;font-size:0.72rem;color:var(--muted);line-height:1.8;}
 </style>
@@ -142,15 +170,30 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 <div class="nav-bar"><a href="index.html">← Back to Compendium</a></div>
 
 <header class="chapter-header">
-  <div class="chapter-label">Captain's Chair · Box 1</div>
-  <h1 class="chapter-title"><span>Common Card</span> Browser</h1>
-  <div class="chapter-meta">106 common market cards · Filter by suit, trait, or skill</div>
+  <div class="chapter-label">ST:CC Strategy Compendium</div>
+  <h1 class="chapter-title"><span>Card</span> Browser</h1>
+  <div class="chapter-meta">Select boxes, filter by trait or skill, search by name</div>
 </header>
 
 <div class="controls">
+
+  <div class="filter-section">
+    <div class="filter-label">Box</div>
+    <div class="pill-row" id="boxFilters"></div>
+  </div>
+
+  <div class="filter-section">
+    <div class="filter-label">Deck</div>
+    <div class="pill-row" id="deckFilters"></div>
+  </div>
+
   <div class="search-row">
     <input type="text" class="search-box" id="searchInput" placeholder="Search by card name…" autocomplete="off">
-    <button class="clear-btn" onclick="clearAll()">Clear all filters</button>
+    <div class="view-toggle">
+      <button class="vtoggle active" id="btnPill" onclick="setView('pill')">Cards</button>
+      <button class="vtoggle" id="btnImg" onclick="setView('image')">Images</button>
+    </div>
+    <button class="clear-btn" onclick="clearAll()">Clear all</button>
   </div>
 
   <div class="filter-section">
@@ -177,117 +220,181 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="filter-label">Skills</div>
     <div class="pill-row" id="skillFilters"></div>
   </div>
+
 </div>
 
 <div class="results-bar">
-  <div class="result-count">Showing <span id="countDisplay">106</span> of 106 cards</div>
+  <div class="result-count">Showing <span id="countDisplay">0</span> cards</div>
 </div>
 
-<div class="card-grid" id="cardGrid"></div>
+<div class="deck-groups" id="deckGroups"></div>
 
-<footer>Card images © WizKids.<br>Content by Matthew McCue (mdmccu2) · Formatting by Periodic_agent</footer>
+<footer>Card images &copy; WizKids.<br>Content by Matthew McCue (mdmccu2) &middot; Formatting by Periodic_agent</footer>
 
 <script>
-const CARDS = [{"suit":"Person","name":"Admiral Jarok","tags":["Romulan"],"skills":[]},{"suit":"Person","name":"Admiral Necheyev","tags":["Human","Starfleet"],"skills":["Influence Focus"]},{"suit":"Person","name":"Admiral Pressman","tags":["Human","Shady","Starfleet"],"skills":["Military Focus"]},{"suit":"Person","name":"Ambassador Kamarag","tags":["Ambassador","Imperial","Klingon"],"skills":[]},{"suit":"Person","name":"B-4","tags":["Android","Attack","Synthetic"],"skills":[]},{"suit":"Person","name":"Bruce Maddox","tags":["Engineer","Human","Scientist","Starfleet"],"skills":["Research Focus","Research Skill"]},{"suit":"Person","name":"Captain Dorg","tags":["Attack","Klingon","Shady"],"skills":["Military Focus"]},{"suit":"Person","name":"Harry Mudd","tags":["Attack","Human","Shady","Time Travel"],"skills":[]},{"suit":"Person","name":"Joret Dal","tags":["Cardassian","Spy","Starfleet"],"skills":[]},{"suit":"Person","name":"Laas","tags":["Changeling"],"skills":[]},{"suit":"Person","name":"Laris","tags":["Romulan"],"skills":[]},{"suit":"Person","name":"Lenara Kahn","tags":["Scientist","Trill"],"skills":["Research Focus"]},{"suit":"Person","name":"Lursa","tags":["Klingon","Shady"],"skills":["Military Focus"]},{"suit":"Person","name":"Lwaxana Troi","tags":["Ambassador","Betazoid","Telepath"],"skills":[]},{"suit":"Person","name":"Mirok","tags":["Attack","Romulan"],"skills":["Research Focus"]},{"suit":"Person","name":"Moriarty","tags":["Attack","Hologram","Shady","Synthetic"],"skills":[]},{"suit":"Person","name":"Peanut Hamper","tags":["Synthetic"],"skills":[]},{"suit":"Person","name":"Phlox","tags":["Doctor"],"skills":[]},{"suit":"Person","name":"Riva","tags":["Ambassador","Communication","Telepath"],"skills":["Influence Focus","Influence Skill"]},{"suit":"Person","name":"Rom","tags":["Engineer","Ferengi"],"skills":[]},{"suit":"Person","name":"Sakonna","tags":["Maquis","Vulcan"],"skills":[]},{"suit":"Person","name":"Su'Kal","tags":["Kelpien"],"skills":[]},{"suit":"Person","name":"Talok","tags":["Attack","Romulan","Spy","Vulcan"],"skills":["Influence Focus"]},{"suit":"Person","name":"Tevrin Krit","tags":["Business","Tellarite"],"skills":[]},{"suit":"Person","name":"Zephram Cochrane","tags":["Engineer","Human","Pilot"],"skills":[]},{"suit":"Cargo","name":"Biobed","tags":["Doctor"],"skills":["Research Focus","Research Skill"]},{"suit":"Cargo","name":"Borg Spatial Trajector","tags":["Borg","Scientist"],"skills":[]},{"suit":"Cargo","name":"Cloaking Device","tags":["Cloak","Ongoing"],"skills":["Military Focus"]},{"suit":"Cargo","name":"Ferengi Wine","tags":["Beverage","Ferengi"],"skills":[]},{"suit":"Cargo","name":"Forced Singularity","tags":["Anomaly","Ongoing","Romulan"],"skills":["Research Focus"]},{"suit":"Cargo","name":"Holosuite","tags":["Business","Hologram"],"skills":[]},{"suit":"Cargo","name":"Horta","tags":["Alien","Creature","Ongoing"],"skills":[]},{"suit":"Cargo","name":"Lirpa","tags":["Attack","Vulcan","Weapon"],"skills":[]},{"suit":"Cargo","name":"Mek'Leth","tags":["Attack","Klingon","Weapon"],"skills":[]},{"suit":"Cargo","name":"Orb Of Time","tags":["Bajoran","Time Travel"],"skills":["Influence Focus"]},{"suit":"Cargo","name":"Phasers","tags":["Ongoing","Security","Starfleet","Weapon"],"skills":[]},{"suit":"Cargo","name":"Plasma Manifold","tags":["Engineer"],"skills":["Military Focus"]},{"suit":"Cargo","name":"Sehlat","tags":["Attack","Creature","Vulcan"],"skills":[]},{"suit":"Cargo","name":"Tachyon Detection Grid","tags":["Attack","Communication"],"skills":["Influence Focus"]},{"suit":"Cargo","name":"Tribbles","tags":["Attack","Creature"],"skills":[]},{"suit":"Cargo","name":"Type III Disruptor Pistols","tags":["Attack","Weapon"],"skills":[]},{"suit":"Cargo","name":"Unstable Wormhole","tags":["Anomaly"],"skills":[]},{"suit":"Ship","name":"Bird Of Prey","tags":["Attack","Cloak","Imperial","Romulan"],"skills":["Influence Skill"]},{"suit":"Ship","name":"Borg Probe","tags":["Borg"],"skills":[]},{"suit":"Ship","name":"D'Kyr Cruiser","tags":["Scientist","Vulcan"],"skills":[]},{"suit":"Ship","name":"Holographic Drone Ship","tags":["Aenar","Hologram","Romulan","Weapon"],"skills":["Influence Focus"]},{"suit":"Ship","name":"K'Tinga Battlecruiser","tags":["Imperial","Klingon"],"skills":["Military Focus","Military Skill"]},{"suit":"Ship","name":"Kazon Raider","tags":["Attack","Shady"],"skills":["Influence Focus"]},{"suit":"Ship","name":"Pakled Freighter","tags":["Business","Pakled","Aenar"],"skills":[]},{"suit":"Ship","name":"Son'A Battlecruiser","tags":["Attack","Dominion","Shady"],"skills":[]},{"suit":"Ship","name":"U.S.S. Enterprise-B","tags":["Starfleet"],"skills":[]},{"suit":"Ship","name":"U.S.S. Enterprise-C","tags":["Ambassador","Starfleet","Time Travel"],"skills":["Research Focus"]},{"suit":"Ship","name":"U.S.S. Pasteur","tags":["Communication","Doctor","Starfleet"],"skills":["Research Focus"]},{"suit":"Ship","name":"U.S.S. Reliant","tags":["Starfleet"],"skills":[]},{"suit":"Ship","name":"Voth Research Vessel","tags":["Alien","Anomaly"],"skills":["Research Skill"]},{"suit":"Ship","name":"Xindi-Reptillian Battleship","tags":["Xindi"],"skills":["Military Focus"]},{"suit":"Ally","name":"Arin'Sen","tags":["Klingon"],"skills":[]},{"suit":"Ally","name":"Bolian","tags":[],"skills":[]},{"suit":"Ally","name":"Bynars","tags":["Alien","Engineer"],"skills":[]},{"suit":"Ally","name":"Denobulans","tags":[],"skills":[]},{"suit":"Ally","name":"Edosians","tags":["Alien"],"skills":[]},{"suit":"Ally","name":"Emerald Chain","tags":["Andorian","Attack","Orion","Shady"],"skills":[]},{"suit":"Ally","name":"Halkan Council","tags":["Aenar"],"skills":[]},{"suit":"Ally","name":"Karemma","tags":["Business","Dominion"],"skills":[]},{"suit":"Ally","name":"Kelpien","tags":["Kelpien"],"skills":["Research Focus"]},{"suit":"Ally","name":"Letheans","tags":["Attack","Shady","Telepath"],"skills":["Military Focus"]},{"suit":"Ally","name":"Organians","tags":["Anomaly","Transcendent"],"skills":[]},{"suit":"Ally","name":"Suliban","tags":["Alien","Time Travel"],"skills":["Influence Focus"]},{"suit":"Ally","name":"Tholians","tags":["Alien"],"skills":[]},{"suit":"Location","name":"Armagosa Observatory","tags":["Scientist","Starbase"],"skills":["Research Skill"]},{"suit":"Location","name":"Ancient Relay Station","tags":["Alien","Communication"],"skills":["Research Skill"]},{"suit":"Location","name":"Archer IV","tags":[],"skills":["Influence Skill"]},{"suit":"Location","name":"Ba'Ku","tags":["Anomaly"],"skills":[]},{"suit":"Location","name":"Betazed","tags":["Betazoid"],"skills":["Influence Skill"]},{"suit":"Location","name":"Corvan II","tags":["Business","Human","Starfleet"],"skills":["Military Skill"]},{"suit":"Location","name":"Deep Space K-7","tags":["Starbase"],"skills":["Influence Focus"]},{"suit":"Location","name":"Delta Vega","tags":[],"skills":["Military Skill"]},{"suit":"Location","name":"Derna","tags":["Bajoran","Doctor","Romulan"],"skills":[]},{"suit":"Location","name":"Dozaria","tags":["Breen"],"skills":["Military Skill"]},{"suit":"Location","name":"Freecloud","tags":["Business","Shady","Aenar"],"skills":[]},{"suit":"Location","name":"Indri VIII","tags":["Anomaly"],"skills":["Influence Skill","Research Skill"]},{"suit":"Location","name":"Kelvas Docks","tags":["Cardassian","Dominion","Engineer","Starbase"],"skills":["Military Focus"]},{"suit":"Location","name":"Memory Alpha","tags":["Communication","Starfleet"],"skills":[]},{"suit":"Location","name":"Regula I","tags":["Scientist","Starbase","Starfleet"],"skills":["Research Skill"]},{"suit":"Location","name":"Risa","tags":["Business"],"skills":["Influence Skill"]},{"suit":"Location","name":"Solum","tags":["Alien","Aenar"],"skills":[]},{"suit":"Location","name":"Tulgana IV","tags":["Ambassador","Business","Klingon","Starfleet"],"skills":[]},{"suit":"Location","name":"Verex III","tags":["Orion","Shady"],"skills":["Influence Skill"]},{"suit":"Location","name":"Xahea","tags":[],"skills":["Research Focus","Military Skill"]},{"suit":"Encounter","name":"Ancient Gene Fragments","tags":["Anomaly","Augment"],"skills":["Military Focus"]},{"suit":"Encounter","name":"Boltzmann Brain","tags":["Doctor","Telepath"],"skills":[]},{"suit":"Encounter","name":"Guardian Of Forever","tags":["Andorian","Ongoing","Time Travel","Transcendent"],"skills":[]},{"suit":"Encounter","name":"Iconian Gateway","tags":["Alien","Imperial"],"skills":["Influence Focus"]},{"suit":"Encounter","name":"Koala","tags":["Wildcard"],"skills":[]},{"suit":"Encounter","name":"Omega Particle","tags":["Scientist"],"skills":["Research Focus"]},{"suit":"Encounter","name":"Sha Ka Ree","tags":["Attack","Ongoing","Transcendent","Vulcan"],"skills":[]},{"suit":"Encounter","name":"V'Ger","tags":["Synthetic"],"skills":[]},{"suit":"Encounter","name":"Wesley Crusher","tags":["Human","Pilot","Starfleet","Transcendent"],"skills":["Wild Skill","Wild Skill"]},{"suit":"Incident","name":"Energy Drain","tags":[],"skills":[]},{"suit":"Incident","name":"Flight Training Accident","tags":["Surprise"],"skills":[]},{"suit":"Incident","name":"Hostile Contact","tags":[],"skills":[]},{"suit":"Incident","name":"Political Crisis","tags":[],"skills":[]},{"suit":"Incident","name":"Red Alert","tags":[],"skills":[]},{"suit":"Incident","name":"Subspace Phenomenon","tags":[],"skills":[]},{"suit":"Incident","name":"Trade Embargo","tags":[],"skills":[]},{"suit":"Incident","name":"Whale Probe Incursion","tags":["Alien","Attack","Surprise"],"skills":[]}];
+const ALL_CARDS = [{"name": "Admiral Jarok", "suit": "Person", "filename": "admiral-jarok.jpg", "species": ["Romulan"], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Admiral Necheyev", "suit": "Person", "filename": "admiral-necheyev.jpg", "species": ["Human"], "regular": ["Starfleet"], "other": [], "skills": ["Influence Focus"], "deck": "Common", "box": "core"}, {"name": "Admiral Pressman", "suit": "Person", "filename": "admiral-pressman.jpg", "species": ["Human"], "regular": ["Shady", "Starfleet"], "other": [], "skills": ["Military Focus"], "deck": "Common", "box": "core"}, {"name": "Ambassador Kamarag", "suit": "Person", "filename": "ambassador-kamarag.jpg", "species": ["Klingon"], "regular": ["Ambassador", "Imperial"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "B-4", "suit": "Person", "filename": "b-4.jpg", "species": ["Android", "Synthetic"], "regular": [], "other": ["Attack"], "skills": [], "deck": "Common", "box": "core"}, {"name": "Bruce Maddox", "suit": "Person", "filename": "bruce-maddox.jpg", "species": ["Human"], "regular": ["Engineer", "Scientist", "Starfleet"], "other": [], "skills": ["Research Focus", "Research Skill"], "deck": "Common", "box": "core"}, {"name": "Captain Dorg", "suit": "Person", "filename": "captain-dorg.jpg", "species": ["Klingon"], "regular": ["Shady"], "other": ["Attack"], "skills": ["Military Focus"], "deck": "Common", "box": "core"}, {"name": "Harry Mudd", "suit": "Person", "filename": "harry-mudd.jpg", "species": ["Human"], "regular": ["Shady", "Time Travel"], "other": ["Attack"], "skills": [], "deck": "Common", "box": "core"}, {"name": "Joret Dal", "suit": "Person", "filename": "joret-dal.jpg", "species": ["Cardassian"], "regular": ["Spy", "Starfleet"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Laas", "suit": "Person", "filename": "laas.jpg", "species": ["Changeling"], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Laris", "suit": "Person", "filename": "laris.jpg", "species": ["Romulan"], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Lenara Kahn", "suit": "Person", "filename": "lenara-kahn.jpg", "species": ["Trill"], "regular": ["Scientist"], "other": [], "skills": ["Research Focus"], "deck": "Common", "box": "core"}, {"name": "Lursa", "suit": "Person", "filename": "lursa.jpg", "species": ["Klingon"], "regular": ["Shady"], "other": [], "skills": ["Military Focus"], "deck": "Common", "box": "core"}, {"name": "Lwaxana Troi", "suit": "Person", "filename": "lwaxana-troi.jpg", "species": ["Betazoid"], "regular": ["Ambassador", "Telepath"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Mirok", "suit": "Person", "filename": "mirok.jpg", "species": ["Romulan"], "regular": [], "other": ["Attack"], "skills": ["Research Focus"], "deck": "Common", "box": "core"}, {"name": "Moriarty", "suit": "Person", "filename": "moriarty.jpg", "species": ["Synthetic"], "regular": ["Hologram", "Shady"], "other": ["Attack"], "skills": [], "deck": "Common", "box": "core"}, {"name": "Peanut Hamper", "suit": "Person", "filename": "peanut-hamper.jpg", "species": ["Synthetic"], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Phlox", "suit": "Person", "filename": "phlox.jpg", "species": [], "regular": ["Doctor"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Riva", "suit": "Person", "filename": "riva.jpg", "species": [], "regular": ["Ambassador", "Communication", "Telepath"], "other": [], "skills": ["Influence Focus", "Influence Skill"], "deck": "Common", "box": "core"}, {"name": "Rom", "suit": "Person", "filename": "rom.jpg", "species": ["Ferengi"], "regular": ["Engineer"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Sakonna", "suit": "Person", "filename": "sakonna.jpg", "species": ["Vulcan"], "regular": ["Maquis"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Su'Kal", "suit": "Person", "filename": "sukal.jpg", "species": ["Kelpien"], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Talok", "suit": "Person", "filename": "talok.jpg", "species": ["Romulan", "Vulcan"], "regular": ["Spy"], "other": ["Attack"], "skills": ["Influence Focus"], "deck": "Common", "box": "core"}, {"name": "Tevrin Krit", "suit": "Person", "filename": "tevrin-krit.jpg", "species": ["Tellarite"], "regular": ["Business"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Zephram Cochrane", "suit": "Person", "filename": "zephram-cochrane.jpg", "species": ["Human"], "regular": ["Engineer", "Pilot"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Biobed", "suit": "Cargo", "filename": "biobed.jpg", "species": [], "regular": ["Doctor"], "other": [], "skills": ["Research Focus", "Research Skill"], "deck": "Common", "box": "core"}, {"name": "Borg Spatial Trajector", "suit": "Cargo", "filename": "borg-spatial-trajector.jpg", "species": ["Borg"], "regular": ["Scientist"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Cloaking Device", "suit": "Cargo", "filename": "cloaking-device.jpg", "species": [], "regular": ["Cloak"], "other": ["Ongoing"], "skills": ["Military Focus"], "deck": "Common", "box": "core"}, {"name": "Ferengi Wine", "suit": "Cargo", "filename": "ferengi-wine.jpg", "species": ["Ferengi"], "regular": ["Beverage"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Forced Singularity", "suit": "Cargo", "filename": "forced-singularity.jpg", "species": ["Romulan"], "regular": ["Anomaly"], "other": ["Ongoing"], "skills": ["Research Focus"], "deck": "Common", "box": "core"}, {"name": "Holosuite", "suit": "Cargo", "filename": "holosuite.jpg", "species": [], "regular": ["Business", "Hologram"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Horta", "suit": "Cargo", "filename": "horta.jpg", "species": ["Alien"], "regular": ["Creature"], "other": ["Ongoing"], "skills": [], "deck": "Common", "box": "core"}, {"name": "Lirpa", "suit": "Cargo", "filename": "lirpa.jpg", "species": ["Vulcan"], "regular": ["Weapon"], "other": ["Attack"], "skills": [], "deck": "Common", "box": "core"}, {"name": "Mek'Leth", "suit": "Cargo", "filename": "mekleth.jpg", "species": ["Klingon"], "regular": ["Weapon"], "other": ["Attack"], "skills": [], "deck": "Common", "box": "core"}, {"name": "Orb Of Time", "suit": "Cargo", "filename": "orb-of-time.jpg", "species": ["Bajoran"], "regular": ["Time Travel"], "other": [], "skills": ["Influence Focus"], "deck": "Common", "box": "core"}, {"name": "Phasers", "suit": "Cargo", "filename": "phasers.jpg", "species": [], "regular": ["Security", "Starfleet", "Weapon"], "other": ["Ongoing"], "skills": [], "deck": "Common", "box": "core"}, {"name": "Plasma Manifold", "suit": "Cargo", "filename": "plasma-manifold.jpg", "species": [], "regular": ["Engineer"], "other": [], "skills": ["Military Focus"], "deck": "Common", "box": "core"}, {"name": "Sehlat", "suit": "Cargo", "filename": "sehlat.jpg", "species": ["Vulcan"], "regular": ["Creature"], "other": ["Attack"], "skills": [], "deck": "Common", "box": "core"}, {"name": "Tachyon Detection Grid", "suit": "Cargo", "filename": "tachyon-detection-grid.jpg", "species": [], "regular": ["Communication"], "other": ["Attack"], "skills": ["Influence Focus"], "deck": "Common", "box": "core"}, {"name": "Tribbles", "suit": "Cargo", "filename": "tribbles.jpg", "species": [], "regular": ["Creature"], "other": ["Attack"], "skills": [], "deck": "Common", "box": "core"}, {"name": "Type III Disruptor Pistols", "suit": "Cargo", "filename": "type-iii-disruptor-pistols.jpg", "species": [], "regular": ["Weapon"], "other": ["Attack"], "skills": [], "deck": "Common", "box": "core"}, {"name": "Unstable Wormhole", "suit": "Cargo", "filename": "unstable-wormhole.jpg", "species": [], "regular": ["Anomaly"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Bird-of-Prey", "suit": "Ship", "filename": "bird-of-prey.jpg", "species": ["Romulan"], "regular": ["Cloak", "Imperial"], "other": ["Attack"], "skills": ["Influence Skill"], "deck": "Common", "box": "core"}, {"name": "Borg Probe", "suit": "Ship", "filename": "borg-probe.jpg", "species": ["Borg"], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "D'Kyr Cruiser", "suit": "Ship", "filename": "dkyr-cruiser.jpg", "species": ["Vulcan"], "regular": ["Scientist"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Holographic Drone Ship", "suit": "Ship", "filename": "holographic-drone-ship.jpg", "species": ["Aenar", "Romulan"], "regular": ["Hologram", "Weapon"], "other": [], "skills": ["Influence Focus"], "deck": "Common", "box": "core"}, {"name": "K'Tinga Battlecruiser", "suit": "Ship", "filename": "ktinga-battlecruiser.jpg", "species": ["Klingon"], "regular": ["Imperial"], "other": [], "skills": ["Military Focus", "Military Skill"], "deck": "Common", "box": "core"}, {"name": "Kazon Raider", "suit": "Ship", "filename": "kazon-raider.jpg", "species": [], "regular": ["Shady"], "other": ["Attack"], "skills": ["Influence Focus"], "deck": "Common", "box": "core"}, {"name": "Pakled Freighter", "suit": "Ship", "filename": "pakled-freighter.jpg", "species": ["Aenar", "Pakled"], "regular": ["Business"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Son'A Battlecruiser", "suit": "Ship", "filename": "sona-battlecruiser.jpg", "species": [], "regular": ["Dominion", "Shady"], "other": ["Attack"], "skills": [], "deck": "Common", "box": "core"}, {"name": "U.S.S. Enterprise-B", "suit": "Ship", "filename": "uss-enterprise-b.jpg", "species": [], "regular": ["Starfleet"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "U.S.S. Enterprise-C", "suit": "Ship", "filename": "uss-enterprise-c.jpg", "species": [], "regular": ["Ambassador", "Starfleet", "Time Travel"], "other": [], "skills": ["Research Focus"], "deck": "Common", "box": "core"}, {"name": "U.S.S. Pasteur", "suit": "Ship", "filename": "uss-pasteur.jpg", "species": [], "regular": ["Communication", "Doctor", "Starfleet"], "other": [], "skills": ["Research Focus"], "deck": "Common", "box": "core"}, {"name": "U.S.S. Reliant", "suit": "Ship", "filename": "uss-reliant.jpg", "species": [], "regular": ["Starfleet"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Voth Research Vessel", "suit": "Ship", "filename": "voth-research-vessel.jpg", "species": ["Alien"], "regular": ["Anomaly"], "other": [], "skills": ["Research Skill"], "deck": "Common", "box": "core"}, {"name": "Xindi-Reptilian Battleship", "suit": "Ship", "filename": "xindi-reptilian-battleship.jpg", "species": ["Xindi"], "regular": [], "other": [], "skills": ["Military Focus"], "deck": "Common", "box": "core"}, {"name": "Armagosa Observatory", "suit": "Location", "filename": "armagosa-observatory.jpg", "species": [], "regular": ["Scientist", "Starbase"], "other": [], "skills": ["Research Skill"], "deck": "Common", "box": "core"}, {"name": "Ancient Relay Station", "suit": "Location", "filename": "ancient-relay-station.jpg", "species": ["Alien"], "regular": ["Communication"], "other": [], "skills": ["Research Skill"], "deck": "Common", "box": "core"}, {"name": "Archer IV", "suit": "Location", "filename": "archer-iv.jpg", "species": [], "regular": [], "other": [], "skills": ["Influence Skill"], "deck": "Common", "box": "core"}, {"name": "Ba'Ku", "suit": "Location", "filename": "baku.jpg", "species": [], "regular": ["Anomaly"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Betazed", "suit": "Location", "filename": "betazed.jpg", "species": ["Betazoid"], "regular": [], "other": [], "skills": ["Influence Skill"], "deck": "Common", "box": "core"}, {"name": "Corvan II", "suit": "Location", "filename": "corvan-ii.jpg", "species": ["Human"], "regular": ["Business", "Starfleet"], "other": [], "skills": ["Military Skill"], "deck": "Common", "box": "core"}, {"name": "Deep Space K-7", "suit": "Location", "filename": "deep-space-k-7.jpg", "species": [], "regular": ["Starbase"], "other": [], "skills": ["Influence Focus"], "deck": "Common", "box": "core"}, {"name": "Delta Vega", "suit": "Location", "filename": "delta-vega.jpg", "species": [], "regular": [], "other": [], "skills": ["Military Skill"], "deck": "Common", "box": "core"}, {"name": "Derna", "suit": "Location", "filename": "derna.jpg", "species": ["Bajoran", "Romulan"], "regular": ["Doctor"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Dozaria", "suit": "Location", "filename": "dozaria.jpg", "species": ["Breen"], "regular": [], "other": [], "skills": ["Military Skill"], "deck": "Common", "box": "core"}, {"name": "Freecloud", "suit": "Location", "filename": "freecloud.jpg", "species": ["Aenar"], "regular": ["Business", "Shady"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Indri VIII", "suit": "Location", "filename": "indri-viii.jpg", "species": [], "regular": ["Anomaly"], "other": [], "skills": ["Influence Skill", "Research Skill"], "deck": "Common", "box": "core"}, {"name": "Kelvas Docks", "suit": "Location", "filename": "kelvas-docks.jpg", "species": ["Cardassian"], "regular": ["Dominion", "Engineer", "Starbase"], "other": [], "skills": ["Military Focus"], "deck": "Common", "box": "core"}, {"name": "Memory Alpha", "suit": "Location", "filename": "memory-alpha.jpg", "species": [], "regular": ["Communication", "Starfleet"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Regula I", "suit": "Location", "filename": "regula-i.jpg", "species": [], "regular": ["Scientist", "Starbase", "Starfleet"], "other": [], "skills": ["Research Skill"], "deck": "Common", "box": "core"}, {"name": "Risa", "suit": "Location", "filename": "risa.jpg", "species": [], "regular": ["Business"], "other": [], "skills": ["Influence Skill"], "deck": "Common", "box": "core"}, {"name": "Solum", "suit": "Location", "filename": "solum.jpg", "species": ["Aenar", "Alien"], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Tulgana IV", "suit": "Location", "filename": "tulgana-iv.jpg", "species": ["Klingon"], "regular": ["Ambassador", "Business", "Starfleet"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Verex III", "suit": "Location", "filename": "verex-iii.jpg", "species": ["Orion"], "regular": ["Shady"], "other": [], "skills": ["Influence Skill"], "deck": "Common", "box": "core"}, {"name": "Xahea", "suit": "Location", "filename": "xahea.jpg", "species": [], "regular": [], "other": [], "skills": ["Military Skill", "Research Focus"], "deck": "Common", "box": "core"}, {"name": "Arin'Sen", "suit": "Ally", "filename": "arinsen.jpg", "species": ["Klingon"], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Bolian", "suit": "Ally", "filename": "bolian.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Bynars", "suit": "Ally", "filename": "bynars.jpg", "species": ["Alien"], "regular": ["Engineer"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Denobulans", "suit": "Ally", "filename": "denobulans.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Edosians", "suit": "Ally", "filename": "edosians.jpg", "species": ["Alien"], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Emerald Chain", "suit": "Ally", "filename": "emerald-chain.jpg", "species": ["Andorian", "Orion"], "regular": ["Shady"], "other": ["Attack"], "skills": [], "deck": "Common", "box": "core"}, {"name": "Halkan Council", "suit": "Ally", "filename": "halkan-council.jpg", "species": ["Aenar"], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Karemma", "suit": "Ally", "filename": "karemma.jpg", "species": [], "regular": ["Business", "Dominion"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Kelpien", "suit": "Ally", "filename": "kelpien.jpg", "species": ["Kelpien"], "regular": [], "other": [], "skills": ["Research Focus"], "deck": "Common", "box": "core"}, {"name": "Letheans", "suit": "Ally", "filename": "letheans.jpg", "species": [], "regular": ["Shady", "Telepath"], "other": ["Attack"], "skills": ["Military Focus"], "deck": "Common", "box": "core"}, {"name": "Organians", "suit": "Ally", "filename": "organians.jpg", "species": ["Transcendent"], "regular": ["Anomaly"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Suliban", "suit": "Ally", "filename": "suliban.jpg", "species": ["Alien"], "regular": ["Time Travel"], "other": [], "skills": ["Influence Focus"], "deck": "Common", "box": "core"}, {"name": "Tholians", "suit": "Ally", "filename": "tholians.jpg", "species": ["Alien"], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Ancient Gene Fragments", "suit": "Encounter", "filename": "ancient-gene-fragments.jpg", "species": [], "regular": ["Anomaly", "Augment"], "other": [], "skills": ["Military Focus"], "deck": "Common", "box": "core"}, {"name": "Boltzmann Brain", "suit": "Encounter", "filename": "boltzmann-brain.jpg", "species": [], "regular": ["Doctor", "Telepath"], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Guardian Of Forever", "suit": "Encounter", "filename": "guardian-of-forever.jpg", "species": ["Andorian", "Transcendent"], "regular": ["Time Travel"], "other": ["Ongoing"], "skills": [], "deck": "Common", "box": "core"}, {"name": "Iconian Gateway", "suit": "Encounter", "filename": "iconian-gateway.jpg", "species": ["Alien"], "regular": ["Imperial"], "other": [], "skills": ["Influence Focus"], "deck": "Common", "box": "core"}, {"name": "Koala", "suit": "Encounter", "filename": "koala.jpg", "species": [], "regular": [], "other": ["Wildcard"], "skills": [], "deck": "Common", "box": "core"}, {"name": "Omega Particle", "suit": "Encounter", "filename": "omega-particle.jpg", "species": [], "regular": ["Scientist"], "other": [], "skills": ["Research Focus"], "deck": "Common", "box": "core"}, {"name": "Sha Ka Ree", "suit": "Encounter", "filename": "sha-ka-ree.jpg", "species": ["Transcendent", "Vulcan"], "regular": [], "other": ["Attack", "Ongoing"], "skills": [], "deck": "Common", "box": "core"}, {"name": "V'Ger", "suit": "Encounter", "filename": "vger.jpg", "species": ["Synthetic"], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Wesley Crusher", "suit": "Encounter", "filename": "wesley-crusher.jpg", "species": ["Human", "Transcendent"], "regular": ["Pilot", "Starfleet"], "other": [], "skills": ["Wild Skill"], "deck": "Common", "box": "core"}, {"name": "Energy Drain", "suit": "Incident", "filename": "energy-drain.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Flight Training Accident", "suit": "Incident", "filename": "flight-training-accident.jpg", "species": [], "regular": [], "other": ["Surprise"], "skills": [], "deck": "Common", "box": "core"}, {"name": "Hostile Contact", "suit": "Incident", "filename": "hostile-contact.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Political Crisis", "suit": "Incident", "filename": "political-crisis.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Red Alert", "suit": "Incident", "filename": "red-alert.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Subspace Phenomenon", "suit": "Incident", "filename": "subspace-phenomenon.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Trade Embargo", "suit": "Incident", "filename": "trade-embargo.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Common", "box": "core"}, {"name": "Whale Probe Incursion", "suit": "Incident", "filename": "whale-probe-incursion.jpg", "species": ["Alien"], "regular": [], "other": ["Attack", "Surprise"], "skills": [], "deck": "Common", "box": "core"}, {"name": "The Wormhole", "suit": "", "filename": "the-wormhole.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "Orb Of The Emissary", "suit": "", "filename": "orb-of-the-emissary.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "Garak", "suit": "", "filename": "garak.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "Kira Nerys", "suit": "", "filename": "kira-nerys.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "Worf Son Of Mogh", "suit": "", "filename": "worf-son-of-mogh.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "Self-Replicating Mines", "suit": "", "filename": "self-replicating-mines.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "U.S.S. Defiant", "suit": "", "filename": "uss-defiant.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "Julian Bashir", "suit": "", "filename": "julian-bashir.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "Bajor", "suit": "", "filename": "bajor.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "People Of Bajor", "suit": "", "filename": "people-of-bajor.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "Quark", "suit": "", "filename": "quark.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "Deep Space 9", "suit": "", "filename": "deep-space-9.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "Odo", "suit": "", "filename": "odo.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "Starbase 375", "suit": "", "filename": "starbase-375.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "Jadzia Dax", "suit": "", "filename": "jadzia-dax.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "Miles O'Brien", "suit": "", "filename": "miles-obrien.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "Orb Of Prophecy And Change", "suit": "", "filename": "orb-of-prophecy-and-change.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "U.S.S. Rio Grande", "suit": "", "filename": "uss-rio-grande.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "Benjamin Sisko", "suit": "", "filename": "benjamin-sisko.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sisko", "box": "core"}, {"name": "Tamarians", "suit": "", "filename": "tamarians.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Picard", "box": "core"}, {"name": "Daystrom Institute", "suit": "", "filename": "daystrom-institute.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Picard", "box": "core"}, {"name": "Data", "suit": "", "filename": "data.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Picard", "box": "core"}, {"name": "Farpoint Station", "suit": "", "filename": "farpoint-station.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Picard", "box": "core"}, {"name": "U.S.S. Bozeman", "suit": "", "filename": "uss-bozeman.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Picard", "box": "core"}, {"name": "Worf", "suit": "", "filename": "worf.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Picard", "box": "core"}, {"name": "Deanna Troi", "suit": "", "filename": "deanna-troi.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Picard", "box": "core"}, {"name": "Phasing Cloak", "suit": "", "filename": "phasing-cloak.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Picard", "box": "core"}, {"name": "Beverly Crusher", "suit": "", "filename": "beverly-crusher.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Picard", "box": "core"}, {"name": "Geordi La Forge", "suit": "", "filename": "geordi-la-forge.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Picard", "box": "core"}, {"name": "Will Riker", "suit": "", "filename": "will-riker.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Picard", "box": "core"}, {"name": "Starbase 74", "suit": "", "filename": "starbase-74.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Picard", "box": "core"}, {"name": "Type 7 Shuttlecraft", "suit": "", "filename": "type-7-shuttlecraft.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Picard", "box": "core"}, {"name": "U.S.S. Enterprise-D", "suit": "", "filename": "uss-enterprise-d.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Picard", "box": "core"}, {"name": "Jean-Luc Picard", "suit": "", "filename": "jean-luc-picard.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Picard", "box": "core"}, {"name": "Curzon Dax", "suit": "", "filename": "curzon-dax.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "Boreth", "suit": "", "filename": "boreth.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "Arne Darvin", "suit": "", "filename": "arne-darvin.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "Korax", "suit": "", "filename": "korax.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "Klingon Disruptors", "suit": "", "filename": "klingon-disruptors.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "Prototype Cloak", "suit": "", "filename": "prototype-cloak.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "Qo'Nos", "suit": "", "filename": "qonos.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "Sword Of Kahless", "suit": "", "filename": "sword-of-kahless.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "Koloth The Dahar Master", "suit": "", "filename": "koloth-the-dahar-master.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "Kang The Dahar Master", "suit": "", "filename": "kang-the-dahar-master.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "Kor The Dahar Master", "suit": "", "filename": "kor-the-dahar-master.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "Krell", "suit": "", "filename": "krell.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "Mara", "suit": "", "filename": "mara.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "I.K.S. Devisor", "suit": "", "filename": "iks-devisor.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "I.K.S. Gr'Oth", "suit": "", "filename": "iks-groth.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "I.K.S. Klothos", "suit": "", "filename": "iks-klothos.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "Rura Penthe", "suit": "", "filename": "rura-penthe.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Koloth", "box": "core"}, {"name": "Trance Worm", "suit": "", "filename": "trance-worm.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Theta Zeta", "suit": "", "filename": "theta-zeta.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "U.S.S. Discovery-A", "suit": "", "filename": "uss-discovery-a.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Cleveland Booker", "suit": "", "filename": "cleveland-booker.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Book's Ship", "suit": "", "filename": "books-ship.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Grudge", "suit": "", "filename": "grudge.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Hugh Culber", "suit": "", "filename": "hugh-culber.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Jett Reno", "suit": "", "filename": "jett-reno.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Sylvia Tilly", "suit": "", "filename": "sylvia-tilly.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Michael Burnham", "suit": "", "filename": "michael-burnham.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Earth", "suit": "", "filename": "earth.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Adira Tal", "suit": "", "filename": "adira-tal.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Admiral Vance", "suit": "", "filename": "admiral-vance.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Doctor Kovich", "suit": "", "filename": "doctor-kovich.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Joann Owosekun", "suit": "", "filename": "joann-owosekun.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Keyla Detmer", "suit": "", "filename": "keyla-detmer.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Paul Stamets", "suit": "", "filename": "paul-stamets.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Saru", "suit": "", "filename": "saru.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "U.S.S. Federation", "suit": "", "filename": "uss-federation.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Ni'Var", "suit": "", "filename": "nivar.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Inert Dilithium", "suit": "", "filename": "inert-dilithium.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Burnham", "box": "core"}, {"name": "Forced Singularity", "suit": "", "filename": "forced-singularity.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "Remus", "suit": "", "filename": "remus.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "Shinzon", "suit": "", "filename": "shinzon.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "Tomalak", "suit": "", "filename": "tomalak.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "Disruptor Rifles", "suit": "", "filename": "disruptor-rifles.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "I.R.W. Valdore", "suit": "", "filename": "irw-valdore.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "Scimitar", "suit": "", "filename": "scimitar.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "T'Pel", "suit": "", "filename": "tpel.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "I.R.W. Goraxus", "suit": "", "filename": "irw-goraxus.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "I.R.W. Khazara", "suit": "", "filename": "irw-khazara.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "I.R.W. Terix", "suit": "", "filename": "irw-terix.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "Proconsul Neral", "suit": "", "filename": "proconsul-neral.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "Sub-Commander T'Rul", "suit": "", "filename": "sub-commander-trul.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "Sela", "suit": "", "filename": "sela.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "Romulus", "suit": "", "filename": "romulus.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "General Movar", "suit": "", "filename": "general-movar.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "Donatra", "suit": "", "filename": "donatra.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "Remans", "suit": "", "filename": "remans.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Sela", "box": "core"}, {"name": "Jhamel", "suit": "", "filename": "jhamel.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Shran", "box": "core"}, {"name": "Aenar", "suit": "", "filename": "aenar.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Shran", "box": "core"}, {"name": "Ambassador Thoris", "suit": "", "filename": "ambassador-thoris.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Shran", "box": "core"}, {"name": "Thy'Lek Shran", "suit": "", "filename": "thylek-shran.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Shran", "box": "core"}, {"name": "Andoria", "suit": "", "filename": "andoria.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Shran", "box": "core"}, {"name": "Weythan", "suit": "", "filename": "weythan.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Shran", "box": "core"}, {"name": "Talas", "suit": "", "filename": "talas.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Shran", "box": "core"}, {"name": "Tarah", "suit": "", "filename": "tarah.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Shran", "box": "core"}, {"name": "Andorian Ale", "suit": "", "filename": "andorian-ale.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Shran", "box": "core"}, {"name": "Plasma Rifles", "suit": "", "filename": "plasma-rifles.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Shran", "box": "core"}, {"name": "Ushaan-Tor", "suit": "", "filename": "ushaan-tor.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Shran", "box": "core"}, {"name": "Andorian Cruiser", "suit": "", "filename": "andorian-cruiser.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Shran", "box": "core"}, {"name": "Kumari", "suit": "", "filename": "kumari.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Shran", "box": "core"}, {"name": "Coridan", "suit": "", "filename": "coridan.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Shran", "box": "core"}, {"name": "Tenebian Amethyst", "suit": "", "filename": "tenebian-amethyst.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Shran", "box": "core"}, {"name": "United Earth", "suit": "", "filename": "united-earth.jpg", "species": [], "regular": [], "other": [], "skills": [], "deck": "Shran", "box": "core"}];
 
+const BOXES = {core:"Captain's Chair",tbg:"To Boldly Go","2nd":"2nd Contact"};
+const DECK_ORDER = ["Common","Sisko","Picard","Koloth","Burnham","Sela","Shran"];
 const SUITS = ["Person","Ally","Ship","Cargo","Location","Encounter","Incident"];
 
-const SPECIES_SET = new Set(["Aenar","Alien","Andorian","Android","Bajoran","Betazoid","Borg","Breen","Cardassian","Changeling","Ferengi","Human","Kelpien","Klingon","Orion","Pakled","Romulan","Synthetic","Tellarite","Transcendent","Trill","Vulcan","Xindi"]);
-const OTHER_SET  = new Set(["Attack","Ongoing","Surprise","Wildcard"]);
+let activeBoxes  = new Set(["core"]);
+let activeDecks  = new Set();
+let activeSuits  = new Set();
+let activeTags   = new Set();
+let activeSkills = new Set();
+let searchText   = "";
+let viewMode     = "pill";
 
-function tagClass(t){ return SPECIES_SET.has(t)?'species': OTHER_SET.has(t)?'other':'regular'; }
+// Collect filter options from Common cards only (tagged)
+const commonCards = ALL_CARDS.filter(c=>c.deck==="Common");
+const allSpecies  = [...new Set(commonCards.flatMap(c=>c.species))].sort();
+const allRegular  = [...new Set(commonCards.flatMap(c=>c.regular))].sort();
+const allOther    = [...new Set(commonCards.flatMap(c=>c.other))].sort();
+const allSkills   = [...new Set(commonCards.flatMap(c=>c.skills))].sort();
 
-const allTags   = [...new Set(CARDS.flatMap(c=>c.tags))].sort();
-const species   = allTags.filter(t=>SPECIES_SET.has(t));
-const regular   = allTags.filter(t=>!SPECIES_SET.has(t)&&!OTHER_SET.has(t));
-const other     = allTags.filter(t=>OTHER_SET.has(t));
-const allSkills = [...new Set(CARDS.flatMap(c=>c.skills))].sort();
+function setView(v){
+  viewMode=v;
+  document.getElementById('btnPill').classList.toggle('active',v==='pill');
+  document.getElementById('btnImg').classList.toggle('active',v==='image');
+  render();
+}
 
-let activeSuits   = new Set();
-let activeTags    = new Set();  // covers all tag categories
-let activeSkills  = new Set();
-let searchText    = '';
-
-function makePill(text, cls, store){
-  const p = document.createElement('span');
-  p.className = cls;
-  p.textContent = text;
-  p.onclick = ()=>{
+function makePill(text,cls,store,extra){
+  const p=document.createElement('span');
+  p.className=cls; p.textContent=text;
+  if(extra) Object.assign(p.dataset,extra);
+  p.onclick=()=>{
     if(store.has(text)) store.delete(text); else store.add(text);
-    p.classList.toggle('active');
-    render();
+    p.classList.toggle('active'); render();
   };
   return p;
 }
 
-// Suit pills
-const suitContainer = document.getElementById('suitFilters');
+// Box filters
+const boxContainer=document.getElementById('boxFilters');
+Object.entries(BOXES).forEach(([id,label])=>{
+  const p=document.createElement('span');
+  p.className='box-pill active'; p.textContent=label; p.dataset.box=id;
+  p.onclick=()=>{
+    if(activeBoxes.has(id)) activeBoxes.delete(id); else activeBoxes.add(id);
+    p.classList.toggle('active'); render();
+  };
+  boxContainer.appendChild(p);
+});
+
+// Deck filters
+const deckContainer=document.getElementById('deckFilters');
+DECK_ORDER.forEach(d=>{
+  const p=document.createElement('span');
+  p.className='deck-pill'; p.textContent=d;
+  p.onclick=()=>{
+    if(activeDecks.has(d)) activeDecks.delete(d); else activeDecks.add(d);
+    p.classList.toggle('active'); render();
+  };
+  deckContainer.appendChild(p);
+});
+
+// Suit filters
+const suitContainer=document.getElementById('suitFilters');
 SUITS.forEach(s=>{
-  const p = document.createElement('span');
+  const p=document.createElement('span');
   p.className='suit-pill'; p.dataset.suit=s; p.textContent=s;
-  p.onclick=()=>{ if(activeSuits.has(s)) activeSuits.delete(s); else activeSuits.add(s); p.classList.toggle('active'); render(); };
+  p.onclick=()=>{
+    if(activeSuits.has(s)) activeSuits.delete(s); else activeSuits.add(s);
+    p.classList.toggle('active'); render();
+  };
   suitContainer.appendChild(p);
 });
 
-document.getElementById('speciesFilters').append(...species.map(t=>makePill(t,'species-pill',activeTags)));
-document.getElementById('regularFilters').append(...regular.map(t=>makePill(t,'regular-pill',activeTags)));
-document.getElementById('otherFilters').append(...other.map(t=>makePill(t,'other-pill',activeTags)));
+document.getElementById('speciesFilters').append(...allSpecies.map(t=>makePill(t,'species-pill',activeTags)));
+document.getElementById('regularFilters').append(...allRegular.map(t=>makePill(t,'regular-pill',activeTags)));
+document.getElementById('otherFilters').append(...allOther.map(t=>makePill(t,'other-pill',activeTags)));
+document.getElementById('skillFilters').append(...allSkills.map(t=>makePill(t,'skill-pill',activeSkills)));
 
-const skillContainer = document.getElementById('skillFilters');
-allSkills.forEach(s=>{
-  const p = makePill(s,'skill-pill',activeSkills);
-  skillContainer.appendChild(p);
-});
-
-document.getElementById('searchInput').addEventListener('input',e=>{ searchText=e.target.value.toLowerCase().trim(); render(); });
+document.getElementById('searchInput').addEventListener('input',e=>{searchText=e.target.value.toLowerCase().trim();render();});
 
 function clearAll(){
-  activeSuits.clear(); activeTags.clear(); activeSkills.clear(); searchText='';
+  activeDecks.clear();activeSuits.clear();activeTags.clear();activeSkills.clear();searchText='';
   document.getElementById('searchInput').value='';
-  document.querySelectorAll('.suit-pill,.species-pill,.regular-pill,.other-pill,.skill-pill').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.deck-pill,.suit-pill,.species-pill,.regular-pill,.other-pill,.skill-pill').forEach(p=>p.classList.remove('active'));
   render();
 }
 
+function tagClass(t,card){
+  if(card.species.includes(t)) return 'species';
+  if(card.other.includes(t)) return 'other';
+  return 'regular';
+}
+
+function cardMatches(c){
+  if(!activeBoxes.has(c.box)) return false;
+  if(activeDecks.size && !activeDecks.has(c.deck)) return false;
+  if(activeSuits.size && !activeSuits.has(c.suit)) return false;
+  if(searchText && !c.name.toLowerCase().includes(searchText)) return false;
+  const allTags=[...c.species,...c.regular,...c.other];
+  if(activeTags.size && ![...activeTags].every(t=>allTags.includes(t))) return false;
+  if(activeSkills.size && ![...activeSkills].every(s=>c.skills.includes(s))) return false;
+  return true;
+}
+
+function buildPillCard(c){
+  const el=document.createElement('div');
+  el.className='card-entry'; el.dataset.suit=c.suit||'';
+  const allTags=[...c.species,...c.regular,...c.other];
+  const tagsHTML=allTags.map(t=>{
+    const cat=c.species.includes(t)?'species':c.other.includes(t)?'other':'regular';
+    return `<span class="ctag ctag-${cat}${activeTags.has(t)?' match':''}">${t}</span>`;
+  }).join('');
+  const skillsHTML=c.skills.map(s=>`<span class="card-skill${activeSkills.has(s)?' match':''}">${s}</span>`).join('');
+  const noData=!allTags.length&&!c.skills.length&&c.deck!=='Common';
+  el.innerHTML=`
+    <div class="card-suit-bar">
+      <div class="suit-dot" data-suit="${c.suit||''}"></div>
+      <div class="suit-label" data-suit="${c.suit||''}">${c.suit||'—'}</div>
+    </div>
+    <div class="card-name">${c.name}</div>
+    ${tagsHTML?`<div class="card-tags">${tagsHTML}</div>`:''}
+    ${skillsHTML?`<div class="card-skills">${skillsHTML}</div>`:''}
+    ${noData?'<div class="no-data">traits pending</div>':''}
+  `;
+  return el;
+}
+
+function buildImgCard(c){
+  const el=document.createElement('div');
+  el.className='card-img-entry';
+  el.innerHTML=`
+    <div class="img-placeholder">NO IMAGE</div>
+    <div class="card-img-name">${c.name}</div>
+  `;
+  return el;
+}
+
 function render(){
-  const grid = document.getElementById('cardGrid');
-  const matched = CARDS.filter(c=>{
-    if(activeSuits.size && !activeSuits.has(c.suit)) return false;
-    if(searchText && !c.name.toLowerCase().includes(searchText)) return false;
-    if(activeTags.size  && ![...activeTags].every(t=>c.tags.includes(t))) return false;
-    if(activeSkills.size && ![...activeSkills].every(s=>c.skills.includes(s))) return false;
-    return true;
+  const groups=document.getElementById('deckGroups');
+  groups.innerHTML='';
+  let total=0;
+  DECK_ORDER.forEach(deck=>{
+    const matched=ALL_CARDS.filter(c=>c.deck===deck&&cardMatches(c));
+    if(!matched.length) return;
+    total+=matched.length;
+    const section=document.createElement('div');
+    section.className='deck-group';
+    const hdr=document.createElement('div');
+    hdr.className='deck-group-header';
+    hdr.innerHTML=`${deck} <span class="deck-count">(${matched.length} cards)</span>`;
+    section.appendChild(hdr);
+    const grid=document.createElement('div');
+    grid.className=viewMode==='pill'?'card-grid':'img-grid';
+    matched.forEach(c=>grid.appendChild(viewMode==='pill'?buildPillCard(c):buildImgCard(c)));
+    section.appendChild(grid);
+    groups.appendChild(section);
   });
-
-  document.getElementById('countDisplay').textContent = matched.length;
-  grid.innerHTML='';
-
-  if(!matched.length){
-    const no=document.createElement('div'); no.className='no-results'; no.textContent='No cards match the current filters.'; grid.appendChild(no); return;
+  document.getElementById('countDisplay').textContent=total;
+  if(!total){
+    groups.innerHTML='<div class="no-results">No cards match the current filters.</div>';
   }
-
-  matched.forEach(c=>{
-    const el=document.createElement('div');
-    el.className='card-entry'; el.dataset.suit=c.suit;
-
-    const tagsHTML = c.tags.map(t=>{
-      const cat=tagClass(t);
-      const isMatch=activeTags.has(t);
-      return `<span class="ctag ctag-${cat}${isMatch?' match':''}">${t}</span>`;
-    }).join('');
-
-    const skillsHTML = c.skills.map(s=>`<span class="card-skill${activeSkills.has(s)?' match':''}">${s}</span>`).join('');
-
-    el.innerHTML=`
-      <div class="card-suit-bar">
-        <div class="suit-dot" data-suit="${c.suit}"></div>
-        <div class="suit-label" data-suit="${c.suit}">${c.suit}</div>
-      </div>
-      <div class="card-name">${c.name}</div>
-      ${tagsHTML?`<div class="card-tags">${tagsHTML}</div>`:''}
-      ${skillsHTML?`<div class="card-skills">${skillsHTML}</div>`:''}
-    `;
-    grid.appendChild(el);
-  });
 }
 
 render();
