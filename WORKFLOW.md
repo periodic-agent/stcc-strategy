@@ -51,6 +51,7 @@ Formatted by **Periodic_agent**
 3. **Image credit** footer on every guide: `Card images © WizKids.`
 4. **Attribution** footer on every guide: `Content by Matthew McCue (mdmccu2) · Formatting by Periodic_agent`
 5. **Back to Compendium** link at top and bottom of every guide.
+6. **Card Scanner footer** is different: `Card images © WizKids.` only — no content attribution line. Contributors will be acknowledged separately as the project grows.
 
 ---
 
@@ -68,6 +69,7 @@ Formatted by **Periodic_agent**
 | TBG captain guides | `tbg-[name].html` |
 | Market guides | `persons.html`, `allies.html`, `ships.html`, `cargo.html`, `locations.html`, `encounters-incidents.html` |
 | Strategy guides | `solo.html`, `five-year-mission.html`, `vs-picard.html` |
+| Card Scanner | `card-browser-mockup.html` (filename kept as-is during development) |
 
 ---
 
@@ -129,6 +131,7 @@ Claude will:
 - Captain guide photos: scrollable horizontal `.card-row` (height: 220px, mobile: 170px)
 - Single card images (TBG style): `.card-img` block (max-width: 260px)
 - All images: lightbox on click
+- All images: `loading="lazy"` — served from `/img/cards/[box]/[filename].jpg`
 
 ### Navigation
 ```html
@@ -199,80 +202,143 @@ Swap blue vars for red equivalents for TBG guides.
   .chapter-title span{color:var(--blue2);}
   .chapter-meta{margin-top:1rem;font-size:0.8rem;color:var(--muted);letter-spacing:0.1em;}
   .chapter-tags{display:flex;justify-content:center;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;}
-  footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:0.75rem;color:var(--muted);line-height:1.8;}
-  footer a{color:var(--blue);text-decoration:none;}
-  @media(max-width:600px){.chapter-header{padding:2rem 1rem 1.5rem;}.card-row img{height:170px;}.board-pair{grid-template-columns:1fr;}}
-</style>
 ```
 
 ---
 
-## Index Structure (index.html)
+## Card Database
 
+### File structure
 ```
-Box 1 — Captain's Chair (blue)
-  Captains: Shran✓, Picard✓, Burnham✓, Sisko✓, Sela✓, Koloth✓
-  Location & Market: Persons✓, Allies✓, Ships✓, Cargo✓, Locations✓, Encounters & Incidents✓
-
-Box 2 — To Boldly Go (red)
-  Captains: Georgiou, Soval, Kirk, Archer, Rebner, Khan (all Soon)
-  Location & Market: TBG Persons✓, TBG Locations✓, Cargo/Ships/Allies/E&I (Soon)
-
-Box 3 — Second Contact (amber)
-  Captains: (Soon)
-  Location & Market: Commons, Locations, Rewards (all Soon)
-
-Box 4 — Strategy Guides (gray)
-  Solo & Conspiracy✓, 5-Year Mission✓, Playing Against Picard✓
-  Combining Markets (Soon), Wesley Crusher Guide (Soon)
+data/
+  box1.json    -- Captain's Chair, complete (255 cards)
+  box2.json    -- To Boldly Go, pending
+  box3.json    -- Second Contact, pending
 ```
 
-To flip an entry from Soon → Live:
-- Remove `soon` from class: `entry blue-box soon` → `entry blue-box`
-- Remove `<span class="entry-badge badge-soon">Soon</span>`
-- Set `href` to correct filename
+### Canonical JSON schema (per card)
+```json
+{
+  "id": "bruce-maddox",
+  "name": "Bruce Maddox",
+  "suit": "Person",
+  "source": "Common",
+  "game_box": "Captain's Chair",
+  "species_traits": ["Human"],
+  "regular_traits": ["Starfleet", "Scientist", "Engineer"],
+  "other_traits": [],
+  "icons": [
+    {"specialty": "Research", "type": "Skill"},
+    {"specialty": "Research", "type": "Focus"}
+  ],
+  "filename": "bruce-maddox.jpg"
+}
+```
+
+### Trait classification — rulebook p.36 (canonical)
+**Species Traits:** Alien, Aenar, Andorian, Android, Bajoran, Betazoid, Borg, Breen, Cardassian, Changeling, Ferengi, Human, Jem'Hadar, Kelpien, Klingon, Orion, Pakled, Reman, Romulan, Synthetic, Tellarite, Transcendent, Trill, Vorta, Vulcan, XB, Xindi
+
+**Regular Traits:** Ambassador, Anomaly, Augment, Beverage, Business, Cloak, Communication, Creature, Doctor, Dominion, Engineer, Helmet, Hologram, Imperial, Mind Control, Ops, Pilot, Maquis, Scientist, Security, Shady, Spy, Starbase, Starfleet, Telepath, Time Travel, Weapon
+
+**Other Traits:** Attack, Ongoing, Surprise, Wildcard
+
+### Icon schema — rulebook p.17
+- `specialty`: Research / Influence / Military / Any / Variable
+- `type`: Skill / Focus
+- **Any** + Skill or Focus: counts for all three specialties in the relevant filter
+- **Variable** Skill: conditional value, shown in its own filter category
+- No "Wild" terminology — not a rulebook term, eliminated from schema
+
+### Icon filtering logic
+- Selecting Research Skill returns: Research Skill + Any Skill cards
+- Selecting Research Focus returns: Research Focus + Any Focus cards
+- Selecting Variable returns: Variable Skill cards only
+- Same logic applies to Influence and Military
+
+### Suit conventions
+- Market suits: Person, Ally, Ship, Cargo, Location, Encounter, Incident
+- Crew deck only: Captain, Directive, Status
+- **Captain and Directive are acceptable deviations from the rulebook** -- not official "suits" but used as suit values in the database for practical filtering. Noted and intentional.
+- Captain cards colored gold, Directive cards gray, Status cards light blue
+
+### Suit color palette (Card Scanner)
+| Suit | Color |
+|---|---|
+| Person | `#e8a94a` amber |
+| Ally | `#9b6ecf` purple |
+| Ship | `#7a8aaa` gray |
+| Cargo | `#3a6aaa` dark blue |
+| Location | `#4ac48a` green |
+| Encounter | `#d4699f` pink |
+| Incident | `#e05a5a` red |
+| Captain | `#c8a84b` gold |
+| Directive | `#7a8aaa` muted |
+| Status | `#88aacc` light blue |
+
+### Trait badge styling
+- **Species Traits** — octagonal icon per rulebook; orange badges (`#e09050`)
+- **Regular Traits** — blue badges (`#7ec8f0`)
+- **Other Traits** — red badges (`#e05a5a`). Attack, Ongoing, Surprise, Wildcard
+
+### Filter logic
+- AND logic: selecting multiple traits returns cards matching ALL selected traits
+- Deselecting all deck pills = show all cards from active boxes (no deck filter)
+- Box selection is independent of deck selection
+- Promo packs bypass the deck filter entirely
+
+### Box and deck structure
+**Boxes:** Captain's Chair (blue `#4a9fd4`), To Boldly Go (red `#c0392b`), 2nd Contact (gold `#c8a84b`)
+**Promo Packs** (separate section below Box): Pack 1 (blue), Pack 2 (red) — unselected by default
+
+**Deck pills (always visible, color-coded by box):**
+- Core (blue): Common, Sisko, Picard, Koloth, Burnham, Sela, Shran
+- TBG (red): Georgiou, Soval, Kirk, Archer, Rebner, Khan
+- 2nd Contact (gold): Pike, Riker, Freeman
+
+### Default state on load
+- Captain's Chair box selected; TBG and 2nd Contact unselected
+- No deck pills selected (= all 255 Core cards visible)
+- All trait/skill sections expanded
+
+### Image view
+- Toggle between Cards (pill view) and Images view
+- Image view uses `loading="lazy"` — only loads visible images
+- Image placeholder shown until `/img/cards/[box]/[filename].jpg` exists
+- Image assets pending volunteer scanning
+
+### Update cycle
+1. Volunteer updates Google Sheet or new JSON provided
+2. In new session: pull sheet via Google Drive MCP or upload new JSON
+3. Rebuild card JSON, re-inject into HTML
+4. Present for download, Periodic_agent pushes to GitHub
+
+### Analytics
+GoatCounter tracker included: `https://stcc-compendium.goatcounter.com/count`
 
 ---
 
-## Current Live Guides
+## Card Image Naming Convention
 
-| Guide | File | Status |
-|---|---|---|
-| Shran Strategy Guide | `shran.html` | ✅ Live |
-| Picard Strategy Guide | `picard.html` | ✅ Live |
-| Burnham Strategy Guide | `burnham.html` | ✅ Live |
-| Sisko Strategy Guide | `sisko.html` | ✅ Live |
-| Sela Strategy Guide | `sela.html` | ✅ Live |
-| Koloth Strategy Guide | `koloth.html` | ✅ Live |
-| Person Deck Guide | `persons.html` | ✅ Live |
-| Cargo Deck Guide | `cargo.html` | ✅ Live |
-| Ship Deck Guide | `ships.html` | ✅ Live |
-| Ally Deck Guide | `allies.html` | ✅ Live |
-| Location Deck Guide | `locations.html` | ✅ Live |
-| Encounter & Incident Decks | `encounters-incidents.html` | ✅ Live |
-| TBG Location Guide | `tbg-locations.html` | ✅ Live |
-| TBG Person Deck Guide | `tbg-persons.html` | ✅ Live |
-| Solo & Conspiracy | `solo.html` | ✅ Live |
-| 5-Year Mission | `five-year-mission.html` | ✅ Live |
-| Playing Against Picard | `vs-picard.html` | ✅ Live |
+For scanned/cropped card images used in both the Card Scanner and strategy guides:
 
-> **Note:** Always verify live count by fetching `index.html` at session start — project knowledge may lag behind.
+- Lowercase, hyphens instead of spaces
+- Drop all punctuation (apostrophes, periods, commas)
+- No accents or special characters
 
----
+**Examples:**
+- Bird-of-Prey → `bird-of-prey.jpg`
+- Mek'Leth → `mek-leth.jpg`
+- U.S.S. Enterprise-C → `uss-enterprise-c.jpg`
+- V'Ger → `vger.jpg`
 
-## Pending — Known Guides to Add (from BGG)
+**Format:** JPG preferred, PNG if transparency needed. Full resolution — resize for web later.
 
-### To Boldly Go
-- 6 captain guides: Georgiou, Soval, Kirk, Archer, Rebner, Khan
-- Cargo, Ships, Ally, Encounters & Incidents market guides
-
-### Second Contact
-- Pike, Freeman captains
-- Full market guides: Commons, Locations, Rewards
-
-### Strategy Guides
-- Combining Markets (`combining-markets.html`)
-- Wesley Crusher Guide (`wesley-crusher-guide.html`)
+**Folder structure:**
+```
+/img/cards/core/
+/img/cards/tbg/
+/img/cards/2nd-contact/
+```
 
 ---
 
@@ -387,3 +453,99 @@ Claude generates `download_[guide]_images.py` per guide by extracting CDN URLs f
 - **TBG Locations:** 6 embedded WebP + 3 CDN (Cold Station 12, Tanuga IV, Tellar Prime)
 
 > Images stay as **base64 in HTML** until the library grows large enough to justify an `images/` folder.
+
+---
+
+## Session Delta — 05 Jun 2026
+
+### Index Structure Changes
+
+**Box naming (current):**
+- Box 1: `Captain's Chair — Core Box` (blue)
+- Box 2: `Captain's Chair — To Boldly Go` (red)
+- Box 3: `Captain's Chair — Second Contact (Expansion)` (amber)
+- Box 4: `Other Guides` (gray)
+- Box banner subtitle: `Strategy Guides` on all four boxes
+
+**Entry sub-text:** empty for all guide entries. Keep complexity ratings on captain entries. Keep "Core Box · Beta" on Card Scanner.
+
+**Card Scanner:** sits as a prominent `box-banner purple` above Box 1 — NOT inside a card-grid. Purple dot (`#d4699f`), full-width, links to `card-browser-mockup.html`. Title: "Card Scanner", subtitle: "Explore all cards and decks".
+
+```html
+<a href="card-browser-mockup.html" class="box-banner purple">
+  <div class="box-dot"></div>
+  <div>
+    <div class="box-banner-title">Card Scanner</div>
+    <div class="box-banner-sub">Explore all cards and decks</div>
+  </div>
+</a>
+```
+
+```css
+.box-banner.purple { background: rgba(212,105,159,0.08); border: 1px solid rgba(212,105,159,0.3); }
+.box-banner.purple .box-dot { background: #d4699f; box-shadow: 0 0 8px #d4699f; }
+.box-banner.purple .box-banner-title { color: #d4699f; }
+a.box-banner { text-decoration: none; transition: transform 0.2s, border-color 0.2s; }
+a.box-banner:hover { transform: translateY(-2px); border-color: #d4699f; }
+```
+
+**Second Contact** box is now live in the index (amber). Pike and Freeman captains + market guides all Soon.
+
+**New Soon entries in Other Guides:** `combining-markets.html`, `wesley-crusher-guide.html`
+
+---
+
+### Chapter Label Convention (finalized)
+
+- Core Box guides: `Captain's Chair` — no "Strategy Guide" or "Strategy Compendium" suffix
+- TBG guides: `To Boldly Go`
+- Guide h1 titles: captain name only (e.g. `Thy'Lek Shran`, `Koloth, the Dahar Master`)
+
+---
+
+### Video Playthroughs — Updated Mapping
+
+| Guide | Videos |
+|---|---|
+| picard.html | Two-Player Tutorial (`youtube.com/live/qZnTVD4yOpU`) |
+| burnham.html | Burnham Solo (`youtube.com/watch?v=QzXbE_pjKtM`) |
+| solo.html | Tutorial pt.1 + pt.2 + Burnham Solo |
+| vs-picard.html | Two-player tutorial + Riker vs Picard Bot |
+
+---
+
+### TBG Persons Guide
+
+- File: `tbg-persons.html` — live
+- 17 new cards + 9 repeats listed
+- Card format: `<p class="lore">` for Notable Episodes + lore text, `<p>` for strategy
+- Memory Alpha episode links on all Notable Episodes references
+- Phlox image placed before the repeats list
+- TOC pill color: gold (`#e8a94a`) matching Core Box Person Deck
+
+---
+
+### Analytics
+
+GoatCounter script added to all 18 guides + index.html:
+```html
+<script data-goatcounter="https://stcc-compendium.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+```
+Place just before `</body>` on every page including future guides.
+
+---
+
+### Card Scanner Attribution
+
+The Card Scanner footer uses only `Card images © WizKids.` — no McCue content attribution line. Contributors will be acknowledged separately as the project grows.
+
+---
+
+### Design Principle: Guides vs Tools
+
+- Guides = McCue's strategy content, formatted by Periodic_agent
+- Tools = built by Periodic_agent (Card Scanner, future tools)
+- Keep these conceptually separate: don't add mechanical card data to guides; link to Card Scanner instead
+- "Guides are for guiding, Card Scanner is a fun tool"
+
