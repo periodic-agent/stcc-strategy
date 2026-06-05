@@ -368,7 +368,7 @@ DECK_ORDER.forEach(d=>{
   const p=document.createElement('span');
   const box=DECK_BOX[d];
   const cls=box==='tbg'?'tbg':box==='2nd'?'second':'core';
-  p.className='deck-pill '+cls+(d==='Common'?' active':'');
+  p.className='deck-pill '+cls;
   p.textContent=d;
   p.onclick=()=>{ if(activeDecks.has(d)) activeDecks.delete(d); else activeDecks.add(d); p.classList.toggle('active'); render(); };
   deckContainer.appendChild(p);
