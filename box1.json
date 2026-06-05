@@ -1,0 +1,4419 @@
+[
+  {
+    "id": "admiral-jarok",
+    "name": "Admiral Jarok",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "admiral-jarok.jpg"
+  },
+  {
+    "id": "admiral-necheyev",
+    "name": "Admiral Necheyev",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Focus"
+      }
+    ],
+    "filename": "admiral-necheyev.jpg"
+  },
+  {
+    "id": "admiral-pressman",
+    "name": "Admiral Pressman",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Shady"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "admiral-pressman.jpg"
+  },
+  {
+    "id": "ambassador-kamarag",
+    "name": "Ambassador Kamarag",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Ambassador",
+      "Imperial"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "ambassador-kamarag.jpg"
+  },
+  {
+    "id": "b-4",
+    "name": "B-4",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Android",
+      "Synthetic"
+    ],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "b-4.jpg"
+  },
+  {
+    "id": "bruce-maddox",
+    "name": "Bruce Maddox",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Scientist",
+      "Engineer"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Skill"
+      },
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "bruce-maddox.jpg"
+  },
+  {
+    "id": "captain-dorg",
+    "name": "Captain Dorg",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Shady"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "captain-dorg.jpg"
+  },
+  {
+    "id": "harry-mudd",
+    "name": "Harry Mudd",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Shady",
+      "Time Travel"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "harry-mudd.jpg"
+  },
+  {
+    "id": "joret-dal",
+    "name": "Joret Dal",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Cardassian"
+    ],
+    "regular_traits": [
+      "Spy",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "joret-dal.jpg"
+  },
+  {
+    "id": "laas",
+    "name": "Laas",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Changeling"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "laas.jpg"
+  },
+  {
+    "id": "laris",
+    "name": "Laris",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "laris.jpg"
+  },
+  {
+    "id": "lenara-kahn",
+    "name": "Lenara Kahn",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Trill"
+    ],
+    "regular_traits": [
+      "Scientist"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "lenara-kahn.jpg"
+  },
+  {
+    "id": "lursa",
+    "name": "Lursa",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Shady"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "lursa.jpg"
+  },
+  {
+    "id": "lwaxana-troi",
+    "name": "Lwaxana Troi",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Betazoid"
+    ],
+    "regular_traits": [
+      "Ambassador",
+      "Telepath"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "lwaxana-troi.jpg"
+  },
+  {
+    "id": "mirok",
+    "name": "Mirok",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Scientist"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "mirok.jpg"
+  },
+  {
+    "id": "moriarty",
+    "name": "Moriarty",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Synthetic"
+    ],
+    "regular_traits": [
+      "Hologram",
+      "Shady"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "moriarty.jpg"
+  },
+  {
+    "id": "peanut-hamper",
+    "name": "Peanut Hamper",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Synthetic"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "peanut-hamper.jpg"
+  },
+  {
+    "id": "phlox",
+    "name": "Phlox",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Doctor"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "phlox.jpg"
+  },
+  {
+    "id": "riva",
+    "name": "Riva",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Ambassador",
+      "Telepath",
+      "Communication"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Skill"
+      },
+      {
+        "track": "Influence",
+        "type": "Focus"
+      }
+    ],
+    "filename": "riva.jpg"
+  },
+  {
+    "id": "rom",
+    "name": "Rom",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Ferengi"
+    ],
+    "regular_traits": [
+      "Engineer"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "rom.jpg"
+  },
+  {
+    "id": "sakonna",
+    "name": "Sakonna",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Maquis"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sakonna.jpg"
+  },
+  {
+    "id": "su-kal",
+    "name": "Su'Kal",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Kelpien"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "su-kal.jpg"
+  },
+  {
+    "id": "talok",
+    "name": "Talok",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan",
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Spy"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Focus"
+      }
+    ],
+    "filename": "talok.jpg"
+  },
+  {
+    "id": "tevrin-krit",
+    "name": "Tevrin Krit",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Tellarite"
+    ],
+    "regular_traits": [
+      "Business"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "tevrin-krit.jpg"
+  },
+  {
+    "id": "zefram-cochrane",
+    "name": "Zefram Cochrane",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Engineer",
+      "Pilot"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "zefram-cochrane.jpg"
+  },
+  {
+    "id": "biobed",
+    "name": "Biobed",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Doctor"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Skill"
+      },
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "biobed.jpg"
+  },
+  {
+    "id": "borg-spatial-trajector",
+    "name": "Borg Spatial Trajectory",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Borg"
+    ],
+    "regular_traits": [
+      "Scientist"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "borg-spatial-trajector.jpg"
+  },
+  {
+    "id": "cloaking-device",
+    "name": "Cloaking Device",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Cloak"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "cloaking-device.jpg"
+  },
+  {
+    "id": "ferengi-wine",
+    "name": "Ferengi Wine",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Ferengi"
+    ],
+    "regular_traits": [
+      "Beverage"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "ferengi-wine.jpg"
+  },
+  {
+    "id": "forced-singularity",
+    "name": "Forced Singularity",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "forced-singularity.jpg"
+  },
+  {
+    "id": "holosuite",
+    "name": "Holosuite",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Hologram",
+      "Business"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "holosuite.jpg"
+  },
+  {
+    "id": "horta",
+    "name": "Horta",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Creature"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "track_icons": [],
+    "filename": "horta.jpg"
+  },
+  {
+    "id": "lirpa",
+    "name": "Lirpa",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "lirpa.jpg"
+  },
+  {
+    "id": "mekleth",
+    "name": "Mek'leth",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "mekleth.jpg"
+  },
+  {
+    "id": "orb-of-time",
+    "name": "Orb of Time",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Bajoran"
+    ],
+    "regular_traits": [
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Focus"
+      }
+    ],
+    "filename": "orb-of-time.jpg"
+  },
+  {
+    "id": "phasers",
+    "name": "Phasers",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet",
+      "Weapon",
+      "Security"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "track_icons": [],
+    "filename": "phasers.jpg"
+  },
+  {
+    "id": "plasma-manifold",
+    "name": "Plasma Manifold",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Engineer"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "plasma-manifold.jpg"
+  },
+  {
+    "id": "tachyon-detection-grid",
+    "name": "Tachyon Detection Grid",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Communication"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Focus"
+      }
+    ],
+    "filename": "tachyon-detection-grid.jpg"
+  },
+  {
+    "id": "tribbles",
+    "name": "Tribbles",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Creature"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "tribbles.jpg"
+  },
+  {
+    "id": "type-iii-disruptor-pistols",
+    "name": "Type III Disruptor Pistols",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "type-iii-disruptor-pistols.jpg"
+  },
+  {
+    "id": "unstable-wormhole",
+    "name": "Unstable Wormhole",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "unstable-wormhole.jpg"
+  },
+  {
+    "id": "bird-of-prey",
+    "name": "Bird-of-Prey",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Cloak",
+      "Imperial"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Skill"
+      }
+    ],
+    "filename": "bird-of-prey.jpg"
+  },
+  {
+    "id": "borg-probe",
+    "name": "Borg Probe",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Borg"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "borg-probe.jpg"
+  },
+  {
+    "id": "dkyr-cruiser",
+    "name": "D'Kyr Cruiser",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Scientist"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "dkyr-cruiser.jpg"
+  },
+  {
+    "id": "holographic-drone-ship",
+    "name": "Holographic Drone Ship",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Aenar",
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Hologram",
+      "Weapon"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Focus"
+      }
+    ],
+    "filename": "holographic-drone-ship.jpg"
+  },
+  {
+    "id": "ktinga-battlecruiser",
+    "name": "K'T'Inga Battlecruiser",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Imperial"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Skill"
+      },
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "ktinga-battlecruiser.jpg"
+  },
+  {
+    "id": "kazon-raider",
+    "name": "Kazon Raider",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Shady"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Focus"
+      }
+    ],
+    "filename": "kazon-raider.jpg"
+  },
+  {
+    "id": "pakled-freighter",
+    "name": "Pakled Freighter",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Pakled"
+    ],
+    "regular_traits": [
+      "Business"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "pakled-freighter.jpg"
+  },
+  {
+    "id": "sona-battlecruiser",
+    "name": "Son'a Battlecruiser",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Shady",
+      "Dominion"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "sona-battlecruiser.jpg"
+  },
+  {
+    "id": "uss-enterprise-c",
+    "name": "U.S.S. Enterprise-C",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet",
+      "Time Travel",
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "uss-enterprise-c.jpg"
+  },
+  {
+    "id": "uss-pasteur",
+    "name": "U.S.S. Pasteur",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet",
+      "Doctor",
+      "Communication"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "uss-pasteur.jpg"
+  },
+  {
+    "id": "uss-reliant",
+    "name": "U.S.S. Reliant",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "uss-reliant.jpg"
+  },
+  {
+    "id": "voth-research-vessel",
+    "name": "Voth Research Vessel",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Skill"
+      }
+    ],
+    "filename": "voth-research-vessel.jpg"
+  },
+  {
+    "id": "xindi-reptilian-battleship",
+    "name": "Xindi-Reptilian Battleship",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Xindi"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "xindi-reptilian-battleship.jpg"
+  },
+  {
+    "id": "arinsen",
+    "name": "Arin'Sen",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "arinsen.jpg"
+  },
+  {
+    "id": "bolians",
+    "name": "Bolians",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "bolians.jpg"
+  },
+  {
+    "id": "bynars",
+    "name": "Bynars",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Engineer"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "bynars.jpg"
+  },
+  {
+    "id": "denobulans",
+    "name": "Denobulans",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "denobulans.jpg"
+  },
+  {
+    "id": "edosians",
+    "name": "Edosians",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "edosians.jpg"
+  },
+  {
+    "id": "emerald-chain",
+    "name": "Emerald Chain",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Orion",
+      "Andorian"
+    ],
+    "regular_traits": [
+      "Shady"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "emerald-chain.jpg"
+  },
+  {
+    "id": "halkan-council",
+    "name": "Halkan Council",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "halkan-council.jpg"
+  },
+  {
+    "id": "karemma",
+    "name": "Karemma",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Business",
+      "Dominion"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "karemma.jpg"
+  },
+  {
+    "id": "kelpiens",
+    "name": "Kelpiens",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Kelpien"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "kelpiens.jpg"
+  },
+  {
+    "id": "letheans",
+    "name": "Letheans",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Telepath",
+      "Shady"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "letheans.jpg"
+  },
+  {
+    "id": "organians",
+    "name": "Organians",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Transcendent"
+    ],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "organians.jpg"
+  },
+  {
+    "id": "suliban",
+    "name": "Suliban",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Focus"
+      }
+    ],
+    "filename": "suliban.jpg"
+  },
+  {
+    "id": "tholians",
+    "name": "Tholians",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "tholians.jpg"
+  },
+  {
+    "id": "ancient-gene-fragments",
+    "name": "Ancient Gene Fragments",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly",
+      "Augment"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "ancient-gene-fragments.jpg"
+  },
+  {
+    "id": "boltzmann-brain",
+    "name": "Boltzmann Brain",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Telepath",
+      "Doctor"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "boltzmann-brain.jpg"
+  },
+  {
+    "id": "guardian-of-forever",
+    "name": "Guardian of Forever",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Transcendent"
+    ],
+    "regular_traits": [
+      "Anomaly",
+      "Time Travel"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "track_icons": [],
+    "filename": "guardian-of-forever.jpg"
+  },
+  {
+    "id": "iconian-gateway",
+    "name": "Iconian Gateway",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Imperial"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Focus"
+      }
+    ],
+    "filename": "iconian-gateway.jpg"
+  },
+  {
+    "id": "koala",
+    "name": "Koala",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Wildcard"
+    ],
+    "track_icons": [],
+    "filename": "koala.jpg"
+  },
+  {
+    "id": "omega-particle",
+    "name": "Omega Particle",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Scientist"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "omega-particle.jpg"
+  },
+  {
+    "id": "sha-ka-ree",
+    "name": "Sha Ka Ree",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Transcendent",
+      "Vulcan"
+    ],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack",
+      "Ongoing"
+    ],
+    "track_icons": [],
+    "filename": "sha-ka-ree.jpg"
+  },
+  {
+    "id": "vger",
+    "name": "V'Ger",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Synthetic"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "vger.jpg"
+  },
+  {
+    "id": "energy-drain",
+    "name": "Energy Drain",
+    "suit": "Incident",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "energy-drain.jpg"
+  },
+  {
+    "id": "hostile-contact",
+    "name": "Hostile Contact",
+    "suit": "Incident",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "hostile-contact.jpg"
+  },
+  {
+    "id": "political-crisis",
+    "name": "Political Crisis",
+    "suit": "Incident",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "political-crisis.jpg"
+  },
+  {
+    "id": "red-alert",
+    "name": "Red Alert",
+    "suit": "Incident",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "red-alert.jpg"
+  },
+  {
+    "id": "subspace-phenomenon",
+    "name": "Subspace Phenomenon",
+    "suit": "Incident",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "subspace-phenomenon.jpg"
+  },
+  {
+    "id": "trade-embargo",
+    "name": "Trade Embargo",
+    "suit": "Incident",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "trade-embargo.jpg"
+  },
+  {
+    "id": "armagosa-observatory",
+    "name": "Amargosa Observatory",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Scientist",
+      "Starbase"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Skill"
+      }
+    ],
+    "filename": "armagosa-observatory.jpg"
+  },
+  {
+    "id": "ancient-relay-station",
+    "name": "Ancient Relay Station",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Communication"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Skill"
+      }
+    ],
+    "filename": "ancient-relay-station.jpg"
+  },
+  {
+    "id": "archer-iv",
+    "name": "Archer IV",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Skill"
+      }
+    ],
+    "filename": "archer-iv.jpg"
+  },
+  {
+    "id": "baku",
+    "name": "Ba'ku",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "baku.jpg"
+  },
+  {
+    "id": "betazed",
+    "name": "Betazed",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Betazoid"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Skill",
+        "count": 3
+      }
+    ],
+    "filename": "betazed.jpg"
+  },
+  {
+    "id": "corvan-ii",
+    "name": "Corvan II",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Business",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Skill"
+      }
+    ],
+    "filename": "corvan-ii.jpg"
+  },
+  {
+    "id": "deep-space-k7",
+    "name": "Deep Space K-7",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Starbase"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Focus"
+      }
+    ],
+    "filename": "deep-space-k7.jpg"
+  },
+  {
+    "id": "delta-vega",
+    "name": "Delta Vega",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Skill"
+      }
+    ],
+    "filename": "delta-vega.jpg"
+  },
+  {
+    "id": "derna",
+    "name": "Derna",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Bajoran",
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Doctor"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "derna.jpg"
+  },
+  {
+    "id": "dozaria",
+    "name": "Dozaria",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Breen"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Skill",
+        "count": 2
+      }
+    ],
+    "filename": "dozaria.jpg"
+  },
+  {
+    "id": "freecloud",
+    "name": "Freecloud",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Business",
+      "Shady"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "freecloud.jpg"
+  },
+  {
+    "id": "indri-viii",
+    "name": "Indri VIII",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Skill"
+      },
+      {
+        "track": "Research",
+        "type": "Skill"
+      }
+    ],
+    "filename": "indri-viii.jpg"
+  },
+  {
+    "id": "kelvas-docks",
+    "name": "Kelvas Docks",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Cardassian"
+    ],
+    "regular_traits": [
+      "Engineer",
+      "Dominion",
+      "Starbase"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "kelvas-docks.jpg"
+  },
+  {
+    "id": "memory-alpha",
+    "name": "Memory Alpha",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet",
+      "Communication"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "memory-alpha.jpg"
+  },
+  {
+    "id": "regula-i",
+    "name": "Regula I",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet",
+      "Scientist",
+      "Starbase"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Skill",
+        "count": 2
+      }
+    ],
+    "filename": "regula-i.jpg"
+  },
+  {
+    "id": "risa",
+    "name": "Risa",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Business"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Skill"
+      }
+    ],
+    "filename": "risa.jpg"
+  },
+  {
+    "id": "solum",
+    "name": "Solum",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "solum.jpg"
+  },
+  {
+    "id": "tulgana-iv",
+    "name": "Tulgana IV",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Business",
+      "Starfleet",
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "tulgana-iv.jpg"
+  },
+  {
+    "id": "verex-iii",
+    "name": "Verex III",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Orion"
+    ],
+    "regular_traits": [
+      "Shady"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Skill"
+      }
+    ],
+    "filename": "verex-iii.jpg"
+  },
+  {
+    "id": "xahea",
+    "name": "Xahea",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Skill"
+      },
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "xahea.jpg"
+  },
+  {
+    "id": "sehlat",
+    "name": "Sehlat",
+    "suit": "Cargo",
+    "source": "Promo",
+    "game_box": "Promo Pack 1",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Creature"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "sehlat.jpg"
+  },
+  {
+    "id": "uss-enterprise-b",
+    "name": "U.S.S. Enterprise-B",
+    "suit": "Ship",
+    "source": "Promo",
+    "game_box": "Promo Pack 1",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "uss-enterprise-b.jpg"
+  },
+  {
+    "id": "wesley-crusher",
+    "name": "Wesley Crusher",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "Promo Pack 1",
+    "species_traits": [
+      "Human",
+      "Transcendent"
+    ],
+    "regular_traits": [
+      "Pilot",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Wild",
+        "type": "WildSkill",
+        "count": 2
+      }
+    ],
+    "filename": "wesley-crusher.jpg"
+  },
+  {
+    "id": "flight-training-accident",
+    "name": "Flight Training Accident",
+    "suit": "Incident",
+    "source": "Promo",
+    "game_box": "Promo Pack 1",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Surprise"
+    ],
+    "track_icons": [],
+    "filename": "flight-training-accident.jpg"
+  },
+  {
+    "id": "whale-probe-incursion",
+    "name": "Whale Probe Incursion",
+    "suit": "Incident",
+    "source": "Promo",
+    "game_box": "Promo Pack 1",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack",
+      "Surprise"
+    ],
+    "track_icons": [],
+    "filename": "whale-probe-incursion.jpg"
+  },
+  {
+    "id": "picard-jean-luc",
+    "name": "Jean-Luc Picard",
+    "suit": "Captain",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "picard-jean-luc.jpg"
+  },
+  {
+    "id": "picard-beverly-crusher",
+    "name": "Beverly Crusher",
+    "suit": "Person",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Doctor"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "picard-beverly-crusher.jpg"
+  },
+  {
+    "id": "picard-data",
+    "name": "Data",
+    "suit": "Person",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Android",
+      "Synthetic"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Ops"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "picard-data.jpg"
+  },
+  {
+    "id": "picard-deanna-troi",
+    "name": "Deanna Troi",
+    "suit": "Person",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Betazoid",
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Telepath"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Skill"
+      }
+    ],
+    "filename": "picard-deanna-troi.jpg"
+  },
+  {
+    "id": "picard-geordi-la-forge",
+    "name": "Geordi La Forge",
+    "suit": "Person",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Engineer",
+      "Pilot"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "picard-geordi-la-forge.jpg"
+  },
+  {
+    "id": "picard-will-riker",
+    "name": "Will Riker",
+    "suit": "Person",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "picard-will-riker.jpg"
+  },
+  {
+    "id": "picard-worf",
+    "name": "Worf",
+    "suit": "Person",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Security"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "picard-worf.jpg"
+  },
+  {
+    "id": "picard-tamarians",
+    "name": "Tamarians",
+    "suit": "Ally",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "picard-tamarians.jpg"
+  },
+  {
+    "id": "picard-daystrom-institute",
+    "name": "Daystrom Institute",
+    "suit": "Location",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Android"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Skill",
+        "count": 2
+      }
+    ],
+    "filename": "picard-daystrom-institute.jpg"
+  },
+  {
+    "id": "picard-farpoint-station",
+    "name": "Farpoint Station",
+    "suit": "Location",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly",
+      "Business"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Skill"
+      }
+    ],
+    "filename": "picard-farpoint-station.jpg"
+  },
+  {
+    "id": "picard-starbase-74",
+    "name": "Starbase 74",
+    "suit": "Location",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet",
+      "Starbase"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Skill",
+        "count": 2
+      },
+      {
+        "track": "Influence",
+        "type": "Focus"
+      }
+    ],
+    "filename": "picard-starbase-74.jpg"
+  },
+  {
+    "id": "picard-phasing-cloak",
+    "name": "Phasing Cloak",
+    "suit": "Cargo",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Cloak",
+      "Weapon",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Focus"
+      }
+    ],
+    "filename": "picard-phasing-cloak.jpg"
+  },
+  {
+    "id": "picard-type-7-shuttlecraft",
+    "name": "Type 7 Shuttlecraft",
+    "suit": "Ship",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "picard-type-7-shuttlecraft.jpg"
+  },
+  {
+    "id": "picard-uss-bozeman",
+    "name": "U.S.S. Bozeman",
+    "suit": "Ship",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet",
+      "Anomaly",
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Skill"
+      }
+    ],
+    "filename": "picard-uss-bozeman.jpg"
+  },
+  {
+    "id": "picard-uss-enterprise-d",
+    "name": "U.S.S. Enterprise-D",
+    "suit": "Ship",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Wild",
+        "type": "WildSkill"
+      }
+    ],
+    "filename": "picard-uss-enterprise-d.jpg"
+  },
+  {
+    "id": "picard-analyze",
+    "name": "Analyze (Picard)",
+    "suit": "Directive",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "picard-analyze.jpg"
+  },
+  {
+    "id": "picard-diplomacy",
+    "name": "Diplomacy",
+    "suit": "Directive",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "picard-diplomacy.jpg"
+  },
+  {
+    "id": "picard-first-contact",
+    "name": "First Contact",
+    "suit": "Directive",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "picard-first-contact.jpg"
+  },
+  {
+    "id": "picard-make-it-so",
+    "name": "Make It So",
+    "suit": "Directive",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "picard-make-it-so.jpg"
+  },
+  {
+    "id": "picard-recruit",
+    "name": "Recruit (Picard)",
+    "suit": "Directive",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "picard-recruit.jpg"
+  },
+  {
+    "id": "picard-set-a-course",
+    "name": "Set a Course (Picard)",
+    "suit": "Directive",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "picard-set-a-course.jpg"
+  },
+  {
+    "id": "picard-strange-new-worlds",
+    "name": "Strange New Worlds (Picard)",
+    "suit": "Directive",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "picard-strange-new-worlds.jpg"
+  },
+  {
+    "id": "picard-utilize",
+    "name": "Utilize (Picard)",
+    "suit": "Directive",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "picard-utilize.jpg"
+  },
+  {
+    "id": "picard-red-alert",
+    "name": "Red Alert (Picard)",
+    "suit": "Incident",
+    "source": "Picard",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "picard-red-alert.jpg"
+  },
+  {
+    "id": "burnham-michael",
+    "name": "Michael Burnham",
+    "suit": "Captain",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Scientist"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "burnham-michael.jpg"
+  },
+  {
+    "id": "burnham-cleveland-booker",
+    "name": "Cleveland Booker",
+    "suit": "Person",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Business",
+      "Telepath"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-cleveland-booker.jpg"
+  },
+  {
+    "id": "burnham-adira-tal",
+    "name": "Adira Tal",
+    "suit": "Person",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human",
+      "Trill"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-adira-tal.jpg"
+  },
+  {
+    "id": "burnham-admiral-vance",
+    "name": "Admiral Vance",
+    "suit": "Person",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Skill"
+      },
+      {
+        "track": "Military",
+        "type": "Skill"
+      }
+    ],
+    "filename": "burnham-admiral-vance.jpg"
+  },
+  {
+    "id": "burnham-doctor-kovich",
+    "name": "Doctor Kovich",
+    "suit": "Person",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Skill"
+      },
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "burnham-doctor-kovich.jpg"
+  },
+  {
+    "id": "burnham-hugh-culber",
+    "name": "Hugh Culber",
+    "suit": "Person",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Doctor"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-hugh-culber.jpg"
+  },
+  {
+    "id": "burnham-jett-reno",
+    "name": "Jett Reno",
+    "suit": "Person",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Engineer"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-jett-reno.jpg"
+  },
+  {
+    "id": "burnham-joann-owosekun",
+    "name": "Joann Owosekun",
+    "suit": "Person",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Ops"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-joann-owosekun.jpg"
+  },
+  {
+    "id": "burnham-keyla-detmer",
+    "name": "Keyla Detmer",
+    "suit": "Person",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human",
+      "Synthetic"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Pilot"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Wild",
+        "type": "VariableSkill",
+        "count": 2
+      }
+    ],
+    "filename": "burnham-keyla-detmer.jpg"
+  },
+  {
+    "id": "burnham-paul-stamets",
+    "name": "Paul Stamets",
+    "suit": "Person",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Scientist"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Skill"
+      }
+    ],
+    "filename": "burnham-paul-stamets.jpg"
+  },
+  {
+    "id": "burnham-saru",
+    "name": "Saru",
+    "suit": "Person",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Kelpien"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-saru.jpg"
+  },
+  {
+    "id": "burnham-sylvia-tilly",
+    "name": "Sylvia Tilly",
+    "suit": "Person",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Scientist",
+      "Engineer"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-sylvia-tilly.jpg"
+  },
+  {
+    "id": "burnham-earth",
+    "name": "Earth",
+    "suit": "Location",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-earth.jpg"
+  },
+  {
+    "id": "burnham-nivar",
+    "name": "Ni'Var",
+    "suit": "Location",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Vulcan",
+      "Romulan"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Wild",
+        "type": "VariableSkill"
+      }
+    ],
+    "filename": "burnham-nivar.jpg"
+  },
+  {
+    "id": "burnham-theta-zeta",
+    "name": "Theta Zeta",
+    "suit": "Location",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-theta-zeta.jpg"
+  },
+  {
+    "id": "burnham-trance-worm",
+    "name": "Trance Worm",
+    "suit": "Cargo",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Creature"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-trance-worm.jpg"
+  },
+  {
+    "id": "burnham-grudge",
+    "name": "Grudge",
+    "suit": "Person",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Creature"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-grudge.jpg"
+  },
+  {
+    "id": "burnham-books-ship",
+    "name": "Book's Ship",
+    "suit": "Ship",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Cloak"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-books-ship.jpg"
+  },
+  {
+    "id": "burnham-uss-discovery-a",
+    "name": "U.S.S. Discovery-A",
+    "suit": "Ship",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet",
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Skill"
+      },
+      {
+        "track": "Influence",
+        "type": "Skill"
+      }
+    ],
+    "filename": "burnham-uss-discovery-a.jpg"
+  },
+  {
+    "id": "burnham-uss-federation",
+    "name": "U.S.S. Federation",
+    "suit": "Ship",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet",
+      "Starbase"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Wild",
+        "type": "WildSkill",
+        "count": 2
+      },
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "burnham-uss-federation.jpg"
+  },
+  {
+    "id": "burnham-inspire",
+    "name": "Inspire",
+    "suit": "Directive",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-inspire.jpg"
+  },
+  {
+    "id": "burnham-maximum-warp",
+    "name": "Maximum Warp",
+    "suit": "Directive",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-maximum-warp.jpg"
+  },
+  {
+    "id": "burnham-recover",
+    "name": "Recover",
+    "suit": "Directive",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-recover.jpg"
+  },
+  {
+    "id": "burnham-strange-new-worlds",
+    "name": "Strange New Worlds (Burnham)",
+    "suit": "Directive",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-strange-new-worlds.jpg"
+  },
+  {
+    "id": "burnham-subspace-phenomenon",
+    "name": "Subspace Phenomenon (Burnham)",
+    "suit": "Incident",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-subspace-phenomenon.jpg"
+  },
+  {
+    "id": "koloth-the-dahar-master",
+    "name": "Koloth, the Dahar Master",
+    "suit": "Captain",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "koloth-the-dahar-master.jpg"
+  },
+  {
+    "id": "koloth-arne-darvin",
+    "name": "Arne Darvin",
+    "suit": "Person",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon",
+      "Human"
+    ],
+    "regular_traits": [
+      "Spy"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "koloth-arne-darvin.jpg"
+  },
+  {
+    "id": "koloth-curzon-dax",
+    "name": "Curzon Dax",
+    "suit": "Person",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Trill"
+    ],
+    "regular_traits": [
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "koloth-curzon-dax.jpg"
+  },
+  {
+    "id": "koloth-kang",
+    "name": "Kang, the Dahar Master",
+    "suit": "Person",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "koloth-kang.jpg"
+  },
+  {
+    "id": "koloth-kor",
+    "name": "Kor, the Dahar Master",
+    "suit": "Person",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "koloth-kor.jpg"
+  },
+  {
+    "id": "koloth-korax",
+    "name": "Korax",
+    "suit": "Person",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "koloth-korax.jpg"
+  },
+  {
+    "id": "koloth-krell",
+    "name": "Krell",
+    "suit": "Person",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "koloth-krell.jpg"
+  },
+  {
+    "id": "koloth-mara",
+    "name": "Mara",
+    "suit": "Person",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Scientist"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "koloth-mara.jpg"
+  },
+  {
+    "id": "koloth-boreth",
+    "name": "Boreth",
+    "suit": "Location",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Anomaly",
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Wild",
+        "type": "WildSkill"
+      }
+    ],
+    "filename": "koloth-boreth.jpg"
+  },
+  {
+    "id": "koloth-qonos",
+    "name": "Qo'noS",
+    "suit": "Location",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Imperial"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Skill",
+        "count": 2
+      }
+    ],
+    "filename": "koloth-qonos.jpg"
+  },
+  {
+    "id": "koloth-rura-penthe",
+    "name": "Rura Penthe",
+    "suit": "Location",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Skill"
+      }
+    ],
+    "filename": "koloth-rura-penthe.jpg"
+  },
+  {
+    "id": "koloth-klingon-disruptors",
+    "name": "Klingon Disruptors",
+    "suit": "Cargo",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "koloth-klingon-disruptors.jpg"
+  },
+  {
+    "id": "koloth-prototype-cloak",
+    "name": "Prototype Cloak",
+    "suit": "Cargo",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Cloak"
+    ],
+    "other_traits": [
+      "Attack",
+      "Ongoing"
+    ],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "koloth-prototype-cloak.jpg"
+  },
+  {
+    "id": "koloth-sword-of-kahless",
+    "name": "Sword of Kahless",
+    "suit": "Cargo",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Weapon",
+      "Imperial"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "koloth-sword-of-kahless.jpg"
+  },
+  {
+    "id": "koloth-iks-devisor",
+    "name": "I.K.S. Devisor",
+    "suit": "Ship",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "koloth-iks-devisor.jpg"
+  },
+  {
+    "id": "koloth-iks-groth",
+    "name": "I.K.S. Gr'Oth",
+    "suit": "Ship",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "koloth-iks-groth.jpg"
+  },
+  {
+    "id": "koloth-iks-klothos",
+    "name": "I.K.S. Klothos",
+    "suit": "Ship",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "koloth-iks-klothos.jpg"
+  },
+  {
+    "id": "koloth-confiscate",
+    "name": "Confiscate (Koloth)",
+    "suit": "Directive",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "koloth-confiscate.jpg"
+  },
+  {
+    "id": "koloth-conquer",
+    "name": "Conquer (Koloth)",
+    "suit": "Directive",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Wild",
+        "type": "WildSkill"
+      }
+    ],
+    "filename": "koloth-conquer.jpg"
+  },
+  {
+    "id": "koloth-good-day-to-die",
+    "name": "Good Day to Die",
+    "suit": "Directive",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "koloth-good-day-to-die.jpg"
+  },
+  {
+    "id": "koloth-recruit",
+    "name": "Recruit (Koloth)",
+    "suit": "Directive",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "koloth-recruit.jpg"
+  },
+  {
+    "id": "koloth-utilize",
+    "name": "Utilize (Koloth)",
+    "suit": "Directive",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "koloth-utilize.jpg"
+  },
+  {
+    "id": "koloth-energy-drain",
+    "name": "Energy Drain (Koloth)",
+    "suit": "Incident",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "koloth-energy-drain.jpg"
+  },
+  {
+    "id": "koloth-hostile-contact",
+    "name": "Hostile Contact (Koloth)",
+    "suit": "Incident",
+    "source": "Koloth",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "koloth-hostile-contact.jpg"
+  },
+  {
+    "id": "shran-thyek",
+    "name": "Thy'lek Shran",
+    "suit": "Captain",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Andorian"
+    ],
+    "regular_traits": [
+      "Imperial"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Focus"
+      }
+    ],
+    "filename": "shran-thyek.jpg"
+  },
+  {
+    "id": "shran-talas",
+    "name": "Talas",
+    "suit": "Person",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Andorian"
+    ],
+    "regular_traits": [
+      "Ops"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Skill"
+      }
+    ],
+    "filename": "shran-talas.jpg"
+  },
+  {
+    "id": "shran-tarah",
+    "name": "Tarah",
+    "suit": "Person",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Andorian"
+    ],
+    "regular_traits": [
+      "Security"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Skill"
+      }
+    ],
+    "filename": "shran-tarah.jpg"
+  },
+  {
+    "id": "shran-jhamel",
+    "name": "Jhamel",
+    "suit": "Person",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Aenar"
+    ],
+    "regular_traits": [
+      "Telepath",
+      "Communication"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "shran-jhamel.jpg"
+  },
+  {
+    "id": "shran-ambassador-thoris",
+    "name": "Ambassador Thoris",
+    "suit": "Person",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Andorian"
+    ],
+    "regular_traits": [
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Focus"
+      }
+    ],
+    "filename": "shran-ambassador-thoris.jpg"
+  },
+  {
+    "id": "shran-andoria",
+    "name": "Andoria",
+    "suit": "Location",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Andorian"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "shran-andoria.jpg"
+  },
+  {
+    "id": "shran-weytahn",
+    "name": "Weytahn",
+    "suit": "Location",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Andorian",
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Imperial"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "shran-weytahn.jpg"
+  },
+  {
+    "id": "shran-coridan",
+    "name": "Coridan",
+    "suit": "Location",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Business"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "shran-coridan.jpg"
+  },
+  {
+    "id": "shran-united-earth",
+    "name": "United Earth",
+    "suit": "Ally",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "shran-united-earth.jpg"
+  },
+  {
+    "id": "shran-aenar",
+    "name": "Aenar",
+    "suit": "Ally",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Aenar"
+    ],
+    "regular_traits": [
+      "Telepath"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "shran-aenar.jpg"
+  },
+  {
+    "id": "shran-andorian-ale",
+    "name": "Andorian Ale",
+    "suit": "Cargo",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Andorian"
+    ],
+    "regular_traits": [
+      "Beverage"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Focus"
+      }
+    ],
+    "filename": "shran-andorian-ale.jpg"
+  },
+  {
+    "id": "shran-plasma-rifles",
+    "name": "Plasma Rifles",
+    "suit": "Cargo",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Andorian"
+    ],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [
+      "Attack",
+      "Ongoing"
+    ],
+    "track_icons": [],
+    "filename": "shran-plasma-rifles.jpg"
+  },
+  {
+    "id": "shran-tenebian-amethyst",
+    "name": "Tenebian Amethyst",
+    "suit": "Cargo",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Business"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "shran-tenebian-amethyst.jpg"
+  },
+  {
+    "id": "shran-ushaan-tor",
+    "name": "Ushaan-Tor",
+    "suit": "Cargo",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Andorian"
+    ],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "shran-ushaan-tor.jpg"
+  },
+  {
+    "id": "shran-andorian-cruiser",
+    "name": "Andorian Cruiser",
+    "suit": "Ship",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Andorian"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Skill"
+      }
+    ],
+    "filename": "shran-andorian-cruiser.jpg"
+  },
+  {
+    "id": "shran-kumari",
+    "name": "Kumari",
+    "suit": "Ship",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Andorian"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Wild",
+        "type": "WildSkill"
+      }
+    ],
+    "filename": "shran-kumari.jpg"
+  },
+  {
+    "id": "shran-commando-unit",
+    "name": "Commando Unit",
+    "suit": "Directive",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Andorian"
+    ],
+    "regular_traits": [
+      "Security"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "shran-commando-unit.jpg"
+  },
+  {
+    "id": "shran-confiscate",
+    "name": "Confiscate (Shran)",
+    "suit": "Directive",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "shran-confiscate.jpg"
+  },
+  {
+    "id": "shran-imperial-pride",
+    "name": "Imperial Pride (Shran)",
+    "suit": "Directive",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "shran-imperial-pride.jpg"
+  },
+  {
+    "id": "shran-recruit",
+    "name": "Recruit (Shran)",
+    "suit": "Directive",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "shran-recruit.jpg"
+  },
+  {
+    "id": "shran-utilize",
+    "name": "Utilize (Shran)",
+    "suit": "Directive",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "shran-utilize.jpg"
+  },
+  {
+    "id": "shran-you-owe-me-one",
+    "name": "You Owe Me One",
+    "suit": "Directive",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "shran-you-owe-me-one.jpg"
+  },
+  {
+    "id": "shran-red-alert",
+    "name": "Red Alert (Shran)",
+    "suit": "Incident",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "shran-red-alert.jpg"
+  },
+  {
+    "id": "shran-trade-embargo",
+    "name": "Trade Embargo (Shran)",
+    "suit": "Incident",
+    "source": "Shran",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "shran-trade-embargo.jpg"
+  },
+  {
+    "id": "sisko-benjamin",
+    "name": "Benjamin Sisko",
+    "suit": "Captain",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human",
+      "Transcendent"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sisko-benjamin.jpg"
+  },
+  {
+    "id": "sisko-bajor",
+    "name": "Bajor",
+    "suit": "Location",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Bajoran"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Skill"
+      }
+    ],
+    "filename": "sisko-bajor.jpg"
+  },
+  {
+    "id": "sisko-deep-space-9",
+    "name": "Deep Space 9",
+    "suit": "Location",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Cardassian"
+    ],
+    "regular_traits": [
+      "Starbase"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sisko-deep-space-9.jpg"
+  },
+  {
+    "id": "sisko-miles-obrien",
+    "name": "Miles O'Brien",
+    "suit": "Person",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Engineer"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sisko-miles-obrien.jpg"
+  },
+  {
+    "id": "sisko-odo",
+    "name": "Odo",
+    "suit": "Person",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Changeling"
+    ],
+    "regular_traits": [
+      "Security"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sisko-odo.jpg"
+  },
+  {
+    "id": "sisko-people-of-bajor",
+    "name": "People of Bajor",
+    "suit": "Ally",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Bajoran"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sisko-people-of-bajor.jpg"
+  },
+  {
+    "id": "sisko-strange-new-worlds",
+    "name": "Strange New Worlds (Sisko)",
+    "suit": "Directive",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sisko-strange-new-worlds.jpg"
+  },
+  {
+    "id": "sisko-uss-defiant",
+    "name": "U.S.S. Defiant",
+    "suit": "Ship",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Cloak",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "sisko-uss-defiant.jpg"
+  },
+  {
+    "id": "sisko-starbase-375",
+    "name": "Starbase 375",
+    "suit": "Location",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet",
+      "Starbase"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Skill"
+      },
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "sisko-starbase-375.jpg"
+  },
+  {
+    "id": "sisko-garak",
+    "name": "Garak",
+    "suit": "Person",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Cardassian"
+    ],
+    "regular_traits": [
+      "Spy",
+      "Shady"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "sisko-garak.jpg"
+  },
+  {
+    "id": "sisko-julian-bashir",
+    "name": "Julian Bashir",
+    "suit": "Person",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Doctor",
+      "Augment"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sisko-julian-bashir.jpg"
+  },
+  {
+    "id": "sisko-jadzia-dax",
+    "name": "Jadzia Dax",
+    "suit": "Person",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Trill"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Scientist"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Skill"
+      }
+    ],
+    "filename": "sisko-jadzia-dax.jpg"
+  },
+  {
+    "id": "sisko-kira-nerys",
+    "name": "Kira Nerys",
+    "suit": "Person",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Bajoran"
+    ],
+    "regular_traits": [
+      "Ops"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "sisko-kira-nerys.jpg"
+  },
+  {
+    "id": "sisko-quark",
+    "name": "Quark",
+    "suit": "Person",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Ferengi"
+    ],
+    "regular_traits": [
+      "Business",
+      "Shady"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sisko-quark.jpg"
+  },
+  {
+    "id": "sisko-worf",
+    "name": "Worf, Son of Mogh",
+    "suit": "Person",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Skill"
+      }
+    ],
+    "filename": "sisko-worf.jpg"
+  },
+  {
+    "id": "sisko-the-wormhole",
+    "name": "The Wormhole",
+    "suit": "Location",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Skill"
+      },
+      {
+        "track": "Influence",
+        "type": "Skill"
+      }
+    ],
+    "filename": "sisko-the-wormhole.jpg"
+  },
+  {
+    "id": "sisko-orb-of-prophecy",
+    "name": "Orb of Prophecy and Change",
+    "suit": "Cargo",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Transcendent"
+    ],
+    "regular_traits": [],
+    "other_traits": [
+      "Wildcard"
+    ],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "sisko-orb-of-prophecy.jpg"
+  },
+  {
+    "id": "sisko-orb-of-emissary",
+    "name": "Orb of the Emissary",
+    "suit": "Encounter",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Transcendent"
+    ],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [
+      "Wildcard"
+    ],
+    "track_icons": [],
+    "filename": "sisko-orb-of-emissary.jpg"
+  },
+  {
+    "id": "sisko-self-replicating-mines",
+    "name": "Self-Replicating Mines",
+    "suit": "Cargo",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Ongoing",
+      "Attack"
+    ],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Skill"
+      },
+      {
+        "track": "Influence",
+        "type": "Focus"
+      }
+    ],
+    "filename": "sisko-self-replicating-mines.jpg"
+  },
+  {
+    "id": "sisko-uss-rio-grande",
+    "name": "U.S.S. Rio Grande",
+    "suit": "Ship",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sisko-uss-rio-grande.jpg"
+  },
+  {
+    "id": "sisko-analyze",
+    "name": "Analyze (Sisko)",
+    "suit": "Directive",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sisko-analyze.jpg"
+  },
+  {
+    "id": "sisko-recruit",
+    "name": "Recruit (Sisko)",
+    "suit": "Directive",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sisko-recruit.jpg"
+  },
+  {
+    "id": "sisko-set-a-course",
+    "name": "Set a Course (Sisko)",
+    "suit": "Directive",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sisko-set-a-course.jpg"
+  },
+  {
+    "id": "sisko-utilize",
+    "name": "Utilize (Sisko)",
+    "suit": "Directive",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sisko-utilize.jpg"
+  },
+  {
+    "id": "sisko-political-crisis",
+    "name": "Political Crisis (Sisko)",
+    "suit": "Incident",
+    "source": "Sisko",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sisko-political-crisis.jpg"
+  },
+  {
+    "id": "sela-commander",
+    "name": "Sela",
+    "suit": "Captain",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan",
+      "Human"
+    ],
+    "regular_traits": [
+      "Shady"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sela-commander.jpg"
+  },
+  {
+    "id": "sela-donatra",
+    "name": "Donatra",
+    "suit": "Person",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Focus"
+      }
+    ],
+    "filename": "sela-donatra.jpg"
+  },
+  {
+    "id": "sela-general-movar",
+    "name": "General Movar",
+    "suit": "Person",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Ops"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sela-general-movar.jpg"
+  },
+  {
+    "id": "sela-proconsul-neral",
+    "name": "Proconsul Neral",
+    "suit": "Person",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Imperial",
+      "Communication"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Focus"
+      },
+      {
+        "track": "Influence",
+        "type": "Skill"
+      }
+    ],
+    "filename": "sela-proconsul-neral.jpg"
+  },
+  {
+    "id": "sela-sub-commander-trul",
+    "name": "Sub-Commander T'Rul",
+    "suit": "Person",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Engineer"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sela-sub-commander-trul.jpg"
+  },
+  {
+    "id": "sela-shinzon",
+    "name": "Shinzon",
+    "suit": "Person",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Reman",
+      "Human"
+    ],
+    "regular_traits": [
+      "Imperial"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "sela-shinzon.jpg"
+  },
+  {
+    "id": "sela-tpel",
+    "name": "T'Pel",
+    "suit": "Person",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan",
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Spy",
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sela-tpel.jpg"
+  },
+  {
+    "id": "sela-tomalak",
+    "name": "Tomalak",
+    "suit": "Person",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "sela-tomalak.jpg"
+  },
+  {
+    "id": "sela-remans",
+    "name": "Remans",
+    "suit": "Ally",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Reman"
+    ],
+    "regular_traits": [
+      "Security",
+      "Telepath"
+    ],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sela-remans.jpg"
+  },
+  {
+    "id": "sela-remus",
+    "name": "Remus",
+    "suit": "Location",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Reman"
+    ],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "sela-remus.jpg"
+  },
+  {
+    "id": "sela-romulus",
+    "name": "Romulus",
+    "suit": "Location",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Imperial"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Skill"
+      },
+      {
+        "track": "Influence",
+        "type": "Skill"
+      }
+    ],
+    "filename": "sela-romulus.jpg"
+  },
+  {
+    "id": "sela-disruptor-rifles",
+    "name": "Disruptor Rifles",
+    "suit": "Cargo",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [],
+    "filename": "sela-disruptor-rifles.jpg"
+  },
+  {
+    "id": "sela-forced-singularity",
+    "name": "Forced Singularity (Sela)",
+    "suit": "Cargo",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Focus"
+      }
+    ],
+    "filename": "sela-forced-singularity.jpg"
+  },
+  {
+    "id": "sela-irw-goraxus",
+    "name": "I.R.W. Goraxus",
+    "suit": "Ship",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Cloak"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Skill"
+      }
+    ],
+    "filename": "sela-irw-goraxus.jpg"
+  },
+  {
+    "id": "sela-irw-khazara",
+    "name": "I.R.W. Khazara",
+    "suit": "Ship",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Cloak"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Influence",
+        "type": "Skill"
+      }
+    ],
+    "filename": "sela-irw-khazara.jpg"
+  },
+  {
+    "id": "sela-irw-terix",
+    "name": "I.R.W. Terix",
+    "suit": "Ship",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Cloak"
+    ],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Research",
+        "type": "Skill"
+      }
+    ],
+    "filename": "sela-irw-terix.jpg"
+  },
+  {
+    "id": "sela-irw-valdore",
+    "name": "I.R.W. Valdore",
+    "suit": "Ship",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Cloak"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [
+      {
+        "track": "Wild",
+        "type": "WildSkill"
+      }
+    ],
+    "filename": "sela-irw-valdore.jpg"
+  },
+  {
+    "id": "sela-scimitar",
+    "name": "Scimitar",
+    "suit": "Ship",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [
+      "Reman"
+    ],
+    "regular_traits": [
+      "Cloak"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "track_icons": [
+      {
+        "track": "Military",
+        "type": "Skill"
+      }
+    ],
+    "filename": "sela-scimitar.jpg"
+  },
+  {
+    "id": "sela-confiscate",
+    "name": "Confiscate (Sela)",
+    "suit": "Directive",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sela-confiscate.jpg"
+  },
+  {
+    "id": "sela-conquer",
+    "name": "Conquer (Sela)",
+    "suit": "Directive",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [
+      {
+        "track": "Wild",
+        "type": "WildSkill"
+      }
+    ],
+    "filename": "sela-conquer.jpg"
+  },
+  {
+    "id": "sela-imperial-pride",
+    "name": "Imperial Pride (Sela)",
+    "suit": "Directive",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sela-imperial-pride.jpg"
+  },
+  {
+    "id": "sela-infiltrate",
+    "name": "Infiltrate",
+    "suit": "Directive",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sela-infiltrate.jpg"
+  },
+  {
+    "id": "sela-utilize",
+    "name": "Utilize (Sela)",
+    "suit": "Directive",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sela-utilize.jpg"
+  },
+  {
+    "id": "sela-energy-drain",
+    "name": "Energy Drain (Sela)",
+    "suit": "Incident",
+    "source": "Sela",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "sela-energy-drain.jpg"
+  },
+  {
+    "id": "burnham-inert-dilithium",
+    "name": "Inert Dilithium",
+    "suit": "Status",
+    "source": "Burnham",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "burnham-inert-dilithium.jpg"
+  },
+  {
+    "id": "reinforce",
+    "name": "Reinforce",
+    "suit": "Directive",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "track_icons": [],
+    "filename": "reinforce.jpg"
+  },
+  {
+    "id": "conspiracy",
+    "name": "Conspiracy",
+    "suit": "Directive",
+    "source": "Common",
+    "game_box": "Captain's Chair",
+    "species_traits": [],
+    "regular_traits": [
+      "Shady",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Surprise"
+    ],
+    "track_icons": [],
+    "filename": "conspiracy.jpg"
+  }
+]
