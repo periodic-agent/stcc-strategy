@@ -10,8 +10,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "admiral-jarok.jpg"
+    "filename": "admiral-jarok.jpg",
+    "icons": []
   },
   {
     "id": "admiral-necheyev",
@@ -26,13 +26,13 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "admiral-necheyev.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "admiral-necheyev.jpg"
+    ]
   },
   {
     "id": "admiral-pressman",
@@ -48,13 +48,13 @@
       "Shady"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "admiral-pressman.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "admiral-pressman.jpg"
+    ]
   },
   {
     "id": "ambassador-kamarag",
@@ -70,8 +70,8 @@
       "Imperial"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "ambassador-kamarag.jpg"
+    "filename": "ambassador-kamarag.jpg",
+    "icons": []
   },
   {
     "id": "b-4",
@@ -87,8 +87,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "b-4.jpg"
+    "filename": "b-4.jpg",
+    "icons": []
   },
   {
     "id": "bruce-maddox",
@@ -105,17 +105,17 @@
       "Engineer"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "bruce-maddox.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Research"
       },
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "bruce-maddox.jpg"
+    ]
   },
   {
     "id": "captain-dorg",
@@ -132,13 +132,13 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [
+    "filename": "captain-dorg.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "captain-dorg.jpg"
+    ]
   },
   {
     "id": "harry-mudd",
@@ -156,8 +156,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "harry-mudd.jpg"
+    "filename": "harry-mudd.jpg",
+    "icons": []
   },
   {
     "id": "joret-dal",
@@ -173,8 +173,8 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "joret-dal.jpg"
+    "filename": "joret-dal.jpg",
+    "icons": []
   },
   {
     "id": "laas",
@@ -187,8 +187,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "laas.jpg"
+    "filename": "laas.jpg",
+    "icons": []
   },
   {
     "id": "laris",
@@ -201,8 +201,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "laris.jpg"
+    "filename": "laris.jpg",
+    "icons": []
   },
   {
     "id": "lenara-kahn",
@@ -217,13 +217,13 @@
       "Scientist"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "lenara-kahn.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "lenara-kahn.jpg"
+    ]
   },
   {
     "id": "lursa",
@@ -238,13 +238,13 @@
       "Shady"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "lursa.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "lursa.jpg"
+    ]
   },
   {
     "id": "lwaxana-troi",
@@ -260,8 +260,8 @@
       "Telepath"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "lwaxana-troi.jpg"
+    "filename": "lwaxana-troi.jpg",
+    "icons": []
   },
   {
     "id": "mirok",
@@ -278,13 +278,13 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [
+    "filename": "mirok.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "mirok.jpg"
+    ]
   },
   {
     "id": "moriarty",
@@ -302,8 +302,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "moriarty.jpg"
+    "filename": "moriarty.jpg",
+    "icons": []
   },
   {
     "id": "peanut-hamper",
@@ -316,8 +316,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "peanut-hamper.jpg"
+    "filename": "peanut-hamper.jpg",
+    "icons": []
   },
   {
     "id": "phlox",
@@ -330,8 +330,8 @@
       "Doctor"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "phlox.jpg"
+    "filename": "phlox.jpg",
+    "icons": []
   },
   {
     "id": "riva",
@@ -346,17 +346,17 @@
       "Communication"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "riva.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       },
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "riva.jpg"
+    ]
   },
   {
     "id": "rom",
@@ -371,8 +371,8 @@
       "Engineer"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "rom.jpg"
+    "filename": "rom.jpg",
+    "icons": []
   },
   {
     "id": "sakonna",
@@ -387,8 +387,8 @@
       "Maquis"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sakonna.jpg"
+    "filename": "sakonna.jpg",
+    "icons": []
   },
   {
     "id": "su-kal",
@@ -401,8 +401,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "su-kal.jpg"
+    "filename": "su-kal.jpg",
+    "icons": []
   },
   {
     "id": "talok",
@@ -420,13 +420,13 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [
+    "filename": "talok.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "talok.jpg"
+    ]
   },
   {
     "id": "tevrin-krit",
@@ -441,8 +441,8 @@
       "Business"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "tevrin-krit.jpg"
+    "filename": "tevrin-krit.jpg",
+    "icons": []
   },
   {
     "id": "zefram-cochrane",
@@ -458,8 +458,8 @@
       "Pilot"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "zefram-cochrane.jpg"
+    "filename": "zefram-cochrane.jpg",
+    "icons": []
   },
   {
     "id": "biobed",
@@ -472,17 +472,17 @@
       "Doctor"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "biobed.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Research"
       },
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "biobed.jpg"
+    ]
   },
   {
     "id": "borg-spatial-trajector",
@@ -497,8 +497,8 @@
       "Scientist"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "borg-spatial-trajector.jpg"
+    "filename": "borg-spatial-trajector.jpg",
+    "icons": []
   },
   {
     "id": "cloaking-device",
@@ -513,13 +513,13 @@
     "other_traits": [
       "Ongoing"
     ],
-    "track_icons": [
+    "filename": "cloaking-device.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "cloaking-device.jpg"
+    ]
   },
   {
     "id": "ferengi-wine",
@@ -534,8 +534,8 @@
       "Beverage"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "ferengi-wine.jpg"
+    "filename": "ferengi-wine.jpg",
+    "icons": []
   },
   {
     "id": "forced-singularity",
@@ -552,13 +552,13 @@
     "other_traits": [
       "Ongoing"
     ],
-    "track_icons": [
+    "filename": "forced-singularity.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "forced-singularity.jpg"
+    ]
   },
   {
     "id": "holosuite",
@@ -572,8 +572,8 @@
       "Business"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "holosuite.jpg"
+    "filename": "holosuite.jpg",
+    "icons": []
   },
   {
     "id": "horta",
@@ -590,8 +590,8 @@
     "other_traits": [
       "Ongoing"
     ],
-    "track_icons": [],
-    "filename": "horta.jpg"
+    "filename": "horta.jpg",
+    "icons": []
   },
   {
     "id": "lirpa",
@@ -608,8 +608,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "lirpa.jpg"
+    "filename": "lirpa.jpg",
+    "icons": []
   },
   {
     "id": "mekleth",
@@ -626,8 +626,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "mekleth.jpg"
+    "filename": "mekleth.jpg",
+    "icons": []
   },
   {
     "id": "orb-of-time",
@@ -642,13 +642,13 @@
       "Time Travel"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "orb-of-time.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "orb-of-time.jpg"
+    ]
   },
   {
     "id": "phasers",
@@ -665,8 +665,8 @@
     "other_traits": [
       "Ongoing"
     ],
-    "track_icons": [],
-    "filename": "phasers.jpg"
+    "filename": "phasers.jpg",
+    "icons": []
   },
   {
     "id": "plasma-manifold",
@@ -679,13 +679,13 @@
       "Engineer"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "plasma-manifold.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "plasma-manifold.jpg"
+    ]
   },
   {
     "id": "tachyon-detection-grid",
@@ -700,13 +700,13 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [
+    "filename": "tachyon-detection-grid.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "tachyon-detection-grid.jpg"
+    ]
   },
   {
     "id": "tribbles",
@@ -721,8 +721,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "tribbles.jpg"
+    "filename": "tribbles.jpg",
+    "icons": []
   },
   {
     "id": "type-iii-disruptor-pistols",
@@ -737,8 +737,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "type-iii-disruptor-pistols.jpg"
+    "filename": "type-iii-disruptor-pistols.jpg",
+    "icons": []
   },
   {
     "id": "unstable-wormhole",
@@ -751,8 +751,8 @@
       "Anomaly"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "unstable-wormhole.jpg"
+    "filename": "unstable-wormhole.jpg",
+    "icons": []
   },
   {
     "id": "bird-of-prey",
@@ -770,13 +770,13 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [
+    "filename": "bird-of-prey.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "bird-of-prey.jpg"
+    ]
   },
   {
     "id": "borg-probe",
@@ -789,8 +789,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "borg-probe.jpg"
+    "filename": "borg-probe.jpg",
+    "icons": []
   },
   {
     "id": "dkyr-cruiser",
@@ -805,8 +805,8 @@
       "Scientist"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "dkyr-cruiser.jpg"
+    "filename": "dkyr-cruiser.jpg",
+    "icons": []
   },
   {
     "id": "holographic-drone-ship",
@@ -823,13 +823,13 @@
       "Weapon"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "holographic-drone-ship.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "holographic-drone-ship.jpg"
+    ]
   },
   {
     "id": "ktinga-battlecruiser",
@@ -844,17 +844,17 @@
       "Imperial"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "ktinga-battlecruiser.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Military"
       },
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "ktinga-battlecruiser.jpg"
+    ]
   },
   {
     "id": "kazon-raider",
@@ -869,13 +869,13 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [
+    "filename": "kazon-raider.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "kazon-raider.jpg"
+    ]
   },
   {
     "id": "pakled-freighter",
@@ -890,8 +890,8 @@
       "Business"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "pakled-freighter.jpg"
+    "filename": "pakled-freighter.jpg",
+    "icons": []
   },
   {
     "id": "sona-battlecruiser",
@@ -907,8 +907,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "sona-battlecruiser.jpg"
+    "filename": "sona-battlecruiser.jpg",
+    "icons": []
   },
   {
     "id": "uss-enterprise-c",
@@ -923,13 +923,13 @@
       "Ambassador"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "uss-enterprise-c.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "uss-enterprise-c.jpg"
+    ]
   },
   {
     "id": "uss-pasteur",
@@ -944,13 +944,13 @@
       "Communication"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "uss-pasteur.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "uss-pasteur.jpg"
+    ]
   },
   {
     "id": "uss-reliant",
@@ -963,8 +963,8 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "uss-reliant.jpg"
+    "filename": "uss-reliant.jpg",
+    "icons": []
   },
   {
     "id": "voth-research-vessel",
@@ -979,13 +979,13 @@
       "Anomaly"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "voth-research-vessel.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Research"
       }
-    ],
-    "filename": "voth-research-vessel.jpg"
+    ]
   },
   {
     "id": "xindi-reptilian-battleship",
@@ -998,13 +998,13 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "xindi-reptilian-battleship.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "xindi-reptilian-battleship.jpg"
+    ]
   },
   {
     "id": "arinsen",
@@ -1017,8 +1017,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "arinsen.jpg"
+    "filename": "arinsen.jpg",
+    "icons": []
   },
   {
     "id": "bolians",
@@ -1029,8 +1029,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "bolians.jpg"
+    "filename": "bolians.jpg",
+    "icons": []
   },
   {
     "id": "bynars",
@@ -1045,8 +1045,8 @@
       "Engineer"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "bynars.jpg"
+    "filename": "bynars.jpg",
+    "icons": []
   },
   {
     "id": "denobulans",
@@ -1057,8 +1057,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "denobulans.jpg"
+    "filename": "denobulans.jpg",
+    "icons": []
   },
   {
     "id": "edosians",
@@ -1071,8 +1071,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "edosians.jpg"
+    "filename": "edosians.jpg",
+    "icons": []
   },
   {
     "id": "emerald-chain",
@@ -1090,8 +1090,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "emerald-chain.jpg"
+    "filename": "emerald-chain.jpg",
+    "icons": []
   },
   {
     "id": "halkan-council",
@@ -1102,8 +1102,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "halkan-council.jpg"
+    "filename": "halkan-council.jpg",
+    "icons": []
   },
   {
     "id": "karemma",
@@ -1117,8 +1117,8 @@
       "Dominion"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "karemma.jpg"
+    "filename": "karemma.jpg",
+    "icons": []
   },
   {
     "id": "kelpiens",
@@ -1131,13 +1131,13 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "kelpiens.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "kelpiens.jpg"
+    ]
   },
   {
     "id": "letheans",
@@ -1153,13 +1153,13 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [
+    "filename": "letheans.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "letheans.jpg"
+    ]
   },
   {
     "id": "organians",
@@ -1174,8 +1174,8 @@
       "Anomaly"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "organians.jpg"
+    "filename": "organians.jpg",
+    "icons": []
   },
   {
     "id": "suliban",
@@ -1190,13 +1190,13 @@
       "Time Travel"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "suliban.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "suliban.jpg"
+    ]
   },
   {
     "id": "tholians",
@@ -1209,8 +1209,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "tholians.jpg"
+    "filename": "tholians.jpg",
+    "icons": []
   },
   {
     "id": "ancient-gene-fragments",
@@ -1224,13 +1224,13 @@
       "Augment"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "ancient-gene-fragments.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "ancient-gene-fragments.jpg"
+    ]
   },
   {
     "id": "boltzmann-brain",
@@ -1244,8 +1244,8 @@
       "Doctor"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "boltzmann-brain.jpg"
+    "filename": "boltzmann-brain.jpg",
+    "icons": []
   },
   {
     "id": "guardian-of-forever",
@@ -1263,8 +1263,8 @@
     "other_traits": [
       "Ongoing"
     ],
-    "track_icons": [],
-    "filename": "guardian-of-forever.jpg"
+    "filename": "guardian-of-forever.jpg",
+    "icons": []
   },
   {
     "id": "iconian-gateway",
@@ -1279,13 +1279,13 @@
       "Imperial"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "iconian-gateway.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "iconian-gateway.jpg"
+    ]
   },
   {
     "id": "koala",
@@ -1298,8 +1298,8 @@
     "other_traits": [
       "Wildcard"
     ],
-    "track_icons": [],
-    "filename": "koala.jpg"
+    "filename": "koala.jpg",
+    "icons": []
   },
   {
     "id": "omega-particle",
@@ -1312,13 +1312,13 @@
       "Scientist"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "omega-particle.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "omega-particle.jpg"
+    ]
   },
   {
     "id": "sha-ka-ree",
@@ -1335,8 +1335,8 @@
       "Attack",
       "Ongoing"
     ],
-    "track_icons": [],
-    "filename": "sha-ka-ree.jpg"
+    "filename": "sha-ka-ree.jpg",
+    "icons": []
   },
   {
     "id": "vger",
@@ -1349,8 +1349,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "vger.jpg"
+    "filename": "vger.jpg",
+    "icons": []
   },
   {
     "id": "energy-drain",
@@ -1361,8 +1361,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "energy-drain.jpg"
+    "filename": "energy-drain.jpg",
+    "icons": []
   },
   {
     "id": "hostile-contact",
@@ -1373,8 +1373,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "hostile-contact.jpg"
+    "filename": "hostile-contact.jpg",
+    "icons": []
   },
   {
     "id": "political-crisis",
@@ -1385,8 +1385,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "political-crisis.jpg"
+    "filename": "political-crisis.jpg",
+    "icons": []
   },
   {
     "id": "red-alert",
@@ -1397,8 +1397,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "red-alert.jpg"
+    "filename": "red-alert.jpg",
+    "icons": []
   },
   {
     "id": "subspace-phenomenon",
@@ -1409,8 +1409,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "subspace-phenomenon.jpg"
+    "filename": "subspace-phenomenon.jpg",
+    "icons": []
   },
   {
     "id": "trade-embargo",
@@ -1421,8 +1421,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "trade-embargo.jpg"
+    "filename": "trade-embargo.jpg",
+    "icons": []
   },
   {
     "id": "armagosa-observatory",
@@ -1436,13 +1436,13 @@
       "Starbase"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "armagosa-observatory.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Research"
       }
-    ],
-    "filename": "armagosa-observatory.jpg"
+    ]
   },
   {
     "id": "ancient-relay-station",
@@ -1457,13 +1457,13 @@
       "Communication"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "ancient-relay-station.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Research"
       }
-    ],
-    "filename": "ancient-relay-station.jpg"
+    ]
   },
   {
     "id": "archer-iv",
@@ -1474,13 +1474,13 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "archer-iv.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "archer-iv.jpg"
+    ]
   },
   {
     "id": "baku",
@@ -1493,8 +1493,8 @@
       "Anomaly"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "baku.jpg"
+    "filename": "baku.jpg",
+    "icons": []
   },
   {
     "id": "betazed",
@@ -1507,14 +1507,14 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "betazed.jpg",
+    "icons": [
       {
-        "track": "Influence",
         "type": "Skill",
-        "count": 3
+        "count": 3,
+        "specialty": "Influence"
       }
-    ],
-    "filename": "betazed.jpg"
+    ]
   },
   {
     "id": "corvan-ii",
@@ -1530,13 +1530,13 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "corvan-ii.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Military"
       }
-    ],
-    "filename": "corvan-ii.jpg"
+    ]
   },
   {
     "id": "deep-space-k7",
@@ -1549,13 +1549,13 @@
       "Starbase"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "deep-space-k7.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "deep-space-k7.jpg"
+    ]
   },
   {
     "id": "delta-vega",
@@ -1566,13 +1566,13 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "delta-vega.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Military"
       }
-    ],
-    "filename": "delta-vega.jpg"
+    ]
   },
   {
     "id": "derna",
@@ -1588,8 +1588,8 @@
       "Doctor"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "derna.jpg"
+    "filename": "derna.jpg",
+    "icons": []
   },
   {
     "id": "dozaria",
@@ -1602,14 +1602,14 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "dozaria.jpg",
+    "icons": [
       {
-        "track": "Military",
         "type": "Skill",
-        "count": 2
+        "count": 2,
+        "specialty": "Military"
       }
-    ],
-    "filename": "dozaria.jpg"
+    ]
   },
   {
     "id": "freecloud",
@@ -1623,8 +1623,8 @@
       "Shady"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "freecloud.jpg"
+    "filename": "freecloud.jpg",
+    "icons": []
   },
   {
     "id": "indri-viii",
@@ -1637,17 +1637,17 @@
       "Anomaly"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "indri-viii.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       },
       {
-        "track": "Research",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Research"
       }
-    ],
-    "filename": "indri-viii.jpg"
+    ]
   },
   {
     "id": "kelvas-docks",
@@ -1664,13 +1664,13 @@
       "Starbase"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "kelvas-docks.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "kelvas-docks.jpg"
+    ]
   },
   {
     "id": "memory-alpha",
@@ -1684,8 +1684,8 @@
       "Communication"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "memory-alpha.jpg"
+    "filename": "memory-alpha.jpg",
+    "icons": []
   },
   {
     "id": "regula-i",
@@ -1700,14 +1700,14 @@
       "Starbase"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "regula-i.jpg",
+    "icons": [
       {
-        "track": "Research",
         "type": "Skill",
-        "count": 2
+        "count": 2,
+        "specialty": "Research"
       }
-    ],
-    "filename": "regula-i.jpg"
+    ]
   },
   {
     "id": "risa",
@@ -1720,13 +1720,13 @@
       "Business"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "risa.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "risa.jpg"
+    ]
   },
   {
     "id": "solum",
@@ -1739,8 +1739,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "solum.jpg"
+    "filename": "solum.jpg",
+    "icons": []
   },
   {
     "id": "tulgana-iv",
@@ -1757,8 +1757,8 @@
       "Ambassador"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "tulgana-iv.jpg"
+    "filename": "tulgana-iv.jpg",
+    "icons": []
   },
   {
     "id": "verex-iii",
@@ -1773,13 +1773,13 @@
       "Shady"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "verex-iii.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "verex-iii.jpg"
+    ]
   },
   {
     "id": "xahea",
@@ -1790,17 +1790,17 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "xahea.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Military"
       },
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "xahea.jpg"
+    ]
   },
   {
     "id": "sehlat",
@@ -1817,8 +1817,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "sehlat.jpg"
+    "filename": "sehlat.jpg",
+    "icons": []
   },
   {
     "id": "uss-enterprise-b",
@@ -1831,8 +1831,8 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "uss-enterprise-b.jpg"
+    "filename": "uss-enterprise-b.jpg",
+    "icons": []
   },
   {
     "id": "wesley-crusher",
@@ -1849,14 +1849,14 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "wesley-crusher.jpg",
+    "icons": [
       {
-        "track": "Wild",
-        "type": "WildSkill",
-        "count": 2
+        "type": "Skill",
+        "count": 2,
+        "specialty": "Any"
       }
-    ],
-    "filename": "wesley-crusher.jpg"
+    ]
   },
   {
     "id": "flight-training-accident",
@@ -1869,8 +1869,8 @@
     "other_traits": [
       "Surprise"
     ],
-    "track_icons": [],
-    "filename": "flight-training-accident.jpg"
+    "filename": "flight-training-accident.jpg",
+    "icons": []
   },
   {
     "id": "whale-probe-incursion",
@@ -1886,8 +1886,8 @@
       "Attack",
       "Surprise"
     ],
-    "track_icons": [],
-    "filename": "whale-probe-incursion.jpg"
+    "filename": "whale-probe-incursion.jpg",
+    "icons": []
   },
   {
     "id": "picard-jean-luc",
@@ -1902,8 +1902,8 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "picard-jean-luc.jpg"
+    "filename": "picard-jean-luc.jpg",
+    "icons": []
   },
   {
     "id": "picard-beverly-crusher",
@@ -1919,8 +1919,8 @@
       "Doctor"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "picard-beverly-crusher.jpg"
+    "filename": "picard-beverly-crusher.jpg",
+    "icons": []
   },
   {
     "id": "picard-data",
@@ -1937,8 +1937,8 @@
       "Ops"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "picard-data.jpg"
+    "filename": "picard-data.jpg",
+    "icons": []
   },
   {
     "id": "picard-deanna-troi",
@@ -1955,13 +1955,13 @@
       "Telepath"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "picard-deanna-troi.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "picard-deanna-troi.jpg"
+    ]
   },
   {
     "id": "picard-geordi-la-forge",
@@ -1978,13 +1978,13 @@
       "Pilot"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "picard-geordi-la-forge.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "picard-geordi-la-forge.jpg"
+    ]
   },
   {
     "id": "picard-will-riker",
@@ -1999,8 +1999,8 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "picard-will-riker.jpg"
+    "filename": "picard-will-riker.jpg",
+    "icons": []
   },
   {
     "id": "picard-worf",
@@ -2018,8 +2018,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "picard-worf.jpg"
+    "filename": "picard-worf.jpg",
+    "icons": []
   },
   {
     "id": "picard-tamarians",
@@ -2032,8 +2032,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "picard-tamarians.jpg"
+    "filename": "picard-tamarians.jpg",
+    "icons": []
   },
   {
     "id": "picard-daystrom-institute",
@@ -2048,14 +2048,14 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "picard-daystrom-institute.jpg",
+    "icons": [
       {
-        "track": "Research",
         "type": "Skill",
-        "count": 2
+        "count": 2,
+        "specialty": "Research"
       }
-    ],
-    "filename": "picard-daystrom-institute.jpg"
+    ]
   },
   {
     "id": "picard-farpoint-station",
@@ -2069,13 +2069,13 @@
       "Business"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "picard-farpoint-station.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Research"
       }
-    ],
-    "filename": "picard-farpoint-station.jpg"
+    ]
   },
   {
     "id": "picard-starbase-74",
@@ -2089,18 +2089,18 @@
       "Starbase"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "picard-starbase-74.jpg",
+    "icons": [
       {
-        "track": "Influence",
         "type": "Skill",
-        "count": 2
+        "count": 2,
+        "specialty": "Influence"
       },
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "picard-starbase-74.jpg"
+    ]
   },
   {
     "id": "picard-phasing-cloak",
@@ -2117,13 +2117,13 @@
     "other_traits": [
       "Ongoing"
     ],
-    "track_icons": [
+    "filename": "picard-phasing-cloak.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "picard-phasing-cloak.jpg"
+    ]
   },
   {
     "id": "picard-type-7-shuttlecraft",
@@ -2136,8 +2136,8 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "picard-type-7-shuttlecraft.jpg"
+    "filename": "picard-type-7-shuttlecraft.jpg",
+    "icons": []
   },
   {
     "id": "picard-uss-bozeman",
@@ -2152,13 +2152,13 @@
       "Time Travel"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "picard-uss-bozeman.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Military"
       }
-    ],
-    "filename": "picard-uss-bozeman.jpg"
+    ]
   },
   {
     "id": "picard-uss-enterprise-d",
@@ -2171,13 +2171,13 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "picard-uss-enterprise-d.jpg",
+    "icons": [
       {
-        "track": "Wild",
-        "type": "WildSkill"
+        "type": "Skill",
+        "specialty": "Any"
       }
-    ],
-    "filename": "picard-uss-enterprise-d.jpg"
+    ]
   },
   {
     "id": "picard-analyze",
@@ -2188,8 +2188,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "picard-analyze.jpg"
+    "filename": "picard-analyze.jpg",
+    "icons": []
   },
   {
     "id": "picard-diplomacy",
@@ -2200,8 +2200,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "picard-diplomacy.jpg"
+    "filename": "picard-diplomacy.jpg",
+    "icons": []
   },
   {
     "id": "picard-first-contact",
@@ -2212,8 +2212,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "picard-first-contact.jpg"
+    "filename": "picard-first-contact.jpg",
+    "icons": []
   },
   {
     "id": "picard-make-it-so",
@@ -2224,13 +2224,13 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "picard-make-it-so.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "picard-make-it-so.jpg"
+    ]
   },
   {
     "id": "picard-recruit",
@@ -2241,8 +2241,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "picard-recruit.jpg"
+    "filename": "picard-recruit.jpg",
+    "icons": []
   },
   {
     "id": "picard-set-a-course",
@@ -2253,8 +2253,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "picard-set-a-course.jpg"
+    "filename": "picard-set-a-course.jpg",
+    "icons": []
   },
   {
     "id": "picard-strange-new-worlds",
@@ -2265,8 +2265,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "picard-strange-new-worlds.jpg"
+    "filename": "picard-strange-new-worlds.jpg",
+    "icons": []
   },
   {
     "id": "picard-utilize",
@@ -2277,8 +2277,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "picard-utilize.jpg"
+    "filename": "picard-utilize.jpg",
+    "icons": []
   },
   {
     "id": "picard-red-alert",
@@ -2289,8 +2289,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "picard-red-alert.jpg"
+    "filename": "picard-red-alert.jpg",
+    "icons": []
   },
   {
     "id": "burnham-michael",
@@ -2306,13 +2306,13 @@
       "Scientist"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "burnham-michael.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "burnham-michael.jpg"
+    ]
   },
   {
     "id": "burnham-cleveland-booker",
@@ -2326,8 +2326,8 @@
       "Telepath"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-cleveland-booker.jpg"
+    "filename": "burnham-cleveland-booker.jpg",
+    "icons": []
   },
   {
     "id": "burnham-adira-tal",
@@ -2343,8 +2343,8 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-adira-tal.jpg"
+    "filename": "burnham-adira-tal.jpg",
+    "icons": []
   },
   {
     "id": "burnham-admiral-vance",
@@ -2359,17 +2359,17 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "burnham-admiral-vance.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       },
       {
-        "track": "Military",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Military"
       }
-    ],
-    "filename": "burnham-admiral-vance.jpg"
+    ]
   },
   {
     "id": "burnham-doctor-kovich",
@@ -2382,17 +2382,17 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "burnham-doctor-kovich.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Research"
       },
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "burnham-doctor-kovich.jpg"
+    ]
   },
   {
     "id": "burnham-hugh-culber",
@@ -2408,8 +2408,8 @@
       "Doctor"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-hugh-culber.jpg"
+    "filename": "burnham-hugh-culber.jpg",
+    "icons": []
   },
   {
     "id": "burnham-jett-reno",
@@ -2425,8 +2425,8 @@
       "Engineer"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-jett-reno.jpg"
+    "filename": "burnham-jett-reno.jpg",
+    "icons": []
   },
   {
     "id": "burnham-joann-owosekun",
@@ -2442,8 +2442,8 @@
       "Ops"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-joann-owosekun.jpg"
+    "filename": "burnham-joann-owosekun.jpg",
+    "icons": []
   },
   {
     "id": "burnham-keyla-detmer",
@@ -2460,14 +2460,14 @@
       "Pilot"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "burnham-keyla-detmer.jpg",
+    "icons": [
       {
-        "track": "Wild",
-        "type": "VariableSkill",
-        "count": 2
+        "type": "Skill",
+        "count": 2,
+        "specialty": "Variable"
       }
-    ],
-    "filename": "burnham-keyla-detmer.jpg"
+    ]
   },
   {
     "id": "burnham-paul-stamets",
@@ -2483,13 +2483,13 @@
       "Scientist"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "burnham-paul-stamets.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Research"
       }
-    ],
-    "filename": "burnham-paul-stamets.jpg"
+    ]
   },
   {
     "id": "burnham-saru",
@@ -2504,8 +2504,8 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-saru.jpg"
+    "filename": "burnham-saru.jpg",
+    "icons": []
   },
   {
     "id": "burnham-sylvia-tilly",
@@ -2522,8 +2522,8 @@
       "Engineer"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-sylvia-tilly.jpg"
+    "filename": "burnham-sylvia-tilly.jpg",
+    "icons": []
   },
   {
     "id": "burnham-earth",
@@ -2536,8 +2536,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-earth.jpg"
+    "filename": "burnham-earth.jpg",
+    "icons": []
   },
   {
     "id": "burnham-nivar",
@@ -2551,13 +2551,13 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "burnham-nivar.jpg",
+    "icons": [
       {
-        "track": "Wild",
-        "type": "VariableSkill"
+        "type": "Skill",
+        "specialty": "Variable"
       }
-    ],
-    "filename": "burnham-nivar.jpg"
+    ]
   },
   {
     "id": "burnham-theta-zeta",
@@ -2570,8 +2570,8 @@
       "Anomaly"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-theta-zeta.jpg"
+    "filename": "burnham-theta-zeta.jpg",
+    "icons": []
   },
   {
     "id": "burnham-trance-worm",
@@ -2586,8 +2586,8 @@
       "Creature"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-trance-worm.jpg"
+    "filename": "burnham-trance-worm.jpg",
+    "icons": []
   },
   {
     "id": "burnham-grudge",
@@ -2600,8 +2600,8 @@
       "Creature"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-grudge.jpg"
+    "filename": "burnham-grudge.jpg",
+    "icons": []
   },
   {
     "id": "burnham-books-ship",
@@ -2614,8 +2614,8 @@
       "Cloak"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-books-ship.jpg"
+    "filename": "burnham-books-ship.jpg",
+    "icons": []
   },
   {
     "id": "burnham-uss-discovery-a",
@@ -2629,17 +2629,17 @@
       "Anomaly"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "burnham-uss-discovery-a.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Research"
       },
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "burnham-uss-discovery-a.jpg"
+    ]
   },
   {
     "id": "burnham-uss-federation",
@@ -2653,18 +2653,18 @@
       "Starbase"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "burnham-uss-federation.jpg",
+    "icons": [
       {
-        "track": "Wild",
-        "type": "WildSkill",
-        "count": 2
+        "type": "Skill",
+        "count": 2,
+        "specialty": "Any"
       },
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "burnham-uss-federation.jpg"
+    ]
   },
   {
     "id": "burnham-inspire",
@@ -2675,8 +2675,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-inspire.jpg"
+    "filename": "burnham-inspire.jpg",
+    "icons": []
   },
   {
     "id": "burnham-maximum-warp",
@@ -2687,8 +2687,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-maximum-warp.jpg"
+    "filename": "burnham-maximum-warp.jpg",
+    "icons": []
   },
   {
     "id": "burnham-recover",
@@ -2699,8 +2699,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-recover.jpg"
+    "filename": "burnham-recover.jpg",
+    "icons": []
   },
   {
     "id": "burnham-strange-new-worlds",
@@ -2711,8 +2711,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-strange-new-worlds.jpg"
+    "filename": "burnham-strange-new-worlds.jpg",
+    "icons": []
   },
   {
     "id": "burnham-subspace-phenomenon",
@@ -2723,8 +2723,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-subspace-phenomenon.jpg"
+    "filename": "burnham-subspace-phenomenon.jpg",
+    "icons": []
   },
   {
     "id": "koloth-the-dahar-master",
@@ -2739,13 +2739,13 @@
       "Weapon"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "koloth-the-dahar-master.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "koloth-the-dahar-master.jpg"
+    ]
   },
   {
     "id": "koloth-arne-darvin",
@@ -2763,8 +2763,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "koloth-arne-darvin.jpg"
+    "filename": "koloth-arne-darvin.jpg",
+    "icons": []
   },
   {
     "id": "koloth-curzon-dax",
@@ -2779,8 +2779,8 @@
       "Ambassador"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "koloth-curzon-dax.jpg"
+    "filename": "koloth-curzon-dax.jpg",
+    "icons": []
   },
   {
     "id": "koloth-kang",
@@ -2795,8 +2795,8 @@
       "Weapon"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "koloth-kang.jpg"
+    "filename": "koloth-kang.jpg",
+    "icons": []
   },
   {
     "id": "koloth-kor",
@@ -2811,13 +2811,13 @@
       "Weapon"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "koloth-kor.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "koloth-kor.jpg"
+    ]
   },
   {
     "id": "koloth-korax",
@@ -2832,8 +2832,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "koloth-korax.jpg"
+    "filename": "koloth-korax.jpg",
+    "icons": []
   },
   {
     "id": "koloth-krell",
@@ -2846,8 +2846,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "koloth-krell.jpg"
+    "filename": "koloth-krell.jpg",
+    "icons": []
   },
   {
     "id": "koloth-mara",
@@ -2862,8 +2862,8 @@
       "Scientist"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "koloth-mara.jpg"
+    "filename": "koloth-mara.jpg",
+    "icons": []
   },
   {
     "id": "koloth-boreth",
@@ -2879,13 +2879,13 @@
       "Time Travel"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "koloth-boreth.jpg",
+    "icons": [
       {
-        "track": "Wild",
-        "type": "WildSkill"
+        "type": "Skill",
+        "specialty": "Any"
       }
-    ],
-    "filename": "koloth-boreth.jpg"
+    ]
   },
   {
     "id": "koloth-qonos",
@@ -2900,14 +2900,14 @@
       "Imperial"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "koloth-qonos.jpg",
+    "icons": [
       {
-        "track": "Military",
         "type": "Skill",
-        "count": 2
+        "count": 2,
+        "specialty": "Military"
       }
-    ],
-    "filename": "koloth-qonos.jpg"
+    ]
   },
   {
     "id": "koloth-rura-penthe",
@@ -2918,13 +2918,13 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "koloth-rura-penthe.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "koloth-rura-penthe.jpg"
+    ]
   },
   {
     "id": "koloth-klingon-disruptors",
@@ -2939,8 +2939,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "koloth-klingon-disruptors.jpg"
+    "filename": "koloth-klingon-disruptors.jpg",
+    "icons": []
   },
   {
     "id": "koloth-prototype-cloak",
@@ -2956,13 +2956,13 @@
       "Attack",
       "Ongoing"
     ],
-    "track_icons": [
+    "filename": "koloth-prototype-cloak.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "koloth-prototype-cloak.jpg"
+    ]
   },
   {
     "id": "koloth-sword-of-kahless",
@@ -2978,8 +2978,8 @@
       "Imperial"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "koloth-sword-of-kahless.jpg"
+    "filename": "koloth-sword-of-kahless.jpg",
+    "icons": []
   },
   {
     "id": "koloth-iks-devisor",
@@ -2992,13 +2992,13 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "koloth-iks-devisor.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "koloth-iks-devisor.jpg"
+    ]
   },
   {
     "id": "koloth-iks-groth",
@@ -3011,8 +3011,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "koloth-iks-groth.jpg"
+    "filename": "koloth-iks-groth.jpg",
+    "icons": []
   },
   {
     "id": "koloth-iks-klothos",
@@ -3025,8 +3025,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "koloth-iks-klothos.jpg"
+    "filename": "koloth-iks-klothos.jpg",
+    "icons": []
   },
   {
     "id": "koloth-confiscate",
@@ -3037,8 +3037,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "koloth-confiscate.jpg"
+    "filename": "koloth-confiscate.jpg",
+    "icons": []
   },
   {
     "id": "koloth-conquer",
@@ -3049,13 +3049,13 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "koloth-conquer.jpg",
+    "icons": [
       {
-        "track": "Wild",
-        "type": "WildSkill"
+        "type": "Skill",
+        "specialty": "Any"
       }
-    ],
-    "filename": "koloth-conquer.jpg"
+    ]
   },
   {
     "id": "koloth-good-day-to-die",
@@ -3066,8 +3066,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "koloth-good-day-to-die.jpg"
+    "filename": "koloth-good-day-to-die.jpg",
+    "icons": []
   },
   {
     "id": "koloth-recruit",
@@ -3078,8 +3078,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "koloth-recruit.jpg"
+    "filename": "koloth-recruit.jpg",
+    "icons": []
   },
   {
     "id": "koloth-utilize",
@@ -3090,8 +3090,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "koloth-utilize.jpg"
+    "filename": "koloth-utilize.jpg",
+    "icons": []
   },
   {
     "id": "koloth-energy-drain",
@@ -3102,8 +3102,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "koloth-energy-drain.jpg"
+    "filename": "koloth-energy-drain.jpg",
+    "icons": []
   },
   {
     "id": "koloth-hostile-contact",
@@ -3114,8 +3114,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "koloth-hostile-contact.jpg"
+    "filename": "koloth-hostile-contact.jpg",
+    "icons": []
   },
   {
     "id": "shran-thyek",
@@ -3130,13 +3130,13 @@
       "Imperial"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "shran-thyek.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "shran-thyek.jpg"
+    ]
   },
   {
     "id": "shran-talas",
@@ -3153,13 +3153,13 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [
+    "filename": "shran-talas.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "shran-talas.jpg"
+    ]
   },
   {
     "id": "shran-tarah",
@@ -3176,13 +3176,13 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [
+    "filename": "shran-tarah.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Military"
       }
-    ],
-    "filename": "shran-tarah.jpg"
+    ]
   },
   {
     "id": "shran-jhamel",
@@ -3198,8 +3198,8 @@
       "Communication"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "shran-jhamel.jpg"
+    "filename": "shran-jhamel.jpg",
+    "icons": []
   },
   {
     "id": "shran-ambassador-thoris",
@@ -3214,13 +3214,13 @@
       "Ambassador"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "shran-ambassador-thoris.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "shran-ambassador-thoris.jpg"
+    ]
   },
   {
     "id": "shran-andoria",
@@ -3233,8 +3233,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "shran-andoria.jpg"
+    "filename": "shran-andoria.jpg",
+    "icons": []
   },
   {
     "id": "shran-weytahn",
@@ -3250,8 +3250,8 @@
       "Imperial"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "shran-weytahn.jpg"
+    "filename": "shran-weytahn.jpg",
+    "icons": []
   },
   {
     "id": "shran-coridan",
@@ -3264,8 +3264,8 @@
       "Business"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "shran-coridan.jpg"
+    "filename": "shran-coridan.jpg",
+    "icons": []
   },
   {
     "id": "shran-united-earth",
@@ -3278,8 +3278,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "shran-united-earth.jpg"
+    "filename": "shran-united-earth.jpg",
+    "icons": []
   },
   {
     "id": "shran-aenar",
@@ -3294,8 +3294,8 @@
       "Telepath"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "shran-aenar.jpg"
+    "filename": "shran-aenar.jpg",
+    "icons": []
   },
   {
     "id": "shran-andorian-ale",
@@ -3310,13 +3310,13 @@
       "Beverage"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "shran-andorian-ale.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "shran-andorian-ale.jpg"
+    ]
   },
   {
     "id": "shran-plasma-rifles",
@@ -3334,8 +3334,8 @@
       "Attack",
       "Ongoing"
     ],
-    "track_icons": [],
-    "filename": "shran-plasma-rifles.jpg"
+    "filename": "shran-plasma-rifles.jpg",
+    "icons": []
   },
   {
     "id": "shran-tenebian-amethyst",
@@ -3348,8 +3348,8 @@
       "Business"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "shran-tenebian-amethyst.jpg"
+    "filename": "shran-tenebian-amethyst.jpg",
+    "icons": []
   },
   {
     "id": "shran-ushaan-tor",
@@ -3366,8 +3366,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "shran-ushaan-tor.jpg"
+    "filename": "shran-ushaan-tor.jpg",
+    "icons": []
   },
   {
     "id": "shran-andorian-cruiser",
@@ -3380,13 +3380,13 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "shran-andorian-cruiser.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Military"
       }
-    ],
-    "filename": "shran-andorian-cruiser.jpg"
+    ]
   },
   {
     "id": "shran-kumari",
@@ -3399,13 +3399,13 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "shran-kumari.jpg",
+    "icons": [
       {
-        "track": "Wild",
-        "type": "WildSkill"
+        "type": "Skill",
+        "specialty": "Any"
       }
-    ],
-    "filename": "shran-kumari.jpg"
+    ]
   },
   {
     "id": "shran-commando-unit",
@@ -3420,13 +3420,13 @@
       "Security"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "shran-commando-unit.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "shran-commando-unit.jpg"
+    ]
   },
   {
     "id": "shran-confiscate",
@@ -3437,8 +3437,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "shran-confiscate.jpg"
+    "filename": "shran-confiscate.jpg",
+    "icons": []
   },
   {
     "id": "shran-imperial-pride",
@@ -3449,8 +3449,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "shran-imperial-pride.jpg"
+    "filename": "shran-imperial-pride.jpg",
+    "icons": []
   },
   {
     "id": "shran-recruit",
@@ -3461,8 +3461,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "shran-recruit.jpg"
+    "filename": "shran-recruit.jpg",
+    "icons": []
   },
   {
     "id": "shran-utilize",
@@ -3473,8 +3473,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "shran-utilize.jpg"
+    "filename": "shran-utilize.jpg",
+    "icons": []
   },
   {
     "id": "shran-you-owe-me-one",
@@ -3485,8 +3485,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "shran-you-owe-me-one.jpg"
+    "filename": "shran-you-owe-me-one.jpg",
+    "icons": []
   },
   {
     "id": "shran-red-alert",
@@ -3497,8 +3497,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "shran-red-alert.jpg"
+    "filename": "shran-red-alert.jpg",
+    "icons": []
   },
   {
     "id": "shran-trade-embargo",
@@ -3509,8 +3509,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "shran-trade-embargo.jpg"
+    "filename": "shran-trade-embargo.jpg",
+    "icons": []
   },
   {
     "id": "sisko-benjamin",
@@ -3526,8 +3526,8 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sisko-benjamin.jpg"
+    "filename": "sisko-benjamin.jpg",
+    "icons": []
   },
   {
     "id": "sisko-bajor",
@@ -3540,13 +3540,13 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "sisko-bajor.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "sisko-bajor.jpg"
+    ]
   },
   {
     "id": "sisko-deep-space-9",
@@ -3561,8 +3561,8 @@
       "Starbase"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sisko-deep-space-9.jpg"
+    "filename": "sisko-deep-space-9.jpg",
+    "icons": []
   },
   {
     "id": "sisko-miles-obrien",
@@ -3578,8 +3578,8 @@
       "Engineer"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sisko-miles-obrien.jpg"
+    "filename": "sisko-miles-obrien.jpg",
+    "icons": []
   },
   {
     "id": "sisko-odo",
@@ -3594,8 +3594,8 @@
       "Security"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sisko-odo.jpg"
+    "filename": "sisko-odo.jpg",
+    "icons": []
   },
   {
     "id": "sisko-people-of-bajor",
@@ -3608,8 +3608,8 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sisko-people-of-bajor.jpg"
+    "filename": "sisko-people-of-bajor.jpg",
+    "icons": []
   },
   {
     "id": "sisko-strange-new-worlds",
@@ -3620,8 +3620,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sisko-strange-new-worlds.jpg"
+    "filename": "sisko-strange-new-worlds.jpg",
+    "icons": []
   },
   {
     "id": "sisko-uss-defiant",
@@ -3639,8 +3639,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "sisko-uss-defiant.jpg"
+    "filename": "sisko-uss-defiant.jpg",
+    "icons": []
   },
   {
     "id": "sisko-starbase-375",
@@ -3654,17 +3654,17 @@
       "Starbase"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "sisko-starbase-375.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Military"
       },
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "sisko-starbase-375.jpg"
+    ]
   },
   {
     "id": "sisko-garak",
@@ -3682,8 +3682,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "sisko-garak.jpg"
+    "filename": "sisko-garak.jpg",
+    "icons": []
   },
   {
     "id": "sisko-julian-bashir",
@@ -3700,8 +3700,8 @@
       "Augment"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sisko-julian-bashir.jpg"
+    "filename": "sisko-julian-bashir.jpg",
+    "icons": []
   },
   {
     "id": "sisko-jadzia-dax",
@@ -3717,13 +3717,13 @@
       "Scientist"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "sisko-jadzia-dax.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Research"
       }
-    ],
-    "filename": "sisko-jadzia-dax.jpg"
+    ]
   },
   {
     "id": "sisko-kira-nerys",
@@ -3740,8 +3740,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "sisko-kira-nerys.jpg"
+    "filename": "sisko-kira-nerys.jpg",
+    "icons": []
   },
   {
     "id": "sisko-quark",
@@ -3757,8 +3757,8 @@
       "Shady"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sisko-quark.jpg"
+    "filename": "sisko-quark.jpg",
+    "icons": []
   },
   {
     "id": "sisko-worf",
@@ -3775,13 +3775,13 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [
+    "filename": "sisko-worf.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Military"
       }
-    ],
-    "filename": "sisko-worf.jpg"
+    ]
   },
   {
     "id": "sisko-the-wormhole",
@@ -3794,17 +3794,17 @@
       "Anomaly"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "sisko-the-wormhole.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Research"
       },
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "sisko-the-wormhole.jpg"
+    ]
   },
   {
     "id": "sisko-orb-of-prophecy",
@@ -3819,13 +3819,13 @@
     "other_traits": [
       "Wildcard"
     ],
-    "track_icons": [
+    "filename": "sisko-orb-of-prophecy.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "sisko-orb-of-prophecy.jpg"
+    ]
   },
   {
     "id": "sisko-orb-of-emissary",
@@ -3842,8 +3842,8 @@
     "other_traits": [
       "Wildcard"
     ],
-    "track_icons": [],
-    "filename": "sisko-orb-of-emissary.jpg"
+    "filename": "sisko-orb-of-emissary.jpg",
+    "icons": []
   },
   {
     "id": "sisko-self-replicating-mines",
@@ -3857,17 +3857,17 @@
       "Ongoing",
       "Attack"
     ],
-    "track_icons": [
+    "filename": "sisko-self-replicating-mines.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       },
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "sisko-self-replicating-mines.jpg"
+    ]
   },
   {
     "id": "sisko-uss-rio-grande",
@@ -3880,8 +3880,8 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sisko-uss-rio-grande.jpg"
+    "filename": "sisko-uss-rio-grande.jpg",
+    "icons": []
   },
   {
     "id": "sisko-analyze",
@@ -3892,8 +3892,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sisko-analyze.jpg"
+    "filename": "sisko-analyze.jpg",
+    "icons": []
   },
   {
     "id": "sisko-recruit",
@@ -3904,8 +3904,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sisko-recruit.jpg"
+    "filename": "sisko-recruit.jpg",
+    "icons": []
   },
   {
     "id": "sisko-set-a-course",
@@ -3916,8 +3916,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sisko-set-a-course.jpg"
+    "filename": "sisko-set-a-course.jpg",
+    "icons": []
   },
   {
     "id": "sisko-utilize",
@@ -3928,8 +3928,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sisko-utilize.jpg"
+    "filename": "sisko-utilize.jpg",
+    "icons": []
   },
   {
     "id": "sisko-political-crisis",
@@ -3940,8 +3940,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sisko-political-crisis.jpg"
+    "filename": "sisko-political-crisis.jpg",
+    "icons": []
   },
   {
     "id": "sela-commander",
@@ -3957,8 +3957,8 @@
       "Shady"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sela-commander.jpg"
+    "filename": "sela-commander.jpg",
+    "icons": []
   },
   {
     "id": "sela-donatra",
@@ -3971,13 +3971,13 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "sela-donatra.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Military"
       }
-    ],
-    "filename": "sela-donatra.jpg"
+    ]
   },
   {
     "id": "sela-general-movar",
@@ -3992,8 +3992,8 @@
       "Ops"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sela-general-movar.jpg"
+    "filename": "sela-general-movar.jpg",
+    "icons": []
   },
   {
     "id": "sela-proconsul-neral",
@@ -4009,17 +4009,17 @@
       "Communication"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "sela-proconsul-neral.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Influence"
       },
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "sela-proconsul-neral.jpg"
+    ]
   },
   {
     "id": "sela-sub-commander-trul",
@@ -4034,8 +4034,8 @@
       "Engineer"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sela-sub-commander-trul.jpg"
+    "filename": "sela-sub-commander-trul.jpg",
+    "icons": []
   },
   {
     "id": "sela-shinzon",
@@ -4053,8 +4053,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "sela-shinzon.jpg"
+    "filename": "sela-shinzon.jpg",
+    "icons": []
   },
   {
     "id": "sela-tpel",
@@ -4071,8 +4071,8 @@
       "Ambassador"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sela-tpel.jpg"
+    "filename": "sela-tpel.jpg",
+    "icons": []
   },
   {
     "id": "sela-tomalak",
@@ -4087,8 +4087,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "sela-tomalak.jpg"
+    "filename": "sela-tomalak.jpg",
+    "icons": []
   },
   {
     "id": "sela-remans",
@@ -4104,8 +4104,8 @@
       "Telepath"
     ],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sela-remans.jpg"
+    "filename": "sela-remans.jpg",
+    "icons": []
   },
   {
     "id": "sela-remus",
@@ -4120,8 +4120,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "sela-remus.jpg"
+    "filename": "sela-remus.jpg",
+    "icons": []
   },
   {
     "id": "sela-romulus",
@@ -4136,17 +4136,17 @@
       "Imperial"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "sela-romulus.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Military"
       },
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "sela-romulus.jpg"
+    ]
   },
   {
     "id": "sela-disruptor-rifles",
@@ -4163,8 +4163,8 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [],
-    "filename": "sela-disruptor-rifles.jpg"
+    "filename": "sela-disruptor-rifles.jpg",
+    "icons": []
   },
   {
     "id": "sela-forced-singularity",
@@ -4181,13 +4181,13 @@
     "other_traits": [
       "Ongoing"
     ],
-    "track_icons": [
+    "filename": "sela-forced-singularity.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Focus"
+        "type": "Focus",
+        "specialty": "Research"
       }
-    ],
-    "filename": "sela-forced-singularity.jpg"
+    ]
   },
   {
     "id": "sela-irw-goraxus",
@@ -4202,13 +4202,13 @@
       "Cloak"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "sela-irw-goraxus.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Military"
       }
-    ],
-    "filename": "sela-irw-goraxus.jpg"
+    ]
   },
   {
     "id": "sela-irw-khazara",
@@ -4223,13 +4223,13 @@
       "Cloak"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "sela-irw-khazara.jpg",
+    "icons": [
       {
-        "track": "Influence",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Influence"
       }
-    ],
-    "filename": "sela-irw-khazara.jpg"
+    ]
   },
   {
     "id": "sela-irw-terix",
@@ -4244,13 +4244,13 @@
       "Cloak"
     ],
     "other_traits": [],
-    "track_icons": [
+    "filename": "sela-irw-terix.jpg",
+    "icons": [
       {
-        "track": "Research",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Research"
       }
-    ],
-    "filename": "sela-irw-terix.jpg"
+    ]
   },
   {
     "id": "sela-irw-valdore",
@@ -4267,13 +4267,13 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [
+    "filename": "sela-irw-valdore.jpg",
+    "icons": [
       {
-        "track": "Wild",
-        "type": "WildSkill"
+        "type": "Skill",
+        "specialty": "Any"
       }
-    ],
-    "filename": "sela-irw-valdore.jpg"
+    ]
   },
   {
     "id": "sela-scimitar",
@@ -4290,13 +4290,13 @@
     "other_traits": [
       "Attack"
     ],
-    "track_icons": [
+    "filename": "sela-scimitar.jpg",
+    "icons": [
       {
-        "track": "Military",
-        "type": "Skill"
+        "type": "Skill",
+        "specialty": "Military"
       }
-    ],
-    "filename": "sela-scimitar.jpg"
+    ]
   },
   {
     "id": "sela-confiscate",
@@ -4307,8 +4307,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sela-confiscate.jpg"
+    "filename": "sela-confiscate.jpg",
+    "icons": []
   },
   {
     "id": "sela-conquer",
@@ -4319,13 +4319,13 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [
+    "filename": "sela-conquer.jpg",
+    "icons": [
       {
-        "track": "Wild",
-        "type": "WildSkill"
+        "type": "Skill",
+        "specialty": "Any"
       }
-    ],
-    "filename": "sela-conquer.jpg"
+    ]
   },
   {
     "id": "sela-imperial-pride",
@@ -4336,8 +4336,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sela-imperial-pride.jpg"
+    "filename": "sela-imperial-pride.jpg",
+    "icons": []
   },
   {
     "id": "sela-infiltrate",
@@ -4348,8 +4348,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sela-infiltrate.jpg"
+    "filename": "sela-infiltrate.jpg",
+    "icons": []
   },
   {
     "id": "sela-utilize",
@@ -4360,8 +4360,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sela-utilize.jpg"
+    "filename": "sela-utilize.jpg",
+    "icons": []
   },
   {
     "id": "sela-energy-drain",
@@ -4372,8 +4372,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "sela-energy-drain.jpg"
+    "filename": "sela-energy-drain.jpg",
+    "icons": []
   },
   {
     "id": "burnham-inert-dilithium",
@@ -4384,8 +4384,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "burnham-inert-dilithium.jpg"
+    "filename": "burnham-inert-dilithium.jpg",
+    "icons": []
   },
   {
     "id": "reinforce",
@@ -4396,8 +4396,8 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "track_icons": [],
-    "filename": "reinforce.jpg"
+    "filename": "reinforce.jpg",
+    "icons": []
   },
   {
     "id": "conspiracy",
@@ -4413,7 +4413,7 @@
     "other_traits": [
       "Surprise"
     ],
-    "track_icons": [],
-    "filename": "conspiracy.jpg"
+    "filename": "conspiracy.jpg",
+    "icons": []
   }
 ]
