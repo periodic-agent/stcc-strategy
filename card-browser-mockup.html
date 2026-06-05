@@ -10,6 +10,7 @@
 :root{
   --bg:#0a0e1a;--bg2:#0f1628;--bg3:#141c35;
   --blue:#4a9fd4;--blue2:#7ec8f0;--gold:#c8a84b;
+  --scanner:#d4699f;--scanner2:#e899c4;
   --text:#ccd6f0;--muted:#7a8aaa;--border:rgba(74,159,212,0.25);
   --person:#e8a94a;--ally:#9b6ecf;--ship:#7a8aaa;
   --cargo:#3a6aaa;--location:#4ac48a;--encounter:#d4699f;--incident:#e05a5a;
@@ -21,12 +22,12 @@
 body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:var(--text);min-height:100vh;}
 a{color:var(--blue);text-decoration:none;}
 .nav-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:0.75rem 1.5rem;}
-.nav-bar a{font-family:'Orbitron',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;}
-.chapter-header{background:linear-gradient(135deg,#061020 0%,#0d1e3a 50%,#061020 100%);border-bottom:2px solid var(--blue);padding:2.5rem 2rem 2rem;text-align:center;position:relative;overflow:hidden;}
-.chapter-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(74,159,212,0.03) 60px,rgba(74,159,212,0.03) 61px);}
-.chapter-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.25em;color:var(--blue);text-transform:uppercase;margin-bottom:0.6rem;}
-.chapter-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:700;color:#fff;letter-spacing:0.05em;text-shadow:0 0 40px rgba(74,159,212,0.5);}
-.chapter-title span{color:var(--blue2);}
+.nav-bar a{font-family:'Orbitron',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--scanner);}
+.chapter-header{background:linear-gradient(135deg,#160820 0%,#2a1035 50%,#160820 100%);border-bottom:2px solid var(--scanner);padding:2.5rem 2rem 2rem;text-align:center;position:relative;overflow:hidden;}
+.chapter-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(212,105,159,0.03) 60px,rgba(212,105,159,0.03) 61px);}
+.chapter-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.25em;color:var(--scanner);text-transform:uppercase;margin-bottom:0.6rem;}
+.chapter-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:700;color:#fff;letter-spacing:0.05em;text-shadow:0 0 40px rgba(212,105,159,0.5);}
+.chapter-title span{color:var(--scanner2);}
 .chapter-meta{margin-top:0.6rem;font-size:0.78rem;color:var(--muted);}
 .controls{max-width:1100px;margin:1.5rem auto 0;padding:0 1.5rem;}
 .filter-section{margin-bottom:1rem;}
