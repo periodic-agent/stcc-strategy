@@ -392,10 +392,8 @@ document.getElementById('searchInput').addEventListener('input',e=>{ searchText=
 
 function clearAll(){
   activeDecks.clear(); activeSuits.clear(); activeTags.clear(); activeSkills.clear(); searchText='';
-  activeDecks.add('Common');
   document.getElementById('searchInput').value='';
-  document.querySelectorAll('.suit-pill,.species-pill,.regular-pill,.other-pill,.skill-pill').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.deck-pill').forEach(p=>{ p.classList.remove('active'); if(p.textContent==='Common') p.classList.add('active'); });
+  document.querySelectorAll('.suit-pill,.species-pill,.regular-pill,.other-pill,.skill-pill,.deck-pill').forEach(p=>p.classList.remove('active'));
   updateSummaries();
   render();
 }
@@ -412,7 +410,7 @@ function cardMatches(c){
     // Promo cards skip the deck filter -- showing them is controlled by promo selection alone
   } else {
     if(!activeBoxes.has(c.box)) return false;
-    if(!activeDecks.has(c.deck)) return false;
+    if(activeDecks.size && !activeDecks.has(c.deck)) return false;
   }
   if(activeSuits.size && !activeSuits.has(c.suit)) return false;
   if(searchText && !c.name.toLowerCase().includes(searchText)) return false;
@@ -452,7 +450,7 @@ function getPoolWithout(excludeTag, excludeSkill){
       if(!activePromos.has(c.box)) return false;
     } else {
       if(!activeBoxes.has(c.box)) return false;
-      if(!activeDecks.has(c.deck)) return false;
+      if(activeDecks.size && !activeDecks.has(c.deck)) return false;
     }
     if(activeSuits.size && !activeSuits.has(c.suit)) return false;
     if(searchText && !c.name.toLowerCase().includes(searchText)) return false;
