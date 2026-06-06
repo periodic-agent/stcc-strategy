@@ -46,6 +46,9 @@ python push_to_github.py <local_path> <repo_path> "commit message"
 
 PAT token is hardcoded in the script. Claude fetches the script from the live repo, runs it, confirms the push. Files go straight to GitHub, GitHub Pages deploys in ~60 seconds.
 
+## Tools
+- **card-browser-mockup.html** — interactive card scanner. Filters by box, deck, suit, trait, skill, and name search. Data source is `box1.json` (255 cards). Cards/Images view toggle. Deck grouping. Built for mid-game lookup use case.
+
 ## Live guides (as of 02 Jun 2026)
 
 ### Core Box — Captains
