@@ -28,6 +28,24 @@ web_fetch https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/WO
 ```
 Always fetch the live version. Never work from memory or cached content.
 
+## Project architecture
+The project is divided into sub-projects (trackers, JSON database, card scanner, main index, guides) to keep each chat session focused and prevent context overflow. Each sub-project chat handles its own domain.
+
+**This chat (Meta/Merge) is the WORKFLOW.md merge point.** At end of session, each sub-project chat produces a delta. Deltas are brought here, merged against the live WORKFLOW.md, and pushed to GitHub.
+
+End-of-session prompt for any sub-project chat:
+> "Fetch the current WORKFLOW.md, incorporate any new conventions or decisions from this session, save updated file to outputs."
+
+## Push pipeline
+`push_to_github.py` is in the repo root. Claude runs it directly via bash_tool -- no manual download or rename needed.
+
+Usage (Claude runs this internally):
+```
+python push_to_github.py <local_path> <repo_path> "commit message"
+```
+
+PAT token is hardcoded in the script. Claude fetches the script from the live repo, runs it, confirms the push. Files go straight to GitHub, GitHub Pages deploys in ~60 seconds.
+
 ## Live guides (as of 02 Jun 2026)
 
 ### Core Box — Captains
