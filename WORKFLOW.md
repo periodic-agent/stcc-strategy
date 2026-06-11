@@ -4,18 +4,18 @@ Files live on GitHub Pages at:
 - **Live site:** https://periodic-agent.github.io/stcc-strategy/
 - **Raw files:** https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/[filename]
 
-At the start of each session, fetch the files you'll be editing using `web_fetch`:
+At the start of each session, fetch BOTH PROJECT_BRIEF.md and WORKFLOW.md from the live repo, plus any files you'll be editing. `web_fetch` FAILS (permissions error) — use bash urllib instead:
+```python
+import urllib.request
+url = 'https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/[filename]'
+req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+with urllib.request.urlopen(req) as r:
+    html = r.read().decode()
 ```
-web_fetch("https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/index.html")
-web_fetch("https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/shran.html")
-... etc.
-```
 
-Do NOT fetch WORKFLOW.md — it lives in project knowledge and is always current there.
+The live repo is authoritative — fetch live, including WORKFLOW.md. Do NOT work from project knowledge copies; they may be stale. Never assume file content from memory or previous sessions.
 
-Always work from the fetched live version. Never assume file content from memory or previous sessions.
-
-After editing, save to `/mnt/user-data/outputs/` and call `present_files` to surface the file for download. Never render files inline in chat.
+After editing, save to `/mnt/user-data/outputs/` and call `present_files` to surface the file for review. Never render files inline in chat.
 
 ```python
 # Correct output pattern
@@ -23,7 +23,12 @@ bash: write file to /mnt/user-data/outputs/filename.html
 present_files(["/mnt/user-data/outputs/filename.html"])
 ```
 
-Periodic_agent pushes to GitHub manually after downloading.
+**Push: Claude pushes to GitHub directly via `push_to_github.py`, but ONLY after Periodic_agent reviews the presented file and explicitly approves. Never push before the go-ahead.**
+
+```
+python push_to_github.py <local_path> <repo_path> "commit message"
+```
+Fetch the script from the live repo before running. It fetches the current file SHA, base64-encodes content, and PUTs to the repo. Files deploy via GitHub Pages in ~60 seconds.
 
 ---
 
