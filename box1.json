@@ -401,7 +401,7 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "su-kal.jpg",
+    "filename": "sukal.jpg",
     "icons": []
   },
   {
@@ -497,7 +497,7 @@
       "Scientist"
     ],
     "other_traits": [],
-    "filename": "borg-spatial-trajector.jpg",
+    "filename": "borg-spatial-trajectory.jpg",
     "icons": []
   },
   {
@@ -1436,7 +1436,7 @@
       "Starbase"
     ],
     "other_traits": [],
-    "filename": "armagosa-observatory.jpg",
+    "filename": "amargosa-observatory.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -1549,7 +1549,7 @@
       "Starbase"
     ],
     "other_traits": [],
-    "filename": "deep-space-k7.jpg",
+    "filename": "deep-space-k-7.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -1902,7 +1902,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "picard-jean-luc.jpg",
+    "filename": "picard-jean-luc-picard.jpg",
     "icons": []
   },
   {
@@ -2306,7 +2306,7 @@
       "Scientist"
     ],
     "other_traits": [],
-    "filename": "burnham-michael.jpg",
+    "filename": "burnham-michael-burnham.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -2739,7 +2739,7 @@
       "Weapon"
     ],
     "other_traits": [],
-    "filename": "koloth-the-dahar-master.jpg",
+    "filename": "koloth-koloth-the-dahar-master.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -2795,7 +2795,7 @@
       "Weapon"
     ],
     "other_traits": [],
-    "filename": "koloth-kang.jpg",
+    "filename": "koloth-kang-the-dahar-master.jpg",
     "icons": []
   },
   {
@@ -2811,7 +2811,7 @@
       "Weapon"
     ],
     "other_traits": [],
-    "filename": "koloth-kor.jpg",
+    "filename": "koloth-kor-the-dahar-master.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -3130,7 +3130,7 @@
       "Imperial"
     ],
     "other_traits": [],
-    "filename": "shran-thyek.jpg",
+    "filename": "shran-thylek-shran.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -3526,7 +3526,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "sisko-benjamin.jpg",
+    "filename": "sisko-benjamin-sisko.jpg",
     "icons": []
   },
   {
@@ -3775,7 +3775,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "sisko-worf.jpg",
+    "filename": "sisko-worf-son-of-mogh.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -3819,7 +3819,7 @@
     "other_traits": [
       "Wildcard"
     ],
-    "filename": "sisko-orb-of-prophecy.jpg",
+    "filename": "sisko-orb-of-prophecy-and-change.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -3842,7 +3842,7 @@
     "other_traits": [
       "Wildcard"
     ],
-    "filename": "sisko-orb-of-emissary.jpg",
+    "filename": "sisko-orb-of-the-emissary.jpg",
     "icons": []
   },
   {
@@ -3957,7 +3957,7 @@
       "Shady"
     ],
     "other_traits": [],
-    "filename": "sela-commander.jpg",
+    "filename": "sela-sela.jpg",
     "icons": []
   },
   {
