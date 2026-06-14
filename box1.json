@@ -391,7 +391,7 @@
     "icons": []
   },
   {
-    "id": "su-kal",
+    "id": "sukal",
     "name": "Su'Kal",
     "suit": "Person",
     "source": "Common",
@@ -485,7 +485,7 @@
     ]
   },
   {
-    "id": "borg-spatial-trajector",
+    "id": "borg-spatial-trajectory",
     "name": "Borg Spatial Trajectory",
     "suit": "Cargo",
     "source": "Common",
@@ -1425,7 +1425,7 @@
     "icons": []
   },
   {
-    "id": "armagosa-observatory",
+    "id": "amargosa-observatory",
     "name": "Amargosa Observatory",
     "suit": "Location",
     "source": "Common",
@@ -1539,7 +1539,7 @@
     ]
   },
   {
-    "id": "deep-space-k7",
+    "id": "deep-space-k-7",
     "name": "Deep Space K-7",
     "suit": "Location",
     "source": "Common",
@@ -1890,7 +1890,7 @@
     "icons": []
   },
   {
-    "id": "picard-jean-luc",
+    "id": "picard-jean-luc-picard",
     "name": "Jean-Luc Picard",
     "suit": "Captain",
     "source": "Picard",
@@ -2293,7 +2293,7 @@
     "icons": []
   },
   {
-    "id": "burnham-michael",
+    "id": "burnham-michael-burnham",
     "name": "Michael Burnham",
     "suit": "Captain",
     "source": "Burnham",
@@ -2727,7 +2727,7 @@
     "icons": []
   },
   {
-    "id": "koloth-the-dahar-master",
+    "id": "koloth-koloth-the-dahar-master",
     "name": "Koloth, the Dahar Master",
     "suit": "Captain",
     "source": "Koloth",
@@ -2783,7 +2783,7 @@
     "icons": []
   },
   {
-    "id": "koloth-kang",
+    "id": "koloth-kang-the-dahar-master",
     "name": "Kang, the Dahar Master",
     "suit": "Person",
     "source": "Koloth",
@@ -2799,7 +2799,7 @@
     "icons": []
   },
   {
-    "id": "koloth-kor",
+    "id": "koloth-kor-the-dahar-master",
     "name": "Kor, the Dahar Master",
     "suit": "Person",
     "source": "Koloth",
@@ -3118,7 +3118,7 @@
     "icons": []
   },
   {
-    "id": "shran-thyek",
+    "id": "shran-thylek-shran",
     "name": "Thy'lek Shran",
     "suit": "Captain",
     "source": "Shran",
@@ -3513,7 +3513,7 @@
     "icons": []
   },
   {
-    "id": "sisko-benjamin",
+    "id": "sisko-benjamin-sisko",
     "name": "Benjamin Sisko",
     "suit": "Captain",
     "source": "Sisko",
@@ -3761,7 +3761,7 @@
     "icons": []
   },
   {
-    "id": "sisko-worf",
+    "id": "sisko-worf-son-of-mogh",
     "name": "Worf, Son of Mogh",
     "suit": "Person",
     "source": "Sisko",
@@ -3807,7 +3807,7 @@
     ]
   },
   {
-    "id": "sisko-orb-of-prophecy",
+    "id": "sisko-orb-of-prophecy-and-change",
     "name": "Orb of Prophecy and Change",
     "suit": "Cargo",
     "source": "Sisko",
@@ -3828,7 +3828,7 @@
     ]
   },
   {
-    "id": "sisko-orb-of-emissary",
+    "id": "sisko-orb-of-the-emissary",
     "name": "Orb of the Emissary",
     "suit": "Encounter",
     "source": "Sisko",
@@ -3944,7 +3944,7 @@
     "icons": []
   },
   {
-    "id": "sela-commander",
+    "id": "sela-sela",
     "name": "Sela",
     "suit": "Captain",
     "source": "Sela",
