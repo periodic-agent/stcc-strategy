@@ -311,7 +311,7 @@ const DECK_BOX = {
 // Bridge between scanner internal box keys and on-disk image folders / JSON files.
 // Mirrors the table recorded in WORKFLOW.md. Image paths are ALWAYS built by
 // translating the internal key through this map -- never by using the key as a path.
-const BOX_FOLDER = { core:'box1', tbg:'box2', '2nd':'box3' };
+const BOX_FOLDER = { core:'box1', tbg:'box2', '2nd':'box3', promo1:'promo1', promo2:'promo2' };
 const IMG_BASE = 'img';
 
 const marketCards = ALL_CARDS.filter(c=>!EXCLUDED_SUITS.has(c.suit));
