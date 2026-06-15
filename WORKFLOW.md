@@ -322,28 +322,56 @@ GoatCounter tracker included: `https://stcc-compendium.goatcounter.com/count`
 
 ---
 
-## Card Image Naming Convention
+## Card Image Filename Convention
 
-For scanned/cropped card images used in both the Card Scanner and strategy guides:
+Filenames are derived from the card name as printed, with a deck prefix for crew-deck cards. The live `box1.json` (repo root) is the source of truth — in it, the `id` and `filename` fields share the same stem (`id` == `filename` minus `.jpg`). When adding cards, match an existing sibling in the same deck rather than re-deriving by hand.
 
-- Lowercase, hyphens instead of spaces
-- Drop all punctuation (apostrophes, periods, commas)
-- No accents or special characters
+### Base rule
+1. Lowercase everything
+2. Delete apostrophes, periods, and commas entirely — no replacement. `U.S.S.` → `uss`, `V'Ger` → `vger`, `Mek'Leth` → `mekleth`, `Worf, Son of Mogh` drops the comma
+3. Strip accents to their base letter (é → e, ï → i, ñ → n, ç → c). Do NOT delete accented characters — keep the base letter so names stay readable
+4. Convert spaces to single hyphens; collapse any resulting double hyphens; trim leading/trailing hyphens
+5. Extension: `.jpg` (PNG only if transparency is needed)
 
-**Examples:**
-- Bird-of-Prey → `bird-of-prey.jpg`
-- Mek'Leth → `mek-leth.jpg`
-- U.S.S. Enterprise-C → `uss-enterprise-c.jpg`
-- V'Ger → `vger.jpg`
+### Deck prefix (the key rule)
+6. **Common and Promo cards have no prefix:** `bird-of-prey.jpg`, `admiral-jarok.jpg`, `vger.jpg`
+7. **Crew-deck cards are prefixed with the deck (captain) name:** `sisko-garak.jpg`, `picard-data.jpg`, `koloth-arne-darvin.jpg`
+8. Disambiguator suffixes are **replaced by the prefix, not kept**: `Analyze (Picard)` → `picard-analyze.jpg`, never `analyze-picard.jpg` or `analyze-(picard).jpg`. Parentheses never appear in a filename.
+
+### Captain cards double their name — this is intentional
+9. Because the rule is "deck prefix + full printed name" with no carve-outs, captain cards repeat their name: `picard-jean-luc-picard.jpg`, `sisko-benjamin-sisko.jpg`, `burnham-michael-burnham.jpg`, `sela-sela.jpg`, `koloth-koloth-the-dahar-master.jpg`. This is deliberate — predictable beats pretty, and "what's on the card" is the one rule with zero exceptions. Do not "fix" the doubling.
+
+### Examples
+| Card (printed name) | Deck | Filename |
+|---|---|---|
+| Bird-of-Prey | Common | `bird-of-prey.jpg` |
+| U.S.S. Enterprise-C | Common | `uss-enterprise-c.jpg` |
+| V'Ger | Common | `vger.jpg` |
+| Garak | Sisko | `sisko-garak.jpg` |
+| Worf, Son of Mogh | Sisko | `sisko-worf-son-of-mogh.jpg` |
+| Analyze (Picard) | Picard | `picard-analyze.jpg` |
+| Jean-Luc Picard | Picard | `picard-jean-luc-picard.jpg` |
+| Kang, the Dahar Master | Koloth | `koloth-kang-the-dahar-master.jpg` |
 
 **Format:** JPG preferred, PNG if transparency needed. Full resolution — resize for web later.
 
-**Folder structure:**
-```
-/img/cards/core/
-/img/cards/tbg/
-/img/cards/2nd-contact/
-```
+**Folder structure & box-key mapping (canonical):**
+
+Images live in numeric box folders on git: `img/box1/`, `img/box2/`, `img/box3/` (flat — filenames are globally unique across all 255 cards, so no per-suit subfolders are needed). JSON files follow the same scheme: `box1.json`, `box2.json`, `box3.json`.
+
+The Card Scanner uses different *internal* box keys (`core`, `tbg`, `2nd`) in its filter logic and CSS. These keys are NOT disk paths. The scanner builds every image path by translating the internal key through this bridge table — it must never use the key directly as a folder name:
+
+| Scanner key | Box | Image folder | JSON file |
+|---|---|---|---|
+| `core` | Captain's Chair | `img/box1/` | `box1.json` |
+| `tbg` | To Boldly Go | `img/box2/` | `box2.json` |
+| `2nd` | 2nd Contact | `img/box3/` | `box3.json` |
+
+In the scanner code this table is the `BOX_FOLDER = { core:'box1', tbg:'box2', '2nd':'box3' }` constant. Image src is built as `img/<BOX_FOLDER[box]>/<filename>`. A missing image (404) falls back to a `NO IMAGE` placeholder via `onerror`, so partial image coverage is fine — only Box 1 Locations have images so far; everything else shows the placeholder until uploaded.
+
+> **Why this table exists:** the original Image-view gap was an undocumented mismatch between the scanner's internal keys (`core`/`tbg`/`2nd`) and the on-disk folders (`box1`/`box2`/`box3`). Documenting the bridge — not just the path — is what prevents a future instance from reintroducing it. If you add a box, add its row here AND to `BOX_FOLDER` in the scanner in the same change.
+
+> **id / filename invariant:** both fields must always share the same stem. If one is corrected, regenerate the other in the same pass. Anything that keys off `id` then stays aligned with the image filename.
 
 ---
 
