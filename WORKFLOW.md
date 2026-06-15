@@ -366,8 +366,12 @@ The Card Scanner uses different *internal* box keys (`core`, `tbg`, `2nd`) in it
 | `core` | Captain's Chair | `img/box1/` | `box1.json` |
 | `tbg` | To Boldly Go | `img/box2/` | `box2.json` |
 | `2nd` | 2nd Contact | `img/box3/` | `box3.json` |
+| `promo1` | Promo Pack 1 | `img/promo1/` | `box1.json` |
+| `promo2` | Promo Pack 2 | `img/promo2/` | `box2.json` (expected) |
 
-In the scanner code this table is the `BOX_FOLDER = { core:'box1', tbg:'box2', '2nd':'box3' }` constant. Image src is built as `img/<BOX_FOLDER[box]>/<filename>`. A missing image (404) falls back to a `NO IMAGE` placeholder via `onerror`, so partial image coverage is fine — only Box 1 Locations have images so far; everything else shows the placeholder until uploaded.
+**Promo data vs image split:** Promo cards are stored as data *inside* the main box JSON for their era — Promo Pack 1 cards live in `box1.json` (tagged `source:"Promo"`, `box:"promo1"`), and Promo Pack 2 cards are expected to live in `box2.json`. But their *images* get their own folders (`img/promo1/`, `img/promo2/`) because the scanner treats promo packs as separate boxes in the UI. So a promo card's data and its image folder come from different places — this is intentional.
+
+In the scanner code this table is the `BOX_FOLDER = { core:'box1', tbg:'box2', '2nd':'box3', promo1:'promo1', promo2:'promo2' }` constant. Image src is built as `img/<BOX_FOLDER[box]>/<filename>`. A missing image (404) falls back to a `NO IMAGE` placeholder via `onerror`, so partial image coverage is fine — only Box 1 Locations have images so far; everything else shows the placeholder until uploaded.
 
 > **Why this table exists:** the original Image-view gap was an undocumented mismatch between the scanner's internal keys (`core`/`tbg`/`2nd`) and the on-disk folders (`box1`/`box2`/`box3`). Documenting the bridge — not just the path — is what prevents a future instance from reintroducing it. If you add a box, add its row here AND to `BOX_FOLDER` in the scanner in the same change.
 
