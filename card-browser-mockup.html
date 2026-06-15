@@ -185,6 +185,10 @@ a{color:var(--blue);text-decoration:none;}
 .card-img-entry{background:var(--bg2);border:1px solid var(--border);border-radius:5px;overflow:hidden;transition:border-color 0.15s,transform 0.15s;text-align:center;}
 .card-img-entry:hover{border-color:var(--blue);transform:translateY(-2px);}
 .card-img-entry img{width:100%;display:block;background:var(--bg3);}
+.card-img-entry img{cursor:zoom-in;}
+#lightbox{position:fixed;inset:0;background:rgba(5,8,16,0.92);display:none;align-items:center;justify-content:center;z-index:1000;cursor:zoom-out;padding:2rem;}
+#lightbox.open{display:flex;}
+#lightbox img{max-width:min(90vw,640px);max-height:90vh;width:auto;height:auto;border-radius:8px;box-shadow:0 0 60px rgba(212,105,159,0.35);border:1px solid rgba(212,105,159,0.4);}
 .card-img-name{font-size:0.65rem;padding:0.3rem 0.4rem;color:var(--text);line-height:1.2;}
 .img-placeholder{width:100%;aspect-ratio:5/7;background:var(--bg3);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.6rem;font-family:'Orbitron',sans-serif;letter-spacing:0.1em;}
 .no-results{text-align:center;padding:3rem;color:var(--muted);font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.15em;}
@@ -510,6 +514,7 @@ function buildImgCard(c){
   const src=IMG_BASE+'/'+folder+'/'+c.filename;
   // Try to load the real card image; if it 404s, swap in the NO IMAGE placeholder.
   el.innerHTML='<img loading="lazy" src="'+src+'" alt="'+c.name+'" '
+    +'onclick="openLightbox(this.src)" '
     +'onerror="this.onerror=null;this.outerHTML=\'<div class=&quot;img-placeholder&quot;>NO IMAGE</div>\';">'
     +'<div class="card-img-name">'+c.name+'</div>';
   return el;
@@ -544,6 +549,17 @@ function render(){
 }
 
 render();
+</script>
+<div id="lightbox" onclick="this.classList.remove('open')">
+  <img id="lightbox-img" src="" alt="">
+</div>
+<script>
+function openLightbox(src){
+  const lb=document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src=src;
+  lb.classList.add('open');
+}
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') document.getElementById('lightbox').classList.remove('open'); });
 </script>
 </body>
 </html>
