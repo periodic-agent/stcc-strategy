@@ -515,16 +515,19 @@ function buildImgCard(c){
   // Try to load the real card image; if it 404s, swap in the NO IMAGE placeholder.
   el.innerHTML='<img loading="lazy" src="'+src+'" alt="'+c.name+'" '
     +'onclick="openLightbox(this.src)" '
-    +'onerror="this.onerror=null;this.outerHTML=\'<div class=&quot;img-placeholder&quot;>NO IMAGE</div>\';">'
+    +'onload="IMG_OK.add(this.src.split(\'/\').slice(-3).join(\'/\'));" '
+    +'onerror="this.onerror=null;IMG_FAILED.add(this.getAttribute(&quot;src&quot;));this.outerHTML=\'<div class=&quot;img-placeholder&quot;>NO IMAGE</div>\';">'
     +'<div class="card-img-name">'+c.name+'</div>';
   return el;
 }
 
+let VISIBLE_IMG_CARDS=[];  // ordered list of {src,name} for cards shown in Images view
 function render(){
   updateSummaries();
   const groups=document.getElementById('deckGroups');
   groups.innerHTML='';
   let total=0;
+  VISIBLE_IMG_CARDS=[];
   // Also include Promo deck in order if promos active
   const allDecks=[...DECK_ORDER];
   if(activePromos.size) allDecks.push('Promo');
@@ -538,7 +541,13 @@ function render(){
     section.appendChild(hdr);
     const grid=document.createElement('div');
     grid.className=viewMode==='pill'?'card-grid':'img-grid';
-    matched.forEach(c=>grid.appendChild(viewMode==='pill'?buildPillCard(c):buildImgCard(c)));
+    matched.forEach(c=>{
+      grid.appendChild(viewMode==='pill'?buildPillCard(c):buildImgCard(c));
+      if(viewMode==='image'){
+        const folder=BOX_FOLDER[c.box]||'box1';
+        VISIBLE_IMG_CARDS.push({src:IMG_BASE+'/'+folder+'/'+c.filename, name:c.name});
+      }
+    });
     section.appendChild(grid);
     groups.appendChild(section);
   });
@@ -554,12 +563,49 @@ render();
   <img id="lightbox-img" src="" alt="">
 </div>
 <script>
-function openLightbox(src){
-  const lb=document.getElementById('lightbox');
-  document.getElementById('lightbox-img').src=src;
-  lb.classList.add('open');
+const IMG_OK=new Set();        // srcs (relative) known to have loaded
+const IMG_FAILED=new Set();    // srcs known to have 404'd
+let LIGHTBOX_INDEX=-1;         // index into VISIBLE_IMG_CARDS
+
+function showLightboxAt(i){
+  if(!VISIBLE_IMG_CARDS.length) return;
+  LIGHTBOX_INDEX=i;
+  const card=VISIBLE_IMG_CARDS[i];
+  document.getElementById('lightbox-img').src=card.src;
+  document.getElementById('lightbox-img').alt=card.name;
+  document.getElementById('lightbox').classList.add('open');
 }
-document.addEventListener('keydown',e=>{ if(e.key==='Escape') document.getElementById('lightbox').classList.remove('open'); });
+
+function openLightbox(src){
+  // find this src in the visible ordered list
+  const idx=VISIBLE_IMG_CARDS.findIndex(c=>src.endsWith(c.src));
+  if(idx>=0) showLightboxAt(idx); else {
+    document.getElementById('lightbox-img').src=src;
+    document.getElementById('lightbox').classList.add('open');
+  }
+}
+
+function stepLightbox(dir){
+  if(LIGHTBOX_INDEX<0||!VISIBLE_IMG_CARDS.length) return;
+  const n=VISIBLE_IMG_CARDS.length;
+  let i=LIGHTBOX_INDEX;
+  for(let tries=0;tries<n;tries++){
+    i=(i+dir+n)%n;                        // wrap
+    const src=VISIBLE_IMG_CARDS[i].src;
+    if(!IMG_FAILED.has(src)){             // skip image-less cards
+      showLightboxAt(i);
+      return;
+    }
+  }
+}
+
+document.addEventListener('keydown',e=>{
+  const lb=document.getElementById('lightbox');
+  if(!lb.classList.contains('open')) return;
+  if(e.key==='Escape'){ lb.classList.remove('open'); }
+  else if(e.key==='ArrowRight'){ e.preventDefault(); stepLightbox(1); }
+  else if(e.key==='ArrowLeft'){ e.preventDefault(); stepLightbox(-1); }
+});
 </script>
 </body>
 </html>
