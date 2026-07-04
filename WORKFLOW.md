@@ -26,9 +26,30 @@ present_files(["/mnt/user-data/outputs/filename.html"])
 **Push: Claude pushes to GitHub directly via `push_to_github.py`, but ONLY after Periodic_agent reviews the presented file and explicitly approves. Never push before the go-ahead.**
 
 ```
-python push_to_github.py <local_path> <repo_path> "commit message"
+GH_TOKEN=<token> python3 push_to_github.py <local_path> <repo_path> "commit message"
 ```
-Fetch the script from the live repo before running. It fetches the current file SHA, base64-encodes content, and PUTs to the repo. Files deploy via GitHub Pages in ~60 seconds.
+Fetch the script from the live repo before running. It shallow-clones the repo, copies the file in, commits, and pushes via git with a one-shot authenticated URL (no GitHub API dependency; `api.github.com` is blocked in some sandboxes while git over HTTPS works). Files deploy via GitHub Pages in ~60 seconds.
+
+---
+
+## GitHub Token Handling
+
+**The token is NOT in the repo and NOT in the script.** It is a **fine-grained PAT** scoped to `periodic-agent/stcc-strategy` only, permission **Contents: read/write** (plus mandatory Metadata: read). Worst-case leak damage is limited to this one repo.
+
+**Where it lives:** project knowledge file `git_pat_token.txt`. Every project chat can read it; Periodic_agent never types it.
+
+**How to use it at push time:** read the token from the project knowledge file and pass it to the script via the `GH_TOKEN` environment variable, or point the script at the file directly:
+```
+python3 push_to_github.py <local_path> <repo_path> "message" --token-file <path_to_git_pat_token.txt>
+```
+
+**WARNING — token hygiene rules for every session:**
+1. NEVER write the token value into any file saved to outputs or pushed to the repo. Not in scripts, not in HTML comments, not in WORKFLOW.md deltas.
+2. NEVER print the token in chat, in logs, or in command echoes. The push script scrubs it from its own output; keep it that way.
+3. NEVER hardcode it back into `push_to_github.py`. The previous hardcoded token was exposed publicly and had to be revoked (Jul 2026).
+4. If the token ever appears in a pushed file or in the public repo history: tell Periodic_agent immediately so he can revoke it on GitHub.
+
+**Expiry:** fine-grained PATs expire (1 year max). If a push fails with an auth error, the likely cause is expiry; Periodic_agent mints a new token and replaces `git_pat_token.txt` in project knowledge.
 
 ---
 
@@ -534,55 +555,4 @@ a.box-banner:hover { transform: translateY(-2px); border-color: #d4699f; }
 
 ### Chapter Label Convention (finalized)
 
-- Core Box guides: `Captain's Chair` — no "Strategy Guide" or "Strategy Compendium" suffix
-- TBG guides: `To Boldly Go`
-- Guide h1 titles: captain name only (e.g. `Thy'Lek Shran`, `Koloth, the Dahar Master`)
-
----
-
-### Video Playthroughs — Updated Mapping
-
-| Guide | Videos |
-|---|---|
-| picard.html | Two-Player Tutorial (`youtube.com/live/qZnTVD4yOpU`) |
-| burnham.html | Burnham Solo (`youtube.com/watch?v=QzXbE_pjKtM`) |
-| solo.html | Tutorial pt.1 + pt.2 + Burnham Solo |
-| vs-picard.html | Two-player tutorial + Riker vs Picard Bot |
-
----
-
-### TBG Persons Guide
-
-- File: `tbg-persons.html` — live
-- 17 new cards + 9 repeats listed
-- Card format: `<p class="lore">` for Notable Episodes + lore text, `<p>` for strategy
-- Memory Alpha episode links on all Notable Episodes references
-- Phlox image placed before the repeats list
-- TOC pill color: gold (`#e8a94a`) matching Core Box Person Deck
-
----
-
-### Analytics
-
-GoatCounter script added to all 18 guides + index.html:
-```html
-<script data-goatcounter="https://stcc-compendium.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-```
-Place just before `</body>` on every page including future guides.
-
----
-
-### Card Scanner Attribution
-
-The Card Scanner footer uses only `Card images © WizKids.` — no McCue content attribution line. Contributors will be acknowledged separately as the project grows.
-
----
-
-### Design Principle: Guides vs Tools
-
-- Guides = McCue's strategy content, formatted by Periodic_agent
-- Tools = built by Periodic_agent (Card Scanner, future tools)
-- Keep these conceptually separate: don't add mechanical card data to guides; link to Card Scanner instead
-- "Guides are for guiding, Card Scanner is a fun tool"
-
+- Core Box guides: `Captain's Chair` — no "Strategy Guide" or "Stra
