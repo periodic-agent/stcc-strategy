@@ -1,0 +1,137 @@
+/* ============================================================
+   ST:CC Strategy Compendium — shared design system
+   v1 — consolidated from 22 per-guide <style> blocks, Jul 2026
+   Themes: default = Core Box (blue)
+           <body class="theme-tbg"> = To Boldly Go (red)
+           <body class="theme-sc">  = Second Contact (amber)
+   Link as: <link rel="stylesheet" href="css/stcc.css?v=1">
+   Bump ?v= on every change (GitHub Pages caches hard).
+   ============================================================ */
+
+:root{
+  --bg:#0a0e1a;--bg2:#0f1628;--bg3:#141c35;
+  --accent:#4a9fd4;--accent2:#7ec8f0;--accent-rgb:74,159,212;
+  --gold:#c8a84b;--text:#ccd6f0;--muted:#7a8aaa;--green:#4ac48a;
+  --border:rgba(74,159,212,0.25);
+  --ui:var(--accent);            /* nav links, tags, footer links */
+  --hdr-edge:#061020;--hdr-mid:#0d1e3a;
+  --title-glow:0.5;
+}
+body.theme-tbg{
+  --accent:#d44a4a;--accent2:#f07e7e;--accent-rgb:212,74,74;
+  --border:rgba(212,74,74,0.25);
+  --ui:var(--accent2);
+  --hdr-edge:#160608;--hdr-mid:#2a0e10;
+  --title-glow:0.4;
+}
+body.theme-sc{
+  --accent:#c8a84b;--accent2:#e8c96a;--accent-rgb:200,168,75;
+  --border:rgba(200,168,75,0.25);
+  --ui:var(--accent2);
+  --hdr-edge:#161206;--hdr-mid:#2a2410;
+  --title-glow:0.4;
+}
+
+/* ---- base ---- */
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:var(--text);line-height:1.75;font-size:1rem;}
+p{margin-bottom:1rem;}
+s{text-decoration:line-through;opacity:0.6;}
+h2{font-family:'Orbitron',sans-serif;font-size:1rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent2);border-left:3px solid var(--accent);padding-left:0.75rem;margin:2.5rem 0 1rem;}
+h3{font-family:'Orbitron',sans-serif;font-size:0.8rem;font-weight:400;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;margin:1.75rem 0 0.5rem;}
+body.theme-tbg h3,body.theme-sc h3{font-size:0.85rem;font-weight:700;margin:2rem 0 0.75rem;}
+
+/* ---- navigation ---- */
+.nav-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:0.75rem 1.5rem;}
+.nav-bar a{font-family:'Orbitron',sans-serif;font-size:0.65rem;letter-spacing:0.15em;color:var(--ui);text-decoration:none;text-transform:uppercase;}
+.back-top{display:block;text-align:right;font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-top:0.25rem;margin-bottom:0.5rem;}
+.back-top:hover{color:var(--ui);}
+
+/* ---- chapter header ---- */
+.chapter-header{background:linear-gradient(135deg,var(--hdr-edge) 0%,var(--hdr-mid) 50%,var(--hdr-edge) 100%);border-bottom:2px solid var(--accent);padding:3rem 2rem 2rem;text-align:center;position:relative;overflow:hidden;}
+.chapter-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(var(--accent-rgb),0.03) 60px,rgba(var(--accent-rgb),0.03) 61px);}
+.chapter-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.25em;color:var(--accent);text-transform:uppercase;margin-bottom:0.75rem;}
+.chapter-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.6rem,5vw,2.8rem);font-weight:700;color:#fff;letter-spacing:0.05em;text-shadow:0 0 40px rgba(var(--accent-rgb),var(--title-glow));}
+.chapter-title span{color:var(--accent2);}
+.chapter-meta{margin-top:1rem;font-size:0.8rem;color:var(--muted);letter-spacing:0.1em;}
+.chapter-meta a{color:var(--accent2);text-decoration:none;}
+.chapter-date{font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;margin-top:0.3rem;}
+.chapter-tags{display:flex;justify-content:center;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;}
+.tag{font-family:'Orbitron',sans-serif;font-size:0.6rem;letter-spacing:0.1em;padding:0.2rem 0.6rem;border:1px solid var(--accent);color:var(--ui);border-radius:2px;}
+
+/* ---- layout ---- */
+.content{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem;}
+
+/* ---- table of contents ----
+   .toc-card colors are per-guide (suit colors): keep those two
+   rules in each market guide's inline <style>. */
+.toc-grid{max-width:860px;margin:1.5rem auto 0;padding:0 1.5rem;}
+.toc-grid-label{font-family:'Orbitron',sans-serif;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem;}
+.toc-cards{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.toc-list{max-width:860px;margin:1.5rem auto 0;padding:0 1.5rem;}
+.toc-list-label{font-family:'Orbitron',sans-serif;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem;}
+.toc-list ol{list-style:none;display:flex;flex-wrap:wrap;gap:0.3rem 1.5rem;padding:0 0 0 1rem;margin:0;border-left:2px solid var(--border);}
+.toc-list li{font-size:0.8rem;}
+.toc-list a{color:var(--accent2);text-decoration:none;}
+.toc-list a:hover{color:#fff;text-decoration:underline;}
+
+/* ---- images ---- */
+.card-row{display:flex;gap:0.75rem;overflow-x:auto;padding:1rem 0 0.5rem;margin:1rem 0 1.5rem;scrollbar-width:thin;scrollbar-color:var(--accent) var(--bg2);}
+.card-row::-webkit-scrollbar{height:4px;}
+.card-row::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px;}
+.card-row::-webkit-scrollbar-track{background:var(--bg2);}
+.card-row img{height:220px;width:auto;border-radius:6px;border:1px solid var(--border);flex-shrink:0;transition:transform 0.2s,box-shadow 0.2s;cursor:zoom-in;}
+.card-row img:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 12px 30px rgba(var(--accent-rgb),0.3);border-color:var(--accent);}
+.card-img{margin:0.75rem 0 1.25rem;}
+.card-img img{max-width:260px;width:100%;border-radius:8px;border:1px solid var(--border);display:block;transition:transform 0.2s,box-shadow 0.2s;cursor:zoom-in;}
+.card-img img:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 25px rgba(var(--accent-rgb),0.25);border-color:var(--accent);}
+.card-grid-small{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:0.75rem;margin:1rem 0 1.5rem;}
+.board-pair{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.25rem 0;}
+.board-pair img{width:100%;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;transition:transform 0.2s,box-shadow 0.2s;}
+.board-pair img:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 12px 30px rgba(var(--accent-rgb),0.3);border-color:var(--accent);}
+.board-label{font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.15em;color:var(--muted);text-align:center;margin-top:0.4rem;text-transform:uppercase;}
+.img-pair{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0 1.5rem;}
+.img-pair img{width:100%;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;transition:transform 0.2s,box-shadow 0.2s;}
+.img-pair img:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(var(--accent-rgb),0.25);border-color:var(--accent);}
+.guide-img{max-width:100%;border-radius:6px;border:1px solid var(--border);margin:1rem 0 1.5rem;cursor:zoom-in;transition:transform 0.2s,box-shadow 0.2s;display:block;}
+.guide-img:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(var(--accent-rgb),0.25);border-color:var(--accent);}
+
+/* ---- lore ---- */
+.lore{font-style:italic;color:#a8b8d0;border-left:3px solid rgba(200,168,75,0.4);padding-left:1rem;margin-bottom:1rem;line-height:1.8;}
+.lore a,.card-props a{color:#c8a84b;text-decoration:none;border-bottom:1px dotted rgba(200,168,75,0.5);}
+.lore a:hover,.card-props a:hover{color:#e8c878;border-bottom-color:#e8c878;}
+
+/* ---- card property lists ---- */
+.card-props{list-style:none;padding:0;margin:0.75rem 0 1rem;display:flex;flex-direction:column;gap:0.35rem;}
+.card-props li{font-size:0.85rem;line-height:1.5;padding-left:1rem;position:relative;color:var(--text);}
+.card-props li strong{color:var(--accent2);}
+.card-props li::before{content:'—';position:absolute;left:0;color:var(--gold);font-weight:600;}
+
+/* ---- video playthroughs ---- */
+.yt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:1.25rem 0 2rem;}
+.yt-card{text-decoration:none;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:var(--bg2);transition:border-color 0.2s,transform 0.2s;}
+.yt-card:hover{border-color:var(--accent);transform:translateY(-3px);}
+.yt-thumb{position:relative;}
+.yt-thumb img{width:100%;display:block;}
+.yt-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#fff;text-shadow:0 0 12px rgba(0,0,0,0.8);opacity:0.85;}
+.yt-card:hover .yt-play{opacity:1;}
+.yt-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.08em;color:var(--text);padding:0.6rem 0.75rem 0.2rem;}
+.yt-sub{font-size:0.72rem;color:var(--muted);padding:0 0.75rem 0.75rem;}
+
+/* ---- footer ---- */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:0.75rem;color:var(--muted);line-height:1.8;}
+footer a{color:var(--ui);text-decoration:none;}
+
+/* ---- lightbox ---- */
+#lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:1000;align-items:center;justify-content:center;cursor:zoom-out;}
+#lightbox.open{display:flex;}
+#lightbox img{max-width:90vw;max-height:90vh;border-radius:8px;box-shadow:0 0 60px rgba(var(--accent-rgb),0.4);}
+
+/* ---- mobile ---- */
+@media (max-width:600px){
+  .chapter-header{padding:2rem 1rem 1.5rem;}
+  .card-row img{height:170px;}
+  .card-img img{max-width:100%;}
+  .board-pair{grid-template-columns:1fr;}
+  .img-pair{grid-template-columns:1fr;}
+}
