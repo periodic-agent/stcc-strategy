@@ -48,4 +48,4 @@ Tracked improvements for the site. Ordered by priority.
 
 **Migration:** per-guide, same proof-then-batch approach as Issue 2. Doing Issues 2 and 3 together per guide minimizes push cycles.
 
-**Status:** open
+**Status:** DONE — 04 Jul 2026. All 12 core guides on library card images (~19 MB base64 removed); boards in img/guides/[captain]/; five-year-mission charts extracted; TBG embedded card art extracted to img/box2/ as JPG (35 cards, seeds the Box 2 scanner library, box2.json still pending). Remaining loose end: 4 images still on the BGG CDN (Kemocite, Cold Station 12, Tanuga IV, Tellar Prime) — save into img/box2/ someday to drop the CDN dependency. Untouched by design: solo, vs-picard, tbg-allies, tbg-ships, tbg-encounters-incidents, sc-market (already light, CDN-hosted).
