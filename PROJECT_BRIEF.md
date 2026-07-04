@@ -41,10 +41,10 @@ End-of-session prompt for any sub-project chat:
 
 Usage (Claude runs this internally):
 ```
-python push_to_github.py <local_path> <repo_path> "commit message"
+GH_TOKEN=<token> python3 push_to_github.py <local_path> <repo_path> "commit message"
 ```
 
-PAT token is hardcoded in the script. Claude fetches the script from the live repo, runs it, confirms the push. Files go straight to GitHub, GitHub Pages deploys in ~60 seconds.
+The token is NOT hardcoded: it is a fine-grained PAT (stcc-strategy only, Contents read/write) stored in project knowledge as `git_pat_token.txt`, passed at run time via the `GH_TOKEN` environment variable or `--token-file`. See "GitHub Token Handling" in WORKFLOW.md, including the token hygiene warnings. Claude fetches the script from the live repo, runs it, confirms the push. Files go straight to GitHub, GitHub Pages deploys in ~60 seconds.
 
 ## Tools
 - **card-browser-mockup.html** — interactive card scanner. Filters by box, deck, suit, trait, skill, and name search. Data source is `box1.json` (255 cards). Cards/Images view toggle. Deck grouping. Built for mid-game lookup use case.
@@ -82,11 +82,4 @@ PAT token is hardcoded in the script. Claude fetches the script from the live re
 ## Conventions
 See WORKFLOW.md for all formatting conventions including:
 - CSS design system and variables
-- Card property list format (.card-props)
-- Lore paragraph styling (.lore)
-- Video playthroughs section template
-- Memory Alpha episode link format
-- Posted/edited date format
-- Footer attribution format
-- Structural safety rules (always insert before </main>)
-- Image extraction notes (unquoted src= pattern)
+- Card property list fo
