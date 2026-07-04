@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /harmless_kitten.html
+
+Sitemap: https://periodic-agent.github.io/stcc-strategy/sitemap.xml
