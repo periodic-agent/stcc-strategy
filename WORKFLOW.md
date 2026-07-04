@@ -134,6 +134,19 @@ Claude will:
 
 ## HTML Design System
 
+### Shared stylesheet — css/stcc.css (since 04 Jul 2026)
+
+All 22 guides link one shared stylesheet instead of carrying inline CSS:
+```html
+<link rel="stylesheet" href="css/stcc.css?v=1">
+```
+- **Theme by body class:** Core Box = plain `<body>`; To Boldly Go = `<body class="theme-tbg">`; Second Contact = `<body class="theme-sc">`. Theme classes override only the accent variables (`--accent`, `--accent2`, `--accent-rgb`, `--border`, `--ui`, `--hdr-edge`, `--hdr-mid`, `--title-glow`).
+- **Semantic variables:** rules use `var(--accent)` etc., never `--blue`/`--red`/`--amber` (those names are retired).
+- **Cache:** GitHub Pages serves with max-age 600 s, so stcc.css changes propagate within ~10 min on their own. Bump `?v=` in all guides only if a change must land instantly.
+- **Inline `<style>` is kept ONLY for:** market guide `.toc-card`/`.toc-card:hover` suit colors (2 rules per guide); `sc-market-locations-rewards.html` `.toc-grid-label` margin-top; `vs-picard.html` `ul`/`li`/`li strong` list styles. Everything else belongs in stcc.css.
+- **New guides:** link stcc.css + set the theme class. Do NOT paste a full CSS block; the canonical CSS below is retired (kept as color reference only).
+- **Lightbox:** CSS is in stcc.css, but each guide still needs the lightbox HTML + script snippet (see Lightbox section).
+
 ### Box 1 — Captain's Chair: **Blue**
 - Accent: `#4a9fd4` / `#7ec8f0`
 - Header gradient: `#061020 → #0d1e3a`
@@ -186,10 +199,8 @@ Top and bottom of every guide. Top nav goes **before** `<header>`.
 ```
 The date is the day the guide was built/rebuilt. Update it whenever the source guide is edited on BGG and reimported.
 
-### chapter-date CSS (add to every guide)
-```css
-  .chapter-date{font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;margin-top:0.3rem;}
-```
+### chapter-date CSS
+Now in stcc.css; no per-guide CSS needed.
 
 ### Lightbox
 ```html
@@ -212,23 +223,14 @@ All images use `onclick="openLightbox(this)"`.
 
 **Market guides** (Person, Ally, Ship, Cargo, Location, Encounters & Incidents) get a **pill grid** below the header.
 
-Swap blue vars for red equivalents for TBG guides.
-
-```css
+All structural TOC CSS is in stcc.css. Each market guide keeps only its two suit-color rules inline:
+```html
 <style>
-  :root{--bg:#0a0e1a;--bg2:#0f1628;--bg3:#141c35;--blue:#4a9fd4;--blue2:#7ec8f0;--gold:#c8a84b;--text:#ccd6f0;--muted:#7a8aaa;--green:#4ac48a;--border:rgba(74,159,212,0.25);}
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:var(--text);line-height:1.75;font-size:1rem;}
-  .nav-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:0.75rem 1.5rem;}
-  .nav-bar a{font-family:'Orbitron',sans-serif;font-size:0.65rem;letter-spacing:0.15em;color:var(--blue);text-decoration:none;text-transform:uppercase;}
-  .chapter-header{background:linear-gradient(135deg,#061020 0%,#0d1e3a 50%,#061020 100%);border-bottom:2px solid var(--blue);padding:3rem 2rem 2rem;text-align:center;position:relative;overflow:hidden;}
-  .chapter-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(74,159,212,0.03) 60px,rgba(74,159,212,0.03) 61px);}
-  .chapter-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.25em;color:var(--blue);text-transform:uppercase;margin-bottom:0.75rem;}
-  .chapter-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.6rem,5vw,2.8rem);font-weight:700;color:#fff;letter-spacing:0.05em;text-shadow:0 0 40px rgba(74,159,212,0.5);}
-  .chapter-title span{color:var(--blue2);}
-  .chapter-meta{margin-top:1rem;font-size:0.8rem;color:var(--muted);letter-spacing:0.1em;}
-  .chapter-tags{display:flex;justify-content:center;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;}
+  .toc-card{ ... suit color + border ... }
+  .toc-card:hover{ ... suit border-color ... }
+</style>
 ```
+Suit colors are in the Card Scanner palette table below.
 
 ---
 
@@ -555,4 +557,6 @@ a.box-banner:hover { transform: translateY(-2px); border-color: #d4699f; }
 
 ### Chapter Label Convention (finalized)
 
-- Core Box guides: `Captain's Chair` — no "Strategy Guide" or "Stra
+- Core Box guides: `Captain's Chair` — no "Strategy Guide" or "Strategy Compendium" suffix
+- TBG guides: `To Boldly Go`
+- Guide h1 titles: captain name only (e.g. `Thy'Lek S
