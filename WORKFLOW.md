@@ -334,11 +334,15 @@ data/
 - Image placeholder shown until `/img/cards/[box]/[filename].jpg` exists
 - Image assets pending volunteer scanning
 
-### Update cycle
-1. Volunteer updates Google Sheet or new JSON provided
-2. In new session: pull sheet via Google Drive MCP or upload new JSON
-3. Rebuild card JSON, re-inject into HTML
-4. Present for download, Periodic_agent pushes to GitHub
+### Update cycle (revised 04 Jul 2026)
+**The community sheet on Google Drive is canonical for Box 2 and Box 3 card data.**
+- File: `stcc-card-database.xlsx` on Periodic_agent's Drive (kept as .xlsx; volunteers edit via shared link in Sheets Office mode). Drive file ID stays constant.
+- Tabs: README, TBG (Box 2), Second Contact (Box 3), Vocabulary. Status column tracks progress (AI-seeded — verify / verified / needs entry / unreadable). Card image column links to the live site.
+- **Never regenerate the sheet wholesale.** To add cards: read the live sheet (Google Drive connector), merge by Card code (fallback key: box + name + suit), append ONLY new rows, hand Periodic_agent the updated .xlsx. Periodic_agent updates Drive via right-click → Manage versions → Upload new version (keeps the ID and the shared link; never delete-and-reupload).
+- Existing rows are never modified by a merge; "verified" statuses and Contributor credits survive every update.
+- **New guide imports feed the database:** when a TBG/2C guide is imported, extract its card images to `img/box2/` or `img/box3/` (convention names) AND read the card faces into new sheet rows before the guide ships.
+- Scanner build: read the sheet, validate traits against the Vocabulary tab (flag novel traits, don't reject), emit `box2.json` / `box3.json`, re-inject into the Card Scanner. Same schema as box1.json.
+- Card codes (e.g. 2PER07/26) are the stable ids; optional for volunteers, backfilled during verification. Dagger (†) marks updated repeats from the core box.
 
 ### Analytics
 GoatCounter tracker included: `https://stcc-compendium.goatcounter.com/count`
