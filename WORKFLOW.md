@@ -23,6 +23,12 @@ bash: write file to /mnt/user-data/outputs/filename.html
 present_files(["/mnt/user-data/outputs/filename.html"])
 ```
 
+## Session Startup Smoke Test (any model)
+
+Before touching content in a new session: (1) fetch PROJECT_BRIEF.md and WORKFLOW.md from the live repo; (2) confirm the token file is readable from project knowledge; (3) dry-run the push script against an unchanged file — expected output: "No changes ... Nothing pushed." Two minutes, proves the whole pipeline. Session tooling (CSS parser/verifier, guide migrators, montage generator, workbook builder) lives in `tools/` — adapt those, don't reinvent.
+
+---
+
 **Push: Claude pushes to GitHub directly via `push_to_github.py`, but ONLY after Periodic_agent reviews the presented file and explicitly approves. Never push before the go-ahead.**
 
 ```
