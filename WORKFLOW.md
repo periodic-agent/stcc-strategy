@@ -506,6 +506,18 @@ Second Contact (pending):
 
 ## Image Extraction Notes
 
+### Promo / CDN-only guides — images must be user-downloaded (learned Jul 2026, Promo Pack 2)
+
+Some BGG threads embed card images ONLY as `cf.geekdo-images.com` CDN URLs (no base64 in the SingleFile HTML). The Promo Pack 2 thread was one of these. For these:
+
+- **The sandbox CANNOT download the images.** BGG's CDN returns `403 Forbidden` to server-side/sandboxed fetches. It serves normally from a real browser/OS network. So Claude generates a `download_[guide]_images.py` script, Periodic_agent runs it locally, and uploads the resulting files. Claude then pushes them to the repo. There is no way around the 403 from inside the session.
+- **The HTML usually carries only the `__medium` (500x500) variant.** To get higher resolution, the download script should try resolution variants largest-first per image (`__original` -> `__large` -> `__medium`) and keep the first that resolves. Do not assume `__medium` is the best available.
+- **BGG "png" cards often arrive as palette-mode PNG data with a `.jpg` extension.** Before pushing, convert them to real JPEG (`Image.open(f).convert('RGB').save(out,'JPEG',quality=92)`) so the file content matches the `.jpg` name the guide/JSON expect. Keep the convention filenames (promo cards: no deck prefix).
+- **Promo images live in their own folder** per the box-key table: Promo Pack 1 -> `img/promo1/`, Promo Pack 2 -> `img/promo2/`. Data still lives in the era's box JSON (`box1.json` / `box2.json`), images do not.
+- Once uploaded, switch the guide's `<img src>` from the CDN URL to the local `img/promo2/<name>.jpg` path so the site self-hosts.
+
+### BGG SingleFile HTML — two image formats encountered:
+
 ### BGG SingleFile HTML — two image formats encountered:
 1. **CSS `--sf-img-N` variables with CDN `content=""` URLs** (Shran guide)
    → Extract URLs → run `download_images.py` → upload → embed as base64
