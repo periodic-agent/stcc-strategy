@@ -229,14 +229,16 @@ All images use `onclick="openLightbox(this)"`.
 
 **Market guides** (Person, Ally, Ship, Cargo, Location, Encounters & Incidents) get a **pill grid** below the header.
 
-All structural TOC CSS is in stcc.css. Each market guide keeps only its two suit-color rules inline:
+Structural TOC CSS (`.toc-grid`, `.toc-grid-label`, `.toc-cards`) is in stcc.css. The individual `.toc-card` link rule is NOT in stcc.css — it must be pasted inline in each market guide, in full, because it carries the per-guide suit color. Copy the WHOLE rule (font, padding, border-radius, `color`, `background`, `text-decoration:none`, transition), not just the border line. The only per-guide variable is the suit color in `border` and `:hover` `border-color`.
+
+If you copy only the border/color lines and omit `color`/`text-decoration:none`/`background`/`padding`/`border-radius`, the pills fall back to default blue underlined browser anchors (this bug shipped in promo-pack-2 on 09 Jul 2026 and had to be patched). Canonical full rule:
 ```html
 <style>
-  .toc-card{ ... suit color + border ... }
-  .toc-card:hover{ ... suit border-color ... }
+  .toc-card{font-family:'Exo 2',sans-serif;font-size:0.75rem;font-weight:400;padding:0.2rem 0.6rem;border:1px solid <SUIT>55;border-radius:3px;color:#ccd6f0;text-decoration:none;background:var(--bg2);transition:background 0.15s,border-color 0.15s;}
+  .toc-card:hover{background:var(--bg3);border-color:<SUIT>;}
 </style>
 ```
-Suit colors are in the Card Scanner palette table below.
+Replace `<SUIT>` with the suit hex from the Card Scanner palette table below.
 
 ---
 
