@@ -91,6 +91,8 @@ def main():
             continue
         if any(plain(norm(line)).startswith(plain(norm(c))) for c in cuts if c.strip()):
             continue
+        for a, to in cfg.get("replace", []):
+            line = line.replace(a, to)
         t = norm(line)
         if t and t not in flat:
             failures.append("VERBATIM line %d missing/altered: %s..." % (i, t[:80]))

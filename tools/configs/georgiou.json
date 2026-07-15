@@ -51,5 +51,11 @@
       "sub": "Solo · Gaming Rules!"
     }
   ],
-  "video_intro": "Playthrough by Paul Grogan (Gaming Rules!) featuring Georgiou:"
+  "video_intro": "Playthrough by Paul Grogan (Gaming Rules!) featuring Georgiou:",
+  "replace": [
+    [
+      "D’Kyr Crusier",
+      "D’Kyr Cruiser"
+    ]
+  ]
 }

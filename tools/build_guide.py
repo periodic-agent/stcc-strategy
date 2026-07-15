@@ -199,6 +199,13 @@ def fmt_inline(t):
     return t
 
 
+
+def _apply_repl(text, pairs):
+    for a, to in pairs:
+        text = text.replace(a, to)
+    return text
+
+
 def build_body(marked, cfg, manifest, report):
     """Emit <main> body HTML plus the H2 list for the TOC."""
     slug = cfg["slug"]
@@ -228,6 +235,11 @@ def build_body(marked, cfg, manifest, report):
             tokens.append(("h3", m.group(1).strip()))
             continue
         tokens.append(("p", line))
+
+    # sanctioned corrections (config "replace": [[from, to], ...]);
+    # use these ONLY for fixes Periodic_agent/McCue explicitly approved.
+    repl = cfg.get("replace", [])
+    tokens = [(k, _apply_repl(v, repl) if k != "img" else v) for k, v in tokens]
 
     # cuts + inserted structural H2s
     out = []
