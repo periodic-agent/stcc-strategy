@@ -78,7 +78,8 @@ Formatted by **Periodic_agent**
 
 ## Rules
 
-1. **Zero text edits.** McCue's text is reproduced verbatim — no summarizing, no rewriting, no restructuring. Format only: headings, paragraph breaks, image placement.
+1. **Verbatim by default.** McCue's text is reproduced as posted — no summarizing, no rewriting, no restructuring. Format only: headings, paragraph breaks, image placement.
+1a. **Periodic_agent-directed edits are sanctioned (Jul 2026).** McCue now trusts Periodic_agent with corrections. When Periodic_agent says edit, we edit — no pushback, no re-confirmation. Every text edit goes through the guide config's `"replace"` list (never a silent hand-edit to the HTML), so there is an audit trail and the fix survives reimports. The verify gate enforces this: unlisted deviations still fail.
 2. **Paragraph breaks** must sometimes be identified by asking for the last sentence of each paragraph when the source text runs together (BGG strips formatting).
 3. **Image credit** footer on every guide: `Card images © WizKids.`
 4. **Attribution** footer on every guide: `Content by Matthew McCue (mdmccu2) · Formatting by Periodic_agent`
