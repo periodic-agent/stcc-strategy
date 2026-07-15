@@ -1,0 +1,36 @@
+{
+  "slug": "georgiou",
+  "box": "tbg",
+  "page_title": "Philippa Georgiou",
+  "title_html": "Philippa <span>Georgiou</span>",
+  "description": "Philippa Georgiou strategy guide for Star Trek: Captain's Chair — To Boldly Go: captain board, missions, available cards, reserve and development decks. By Matthew McCue.",
+  "posted": "14 Jul 2026",
+  "tags": ["Human", "Starfleet", "Complexity 2/10"],
+  "og_image": "img/box2/georgiou-captain-georgiou.jpg",
+  "image_names": {
+    "HC Incident": "hostile-contact",
+    "Shenzhou": "uss-shenzhou",
+    "Georgiou Basic": "board-basic",
+    "Georgiou Advanced": "board-advanced"
+  },
+  "board_alts": ["Georgiou Basic", "Georgiou Advanced"],
+  "insert_h2": [
+    {"title": "Missions", "before": "Georgiou's player board has basic side"},
+    {"title": "Captain Card & Starting Components", "before": "Georgiou has five away teams"}
+  ],
+  "cut": [
+    "To Boldly Go is here, for some people!",
+    "Thanks for reading this nearly 15 page"
+  ],
+  "lore": ["For our first Captain guide of the To Boldly Go era"],
+  "no_lore": [],
+  "toc_labels": {
+    "Georgiou’s Reserve Deck Strategy": "Reserve Deck Strategy",
+    "Georgiou Development Strategy": "Development Strategy",
+    "Georgiou Starting Hand Strategies": "Starting Hand Strategies"
+  },
+  "videos": [
+    {"url": "https://youtu.be/WUWw63FQ_Vk", "label": "Georgiou Solo Playthrough", "sub": "Solo · Gaming Rules!"}
+  ],
+  "video_intro": "Playthrough by Paul Grogan (Gaming Rules!) featuring Georgiou:"
+}

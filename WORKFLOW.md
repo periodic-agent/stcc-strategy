@@ -536,7 +536,7 @@ Claude generates `download_[guide]_images.py` per guide by extracting CDN URLs f
 - **Burnham:** `burnham_board_basic`, `burnham_board_advanced`, `burnham_1` through `burnham_7`
 - **TBG Locations:** 6 embedded WebP + 3 CDN (Cold Station 12, Tanuga IV, Tellar Prime)
 
-> Images stay as **base64 in HTML** until the library grows large enough to justify an `images/` folder.
+> ~~Images stay as **base64 in HTML**~~ **Superseded (Jul 2026):** images now live in `img/box1|box2|box3/` (cards, `<captain>-<card>.jpg`) and `img/guides/<captain>/` (board photos). See the Guide Build Pipeline section.
 
 ---
 
@@ -584,3 +584,48 @@ a.box-banner:hover { transform: translateY(-2px); border-color: #d4699f; }
 - Core Box guides: `Captain's Chair` — no "Strategy Guide" or "Strategy Compendium" suffix
 - TBG guides: `To Boldly Go`
 - Guide h1 titles: captain name only (e.g. `Thy'Lek S
+
+---
+
+## Session Delta — 15 Jul 2026
+
+### Guide Build Pipeline (tools/)
+
+Guide creation is now scripted. The model never retypes McCue's text; the
+scripts move it verbatim from the SingleFile capture into the styled HTML.
+
+```
+python3 tools/build_guide.py <singlefile.html> tools/configs/<slug>.json --out out/
+python3 tools/verify_guide.py out/<slug>.html out/<slug>_text.txt --config tools/configs/<slug>.json --img-root out/
+```
+
+- **tools/build_guide.py** — extracts McCue's first post (balanced gg-markup-content), decodes all images (quoted and unquoted `src=` base64 WebP) to JPG with site naming, emits marked verbatim text, and builds the styled guide from `tools/guide-template.html`. All judgment calls live in the per-guide JSON config: cuts, lore paragraphs, inserted structural H2s (Missions, Captain Card & Starting Components), image name overrides, board alts, TOC label shortening, videos.
+- **tools/verify_guide.py** — machine gate before push: verbatim fidelity line-by-line, image refs resolve, anchors resolve, HTML balanced, footer/lightbox/GoatCounter furniture present. Exit 1 = do not push.
+- **tools/configs/georgiou.json** — real example config; copy and adapt per guide.
+- Validated by regenerating georgiou.html from its BGG capture: word-for-word identical output.
+
+**Per-guide session procedure (cheap path):**
+1. `git clone --depth 1` the repo (see cache warning below). One call.
+2. Write the config JSON (model judgment: cuts, lore, headers, tags, video from the Video Playthroughs table).
+3. Run build + verify in one bash call. Fix config, not output, if verify fails.
+4. Present draft for Periodic_agent's review; wait for approval; push guide + images + index flip with `push_to_github.py -m` (multi-file, one commit).
+5. Update the index: flip Soon → Live (`badge-video` ▶ span if the guide has a video), bump `hero-date`.
+
+### Current conventions (supersede older sections above)
+
+- **Shared stylesheet:** all guides link `css/stcc.css?v=N` and set `<body class="theme-tbg">` (TBG) or `theme-sc` (Second Contact); Core Box = no class. No per-guide CSS except market-guide `.toc-card` colors.
+- **Image folders:** cards `img/box1|box2|box3/<captain>-<card>.jpg`; captain boards `img/guides/<captain>/<captain>-board-basic|advanced.jpg`. JPG quality 90.
+- **Footer (current):** `Card images © WizKids.<br>Guides by Matthew McCue (mdmccu2) · Website by Periodic_agent`
+- **Chapter date:** `Posted <BGG post date>` (not build date).
+- **Captain guide TOC:** `.toc-list` Contents from H2 sections; market guides keep `.toc-card` pill grid.
+
+### Cost discipline (learned 14–15 Jul 2026, Georgiou = CA$15 the manual way)
+
+- **raw.githubusercontent.com serves stale files** (hours-old cache observed). `git clone --depth 1` and work from the local clone; it is one call and always current.
+- **Never fetch full guide pages into the chat context** to check conventions; grep the local clone instead. Conventions are documented here; trust this file first, verify with grep second.
+- **Batch bash calls.** Every tool round-trip replays the whole conversation; ten probes cost more than one scripted call.
+- **Model choice:** with build+verify scripts as the gate, build sessions can run on a cheaper model (Sonnet); verbatim fidelity is enforced mechanically, not by model care.
+
+### Known site nit
+
+- `.badge-video` class is used on Live captain entries in index.html but has no CSS definition (renders with base `.entry-badge` style). Pre-existing; harmless; define it whenever index.html gets its next styling pass.

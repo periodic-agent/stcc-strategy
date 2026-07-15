@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{PAGE_TITLE}} — ST:CC Compendium</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<link rel="canonical" href="https://periodic-agent.github.io/stcc-strategy/{{SLUG}}.html">
+<meta property="og:title" content="{{PAGE_TITLE}} — ST:CC Compendium">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:image" content="https://periodic-agent.github.io/stcc-strategy/{{OG_IMAGE}}">
+<meta property="og:url" content="https://periodic-agent.github.io/stcc-strategy/{{SLUG}}.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/stcc.css?v=1">
+</head>
+<body{{THEME_CLASS}}>
+
+<div id="top" class="nav-bar"><a href="index.html">← Back to Compendium</a></div>
+
+<header class="chapter-header">
+  <div class="chapter-label">{{CHAPTER_LABEL}}</div>
+  <h1 class="chapter-title">{{TITLE_HTML}}</h1>
+  <div class="chapter-meta">By Matthew McCue (mdmccu2)</div>
+  <div class="chapter-date">Posted {{POSTED}}</div>
+  <div class="chapter-tags">{{TAGS}}</div>
+</header>
+
+<nav class="toc-list">
+  <div class="toc-list-label">Contents</div>
+  <ol>
+{{TOC}}
+  </ol>
+</nav>
+
+<main class="content">
+
+{{BODY}}
+{{VIDEO_SECTION}}
+</main>
+
+<div class="nav-bar" style="padding:0.75rem 1.5rem;"><a href="index.html">← Back to Compendium</a></div>
+
+<footer>
+  Card images &copy; WizKids.<br>
+  Guides by Matthew McCue (mdmccu2) &middot; Website by Periodic_agent
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('open')">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+function openLightbox(img) {
+  document.getElementById('lightbox-img').src = img.src;
+  document.getElementById('lightbox').classList.add('open');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') document.getElementById('lightbox').classList.remove('open'); });
+</script>
+
+
+<script data-goatcounter="https://stcc-compendium.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
