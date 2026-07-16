@@ -15,6 +15,8 @@ with urllib.request.urlopen(req) as r:
 
 The live repo is authoritative — fetch live, including WORKFLOW.md. Do NOT work from project knowledge copies; they may be stale. Never assume file content from memory or previous sessions.
 
+**Raw URL proxy fallback:** if `raw.githubusercontent.com` (or any raw content URL) is proxy-blocked in a session, `git clone --depth 1 https://github.com/periodic-agent/stcc-strategy.git` works through the same proxy and provides every repo file locally, including images.
+
 After editing, save to `/mnt/user-data/outputs/` and call `present_files` to surface the file for review. Never render files inline in chat.
 
 ```python
@@ -85,6 +87,7 @@ Formatted by **Periodic_agent**
 4. **Attribution** footer on every guide: `Content by Matthew McCue (mdmccu2) · Formatting by Periodic_agent`
 5. **Back to Compendium** link at top and bottom of every guide.
 6. **Card Scanner footer** is different: `Card images © WizKids.` only — no content attribution line. Contributors will be acknowledged separately as the project grows.
+7. **Generators ship with their output.** Any script that generated or transformed pushed content ships in `tools/` in the same commit as that content. A push of generated files without its generator is incomplete.
 
 ---
 
@@ -247,11 +250,22 @@ Replace `<SUIT>` with the suit hex from the Card Scanner palette table below.
 
 ### File structure
 ```
-data/
-  box1.json    -- Captain's Chair, complete (255 cards)
-  box2.json    -- To Boldly Go, pending
-  box3.json    -- Second Contact, pending
+box1.json    -- Captain's Chair, complete (255 cards incl. Promo Pack 1)   [repo ROOT]
+box2.json    -- To Boldly Go, live (104 cards, partial: community-sourced)  [repo ROOT]
+box3.json    -- Second Contact, pending                                     [repo ROOT]
 ```
+The boxN.json files live at the **repo root**, not in a `data/` folder. (Earlier docs referenced `data/box1.json`; that path is stale.)
+
+### Scanner data — `ALL_CARDS`
+The Card Scanner (`card-browser-mockup.html`) holds its cards as a single inline
+`const ALL_CARDS = [...]` array, rebuilt from `box1.json` + `box2.json` (repo root) by
+`tools/build_scanner_data.py`. That script flattens the canonical schema
+(`source`->`deck`, `game_box`->`box`, `*_traits`->`species`/`regular`/`other`,
+`icons`->`"<specialty> <type>"` skill strings); the full mapping is documented in the
+script header. Regenerate the array with the tool — never hand-edit it. The scanner
+derives every filter pill and box/deck membership from these fields, so wiring a new box
+in is purely a data operation. **TBG (Box 2) is live in the array as of this commit;
+Box 3 pending.**
 
 ### Canonical JSON schema (per card)
 ```json
@@ -352,6 +366,17 @@ data/
 - **New guide imports feed the database:** when a TBG/2C guide is imported, extract its card images to `img/box2/` or `img/box3/` (convention names) AND read the card faces into new sheet rows before the guide ships.
 - Scanner build: read the sheet, validate traits against the Vocabulary tab (flag novel traits, don't reject), emit `box2.json` / `box3.json`, re-inject into the Card Scanner. Same schema as box1.json.
 - Card codes (e.g. 2PER07/26) are the stable ids; optional for volunteers, backfilled during verification. Dagger (†) marks updated repeats from the core box.
+- **Duplicate card names within a deck are legitimate** — a deck can contain two copies (e.g. Big Helmet ×2 in Rebner, codes 2REB21/22 and 2REB22/22). Give the second card's `id` a `-2` suffix and keep both rows; do NOT deduplicate.
+
+### Scanner regeneration checklist (box2/box3 → Card Scanner)
+Repeatable procedure — run whenever the community sheet gains cards. A future session can follow this as a checklist:
+1. **Fetch fresh.** `git clone --depth 1 https://github.com/periodic-agent/stcc-strategy.git` (raw-URL fallback, see Session Startup). `box1.json` and `box2.json` are at the repo **root**.
+2. **Read the sheet** via the Google Drive connector — file ID `186ZpFkLQsLX1blU3z45znMPwH9fE6yO3`, tab `TBG (Box 2)` (or `Second Contact (Box 3)`). Read-only; **never write to the sheet.** Export as .xlsx to get all tabs at once.
+3. **Rebuild `box2.json`** (repo root), canonical schema (identical to box1.json): `id` = slug(name), `name`, `suit`, `source` = Deck column, `game_box` = `"To Boldly Go"`, `species_traits`/`regular_traits`/`other_traits` = comma-split, `icons` = `{type: Skill}` from the "Skill icons" column + `{type: Focus}` from the "Focus icons" column (specialty ∈ Research/Influence/Military/Any/Variable), `filename` (`""` if no image — the scanner shows a NO IMAGE placeholder). Include every row with at least a name and suit, whatever its status.
+4. **Validate.** No duplicate ids (suffix `-2`, keep both — see duplicate note above). Check traits against the **Vocabulary** tab: warn on novel traits, never drop them. Report counts per suit.
+5. **Regenerate the scanner array:** `python tools/build_scanner_data.py card-browser-mockup.html box1.json box2.json -o card-browser-mockup.html`. Rebuilds the entire inline `ALL_CARDS` array; only that one line changes.
+6. **Preview + present.** Build a `-preview` copy (rewrite relative asset paths and `IMG_BASE` to the live site; **no `<base>` tag** — it breaks anchor links). Present `box2.json` and `card-browser-mockup.html` for review.
+7. **Push on Periodic_agent's explicit approval only** — `box2.json` + `card-browser-mockup.html` + `tools/build_scanner_data.py` in one commit (Rule 7). Scanner footer stays `Card images © WizKids.` (Rule 6); do not add a content-attribution line.
 
 ### Analytics
 GoatCounter tracker included: `https://stcc-compendium.goatcounter.com/count`
