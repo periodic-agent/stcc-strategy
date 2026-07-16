@@ -1,0 +1,1866 @@
+[
+  {
+    "id": "ambassador-gral",
+    "name": "Ambassador Gral",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Tellarite"
+    ],
+    "regular_traits": [
+      "Ambassador"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "ambassador-gral.jpg",
+    "icons": []
+  },
+  {
+    "id": "ash-tyler",
+    "name": "Ash Tyler",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human",
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Spy",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "ash-tyler.jpg",
+    "icons": []
+  },
+  {
+    "id": "commander-tysess",
+    "name": "Commander Tysess",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Andorian"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "commander-tysess.jpg",
+    "icons": []
+  },
+  {
+    "id": "degra",
+    "name": "Degra",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Xindi"
+    ],
+    "regular_traits": [
+      "Scientist"
+    ],
+    "other_traits": [],
+    "filename": "degra.jpg",
+    "icons": []
+  },
+  {
+    "id": "hoshi-sato",
+    "name": "Hoshi Sato",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "NX-01",
+      "Starfleet",
+      "Communication"
+    ],
+    "other_traits": [],
+    "filename": "hoshi-sato.jpg",
+    "icons": []
+  },
+  {
+    "id": "jackabog",
+    "name": "Jackabog",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Pakled"
+    ],
+    "regular_traits": [
+      "Shady"
+    ],
+    "other_traits": [],
+    "filename": "jackabog.jpg",
+    "icons": []
+  },
+  {
+    "id": "landru",
+    "name": "Landru",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Synthetic"
+    ],
+    "regular_traits": [
+      "Shady"
+    ],
+    "other_traits": [],
+    "filename": "landru.jpg",
+    "icons": []
+  },
+  {
+    "id": "malcolm-reed",
+    "name": "Malcolm Reed",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Ops",
+      "NX-01",
+      "Security",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "malcolm-reed.jpg",
+    "icons": []
+  },
+  {
+    "id": "malik",
+    "name": "Malik",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Weapon",
+      "Augment"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "malik.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Variable"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Variable"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Variable"
+      }
+    ]
+  },
+  {
+    "id": "petra-aberdeen",
+    "name": "Petra Aberdeen",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Scientist"
+    ],
+    "other_traits": [],
+    "filename": "petra-aberdeen.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "phlox",
+    "name": "Phlox",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "NX-01",
+      "Doctor"
+    ],
+    "other_traits": [],
+    "filename": "phlox-nx01.jpg",
+    "icons": []
+  },
+  {
+    "id": "president-rillak",
+    "name": "President Rillak",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human",
+      "Bajoran",
+      "Cardassian"
+    ],
+    "regular_traits": [
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "filename": "president-rillak.jpg",
+    "icons": []
+  },
+  {
+    "id": "sarina-douglas",
+    "name": "Sarina Douglas",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Augment"
+    ],
+    "other_traits": [],
+    "filename": "sarina-douglas.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ]
+  },
+  {
+    "id": "soji-asha",
+    "name": "Soji Asha",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Android",
+      "Synthetic"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "soji-asha.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "thelev",
+    "name": "Thelev",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Orion",
+      "Andorian"
+    ],
+    "regular_traits": [
+      "Spy"
+    ],
+    "other_traits": [],
+    "filename": "thelev.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "travis-mayweather",
+    "name": "Travis Mayweather",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "NX-01",
+      "Pilot",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "travis-mayweather.jpg",
+    "icons": []
+  },
+  {
+    "id": "vaal-trask",
+    "name": "Va'Al Trask",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Andorian"
+    ],
+    "regular_traits": [
+      "Ops",
+      "Weapon",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "vaal-trask.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "vice-admiral-pasalk",
+    "name": "Vice Admiral Pasalk",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "vice-admiral-pasalk.jpg",
+    "icons": []
+  },
+  {
+    "id": "augmentation-plague",
+    "name": "Augmentation Plague",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Augment"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "augmentation-plague.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "computer-virus",
+    "name": "Computer Virus",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Engineer",
+      "Communication"
+    ],
+    "other_traits": [
+      "Attack",
+      "Ongoing"
+    ],
+    "filename": "computer-virus.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "eva-suits",
+    "name": "EVA Suits",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Helmet",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "eva-suits.jpg",
+    "icons": []
+  },
+  {
+    "id": "jagos-epigenetic-implant",
+    "name": "Jago's Epigenetic Implant",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Doctor",
+      "Augment",
+      "Business"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "jagos-epigenetic-implant.jpg",
+    "icons": []
+  },
+  {
+    "id": "medical-diagnostic-hat",
+    "name": "Medical Diagnostic Hat",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Helmet",
+      "Doctor"
+    ],
+    "other_traits": [],
+    "filename": "medical-diagnostic-hat.jpg",
+    "icons": []
+  },
+  {
+    "id": "saurian-brandy",
+    "name": "Saurian Brandy",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Beverage"
+    ],
+    "other_traits": [],
+    "filename": "saurian-brandy.jpg",
+    "icons": []
+  },
+  {
+    "id": "universal-translator",
+    "name": "Universal Translator",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Communication"
+    ],
+    "other_traits": [],
+    "filename": "universal-translator.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "borg-spatial-trajector",
+    "name": "Borg Spatial Trajector",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "borg-spatial-trajector.jpg",
+    "icons": []
+  },
+  {
+    "id": "lirpa",
+    "name": "Lirpa",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "lirpa.jpg",
+    "icons": []
+  },
+  {
+    "id": "phasers",
+    "name": "Phasers",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "phasers.jpg",
+    "icons": []
+  },
+  {
+    "id": "orb-of-time",
+    "name": "Orb of Time",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "orb-of-time.jpg",
+    "icons": []
+  },
+  {
+    "id": "kemocite",
+    "name": "Kemocite",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Xindi"
+    ],
+    "regular_traits": [
+      "Shady",
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "filename": "kemocite.jpg",
+    "icons": []
+  },
+  {
+    "id": "argus-array",
+    "name": "Argus Array",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet",
+      "Communication"
+    ],
+    "other_traits": [],
+    "filename": "argus-array.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ]
+  },
+  {
+    "id": "denaxi-depot",
+    "name": "Denaxi Depot",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Xindi"
+    ],
+    "regular_traits": [
+      "Shady",
+      "Business"
+    ],
+    "other_traits": [],
+    "filename": "denaxi-depot.jpg",
+    "icons": []
+  },
+  {
+    "id": "tahal-meeroj",
+    "name": "Tahal-Meeroj",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "filename": "tahal-meeroj.jpg",
+    "icons": []
+  },
+  {
+    "id": "azati-prime",
+    "name": "Azati Prime",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Xindi"
+    ],
+    "regular_traits": [
+      "Engineer"
+    ],
+    "other_traits": [],
+    "filename": "azati-prime.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "babel-one",
+    "name": "Babel One",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Ambassador",
+      "Communication"
+    ],
+    "other_traits": [],
+    "filename": "babel-one.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "khitomer",
+    "name": "Khitomer",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human",
+      "Romulan",
+      "Klingon"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "khitomer.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "cold-station-12",
+    "name": "Cold Station 12",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Augment",
+      "Starbase"
+    ],
+    "other_traits": [],
+    "filename": "cold-station-12.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "tanuga-iv",
+    "name": "Tanuga IV",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Starbase",
+      "Scientist"
+    ],
+    "other_traits": [],
+    "filename": "tanuga-iv.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "tellar-prime",
+    "name": "Tellar Prime",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Tellarite"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "tellar-prime.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "kaelon-ii-science-ministry",
+    "name": "Kaelon II Science Ministry",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Scientist"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "kaelon-ii-science-ministry.jpg",
+    "icons": []
+  },
+  {
+    "id": "orion-syndicate",
+    "name": "Orion Syndicate",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Orion"
+    ],
+    "regular_traits": [
+      "Shady"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "orion-syndicate.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "red-squadron",
+    "name": "Red Squadron",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Pilot",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "red-squadron.jpg",
+    "icons": []
+  },
+  {
+    "id": "salt-vampires",
+    "name": "Salt Vampires",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Telepath",
+      "Creature"
+    ],
+    "other_traits": [],
+    "filename": "salt-vampires.jpg",
+    "icons": []
+  },
+  {
+    "id": "tellarites",
+    "name": "Tellarites",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "unimatrix-zero",
+    "name": "Unimatrix Zero",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Borg"
+    ],
+    "regular_traits": [
+      "Communication"
+    ],
+    "other_traits": [],
+    "filename": "unimatrix-zero.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "vadics-splinter-group",
+    "name": "Vadic's Splinter Group",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Changeling"
+    ],
+    "regular_traits": [
+      "Augment"
+    ],
+    "other_traits": [],
+    "filename": "vadics-splinter-group.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "vidiians",
+    "name": "Vidiians",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Shady",
+      "Doctor"
+    ],
+    "other_traits": [],
+    "filename": "vidiians.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "dkora-marauder",
+    "name": "D'Kora Marauder",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Ferengi"
+    ],
+    "regular_traits": [
+      "Business"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "dkora-marauder.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "dvar",
+    "name": "D'Var",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Orion"
+    ],
+    "regular_traits": [
+      "Scientist"
+    ],
+    "other_traits": [],
+    "filename": "dvar.jpg",
+    "icons": []
+  },
+  {
+    "id": "medusan-vessel",
+    "name": "Medusan Vessel",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Communication"
+    ],
+    "other_traits": [],
+    "filename": "medusan-vessel.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "vorcha-attack-cruiser",
+    "name": "Vor'cha Attack Cruiser",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Cloak"
+    ],
+    "other_traits": [],
+    "filename": "vorcha-attack-cruiser.jpg",
+    "icons": []
+  },
+  {
+    "id": "xindi-aquatic-cruiser",
+    "name": "Xindi-Aquatic Cruiser",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Xindi"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "xindi-aquatic-cruiser.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "delphic-expanse-sphere",
+    "name": "Delphic Expanse Sphere",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "filename": "delphic-expanse-sphere.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "gomtuu",
+    "name": "Gomtuu",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Ancient",
+      "Telepath"
+    ],
+    "other_traits": [
+      "Attack",
+      "Ongoing"
+    ],
+    "filename": "gomtuu.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "new-federation-applicants",
+    "name": "New Federation Applicants",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet",
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "filename": "new-federation-applicants.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Any"
+      }
+    ]
+  },
+  {
+    "id": "species-10-c",
+    "name": "Species 10-C",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Creature",
+      "Communication"
+    ],
+    "other_traits": [],
+    "filename": "species-10-c.jpg",
+    "icons": []
+  },
+  {
+    "id": "stone-of-gol",
+    "name": "Stone of Gol",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Weapon",
+      "Ancient"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "stone-of-gol.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "dilithium-shockwave",
+    "name": "Dilithium Shockwave",
+    "suit": "Incident",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [
+      "Surprise"
+    ],
+    "filename": "dilithium-shockwave.jpg",
+    "icons": []
+  },
+  {
+    "id": "reed-alert",
+    "name": "Reed Alert",
+    "suit": "Incident",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "reed-alert.jpg",
+    "icons": []
+  },
+  {
+    "id": "rebner",
+    "name": "Rebner",
+    "suit": "Captain",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Pakled"
+    ],
+    "regular_traits": [
+      "Shady"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "mondor",
+    "name": "Mondor",
+    "suit": "Ship",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Pakled"
+    ],
+    "regular_traits": [
+      "Business"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "big-enough-helmet",
+    "name": "Big Enough Helmet",
+    "suit": "Cargo",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Helmet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "karzill-vi",
+    "name": "Karzill VI",
+    "suit": "Location",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Business"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "varuvian-bomb",
+    "name": "Varuvian Bomb",
+    "suit": "Cargo",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "jackabogs-clumpship",
+    "name": "Jackabog's Clumpship",
+    "suit": "Ship",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Pakled"
+    ],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "harpy",
+    "name": "Harpy",
+    "suit": "Ship",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Pakled"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "the-pakled-emperor",
+    "name": "The Pakled Emperor",
+    "suit": "Person",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Pakled"
+    ],
+    "regular_traits": [
+      "Imperial"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "rumdar",
+    "name": "Rumdar",
+    "suit": "Person",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Pakled"
+    ],
+    "regular_traits": [
+      "Spy"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "ambassador-grubdin",
+    "name": "Ambassador Grubdin",
+    "suit": "Person",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Pakled"
+    ],
+    "regular_traits": [
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "the-clumpship-pakled",
+    "name": "The Clumpship Pakled",
+    "suit": "Ship",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Pakled"
+    ],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "even-bigger-helmet",
+    "name": "Even Bigger Helmet",
+    "suit": "Cargo",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Helmet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "reginod",
+    "name": "Reginod",
+    "suit": "Person",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Pakled"
+    ],
+    "regular_traits": [
+      "Engineer"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "red-alarm",
+    "name": "Red Alarm",
+    "suit": "Incident",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "rebelution",
+    "name": "Rebelution",
+    "suit": "Directive",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "pakled-decree",
+    "name": "Pakled Decree",
+    "suit": "Directive",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "salvage",
+    "name": "Salvage",
+    "suit": "Directive",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "samaritan-snare",
+    "name": "Samaritan Snare",
+    "suit": "Directive",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "grebnedlog",
+    "name": "Grebnedlog",
+    "suit": "Person",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Pakled"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "pakled-planet",
+    "name": "Pakled Planet",
+    "suit": "Location",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Pakled"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "big-helmet",
+    "name": "Big Helmet",
+    "suit": "Cargo",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Helmet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "big-helmet-2",
+    "name": "Big Helmet",
+    "suit": "Cargo",
+    "source": "Rebner",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Helmet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "philippa-georgiou",
+    "name": "Philippa Georgiou",
+    "suit": "Captain",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "georgiou-captain-georgiou.jpg",
+    "icons": []
+  },
+  {
+    "id": "uss-shenzhou",
+    "name": "U.S.S. Shenzhou",
+    "suit": "Ship",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "georgiou-uss-shenzhou.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "kaminar",
+    "name": "Kaminar",
+    "suit": "Location",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Kelpien"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "georgiou-kaminar.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "ambassador-sarek",
+    "name": "Ambassador Sarek",
+    "suit": "Person",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Telepath",
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "filename": "georgiou-ambassador-sarek.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "red-angel",
+    "name": "Red Angel",
+    "suit": "Encounter",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly",
+      "Time Travel"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "georgiou-red-angel.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "binary-stars-comms-relay",
+    "name": "Binary Stars Comms Relay",
+    "suit": "Location",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Communication"
+    ],
+    "other_traits": [],
+    "filename": "georgiou-binary-stars-comms-relay.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "an-old-telescope",
+    "name": "An Old Telescope",
+    "suit": "Cargo",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Ancient",
+      "Scientist"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "georgiou-an-old-telescope.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "thruster-pack",
+    "name": "Thruster Pack",
+    "suit": "Cargo",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "georgiou-thruster-pack.jpg",
+    "icons": []
+  },
+  {
+    "id": "admiral-anderson",
+    "name": "Admiral Anderson",
+    "suit": "Person",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "georgiou-admiral-anderson.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "set-a-course-georgiou",
+    "name": "Set a Course (Georgiou)",
+    "suit": "Directive",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "georgiou-set-a-course.jpg",
+    "icons": []
+  },
+  {
+    "id": "first-contact-georgiou",
+    "name": "First Contact (Georgiou)",
+    "suit": "Directive",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "georgiou-first-contact.jpg",
+    "icons": []
+  },
+  {
+    "id": "lt-saru",
+    "name": "Lt. Saru",
+    "suit": "Person",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Kelpien"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "georgiou-lt-saru.jpg",
+    "icons": []
+  },
+  {
+    "id": "cmdr-burnham",
+    "name": "Cmdr. Burnham",
+    "suit": "Person",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Scientist",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "georgiou-cmdr-burnham.jpg",
+    "icons": []
+  },
+  {
+    "id": "class-c-shuttlecraft",
+    "name": "Class C Shuttlecraft",
+    "suit": "Ship",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "georgiou-class-c-shuttlecraft.jpg",
+    "icons": []
+  },
+  {
+    "id": "analyze-georgiou",
+    "name": "Analyze (Georgiou)",
+    "suit": "Directive",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "georgiou-analyze.jpg",
+    "icons": []
+  },
+  {
+    "id": "recruit-georgiou",
+    "name": "Recruit (Georgiou)",
+    "suit": "Directive",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "georgiou-recruit.jpg",
+    "icons": []
+  },
+  {
+    "id": "strange-new-worlds-georgiou",
+    "name": "Strange New Worlds (Georgiou)",
+    "suit": "Directive",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "georgiou-strange-new-worlds.jpg",
+    "icons": []
+  },
+  {
+    "id": "utilize-georgiou",
+    "name": "Utilize (Georgiou)",
+    "suit": "Directive",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "georgiou-utilize.jpg",
+    "icons": []
+  },
+  {
+    "id": "vulcan-science-academy",
+    "name": "Vulcan Science Academy",
+    "suit": "Location",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Scientist"
+    ],
+    "other_traits": [],
+    "filename": "georgiou-vulcan-science-academy.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "danby-connor",
+    "name": "Danby Connor",
+    "suit": "Person",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Ops",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "georgiou-danby-connor.jpg",
+    "icons": []
+  },
+  {
+    "id": "lt-detmer",
+    "name": "Lt. Detmer",
+    "suit": "Person",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Pilot",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "georgiou-lt-detmer.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Variable"
+      }
+    ]
+  },
+  {
+    "id": "kamran-gant",
+    "name": "Kamran Gant",
+    "suit": "Person",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Security",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "georgiou-kamran-gant.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "hostile-contact-georgiou",
+    "name": "Hostile Contact (Georgiou)",
+    "suit": "Incident",
+    "source": "Georgiou",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "georgiou-hostile-contact.jpg",
+    "icons": []
+  }
+]
