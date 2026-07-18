@@ -1,10 +1,19 @@
+# ST:CC Compendium — Workflow
+## Single source of operational truth. Consolidated 18 Jul 2026 (see Changelog at bottom).
+
+---
+
 ## Session Startup
 
 Files live on GitHub Pages at:
 - **Live site:** https://periodic-agent.github.io/stcc-strategy/
-- **Raw files:** https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/[filename]
+- **GitHub repo:** https://github.com/periodic-agent/stcc-strategy
 
-At the start of each session, fetch BOTH PROJECT_BRIEF.md and WORKFLOW.md from the live repo, plus any files you'll be editing. `web_fetch` FAILS (permissions error) — use bash urllib instead:
+The live repo is authoritative — fetch live, including WORKFLOW.md. Do NOT work from project knowledge copies; they may be stale. Never assume file content from memory or previous sessions.
+
+**Preferred fetch: one shallow clone.** `raw.githubusercontent.com` serves stale files (hours-old cache observed) and is proxy-blocked in some sessions. `git clone --depth 1 https://github.com/periodic-agent/stcc-strategy.git` works through the same proxy, is always current, and provides every repo file locally, including images. One call.
+
+Fallback for single files where clone is unavailable — `web_fetch` FAILS (permissions error); use bash urllib instead:
 ```python
 import urllib.request
 url = 'https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/[filename]'
@@ -13,32 +22,29 @@ with urllib.request.urlopen(req) as r:
     html = r.read().decode()
 ```
 
-The live repo is authoritative — fetch live, including WORKFLOW.md. Do NOT work from project knowledge copies; they may be stale. Never assume file content from memory or previous sessions.
+After editing, save outputs and call `present_files` to surface the file for review. Never render files inline in chat.
 
-**Raw URL proxy fallback:** if `raw.githubusercontent.com` (or any raw content URL) is proxy-blocked in a session, `git clone --depth 1 https://github.com/periodic-agent/stcc-strategy.git` works through the same proxy and provides every repo file locally, including images.
-
-After editing, save to `/mnt/user-data/outputs/` and call `present_files` to surface the file for review. Never render files inline in chat.
-
-```python
-# Correct output pattern
-bash: write file to /mnt/user-data/outputs/filename.html
-present_files(["/mnt/user-data/outputs/filename.html"])
-```
-
-## Session Startup Smoke Test (any model)
+### Session Startup Smoke Test (any model)
 
 Before touching content in a new session: (1) fetch PROJECT_BRIEF.md and WORKFLOW.md from the live repo; (2) confirm the token file is readable from project knowledge; (3) dry-run the push script against an unchanged file — expected output: "No changes ... Nothing pushed." Two minutes, proves the whole pipeline. Session tooling (CSS parser/verifier, guide migrators, montage generator, workbook builder) lives in `tools/` — adapt those, don't reinvent.
 
+### Cost discipline (learned 14–15 Jul 2026)
+
+- `git clone --depth 1` and work from the local clone; do not probe raw URLs file by file.
+- **Never fetch full guide pages into the chat context** to check conventions; grep the local clone instead. Conventions are documented here; trust this file first, verify with grep second.
+- **Batch bash calls.** Every tool round-trip replays the whole conversation; ten probes cost more than one scripted call.
+- **Model choice:** with build+verify scripts as the gate, build sessions can run on a cheaper model (Sonnet); verbatim fidelity is enforced mechanically, not by model care.
+
 ---
+
+## Push Pipeline
 
 **Push: Claude pushes to GitHub directly via `push_to_github.py`, but ONLY after Periodic_agent reviews the presented file and explicitly approves. Never push before the go-ahead.**
 
 ```
 GH_TOKEN=<token> python3 push_to_github.py <local_path> <repo_path> "commit message"
 ```
-Fetch the script from the live repo before running. It shallow-clones the repo, copies the file in, commits, and pushes via git with a one-shot authenticated URL (no GitHub API dependency; `api.github.com` is blocked in some sandboxes while git over HTTPS works). Files deploy via GitHub Pages in ~60 seconds.
-
----
+Fetch the script from the live repo before running. It shallow-clones the repo, copies the file in, commits, and pushes via git with a one-shot authenticated URL (no GitHub API dependency; `api.github.com` is blocked in some sandboxes while git over HTTPS works). Files deploy via GitHub Pages in ~60 seconds. Multi-file commits: `-m "msg" local:repo local:repo ...`.
 
 ## GitHub Token Handling
 
@@ -61,11 +67,6 @@ python3 push_to_github.py <local_path> <repo_path> "message" --token-file <path_
 
 ---
 
-# ST:CC Compendium — Workflow Summary
-## For continuity across sessions
-
----
-
 ## Project Overview
 
 A strategy compendium for **Star Trek: Captain's Chair** hosted at:
@@ -76,6 +77,13 @@ GitHub repo: **https://github.com/periodic-agent/stcc-strategy**
 Content by **Matthew McCue (mdmccu2)** from BGG forums.
 Formatted by **Periodic_agent**
 
+### Design Principle: Guides vs Tools
+
+- Guides = McCue's strategy content, formatted by Periodic_agent
+- Tools = built by Periodic_agent (Card Scanner, future tools)
+- Keep these conceptually separate: don't add mechanical card data to guides; link to Card Scanner instead
+- "Guides are for guiding, Card Scanner is a fun tool"
+
 ---
 
 ## Rules
@@ -84,7 +92,7 @@ Formatted by **Periodic_agent**
 1a. **Periodic_agent-directed edits are sanctioned (Jul 2026).** McCue now trusts Periodic_agent with corrections. When Periodic_agent says edit, we edit — no pushback, no re-confirmation. Every text edit goes through the guide config's `"replace"` list (never a silent hand-edit to the HTML), so there is an audit trail and the fix survives reimports. The verify gate enforces this: unlisted deviations still fail.
 2. **Paragraph breaks** must sometimes be identified by asking for the last sentence of each paragraph when the source text runs together (BGG strips formatting).
 3. **Image credit** footer on every guide: `Card images © WizKids.`
-4. **Attribution** footer on every guide: `Content by Matthew McCue (mdmccu2) · Formatting by Periodic_agent`
+4. **Attribution** footer on every guide: `Guides by Matthew McCue (mdmccu2) · Website by Periodic_agent`
 5. **Back to Compendium** link at top and bottom of every guide.
 6. **Card Scanner footer** is different: `Card images © WizKids.` only — no content attribution line. Contributors will be acknowledged separately as the project grows.
 7. **Generators ship with their output.** Any script that generated or transformed pushed content ships in `tools/` in the same commit as that content. A push of generated files without its generator is incomplete.
@@ -109,36 +117,31 @@ Formatted by **Periodic_agent**
 
 ---
 
-## Workflow Per New Guide
+## Guide Build Pipeline (tools/) — the workflow for every new guide
 
-### Step 1 — Capture BGG thread
-- Use **SingleFile** browser extension → saves full thread as `.html`
+Guide creation is scripted. The model never retypes McCue's text; the scripts move it verbatim from the SingleFile capture into the styled HTML.
 
-### Step 2 — Download card images
-- Run adapted `download_images.py` (stdlib only, no deps)
-- Claude extracts CDN URLs from the SingleFile HTML and produces the script
-- Images batch-download from BGG CDN to local folder
-- Upload all images to Claude in next chat
-- Note: BGG switched to embedding base64 WebP directly in newer threads vs older CDN-hosted JPEGs, so new guides will not require manual downloads.
+### Step 0 — Capture BGG thread (Periodic_agent)
+- Use **SingleFile** browser extension → saves full thread as `.html`; upload it to the session.
 
-### Step 3 — Send to Claude
-Upload:
-- The SingleFile `.html`
-- All card images
+### Steps 1–5 — Per-guide session procedure (cheap path)
+1. `git clone --depth 1` the repo (see Session Startup). One call.
+2. Write the config JSON (model judgment: cuts, lore, headers, tags, video from the Video Playthroughs table).
+3. Run build + verify in one bash call. Fix config, not output, if verify fails.
+4. Present draft for Periodic_agent's review; wait for approval; push guide + images + index flip with `push_to_github.py -m` (multi-file, one commit).
+5. Update the index: flip Soon → Live (`badge-video` ▶ span if the guide has a video), bump `hero-date`.
 
-Claude will:
-- Extract verbatim text (strip comments, strip HTML garbage)
-- Identify section headers (H2/H3)
-- Ask for paragraph break endings if sections run together
-- Embed images as base64 (or CDN ref if base64 not available)
-- Produce styled `guidename.html` using the canonical CSS below
-- **Automatically update `index.html`** — flip the matching entry from Soon → Live
-- **Set `Last updated` date** in the footer to today's date
-- **Generate TOC** — pill grid for market guides, section list for captain guides, with back-to-top links
+```
+python3 tools/build_guide.py <singlefile.html> tools/configs/<slug>.json --out out/
+python3 tools/verify_guide.py out/<slug>.html out/<slug>_text.txt --config tools/configs/<slug>.json --img-root out/
+```
 
-### Step 4 — Upload to GitHub
-- Drop new `.html` + updated `index.html` in repo root
-- Pages deploys in ~60 seconds
+- **tools/build_guide.py** — extracts McCue's first post (balanced gg-markup-content), decodes all images (quoted and unquoted `src=` base64 WebP) to JPG with site naming, emits marked verbatim text, and builds the styled guide from `tools/guide-template.html`. All judgment calls live in the per-guide JSON config: cuts, lore paragraphs, inserted structural H2s (Missions, Captain Card & Starting Components), image name overrides, board alts, TOC label shortening, videos.
+- **tools/verify_guide.py** — machine gate before push: verbatim fidelity line-by-line, image refs resolve, anchors resolve, HTML balanced, footer/lightbox/GoatCounter furniture present. Exit 1 = do not push.
+- **tools/configs/georgiou.json** — real example config; copy and adapt per guide.
+- Validated by regenerating georgiou.html from its BGG capture: word-for-word identical output.
+
+If the thread's images are CDN-only, see "Promo / CDN-only guides" under Image Extraction Notes before building.
 
 ---
 
@@ -154,21 +157,23 @@ All 22 guides link one shared stylesheet instead of carrying inline CSS:
 - **Semantic variables:** rules use `var(--accent)` etc., never `--blue`/`--red`/`--amber` (those names are retired).
 - **Cache:** GitHub Pages serves with max-age 600 s, so stcc.css changes propagate within ~10 min on their own. Bump `?v=` in all guides only if a change must land instantly.
 - **Inline `<style>` is kept ONLY for:** market guide `.toc-card`/`.toc-card:hover` suit colors (2 rules per guide); `sc-market-locations-rewards.html` `.toc-grid-label` margin-top; `vs-picard.html` `ul`/`li`/`li strong` list styles. Everything else belongs in stcc.css.
-- **New guides:** link stcc.css + set the theme class. Do NOT paste a full CSS block; the canonical CSS below is retired (kept as color reference only).
+- **New guides:** link stcc.css + set the theme class. Do NOT paste a full CSS block.
 - **Lightbox:** CSS is in stcc.css, but each guide still needs the lightbox HTML + script snippet (see Lightbox section).
 
-### Box 1 — Captain's Chair: **Blue**
+### Box color reference
+
+**Box 1 — Captain's Chair: Blue**
 - Accent: `#4a9fd4` / `#7ec8f0`
 - Header gradient: `#061020 → #0d1e3a`
 - Border: `rgba(74,159,212,0.25)`
 - Gold (h3): `#c8a84b`
 
-### Box 2 — To Boldly Go: **Red**
+**Box 2 — To Boldly Go: Red**
 - Accent: `#d44a4a` / `#f07e7e`
 - Header gradient: `#160608 → #2a0e10`
 - Border: `rgba(212,74,74,0.25)`
 
-### Box 3 — Second Contact: **Amber**
+**Box 3 — Second Contact: Amber**
 - Accent: `#c8a84b` / `#e8c96a`
 - Border: `rgba(200,168,75,0.25)`
 
@@ -176,11 +181,12 @@ All 22 guides link one shared stylesheet instead of carrying inline CSS:
 - Headers: `Orbitron` (Google Fonts)
 - Body: `Exo 2` (Google Fonts)
 
-### Card images
+### Card images in guides
+- Cards: `img/box1|box2|box3/<name>.jpg` per the Card Image Filename Convention below; captain boards: `img/guides/<captain>/<captain>-board-basic|advanced.jpg`. JPG quality 90.
 - Captain guide photos: scrollable horizontal `.card-row` (height: 220px, mobile: 170px)
 - Single card images (TBG style): `.card-img` block (max-width: 260px)
 - All images: lightbox on click
-- All images: `loading="lazy"` — served from `/img/cards/[box]/[filename].jpg`
+- All images: `loading="lazy"`
 
 ### Navigation
 ```html
@@ -191,26 +197,31 @@ Top and bottom of every guide. Top nav goes **before** `<header>`.
 ### Hero / Chapter Header
 ```html
 <header class="chapter-header">
-  <div class="chapter-label">Captain's Chair · Strategy Guide</div>
-  <h1 class="chapter-title"><span>CaptainName</span> Strategy Guide</h1>
+  <div class="chapter-label">Captain's Chair</div>
+  <h1 class="chapter-title"><span>CaptainName</span></h1>
   <div class="chapter-meta">By Matthew McCue (mdmccu2)</div>
+  <div class="chapter-date">Posted [BGG post date]</div>
   <div class="chapter-tags">
     <span class="tag">Trait1</span><span class="tag">Trait2</span>
   </div>
 </header>
 ```
 
+### Chapter Label Convention (finalized)
+- Core Box guides: `Captain's Chair` — no "Strategy Guide" or "Strategy Compendium" suffix
+- TBG guides: `To Boldly Go`
+- Guide h1 titles: captain name only (e.g. `Thy'Lek Shran`, `Koloth, the Dahar Master`)
+
+### Chapter date
+`Posted <BGG post date>` (the date McCue posted the guide on BGG, not the build date). `.chapter-date` CSS is in stcc.css; no per-guide CSS needed. Author credit goes in the chapter header; posted date underneath.
+
 ### Footer
 ```html
 <footer>
   Card images © WizKids.<br>
-  Content by Matthew McCue (mdmccu2) · Formatting by Periodic_agent
+  Guides by Matthew McCue (mdmccu2) · Website by Periodic_agent
 </footer>
 ```
-The date is the day the guide was built/rebuilt. Update it whenever the source guide is edited on BGG and reimported.
-
-### chapter-date CSS
-Now in stcc.css; no per-guide CSS needed.
 
 ### Lightbox
 ```html
@@ -231,7 +242,8 @@ All images use `onclick="openLightbox(this)"`.
 
 ### Navigation — Table of Contents & Back to Top
 
-**Market guides** (Person, Ally, Ship, Cargo, Location, Encounters & Incidents) get a **pill grid** below the header.
+- **Captain guides:** `.toc-list` Contents built from H2 sections, with back-to-top links.
+- **Market guides** (Person, Ally, Ship, Cargo, Location, Encounters & Incidents): **pill grid** below the header. TOC label reads "Jump to Card."
 
 Structural TOC CSS (`.toc-grid`, `.toc-grid-label`, `.toc-cards`) is in stcc.css. The individual `.toc-card` link rule is NOT in stcc.css — it must be pasted inline in each market guide, in full, because it carries the per-guide suit color. Copy the WHOLE rule (font, padding, border-radius, `color`, `background`, `text-decoration:none`, transition), not just the border line. The only per-guide variable is the suit color in `border` and `:hover` `border-color`.
 
@@ -246,6 +258,54 @@ Replace `<SUIT>` with the suit hex from the Card Scanner palette table below.
 
 ---
 
+## Index Conventions (index.html)
+
+**Box naming (current):**
+- Box 1: `Captain's Chair — Core Box` (blue)
+- Box 2: `Captain's Chair — To Boldly Go` (red)
+- Box 3: `Captain's Chair — Second Contact (Expansion)` (amber)
+- Box 4: `Other Guides` (gray)
+- Box banner subtitle: `Strategy Guides` on all four boxes
+
+**Entry sub-text:** empty for all guide entries. Keep complexity ratings on captain entries. Keep "Core Box · Beta" on Card Scanner.
+
+**Card Scanner:** sits as a prominent `box-banner purple` above Box 1 — NOT inside a card-grid. Purple dot (`#d4699f`), full-width, links to `card-browser-mockup.html`. Title: "Card Scanner", subtitle: "Explore all cards and decks".
+
+```html
+<a href="card-browser-mockup.html" class="box-banner purple">
+  <div class="box-dot"></div>
+  <div>
+    <div class="box-banner-title">Card Scanner</div>
+    <div class="box-banner-sub">Explore all cards and decks</div>
+  </div>
+</a>
+```
+
+```css
+.box-banner.purple { background: rgba(212,105,159,0.08); border: 1px solid rgba(212,105,159,0.3); }
+.box-banner.purple .box-dot { background: #d4699f; box-shadow: 0 0 8px #d4699f; }
+.box-banner.purple .box-banner-title { color: #d4699f; }
+a.box-banner { text-decoration: none; transition: transform 0.2s, border-color 0.2s; }
+a.box-banner:hover { transform: translateY(-2px); border-color: #d4699f; }
+```
+
+**Live/Soon flips:** when a guide ships, flip its entry Soon → Live, add the `badge-video` ▶ span if the guide has a video, bump `hero-date`.
+
+**Known nit:** `.badge-video` class is used on Live captain entries but has no CSS definition (renders with base `.entry-badge` style). Pre-existing; harmless; define it whenever index.html gets its next styling pass.
+
+---
+
+## Analytics
+
+GoatCounter script on every page including future guides:
+```html
+<script data-goatcounter="https://stcc-compendium.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+```
+Place just before `</body>`. Tracker endpoint: `https://stcc-compendium.goatcounter.com/count`.
+
+---
+
 ## Card Database
 
 ### File structure
@@ -254,7 +314,7 @@ box1.json    -- Captain's Chair, complete (255 cards incl. Promo Pack 1)   [repo
 box2.json    -- To Boldly Go, live (104 cards, partial: community-sourced)  [repo ROOT]
 box3.json    -- Second Contact, pending                                     [repo ROOT]
 ```
-The boxN.json files live at the **repo root**, not in a `data/` folder. (Earlier docs referenced `data/box1.json`; that path is stale.)
+The boxN.json files live at the **repo root**, not in a `data/` folder.
 
 ### Scanner data — `ALL_CARDS`
 The Card Scanner (`card-browser-mockup.html`) holds its cards as a single inline
@@ -264,8 +324,7 @@ The Card Scanner (`card-browser-mockup.html`) holds its cards as a single inline
 `icons`->`"<specialty> <type>"` skill strings); the full mapping is documented in the
 script header. Regenerate the array with the tool — never hand-edit it. The scanner
 derives every filter pill and box/deck membership from these fields, so wiring a new box
-in is purely a data operation. **TBG (Box 2) is live in the array as of this commit;
-Box 3 pending.**
+in is purely a data operation. **TBG (Box 2) is live in the array; Box 3 pending.**
 
 ### Canonical JSON schema (per card)
 ```json
@@ -354,7 +413,7 @@ Box 3 pending.**
 ### Image view
 - Toggle between Cards (pill view) and Images view
 - Image view uses `loading="lazy"` — only loads visible images
-- Image placeholder shown until `/img/cards/[box]/[filename].jpg` exists
+- Image src is built as `img/<BOX_FOLDER[box]>/<filename>` (see box-key bridge table below); a missing image (404) falls back to a `NO IMAGE` placeholder via `onerror`, so partial image coverage is fine
 - Image assets pending volunteer scanning
 
 ### Update cycle (revised 04 Jul 2026)
@@ -377,9 +436,6 @@ Repeatable procedure — run whenever the community sheet gains cards. A future 
 5. **Regenerate the scanner array:** `python tools/build_scanner_data.py card-browser-mockup.html box1.json box2.json -o card-browser-mockup.html`. Rebuilds the entire inline `ALL_CARDS` array; only that one line changes.
 6. **Preview + present.** Build a `-preview` copy (rewrite relative asset paths and `IMG_BASE` to the live site; **no `<base>` tag** — it breaks anchor links). Present `box2.json` and `card-browser-mockup.html` for review.
 7. **Push on Periodic_agent's explicit approval only** — `box2.json` + `card-browser-mockup.html` + `tools/build_scanner_data.py` in one commit (Rule 7). Scanner footer stays `Card images © WizKids.` (Rule 6); do not add a content-attribution line.
-
-### Analytics
-GoatCounter tracker included: `https://stcc-compendium.goatcounter.com/count`
 
 ---
 
@@ -440,6 +496,36 @@ In the scanner code this table is the `BOX_FOLDER = { core:'box1', tbg:'box2', '
 
 ---
 
+## Image Extraction Notes
+
+### Promo / CDN-only guides — images must be user-downloaded (learned Jul 2026, Promo Pack 2)
+
+Some BGG threads embed card images ONLY as `cf.geekdo-images.com` CDN URLs (no base64 in the SingleFile HTML). The Promo Pack 2 thread was one of these. For these:
+
+- **The sandbox CANNOT download the images.** BGG's CDN returns `403 Forbidden` to server-side/sandboxed fetches. It serves normally from a real browser/OS network. So Claude generates a `download_[guide]_images.py` script, Periodic_agent runs it locally, and uploads the resulting files. Claude then pushes them to the repo. There is no way around the 403 from inside the session.
+- **The HTML usually carries only the `__medium` (500x500) variant.** To get higher resolution, the download script should try resolution variants largest-first per image (`__original` -> `__large` -> `__medium`) and keep the first that resolves. Do not assume `__medium` is the best available.
+- **BGG "png" cards often arrive as palette-mode PNG data with a `.jpg` extension.** Before pushing, convert them to real JPEG (`Image.open(f).convert('RGB').save(out,'JPEG',quality=92)`) so the file content matches the `.jpg` name the guide/JSON expect. Keep the convention filenames (promo cards: no deck prefix).
+- **Promo images live in their own folder** per the box-key table: Promo Pack 1 -> `img/promo1/`, Promo Pack 2 -> `img/promo2/`. Data still lives in the era's box JSON (`box1.json` / `box2.json`), images do not.
+- Once uploaded, switch the guide's `<img src>` from the CDN URL to the local `img/promo2/<name>.jpg` path so the site self-hosts.
+
+### BGG SingleFile HTML — image formats encountered:
+1. **CSS `--sf-img-N` variables with CDN `content=""` URLs** (Shran guide)
+   → Extract URLs → run `download_images.py` → upload → embed with site naming
+2. **Base64 WebP in `src=""` attribute** (TBG Locations guide)
+   → Extract directly from HTML with Python/base64 (build_guide.py handles quoted and unquoted `src=`)
+3. **CDN-only fallback** (some images only have `content=` URL, no base64)
+   → See the Promo / CDN-only procedure above
+
+### Image download script pattern
+Claude generates `download_[guide]_images.py` per guide by extracting CDN URLs from the SingleFile HTML. Script uses stdlib only (`urllib.request`), no deps. Alt text from the SingleFile HTML is used to name files meaningfully (e.g. `burnham_board_basic.jpg`).
+
+### Known image sets
+- **Shran:** `shran_board_basic`, `shran_board_advanced`, `shran_available_1/2/3`, `shran_reinforcement`, `shran_development_1/2`
+- **Burnham:** `burnham_board_basic`, `burnham_board_advanced`, `burnham_1` through `burnham_7`
+- **TBG Locations:** 6 embedded WebP + 3 CDN (Cold Station 12, Tanuga IV, Tellar Prime)
+
+---
+
 ## Paragraph Break Identification
 
 When Claude runs together paragraphs (BGG strips line breaks), provide the **last sentence** of each paragraph. Claude will insert `</p><p>` breaks after each.
@@ -458,6 +544,8 @@ When importing a guide, certain paragraphs need to be removed or styled as lore:
 **To cut:** provide the first few words — Claude removes the full paragraph.
 
 **To make lore:** provide the first few words — Claude wraps the paragraph in `<p class="lore">`.
+
+(In the scripted pipeline, cuts and lore live in the guide config JSON.)
 
 ---
 
@@ -485,11 +573,12 @@ https://memory-alpha.fandom.com/wiki/Episode_Title_(episode)
 - Hyphens in titles stay as-is
 - For multi-episode arcs (e.g. `2x1-2`), link to Part 1
 
-### Link styling (add to guide CSS)
+### Link styling
 ```css
   .lore a{color:#c8a84b;text-decoration:none;border-bottom:1px dotted rgba(200,168,75,0.5);}
   .lore a:hover{color:#e8c878;border-bottom-color:#e8c878;}
 ```
+(Now in stcc.css.)
 
 ### Automation notes
 The regex `([A-Z]+[^:]*\d+x\d+:\s+)([A-Za-z][^,&<\n]+?)` catches most single-episode references automatically. The following patterns require manual linking:
@@ -507,14 +596,16 @@ Always do a pass after automation to catch the misses.
 
 Guides with a Gaming Rules! playthrough get a **Video Playthroughs** section at the bottom (before the bottom nav-bar), with YouTube thumbnail cards.
 
-Current mapping:
+Current mapping (merged 05 Jun update):
 | Guide | Video | URL |
 |---|---|---|
 | shran.html | Shran vs Sisko | `youtu.be/fpGOnYvySBY` |
 | koloth.html | Koloth vs Sisko | `youtu.be/MbuPbqFmk0s` |
 | sisko.html | Koloth vs Sisko + Sela vs Sisko | `youtu.be/MbuPbqFmk0s` + `youtu.be/L0U4rMzRcJY` |
 | sela.html | Sela vs Sisko | `youtu.be/L0U4rMzRcJY` |
-| solo.html | Solo Tutorial pt.1 + pt.2 | `youtube.com/live/XBHZl0Qdveg` + `youtube.com/live/goYrEDVUSC4` |
+| picard.html | Two-Player Tutorial | `youtube.com/live/qZnTVD4yOpU` |
+| burnham.html | Burnham Solo | `youtube.com/watch?v=QzXbE_pjKtM` |
+| solo.html | Solo Tutorial pt.1 + pt.2 + Burnham Solo | `youtube.com/live/XBHZl0Qdveg` + `youtube.com/live/goYrEDVUSC4` + `youtube.com/watch?v=QzXbE_pjKtM` |
 | vs-picard.html | Two-player tutorial + Riker vs Picard Bot | `youtube.com/live/qZnTVD4yOpU` + `youtu.be/CWhCX4qdp6Y` |
 
 TBG guides — add when built:
@@ -532,126 +623,34 @@ Second Contact (pending):
 
 ---
 
-## Image Extraction Notes
+## TBG Persons Guide (build notes, restored)
 
-### Promo / CDN-only guides — images must be user-downloaded (learned Jul 2026, Promo Pack 2)
-
-Some BGG threads embed card images ONLY as `cf.geekdo-images.com` CDN URLs (no base64 in the SingleFile HTML). The Promo Pack 2 thread was one of these. For these:
-
-- **The sandbox CANNOT download the images.** BGG's CDN returns `403 Forbidden` to server-side/sandboxed fetches. It serves normally from a real browser/OS network. So Claude generates a `download_[guide]_images.py` script, Periodic_agent runs it locally, and uploads the resulting files. Claude then pushes them to the repo. There is no way around the 403 from inside the session.
-- **The HTML usually carries only the `__medium` (500x500) variant.** To get higher resolution, the download script should try resolution variants largest-first per image (`__original` -> `__large` -> `__medium`) and keep the first that resolves. Do not assume `__medium` is the best available.
-- **BGG "png" cards often arrive as palette-mode PNG data with a `.jpg` extension.** Before pushing, convert them to real JPEG (`Image.open(f).convert('RGB').save(out,'JPEG',quality=92)`) so the file content matches the `.jpg` name the guide/JSON expect. Keep the convention filenames (promo cards: no deck prefix).
-- **Promo images live in their own folder** per the box-key table: Promo Pack 1 -> `img/promo1/`, Promo Pack 2 -> `img/promo2/`. Data still lives in the era's box JSON (`box1.json` / `box2.json`), images do not.
-- Once uploaded, switch the guide's `<img src>` from the CDN URL to the local `img/promo2/<name>.jpg` path so the site self-hosts.
-
-### BGG SingleFile HTML — two image formats encountered:
-
-### BGG SingleFile HTML — two image formats encountered:
-1. **CSS `--sf-img-N` variables with CDN `content=""` URLs** (Shran guide)
-   → Extract URLs → run `download_images.py` → upload → embed as base64
-2. **Base64 WebP in `src=""` attribute** (TBG Locations guide)
-   → Extract directly from HTML with Python/base64
-3. **CDN-only fallback** (some images only have `content=` URL, no base64)
-   → Use CDN URL as `<img src="">` directly — works on GitHub Pages
-
-### Image download script pattern
-Claude generates `download_[guide]_images.py` per guide by extracting CDN URLs from the SingleFile HTML. Script uses stdlib only (`urllib.request`), no deps. Alt text from the SingleFile HTML is used to name files meaningfully (e.g. `burnham_board_basic.jpg`).
-
-### Known image sets
-- **Shran:** `shran_board_basic`, `shran_board_advanced`, `shran_available_1/2/3`, `shran_reinforcement`, `shran_development_1/2`
-- **Burnham:** `burnham_board_basic`, `burnham_board_advanced`, `burnham_1` through `burnham_7`
-- **TBG Locations:** 6 embedded WebP + 3 CDN (Cold Station 12, Tanuga IV, Tellar Prime)
-
-> ~~Images stay as **base64 in HTML**~~ **Superseded (Jul 2026):** images now live in `img/box1|box2|box3/` (cards, `<captain>-<card>.jpg`) and `img/guides/<captain>/` (board photos). See the Guide Build Pipeline section.
+- File: `tbg-persons.html` — live
+- 17 new cards + 9 repeats listed
+- Card format: `<p class="lore">` for Notable Episodes + lore text, `<p>` for strategy
+- Memory Alpha episode links on all Notable Episodes references
+- Phlox image placed before the repeats list
+- TOC pill color: gold (`#e8a94a`) matching Core Box Person Deck
 
 ---
 
-## Session Delta — 05 Jun 2026
+## Changelog
 
-### Index Structure Changes
+### 18 Jul 2026 — Truncation repair + consolidation (this commit)
 
-**Box naming (current):**
-- Box 1: `Captain's Chair — Core Box` (blue)
-- Box 2: `Captain's Chair — To Boldly Go` (red)
-- Box 3: `Captain's Chair — Second Contact (Expansion)` (amber)
-- Box 4: `Other Guides` (gray)
-- Box banner subtitle: `Strategy Guides` on all four boxes
+**Truncation repaired.** Commit `4a7ada8` (early Jul) accidentally cut the file mid-sentence at the Chapter Label Convention line, deleting the tail of the 05 Jun delta. Restored from commit `b4d7a56`: chapter-label examples, video mapping updates (picard, burnham, solo), TBG Persons build notes, GoatCounter snippet + placement rule, Card Scanner attribution (already survived as Rule 6), Guides vs Tools principle.
 
-**Entry sub-text:** empty for all guide entries. Keep complexity ratings on captain entries. Keep "Core Box · Beta" on Card Scanner.
+**Consolidated to current-state-only.** The 05 Jun and 15 Jul Session Delta sections are dissolved into the body; each convention now appears once, in its current form. Superseded wordings removed from the body (all supersessions were already declared in-file with dates):
 
-**Card Scanner:** sits as a prominent `box-banner purple` above Box 1 — NOT inside a card-grid. Purple dot (`#d4699f`), full-width, links to `card-browser-mockup.html`. Title: "Card Scanner", subtitle: "Explore all cards and decks".
+- Rule 4 / footer template: `Content by Matthew McCue (mdmccu2) · Formatting by Periodic_agent` → `Guides by Matthew McCue (mdmccu2) · Website by Periodic_agent` (per 15 Jul Current conventions).
+- Footer date: "day the guide was built/rebuilt; update on BGG re-import" → `Posted <BGG post date>` (per 15 Jul).
+- Chapter header template: label `Captain's Chair · Strategy Guide` and h1 `<span>CaptainName</span> Strategy Guide` → label `Captain's Chair`, h1 captain name only (per 05 Jun finalized convention); added `.chapter-date` line (per 15 Jul).
+- "Workflow Per New Guide" manual steps (embed base64, canonical CSS, "Drop new .html + updated index.html in repo root", "Set Last updated to today") → replaced by the scripted Guide Build Pipeline (per 15 Jul) and the Push Pipeline (per Jul push-script sections).
+- Retired canonical CSS `:root` block (declared retired 04 Jul; stcc.css authoritative; box colors kept as reference table).
+- Stale path `/img/cards/[box]/` (two occurrences) → `img/boxN/` per the box-key bridge table.
+- Struck-through note "Images stay as base64 in HTML" (superseded 04 Jul; images live in img/boxN/ and img/guides/).
+- `data/boxN.json` stale-path parenthetical simplified; repo-root statement kept.
+- Session-specific status lines ("as of this commit") trimmed.
+- Original per-guide `download_images.py` workflow retained only inside Image Extraction Notes; build_guide.py handles embedded-image guides.
 
-```html
-<a href="card-browser-mockup.html" class="box-banner purple">
-  <div class="box-dot"></div>
-  <div>
-    <div class="box-banner-title">Card Scanner</div>
-    <div class="box-banner-sub">Explore all cards and decks</div>
-  </div>
-</a>
-```
-
-```css
-.box-banner.purple { background: rgba(212,105,159,0.08); border: 1px solid rgba(212,105,159,0.3); }
-.box-banner.purple .box-dot { background: #d4699f; box-shadow: 0 0 8px #d4699f; }
-.box-banner.purple .box-banner-title { color: #d4699f; }
-a.box-banner { text-decoration: none; transition: transform 0.2s, border-color 0.2s; }
-a.box-banner:hover { transform: translateY(-2px); border-color: #d4699f; }
-```
-
-**Second Contact** box is now live in the index (amber). Pike and Freeman captains + market guides all Soon.
-
-**New Soon entries in Other Guides:** `combining-markets.html`, `wesley-crusher-guide.html`
-
----
-
-### Chapter Label Convention (finalized)
-
-- Core Box guides: `Captain's Chair` — no "Strategy Guide" or "Strategy Compendium" suffix
-- TBG guides: `To Boldly Go`
-- Guide h1 titles: captain name only (e.g. `Thy'Lek S
-
----
-
-## Session Delta — 15 Jul 2026
-
-### Guide Build Pipeline (tools/)
-
-Guide creation is now scripted. The model never retypes McCue's text; the
-scripts move it verbatim from the SingleFile capture into the styled HTML.
-
-```
-python3 tools/build_guide.py <singlefile.html> tools/configs/<slug>.json --out out/
-python3 tools/verify_guide.py out/<slug>.html out/<slug>_text.txt --config tools/configs/<slug>.json --img-root out/
-```
-
-- **tools/build_guide.py** — extracts McCue's first post (balanced gg-markup-content), decodes all images (quoted and unquoted `src=` base64 WebP) to JPG with site naming, emits marked verbatim text, and builds the styled guide from `tools/guide-template.html`. All judgment calls live in the per-guide JSON config: cuts, lore paragraphs, inserted structural H2s (Missions, Captain Card & Starting Components), image name overrides, board alts, TOC label shortening, videos.
-- **tools/verify_guide.py** — machine gate before push: verbatim fidelity line-by-line, image refs resolve, anchors resolve, HTML balanced, footer/lightbox/GoatCounter furniture present. Exit 1 = do not push.
-- **tools/configs/georgiou.json** — real example config; copy and adapt per guide.
-- Validated by regenerating georgiou.html from its BGG capture: word-for-word identical output.
-
-**Per-guide session procedure (cheap path):**
-1. `git clone --depth 1` the repo (see cache warning below). One call.
-2. Write the config JSON (model judgment: cuts, lore, headers, tags, video from the Video Playthroughs table).
-3. Run build + verify in one bash call. Fix config, not output, if verify fails.
-4. Present draft for Periodic_agent's review; wait for approval; push guide + images + index flip with `push_to_github.py -m` (multi-file, one commit).
-5. Update the index: flip Soon → Live (`badge-video` ▶ span if the guide has a video), bump `hero-date`.
-
-### Current conventions (supersede older sections above)
-
-- **Shared stylesheet:** all guides link `css/stcc.css?v=N` and set `<body class="theme-tbg">` (TBG) or `theme-sc` (Second Contact); Core Box = no class. No per-guide CSS except market-guide `.toc-card` colors.
-- **Image folders:** cards `img/box1|box2|box3/<captain>-<card>.jpg`; captain boards `img/guides/<captain>/<captain>-board-basic|advanced.jpg`. JPG quality 90.
-- **Footer (current):** `Card images © WizKids.<br>Guides by Matthew McCue (mdmccu2) · Website by Periodic_agent`
-- **Chapter date:** `Posted <BGG post date>` (not build date).
-- **Captain guide TOC:** `.toc-list` Contents from H2 sections; market guides keep `.toc-card` pill grid.
-
-### Cost discipline (learned 14–15 Jul 2026, Georgiou = CA$15 the manual way)
-
-- **raw.githubusercontent.com serves stale files** (hours-old cache observed). `git clone --depth 1` and work from the local clone; it is one call and always current.
-- **Never fetch full guide pages into the chat context** to check conventions; grep the local clone instead. Conventions are documented here; trust this file first, verify with grep second.
-- **Batch bash calls.** Every tool round-trip replays the whole conversation; ten probes cost more than one scripted call.
-- **Model choice:** with build+verify scripts as the gate, build sessions can run on a cheaper model (Sonnet); verbatim fidelity is enforced mechanically, not by model care.
-
-### Known site nit
-
-- `.badge-video` class is used on Live captain entries in index.html but has no CSS definition (renders with base `.entry-badge` style). Pre-existing; harmless; define it whenever index.html gets its next styling pass.
+No rule semantics changed beyond the supersessions listed above; full provenance in reconciliation reports v1/v2 (session 18 Jul 2026).
