@@ -638,7 +638,7 @@ Second Contact (pending):
 
 ### 18 Jul 2026 — Truncation repair + consolidation (this commit)
 
-**Truncation repaired.** Commit `4a7ada8` (early Jul) accidentally cut the file mid-sentence at the Chapter Label Convention line, deleting the tail of the 05 Jun delta. Restored from commit `b4d7a56`: chapter-label examples, video mapping updates (picard, burnham, solo), TBG Persons build notes, GoatCounter snippet + placement rule, Card Scanner attribution (already survived as Rule 6), Guides vs Tools principle.
+**Truncation repaired.** Commit `1ce4d0c` (early Jul) accidentally cut the file mid-sentence at the Chapter Label Convention line, deleting the tail of the 05 Jun delta. Restored from commit `bd0ff8a`: chapter-label examples, video mapping updates (picard, burnham, solo), TBG Persons build notes, GoatCounter snippet + placement rule, Card Scanner attribution (already survived as Rule 6), Guides vs Tools principle.
 
 **Consolidated to current-state-only.** The 05 Jun and 15 Jul Session Delta sections are dissolved into the body; each convention now appears once, in its current form. Superseded wordings removed from the body (all supersessions were already declared in-file with dates):
 
