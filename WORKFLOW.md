@@ -1,5 +1,5 @@
 # ST:CC Compendium — Workflow
-## Single source of operational truth. Consolidated 18 Jul 2026 (see Changelog at bottom).
+## Single source of operational truth.
 
 ---
 
@@ -26,7 +26,7 @@ After editing, save outputs and call `present_files` to surface the file for rev
 
 ### Session Startup Smoke Test (any model)
 
-Before touching content in a new session: (1) fetch PROJECT_BRIEF.md and WORKFLOW.md from the live repo; (2) confirm the token file is readable from project knowledge; (3) dry-run the push script against an unchanged file — expected output: "No changes ... Nothing pushed." Two minutes, proves the whole pipeline. Session tooling (CSS parser/verifier, guide migrators, montage generator, workbook builder) lives in `tools/` — adapt those, don't reinvent.
+Before touching content in a new session: (1) fetch PROJECT_BRIEF.md and WORKFLOW.md from the live repo; (2) confirm the token file AND the PII denylist (`pii_denylist.txt`) are readable from project knowledge — the push script fails closed without both; (3) dry-run the push script against an unchanged file — expected output: "No changes ... Nothing pushed." Two minutes, proves the whole pipeline. Session tooling (CSS parser/verifier, guide migrators, montage generator, workbook builder) lives in `tools/` — adapt those, don't reinvent.
 
 ### Cost discipline (learned 14–15 Jul 2026)
 
@@ -42,9 +42,11 @@ Before touching content in a new session: (1) fetch PROJECT_BRIEF.md and WORKFLO
 **Push: Claude pushes to GitHub directly via `push_to_github.py`, but ONLY after Periodic_agent reviews the presented file and explicitly approves. Never push before the go-ahead.**
 
 ```
-GH_TOKEN=<token> python3 push_to_github.py <local_path> <repo_path> "commit message"
+GH_TOKEN=<token> python3 push_to_github.py --pii-file <path_to_pii_denylist.txt> <local_path> <repo_path> "commit message"
 ```
 Fetch the script from the live repo before running. It shallow-clones the repo, copies the file in, commits, and pushes via git with a one-shot authenticated URL (no GitHub API dependency; `api.github.com` is blocked in some sandboxes while git over HTTPS works). Files deploy via GitHub Pages in ~60 seconds. Multi-file commits: `-m "msg" local:repo local:repo ...`.
+
+Since v3 the script refuses to run without the PII denylist (`--pii-file` or `PII_FILE` env; see Anonymity Rules below). No denylist = no push, by design.
 
 ## GitHub Token Handling
 
@@ -64,6 +66,30 @@ python3 push_to_github.py <local_path> <repo_path> "message" --token-file <path_
 4. If the token ever appears in a pushed file or in the public repo history: tell Periodic_agent immediately so he can revoke it on GitHub.
 
 **Expiry:** fine-grained PATs expire (1 year max). If a push fails with an auth error, the likely cause is expiry; Periodic_agent mints a new token and replaces `git_pat_token.txt` in project knowledge.
+
+---
+
+## Anonymity Rules
+
+**This is an anonymous project.** The site owner appears everywhere — files, commit messages, configs, docs, chat-visible output — only as **Periodic_agent** (GitHub: periodic-agent). The owner's real name, personal email addresses, and machine username must never appear in anything that leaves the session.
+
+**The denylist:** `pii_denylist.txt` lives in **project knowledge** (next to `git_pat_token.txt`), NEVER in the repo, never in outputs destined for pushing. One term per line, `#` for comments.
+
+**The gate (fail closed):** `push_to_github.py` v3 refuses to push unless given the denylist (`--pii-file <path>` or `PII_FILE` env). It scans file contents (binary-safe, case-insensitive), repo paths, and the commit message; any hit blocks the entire push and reports the term masked. It also refuses to push the denylist itself. There is no bypass flag.
+
+**Reusable standalone gate:** `tools/push_gate.py` — same scan logic plus `--scan-dir` (walk a folder) and `--scan-git-history` (scan every object in a repo's full history). Stdlib only; vendor it into any other project alongside its own denylist.
+
+**Hygiene rules for every session:**
+1. Watch indirect leaks: local Windows paths in tracebacks or logs, script headers, EXIF in photographed cards, autofilled author fields, example email addresses.
+2. Never paste the denylist contents into chat, pushed files, or WORKFLOW deltas; refer to terms masked if a hit must be discussed.
+3. If a personal identifier ever lands in the public repo: tell Periodic_agent immediately; remediation is a git-filter-repo rewrite, force-push, and GitHub support purge.
+
+**Audit (quarterly, and before any public announcement):**
+```
+git clone https://github.com/periodic-agent/stcc-strategy.git audit && \
+python3 audit/tools/push_gate.py --pii-file <path_to_pii_denylist.txt> --scan-git-history audit
+```
+Expected output: `push_gate: clean — no denylisted term in any object of audit`.
 
 ---
 
@@ -634,23 +660,3 @@ Second Contact (pending):
 
 ---
 
-## Changelog
-
-### 18 Jul 2026 — Truncation repair + consolidation (this commit)
-
-**Truncation repaired.** Commit `1ce4d0c` (early Jul) accidentally cut the file mid-sentence at the Chapter Label Convention line, deleting the tail of the 05 Jun delta. Restored from commit `bd0ff8a`: chapter-label examples, video mapping updates (picard, burnham, solo), TBG Persons build notes, GoatCounter snippet + placement rule, Card Scanner attribution (already survived as Rule 6), Guides vs Tools principle.
-
-**Consolidated to current-state-only.** The 05 Jun and 15 Jul Session Delta sections are dissolved into the body; each convention now appears once, in its current form. Superseded wordings removed from the body (all supersessions were already declared in-file with dates):
-
-- Rule 4 / footer template: `Content by Matthew McCue (mdmccu2) · Formatting by Periodic_agent` → `Guides by Matthew McCue (mdmccu2) · Website by Periodic_agent` (per 15 Jul Current conventions).
-- Footer date: "day the guide was built/rebuilt; update on BGG re-import" → `Posted <BGG post date>` (per 15 Jul).
-- Chapter header template: label `Captain's Chair · Strategy Guide` and h1 `<span>CaptainName</span> Strategy Guide` → label `Captain's Chair`, h1 captain name only (per 05 Jun finalized convention); added `.chapter-date` line (per 15 Jul).
-- "Workflow Per New Guide" manual steps (embed base64, canonical CSS, "Drop new .html + updated index.html in repo root", "Set Last updated to today") → replaced by the scripted Guide Build Pipeline (per 15 Jul) and the Push Pipeline (per Jul push-script sections).
-- Retired canonical CSS `:root` block (declared retired 04 Jul; stcc.css authoritative; box colors kept as reference table).
-- Stale path `/img/cards/[box]/` (two occurrences) → `img/boxN/` per the box-key bridge table.
-- Struck-through note "Images stay as base64 in HTML" (superseded 04 Jul; images live in img/boxN/ and img/guides/).
-- `data/boxN.json` stale-path parenthetical simplified; repo-root statement kept.
-- Session-specific status lines ("as of this commit") trimmed.
-- Original per-guide `download_images.py` workflow retained only inside Image Extraction Notes; build_guide.py handles embedded-image guides.
-
-No rule semantics changed beyond the supersessions listed above; full provenance in reconciliation reports v1/v2 (session 18 Jul 2026).
