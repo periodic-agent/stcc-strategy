@@ -154,7 +154,7 @@ Guide creation is scripted. The model never retypes McCue's text; the scripts mo
 1. `git clone --depth 1` the repo (see Session Startup). One call.
 2. Write the config JSON (model judgment: cuts, lore, headers, tags, video from the Video Playthroughs table).
 3. Run build + verify in one bash call. Fix config, not output, if verify fails.
-4. Present draft for Periodic_agent's review; wait for approval; push guide + images + index flip with `push_to_github.py -m` (multi-file, one commit).
+4. Present draft for Periodic_agent's review; wait for approval; push guide + images + index flip with `push_to_github.py --pii-file <denylist> --token-file <token> -m` (multi-file, one commit; both files from project knowledge — the script fails closed without the denylist).
 5. Update the index: flip Soon → Live (`badge-video` ▶ span if the guide has a video), bump `hero-date`.
 
 ```
@@ -461,7 +461,7 @@ Repeatable procedure — run whenever the community sheet gains cards. A future 
 4. **Validate.** No duplicate ids (suffix `-2`, keep both — see duplicate note above). Check traits against the **Vocabulary** tab: warn on novel traits, never drop them. Report counts per suit.
 5. **Regenerate the scanner array:** `python tools/build_scanner_data.py card-browser-mockup.html box1.json box2.json -o card-browser-mockup.html`. Rebuilds the entire inline `ALL_CARDS` array; only that one line changes.
 6. **Preview + present.** Build a `-preview` copy (rewrite relative asset paths and `IMG_BASE` to the live site; **no `<base>` tag** — it breaks anchor links). Present `box2.json` and `card-browser-mockup.html` for review.
-7. **Push on Periodic_agent's explicit approval only** — `box2.json` + `card-browser-mockup.html` + `tools/build_scanner_data.py` in one commit (Rule 7). Scanner footer stays `Card images © WizKids.` (Rule 6); do not add a content-attribution line.
+7. **Push on Periodic_agent's explicit approval only** — `box2.json` + `card-browser-mockup.html` + `tools/build_scanner_data.py` in one commit (Rule 7), via `push_to_github.py --pii-file <denylist> --token-file <token>` (both from project knowledge; fails closed without the denylist). Scanner footer stays `Card images © WizKids.` (Rule 6); do not add a content-attribution line.
 
 ---
 
