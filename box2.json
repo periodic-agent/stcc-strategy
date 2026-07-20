@@ -192,7 +192,7 @@
     ]
   },
   {
-    "id": "phlox",
+    "id": "phlox-nx01",
     "name": "Phlox",
     "suit": "Person",
     "source": "Common",
@@ -1118,7 +1118,7 @@
     "icons": []
   },
   {
-    "id": "rebner",
+    "id": "rebner-rebner",
     "name": "Rebner",
     "suit": "Captain",
     "source": "Rebner",
@@ -1134,7 +1134,7 @@
     "icons": []
   },
   {
-    "id": "mondor",
+    "id": "rebner-mondor",
     "name": "Mondor",
     "suit": "Ship",
     "source": "Rebner",
@@ -1150,7 +1150,7 @@
     "icons": []
   },
   {
-    "id": "big-enough-helmet",
+    "id": "rebner-big-enough-helmet",
     "name": "Big Enough Helmet",
     "suit": "Cargo",
     "source": "Rebner",
@@ -1164,7 +1164,7 @@
     "icons": []
   },
   {
-    "id": "karzill-vi",
+    "id": "rebner-karzill-vi",
     "name": "Karzill VI",
     "suit": "Location",
     "source": "Rebner",
@@ -1178,7 +1178,7 @@
     "icons": []
   },
   {
-    "id": "varuvian-bomb",
+    "id": "rebner-varuvian-bomb",
     "name": "Varuvian Bomb",
     "suit": "Cargo",
     "source": "Rebner",
@@ -1199,7 +1199,7 @@
     ]
   },
   {
-    "id": "jackabogs-clumpship",
+    "id": "rebner-jackabogs-clumpship",
     "name": "Jackabog's Clumpship",
     "suit": "Ship",
     "source": "Rebner",
@@ -1220,7 +1220,7 @@
     ]
   },
   {
-    "id": "harpy",
+    "id": "rebner-harpy",
     "name": "Harpy",
     "suit": "Ship",
     "source": "Rebner",
@@ -1239,7 +1239,7 @@
     ]
   },
   {
-    "id": "the-pakled-emperor",
+    "id": "rebner-the-pakled-emperor",
     "name": "The Pakled Emperor",
     "suit": "Person",
     "source": "Rebner",
@@ -1260,7 +1260,7 @@
     ]
   },
   {
-    "id": "rumdar",
+    "id": "rebner-rumdar",
     "name": "Rumdar",
     "suit": "Person",
     "source": "Rebner",
@@ -1278,7 +1278,7 @@
     "icons": []
   },
   {
-    "id": "ambassador-grubdin",
+    "id": "rebner-ambassador-grubdin",
     "name": "Ambassador Grubdin",
     "suit": "Person",
     "source": "Rebner",
@@ -1294,7 +1294,7 @@
     "icons": []
   },
   {
-    "id": "the-clumpship-pakled",
+    "id": "rebner-the-clumpship-pakled",
     "name": "The Clumpship Pakled",
     "suit": "Ship",
     "source": "Rebner",
@@ -1315,7 +1315,7 @@
     ]
   },
   {
-    "id": "even-bigger-helmet",
+    "id": "rebner-even-bigger-helmet",
     "name": "Even Bigger Helmet",
     "suit": "Cargo",
     "source": "Rebner",
@@ -1329,7 +1329,7 @@
     "icons": []
   },
   {
-    "id": "reginod",
+    "id": "rebner-reginod",
     "name": "Reginod",
     "suit": "Person",
     "source": "Rebner",
@@ -1345,7 +1345,7 @@
     "icons": []
   },
   {
-    "id": "red-alarm",
+    "id": "rebner-red-alarm",
     "name": "Red Alarm",
     "suit": "Incident",
     "source": "Rebner",
@@ -1357,7 +1357,7 @@
     "icons": []
   },
   {
-    "id": "rebelution",
+    "id": "rebner-rebelution",
     "name": "Rebelution",
     "suit": "Directive",
     "source": "Rebner",
@@ -1374,7 +1374,7 @@
     ]
   },
   {
-    "id": "pakled-decree",
+    "id": "rebner-pakled-decree",
     "name": "Pakled Decree",
     "suit": "Directive",
     "source": "Rebner",
@@ -1388,7 +1388,7 @@
     "icons": []
   },
   {
-    "id": "salvage",
+    "id": "rebner-salvage",
     "name": "Salvage",
     "suit": "Directive",
     "source": "Rebner",
@@ -1400,7 +1400,7 @@
     "icons": []
   },
   {
-    "id": "samaritan-snare",
+    "id": "rebner-samaritan-snare",
     "name": "Samaritan Snare",
     "suit": "Directive",
     "source": "Rebner",
@@ -1414,7 +1414,7 @@
     "icons": []
   },
   {
-    "id": "grebnedlog",
+    "id": "rebner-grebnedlog",
     "name": "Grebnedlog",
     "suit": "Person",
     "source": "Rebner",
@@ -1428,7 +1428,7 @@
     "icons": []
   },
   {
-    "id": "pakled-planet",
+    "id": "rebner-pakled-planet",
     "name": "Pakled Planet",
     "suit": "Location",
     "source": "Rebner",
@@ -1442,7 +1442,7 @@
     "icons": []
   },
   {
-    "id": "big-helmet",
+    "id": "rebner-big-helmet",
     "name": "Big Helmet",
     "suit": "Cargo",
     "source": "Rebner",
@@ -1456,7 +1456,7 @@
     "icons": []
   },
   {
-    "id": "big-helmet-2",
+    "id": "rebner-big-helmet-2",
     "name": "Big Helmet",
     "suit": "Cargo",
     "source": "Rebner",
@@ -1470,7 +1470,7 @@
     "icons": []
   },
   {
-    "id": "philippa-georgiou",
+    "id": "georgiou-captain-georgiou",
     "name": "Philippa Georgiou",
     "suit": "Captain",
     "source": "Georgiou",
@@ -1486,7 +1486,7 @@
     "icons": []
   },
   {
-    "id": "uss-shenzhou",
+    "id": "georgiou-uss-shenzhou",
     "name": "U.S.S. Shenzhou",
     "suit": "Ship",
     "source": "Georgiou",
@@ -1505,7 +1505,7 @@
     ]
   },
   {
-    "id": "kaminar",
+    "id": "georgiou-kaminar",
     "name": "Kaminar",
     "suit": "Location",
     "source": "Georgiou",
@@ -1524,7 +1524,7 @@
     ]
   },
   {
-    "id": "ambassador-sarek",
+    "id": "georgiou-ambassador-sarek",
     "name": "Ambassador Sarek",
     "suit": "Person",
     "source": "Georgiou",
@@ -1546,7 +1546,7 @@
     ]
   },
   {
-    "id": "red-angel",
+    "id": "georgiou-red-angel",
     "name": "Red Angel",
     "suit": "Encounter",
     "source": "Georgiou",
@@ -1568,7 +1568,7 @@
     ]
   },
   {
-    "id": "binary-stars-comms-relay",
+    "id": "georgiou-binary-stars-comms-relay",
     "name": "Binary Stars Comms Relay",
     "suit": "Location",
     "source": "Georgiou",
@@ -1590,7 +1590,7 @@
     ]
   },
   {
-    "id": "an-old-telescope",
+    "id": "georgiou-an-old-telescope",
     "name": "An Old Telescope",
     "suit": "Cargo",
     "source": "Georgiou",
@@ -1612,7 +1612,7 @@
     ]
   },
   {
-    "id": "thruster-pack",
+    "id": "georgiou-thruster-pack",
     "name": "Thruster Pack",
     "suit": "Cargo",
     "source": "Georgiou",
@@ -1626,7 +1626,7 @@
     "icons": []
   },
   {
-    "id": "admiral-anderson",
+    "id": "georgiou-admiral-anderson",
     "name": "Admiral Anderson",
     "suit": "Person",
     "source": "Georgiou",
@@ -1647,8 +1647,8 @@
     ]
   },
   {
-    "id": "set-a-course-georgiou",
-    "name": "Set a Course (Georgiou)",
+    "id": "georgiou-set-a-course",
+    "name": "Set a Course",
     "suit": "Directive",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
@@ -1659,8 +1659,8 @@
     "icons": []
   },
   {
-    "id": "first-contact-georgiou",
-    "name": "First Contact (Georgiou)",
+    "id": "georgiou-first-contact",
+    "name": "First Contact",
     "suit": "Directive",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
@@ -1671,7 +1671,7 @@
     "icons": []
   },
   {
-    "id": "lt-saru",
+    "id": "georgiou-lt-saru",
     "name": "Lt. Saru",
     "suit": "Person",
     "source": "Georgiou",
@@ -1687,7 +1687,7 @@
     "icons": []
   },
   {
-    "id": "cmdr-burnham",
+    "id": "georgiou-cmdr-burnham",
     "name": "Cmdr. Burnham",
     "suit": "Person",
     "source": "Georgiou",
@@ -1706,7 +1706,7 @@
     "icons": []
   },
   {
-    "id": "class-c-shuttlecraft",
+    "id": "georgiou-class-c-shuttlecraft",
     "name": "Class C Shuttlecraft",
     "suit": "Ship",
     "source": "Georgiou",
@@ -1720,8 +1720,8 @@
     "icons": []
   },
   {
-    "id": "analyze-georgiou",
-    "name": "Analyze (Georgiou)",
+    "id": "georgiou-analyze",
+    "name": "Analyze",
     "suit": "Directive",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
@@ -1732,8 +1732,8 @@
     "icons": []
   },
   {
-    "id": "recruit-georgiou",
-    "name": "Recruit (Georgiou)",
+    "id": "georgiou-recruit",
+    "name": "Recruit",
     "suit": "Directive",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
@@ -1744,8 +1744,8 @@
     "icons": []
   },
   {
-    "id": "strange-new-worlds-georgiou",
-    "name": "Strange New Worlds (Georgiou)",
+    "id": "georgiou-strange-new-worlds",
+    "name": "Strange New Worlds",
     "suit": "Directive",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
@@ -1756,8 +1756,8 @@
     "icons": []
   },
   {
-    "id": "utilize-georgiou",
-    "name": "Utilize (Georgiou)",
+    "id": "georgiou-utilize",
+    "name": "Utilize",
     "suit": "Directive",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
@@ -1768,7 +1768,7 @@
     "icons": []
   },
   {
-    "id": "vulcan-science-academy",
+    "id": "georgiou-vulcan-science-academy",
     "name": "Vulcan Science Academy",
     "suit": "Location",
     "source": "Georgiou",
@@ -1789,7 +1789,7 @@
     ]
   },
   {
-    "id": "danby-connor",
+    "id": "georgiou-danby-connor",
     "name": "Danby Connor",
     "suit": "Person",
     "source": "Georgiou",
@@ -1806,7 +1806,7 @@
     "icons": []
   },
   {
-    "id": "lt-detmer",
+    "id": "georgiou-lt-detmer",
     "name": "Lt. Detmer",
     "suit": "Person",
     "source": "Georgiou",
@@ -1828,7 +1828,7 @@
     ]
   },
   {
-    "id": "kamran-gant",
+    "id": "georgiou-kamran-gant",
     "name": "Kamran Gant",
     "suit": "Person",
     "source": "Georgiou",
@@ -1852,8 +1852,8 @@
     ]
   },
   {
-    "id": "hostile-contact-georgiou",
-    "name": "Hostile Contact (Georgiou)",
+    "id": "georgiou-hostile-contact",
+    "name": "Hostile Contact",
     "suit": "Incident",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
@@ -1861,6 +1861,804 @@
     "regular_traits": [],
     "other_traits": [],
     "filename": "georgiou-hostile-contact.jpg",
+    "icons": []
+  },
+  {
+    "id": "archer-jonathan-archer",
+    "name": "Jonathan Archer",
+    "suit": "Captain",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "NX-01",
+      "Pilot",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "archer-earth",
+    "name": "Earth",
+    "suit": "Status",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "archer-nx-01-enterprise",
+    "name": "NX-01 Enterprise",
+    "suit": "Ship",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "NX-01",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "archer-founding-the-federation",
+    "name": "Founding the Federation",
+    "suit": "Directive",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Ambassador"
+    ],
+    "other_traits": [
+      "Wildcard"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Any"
+      }
+    ]
+  },
+  {
+    "id": "archer-agent-daniels",
+    "name": "Agent Daniels",
+    "suit": "Person",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      },
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "archer-commander-shran",
+    "name": "Commander Shran",
+    "suit": "Person",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Andorian"
+    ],
+    "regular_traits": [
+      "Imperial"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      },
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "archer-ambassador-soval",
+    "name": "Ambassador Soval",
+    "suit": "Person",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Telepath",
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      },
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "archer-admiral-forrest",
+    "name": "Admiral Forrest",
+    "suit": "Person",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "archer-xindi-council",
+    "name": "Xindi Council",
+    "suit": "Ally",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Xindi"
+    ],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "archer-automated-repair-station",
+    "name": "Automated Repair Station",
+    "suit": "Location",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Starbase",
+      "Engineer"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "archer-major-hayes-maco",
+    "name": "Major Hayes, MACO",
+    "suit": "Person",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "archer-tpol",
+    "name": "T'Pol",
+    "suit": "Person",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "NX-01",
+      "Telepath",
+      "Starfleet",
+      "Scientist"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "archer-strange-new-worlds",
+    "name": "Strange New Worlds",
+    "suit": "Directive",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "archer-first-contact",
+    "name": "First Contact",
+    "suit": "Directive",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "archer-inspire",
+    "name": "Inspire",
+    "suit": "Directive",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "archer-reach-any-star",
+    "name": "Reach Any Star",
+    "suit": "Directive",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "archer-porthos",
+    "name": "Porthos",
+    "suit": "Cargo",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "NX-01",
+      "Creature"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "archer-shuttlepod-1",
+    "name": "Shuttlepod 1",
+    "suit": "Ship",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "NX-01",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "archer-trip-tucker-iii",
+    "name": "\"Trip\" Tucker III",
+    "suit": "Person",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "NX-01",
+      "Engineer",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "archer-recruit",
+    "name": "Recruit",
+    "suit": "Directive",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "archer-analyze",
+    "name": "Analyze",
+    "suit": "Directive",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "archer-strength-of-the-soul",
+    "name": "Strength of the Soul",
+    "suit": "Directive",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "archer-faith-of-the-heart",
+    "name": "Faith of the Heart",
+    "suit": "Directive",
+    "source": "Archer",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "soval-soval",
+    "name": "Soval",
+    "suit": "Captain",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Telepath",
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "soval-vulcan-science-directorate",
+    "name": "Vulcan Science Directorate",
+    "suit": "Status",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "soval-vulcan",
+    "name": "Vulcan",
+    "suit": "Location",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "soval-mount-seleya",
+    "name": "Mount Seleya",
+    "suit": "Location",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan",
+      "Transcendent"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "soval-vulcan-hello",
+    "name": "Vulcan Hello",
+    "suit": "Directive",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Communication"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "soval-tpau",
+    "name": "T'Pau",
+    "suit": "Person",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Telepath"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Variable"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Variable"
+      }
+    ]
+  },
+  {
+    "id": "soval-minister-kuvak",
+    "name": "Minister Kuvak",
+    "suit": "Person",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "soval-kirshara",
+    "name": "Kir'Shara",
+    "suit": "Cargo",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Path of Surak"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "soval-vulcan-high-command",
+    "name": "Vulcan High Command",
+    "suit": "Directive",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "soval-seleya-dkyr",
+    "name": "Seleya [D'Kyr]",
+    "suit": "Ship",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "soval-paan-mokar",
+    "name": "Paan Mokar",
+    "suit": "Location",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan",
+      "Andorian"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "soval-vlar",
+    "name": "V'Lar",
+    "suit": "Person",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "soval-plomeek-tea",
+    "name": "Plomeek Tea",
+    "suit": "Cargo",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Beverage"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "soval-energy-drain",
+    "name": "Energy Drain",
+    "suit": "Incident",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "soval-stel",
+    "name": "Stel",
+    "suit": "Person",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Security"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "soval-muroc",
+    "name": "Muroc",
+    "suit": "Person",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "soval-analyze",
+    "name": "Analyze",
+    "suit": "Directive",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "soval-recruit",
+    "name": "Recruit",
+    "suit": "Directive",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "soval-infinite-diversity-in-infinite-combinations",
+    "name": "Infinite Diversity in Infinite Combinations",
+    "suit": "Directive",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [
+      "Path of Surak"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "soval-advisory",
+    "name": "Advisory",
+    "suit": "Directive",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "soval-sub-commander-tpol",
+    "name": "Sub-Commander T'Pol",
+    "suit": "Person",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Telepath",
+      "Scientist",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "soval-united-earth",
+    "name": "United Earth",
+    "suit": "Ally",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "soval-utilize",
+    "name": "Utilize",
+    "suit": "Directive",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "soval-timur",
+    "name": "Ti'Mur",
+    "suit": "Ship",
+    "source": "Soval",
+    "game_box": "To Boldly Go",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
     "icons": []
   }
 ]
