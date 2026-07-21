@@ -54,11 +54,8 @@ Tracked improvements for the site. Ordered by priority.
 
 ## Issue 4 — Furniture gaps on seven older guides (found by verify_guide v2 sweep, 19 Jul 2026)
 
-**Problem:** the canonical-text migration ran the verifier across all 26 guides. Seven fail on pre-existing furniture/structural defects (McCue text unaffected):
+**Problem (corrected 19 Jul):** every guide had a top nav link, but six guides lacked the bottom `Back to Compendium` bar (combining-markets, promo-pack-2, sc-market-locations-rewards, tbg-allies, tbg-encounters-incidents, tbg-ships); four of those used a variant top nav (`<nav>` + "ST:CC Compendium" wording) instead of the documented snippet; tbg-locations had an unclosed `<footer>` (its navs were fine).
 
-- Missing bottom `Back to Compendium` nav bar (Rule 5): combining-markets, promo-pack-2, sc-market-locations-rewards, tbg-allies, tbg-encounters-incidents, tbg-ships, tbg-locations.
-- tbg-locations additionally has an unclosed `<footer>` element.
+**Fix:** normalized the four variant top navs to `<div id="top" class="nav-bar">` + "Back to Compendium"; added the bottom bar before `<footer>` on the six; closed the footer on tbg-locations; regenerated the seven canonical text files. Fixer ships as `tools/fix_furniture_issue4.py` (Rule 7).
 
-**Fix:** add the bottom nav-bar snippet before `<footer>` on each; close the footer tag on tbg-locations; regenerate each guide's `text/<slug>.txt` in the same commit (the nav text sits inside the canonical window); re-run verify to green.
-
-**Status:** OPEN — awaiting Periodic_agent approval to edit the seven pages.
+**Status:** DONE — 19 Jul 2026. Full sweep: 26/26 guides PASS verify_guide v2.
