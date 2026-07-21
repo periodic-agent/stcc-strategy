@@ -190,7 +190,23 @@ def to_marked_text(post):
     return s.strip()
 
 
+def balance_markers(t):
+    """Close/strip inline markers that straddle a line break.
+
+    BGG lets an author open <strong> on one line and close it on the next
+    (McCue does this for the 'PASSIVE and NONE' headers). Tokenizing is
+    per-line, so the pair would emit an unclosed <strong> in one <p> and an
+    orphan </strong> in the next. Balance per line; text is untouched.
+    """
+    for op, cl in (("[[B]]", "[[/B]]"), ("[[I]]", "[[/I]]")):
+        while t.count(cl) > t.count(op):
+            t = t.replace(cl, "", 1)
+        t += cl * (t.count(op) - t.count(cl))
+    return t
+
+
 def fmt_inline(t):
+    t = balance_markers(t.strip())
     t = htmllib.escape(t.strip(), quote=False)
     t = t.replace("[[B]]", "<strong>").replace("[[/B]]", "</strong>")
     t = t.replace("[[I]]", "<em>").replace("[[/I]]", "</em>")
@@ -369,6 +385,15 @@ def build_body(marked, cfg, manifest, report):
     # untitled leading section -> Introduction
     if body and not body[0].lstrip().startswith("<h2") and not body[0].lstrip().startswith("\n  <h2"):
         body.insert(0, "  <h2>Introduction</h2>\n\n")
+
+    # lead_image: card art that lives in the repo rather than in the BGG post
+    # (promo cards, guides McCue posted without images). Inserted after the
+    # first H2 so it reads like every other guide's opening card.
+    lead = cfg.get("lead_image")
+    if lead:
+        alt = cfg.get("lead_image_alt", "")
+        body.insert(1, '<div class="card-img"><img src="%s" alt="%s" '
+                       'loading="lazy" onclick="openLightbox(this)"></div>\n\n' % (lead, alt))
     return "".join(body), h2s
 
 
