@@ -13,7 +13,7 @@ The live repo is authoritative — fetch live, including WORKFLOW.md. Do NOT wor
 
 **Preferred fetch: one shallow clone.** `raw.githubusercontent.com` serves stale files (hours-old cache observed) and is proxy-blocked in some sessions. `git clone --depth 1 https://github.com/periodic-agent/stcc-strategy.git` works through the same proxy, is always current, and provides every repo file locally, including images. One call.
 
-Fallback for single files where clone is unavailable — `web_fetch` FAILS (permissions error); use bash urllib instead:
+**Never trust a raw fetch for currency.** `raw.githubusercontent.com` and `web_fetch` sit behind CDN and tool caches: they may fail outright (permissions error) or — worse — return HTTP 200 with a silently stale copy hours old (observed: an index.html missing two live guides; a pre-consolidation WORKFLOW.md). A clone always returns the true current tip. If a single-file fetch is unavoidable, treat the result as possibly stale and verify against a clone before acting on it. urllib fallback:
 ```python
 import urllib.request
 url = 'https://raw.githubusercontent.com/periodic-agent/stcc-strategy/main/[filename]'
