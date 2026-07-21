@@ -254,7 +254,16 @@ def build_body(marked, cfg, manifest, report):
 
     # sanctioned corrections (config "replace": [[from, to], ...]);
     # use these ONLY for fixes Periodic_agent/McCue explicitly approved.
+    # A pattern that matches nothing is a hard error: it means the source
+    # changed (or the pattern is wrong) and the correction you believe is
+    # live would silently not apply.
     repl = cfg.get("replace", [])
+    for a, _to in repl:
+        n = sum(v.count(a) for k, v in tokens if k != "img")
+        if n == 0:
+            sys.exit('replace pattern matched NOTHING: %r\n'
+                     'Source text changed or pattern mistyped. Fix the config; '
+                     'nothing built.' % a[:80])
     tokens = [(k, _apply_repl(v, repl) if k != "img" else v) for k, v in tokens]
 
     # cuts + inserted structural H2s
@@ -535,12 +544,25 @@ def main():
                .replace("{{VIDEO_SECTION}}", build_video(cfg)))
     out_html = os.path.join(out_dir, "%s.html" % cfg["slug"])
     open(out_html, "w", encoding="utf-8").write(page)
+
+    # canonical text: the approved wording of the built page, committed to
+    # text/<slug>.txt in the SAME commit as the guide. verify_guide.py
+    # compares the page against it exactly.
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from extract_text import canonical_lines
+    text_dir = os.path.join(out_dir, "text")
+    os.makedirs(text_dir, exist_ok=True)
+    canon_path = os.path.join(text_dir, "%s.txt" % cfg["slug"])
+    open(canon_path, "w", encoding="utf-8", newline="\n").write(
+        "\n".join(canonical_lines(page)) + "\n")
+    report.append("canonical text: %s" % canon_path)
+
     report.append("guide: %s (%d bytes), %d H2 sections, %d images"
                   % (out_html, len(page), len(h2s), len(manifest)))
     open(os.path.join(out_dir, "report.txt"), "w", encoding="utf-8").write("\n".join(report))
     print("\n".join(report))
-    print("\nNext: python3 tools/verify_guide.py %s %s --config %s"
-          % (out_html, os.path.join(out_dir, "%s_text.txt" % cfg["slug"]), cfg_path))
+    print("\nNext: python3 tools/verify_guide.py %s %s"
+          % (out_html, canon_path))
 
 
 if __name__ == "__main__":
