@@ -1,10 +1,28 @@
 [
   {
+    "id": "admiral-jarok",
+    "name": "Admiral Jarok",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2PER01/26•",
+    "variant": "reprint",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
     "id": "ambassador-gral",
     "name": "Ambassador Gral",
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER02/26",
+    "variant": "original",
     "species_traits": [
       "Tellarite"
     ],
@@ -23,6 +41,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER03/26",
+    "variant": "original",
     "species_traits": [
       "Human",
       "Klingon"
@@ -43,6 +63,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER04/26",
+    "variant": "original",
     "species_traits": [
       "Andorian"
     ],
@@ -59,6 +81,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER05/26",
+    "variant": "original",
     "species_traits": [
       "Xindi"
     ],
@@ -70,11 +94,34 @@
     "icons": []
   },
   {
+    "id": "harry-mudd",
+    "name": "Harry Mudd",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2PER06/26•",
+    "variant": "reprint",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Shady",
+      "Time Travel"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
     "id": "hoshi-sato",
     "name": "Hoshi Sato",
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER07/26",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -93,6 +140,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER08/26",
+    "variant": "original",
     "species_traits": [
       "Pakled"
     ],
@@ -109,6 +158,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER09/26",
+    "variant": "original",
     "species_traits": [
       "Synthetic"
     ],
@@ -120,11 +171,36 @@
     "icons": []
   },
   {
+    "id": "lursa",
+    "name": "Lursa",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2PER10/26•",
+    "variant": "reprint",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Shady"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
     "id": "malcolm-reed",
     "name": "Malcolm Reed",
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER11/26",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -144,6 +220,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER12/26",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -176,6 +254,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER13/26",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -192,18 +272,20 @@
     ]
   },
   {
-    "id": "phlox-nx01",
+    "id": "phlox",
     "name": "Phlox",
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER14/26†",
+    "variant": "updated",
     "species_traits": [],
     "regular_traits": [
       "NX-01",
       "Doctor"
     ],
     "other_traits": [],
-    "filename": "phlox-nx01.jpg",
+    "filename": "phlox.jpg",
     "icons": []
   },
   {
@@ -212,6 +294,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER15/26",
+    "variant": "original",
     "species_traits": [
       "Human",
       "Bajoran",
@@ -225,11 +309,58 @@
     "icons": []
   },
   {
+    "id": "riva",
+    "name": "Riva",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2PER16/26•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [
+      "Telepath",
+      "Ambassador",
+      "Communication"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      },
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "rom",
+    "name": "Rom",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2PER17/26•",
+    "variant": "reprint",
+    "species_traits": [
+      "Ferengi"
+    ],
+    "regular_traits": [
+      "Engineer"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
     "id": "sarina-douglas",
     "name": "Sarina Douglas",
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER18/26",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -255,6 +386,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER19/26",
+    "variant": "original",
     "species_traits": [
       "Android",
       "Synthetic"
@@ -270,11 +403,73 @@
     ]
   },
   {
+    "id": "sukal",
+    "name": "Su'Kal",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2PER20/26•",
+    "variant": "reprint",
+    "species_traits": [
+      "Kelpien"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "talok",
+    "name": "Talok",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2PER21/26•",
+    "variant": "reprint",
+    "species_traits": [
+      "Vulcan",
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Spy"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "tevrin-krit",
+    "name": "Tevrin Krit",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2PER22/26•",
+    "variant": "reprint",
+    "species_traits": [
+      "Tellarite"
+    ],
+    "regular_traits": [
+      "Business"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
     "id": "thelev",
     "name": "Thelev",
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER23/26",
+    "variant": "original",
     "species_traits": [
       "Orion",
       "Andorian"
@@ -297,6 +492,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER24/26",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -315,6 +512,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER25/26",
+    "variant": "original",
     "species_traits": [
       "Andorian"
     ],
@@ -342,6 +541,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2PER26/26",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -360,6 +561,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2CAR01/18",
+    "variant": "original",
     "species_traits": [
       "Klingon"
     ],
@@ -383,6 +586,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2CAR04/18",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Engineer",
@@ -406,6 +611,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2CAR05/18",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Helmet",
@@ -423,6 +630,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2CAR09/18",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Doctor",
@@ -441,6 +650,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2CAR12/18",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Helmet",
@@ -456,6 +667,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2CAR16/18",
+    "variant": "original",
     "species_traits": [
       "Alien"
     ],
@@ -472,6 +685,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2CAR18/18",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Communication"
@@ -486,15 +701,21 @@
     ]
   },
   {
-    "id": "borg-spatial-trajector",
-    "name": "Borg Spatial Trajector",
+    "id": "borg-spatial-trajectory",
+    "name": "Borg Spatial Trajectory",
     "suit": "Cargo",
     "source": "Common",
     "game_box": "To Boldly Go",
-    "species_traits": [],
-    "regular_traits": [],
+    "card_number": "2CAR02/18†",
+    "variant": "updated",
+    "species_traits": [
+      "Borg"
+    ],
+    "regular_traits": [
+      "Scientist"
+    ],
     "other_traits": [],
-    "filename": "borg-spatial-trajector.jpg",
+    "filename": "borg-spatial-trajectory.jpg",
     "icons": []
   },
   {
@@ -503,9 +724,17 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "To Boldly Go",
-    "species_traits": [],
-    "regular_traits": [],
-    "other_traits": [],
+    "card_number": "2CAR11/18†",
+    "variant": "updated",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
     "filename": "lirpa.jpg",
     "icons": []
   },
@@ -515,9 +744,17 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2CAR14/18†",
+    "variant": "updated",
     "species_traits": [],
-    "regular_traits": [],
-    "other_traits": [],
+    "regular_traits": [
+      "Weapon",
+      "Security",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
     "filename": "phasers.jpg",
     "icons": []
   },
@@ -527,11 +764,23 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "To Boldly Go",
-    "species_traits": [],
-    "regular_traits": [],
+    "card_number": "2CAR13/18†",
+    "variant": "updated",
+    "species_traits": [
+      "Bajoran",
+      "Transcendent"
+    ],
+    "regular_traits": [
+      "Time Travel"
+    ],
     "other_traits": [],
     "filename": "orb-of-time.jpg",
-    "icons": []
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ]
   },
   {
     "id": "kemocite",
@@ -539,6 +788,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2CAR10/18",
+    "variant": "original",
     "species_traits": [
       "Xindi"
     ],
@@ -556,6 +807,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2LOC03/20",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Starfleet",
@@ -576,6 +829,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2LOC06/20",
+    "variant": "original",
     "species_traits": [
       "Xindi"
     ],
@@ -593,6 +848,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2LOC10/20",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -607,6 +864,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2LOC11/20",
+    "variant": "original",
     "species_traits": [
       "Xindi"
     ],
@@ -636,6 +895,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2LOC12/20",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Ambassador",
@@ -656,6 +917,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2LOC14/20",
+    "variant": "original",
     "species_traits": [
       "Human",
       "Romulan",
@@ -677,6 +940,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2LOC04/20",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Augment",
@@ -697,6 +962,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2LOC17/20",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Starbase",
@@ -721,6 +988,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2LOC18/20",
+    "variant": "original",
     "species_traits": [
       "Tellarite"
     ],
@@ -746,6 +1015,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2ALL05/16",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Scientist"
@@ -762,6 +1033,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2ALL09/16",
+    "variant": "original",
     "species_traits": [
       "Orion"
     ],
@@ -785,6 +1058,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2ALL10/16",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Pilot",
@@ -802,6 +1077,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2ALL11/16",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Telepath",
@@ -817,11 +1094,22 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "To Boldly Go",
-    "species_traits": [],
+    "card_number": "2ALL13/16",
+    "variant": "original",
+    "species_traits": [
+      "Tellarite"
+    ],
     "regular_traits": [],
-    "other_traits": [],
+    "other_traits": [
+      "Attack"
+    ],
     "filename": "",
-    "icons": []
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
   },
   {
     "id": "unimatrix-zero",
@@ -829,6 +1117,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2ALL14/16",
+    "variant": "original",
     "species_traits": [
       "Borg"
     ],
@@ -850,6 +1140,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2ALL15/16",
+    "variant": "original",
     "species_traits": [
       "Changeling"
     ],
@@ -871,6 +1163,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2ALL16/16",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Shady",
@@ -891,6 +1185,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2SHI02/13",
+    "variant": "original",
     "species_traits": [
       "Ferengi"
     ],
@@ -914,6 +1210,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2SHI04/13",
+    "variant": "original",
     "species_traits": [
       "Orion"
     ],
@@ -930,6 +1228,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2SHI07/13",
+    "variant": "original",
     "species_traits": [
       "Alien"
     ],
@@ -951,6 +1251,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2SHI11/13",
+    "variant": "original",
     "species_traits": [
       "Klingon"
     ],
@@ -967,6 +1269,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2SHI12/13",
+    "variant": "original",
     "species_traits": [
       "Xindi"
     ],
@@ -990,6 +1294,8 @@
     "suit": "Encounter",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2ENC01/8",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -1009,6 +1315,8 @@
     "suit": "Encounter",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2ENC02/8",
+    "variant": "original",
     "species_traits": [
       "Alien"
     ],
@@ -1034,6 +1342,8 @@
     "suit": "Encounter",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2ENC05/8",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Starfleet",
@@ -1054,6 +1364,8 @@
     "suit": "Encounter",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2ENC06/8",
+    "variant": "original",
     "species_traits": [
       "Alien"
     ],
@@ -1071,6 +1383,8 @@
     "suit": "Encounter",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2ENC07/8",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -1095,6 +1409,8 @@
     "suit": "Incident",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2INC01/6",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -1111,6 +1427,8 @@
     "suit": "Incident",
     "source": "Common",
     "game_box": "To Boldly Go",
+    "card_number": "2INC04/6",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1123,6 +1441,8 @@
     "suit": "Captain",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB01/22",
+    "variant": "original",
     "species_traits": [
       "Pakled"
     ],
@@ -1139,6 +1459,8 @@
     "suit": "Ship",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB02/22",
+    "variant": "original",
     "species_traits": [
       "Pakled"
     ],
@@ -1155,6 +1477,8 @@
     "suit": "Cargo",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB03/22",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Helmet"
@@ -1169,6 +1493,8 @@
     "suit": "Location",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB04/22",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Business"
@@ -1183,6 +1509,8 @@
     "suit": "Cargo",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB05/22",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Weapon"
@@ -1204,6 +1532,8 @@
     "suit": "Ship",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB06/22",
+    "variant": "original",
     "species_traits": [
       "Pakled"
     ],
@@ -1225,6 +1555,8 @@
     "suit": "Ship",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB07/22",
+    "variant": "original",
     "species_traits": [
       "Pakled"
     ],
@@ -1244,6 +1576,8 @@
     "suit": "Person",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB08/22",
+    "variant": "original",
     "species_traits": [
       "Pakled"
     ],
@@ -1265,6 +1599,8 @@
     "suit": "Person",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB09/22",
+    "variant": "original",
     "species_traits": [
       "Pakled"
     ],
@@ -1283,6 +1619,8 @@
     "suit": "Person",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB10/22",
+    "variant": "original",
     "species_traits": [
       "Pakled"
     ],
@@ -1299,6 +1637,8 @@
     "suit": "Ship",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB11/22",
+    "variant": "original",
     "species_traits": [
       "Pakled"
     ],
@@ -1320,6 +1660,8 @@
     "suit": "Cargo",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB12/22",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Helmet"
@@ -1334,6 +1676,8 @@
     "suit": "Person",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB13/22",
+    "variant": "original",
     "species_traits": [
       "Pakled"
     ],
@@ -1350,6 +1694,8 @@
     "suit": "Incident",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB14/22",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1362,6 +1708,8 @@
     "suit": "Directive",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB15/22",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1379,6 +1727,8 @@
     "suit": "Directive",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB16/22",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -1393,6 +1743,8 @@
     "suit": "Directive",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB17/22",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1405,6 +1757,8 @@
     "suit": "Directive",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB18/22",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -1419,6 +1773,8 @@
     "suit": "Person",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB19/22",
+    "variant": "original",
     "species_traits": [
       "Pakled"
     ],
@@ -1433,6 +1789,8 @@
     "suit": "Location",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB20/22",
+    "variant": "original",
     "species_traits": [
       "Pakled"
     ],
@@ -1447,6 +1805,8 @@
     "suit": "Cargo",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB21/22",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Helmet"
@@ -1461,6 +1821,8 @@
     "suit": "Cargo",
     "source": "Rebner",
     "game_box": "To Boldly Go",
+    "card_number": "2REB22/22",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Helmet"
@@ -1475,6 +1837,8 @@
     "suit": "Captain",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GEO01/23",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -1491,6 +1855,8 @@
     "suit": "Ship",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE002/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -1510,6 +1876,8 @@
     "suit": "Location",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE003/23",
+    "variant": "original",
     "species_traits": [
       "Kelpien"
     ],
@@ -1529,6 +1897,8 @@
     "suit": "Person",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE004/23",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -1551,6 +1921,8 @@
     "suit": "Encounter",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE005/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Anomaly",
@@ -1573,6 +1945,8 @@
     "suit": "Location",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE006/23",
+    "variant": "original",
     "species_traits": [
       "Klingon"
     ],
@@ -1595,6 +1969,8 @@
     "suit": "Cargo",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE007/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Ancient",
@@ -1617,6 +1993,8 @@
     "suit": "Cargo",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE008/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -1631,6 +2009,8 @@
     "suit": "Person",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE009/23",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -1652,6 +2032,8 @@
     "suit": "Directive",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE010/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1664,6 +2046,8 @@
     "suit": "Directive",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE011/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1676,6 +2060,8 @@
     "suit": "Person",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE012/23",
+    "variant": "original",
     "species_traits": [
       "Kelpien"
     ],
@@ -1692,6 +2078,8 @@
     "suit": "Person",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE013/23",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -1711,6 +2099,8 @@
     "suit": "Ship",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE014/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -1725,6 +2115,8 @@
     "suit": "Directive",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE015/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1737,6 +2129,8 @@
     "suit": "Directive",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE016/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1749,6 +2143,8 @@
     "suit": "Directive",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE017/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1761,6 +2157,8 @@
     "suit": "Directive",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE018/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1773,6 +2171,8 @@
     "suit": "Location",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE019/23",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -1794,6 +2194,8 @@
     "suit": "Person",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE020/23",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -1811,6 +2213,8 @@
     "suit": "Person",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE021/23",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -1833,6 +2237,8 @@
     "suit": "Person",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE022/23",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -1857,6 +2263,8 @@
     "suit": "Incident",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
+    "card_number": "2GE023/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1869,6 +2277,8 @@
     "suit": "Captain",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC01/23",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -1887,6 +2297,8 @@
     "suit": "Status",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC02/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1899,6 +2311,8 @@
     "suit": "Ship",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC03/23",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -1916,6 +2330,8 @@
     "suit": "Directive",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC04/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Ambassador"
@@ -1937,6 +2353,8 @@
     "suit": "Person",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC05/23",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -1962,6 +2380,8 @@
     "suit": "Person",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC06/23",
+    "variant": "original",
     "species_traits": [
       "Andorian"
     ],
@@ -1987,6 +2407,8 @@
     "suit": "Person",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC07/23",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -2013,6 +2435,8 @@
     "suit": "Person",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC08/23",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -2029,6 +2453,8 @@
     "suit": "Ally",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC09/23",
+    "variant": "original",
     "species_traits": [
       "Xindi"
     ],
@@ -2045,6 +2471,8 @@
     "suit": "Location",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC10/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Starbase",
@@ -2060,6 +2488,8 @@
     "suit": "Person",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC11/23",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -2083,6 +2513,8 @@
     "suit": "Person",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC12/23",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -2107,6 +2539,8 @@
     "suit": "Directive",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC13/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2119,6 +2553,8 @@
     "suit": "Directive",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC14/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2131,6 +2567,8 @@
     "suit": "Directive",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC15/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2143,6 +2581,8 @@
     "suit": "Directive",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC16/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2160,6 +2600,8 @@
     "suit": "Cargo",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC17/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "NX-01",
@@ -2175,6 +2617,8 @@
     "suit": "Ship",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC18/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "NX-01",
@@ -2190,6 +2634,8 @@
     "suit": "Person",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC19/23",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -2208,6 +2654,8 @@
     "suit": "Directive",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC20/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2220,6 +2668,8 @@
     "suit": "Directive",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC21/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2232,6 +2682,8 @@
     "suit": "Directive",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC22/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2244,6 +2696,8 @@
     "suit": "Directive",
     "source": "Archer",
     "game_box": "To Boldly Go",
+    "card_number": "2ARC23/23",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2256,6 +2710,8 @@
     "suit": "Captain",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV01/24",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -2273,6 +2729,8 @@
     "suit": "Status",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV02/24",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2285,6 +2743,8 @@
     "suit": "Location",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV03/24",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -2308,6 +2768,8 @@
     "suit": "Location",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV04/24",
+    "variant": "original",
     "species_traits": [
       "Vulcan",
       "Transcendent"
@@ -2332,6 +2794,8 @@
     "suit": "Directive",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV05/24",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Communication"
@@ -2357,6 +2821,8 @@
     "suit": "Person",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV06/24",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -2382,6 +2848,8 @@
     "suit": "Person",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV07/24",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -2401,6 +2869,8 @@
     "suit": "Cargo",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV08/24",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Path of Surak"
@@ -2420,6 +2890,8 @@
     "suit": "Directive",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV09/24",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -2439,6 +2911,8 @@
     "suit": "Ship",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV10/24",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -2453,6 +2927,8 @@
     "suit": "Location",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV11/24",
+    "variant": "original",
     "species_traits": [
       "Vulcan",
       "Andorian"
@@ -2468,6 +2944,8 @@
     "suit": "Person",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV12/24",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -2489,6 +2967,8 @@
     "suit": "Cargo",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV13/24",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -2505,6 +2985,8 @@
     "suit": "Incident",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV14/24",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2517,6 +2999,8 @@
     "suit": "Person",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV15/24",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -2535,6 +3019,8 @@
     "suit": "Person",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV16/24",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -2554,6 +3040,8 @@
     "suit": "Directive",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV17/24",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2566,6 +3054,8 @@
     "suit": "Directive",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV18/24",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2578,6 +3068,8 @@
     "suit": "Directive",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV19/24",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
       "Path of Surak"
@@ -2592,6 +3084,8 @@
     "suit": "Directive",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV20/24",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2604,6 +3098,8 @@
     "suit": "Person",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV21/24",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
@@ -2627,6 +3123,8 @@
     "suit": "Ally",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV22/24",
+    "variant": "original",
     "species_traits": [
       "Human"
     ],
@@ -2641,6 +3139,8 @@
     "suit": "Directive",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV23/24",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2653,6 +3153,8 @@
     "suit": "Ship",
     "source": "Soval",
     "game_box": "To Boldly Go",
+    "card_number": "2SOV24/24",
+    "variant": "original",
     "species_traits": [
       "Vulcan"
     ],
