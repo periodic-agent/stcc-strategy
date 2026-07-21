@@ -339,7 +339,7 @@ Place just before `</body>`. Tracker endpoint: `https://stcc-compendium.goatcoun
 ### File structure
 ```
 box1.json    -- Captain's Chair, complete (255 cards incl. Promo Pack 1)   [repo ROOT]
-box2.json    -- To Boldly Go, live (104 cards, partial: community-sourced)  [repo ROOT]
+box2.json    -- To Boldly Go, live (159 cards, partial: community-sourced)  [repo ROOT]
 box3.json    -- Second Contact, pending                                     [repo ROOT]
 ```
 The boxN.json files live at the **repo root**, not in a `data/` folder.
@@ -353,6 +353,11 @@ The Card Scanner (`card-browser-mockup.html`) holds its cards as a single inline
 script header. Regenerate the array with the tool — never hand-edit it. The scanner
 derives every filter pill and box/deck membership from these fields, so wiring a new box
 in is purely a data operation. **TBG (Box 2) is live in the array; Box 3 pending.**
+
+**The flattener drops `variant` and `card_number`.** It emits a fixed ten keys, so
+`ALL_CARDS` currently has no notion of reprints: a card reprinted in Box 2 renders twice
+when both boxes are active. Carrying `variant` through is the first step of any
+duplicate-resolver work; the flattened-schema contract is in the script header.
 
 ### Canonical JSON schema (per card)
 ```json
@@ -452,18 +457,74 @@ in is purely a data operation. **TBG (Box 2) is live in the array; Box 3 pending
 - Existing rows are never modified by a merge; "verified" statuses and Contributor credits survive every update.
 - **New guide imports feed the database:** when a TBG/2C guide is imported, extract its card images to `img/box2/` or `img/box3/` (convention names) AND read the card faces into new sheet rows before the guide ships.
 - Scanner build: read the sheet, validate traits against the Vocabulary tab (flag novel traits, don't reject), emit `box2.json` / `box3.json`, re-inject into the Card Scanner. Same schema as box1.json.
-- Card codes (e.g. 2PER07/26) are the stable ids; optional for volunteers, backfilled during verification. Dagger (†) marks updated repeats from the core box.
+- Card codes (e.g. 2PER07/26) are the stable ids; optional for volunteers, backfilled during verification. See the variant convention below.
 - **Duplicate card names within a deck are legitimate** — a deck can contain two copies (e.g. Big Helmet ×2 in Rebner, codes 2REB21/22 and 2REB22/22). Give the second card's `id` a `-2` suffix and keep both rows; do NOT deduplicate.
+
+### Card number and variant (duplicate handling)
+
+Column A of the sheet carries the printed card number and encodes duplicate status.
+Contributors enter the number exactly as printed, e.g. `2PER14/26†`.
+
+```
+^(\d)([A-Z]+)(\d+)/(\d+)\s*(.)?$
+   box  set    num  total  marker
+```
+
+| marker | codepoint | `variant` | meaning |
+|---|---|---|---|
+| *(none)* | — | `original` | new in this box |
+| `•` | U+2022 | `reprint` | gameplay-identical to the Box 1 card |
+| `†` | U+2020 | `updated` | new traits or errata |
+| anything else | — | **hard fail** | build stops |
+
+`build_box2_from_sheet.py` emits `variant` and `card_number` onto every record.
+
+**The hard fail is not optional and is not a comment on contributor care.** Sheets
+autocorrect, mobile keyboards and paste from other sources silently substitute `·`
+(U+00B7) or `∙` (U+2219) for `•` with no visible change to the typist. A silent fallback
+to `original` is the one failure that hides itself: a `†` card would look brand new and
+the resolver would never fire on it. All bad markers are collected and reported together
+with their codepoints, so a single run fixes every cell.
+
+A **blank** card number is not "no marker", it is `unclassified`. Treating it as
+`original` would reintroduce the same silent failure through another door.
+
+#### The four validation checks
+
+1. **(gate)** Every `•`/`†` row must resolve to an existing Box 1 card, joined on `slug(name)`.
+2. **(report)** Reverse check, the more valuable one: any **unmarked** Box 2 card whose name matches a Box 1 `id` is a missed transcription, which silently double-counts traits in a combined market with nothing visibly wrong on screen. Restricted to `deck == Common`: only market cards are reprinted across boxes, while captain decks legitimately reuse names (Georgiou's "Hostile Contact", Soval's "Energy Drain"). Flagging those every build trains people to ignore the check.
+3. **(report)** For every `•` row, diff the trait fields against the Box 1 record. They are identical by definition, so any difference means the card should have been `†` — a change that would otherwise propagate silently to Box-1-only players. Trait **order** is not semantic; compare sorted.
+4. **(gate)** Identity: a Box 2 `id` collides with a Box 1 `id` **if and only if** the card is marked. Bidirectional and sharper than 1 and 2 because it joins on `id` rather than name. An unmarked collision is a missed transcription; a marked card that does *not* collide is naming drift between the sheet's image cell and Box 1.
+
+The script also prints the full `•`/`†` list for a human eyeball pass, turning the
+classification from an assumption into something verified once.
+
+#### Why there is no `supersedes` pointer
+
+Box 2 stores `variant` only. Because a reprint keeps the same name, its `id` is already
+identical to the Box 1 `id`, so the runtime pairing is a one-liner:
+
+```js
+const original = ALL_CARDS.find(x => x.box === 'core' && x.id === card.id);
+```
+
+A stored `supersedes` field would hold the exact string `id` already holds. Worse, it
+would **bridge a name mismatch and let the two spellings drift apart indefinitely**.
+Checks 1 and 4 are gates precisely so this `id` match can be trusted: they guarantee
+every marked card resolves and no unmarked card collides. This is not theoretical —
+it caught `Borg Spatial Trajector` vs `Trajectory`, a `•` on `Tellarites` that has no
+Box 1 counterpart, and `Phlox` carrying `phlox-nx01.jpg` (id `phlox-nx01` would never
+have matched `phlox`). A pointer field would have hidden the last one completely.
 
 ### Scanner regeneration checklist (box2/box3 → Card Scanner)
 Repeatable procedure — run whenever the community sheet gains cards. A future session can follow this as a checklist:
 1. **Fetch fresh.** `git clone --depth 1 https://github.com/periodic-agent/stcc-strategy.git` (raw-URL fallback, see Session Startup). `box1.json` and `box2.json` are at the repo **root**.
 2. **Read the sheet** via the Google Drive connector — file ID `186ZpFkLQsLX1blU3z45znMPwH9fE6yO3`, tab `TBG (Box 2)` (or `Second Contact (Box 3)`). Read-only; **never write to the sheet.** Export as .xlsx to get all tabs at once.
-3. **Rebuild `box2.json`** (repo root), canonical schema (identical to box1.json): `id` = slug(name), `name`, `suit`, `source` = Deck column, `game_box` = `"To Boldly Go"`, `species_traits`/`regular_traits`/`other_traits` = comma-split, `icons` = `{type: Skill}` from the "Skill icons" column + `{type: Focus}` from the "Focus icons" column (specialty ∈ Research/Influence/Military/Any/Variable), `filename` (`""` if no image — the scanner shows a NO IMAGE placeholder). Include every row with at least a name and suit, whatever its status.
-4. **Validate.** No duplicate ids (suffix `-2`, keep both — see duplicate note above). Check traits against the **Vocabulary** tab: warn on novel traits, never drop them. Report counts per suit.
+3. **Rebuild `box2.json`** (repo root) with `python tools/build_box2_from_sheet.py sheet.xlsx "TBG (Box 2)" "To Boldly Go" --box1 box1.json -o box2.json`. Canonical schema (identical to box1.json) plus `card_number` and `variant`: `id` (see Card Image Filename Convention — `id` == filename stem, deck prefix on crew-deck cards), `name`, `suit`, `source` = Deck column, `game_box` = `"To Boldly Go"`, `species_traits`/`regular_traits`/`other_traits` = comma-split, `icons` = `{type: Skill}` from the "Skill icons" column + `{type: Focus}` from the "Focus icons" column (specialty ∈ Research/Influence/Military/Any/Variable), `filename` (`""` if no image — the scanner shows a NO IMAGE placeholder). Include every row with at least a name and suit, whatever its status.
+4. **Validate.** The script runs the four checks above; checks 1 and 4 are gates and exit non-zero (`--warn-unresolved` overrides, use sparingly). Also: no duplicate ids (suffix `-2`, keep both — see duplicate note above), traits against the **Vocabulary** tab (warn on novel, never drop), counts per suit. Fix the **sheet**, never the JSON — hand-edits are overwritten on the next regen.
 5. **Regenerate the scanner array:** `python tools/build_scanner_data.py card-browser-mockup.html box1.json box2.json -o card-browser-mockup.html`. Rebuilds the entire inline `ALL_CARDS` array; only that one line changes.
 6. **Preview + present.** Build a `-preview` copy (rewrite relative asset paths and `IMG_BASE` to the live site; **no `<base>` tag** — it breaks anchor links). Present `box2.json` and `card-browser-mockup.html` for review.
-7. **Push on Periodic_agent's explicit approval only** — `box2.json` + `card-browser-mockup.html` + `tools/build_scanner_data.py` in one commit (Rule 7), via `push_to_github.py --pii-file <denylist> --token-file <token>` (both from project knowledge; fails closed without the denylist). Scanner footer stays `Card images © WizKids.` (Rule 6); do not add a content-attribution line.
+7. **Push on Periodic_agent's explicit approval only** — `box2.json` + `card-browser-mockup.html` + `tools/build_box2_from_sheet.py` + `tools/build_scanner_data.py` in one commit (Rule 7), via `push_to_github.py --pii-file <denylist> --token-file <token>` (both from project knowledge; fails closed without the denylist). Scanner footer stays `Card images © WizKids.` (Rule 6); do not add a content-attribution line.
 
 ---
 
