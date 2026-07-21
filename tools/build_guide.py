@@ -356,6 +356,65 @@ def build_body(marked, cfg, manifest, report):
                 return True, inner.strip()
         return False, text
 
+    # Balance inline markers before the structural passes below: a bold run
+    # that straddles a line break would otherwise hide a heading (open with no
+    # close) and orphan a "[[/B]]" onto the front of the next entry.
+    tokens = [(k, balance_markers(v)) if k == "p" else (k, v) for k, v in tokens]
+
+    # bold_as_h3: promote standalone bold lines to H3. Some guides use bold
+    # rather than a larger font for sub-headings, so header_sizes() can't see
+    # them and they'd otherwise render as ordinary paragraphs.
+    if cfg.get("bold_as_h3"):
+        out = []
+        for kind, val in tokens:
+            if kind == "p":
+                m = re.match(r"^\[\[B\]\](.*?)\[\[/B\]\]$", val.strip(), re.S)
+                if m and "[[B]]" not in m.group(1):
+                    out.append(("h3", m.group(1).strip()))
+                    continue
+            out.append((kind, val))
+        tokens = out
+
+    # card_props: group runs of "Label: text" paragraphs into a .card-props
+    # list. For reference guides that are lists of cards rather than prose.
+    if cfg.get("card_props"):
+        entry = re.compile(
+            r"^(?:\[\[B\]\].*?\[\[/B\]\]|[^:\[\]]{1,60}?)\s*:\s*\S", re.S)
+        out, i = [], 0
+        while i < len(tokens):
+            if tokens[i][0] == "p" and entry.match(tokens[i][1].strip()):
+                j, items = i, []
+                while j < len(tokens) and tokens[j][0] == "p" and entry.match(tokens[j][1].strip()):
+                    items.append(tokens[j][1].strip())
+                    j += 1
+                if len(items) >= 2:
+                    out.append(("ul", items))
+                    i = j
+                    continue
+            out.append(tokens[i])
+            i += 1
+        tokens = out
+
+    def render_li(text):
+        """Bold the leading label so .card-props li strong picks it up.
+        Only when whitespace follows the colon: flattening <strong> inserts a
+        space, so bolding 'Name:Text' would fail the verbatim check."""
+        t = text.strip()
+        if not t.startswith("[[B]]"):
+            m = re.match(r"^([^:\[\]]{1,60}?:)(\s+)(.*)$", t, re.S)
+            if m:
+                t = "[[B]]%s[[/B]]%s%s" % (m.group(1), m.group(2), m.group(3))
+        return fmt_inline(t)
+
+    seen_ids = {}
+
+    def uniq_id(text):
+        """Stable, collision-free anchor. Repeated sub-headings (ACTIVATIONS
+        under each box) would otherwise share an id."""
+        base = slugify(text)
+        seen_ids[base] = seen_ids.get(base, 0) + 1
+        return base if seen_ids[base] == 1 else "%s-%d" % (base, seen_ids[base])
+
     BT = '  <a href="#top" class="back-top">↑ back to top</a>\n'
     body, h2s, since_heading = [], [], 0
     first_h2_seen = False
@@ -371,7 +430,11 @@ def build_body(marked, cfg, manifest, report):
             body.append('\n  <h2 id="%s">%s</h2>\n\n' % (hid, fmt_inline(val)))
             first_h2_seen = True
         elif kind == "h3":
-            body.append("<h3>%s</h3>\n" % fmt_inline(val))
+            body.append('<h3 id="%s">%s</h3>\n' % (uniq_id(val), fmt_inline(val)))
+        elif kind == "ul":
+            body.append('<ul class="card-props">\n%s</ul>\n'
+                        % "".join("  <li>%s</li>\n" % render_li(x) for x in val))
+            since_heading += 1
         elif kind == "imgs":
             body.append(render_imgs(val))
         else:
