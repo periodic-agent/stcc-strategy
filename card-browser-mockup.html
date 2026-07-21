@@ -507,21 +507,6 @@ async function loadBoxes(){
   if(tbgEl) tbgEl.textContent = tbgN;
 }
 
-async function init(){
-  await loadBoxes();
-  // Pill sets are the UNION across all loaded boxes (stable regardless of selection).
-  // Counts on pills are recomputed per-selection from the resolved list (updateBadges).
-  const unionCards = FULL_POOL.map(c=>({
-    suit:c.suit,
-    species:c.species_traits||[], regular:c.regular_traits||[],
-    other:c.other_traits||[], skills:normIcons(c.icons)
-  })).filter(c=>!EXCLUDED_SUITS.has(c.suit));
-  marketCards = unionCards;
-  allSpecies = [...new Set(unionCards.flatMap(c=>c.species))].sort();
-  allRegular = [...new Set(unionCards.flatMap(c=>c.regular))].sort();
-  allOther   = [...new Set(unionCards.flatMap(c=>c.other))].sort();
-  allSkills  = [...new Set(unionCards.flatMap(c=>c.skills))].sort();
-
 
 function setView(v){
   viewMode=v;
@@ -542,56 +527,9 @@ function makePill(text,cls,store){
   return p;
 }
 
-// Box pills
-const boxDefs = [{id:'core',label:"Captain's Chair"},{id:'tbg',label:"To Boldly Go"},{id:'2nd',label:"2nd Contact"},{id:'promo1',label:"Promo 1"},{id:'promo2',label:"Promo 2"}];
-const boxContainer = document.getElementById('boxFilters');
-boxDefs.forEach(({id,label})=>{
-  const p=document.createElement('span');
-  p.className='box-pill'+(id==='core'?' active':'');
-  p.dataset.box=id; p.textContent=label;
-  p.onclick=()=>{ if(activeBoxes.has(id)) activeBoxes.delete(id); else activeBoxes.add(id); p.classList.toggle('active'); render(); };
-  boxContainer.appendChild(p);
-});
 
-// Deck pills
-const deckContainer = document.getElementById('deckFilters');
-DECK_ORDER.forEach(d=>{
-  const p=document.createElement('span');
-  const box=DECK_BOX[d];
-  // Common pills use the .common class tinted by box; captains tinted by box.
-  let cls;
-  if(d.startsWith('Common:')){
-    cls = box==='tbg'?'common-tbg':box==='2nd'?'common-2nd':'common';
-  } else {
-    cls = box==='tbg'?'tbg':box==='2nd'?'second':'core';
-  }
-  p.className='deck-pill '+cls;
-  p.textContent=deckLabel(d);
-  p.onclick=()=>{ if(activeDecks.has(d)) activeDecks.delete(d); else activeDecks.add(d); p.classList.toggle('active'); render(); };
-  deckContainer.appendChild(p);
-});
 
-// Suit pills
-const suitContainer=document.getElementById('suitFilters');
-SUITS_DISPLAY.forEach(s=>{
-  const p=document.createElement('span');
-  p.className='suit-pill'; p.dataset.suit=s; p.textContent=s;
-  // Automated Command has no data/scans yet -- show but disable until cards land.
-  if(s==='Automated Command'){
-    p.classList.add('disabled');
-    p.title='Coming soon';
-  } else {
-    p.onclick=()=>{ if(activeSuits.has(s)) activeSuits.delete(s); else activeSuits.add(s); p.classList.toggle('active'); render(); };
-  }
-  suitContainer.appendChild(p);
-});
 
-document.getElementById('speciesFilters').append(...allSpecies.map(t=>makePill(t,'species-pill',activeTags)));
-document.getElementById('regularFilters').append(...allRegular.map(t=>makePill(t,'regular-pill',activeTags)));
-document.getElementById('otherFilters').append(...allOther.map(t=>makePill(t,'other-pill',activeTags)));
-document.getElementById('skillFilters').append(...allSkills.map(t=>makePill(t,'skill-pill',activeSkills)));
-
-document.getElementById('searchInput').addEventListener('input',e=>{ searchText=e.target.value.toLowerCase().trim(); render(); });
 
 function clearAll(){
   activeDecks.clear(); activeSuits.clear(); activeTags.clear(); activeSkills.clear(); searchText='';
@@ -772,8 +710,77 @@ function render(){
   if(!total) groups.innerHTML='<div class="no-results">No cards match the current filters.</div>';
 }
 
+async function init(){
+
+  await loadBoxes();
+  // Pill sets are the UNION across all loaded boxes (stable regardless of selection).
+  // Counts on pills are recomputed per-selection from the resolved list (updateBadges).
+  const unionCards = FULL_POOL.map(c=>({
+    suit:c.suit,
+    species:c.species_traits||[], regular:c.regular_traits||[],
+    other:c.other_traits||[], skills:normIcons(c.icons)
+  })).filter(c=>!EXCLUDED_SUITS.has(c.suit));
+  marketCards = unionCards;
+  allSpecies = [...new Set(unionCards.flatMap(c=>c.species))].sort();
+  allRegular = [...new Set(unionCards.flatMap(c=>c.regular))].sort();
+  allOther   = [...new Set(unionCards.flatMap(c=>c.other))].sort();
+  allSkills  = [...new Set(unionCards.flatMap(c=>c.skills))].sort();
+
+// Box pills
+const boxDefs = [{id:'core',label:"Captain's Chair"},{id:'tbg',label:"To Boldly Go"},{id:'2nd',label:"2nd Contact"},{id:'promo1',label:"Promo 1"},{id:'promo2',label:"Promo 2"}];
+const boxContainer = document.getElementById('boxFilters');
+boxDefs.forEach(({id,label})=>{
+  const p=document.createElement('span');
+  p.className='box-pill'+(id==='core'?' active':'');
+  p.dataset.box=id; p.textContent=label;
+  p.onclick=()=>{ if(activeBoxes.has(id)) activeBoxes.delete(id); else activeBoxes.add(id); p.classList.toggle('active'); render(); };
+  boxContainer.appendChild(p);
+});
+
+// Deck pills
+const deckContainer = document.getElementById('deckFilters');
+DECK_ORDER.forEach(d=>{
+  const p=document.createElement('span');
+  const box=DECK_BOX[d];
+  // Common pills use the .common class tinted by box; captains tinted by box.
+  let cls;
+  if(d.startsWith('Common:')){
+    cls = box==='tbg'?'common-tbg':box==='2nd'?'common-2nd':'common';
+  } else {
+    cls = box==='tbg'?'tbg':box==='2nd'?'second':'core';
+  }
+  p.className='deck-pill '+cls;
+  p.textContent=deckLabel(d);
+  p.onclick=()=>{ if(activeDecks.has(d)) activeDecks.delete(d); else activeDecks.add(d); p.classList.toggle('active'); render(); };
+  deckContainer.appendChild(p);
+});
+
+// Suit pills
+const suitContainer=document.getElementById('suitFilters');
+SUITS_DISPLAY.forEach(s=>{
+  const p=document.createElement('span');
+  p.className='suit-pill'; p.dataset.suit=s; p.textContent=s;
+  // Automated Command has no data/scans yet -- show but disable until cards land.
+  if(s==='Automated Command'){
+    p.classList.add('disabled');
+    p.title='Coming soon';
+  } else {
+    p.onclick=()=>{ if(activeSuits.has(s)) activeSuits.delete(s); else activeSuits.add(s); p.classList.toggle('active'); render(); };
+  }
+  suitContainer.appendChild(p);
+});
+
+document.getElementById('speciesFilters').append(...allSpecies.map(t=>makePill(t,'species-pill',activeTags)));
+document.getElementById('regularFilters').append(...allRegular.map(t=>makePill(t,'regular-pill',activeTags)));
+document.getElementById('otherFilters').append(...allOther.map(t=>makePill(t,'other-pill',activeTags)));
+document.getElementById('skillFilters').append(...allSkills.map(t=>makePill(t,'skill-pill',activeSkills)));
+
+document.getElementById('searchInput').addEventListener('input',e=>{ searchText=e.target.value.toLowerCase().trim(); render(); });
+
+
   render();
 }
+
 init();
 </script>
 <div id="lightbox" onclick="this.classList.remove('open')">
