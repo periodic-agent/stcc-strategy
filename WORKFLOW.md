@@ -339,25 +339,43 @@ Place just before `</body>`. Tracker endpoint: `https://stcc-compendium.goatcoun
 ### File structure
 ```
 box1.json    -- Captain's Chair, complete (255 cards incl. Promo Pack 1)   [repo ROOT]
-box2.json    -- To Boldly Go, live (159 cards, partial: community-sourced)  [repo ROOT]
-box3.json    -- Second Contact, pending                                     [repo ROOT]
+box2.json    -- To Boldly Go, live (224 cards; Khan deck held pending icons)  [repo ROOT]
+box3.json    -- Second Contact, live (48 cards; Pike/Riker held pending icons) [repo ROOT]
 ```
 The boxN.json files live at the **repo root**, not in a `data/` folder.
 
-### Scanner data — `ALL_CARDS`
-The Card Scanner (`card-browser-mockup.html`) holds its cards as a single inline
-`const ALL_CARDS = [...]` array, rebuilt from `box1.json` + `box2.json` (repo root) by
-`tools/build_scanner_data.py`. That script flattens the canonical schema
-(`source`->`deck`, `game_box`->`box`, `*_traits`->`species`/`regular`/`other`,
-`icons`->`"<specialty> <type>"` skill strings); the full mapping is documented in the
-script header. Regenerate the array with the tool — never hand-edit it. The scanner
-derives every filter pill and box/deck membership from these fields, so wiring a new box
-in is purely a data operation. **TBG (Box 2) is live in the array; Box 3 pending.**
+### Scanner data — runtime fetch + id resolver
 
-**The flattener drops `variant` and `card_number`.** It emits a fixed ten keys, so
-`ALL_CARDS` currently has no notion of reprints: a card reprinted in Box 2 renders twice
-when both boxes are active. Carrying `variant` through is the first step of any
-duplicate-resolver work; the flattened-schema contract is in the script header.
+The Card Scanner (`card-browser-mockup.html`) loads card data at **runtime**. On page
+load it `fetch`es every file in `BOX_SOURCES` (`box1.json`, `box2.json`, `box3.json`)
+into `RAW_BOXES`. There is **no inline `ALL_CARDS` array and no build-time injection**.
+To wire a new box, add one line to `BOX_SOURCES` and push its JSON — nothing else.
+(`tools/build_scanner_data.py` was the old inline injector; it is **legacy**, no longer
+part of the pipeline.)
+
+`resolveCards(pool)` groups the selected boxes' raw cards **by `id`** and emits one
+record per id:
+- **text** = the `updated` printing if any, else the earliest-box printing;
+- **image** = newest box with a non-empty `filename` whose text matches the resolved
+  version (an `updated` printing takes only its own image);
+- **copies** = number of physical printings; **badge** = `update` beats `duplicate`,
+  read only from the group's own variants (never looks forward, so adding a later box
+  never changes an existing badge).
+
+Because the whole dedup joins on `id`, a reprint/updated card **must** share its `id`
+with the Box 1 original — which checks 1 and 4 (below) enforce at build time.
+
+`normIcons` flattens `icons` to `"<specialty> <type>"` strings, **one per object**, and
+the pill view renders one pill per string. Icon multiplicity is therefore encoded as
+**repeated objects, never a `count` field** (see Icon schema).
+
+**`game_box` is an exact-string contract.** `GAMEBOX_KEY` maps `"Captain's Chair"`→core,
+`"To Boldly Go"`→tbg, `"Second Contact"`→2nd. `rawBoxKey` `console.warn`s and returns
+**null** (card omitted) on any unrecognized `game_box`; it no longer silently defaults to
+core. `build_box2_from_sheet.py` enforces the same allow-list and hard-fails, so a typo
+cannot reach a JSON file. The internal box key (`core`/`tbg`/`2nd`/`promo1`/`promo2`) is
+opaque and separate from these display strings — `2nd` stays `2nd` even though its label
+reads "Second Contact".
 
 ### Canonical JSON schema (per card)
 ```json
@@ -391,6 +409,10 @@ duplicate-resolver work; the flattened-schema contract is in the script header.
 - **Any** + Skill or Focus: counts for all three specialties in the relevant filter
 - **Variable** Skill: conditional value, shown in its own filter category
 - No "Wild" terminology — not a rulebook term, eliminated from schema
+- **Repeated objects, no `count`.** One `{type,specialty}` object per printed icon; a
+  card with two Military Skills is two objects, not `{count:2}`. `normIcons` renders one
+  pill per object, so repeats display correctly with no scanner logic. (Box 1 used a
+  `count` field until Jul 2026; removed for a uniform one-object-per-icon model.)
 
 ### Icon filtering logic
 - Selecting Research Skill returns: Research Skill + Any Skill cards
@@ -516,15 +538,27 @@ it caught `Borg Spatial Trajector` vs `Trajectory`, a `•` on `Tellarites` that
 Box 1 counterpart, and `Phlox` carrying `phlox-nx01.jpg` (id `phlox-nx01` would never
 have matched `phlox`). A pointer field would have hidden the last one completely.
 
+### Printed misprints — database vs guides
+
+When a card's printed text is misprinted, the **card database follows the printed card**;
+a strategy guide follows **McCue's prose**. Example: the core and TBG cards both read
+`Xindi-Reptillian Battleship` (double-l misprint), so `box1.json`/`box2.json` use that
+spelling — which also lets the id-resolver dedup the two printings. `ships.html` keeps
+`Xindi-Reptilian` because that word sits in McCue's verbatim paragraph (Rule 1). When the
+two diverge, **both are correct**, and the image file may exist under each spelling. The
+id-resolver joins on `id`, so a printed-name correction to box1 must carry through name +
+id + filename together (and the image renamed to match), or the reprint won't pair.
+
 ### Scanner regeneration checklist (box2/box3 → Card Scanner)
 Repeatable procedure — run whenever the community sheet gains cards. A future session can follow this as a checklist:
 1. **Fetch fresh.** `git clone --depth 1 https://github.com/periodic-agent/stcc-strategy.git` (raw-URL fallback, see Session Startup). `box1.json` and `box2.json` are at the repo **root**.
-2. **Read the sheet** via the Google Drive connector — file ID `186ZpFkLQsLX1blU3z45znMPwH9fE6yO3`, tab `TBG (Box 2)` (or `Second Contact (Box 3)`). Read-only; **never write to the sheet.** Export as .xlsx to get all tabs at once.
-3. **Rebuild `box2.json`** (repo root) with `python tools/build_box2_from_sheet.py sheet.xlsx "TBG (Box 2)" "To Boldly Go" --box1 box1.json -o box2.json`. Canonical schema (identical to box1.json) plus `card_number` and `variant`: `id` (see Card Image Filename Convention — `id` == filename stem, deck prefix on crew-deck cards), `name`, `suit`, `source` = Deck column, `game_box` = `"To Boldly Go"`, `species_traits`/`regular_traits`/`other_traits` = comma-split, `icons` = `{type: Skill}` from the "Skill icons" column + `{type: Focus}` from the "Focus icons" column (specialty ∈ Research/Influence/Military/Any/Variable), `filename` (`""` if no image — the scanner shows a NO IMAGE placeholder). Include every row with at least a name and suit, whatever its status.
+2. **Read the sheet** via the Google Drive connector — file ID `186ZpFkLQsLX1blU3z45znMPwH9fE6yO3`, tab `TBG (Box 2)` (or `Second Contact (Box 3)`). Read-only; **never write to the sheet.** Export as .xlsx to get all tabs at once. Note: the Drive `.xlsx` export can trail live edits by a few minutes / one refresh — if a regen looks a step behind an edit you just made, re-pull before assuming a bug.
+3. **Rebuild `box2.json`** (repo root) with `python tools/build_box2_from_sheet.py sheet.xlsx "TBG (Box 2)" "To Boldly Go" --box1 box1.json -o box2.json`. Canonical schema (identical to box1.json) plus `card_number` and `variant`: `id` (see Card Image Filename Convention — `id` == filename stem, deck prefix on crew-deck cards), `name`, `suit`, `source` = Deck column, `game_box` = `"To Boldly Go"`, `species_traits`/`regular_traits`/`other_traits` = comma-split, `icons` = one `{type: Skill}` per Skill-icon plus one `{type: Focus}` per Focus-icon (**repeated objects, no `count`**; specialty ∈ Research/Influence/Military/Any/Variable), `filename` (`""` if no image — the scanner shows a NO IMAGE placeholder). Include every row with at least a name and suit, whatever its status. **`game_box` must be exactly one of `Captain's Chair` / `To Boldly Go` / `Second Contact`** — the script hard-fails otherwise. For Box 3 use tab `Second Contact (Box 3)` and `game_box "Second Contact"`.
 4. **Validate.** The script runs the four checks above; checks 1 and 4 are gates and exit non-zero (`--warn-unresolved` overrides, use sparingly). Also: no duplicate ids (suffix `-2`, keep both — see duplicate note above), traits against the **Vocabulary** tab (warn on novel, never drop), counts per suit. Fix the **sheet**, never the JSON — hand-edits are overwritten on the next regen.
-5. **Regenerate the scanner array:** `python tools/build_scanner_data.py card-browser-mockup.html box1.json box2.json -o card-browser-mockup.html`. Rebuilds the entire inline `ALL_CARDS` array; only that one line changes.
-6. **Preview + present.** Build a `-preview` copy (rewrite relative asset paths and `IMG_BASE` to the live site; **no `<base>` tag** — it breaks anchor links). Present `box2.json` and `card-browser-mockup.html` for review.
-7. **Push on Periodic_agent's explicit approval only** — `box2.json` + `card-browser-mockup.html` + `tools/build_box2_from_sheet.py` + `tools/build_scanner_data.py` in one commit (Rule 7), via `push_to_github.py --pii-file <denylist> --token-file <token>` (both from project knowledge; fails closed without the denylist). Scanner footer stays `Card images © WizKids.` (Rule 6); do not add a content-attribution line.
+   - **Holding back an incomplete deck** (e.g. a captain deck whose skill/focus icons are not yet entered) is a **one-off filter at ship time**, applied by dropping those `source` rows after the build — *never* a build-script option. An `--exclude-deck` flag was tried and deliberately removed: once the icons land, a plain regen brings the deck in automatically, which is the behavior you want. As of this writing Khan (TBG) and Pike/Riker (2C) are held for missing icons.
+5. **Wire the box (first time only).** The scanner fetches box JSON at **runtime** — there is no injection step. A brand-new box needs one line added to `BOX_SOURCES` in `card-browser-mockup.html`; boxes already listed need nothing (pushing the JSON is enough). Never run an inline-injection tool.
+6. **Preview + present.** Because the scanner fetches at runtime, a local preview must **embed** the data: in a `-preview` copy, replace the `BOX_SOURCES` fetch loop with `RAW_BOXES = window.__BOXES__` and inject `<script>window.__BOXES__={box1:…,box2:…,box3:…}</script>`, and point `IMG_BASE` at the live site (**no `<base>` tag** — it breaks anchor links). Present the changed `boxN.json` and the preview for review.
+7. **Push on Periodic_agent's explicit approval only** — the changed `boxN.json` (+ `card-browser-mockup.html` only if `BOX_SOURCES` changed) + `tools/build_box2_from_sheet.py` (Rule 7) in one commit, via `push_to_github.py --pii-file <denylist> --token-file <token>` (both from project knowledge; fails closed without the denylist). Scanner footer stays `Card images © WizKids.` (Rule 6); do not add a content-attribution line.
 
 ---
 
@@ -722,4 +756,5 @@ Second Contact (pending):
 - TOC pill color: gold (`#e8a94a`) matching Core Box Person Deck
 
 ---
+
 
