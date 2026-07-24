@@ -430,16 +430,16 @@ duplicate-resolver work; the flattened-schema contract is in the script header.
 - Promo packs bypass the deck filter entirely
 
 ### Box and deck structure
-**Boxes:** Captain's Chair (blue `#4a9fd4`), To Boldly Go (red `#c0392b`), 2nd Contact (gold `#c8a84b`)
+**Boxes:** Captain's Chair (blue `#4a9fd4`), To Boldly Go (red `#c0392b`), Second Contact (gold `#c8a84b`)
 **Promo Packs** (separate section below Box): Pack 1 (blue), Pack 2 (red) — unselected by default
 
 **Deck pills (always visible, color-coded by box):**
 - Core (blue): Common, Sisko, Picard, Koloth, Burnham, Sela, Shran
 - TBG (red): Georgiou, Soval, Kirk, Archer, Rebner, Khan
-- 2nd Contact (gold): Pike, Riker, Freeman
+- Second Contact (gold): Pike, Riker, Freeman
 
 ### Default state on load
-- Captain's Chair box selected; TBG and 2nd Contact unselected
+- Captain's Chair box selected; TBG and Second Contact unselected
 - No deck pills selected (= all 255 Core cards visible)
 - All trait/skill sections expanded
 
@@ -455,7 +455,7 @@ duplicate-resolver work; the flattened-schema contract is in the script header.
 - Tabs: README, TBG (Box 2), Second Contact (Box 3), Vocabulary. Status column tracks progress (AI-seeded — verify / verified / needs entry / unreadable). Card image column links to the live site.
 - **Never regenerate the sheet wholesale.** To add cards: read the live sheet (Google Drive connector), merge by Card code (fallback key: box + name + suit), append ONLY new rows, hand Periodic_agent the updated .xlsx. Periodic_agent updates Drive via right-click → Manage versions → Upload new version (keeps the ID and the shared link; never delete-and-reupload).
 - Existing rows are never modified by a merge; "verified" statuses and Contributor credits survive every update.
-- **New guide imports feed the database:** when a TBG/2C guide is imported, extract its card images to `img/box2/` or `img/box3/` (convention names) AND read the card faces into new sheet rows before the guide ships.
+- **New guide imports feed the database:** when a TBG/Second Contact guide is imported, extract its card images to `img/box2/` or `img/box3/` (convention names) AND read the card faces into new sheet rows before the guide ships.
 - Scanner build: read the sheet, validate traits against the Vocabulary tab (flag novel traits, don't reject), emit `box2.json` / `box3.json`, re-inject into the Card Scanner. Same schema as box1.json.
 - Card codes (e.g. 2PER07/26) are the stable ids; optional for volunteers, backfilled during verification. See the variant convention below.
 - **Duplicate card names within a deck are legitimate** — a deck can contain two copies (e.g. Big Helmet ×2 in Rebner, codes 2REB21/22 and 2REB22/22). Give the second card's `id` a `-2` suffix and keep both rows; do NOT deduplicate.
@@ -571,7 +571,7 @@ The Card Scanner uses different *internal* box keys (`core`, `tbg`, `2nd`) in it
 |---|---|---|---|
 | `core` | Captain's Chair | `img/box1/` | `box1.json` |
 | `tbg` | To Boldly Go | `img/box2/` | `box2.json` |
-| `2nd` | 2nd Contact | `img/box3/` | `box3.json` |
+| `2nd` | Second Contact | `img/box3/` | `box3.json` |
 | `promo1` | Promo Pack 1 | `img/promo1/` | `box1.json` |
 | `promo2` | Promo Pack 2 | `img/promo2/` | `box2.json` (expected) |
 

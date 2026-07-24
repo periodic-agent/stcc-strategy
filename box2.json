@@ -236,8 +236,15 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Variable",
-        "count": 3
+        "specialty": "Variable"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Variable"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Variable"
       }
     ]
   },
@@ -365,8 +372,11 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Any",
-        "count": 2
+        "specialty": "Any"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Any"
       }
     ]
   },
@@ -517,8 +527,11 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Military",
-        "count": 2
+        "specialty": "Military"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Military"
       }
     ]
   },
@@ -1053,8 +1066,11 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Military",
-        "count": 2
+        "specialty": "Military"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Military"
       }
     ]
   },
@@ -1139,8 +1155,11 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Research",
-        "count": 2
+        "specialty": "Research"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Research"
       },
       {
         "type": "Skill",
@@ -1296,8 +1315,11 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Influence",
-        "count": 2
+        "specialty": "Influence"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Influence"
       }
     ]
   },
@@ -1914,8 +1936,11 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Influence",
-        "count": 2
+        "specialty": "Influence"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Influence"
       }
     ]
   },
@@ -3568,8 +3593,11 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Military",
-        "count": 2
+        "specialty": "Military"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Military"
       }
     ]
   },
@@ -3592,8 +3620,11 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Variable",
-        "count": 2
+        "specialty": "Variable"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Variable"
       }
     ]
   },
@@ -4011,8 +4042,11 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Any",
-        "count": 2
+        "specialty": "Any"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Any"
       }
     ]
   },
@@ -4035,8 +4069,11 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Any",
-        "count": 2
+        "specialty": "Any"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Any"
       },
       {
         "type": "Focus",
@@ -4109,8 +4146,11 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Research",
-        "count": 2
+        "specialty": "Research"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Research"
       },
       {
         "type": "Focus",

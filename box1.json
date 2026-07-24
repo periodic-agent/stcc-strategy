@@ -1511,7 +1511,14 @@
     "icons": [
       {
         "type": "Skill",
-        "count": 3,
+        "specialty": "Influence"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      },
+      {
+        "type": "Skill",
         "specialty": "Influence"
       }
     ]
@@ -1606,7 +1613,10 @@
     "icons": [
       {
         "type": "Skill",
-        "count": 2,
+        "specialty": "Military"
+      },
+      {
+        "type": "Skill",
         "specialty": "Military"
       }
     ]
@@ -1704,7 +1714,10 @@
     "icons": [
       {
         "type": "Skill",
-        "count": 2,
+        "specialty": "Research"
+      },
+      {
+        "type": "Skill",
         "specialty": "Research"
       }
     ]
@@ -1853,7 +1866,10 @@
     "icons": [
       {
         "type": "Skill",
-        "count": 2,
+        "specialty": "Any"
+      },
+      {
+        "type": "Skill",
         "specialty": "Any"
       }
     ]
@@ -2052,7 +2068,10 @@
     "icons": [
       {
         "type": "Skill",
-        "count": 2,
+        "specialty": "Research"
+      },
+      {
+        "type": "Skill",
         "specialty": "Research"
       }
     ]
@@ -2093,7 +2112,10 @@
     "icons": [
       {
         "type": "Skill",
-        "count": 2,
+        "specialty": "Influence"
+      },
+      {
+        "type": "Skill",
         "specialty": "Influence"
       },
       {
@@ -2464,7 +2486,10 @@
     "icons": [
       {
         "type": "Skill",
-        "count": 2,
+        "specialty": "Variable"
+      },
+      {
+        "type": "Skill",
         "specialty": "Variable"
       }
     ]
@@ -2657,7 +2682,10 @@
     "icons": [
       {
         "type": "Skill",
-        "count": 2,
+        "specialty": "Any"
+      },
+      {
+        "type": "Skill",
         "specialty": "Any"
       },
       {
@@ -2904,7 +2932,10 @@
     "icons": [
       {
         "type": "Skill",
-        "count": 2,
+        "specialty": "Military"
+      },
+      {
+        "type": "Skill",
         "specialty": "Military"
       }
     ]

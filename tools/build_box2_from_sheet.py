@@ -87,32 +87,10 @@ import openpyxl, json, re, argparse, sys
 from collections import Counter, defaultdict
 
 ICON_SPECIALTIES = {"Research", "Influence", "Military", "Any", "Variable"}
+KNOWN_GAME_BOXES = {"Captain's Chair", "To Boldly Go", "Second Contact"}
 CODE_RE = re.compile(r"^(\d)([A-Z]+)(\d+)/(\d+)\s*(.)?$")
 MARKERS = {None: "original", "•": "reprint", "†": "updated"}
 
-def collapse_icons(icons):
-    """Match box1 schema: repeated {type,specialty} collapse to one dict with count."""
-    from collections import Counter, OrderedDict
-    n = Counter((i["type"], i["specialty"]) for i in icons)
-    out, seen = [], set()
-    for i in icons:
-        k = (i["type"], i["specialty"])
-        if k in seen:
-            continue
-        seen.add(k)
-        d = {"type": k[0], "specialty": k[1]}
-        if n[k] > 1:
-            d["count"] = n[k]
-        out.append(d)
-    return out
-
-def icon_ms(icons):
-    """Count-aware multiset of icons; expands box1's `count` field. For comparisons."""
-    from collections import Counter
-    c = Counter()
-    for i in icons:
-        c[(i["type"], i["specialty"])] += i.get("count", 1)
-    return c
 
 
 def slug(name):
@@ -148,6 +126,10 @@ def main():
     ap.add_argument("--warn-unresolved", action="store_true",
                     help="downgrade CHECK 1 from fatal to warning")
     a = ap.parse_args()
+    if a.game_box not in KNOWN_GAME_BOXES:
+        sys.exit(f"BUILD FAILED -- unknown game_box {a.game_box!r}. "
+                 f"Must be one of {sorted(KNOWN_GAME_BOXES)} (mirrors the scanner's GAMEBOX_KEY). "
+                 f"An unrecognized value silently resolves to Captain's Chair in the scanner.")
 
     wb = openpyxl.load_workbook(a.xlsx, data_only=True)
     ws = wb[a.tab]
@@ -198,9 +180,8 @@ def main():
             "regular_traits": splitlist(ws.cell(r, 7).value),
             "other_traits": splitlist(ws.cell(r, 8).value),
             "filename": filename,
-            "icons": collapse_icons(
-                [{"type": "Skill", "specialty": s} for s in splitlist(ws.cell(r, 9).value)]
-              + [{"type": "Focus", "specialty": s} for s in splitlist(ws.cell(r, 10).value)]),
+            "icons": [{"type": "Skill", "specialty": s} for s in splitlist(ws.cell(r, 9).value)]
+                   + [{"type": "Focus", "specialty": s} for s in splitlist(ws.cell(r, 10).value)],
         })
 
     if bad_markers:
@@ -233,7 +214,7 @@ def main():
     def traits(c):
         return (sorted(c["species_traits"]), sorted(c["regular_traits"]),
                 sorted(c["other_traits"]),
-                sorted(icon_ms(c["icons"]).items()))
+                sorted((i["type"], i["specialty"]) for i in c["icons"]))
     mismarked = []
     for c in marked:
         if c["variant"] != "reprint":

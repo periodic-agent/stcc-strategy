@@ -239,7 +239,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   <div class="chapter-label">ST:CC Strategy Compendium</div>
   <h1 class="chapter-title"><span>Card</span> Scanner</h1>
   <div class="chapter-meta">Select boxes, filter by trait or skill, search by name. Show details or images.</div>
-  <a class="new-banner" onclick="revealTBG(event)" title="Show the To Boldly Go and 2nd Contact cards"><span class="new-badge">New</span><span><span class="new-count" id="tbgCount">104</span> To Boldly Go and 2nd Contact cards and counting…</span><span class="new-arrow">→</span></a>
+  <a class="new-banner" onclick="revealTBG(event)" title="Show the To Boldly Go and Second Contact cards"><span class="new-badge">New</span><span><span class="new-count" id="tbgCount">104</span> To Boldly Go and Second Contact cards and counting…</span><span class="new-arrow">→</span></a>
 </header>
 
 <div class="controls">
@@ -346,19 +346,21 @@ let RAW_BOXES = {};   // { box1:[...], box2:[...] } raw loaded JSON, kept for cr
 const BOX_SOURCES = [
   { file:'box1.json', label:"Captain's Chair", short:"Captain's Chair" },
   { file:'box2.json', label:'To Boldly Go',    short:'To Boldly Go' },
-  { file:'box3.json', label:'2nd Contact',     short:'2nd Contact' },
+  { file:'box3.json', label:'Second Contact',     short:'Second Contact' },
 ];
 
 // Map a raw card's game context to the scanner's internal box key.
 // Common/captain cards -> core/tbg/2nd by game_box; Promo cards keep promo1/promo2 (set below).
-const GAMEBOX_KEY = { "Captain's Chair":'core', "To Boldly Go":'tbg', "2nd Contact":'2nd' };
+const GAMEBOX_KEY = { "Captain's Chair":'core', "To Boldly Go":'tbg', "Second Contact":'2nd' };
 
 function rawBoxKey(c){
   if(c.source === 'Promo'){
     // promo pack number by game_box era
     return c.game_box === 'To Boldly Go' ? 'promo2' : 'promo1';
   }
-  return GAMEBOX_KEY[c.game_box] || 'core';
+  const k = GAMEBOX_KEY[c.game_box];
+  if(!k){ console.warn('rawBoxKey: unrecognized game_box', JSON.stringify(c.game_box), 'on', c.id, '- card omitted, not filed under core'); return null; }
+  return k;
 }
 
 // Normalize icons [{specialty,type}] -> ["Influence Focus", ...]
@@ -370,7 +372,7 @@ function normIcons(icons){
 const BOX_ORDER = ['core','tbg','2nd'];
 
 function boxLabelFromKey(k){
-  return { core:"Captain's Chair", tbg:'To Boldly Go', '2nd':'2nd Contact', promo1:'Promo 1', promo2:'Promo 2' }[k] || k;
+  return { core:"Captain's Chair", tbg:'To Boldly Go', '2nd':'Second Contact', promo1:'Promo 1', promo2:'Promo 2' }[k] || k;
 }
 
 // ---- Resolution layer -------------------------------------------------------
@@ -479,8 +481,8 @@ async function loadBoxes(){
     }catch(e){ console.warn('Could not load', s.file, e); }
   }
   buildFullPool();
-  // update the "New!" banner count with the real number of To Boldly Go + 2nd Contact cards
-  const tbgN = FULL_POOL.filter(c=>c.game_box==='To Boldly Go'||c.game_box==='2nd Contact').length;
+  // update the "New!" banner count with the real number of To Boldly Go + Second Contact cards
+  const tbgN = FULL_POOL.filter(c=>c.game_box==='To Boldly Go'||c.game_box==='Second Contact').length;
   const tbgEl = document.getElementById('tbgCount');
   if(tbgEl) tbgEl.textContent = tbgN;
 }
@@ -664,7 +666,7 @@ function render(){
     total+=matched.length;
     const section=document.createElement('div'); section.className='deck-group';
     const hdr=document.createElement('div'); hdr.className='deck-group-header';
-    const hdrLabel = deck.startsWith('Common:') ? 'Common ('+({core:"Captain\'s Chair",tbg:"To Boldly Go","2nd":"2nd Contact"}[DECK_BOX[deck]])+')' : deck;
+    const hdrLabel = deck.startsWith('Common:') ? 'Common ('+({core:"Captain\'s Chair",tbg:"To Boldly Go","2nd":"Second Contact"}[DECK_BOX[deck]])+')' : deck;
     hdr.innerHTML=hdrLabel+' <span class="deck-count">('+matched.length+' cards)</span>';
     section.appendChild(hdr);
     const grid=document.createElement('div');
@@ -707,7 +709,7 @@ async function init(){
   allSkills  = [...new Set(unionCards.flatMap(c=>c.skills))].sort();
 
 // Box pills
-const boxDefs = [{id:'core',label:"Captain's Chair"},{id:'tbg',label:"To Boldly Go"},{id:'2nd',label:"2nd Contact"},{id:'promo1',label:"Promo 1"},{id:'promo2',label:"Promo 2"}];
+const boxDefs = [{id:'core',label:"Captain's Chair"},{id:'tbg',label:"To Boldly Go"},{id:'2nd',label:"Second Contact"},{id:'promo1',label:"Promo 1"},{id:'promo2',label:"Promo 2"}];
 const boxContainer = document.getElementById('boxFilters');
 boxDefs.forEach(({id,label})=>{
   const p=document.createElement('span');
