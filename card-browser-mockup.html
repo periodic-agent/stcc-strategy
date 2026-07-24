@@ -729,7 +729,23 @@ DECK_ORDER.forEach(d=>{
   }
   p.className='deck-pill '+cls;
   p.textContent=deckLabel(d);
-  p.onclick=()=>{ if(activeDecks.has(d)) activeDecks.delete(d); else activeDecks.add(d); p.classList.toggle('active'); render(); };
+  p.onclick=()=>{
+    if(activeDecks.has(d)){
+      activeDecks.delete(d);
+    } else {
+      activeDecks.add(d);
+      // Selecting a deck auto-selects its box, so the deck pill alone yields results.
+      // Deselecting a deck never removes a box: the user may have chosen it deliberately
+      // or have another deck from that box still active.
+      if(box && !activeBoxes.has(box)){
+        activeBoxes.add(box);
+        const bp=document.querySelector('.box-pill[data-box="'+box+'"]');
+        if(bp) bp.classList.add('active');
+      }
+    }
+    p.classList.toggle('active');
+    render();
+  };
   deckContainer.appendChild(p);
 });
 
