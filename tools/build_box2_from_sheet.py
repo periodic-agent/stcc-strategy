@@ -90,6 +90,30 @@ ICON_SPECIALTIES = {"Research", "Influence", "Military", "Any", "Variable"}
 CODE_RE = re.compile(r"^(\d)([A-Z]+)(\d+)/(\d+)\s*(.)?$")
 MARKERS = {None: "original", "•": "reprint", "†": "updated"}
 
+def collapse_icons(icons):
+    """Match box1 schema: repeated {type,specialty} collapse to one dict with count."""
+    from collections import Counter, OrderedDict
+    n = Counter((i["type"], i["specialty"]) for i in icons)
+    out, seen = [], set()
+    for i in icons:
+        k = (i["type"], i["specialty"])
+        if k in seen:
+            continue
+        seen.add(k)
+        d = {"type": k[0], "specialty": k[1]}
+        if n[k] > 1:
+            d["count"] = n[k]
+        out.append(d)
+    return out
+
+def icon_ms(icons):
+    """Count-aware multiset of icons; expands box1's `count` field. For comparisons."""
+    from collections import Counter
+    c = Counter()
+    for i in icons:
+        c[(i["type"], i["specialty"])] += i.get("count", 1)
+    return c
+
 
 def slug(name):
     s = name.lower()
@@ -174,8 +198,9 @@ def main():
             "regular_traits": splitlist(ws.cell(r, 7).value),
             "other_traits": splitlist(ws.cell(r, 8).value),
             "filename": filename,
-            "icons": [{"type": "Skill", "specialty": s} for s in splitlist(ws.cell(r, 9).value)]
-                   + [{"type": "Focus", "specialty": s} for s in splitlist(ws.cell(r, 10).value)],
+            "icons": collapse_icons(
+                [{"type": "Skill", "specialty": s} for s in splitlist(ws.cell(r, 9).value)]
+              + [{"type": "Focus", "specialty": s} for s in splitlist(ws.cell(r, 10).value)]),
         })
 
     if bad_markers:
@@ -208,7 +233,7 @@ def main():
     def traits(c):
         return (sorted(c["species_traits"]), sorted(c["regular_traits"]),
                 sorted(c["other_traits"]),
-                sorted((i["type"], i["specialty"]) for i in c["icons"]))
+                sorted(icon_ms(c["icons"]).items()))
     mismarked = []
     for c in marked:
         if c["variant"] != "reprint":

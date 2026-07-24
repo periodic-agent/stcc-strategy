@@ -239,7 +239,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   <div class="chapter-label">ST:CC Strategy Compendium</div>
   <h1 class="chapter-title"><span>Card</span> Scanner</h1>
   <div class="chapter-meta">Select boxes, filter by trait or skill, search by name. Show details or images.</div>
-  <a class="new-banner" onclick="revealTBG(event)" title="Show the To Boldly Go cards"><span class="new-badge">New</span><span><span class="new-count" id="tbgCount">104</span> To Boldly Go cards and counting…</span><span class="new-arrow">→</span></a>
+  <a class="new-banner" onclick="revealTBG(event)" title="Show the To Boldly Go and 2nd Contact cards"><span class="new-badge">New</span><span><span class="new-count" id="tbgCount">104</span> To Boldly Go and 2nd Contact cards and counting…</span><span class="new-arrow">→</span></a>
 </header>
 
 <div class="controls">
@@ -346,7 +346,7 @@ let RAW_BOXES = {};   // { box1:[...], box2:[...] } raw loaded JSON, kept for cr
 const BOX_SOURCES = [
   { file:'box1.json', label:"Captain's Chair", short:"Captain's Chair" },
   { file:'box2.json', label:'To Boldly Go',    short:'To Boldly Go' },
-  // box3.json added here when it lands
+  { file:'box3.json', label:'2nd Contact',     short:'2nd Contact' },
 ];
 
 // Map a raw card's game context to the scanner's internal box key.
@@ -479,8 +479,8 @@ async function loadBoxes(){
     }catch(e){ console.warn('Could not load', s.file, e); }
   }
   buildFullPool();
-  // update the "New!" banner count with the real number of To Boldly Go cards
-  const tbgN = FULL_POOL.filter(c=>c.game_box==='To Boldly Go').length;
+  // update the "New!" banner count with the real number of To Boldly Go + 2nd Contact cards
+  const tbgN = FULL_POOL.filter(c=>c.game_box==='To Boldly Go'||c.game_box==='2nd Contact').length;
   const tbgEl = document.getElementById('tbgCount');
   if(tbgEl) tbgEl.textContent = tbgN;
 }
@@ -641,8 +641,10 @@ function buildImgCard(c){
 let VISIBLE_IMG_CARDS=[];  // ordered list of {src,name} for cards shown in Images view
 function revealTBG(e){
   if(e) e.preventDefault();
-  const pill=document.querySelector('.box-pill[data-box="tbg"]');
-  if(pill && !pill.classList.contains('active')) pill.click();
+  ['tbg','2nd'].forEach(b=>{
+    const pill=document.querySelector('.box-pill[data-box="'+b+'"]');
+    if(pill && !pill.classList.contains('active')) pill.click();
+  });
   const grp=document.getElementById('deckGroups');
   if(grp) grp.scrollIntoView({behavior:'smooth',block:'start'});
 }

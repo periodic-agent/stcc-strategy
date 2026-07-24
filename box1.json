@@ -988,8 +988,8 @@
     ]
   },
   {
-    "id": "xindi-reptilian-battleship",
-    "name": "Xindi-Reptilian Battleship",
+    "id": "xindi-reptillian-battleship",
+    "name": "Xindi-Reptillian Battleship",
     "suit": "Ship",
     "source": "Common",
     "game_box": "Captain's Chair",
@@ -998,7 +998,7 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "xindi-reptilian-battleship.jpg",
+    "filename": "xindi-reptillian-battleship.jpg",
     "icons": [
       {
         "type": "Focus",

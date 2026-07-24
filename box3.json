@@ -1,0 +1,948 @@
+[
+  {
+    "id": "ambassador-spock",
+    "name": "Ambassador Spock",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3PER01/13",
+    "variant": "original",
+    "species_traits": [
+      "Human",
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Telepath",
+      "Crossover",
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "filename": "ambassador-spock.jpg",
+    "icons": []
+  },
+  {
+    "id": "barry-waddle",
+    "name": "Barry Waddle",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3PER02/13",
+    "variant": "original",
+    "species_traits": [
+      "Human",
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Business",
+      "Crossover"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "barry-waddle.jpg",
+    "icons": []
+  },
+  {
+    "id": "chancellor-gowron",
+    "name": "Chancellor Gowron",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3PER03/13",
+    "variant": "original",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Imperial",
+      "Crossover"
+    ],
+    "other_traits": [],
+    "filename": "chancellor-gowron.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "chef-riker",
+    "name": "Chef Riker",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3PER04/13",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Crossover",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "chef-riker.jpg",
+    "icons": []
+  },
+  {
+    "id": "ensign-boimler",
+    "name": "Ensign Boimler",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3PER05/13",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Crossover",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "ensign-boimler.jpg",
+    "icons": []
+  },
+  {
+    "id": "ensign-mariner",
+    "name": "Ensign Mariner",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3PER06/13",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Crossover",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "ensign-mariner.jpg",
+    "icons": []
+  },
+  {
+    "id": "lieutenant-dax",
+    "name": "Lieutenant Dax",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3PER07/13",
+    "variant": "original",
+    "species_traits": [
+      "Trill"
+    ],
+    "regular_traits": [
+      "Crossover",
+      "Starfleet",
+      "Scientist"
+    ],
+    "other_traits": [],
+    "filename": "lieutenant-dax.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "the-living-witness",
+    "name": "The Living Witness",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3PER08/13",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Doctor",
+      "Hologram",
+      "Crossover",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "the-living-witness.jpg",
+    "icons": []
+  },
+  {
+    "id": "derika-tendi",
+    "name": "D'Erika Tendi",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3PER09/13",
+    "variant": "original",
+    "species_traits": [
+      "Orion"
+    ],
+    "regular_traits": [
+      "Shady"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "derika-tendi.jpg",
+    "icons": []
+  },
+  {
+    "id": "jennifer-shreyan",
+    "name": "Jennifer Sh'reyan",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3PER10/13",
+    "variant": "original",
+    "species_traits": [
+      "Andorian"
+    ],
+    "regular_traits": [
+      "Pilot",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "jennifer-shreyan.jpg",
+    "icons": []
+  },
+  {
+    "id": "kranch",
+    "name": "K'ranch",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3PER11/13",
+    "variant": "original",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [],
+    "filename": "kranch.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "maah",
+    "name": "Ma'ah",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3PER12/13",
+    "variant": "original",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "maah.jpg",
+    "icons": []
+  },
+  {
+    "id": "parmen",
+    "name": "Parmen",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3PER13/13",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Ancient",
+      "Augment",
+      "Telepath"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "parmen.jpg",
+    "icons": []
+  },
+  {
+    "id": "betazed-intelligence",
+    "name": "Betazed Intelligence",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3ALL01/3",
+    "variant": "original",
+    "species_traits": [
+      "Betazoid"
+    ],
+    "regular_traits": [
+      "Spy",
+      "Telepath"
+    ],
+    "other_traits": [],
+    "filename": "betazed-intelligence.jpg",
+    "icons": []
+  },
+  {
+    "id": "illyrians",
+    "name": "Illyrians",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3ALL02/3",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Augment"
+    ],
+    "other_traits": [],
+    "filename": "illyrians.jpg",
+    "icons": []
+  },
+  {
+    "id": "nova-fleet",
+    "name": "Nova Fleet",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3ALL03/3",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "nova-fleet.jpg",
+    "icons": []
+  },
+  {
+    "id": "gift-box",
+    "name": "Gift Box",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3CAR01/3",
+    "variant": "original",
+    "species_traits": [
+      "Betazoid"
+    ],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "gift-box.jpg",
+    "icons": []
+  },
+  {
+    "id": "moopsy",
+    "name": "Moopsy",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3CAR02/3",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Creature"
+    ],
+    "other_traits": [
+      "Attack",
+      "Ongoing"
+    ],
+    "filename": "moopsy.jpg",
+    "icons": []
+  },
+  {
+    "id": "protocol-12",
+    "name": "Protocol 12",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3CAR03/3",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Shady",
+      "Doctor",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "protocol-12.jpg",
+    "icons": []
+  },
+  {
+    "id": "fesarius",
+    "name": "Fesarius",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3SHI01/2",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "filename": "fesarius.jpg",
+    "icons": []
+  },
+  {
+    "id": "ris-talvath",
+    "name": "R.I.S. Talvath",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3SHI02/2",
+    "variant": "original",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Scientist"
+    ],
+    "other_traits": [],
+    "filename": "ris-talvath.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "krulmuth-b",
+    "name": "Krulmuth-B",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3LOC01/2",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly",
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "filename": "krulmuth-b.jpg",
+    "icons": []
+  },
+  {
+    "id": "orion",
+    "name": "Orion",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "2nd Contact",
+    "card_number": "3LOC02/2",
+    "variant": "original",
+    "species_traits": [
+      "Orion"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "orion.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "freeman-carol-freeman",
+    "name": "Carol Freeman",
+    "suit": "Captain",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE01/25",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "freeman-uss-cerritos",
+    "name": "U.S.S. Cerritos",
+    "suit": "Ship",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE02/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "freeman-a-fleet-of-30-california-class-ships",
+    "name": "A Fleet of 30 California-Class Ships",
+    "suit": "Ship",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE03/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ]
+  },
+  {
+    "id": "freeman-apergosians",
+    "name": "Apergosians",
+    "suit": "Ally",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE04/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "freeman-tlyn",
+    "name": "T'Lyn",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE05/25",
+    "variant": "original",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Scientist",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "freeman-strange-new-worlds",
+    "name": "Strange New Worlds",
+    "suit": "Directive",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE06/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "freeman-t88-diagnostic-tool",
+    "name": "T88 Diagnostic Tool",
+    "suit": "Cargo",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE07/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Engineer"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "freeman-the-farm",
+    "name": "The Farm",
+    "suit": "Location",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE08/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Doctor"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ]
+  },
+  {
+    "id": "freeman-kayshon",
+    "name": "Kayshon",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE09/25",
+    "variant": "original",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Security",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "freeman-shax",
+    "name": "Shax",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE10/25",
+    "variant": "original",
+    "species_traits": [
+      "Bajoran"
+    ],
+    "regular_traits": [
+      "Security",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "freeman-uss-carlsbad",
+    "name": "U.S.S. Carlsbad",
+    "suit": "Ship",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE11/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "freeman-tana",
+    "name": "T'Ana",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE12/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Doctor",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Variable"
+      }
+    ]
+  },
+  {
+    "id": "freeman-samanthan-rutherford",
+    "name": "Samanthan Rutherford",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE13/25",
+    "variant": "original",
+    "species_traits": [
+      "Human",
+      "Synthetic"
+    ],
+    "regular_traits": [
+      "Engineer",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "freeman-dvana-tendi",
+    "name": "D'Vana Tendi",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE14/25",
+    "variant": "original",
+    "species_traits": [
+      "Orion"
+    ],
+    "regular_traits": [
+      "Weapon",
+      "Scientist",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "freeman-subspace-phenomenon",
+    "name": "Subspace Phenomenon",
+    "suit": "Incident",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE15/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "freeman-second-contact",
+    "name": "Second Contact",
+    "suit": "Directive",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE16/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "freeman-set-a-course",
+    "name": "Set a Course",
+    "suit": "Directive",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE17/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "freeman-type-6a-shuttlecraft",
+    "name": "Type 6A Shuttlecraft",
+    "suit": "Ship",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE18/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "freeman-douglas-station",
+    "name": "Douglas Station",
+    "suit": "Location",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE19/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Starbase",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "freeman-dooplers",
+    "name": "Dooplers",
+    "suit": "Ally",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE20/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "freeman-anomaly-consolidation-day",
+    "name": "Anomaly Consolidation Day",
+    "suit": "Directive",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE21/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "freeman-jack-ransom",
+    "name": "Jack Ransom",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE22/25",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "freeman-bradward-boimler",
+    "name": "Bradward Boimler",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE23/25",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "freeman-beckett-mariner",
+    "name": "Beckett Mariner",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE24/25",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "freeman-red-alert",
+    "name": "Red Alert",
+    "suit": "Incident",
+    "source": "Freeman",
+    "game_box": "2nd Contact",
+    "card_number": "3FRE25/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  }
+]

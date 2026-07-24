@@ -236,15 +236,8 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Variable"
-      },
-      {
-        "type": "Skill",
-        "specialty": "Variable"
-      },
-      {
-        "type": "Skill",
-        "specialty": "Variable"
+        "specialty": "Variable",
+        "count": 3
       }
     ]
   },
@@ -372,11 +365,8 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Any"
-      },
-      {
-        "type": "Skill",
-        "specialty": "Any"
+        "specialty": "Any",
+        "count": 2
       }
     ]
   },
@@ -527,11 +517,8 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Military"
-      },
-      {
-        "type": "Skill",
-        "specialty": "Military"
+        "specialty": "Military",
+        "count": 2
       }
     ]
   },
@@ -581,6 +568,47 @@
     ]
   },
   {
+    "id": "borg-spatial-trajectory",
+    "name": "Borg Spatial Trajectory",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2CAR02/18†",
+    "variant": "updated",
+    "species_traits": [
+      "Borg"
+    ],
+    "regular_traits": [
+      "Scientist"
+    ],
+    "other_traits": [],
+    "filename": "borg-spatial-trajectory.jpg",
+    "icons": []
+  },
+  {
+    "id": "cloaking-device",
+    "name": "Cloaking Device",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2CAR03/18•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [
+      "Cloak"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
     "id": "computer-virus",
     "name": "Computer Virus",
     "suit": "Cargo",
@@ -625,6 +653,68 @@
     "icons": []
   },
   {
+    "id": "forced-singularity",
+    "name": "Forced Singularity",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2CAR06/18•",
+    "variant": "reprint",
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "holosuite",
+    "name": "Holosuite",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2CAR07/18•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [
+      "Business",
+      "Hologram"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "horta",
+    "name": "Horta",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2CAR08/18•",
+    "variant": "reprint",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Creature"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
     "id": "jagos-epigenetic-implant",
     "name": "Jago's Epigenetic Implant",
     "suit": "Cargo",
@@ -645,77 +735,22 @@
     "icons": []
   },
   {
-    "id": "medical-diagnostic-hat",
-    "name": "Medical Diagnostic Hat",
+    "id": "kemocite",
+    "name": "Kemocite",
     "suit": "Cargo",
     "source": "Common",
     "game_box": "To Boldly Go",
-    "card_number": "2CAR12/18",
-    "variant": "original",
-    "species_traits": [],
-    "regular_traits": [
-      "Helmet",
-      "Doctor"
-    ],
-    "other_traits": [],
-    "filename": "medical-diagnostic-hat.jpg",
-    "icons": []
-  },
-  {
-    "id": "saurian-brandy",
-    "name": "Saurian Brandy",
-    "suit": "Cargo",
-    "source": "Common",
-    "game_box": "To Boldly Go",
-    "card_number": "2CAR16/18",
+    "card_number": "2CAR10/18",
     "variant": "original",
     "species_traits": [
-      "Alien"
+      "Xindi"
     ],
     "regular_traits": [
-      "Beverage"
+      "Shady",
+      "Time Travel"
     ],
     "other_traits": [],
-    "filename": "saurian-brandy.jpg",
-    "icons": []
-  },
-  {
-    "id": "universal-translator",
-    "name": "Universal Translator",
-    "suit": "Cargo",
-    "source": "Common",
-    "game_box": "To Boldly Go",
-    "card_number": "2CAR18/18",
-    "variant": "original",
-    "species_traits": [],
-    "regular_traits": [
-      "Communication"
-    ],
-    "other_traits": [],
-    "filename": "universal-translator.jpg",
-    "icons": [
-      {
-        "type": "Skill",
-        "specialty": "Research"
-      }
-    ]
-  },
-  {
-    "id": "borg-spatial-trajectory",
-    "name": "Borg Spatial Trajectory",
-    "suit": "Cargo",
-    "source": "Common",
-    "game_box": "To Boldly Go",
-    "card_number": "2CAR02/18†",
-    "variant": "updated",
-    "species_traits": [
-      "Borg"
-    ],
-    "regular_traits": [
-      "Scientist"
-    ],
-    "other_traits": [],
-    "filename": "borg-spatial-trajectory.jpg",
+    "filename": "kemocite.jpg",
     "icons": []
   },
   {
@@ -739,23 +774,20 @@
     "icons": []
   },
   {
-    "id": "phasers",
-    "name": "Phasers",
+    "id": "medical-diagnostic-hat",
+    "name": "Medical Diagnostic Hat",
     "suit": "Cargo",
     "source": "Common",
     "game_box": "To Boldly Go",
-    "card_number": "2CAR14/18†",
-    "variant": "updated",
+    "card_number": "2CAR12/18",
+    "variant": "original",
     "species_traits": [],
     "regular_traits": [
-      "Weapon",
-      "Security",
-      "Starfleet"
+      "Helmet",
+      "Doctor"
     ],
-    "other_traits": [
-      "Ongoing"
-    ],
-    "filename": "phasers.jpg",
+    "other_traits": [],
+    "filename": "medical-diagnostic-hat.jpg",
     "icons": []
   },
   {
@@ -783,23 +815,144 @@
     ]
   },
   {
-    "id": "kemocite",
-    "name": "Kemocite",
+    "id": "phasers",
+    "name": "Phasers",
     "suit": "Cargo",
     "source": "Common",
     "game_box": "To Boldly Go",
-    "card_number": "2CAR10/18",
-    "variant": "original",
-    "species_traits": [
-      "Xindi"
-    ],
+    "card_number": "2CAR14/18†",
+    "variant": "updated",
+    "species_traits": [],
     "regular_traits": [
-      "Shady",
-      "Time Travel"
+      "Weapon",
+      "Security",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "phasers.jpg",
+    "icons": []
+  },
+  {
+    "id": "plasma-manifold",
+    "name": "Plasma Manifold",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2CAR15/18•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [
+      "Engineer"
     ],
     "other_traits": [],
-    "filename": "kemocite.jpg",
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "saurian-brandy",
+    "name": "Saurian Brandy",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2CAR16/18",
+    "variant": "original",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Beverage"
+    ],
+    "other_traits": [],
+    "filename": "saurian-brandy.jpg",
     "icons": []
+  },
+  {
+    "id": "type-iii-disruptor-pistols",
+    "name": "Type III Disruptor Pistols",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2CAR17/18•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "universal-translator",
+    "name": "Universal Translator",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2CAR18/18",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Communication"
+    ],
+    "other_traits": [],
+    "filename": "universal-translator.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "ancient-relay-station",
+    "name": "Ancient Relay Station",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2LOC01/20•",
+    "variant": "reprint",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Communication"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "archer-iv",
+    "name": "Archer IV",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2LOC02/20•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
   },
   {
     "id": "argus-array",
@@ -824,6 +977,47 @@
     ]
   },
   {
+    "id": "cold-station-12",
+    "name": "Cold Station 12",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2LOC04/20",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Augment",
+      "Starbase"
+    ],
+    "other_traits": [],
+    "filename": "cold-station-12.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "delta-vega",
+    "name": "Delta Vega",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2LOC05/20•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
     "id": "denaxi-depot",
     "name": "Denaxi Depot",
     "suit": "Location",
@@ -841,6 +1035,74 @@
     "other_traits": [],
     "filename": "denaxi-depot.jpg",
     "icons": []
+  },
+  {
+    "id": "dozaria",
+    "name": "Dozaria",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2LOC07/20•",
+    "variant": "reprint",
+    "species_traits": [
+      "Breen"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "indri-viii",
+    "name": "Indri VIII",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2LOC08/20•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "risa",
+    "name": "Risa",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2LOC09/20•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [
+      "Business"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
   },
   {
     "id": "tahal-meeroj",
@@ -877,11 +1139,8 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Research"
-      },
-      {
-        "type": "Skill",
-        "specialty": "Research"
+        "specialty": "Research",
+        "count": 2
       },
       {
         "type": "Skill",
@@ -912,6 +1171,31 @@
     ]
   },
   {
+    "id": "kelvas-docks",
+    "name": "Kelvas Docks",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2LOC13/20•",
+    "variant": "reprint",
+    "species_traits": [
+      "Cardassian"
+    ],
+    "regular_traits": [
+      "Dominion",
+      "Engineer",
+      "Starbase"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
     "id": "khitomer",
     "name": "Khitomer",
     "suit": "Location",
@@ -935,26 +1219,37 @@
     ]
   },
   {
-    "id": "cold-station-12",
-    "name": "Cold Station 12",
+    "id": "memory-alpha",
+    "name": "Memory Alpha",
     "suit": "Location",
     "source": "Common",
     "game_box": "To Boldly Go",
-    "card_number": "2LOC04/20",
-    "variant": "original",
+    "card_number": "2LOC15/20•",
+    "variant": "reprint",
     "species_traits": [],
     "regular_traits": [
-      "Augment",
-      "Starbase"
+      "Starfleet",
+      "Communication"
     ],
     "other_traits": [],
-    "filename": "cold-station-12.jpg",
-    "icons": [
-      {
-        "type": "Skill",
-        "specialty": "Research"
-      }
-    ]
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "solum",
+    "name": "Solum",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2LOC16/20†",
+    "variant": "updated",
+    "species_traits": [
+      "Vau N'Akat"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
   },
   {
     "id": "tanuga-iv",
@@ -1001,13 +1296,118 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Influence"
-      },
+        "specialty": "Influence",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "verex-iii",
+    "name": "Verex III",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2LOC19/20•",
+    "variant": "reprint",
+    "species_traits": [
+      "Orion"
+    ],
+    "regular_traits": [
+      "Shady"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
       {
         "type": "Skill",
         "specialty": "Influence"
       }
     ]
+  },
+  {
+    "id": "xahea",
+    "name": "Xahea",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2LOC20/20•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      },
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "arinsen",
+    "name": "Arin'Sen",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2ALL01/16•",
+    "variant": "reprint",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "bolians",
+    "name": "Bolians",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2ALL02/16•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "bynars",
+    "name": "Bynars",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2ALL03/16•",
+    "variant": "reprint",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Engineer"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "denobulans",
+    "name": "Denobulans",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2ALL04/16•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
   },
   {
     "id": "kaelon-ii-science-ministry",
@@ -1025,6 +1425,69 @@
       "Ongoing"
     ],
     "filename": "kaelon-ii-science-ministry.jpg",
+    "icons": []
+  },
+  {
+    "id": "kelpiens",
+    "name": "Kelpiens",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2ALL06/16•",
+    "variant": "reprint",
+    "species_traits": [
+      "Kelpien"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "letheans",
+    "name": "Letheans",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2ALL07/16•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [
+      "Shady",
+      "Telepath"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "organians",
+    "name": "Organians",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2ALL08/16•",
+    "variant": "reprint",
+    "species_traits": [
+      "Transcendent"
+    ],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "filename": "",
     "icons": []
   },
   {
@@ -1089,6 +1552,29 @@
     "icons": []
   },
   {
+    "id": "suliban",
+    "name": "Suliban",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2ALL12/16•",
+    "variant": "reprint",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
     "id": "tellarites",
     "name": "Tellarites",
     "suit": "Ally",
@@ -1103,7 +1589,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "tellarites.jpg",
+    "filename": "",
     "icons": [
       {
         "type": "Skill",
@@ -1180,6 +1666,22 @@
     ]
   },
   {
+    "id": "borg-probe",
+    "name": "Borg Probe",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2SHI01/13•",
+    "variant": "reprint",
+    "species_traits": [
+      "Borg"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
     "id": "dkora-marauder",
     "name": "D'Kora Marauder",
     "suit": "Ship",
@@ -1205,6 +1707,24 @@
     ]
   },
   {
+    "id": "dkyr-cruiser",
+    "name": "D'Kyr Cruiser",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2SHI03/13•",
+    "variant": "reprint",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Scientist"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
     "id": "dvar",
     "name": "D'Var",
     "suit": "Ship",
@@ -1221,6 +1741,56 @@
     "other_traits": [],
     "filename": "dvar.jpg",
     "icons": []
+  },
+  {
+    "id": "holographic-drone-ship",
+    "name": "Holographic Drone Ship",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2SHI05/13•",
+    "variant": "reprint",
+    "species_traits": [
+      "Aenar",
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Weapon",
+      "Hologram"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "kazon-raider",
+    "name": "Kazon Raider",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2SHI06/13†",
+    "variant": "updated",
+    "species_traits": [
+      "Kazon"
+    ],
+    "regular_traits": [
+      "Shady"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ]
   },
   {
     "id": "medusan-vessel",
@@ -1241,6 +1811,70 @@
     "icons": [
       {
         "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "pakled-freighter",
+    "name": "Pakled Freighter",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2SHI08/13•",
+    "variant": "reprint",
+    "species_traits": [
+      "Pakled"
+    ],
+    "regular_traits": [
+      "Business"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "uss-enterprise-c",
+    "name": "U.S.S Enterprise-C",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2SHI09/13†",
+    "variant": "updated",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet",
+      "Ambassador",
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "uss-pasteur",
+    "name": "U.S.S. Pasteur",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2SHI10/13•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [
+      "Doctor",
+      "Starfleet",
+      "Communication"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
         "specialty": "Research"
       }
     ]
@@ -1280,11 +1914,29 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Influence"
-      },
+        "specialty": "Influence",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "xindi-reptillian-battleship",
+    "name": "Xindi-Reptillian Battleship",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2SHI13/13•",
+    "variant": "reprint",
+    "species_traits": [
+      "Xindi"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
       {
-        "type": "Skill",
-        "specialty": "Influence"
+        "type": "Focus",
+        "specialty": "Military"
       }
     ]
   },
@@ -1335,6 +1987,43 @@
         "specialty": "Research"
       }
     ]
+  },
+  {
+    "id": "guardian-of-forever",
+    "name": "Guardian of Forever",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2ENC03/8•",
+    "variant": "reprint",
+    "species_traits": [
+      "Transcendent"
+    ],
+    "regular_traits": [
+      "Anomaly",
+      "Time Travel"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "koala",
+    "name": "Koala",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2ENC04/8•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Wildcard"
+    ],
+    "filename": "",
+    "icons": []
   },
   {
     "id": "new-federation-applicants",
@@ -1404,6 +2093,22 @@
     ]
   },
   {
+    "id": "vger",
+    "name": "V'Ger",
+    "suit": "Encounter",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2ENC08/8•",
+    "variant": "reprint",
+    "species_traits": [
+      "Synthetic"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
     "id": "dilithium-shockwave",
     "name": "Dilithium Shockwave",
     "suit": "Incident",
@@ -1422,6 +2127,34 @@
     "icons": []
   },
   {
+    "id": "hostile-contact",
+    "name": "Hostile Contact",
+    "suit": "Incident",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2INC02/6•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "political-crisis",
+    "name": "Political Crisis",
+    "suit": "Incident",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2INC03/6•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
     "id": "reed-alert",
     "name": "Reed Alert",
     "suit": "Incident",
@@ -1433,6 +2166,34 @@
     "regular_traits": [],
     "other_traits": [],
     "filename": "reed-alert.jpg",
+    "icons": []
+  },
+  {
+    "id": "subspace-phenomenon",
+    "name": "Subspace Phenomenon",
+    "suit": "Incident",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2INC05/6•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "trade-embargo",
+    "name": "Trade Embargo",
+    "suit": "Incident",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2INC06/6•",
+    "variant": "reprint",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
     "icons": []
   },
   {
@@ -1837,7 +2598,7 @@
     "suit": "Captain",
     "source": "Georgiou",
     "game_box": "To Boldly Go",
-    "card_number": "2GEO01/23",
+    "card_number": "2GE001/23",
     "variant": "original",
     "species_traits": [
       "Human"
@@ -2807,11 +3568,8 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Military"
-      },
-      {
-        "type": "Skill",
-        "specialty": "Military"
+        "specialty": "Military",
+        "count": 2
       }
     ]
   },
@@ -2834,11 +3592,8 @@
     "icons": [
       {
         "type": "Skill",
-        "specialty": "Variable"
-      },
-      {
-        "type": "Skill",
-        "specialty": "Variable"
+        "specialty": "Variable",
+        "count": 2
       }
     ]
   },
@@ -3158,6 +3913,483 @@
     "species_traits": [
       "Vulcan"
     ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "kirk-james-t-kirk",
+    "name": "James T. Kirk",
+    "suit": "Captain",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK01/25",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "kirk-uss-enterprise-refit",
+    "name": "U.S.S. Enterprise [Refit]",
+    "suit": "Ship",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK02/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ]
+  },
+  {
+    "id": "kirk-starfleet-headquarters",
+    "name": "Starfleet Headquarters",
+    "suit": "Location",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK03/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ]
+  },
+  {
+    "id": "kirk-what-have-i-done",
+    "name": "What Have I Done",
+    "suit": "Directive",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK04/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "kirk-uss-enterprise-a",
+    "name": "U.S.S. Enterprise-A",
+    "suit": "Ship",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK05/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "kirk-uss-excelsior",
+    "name": "U.S.S. Excelsior",
+    "suit": "Ship",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK06/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any",
+        "count": 2
+      },
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "kirk-hikaru-sulu",
+    "name": "Hikaru Sulu",
+    "suit": "Person",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK07/25",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Pilot",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "kirk-sarek",
+    "name": "Sarek",
+    "suit": "Person",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK08/25",
+    "variant": "original",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Telepath",
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "kirk-vulcan",
+    "name": "Vulcan",
+    "suit": "Location",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK09/25",
+    "variant": "original",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research",
+        "count": 2
+      },
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "kirk-time-warp",
+    "name": "Time Warp",
+    "suit": "Directive",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK10/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly",
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "kirk-hms-bounty",
+    "name": "H.M.S. Bounty",
+    "suit": "Ship",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK11/25",
+    "variant": "original",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Cloak"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "kirk-montgomery-scotty-scott",
+    "name": "Montgomery \"Scotty\" Scott",
+    "suit": "Person",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK12/25",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Engineer",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "kirk-pavel-chekov",
+    "name": "Pavel Chekov",
+    "suit": "Person",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK13/25",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Ops",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "kirk-analyze",
+    "name": "Analyze",
+    "suit": "Directive",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK14/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "kirk-needs-of-the-many",
+    "name": "Needs of the Many",
+    "suit": "Directive",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK15/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "kirk-subspace-phenomenon",
+    "name": "Subspace Phenomenon",
+    "suit": "Incident",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK16/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "kirk-levitation-boots",
+    "name": "Levitation Boots",
+    "suit": "Cargo",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK17/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "kirk-recruit",
+    "name": "Recruit",
+    "suit": "Directive",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK18/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "kirk-utilize",
+    "name": "Utilize",
+    "suit": "Directive",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK19/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "kirk-set-a-course",
+    "name": "Set a Course",
+    "suit": "Directive",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK20/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "kirk-strange-new-worlds",
+    "name": "Strange New Worlds",
+    "suit": "Directive",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK21/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "kirk-nyota-uhura",
+    "name": "Nyota Uhura",
+    "suit": "Person",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK22/25",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Communication"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "kirk-leonard-mccoy",
+    "name": "Leonard McCoy",
+    "suit": "Person",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK23/25",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Doctor",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "kirk-captain-spock",
+    "name": "Captain Spock",
+    "suit": "Person",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK24/25",
+    "variant": "original",
+    "species_traits": [
+      "Human",
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Telepath",
+      "Scientist",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "kirk-maximum-warp",
+    "name": "Maximum Warp",
+    "suit": "Directive",
+    "source": "Kirk",
+    "game_box": "To Boldly Go",
+    "card_number": "2KIRK25/25",
+    "variant": "original",
+    "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
     "filename": "",
