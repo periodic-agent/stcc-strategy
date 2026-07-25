@@ -1,0 +1,195 @@
+#!/usr/bin/env node
+// test_scanner.mjs -- headless smoke test for card-browser-mockup.html.
+//
+// Why this exists: the scanner has an async init() path and inline onclick handlers that
+// need their functions at GLOBAL scope. `node --check` passes on a file whose functions are
+// all nested inside init(), yet every button in the browser is dead. This harness runs the
+// real inline scripts in a DOM shim, then calls setView / clearAll / openLightbox from the
+// same scope an inline handler would, so that class of bug fails here instead of in production.
+//
+// Usage:  node tools/test_scanner.mjs .            (from the repo root)
+//         node tools/test_scanner.mjs . path/to/alternate.html
+//
+// Stdlib only, no deps. Exit code is non-zero on assertion failure.
+
+import fs from 'fs';
+import path from 'path';
+import vm from 'vm';
+
+// Minimal DOM shim: enough to run the scanner's scripts under node.
+
+function makeEnv(repoDir){
+  const listeners = {};
+  function El(tag){
+    return {
+      tagName:tag, _cls:new Set(), dataset:{}, style:{}, children:[], attrs:{},
+      _text:'', _html:'',
+      set className(v){ this._cls = new Set(String(v).split(/\s+/).filter(Boolean)); },
+      get className(){ return [...this._cls].join(' '); },
+      classList:{
+        add:function(c){ this.__o._cls.add(c); },
+        remove:function(c){ this.__o._cls.delete(c); },
+        toggle:function(c,f){ const o=this.__o; const has=o._cls.has(c);
+          const on = (f===undefined)? !has : !!f; if(on) o._cls.add(c); else o._cls.delete(c); return on; },
+        contains:function(c){ return this.__o._cls.has(c); }
+      },
+      set textContent(v){ this._text=String(v); },
+      get textContent(){ return this._text; },
+      set innerHTML(v){ this._html=String(v); if(v==='') this.children=[]; },
+      get innerHTML(){ return this._html; },
+      set outerHTML(v){ this._outer=v; },
+      appendChild(c){ this.children.push(c); return c; },
+      append(...cs){ cs.forEach(c=>this.children.push(c)); },
+      addEventListener(){}, scrollIntoView(){},
+      setAttribute(k,v){ this.attrs[k]=v; }, getAttribute(k){ return this.attrs[k]; },
+      querySelectorAll(sel){ return collect(this).filter(e=>matches(e,sel)); },
+      querySelector(sel){ return this.querySelectorAll(sel)[0]||null; },
+      click(){ if(this.onclick) this.onclick(); }
+    };
+  }
+  function collect(root){
+    const out=[]; (function walk(n){ n.children.forEach(c=>{ out.push(c); walk(c); }); })(root); return out;
+  }
+  function matches(el,sel){
+    // supports ".cls", "span", ".a,.b", '.box-pill[data-box="x"]'
+    return sel.split(',').map(s=>s.trim()).some(s=>{
+      const m = s.match(/^([.\w-]+)?(\[data-(\w+)="([^"]+)"\])?$/);
+      if(!m) return false;
+      const base=m[1]||''; const dk=m[3]; const dv=m[4];
+      if(base.startsWith('.')){ if(!el._cls.has(base.slice(1))) return false; }
+      else if(base){ if(el.tagName!==base) return false; }
+      if(dk && el.dataset[dk]!==dv) return false;
+      return true;
+    });
+  }
+  const registry = {};
+  function ensure(id){
+    if(!registry[id]){ const e=El('div'); e.id=id; e.classList.__o=e; registry[id]=e; }
+    return registry[id];
+  }
+  const document = {
+    _registry: registry,
+    getElementById:(id)=>ensure(id),
+    createElement:(t)=>{ const e=El(t); e.classList.__o=e; return e; },
+    addEventListener:(t,f)=>{ (listeners[t]=listeners[t]||[]).push(f); },
+    querySelectorAll:(sel)=>Object.values(registry).flatMap(r=>[r,...collect(r)]).filter(e=>matches(e,sel)),
+    querySelector:(sel)=>document.querySelectorAll(sel)[0]||null,
+    body:El('body')
+  };
+  document.body.classList.__o = document.body;
+  const fetchLocal = async (f)=>{
+    const p = path.join(repoDir, f);
+    if(!fs.existsSync(p)) return {ok:false};
+    return {ok:true, json: async ()=>JSON.parse(fs.readFileSync(p,'utf8'))};
+  };
+  return {document, fetch:fetchLocal, console, listeners};
+}
+
+function extractScripts(html){
+  const out=[]; const re=/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/g; let m;
+  while((m=re.exec(html))) out.push(m[1]);
+  return out;
+}
+
+
+const repo = process.argv[2];
+const file = process.argv[3] || (repo + '/card-browser-mockup.html');
+const html = fs.readFileSync(file,'utf8');
+const env = makeEnv(repo);
+const sandbox = { ...env, window:{}, setTimeout, Set, Map, JSON, Math, Object, Array, String, Number };
+sandbox.globalThis = sandbox;
+vm.createContext(sandbox);
+
+// All inline blocks share one global lexical scope in a browser; concatenate to match.
+// The epilogue sits at that same scope, exactly like an inline onclick handler does,
+// so anything it cannot see, a real button click cannot see either.
+const body = extractScripts(html).join('\n;\n');
+const epilogue = `
+globalThis.__api = {
+  get ALL_CARDS(){return ALL_CARDS;}, get activeBoxes(){return activeBoxes;},
+  get viewMode(){return viewMode;}, get VISIBLE_IMG_CARDS(){return VISIBLE_IMG_CARDS;},
+  render:()=>render(), cardMatches:(c)=>cardMatches(c), setView:(v)=>setView(v),
+  clearAll:()=>clearAll(), revealTBG:(e)=>revealTBG(e), openLightbox:(s)=>openLightbox(s),
+  stepLightbox:(d)=>stepLightbox(d)
+};`;
+vm.runInContext(body + '\n' + epilogue, sandbox, {filename:'scanner'});
+await new Promise(r=>setTimeout(r,300));
+const api = sandbox.__api;
+
+function report(label){
+  const shown = api.ALL_CARDS.filter(c=>api.cardMatches(c));
+  const noimg = shown.filter(c=>!(c.imgBox && c.filename));
+  console.log(`\n--- ${label} | boxes=[${[...api.activeBoxes]}] | resolved=${api.ALL_CARDS.length} shown=${shown.length} without image=${noimg.length}`);
+  return {shown,noimg};
+}
+
+api.render();
+report('default (Captain\'s Chair)');
+
+api.setView('image');
+console.log('setView("image") from global scope OK, viewMode =', api.viewMode);
+
+api.activeBoxes.clear(); api.activeBoxes.add('tbg');
+api.render();
+const r = report('To Boldly Go ONLY, Images view');
+const dupNoImg = r.noimg.filter(c=>c.badgeKind==='duplicate');
+const updNoImg = r.noimg.filter(c=>c.badgeKind==='update');
+console.log('duplicates with NO image:', dupNoImg.length, '|', dupNoImg.slice(0,6).map(c=>c.name).join(', '));
+console.log('updated with NO image:', updNoImg.length, '|', updNoImg.map(c=>c.name).join(', '));
+
+const vis = api.VISIBLE_IMG_CARDS;
+const bad = vis.filter(e=>!fs.existsSync(repo+'/'+e.src));
+console.log('lightbox entries:', vis.length, '| srcs missing on disk:', bad.length, bad.slice(0,4).map(b=>b.src));
+
+// both boxes
+api.activeBoxes.add('core'); api.render();
+const r2 = report('Captain\'s Chair + To Boldly Go');
+console.log('duplicates with NO image:', r2.noimg.filter(c=>c.badgeKind==='duplicate').length);
+
+api.clearAll();
+console.log('\nclearAll() from global scope OK');
+
+// --- targeted assertions -----------------------------------------------------
+function imgSrcFor(name, boxes){
+  api.activeBoxes.clear(); boxes.forEach(b=>api.activeBoxes.add(b)); api.render();
+  const c = api.ALL_CARDS.find(x=>x.name===name);
+  if(!c) return 'CARD NOT IN SELECTION';
+  return (c.imgBox && c.filename) ? ('img/'+({core:'box1',tbg:'box2','2nd':'box3',promo1:'promo1',promo2:'promo2'}[c.imgBox])+'/'+c.filename) : 'NO IMAGE';
+}
+console.log('\n=== image resolution checks ===');
+for(const [n,b] of [['Rom',['tbg']],['Lursa',['tbg']],["V'Ger",['tbg']],['Phlox',['tbg']],['Phlox',['core']],['Phlox',['core','tbg']],['Solum',['tbg']],['Solum',['core']],['Tellarites',['tbg']]]){
+  console.log(`${n} [${b}] -> ${imgSrcFor(n,b)}`);
+}
+api.activeBoxes.clear(); api.activeBoxes.add('tbg'); api.setView('image'); api.render();
+const v2=api.VISIBLE_IMG_CARDS;
+const missing=v2.filter(e=>!fs.statSync(repo+'/'+e.src,{throwIfNoEntry:false})?.isFile());
+console.log('\nTBG-only Images: tiles with image =', v2.length, '| srcs not a real file:', missing.length, missing.slice(0,4).map(m=>m.src));
+api.openLightbox('http://x/'+v2[0].src); api.stepLightbox(1); api.stepLightbox(-1);
+console.log('lightbox open + arrow steps OK');
+
+// --- hard assertions (non-zero exit on failure) ------------------------------
+let failures = 0;
+function assert(cond, label){
+  if(cond){ console.log('  PASS  ' + label); }
+  else { console.error('  FAIL  ' + label); failures++; }
+}
+console.log('\n=== assertions ===');
+api.activeBoxes.clear(); api.activeBoxes.add('tbg'); api.setView('image'); api.render();
+const tbgShown = api.ALL_CARDS.filter(c=>api.cardMatches(c));
+assert(tbgShown.filter(c=>c.badgeKind==='duplicate' && !(c.imgBox && c.filename)).length === 0,
+  'Box 2 alone: every duplicate falls back to its Box 1 scan');
+assert(imgSrcFor('Rom',['tbg']) === 'img/box1/rom.jpg',
+  'duplicate Rom uses the Box 1 original scan when only Box 2 is selected');
+assert(imgSrcFor('Phlox',['tbg']) === 'img/box2/phlox.jpg',
+  'updated Phlox uses its own Box 2 scan, never the superseded Box 1 art');
+assert(imgSrcFor('Solum',['tbg']) === 'NO IMAGE',
+  'updated Solum shows no image until its new scan lands (no stale Box 1 art)');
+assert(imgSrcFor('Solum',['core']) === 'img/box1/solum.jpg',
+  'Box 1 alone still shows the Box 1 printing of a later-updated card');
+api.activeBoxes.clear(); api.activeBoxes.add('tbg'); api.setView('image'); api.render();
+assert(api.VISIBLE_IMG_CARDS.every(e=>fs.statSync(repo+'/'+e.src,{throwIfNoEntry:false})?.isFile()),
+  'every lightbox entry points at a file that exists on disk');
+assert(typeof api.setView === 'function' && typeof api.clearAll === 'function',
+  'inline-handler functions are reachable at global scope');
+console.log(failures ? `\n${failures} FAILURE(S)` : '\nAll assertions passed.');
+process.exit(failures ? 1 : 0);

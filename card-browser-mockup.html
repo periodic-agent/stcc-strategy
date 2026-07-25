@@ -369,6 +369,8 @@ function normIcons(icons){
 
 // The box-order for resolution: lower index = earlier printing.
 const BOX_ORDER = ['core','tbg','2nd'];
+// Promo printings rank after every numbered box, so a promo scan never outranks a box scan.
+function boxRank(k){ const i=BOX_ORDER.indexOf(k); return i<0 ? 90 : i; }
 
 function boxLabelFromKey(k){
   return { core:"Captain's Chair", tbg:'To Boldly Go', '2nd':'Second Contact', promo1:'Promo 1', promo2:'Promo 2' }[k] || k;
@@ -395,15 +397,17 @@ function resolveCards(rawPool){
     // Image: only a printing whose TEXT matches the resolved version qualifies.
     // - reprint/original: all printings share text -> any qualifies -> prefer newest non-empty.
     // - updated: only the printing(s) equal to `chosen` qualify.
-    let imgCandidates;
-    if(chosen.variant==='updated'){
-      imgCandidates = group.filter(c=>c===chosen);
-    } else {
-      // reprints + originals all match text
-      imgCandidates = group.slice();
-    }
-    // prefer newest box first, non-empty filename
-    imgCandidates = imgCandidates.sort((a,b)=>BOX_ORDER.indexOf(rawBoxKey(b))-BOX_ORDER.indexOf(rawBoxKey(a)));
+    // Candidates come from EVERY loaded printing of this id, not just the selected boxes:
+    // a Box 2 reprint carries no scan of its own, so with only Box 2 selected it must still
+    // fall back to the Box 1 original art.
+    const imgPool = FULL_BY_ID[chosen.id] || group;
+    let imgCandidates = (chosen.variant==='updated')
+      ? imgPool.filter(c=>c.variant==='updated')     // updated text: only updated printings qualify
+      : imgPool.filter(c=>c.variant!=='updated');    // base text: originals and reprints share it
+    // Duplicates show the earliest printing's scan (Box 1 art wins).
+    // Updated cards take the newest updated printing, the one whose text changed.
+    const dir = (chosen.variant==='updated') ? -1 : 1;
+    imgCandidates = imgCandidates.slice().sort((a,b)=>dir*(boxRank(rawBoxKey(a))-boxRank(rawBoxKey(b))));
     let chosenImg = imgCandidates.find(c=>c.filename && c.filename.trim());
     const imgBox = chosenImg ? rawBoxKey(chosenImg) : null;
     const imgFile = chosenImg ? chosenImg.filename : '';
@@ -439,9 +443,12 @@ function resolveCards(rawPool){
 
 // Full raw pool across all loaded boxes (kept once).
 let FULL_POOL = [];
+let FULL_BY_ID = {};   // every loaded printing of an id, regardless of box selection
 function buildFullPool(){
   FULL_POOL = [];
   Object.values(RAW_BOXES).forEach(arr=>FULL_POOL.push(...arr));
+  FULL_BY_ID = {};
+  FULL_POOL.forEach(c=>{ (FULL_BY_ID[c.id]=FULL_BY_ID[c.id]||[]).push(c); });
 }
 
 // Resolve over the CURRENTLY SELECTED boxes only.
@@ -668,9 +675,10 @@ function render(){
     grid.className=viewMode==='pill'?'card-grid':'img-grid';
     matched.forEach(c=>{
       grid.appendChild(viewMode==='pill'?buildPillCard(c):buildImgCard(c));
-      if(viewMode==='image'){
-        const folder=BOX_FOLDER[c.box]||'box1';
-        VISIBLE_IMG_CARDS.push({src:IMG_BASE+'/'+folder+'/'+c.filename, name:c.name});
+      if(viewMode==='image' && c.imgBox && c.filename){
+        // Use the image's own box folder (it can differ from the card's resolved box) so the
+        // lightbox list matches the tiles on screen; image-less cards are skipped entirely.
+        VISIBLE_IMG_CARDS.push({src:IMG_BASE+'/'+BOX_FOLDER[c.imgBox]+'/'+c.filename, name:c.name});
       }
     });
     section.appendChild(grid);
