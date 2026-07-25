@@ -947,5 +947,1004 @@
     "other_traits": [],
     "filename": "",
     "icons": []
+  },
+  {
+    "id": "pike-christopher-pike",
+    "name": "Christopher Pike",
+    "suit": "Captain",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK01/26",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "pike-improbable-unstoppable-sensational",
+    "name": "Improbable, Unstoppable, Sensational",
+    "suit": "Status",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK02/26",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "pike-starbase-one",
+    "name": "Starbase One",
+    "suit": "Location",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK03/26",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Starbase",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "pike-lt-scott",
+    "name": "Lt. Scott",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK04/26",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Engineer",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "pike-talosians",
+    "name": "Talosians",
+    "suit": "Ally",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK05/26",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Telepath"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "pike-kherkovians",
+    "name": "Kherkovians",
+    "suit": "Ally",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK06/26",
+    "variant": "original",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Anomaly",
+      "Doctor"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "pike-rigel-vii",
+    "name": "Rigel VII",
+    "suit": "Location",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK07/26",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "pike-pelia",
+    "name": "Pelia",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK08/26",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Engineer",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "pike-james-kirk",
+    "name": "James Kirk (United Earth Fleet)",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK09/26",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "pike-marie-batel",
+    "name": "Marie Batel",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK10/26",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "pike-dakrah",
+    "name": "Dak'rah",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK11/26",
+    "variant": "original",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "pike-christine-chapel",
+    "name": "Christine Chapel",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK12/26",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Doctor"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "pike-una-number-one-chin-riley",
+    "name": "Una \"Number One\" Chin-Riley",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK13/26",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Augment",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "pike-political-crisis",
+    "name": "Political Crisis",
+    "suit": "Incident",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK14/26",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "pike-time-crystal",
+    "name": "Time Crystal",
+    "suit": "Cargo",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK15/26",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "pike-hit-it",
+    "name": "Hit It",
+    "suit": "Directive",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK16/26",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "pike-knowledge-of-a-terrible-fate",
+    "name": "Knowledge of a Terrible Fate",
+    "suit": "Directive",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK17/26",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Time Travel"
+    ],
+    "other_traits": [
+      "Ongoing",
+      "Surprise"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "pike-strange-new-worlds",
+    "name": "Strange New Worlds",
+    "suit": "Directive",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK18/26",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "pike-uss-enterprise",
+    "name": "U.S.S. Enterprise",
+    "suit": "Ship",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK19/26",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ]
+  },
+  {
+    "id": "pike-hemmer",
+    "name": "Hemmer",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK20/26",
+    "variant": "original",
+    "species_traits": [
+      "Aenar"
+    ],
+    "regular_traits": [
+      "Engineer",
+      "Starfleet",
+      "Telepath"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "pike-lt-spock",
+    "name": "Lt. Spock",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK21/26",
+    "variant": "original",
+    "species_traits": [
+      "Human",
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Scientist",
+      "Starfleet",
+      "Telepath"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "pike-laan-noonien-singh",
+    "name": "La'an Noonien Singh",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK22/26",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Security",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "pike-joseph-mbenga",
+    "name": "Joseph M'Benga",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK23/26",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Doctor",
+      "Starfleet",
+      "Weapon"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "pike-cadet-uhura",
+    "name": "Cadet Uhura",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK24/26",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Communication",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "pike-negotiate",
+    "name": "Negotiate",
+    "suit": "Directive",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK25/26",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "pike-erica-ortegas",
+    "name": "Erica Ortegas",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK26/26",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Pilot",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "riker-william-t-riker",
+    "name": "William T. Riker",
+    "suit": "Captain",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK01/25",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "riker-uss-titan",
+    "name": "U.S.S. Titan",
+    "suit": "Ship",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK02/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ]
+  },
+  {
+    "id": "riker-nepenthe",
+    "name": "Nepenthe",
+    "suit": "Location",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK03/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "riker-solving-science-mysteries",
+    "name": "Solving Science Mysteries",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK04/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      },
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "riker-william-boimler-lt-jg",
+    "name": "William Boimler, Lt. JG",
+    "suit": "Person",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK05/25",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Anomaly",
+      "Spy",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ]
+  },
+  {
+    "id": "riker-uss-zheng-he",
+    "name": "U.S.S. Zheng He",
+    "suit": "Ship",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK06/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "riker-proximity-blast",
+    "name": "Proximity Blast",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK07/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "riker-utilize",
+    "name": "Utilize",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK08/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "riker-gluonic-distortion",
+    "name": "Gluonic Distortion",
+    "suit": "Status",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK09/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "riker-chateau-picard",
+    "name": "Chateau Picard",
+    "suit": "Cargo",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK10/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Beverage"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "riker-holodeck",
+    "name": "Holodeck",
+    "suit": "Cargo",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK11/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Hologram",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "riker-tactical-officer",
+    "name": "Tactical Officer (U.S.S. Titan)",
+    "suit": "Person",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK12/25",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Security",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Variable"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Variable"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Variable"
+      }
+    ]
+  },
+  {
+    "id": "riker-chief-engineer",
+    "name": "Chief Engineer (U.S.S. Titan)",
+    "suit": "Person",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK13/25",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Engineer",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "riker-brad-boimler-lt-jg",
+    "name": "Brad Boimler, Lt. JG",
+    "suit": "Person",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK14/25",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Ops",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
+  },
+  {
+    "id": "riker-deanna-troi-riker",
+    "name": "Deanna Troi-Riker",
+    "suit": "Person",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK15/25",
+    "variant": "original",
+    "species_traits": [
+      "Betazoid",
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Telepath"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ]
+  },
+  {
+    "id": "riker-first-officer",
+    "name": "First Officer (U.S.S. Titan)",
+    "suit": "Person",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK16/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Ops",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ]
+  },
+  {
+    "id": "riker-strange-new-worlds",
+    "name": "Strange New Worlds",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK17/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "riker-recruit",
+    "name": "Recruit",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK18/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "riker-analyze",
+    "name": "Analyze",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK19/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "riker-hostile-contact",
+    "name": "Hostile Contact",
+    "suit": "Incident",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK20/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "riker-warp-in-the-factor-of-5-6-7-8",
+    "name": "Warp in the Factor of 5, 6, 7, 8!",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK21/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "riker-starbase-25",
+    "name": "Starbase 25",
+    "suit": "Location",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK22/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Starbase",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "riker-swooping-in",
+    "name": "Swooping In",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK23/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "riker-red-alert",
+    "name": "Red Alert",
+    "suit": "Incident",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK24/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "riker-the-riker-maneuver",
+    "name": "The Riker Maneuver",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK25/25",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ]
   }
 ]

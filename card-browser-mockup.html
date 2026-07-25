@@ -32,7 +32,6 @@ a{color:var(--blue);text-decoration:none;}
 .new-banner{display:inline-flex;align-items:center;gap:0.55rem;margin-top:1rem;padding:0.28rem 0.75rem 0.28rem 0.32rem;background:rgba(212,74,74,0.08);border:1px solid rgba(212,74,74,0.35);border-radius:999px;font-family:'Exo 2',sans-serif;font-size:0.8rem;color:var(--text);text-decoration:none;cursor:pointer;transition:border-color .2s,background .2s,transform .2s;}
 .new-banner:hover{border-color:rgba(240,126,126,0.75);background:rgba(212,74,74,0.15);transform:translateY(-1px);}
 .new-badge{font-family:'Orbitron',sans-serif;font-size:0.58rem;font-weight:700;letter-spacing:0.14em;color:#fff;text-transform:uppercase;padding:0.22rem 0.5rem;border-radius:999px;background:linear-gradient(135deg,#f0902e,#d44a4a);box-shadow:0 0 12px rgba(240,144,46,0.45);}
-.new-banner .new-count{color:#f07e7e;font-weight:600;}
 .new-banner .new-arrow{color:var(--muted);font-size:0.85rem;transition:transform .2s;}
 .new-banner:hover .new-arrow{transform:translateX(3px);}
 .controls{max-width:1100px;margin:1.5rem auto 0;padding:0 1.5rem;}
@@ -239,7 +238,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   <div class="chapter-label">ST:CC Strategy Compendium</div>
   <h1 class="chapter-title"><span>Card</span> Scanner</h1>
   <div class="chapter-meta">Select boxes, filter by trait or skill, search by name. Show details or images.</div>
-  <a class="new-banner" onclick="revealTBG(event)" title="Show the To Boldly Go and Second Contact cards"><span class="new-badge">New</span><span><span class="new-count" id="tbgCount">104</span> To Boldly Go and Second Contact cards and counting…</span><span class="new-arrow">→</span></a>
+  <a class="new-banner" onclick="revealTBG(event)" title="Show the To Boldly Go and Second Contact cards"><span class="new-badge">New</span><span>To Boldly Go and Second Contact are available now</span><span class="new-arrow">→</span></a>
 </header>
 
 <div class="controls">
@@ -328,7 +327,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 
 <div class="deck-groups" id="deckGroups"></div>
 
-<footer>Card images &copy; WizKids.<br>Card database for Box 1 courtesy of Assmatt.<br>Images contribution from BGG and Seth Bryant.<br>Unofficial fan content.</footer>
+<footer>Card images &copy; WizKids.<br>We thank Discord users Assmatt for help with the card database for Captain's Chair, and Esquire_Sandwich and Lynette T for help with To Boldly Go and Second Contact.<br>Images contribution from BGG and Seth Bryant.<br>Unofficial fan content.</footer>
 
 <script>
 let ALL_CARDS = [];   // resolved, deduplicated card list (filled by loadBoxes)
@@ -481,10 +480,6 @@ async function loadBoxes(){
     }catch(e){ console.warn('Could not load', s.file, e); }
   }
   buildFullPool();
-  // update the "New!" banner count with the real number of To Boldly Go + Second Contact cards
-  const tbgN = FULL_POOL.filter(c=>c.game_box==='To Boldly Go'||c.game_box==='Second Contact').length;
-  const tbgEl = document.getElementById('tbgCount');
-  if(tbgEl) tbgEl.textContent = tbgN;
 }
 
 

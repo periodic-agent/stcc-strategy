@@ -88,7 +88,7 @@ from collections import Counter, defaultdict
 
 ICON_SPECIALTIES = {"Research", "Influence", "Military", "Any", "Variable"}
 KNOWN_GAME_BOXES = {"Captain's Chair", "To Boldly Go", "Second Contact"}
-CODE_RE = re.compile(r"^(\d)([A-Z]+)(\d+)/(\d+)\s*(.)?$")
+CODE_RE = re.compile(r"^(\d)([A-Z]+)(\d+)([A-Z]?)/(\d+)\s*(.)?$")  # optional letter = double-sided face (2KHA01A/22)
 MARKERS = {None: "original", "•": "reprint", "†": "updated"}
 
 
@@ -158,7 +158,7 @@ def main():
                 bad_markers.append((r, name, code,
                                     " ".join(f"U+{ord(c):04X}" for c in tail)))
                 continue
-            marker = m.group(5)
+            marker = m.group(6)
             if marker not in MARKERS:
                 bad_markers.append((r, name, code, f"U+{ord(marker):04X}"))
                 continue

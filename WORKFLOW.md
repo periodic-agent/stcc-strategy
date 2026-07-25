@@ -488,8 +488,8 @@ Column A of the sheet carries the printed card number and encodes duplicate stat
 Contributors enter the number exactly as printed, e.g. `2PER14/26†`.
 
 ```
-^(\d)([A-Z]+)(\d+)/(\d+)\s*(.)?$
-   box  set    num  total  marker
+^(\d)([A-Z]+)(\d+)([A-Z]?)/(\d+)\s*(.)?$
+   box  set    num  face  total  marker   (face = optional A/B letter on double-sided cards, e.g. 2KHA01A/22)
 ```
 
 | marker | codepoint | `variant` | meaning |

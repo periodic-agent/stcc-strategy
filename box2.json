@@ -4434,5 +4434,413 @@
     "other_traits": [],
     "filename": "",
     "icons": []
+  },
+  {
+    "id": "khan-khan-noonien-singh",
+    "name": "Khan Noonien Singh",
+    "suit": "Captain",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA01A/22",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Augment"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-wrathful-khan",
+    "name": "Wrathful Khan",
+    "suit": "Captain",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA01B/22",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Augment"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-ceti-alpha-v",
+    "name": "Ceti Alpha V",
+    "suit": "Location",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA02A/22",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-devastated-ceti-alpha-v",
+    "name": "Devastated Ceti Alpha V",
+    "suit": "Location",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA02B/22",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-ceti-alpha-vi",
+    "name": "Ceti Alpha VI",
+    "suit": "Location",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA03/22",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-hijacked-uss-reliant",
+    "name": "Hijacked U.S.S. Reliant",
+    "suit": "Ship",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA04/22",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Augment",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-surprise-attack",
+    "name": "Surprise Attack",
+    "suit": "Directive",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA05/22",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-cpt-terrell",
+    "name": "Cpt. Terrell",
+    "suit": "Person",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA06/22",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Mind Control",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-cmdr-chekov",
+    "name": "Cmdr. Chekov",
+    "suit": "Person",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA07/22",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Mind Control",
+      "Ops",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-ceti-eel",
+    "name": "Ceti Eel",
+    "suit": "Cargo",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA08/22",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Creature",
+      "Mind Control"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-infiltrate",
+    "name": "Infiltrate",
+    "suit": "Directive",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA09/22",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-revenge-is-a-dish-best-served-cold",
+    "name": "Revenge Is a Dish Best Served Cold",
+    "suit": "Directive",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA10/22",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-genesis-device",
+    "name": "Genesis Device",
+    "suit": "Cargo",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA11/22",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack",
+      "Ongoing"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-vacated-regula-i",
+    "name": "Vacated Regula I",
+    "suit": "Location",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA12/22",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Starbase",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-marla-mcgivers",
+    "name": "Marla McGivers",
+    "suit": "Person",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA13/22",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-mutara-nebula",
+    "name": "Mutara Nebula",
+    "suit": "Location",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA14/22",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-salvage",
+    "name": "Salvage",
+    "suit": "Directive",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA15/22",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-ss-botany-bay",
+    "name": "S.S. Botany Bay",
+    "suit": "Ship",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA16/22",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-wajahut",
+    "name": "Wajahut",
+    "suit": "Person",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA17/22",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Augment",
+      "Ops"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-joachim",
+    "name": "Joachim",
+    "suit": "Person",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA18/22",
+    "variant": "original",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Augment",
+      "Ops"
+    ],
+    "other_traits": [],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-to-the-last-i-will-grapple-with-thee",
+    "name": "To the Last, I Will Grapple With Thee!",
+    "suit": "Incident",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA19/22",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack",
+      "Surprise"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-from-hells-heart-i-stab-at-thee",
+    "name": "From Hell's Heart, I Stab at Thee!",
+    "suit": "Incident",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA20/22",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack",
+      "Surprise"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-i-spit-my-last-breath-at-thee",
+    "name": "I Spit My Last Breath at Thee!",
+    "suit": "Incident",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA21/22",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack",
+      "Surprise"
+    ],
+    "filename": "",
+    "icons": []
+  },
+  {
+    "id": "khan-two-dimensional-thinking",
+    "name": "Two Dimensional Thinking",
+    "suit": "Incident",
+    "source": "Khan",
+    "game_box": "To Boldly Go",
+    "card_number": "2KHA22/22",
+    "variant": "original",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Surprise"
+    ],
+    "filename": "",
+    "icons": []
   }
 ]
