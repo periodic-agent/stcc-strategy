@@ -757,4 +757,63 @@ Second Contact (pending):
 
 ---
 
+---
 
+## Session Delta — 25 Jul 2026 (Card Scanner)
+
+### Card Scanner image resolution (canonical)
+
+Resolution of text, badges, copy counts and the "N distinct cards" label stays scoped to the
+**selected** boxes. Image lookup does **not**: it searches every loaded printing of the card id,
+regardless of which boxes are selected. Without this, a Box 2 reprint (whose own `filename` is
+blank) rendered NO IMAGE whenever Box 1 was deselected.
+
+Rules, in order:
+
+1. Only printings whose **text matches the resolved version** qualify. An `updated` card draws
+   from `updated` printings only; an original or reprint draws from originals and reprints.
+2. **Duplicates show the earliest printing's scan.** Box 1 art wins for every reprint, by rule
+   and not by accident, so filling a reprint `filename` in a later box never flips the art.
+3. **Updated cards take the newest updated printing.** If its scan has not landed yet the card
+   shows NO IMAGE. Superseded art is never shown for a card whose text changed.
+4. Promo keys (`promo1`, `promo2`) are absent from `BOX_ORDER`; `boxRank()` sorts them after
+   every numbered box so a promo scan cannot outrank a box scan.
+5. The lightbox list is built from the image's own box folder (`imgBox`), which can differ from
+   the card's resolved box, and skips image-less cards so arrow navigation matches the tiles.
+
+**Data implication for JSON sessions:** leave `filename` blank on reprints. The scanner serves the
+Box 1 scan for them. Fill `filename` only when a card has art of its own: a new box original, or an
+`updated` card whose new scan exists.
+
+### Scanner testing requirement
+
+`node --check` is not sufficient; it passes on a scanner whose functions are all nested inside
+`init()`, which silently kills every inline `onclick` in the browser. Before any scanner push:
+
+```
+node tools/test_scanner.mjs .
+```
+
+It runs the real inline scripts in a DOM shim, calls `setView` / `clearAll` / `openLightbox` from
+global scope the way a click does, asserts the image rules above, and exits non-zero on failure.
+Add an assertion whenever a rule is added.
+
+### Known card data quirks
+
+**Xindi-Reptillian Battleship is misprinted on the card itself.** The printed card spells it
+"Reptillian" with two Ls; canon spelling is "Reptilian". The database follows the card: `id`, `name`
+and `filename` all use `xindi-reptillian-battleship`. This is deliberate. Do not "correct" it in
+box1.json, box2.json, or any guide. A stray unreferenced `img/box1/xindi-reptilian-battleship.jpg`
+(one L) exists from an earlier pass and is safe to delete.
+
+### Session sync and push (environment note)
+
+`raw.githubusercontent.com` and `api.github.com` can be blocked from the sandbox shell while
+`github.com` is reachable. When `web_fetch` or urllib fails, sync with:
+
+```
+git clone --depth 1 https://github.com/periodic-agent/stcc-strategy /tmp/repo
+```
+
+`push_to_github.py` is unaffected: it pushes over git, not the REST API. Run it from a directory git
+can lock (a mounted output folder may refuse `.git` operations; clone under `/tmp`).
