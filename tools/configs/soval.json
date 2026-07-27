@@ -1,0 +1,99 @@
+{
+  "slug": "soval",
+  "box": "tbg",
+  "page_title": "Soval",
+  "title_html": "<span>Soval</span>",
+  "description": "Soval strategy guide for Star Trek: Captain's Chair — To Boldly Go: captain board, missions, available cards, reserve and development decks, market picks and captain match-ups. By Matthew McCue.",
+  "posted": "27 Jul 2026",
+  "tags": [
+    "Vulcan",
+    "Ambassador",
+    "Complexity 3/10"
+  ],
+  "og_image": "img/box2/soval-soval.jpg",
+  "image_names": {
+    "Soval Captain": "soval",
+    "Vulcan SD Status": "vulcan-science-directorate",
+    "Ti'Mur": "timur",
+    "United Earth Ally": "united-earth",
+    "Sub-Commander T'Pol": "sub-commander-tpol",
+    "IDIC": "infinite-diversity-in-infinite-combinations",
+    "V'Lar": "vlar",
+    "Seleya": "seleya-dkyr",
+    "T'Pau": "tpau",
+    "Kir'Shara": "kirshara"
+  },
+  "board_alts": [
+    "Soval Basic",
+    "Soval Advanced"
+  ],
+  "insert_h2": [
+    {
+      "title": "Missions",
+      "before": "Soval's player board's basic side track multipliers"
+    },
+    {
+      "title": "Captain Card & Starting Components",
+      "before": "Soval has four away teams"
+    }
+  ],
+  "cut": [
+    "I hope you enjoyed this strategy guide for Ambassador"
+  ],
+  "lore": [
+    "Another week, another Captain Guide from To Boldly Go!"
+  ],
+  "no_lore": [],
+  "toc_labels": {
+    "Soval’s Starting Hand Strategies": "Starting Hand Strategies",
+    "Soval’s Reserve Deck Strategy": "Reserve Deck Strategy",
+    "Soval’s Development Strategy": "Development Strategy"
+  },
+  "videos": [
+    {
+      "url": "https://youtu.be/BAHNWO2Yuuw",
+      "label": "Archer vs Soval",
+      "sub": "Two-player · Gaming Rules!"
+    }
+  ],
+  "video_intro": "Playthrough by Paul Grogan (Gaming Rules!) featuring Soval:",
+  "replace": [
+    [
+      "Vulcan Hello and Vulcan High Council",
+      "Vulcan Hello and Vulcan High Command"
+    ],
+    [
+      "Boltzman Brain",
+      "Boltzmann Brain"
+    ],
+    [
+      "[live long and prosper)",
+      "(live long and prosper)"
+    ],
+    [
+      "choosers, Unless you get",
+      "choosers, unless you get"
+    ],
+    [
+      "a Science skill",
+      "a Research skill"
+    ]
+  ],
+  "h3_ids": {
+    "Sub-Commander T’Pol (Person)": "soval-sub-commander-tpol",
+    "Stel (Person)": "soval-stel",
+    "Muroc (Person)": "soval-muroc",
+    "Advisory (Directive)": "soval-advisory",
+    "Infinite Diversity in Infinite Combinations (Directive)": "soval-infinite-diversity-in-infinite-combinations",
+    "Paan Mokar (Location)": "soval-paan-mokar",
+    "V’Lar (Person)": "soval-vlar",
+    "Plomeek Tea (Cargo)": "soval-plomeek-tea",
+    "Seleya (D’Kyr) (Ship)": "soval-seleya-dkyr",
+    "T’Pau (Person) (Dev Cost 2 Glory)": "soval-tpau",
+    "Minister Kuvak (Person) (Dev Cost 2 Latinum)": "soval-minister-kuvak",
+    "Kir’Shara (Cargo) (Dev Cost 2 Dilithium, 1 Latinum, and dismiss a Duty Officer)": "soval-kirshara",
+    "Mount Seleya (Location) (Dev Cost 2 Latinum and 1 or more Vulcan Logged)": "soval-mount-seleya",
+    "Vulcan High Command (Directive) (Dev Cost 3 Dilithium)": "soval-vulcan-high-command",
+    "Vulcan Hello (Directive) (Dev Cost 4 Dilithium)": "soval-vulcan-hello"
+  }
+}

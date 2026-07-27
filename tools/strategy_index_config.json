@@ -1,52 +1,53 @@
 {
-  "_comment": "Tuning file for build_strategy_index.py. Edit this, not the script.",
-  "stopwords": [
-    "Orion",
-    "Vulcan",
-    "Klingon",
-    "Romulan",
-    "Earth",
-    "Phasers",
-    "Data",
-    "Memory Alpha"
+ "_comment": "Tuning file for build_strategy_index.py. Edit this, not the script.",
+ "stopwords": [
+  "Orion",
+  "Vulcan",
+  "Klingon",
+  "Romulan",
+  "Earth",
+  "Phasers",
+  "Data",
+  "Memory Alpha"
+ ],
+ "_stopwords_note": "Card names that collide with traits, species or ordinary prose. These match ONLY via an exact section anchor, never by free text. Remove a name to re-enable text matching for it.",
+ "aliases": {
+  "mekleth": [
+   "mek leth"
   ],
-  "_stopwords_note": "Card names that collide with traits, species or ordinary prose. These match ONLY via an exact section anchor, never by free text. Remove a name to re-enable text matching for it.",
-  "aliases": {
-    "mekleth": [
-      "mek leth"
-    ],
-    "vger": [
-      "v ger"
-    ],
-    "uss-enterprise-c": [
-      "enterprise c"
-    ],
-    "uss-enterprise-d": [
-      "enterprise d"
-    ],
-    "b-4": [
-      "b 4"
-    ]
-  },
-  "_aliases_note": "Extra normalized surface forms per card id. Normalization already strips periods and apostrophes, so most cards need nothing.",
-  "deck_prefix_by_guide": {
-    "picard.html": "picard",
-    "sisko.html": "sisko",
-    "koloth.html": "koloth",
-    "sela.html": "sela",
-    "shran.html": "shran",
-    "burnham.html": "burnham",
-    "georgiou.html": "georgiou"
-  },
-  "_deck_note": "Captain guides. When several cards share a name (Utilize, Recruit, Analyze), a mention inside these guides is attributed to that captain's own printing.",
-  "exclude_files": [
-    "index.html",
-    "card-browser-mockup.html",
-    "harmless_kitten.html"
+  "vger": [
+   "v ger"
   ],
-  "max_hits_per_guide": 2,
-  "snippet_max_chars": 420,
-  "min_name_length": 4,
-  "skip_lore_in_text_mode": true,
-  "_lore_note": "Paragraphs with class=lore are McCue's episode/trivia asides. Text matching skips them so a card is only flagged where it is actually discussed as a play. Anchor matches still include their lore paragraph."
+  "uss-enterprise-c": [
+   "enterprise c"
+  ],
+  "uss-enterprise-d": [
+   "enterprise d"
+  ],
+  "b-4": [
+   "b 4"
+  ]
+ },
+ "_aliases_note": "Extra normalized surface forms per card id. Normalization already strips periods and apostrophes, so most cards need nothing.",
+ "deck_prefix_by_guide": {
+  "picard.html": "picard",
+  "sisko.html": "sisko",
+  "koloth.html": "koloth",
+  "sela.html": "sela",
+  "shran.html": "shran",
+  "burnham.html": "burnham",
+  "georgiou.html": "georgiou",
+  "soval.html": "soval"
+ },
+ "_deck_note": "Captain guides. When several cards share a name (Utilize, Recruit, Analyze), a mention inside these guides is attributed to that captain's own printing.",
+ "exclude_files": [
+  "index.html",
+  "card-browser-mockup.html",
+  "harmless_kitten.html"
+ ],
+ "max_hits_per_guide": 2,
+ "snippet_max_chars": 420,
+ "min_name_length": 4,
+ "skip_lore_in_text_mode": true,
+ "_lore_note": "Paragraphs with class=lore are McCue's episode/trivia asides. Text matching skips them so a card is only flagged where it is actually discussed as a play. Anchor matches still include their lore paragraph."
 }

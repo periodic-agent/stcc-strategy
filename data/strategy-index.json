@@ -1,8 +1,8 @@
 {
- "generated": "2026-07-27T18:17:21Z",
+ "generated": "2026-07-27T20:51:46Z",
  "generator": "tools/build_strategy_index.py",
- "guide_count": 26,
- "card_count": 321,
+ "guide_count": 27,
+ "card_count": 348,
  "guides": {
   "allies.html": {
    "title": "Ally Deck Strategy Guide",
@@ -76,6 +76,10 @@
    "title": "Solo & Conspiracy",
    "label": "Captain's Chair"
   },
+  "soval.html": {
+   "title": "Soval",
+   "label": "To Boldly Go"
+  },
   "tbg-allies.html": {
    "title": "Ally Deck Guide",
    "label": "To Boldly Go"
@@ -133,6 +137,20 @@
       "anchor": "notable-market-cards",
       "heading": "Notable Market Cards",
       "snippet": "For the Person Deck, everything being situational, I find that Captain Dorg can be helpful due to his focus on other Klingon cards and weapons. Likewise, Sakonna's Play and Resupply both consider weapons in hand and Koloth would benefit from her late game at a minimum. Admiral Pressman in coordination with Prototype Cloak can yield some Glory, not to mention he'll help you play one of your many Attack cards for",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Soval isn’t picky about Person cards in general, and while his missions call for Research/Wild skills and Starfleet traits, pretty much anybody is a plus. That being said, I particularly like the crew of the NX-01 Enterprise, in particular Hoshi Sato for both mission completion and her ability to find Research skills/focus which will let you repeatedly play T’Pol. When you use T’Pol to scan for",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -378,6 +396,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Core Set: I don’t think Soval needs Omega Particle as much for resource generation, but he should be able to use focus scoring. Boltzmann Brain is really helpful for Soval, but I’m not sure it’s any more helpful than it is for everybody. Sha Ka Ree is interesting due to the Vulcan trait, but it will likely lead you to lose a ship, so maybe try to make it a ship that would later be dismissed due to a mission (a",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "ancient-relay-station": [
@@ -455,6 +487,28 @@
       "anchor": "sisko-s-development-cards",
       "heading": "Starbase 375 (Location)",
       "snippet": "Sisko's temporary home away from DS9, Starbase 375 is a four Dilithium Development with a Military skill and the expected Starfleet and Starbase tags. Its control action allows you to find a ship, which is useful but only once, and could only help you thin your Reserve deck by finding the Defiant if you manage to use A Call to Arms or Ancient Relay Station to get a Development out before your Reserve is depleted. It",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "soval-s-development-strategy",
+      "heading": "Soval’s Development Strategy",
+      "snippet": "If your Reserve isn’t empty (because you used Ancient Relay Station or you completed Needs of the Many mission), then I suggest Vulcan High Command or Minister Kuvak. This is because Vulcan High Command provides constant Away Teams along with control over the Vulcans you can Find, including ones left in your Reserve deck. Kuvak is a fine second choice because of the potential for a large hand size, but make sure",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Sela: While the Scimitar is a beast, you’ve got your own weapon with Vulcan Hello. You’re not going to be able to take locations without focused attention on the neutral zone, so it might be worth it to send Away Teams to the Neutral Zone instead of your controlled locations. But don’t sacrifice card draw simply to stall out against an opponent that will overwhelm you with ships and Away Teams. Turn your attention",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -658,6 +712,20 @@
   ],
   "archer-nx-01-enterprise": [
    {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Soval isn’t picky about Person cards in general, and while his missions call for Research/Wild skills and Starfleet traits, pretty much anybody is a plus. That being said, I particularly like the crew of the NX-01 Enterprise, in particular Hoshi Sato for both mission completion and her ability to find Research skills/focus which will let you repeatedly play T’Pol. When you use T’Pol to scan for",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-ships.html",
     "count": 1,
     "hits": [
@@ -806,6 +874,28 @@
     ]
    },
    {
+    "guide": "soval.html",
+    "count": 3,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Soval does have a controlled location, Vulcan, which has a Research skill (one of your five needed for your mission) and Influence skill and the Vulcan trait. It has the common Activation from many Available and Controlled locations that allows you to draw a card if an away team is present, and if at least three away teams are on controlled locations you can draw an extra card. With Soval’s limited four away teams,",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "soval-infinite-diversity-in-infinite-combinations",
+      "heading": "Infinite Diversity in Infinite Combinations (Directive)",
+      "snippet": "The Kol-Ut-Shan, this tentpole of Vulcan philosophy is represented via its own custom Directive and trait, Path of Surak (this trait will be used primarily in solo mode for the Soval Bot to react to). It functionally replaces Strange New Worlds as Soval’s chief method for gaining Encounters. For its play action, you may remove an away team from a controlled location, log a non-Vulcan Person/Cargo/Ally from your",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "encounters-incidents.html",
     "count": 2,
     "hits": [
@@ -906,6 +996,30 @@
     ]
    }
   ],
+  "archer-tpol": [
+   {
+    "guide": "soval.html",
+    "count": 13,
+    "hits": [
+     {
+      "anchor": "soval-sub-commander-tpol",
+      "heading": "Sub-Commander T’Pol (Person)",
+      "snippet": "T'Pol gets a Research skill (two down, three to go for your first mission) and the Vulcan, Starfleet, Scientist, and Telepath traits. Thematically, I find the Telepath trait interesting as it’s unclear to me if she’s naturally telepathic (as many if not most Vulcans are, per the Voyager episode Counterpoint VOY: 5x10, where the Devore hunt the telepaths in their space, including Voyager’s Vulcans). Anyway, she has a",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "soval-muroc",
+      "heading": "Muroc (Person)",
+      "snippet": "Muroc has a Military skill and the Vulcan trait. Muroc has a play action that allows you to choose two: gain an Influence, a Military, or send an away team to a location with a ship. If you have more than six Influence you can do all three and then log Muroc. His Activations make him the Vulcan Riker, as he can draw a Ship from your discard pile or free play a Ship with Vulcan. I often use T’Pol to promote him to",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "argus-array": [
    {
     "guide": "tbg-locations.html",
@@ -959,6 +1073,20 @@
       "anchor": "notable-market-cards",
       "heading": "Notable Market Cards",
       "snippet": "For the Ally Deck, I'd especially suggest Tholians and Arin'sen for their resource gain. I enjoy using the Karemma for additional actions. And Letheans are often useful. I would avoid the Halkan Council (or at least junk it) if you hope to repeatedly benefit, as they will give you three Dilithium once and probably get logged from any of your many Attack cards. Finally, if you managed to get Betazoid as a starting",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "The repeat Ally cards aren't necessarily anything special for Soval. He’ll appreciate the flexibility Denobulans provide when scanning the Person deck, but Arin’sen, Bolians, Bynars, and Organians aren’t anything special for him. Kelpiens can alleviate the need for Incident management, though T’Pau is a better option with the Glory gain. Letheans will score well for Soval but besides that are situational as Soval",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -1230,6 +1358,36 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Second Contact: Betazed Intelligence actually works great for Soval, as he has Telepaths and a Beverage this card can find. You’ll likely end up logging it on clean-up, but it’s a decent candidate for the IDIC log if you don’t need the additional hand size it offers. Illyrians can be really great early game if you don’t have the ability to promote the Duty Officers you need to, but if you don’t have another Augment",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "betazed-intelligence": [
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Second Contact: Betazed Intelligence actually works great for Soval, as he has Telepaths and a Beverage this card can find. You’ll likely end up logging it on clean-up, but it’s a decent candidate for the IDIC log if you don’t need the additional hand size it offers. Illyrians can be really great early game if you don’t have the ability to promote the Duty Officers you need to, but if you don’t have another Augment",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "biobed": [
@@ -1255,6 +1413,20 @@
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
       "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free-play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Core Set: Tribbles only really matters against Klingon Duty Officers, but watch for chances to use it. Tachyon Detection Grid continues to just be a silver bullet against a straightforward Sela game, but it’s nothing special for Soval. Biobed would help with the Research trait and free playing an Incident, but Soval doesn’t have other Doctors to Find. Mek’leth has some general usability, but not as much against the",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -1318,6 +1490,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Core Set: The Reliant is solid for Soval without being anything too crazy, though he should be able to free-play by reaching that five Influence requirement pretty fast. Same with the Son’a Battlecruiser and their six Military requirement. K’T’Inga Battlecruiser can be scanned for with Military skill, Bird of Prey with Influence skill, and Voth Research Vessel with Research, so T’Pol may be well-suited looking there",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "bolians": [
@@ -1331,6 +1517,20 @@
       "snippet": "A rare ally without a log effect, Bolians cost an action and provide a simple Influence and allow you to draw a card, then free play that card. This could be amazing or it could be underwhelming, especially if you don't want to play it right away or it doesn't have an action token cost. Still, they're a solid ally card that if nothing else gives some more influence.",
       "truncated": false,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "The repeat Ally cards aren't necessarily anything special for Soval. He’ll appreciate the flexibility Denobulans provide when scanning the Person deck, but Arin’sen, Bolians, Bynars, and Organians aren’t anything special for him. Kelpiens can alleviate the need for Incident management, though T’Pau is a better option with the Glory gain. Letheans will score well for Soval but besides that are situational as Soval",
+      "truncated": true,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -1364,6 +1564,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Core Set: I don’t think Soval needs Omega Particle as much for resource generation, but he should be able to use focus scoring. Boltzmann Brain is really helpful for Soval, but I’m not sure it’s any more helpful than it is for everybody. Sha Ka Ree is interesting due to the Vulcan trait, but it will likely lead you to lose a ship, so maybe try to make it a ship that would later be dismissed due to a mission (a",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "borg-probe": [
@@ -1377,6 +1591,20 @@
       "snippet": "This ship has the Borg tag, naturally. It has a free play action to deploy and warp the ship, but you can optionally spend an action token and one Dilithium to gain a person and log that card. That seems kind of silly (it's just a point, unless the card has a focus or market glory on it), except that if you have a Borg captain you can assimilate that card instead. What does that mean? What does that do? I don't know",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The repeated Ships from the Core Box are all great too. Borg Probe is always a great beaming Ship. D’Kyr is a must-get if possible to complement the Vulcan fleet. Holographic Drone Ship should be playable with a Telepath, though he can probably also hit the seven Research requirement of the first free play action. Enterprise-C is okay but will cost you the Vulcan Science Institute Status. The Pasteur is probably",
+      "truncated": true,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -1407,6 +1635,28 @@
       "snippet": "All person cards are circumstantial, and Bruce is one of the more extreme examples in my opinion. He has a science skill, four tags including Engineer and Scientist, and a free play action. He can find and free play a Synthetic, which is great for anyone with a Synthetic in their deck and fantastic for Picard who has Data in his reserve (so long as he isn't out yet). Maddox's reaction is good as well, allowing for",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Core Set: T’Pol’s scans for Research provide Bruce Maddox, who isn’t terribly useful for finding Synthetics (unless you grab some from the market) but has some good traits for Soval. I like Lwaxana Troi for her captain refresh because there’s plenty of Humans who need some dismissing. You should be able to make good use of Captain Dorg, and his Military focus should also score well at the end of the game. Sakonna is",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Picard: Depriving Picard of synthetics can work, especially if you decide to scan for and obtain Bruce Maddox before he does. You’re both going after different decks (Person versus Ally) but it can’t hurt to deprive him of some specific Alien traits when you see them. Klingons don’t do you any favors so Junk them before Picard can benefit. And watch out for a very fast playing Picard, and adjust accordingly.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -2092,6 +2342,20 @@
     ]
    },
    {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "The repeat Ally cards aren't necessarily anything special for Soval. He’ll appreciate the flexibility Denobulans provide when scanning the Person deck, but Arin’sen, Bolians, Bynars, and Organians aren’t anything special for him. Kelpiens can alleviate the need for Incident management, though T’Pau is a better option with the Glory gain. Letheans will score well for Soval but besides that are situational as Soval",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-allies.html",
     "count": 1,
     "hits": [
@@ -2143,6 +2407,20 @@
       "anchor": "notable-market-cards",
       "heading": "Notable Market Cards",
       "snippet": "For the Person Deck, everything being situational, I find that Captain Dorg can be helpful due to his focus on other Klingon cards and weapons. Likewise, Sakonna's Play and Resupply both consider weapons in hand and Koloth would benefit from her late game at a minimum. Admiral Pressman in coordination with Prototype Cloak can yield some Glory, not to mention he'll help you play one of your many Attack cards for",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Core Set: T’Pol’s scans for Research provide Bruce Maddox, who isn’t terribly useful for finding Synthetics (unless you grab some from the market) but has some good traits for Soval. I like Lwaxana Troi for her captain refresh because there’s plenty of Humans who need some dismissing. You should be able to make good use of Captain Dorg, and his Military focus should also score well at the end of the game. Sakonna is",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -2225,6 +2503,20 @@
       "anchor": "notable-market-cards",
       "heading": "Notable Market Cards",
       "snippet": "In the Cargo Deck, you can't go wrong with any of the weapons, which includes Phasers, Type III Disruptor Pistols, and Mek'Leth (Lirpa is kind of underwhelming without a lot of Vulcans). I like grabbing any military focus cards, especially Plasma Manifold because it gives an Engineering tag and the flexibility of an additional action. Anything with Science requirements or focus scoring is probably worth ignoring,",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: A Research scan of the Cargo deck gets you Universal Translator, which by itself isn’t super interesting for Soval because he may have the Starfleet cards but gets no particular benefit from Alien traits themselves. A Military scan on the other hand will fish out Computer Virus which is super interesting against an aggressive opponent warping ships. There’s a decent amount of Away Team focused cards in",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -2331,6 +2623,20 @@
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
       "snippet": "To Boldly Go: I’m definitely a fan of Augmentation plague due to Georgiou’s late game focus on Klingon cards, and if you can nab it early you can get some Glory every time you put a Klingon in play. You shouldn’t have to worry about specialty restrictions for cards like forced Singularity, which also gives you focus scoring for research and yet another duty officer. Same benefit to Computer Virus, and you should get",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: A Research scan of the Cargo deck gets you Universal Translator, which by itself isn’t super interesting for Soval because he may have the Starfleet cards but gets no particular benefit from Alien traits themselves. A Military scan on the other hand will fish out Computer Virus which is super interesting against an aggressive opponent warping ships. There’s a decent amount of Away Team focused cards in",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -2462,6 +2768,20 @@
     ]
    },
    {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "To Boldly Go: Delphic Expanse Sphere is fine, especially with a really thin deck strategy for Soval (because it can replace almost all directives you would need to gain cards). He also benefits from sending Away Teams to controlled locations, as discussed a lot in this guide. Gomtuu provides not just a ship, but a way to gain some extra Military off of Research traits, which is fantastic for Soval. New Federation",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-encounters-incidents.html",
     "count": 1,
     "hits": [
@@ -2524,6 +2844,20 @@
     ]
    },
    {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "The repeat Ally cards aren't necessarily anything special for Soval. He’ll appreciate the flexibility Denobulans provide when scanning the Person deck, but Arin’sen, Bolians, Bynars, and Organians aren’t anything special for him. Kelpiens can alleviate the need for Incident management, though T’Pau is a better option with the Glory gain. Letheans will score well for Soval but besides that are situational as Soval",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-allies.html",
     "count": 1,
     "hits": [
@@ -2547,6 +2881,20 @@
       "anchor": "notable-market-cards",
       "heading": "Person Deck",
       "snippet": "Second Contact: Second Contact adds some helpful traits and abilities from Person cards, including the Klingon Ma’ah and Alien K’Ranch. Parmen’s not the best due to the six Influence requirement for his activation, but his find ability is tremendous. D’Erika Tendi is pretty great too because of track gain and Ship gain. And Jennifer Sh’reyan provides another option for Set a Course in her Activation, meaning you can",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Second Contact: I think the best card for Soval here is D’Erika Tendi simply based on her ability to gain a Ship from the junk. I think Jennifer Sh’Reyan’s Support operation is also pretty good for Soval because he’ll be gaining a lot of Person cards and then sending an Away Team to a Controlled location is exactly what his deck is doing. And Parmen is pretty awesome for everyone but Soval certainly benefits too,",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -2595,6 +2943,28 @@
    }
   ],
   "dkora-marauder": [
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "To Boldly Go: D’Kora Marauder is actually interesting because sending an Away Team for a Latinum is something Soval can afford, and he can scan for it with T’Pol. He’ll probably also be scanning for Medusan Vessel with its Research Skill, which is great for his Mission, your need for ships, and scanning for some Telepaths (which Mount Seleya scores for). D’Var is interesting simply for the free play deploy, which",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Sisko: He’s going to get more ships than you, most likely, but you can still focus on grabbing the best ones for your game early on. Scanning Military Skills for the K’T’Inga will take away valuable skills and focus scoring, though you risk getting the D’Kora Marauder instead. Don’t worry too much about the location fights with Sisko, but look for opportunities to speed the game up when you can. A smart Sisko player",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "georgiou.html",
     "count": 1,
@@ -2714,6 +3084,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "To Boldly Go: D’Kora Marauder is actually interesting because sending an Away Team for a Latinum is something Soval can afford, and he can scan for it with T’Pol. He’ll probably also be scanning for Medusan Vessel with its Research Skill, which is great for his Mission, your need for ships, and scanning for some Telepaths (which Mount Seleya scores for). D’Var is interesting simply for the free play deploy, which",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "edosians": [
@@ -2767,6 +3151,20 @@
       "anchor": "notable-market-cards",
       "heading": "Notable Market Cards",
       "snippet": "For the Ally Deck, I'd especially suggest Tholians and Arin'sen for their resource gain. I enjoy using the Karemma for additional actions. And Letheans are often useful. I would avoid the Halkan Council (or at least junk it) if you hope to repeatedly benefit, as they will give you three Dilithium once and probably get logged from any of your many Attack cards. Finally, if you managed to get Betazoid as a starting",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Core Set: Halkan Council is fine enough, but Soval has some Attack cards so you’re risking a one-off. Tholians is good for pretty much anybody, and since Soval isn’t logging locations with IDIC it’s going to probably give you a lot of resources. Edosians is great and Soval should have no problem meeting the restriction. Emerald Chain isn’t anything special as Soval doesn’t have a need for the traits or free playing",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -2847,6 +3245,20 @@
       "anchor": "putting-it-all-together",
       "heading": "Putting It All Together",
       "snippet": "In my plays for Shran, I’ve not found one strategy that necessarily works every time. I don’t have any obviously broken combos (I’m sure someone else will find them), but I really like using the Emerald Chain and Karema Ally cards with his deck, as they both interact well with business tagged cards. I also think that having cargo on hand and in play for Shran’s Dilithium resupply isn’t that difficult and is worth",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Core Set: Halkan Council is fine enough, but Soval has some Attack cards so you’re risking a one-off. Tholians is good for pretty much anybody, and since Soval isn’t logging locations with IDIC it’s going to probably give you a lot of resources. Edosians is great and Soval should have no problem meeting the restriction. Emerald Chain isn’t anything special as Soval doesn’t have a need for the traits or free playing",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -2964,6 +3376,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: A Research scan of the Cargo deck gets you Universal Translator, which by itself isn’t super interesting for Soval because he may have the Starfleet cards but gets no particular benefit from Alien traits themselves. A Military scan on the other hand will fish out Computer Virus which is super interesting against an aggressive opponent warping ships. There’s a decent amount of Away Team focused cards in",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "ferengi-wine": [
@@ -2989,6 +3415,20 @@
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
       "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free-play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Core Set: Tribbles only really matters against Klingon Duty Officers, but watch for chances to use it. Tachyon Detection Grid continues to just be a silver bullet against a straightforward Sela game, but it’s nothing special for Soval. Biobed would help with the Research trait and free playing an Incident, but Soval doesn’t have other Doctors to Find. Mek’leth has some general usability, but not as much against the",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -3028,6 +3468,20 @@
       "heading": "Ship Deck",
       "snippet": "Second Contact: Fesarius is great for everyone, and Georgiou has plenty of Starfleet Person cards to use to gain an encounter with Fesarius . The R.I.S. Talvath isn’t anything special but might help you with pushing the endgame.",
       "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Second Contact: With the R.I.S. Talvath in the market, you’re now not sure exactly what you’ll get with a Research scan, but this ship isn’t terrible for you. In fact, you kind of like that all the Time Travel cards are going to your opponent so you can put more Dilithium on this ship. Fesarius is good for the free play and free warp operations, and Soval has about as good a chance as anyone else in gaining that",
+      "truncated": true,
       "mode": "text",
       "lore": false
      }
@@ -3257,6 +3711,28 @@
       "anchor": "notable-market-cards",
       "heading": "Person Deck",
       "snippet": "Second Contact: Second Contact adds some helpful traits and abilities from Person cards, including the Klingon Ma’ah and Alien K’Ranch. Parmen’s not the best due to the six Influence requirement for his activation, but his find ability is tremendous. D’Erika Tendi is pretty great too because of track gain and Ship gain. And Jennifer Sh’reyan provides another option for Set a Course in her Activation, meaning you can",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 5,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Soval has four away teams, the Vulcan, Telepath, and Ambassador traits, and has endgame scoring for each person card that does not have the Vulcan trait. His activation lets you dismiss a Human to draw two cards, which is both mechanically valuable and a great pun. He has a Status card called the Vulcan Science Directorate. As a reaction, after you put an Anomaly or a Scientist in play, you can gain two Dilithium or",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Second Contact: I think the best card for Soval here is D’Erika Tendi simply based on her ability to gain a Ship from the junk. I think Jennifer Sh’Reyan’s Support operation is also pretty good for Soval because he’ll be gaining a lot of Person cards and then sending an Away Team to a Controlled location is exactly what his deck is doing. And Parmen is pretty awesome for everyone but Soval certainly benefits too,",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -4134,6 +4610,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Second Contact: Moopsy looks like it would be a great card for Soval, and it might be after you’ve used Kir’Shara. But before that point, it feels like a trap for your Vulcan traits. Be wise if you let the Moopsy out. Soval can probably benefit from Protocol 12 but you’ll need to find some more Doctors. Gift Box has general utility but I’m not sure there’s that much for Soval directly.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "gomtuu": [
@@ -4167,6 +4657,20 @@
       "anchor": "notable-market-cards",
       "heading": "Encounters",
       "snippet": "To Boldly Go: I hesitated including Encounters at first because most captains love most of them. Still, here’s some things I saw that could be helpful. Gomtuu really helps Georgiou move up Military fast, while still offering her a chance to increase Research Focus scoring, both of which she needs for victory. Species 10-C can certainly help, but you’re risking future Encounter gain by eating up those locations and I",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "To Boldly Go: Delphic Expanse Sphere is fine, especially with a really thin deck strategy for Soval (because it can replace almost all directives you would need to gain cards). He also benefits from sending Away Teams to controlled locations, as discussed a lot in this guide. Gomtuu provides not just a ship, but a way to gain some extra Military off of Research traits, which is fantastic for Soval. New Federation",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -4227,6 +4731,20 @@
       "anchor": "burnham-s-development-cards",
       "heading": "Burnham's Development Cards",
       "snippet": "Doctor Kovich (Person) (Dev Cost: Find an Encounter and log it) — Should he have the Human trait? More or less, probably. Doctor Kovich has a Research skill and scores for Research Focus. His play action lets you draw a card and gain one research for each Anomaly in play, one Influence for each Ambassador in play, and one military for each Alien in play. If you've got a lot of those, or a lot of wildcards, that can",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "To Boldly Go: Delphic Expanse Sphere is fine, especially with a really thin deck strategy for Soval (because it can replace almost all directives you would need to gain cards). He also benefits from sending Away Teams to controlled locations, as discussed a lot in this guide. Gomtuu provides not just a ship, but a way to gain some extra Military off of Research traits, which is fantastic for Soval. New Federation",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -4299,6 +4817,20 @@
       "anchor": "notable-market-cards",
       "heading": "Notable Market Cards",
       "snippet": "For the Ally Deck, I'd especially suggest Tholians and Arin'sen for their resource gain. I enjoy using the Karemma for additional actions. And Letheans are often useful. I would avoid the Halkan Council (or at least junk it) if you hope to repeatedly benefit, as they will give you three Dilithium once and probably get logged from any of your many Attack cards. Finally, if you managed to get Betazoid as a starting",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Core Set: Halkan Council is fine enough, but Soval has some Attack cards so you’re risking a one-off. Tholians is good for pretty much anybody, and since Soval isn’t logging locations with IDIC it’s going to probably give you a lot of resources. Edosians is great and Soval should have no problem meeting the restriction. Emerald Chain isn’t anything special as Soval doesn’t have a need for the traits or free playing",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -4400,6 +4932,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The repeated Ships from the Core Box are all great too. Borg Probe is always a great beaming Ship. D’Kyr is a must-get if possible to complement the Vulcan fleet. Holographic Drone Ship should be playable with a Telepath, though he can probably also hit the seven Research requirement of the first free play action. Enterprise-C is okay but will cost you the Vulcan Science Institute Status. The Pasteur is probably",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "holosuite": [
@@ -4467,6 +5013,20 @@
       "anchor": null,
       "heading": "Thy'Lek Shran",
       "snippet": "Shran’s captain board comes with basic side track multipliers maxing out at 5x for Research, 6x for insight, and 6x for military. As always the advanced side’s thresholds are one less with slightly different placement of the multipliers. His base side mission is Securing Andoria’s Borders, with a goal of 3 controlled locations and 4 weapons in play. HIs starting deck does have two weapons already, so this should be",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: A Research scan of the Cargo deck gets you Universal Translator, which by itself isn’t super interesting for Soval because he may have the Starfleet cards but gets no particular benefit from Alien traits themselves. A Military scan on the other hand will fish out Computer Virus which is super interesting against an aggressive opponent warping ships. There’s a decent amount of Away Team focused cards in",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -4587,6 +5147,20 @@
       "snippet": "Hoshi has a free play action that lets her find a card with Research skill/focus. Her second action requires five Research and lets you pick a species to scan for when you discard a card with Research skill/focus. Depending on your missions, the choice of your desired card will vary, but that offers a ton of flexibility for any captain. Her Activation also costs an action token, and lets you draw a card for each",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Soval isn’t picky about Person cards in general, and while his missions call for Research/Wild skills and Starfleet traits, pretty much anybody is a plus. That being said, I particularly like the crew of the NX-01 Enterprise, in particular Hoshi Sato for both mission completion and her ability to find Research skills/focus which will let you repeatedly play T’Pol. When you use T’Pol to scan for",
+      "truncated": true,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -4720,6 +5294,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Core Set: I don’t think Soval needs Omega Particle as much for resource generation, but he should be able to use focus scoring. Boltzmann Brain is really helpful for Soval, but I’m not sure it’s any more helpful than it is for everybody. Sha Ka Ree is interesting due to the Vulcan trait, but it will likely lead you to lose a ship, so maybe try to make it a ship that would later be dismissed due to a mission (a",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "illyrians": [
@@ -4754,6 +5342,20 @@
       "heading": "Ally Deck",
       "snippet": "Second Contact: None of these are particularly uniquely good to Georgiou, though you have plenty of Starfleet to discard for the Illyrians and an Ambassador for the Betazoids.",
       "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Second Contact: Betazed Intelligence actually works great for Soval, as he has Telepaths and a Beverage this card can find. You’ll likely end up logging it on clean-up, but it’s a decent candidate for the IDIC log if you don’t need the additional hand size it offers. Illyrians can be really great early game if you don’t have the ability to promote the Duty Officers you need to, but if you don’t have another Augment",
+      "truncated": true,
       "mode": "text",
       "lore": false
      }
@@ -4795,6 +5397,20 @@
       "snippet": "Jackabog use shiny things to get broken ships, and when Jackabog strong he gets very good card. Anyone can use Jackabog with helmets! With Helmet, Jackabog gets cards, which is good for Rebner, because he doesn't get many cards. But every captain likes cards! Jackabog is a good person card, but he is a shady person. We are done now. A quick point: because of that Activation, any captain can benefit from Jackabog as",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Soval isn’t picky about Person cards in general, and while his missions call for Research/Wild skills and Starfleet traits, pretty much anybody is a plus. That being said, I particularly like the crew of the NX-01 Enterprise, in particular Hoshi Sato for both mission completion and her ability to find Research skills/focus which will let you repeatedly play T’Pol. When you use T’Pol to scan for",
+      "truncated": true,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -4912,6 +5528,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "To Boldly Go: I think that Soval will be in an interesting position with Kaelon II Science Ministry where, if he’s timing it right, will always get the Dilithium and Research benefits via logging with either Stel or IDIC. Orion Syndicate might be beneficial, especially if you're keeping a lot of ships deployed or if you’ve gained other Shady cards. I like Red Squadron, especially so you can keep beaming and drawing",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "karemma": [
@@ -4979,6 +5609,20 @@
       "anchor": "missions",
       "heading": "Missions",
       "snippet": "The third mission, Contacting the Dominion, requires three total Dominion or Changeling cards in play. It results in three points, three Influence, a Scan one of the Person, Cargo, or Ship decks, and two card draw. Sisko has only one Changeling, Odo, and there's one in the Person deck (Laas). There are two Dominion cards, the Son'a Cruiser and the Karemma Ally. But assuming you can't get those, Sisko has two",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Core Set: Halkan Council is fine enough, but Soval has some Attack cards so you’re risking a one-off. Tholians is good for pretty much anybody, and since Soval isn’t logging locations with IDIC it’s going to probably give you a lot of resources. Edosians is great and Soval should have no problem meeting the restriction. Emerald Chain isn’t anything special as Soval doesn’t have a need for the traits or free playing",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -5069,6 +5713,20 @@
       "anchor": "su-kal",
       "heading": "Su'Kal",
       "snippet": "From Star Trek Discovery, Su'Kal is a Kelpien, and I'll leave it at that in case you were worried about spoilers for Discovery. The card can't be played, which means it can't be put in the staging area. It can however be beamed or promoted to duty officer. There's some good Dilithium generation, especially if you're taking a lot of incidents. But the real advantage here is the Special scoring allowing for the return",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "The repeat Ally cards aren't necessarily anything special for Soval. He’ll appreciate the flexibility Denobulans provide when scanning the Person deck, but Arin’sen, Bolians, Bynars, and Organians aren’t anything special for him. Kelpiens can alleviate the need for Incident management, though T’Pau is a better option with the Glory gain. Letheans will score well for Soval but besides that are situational as Soval",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -5184,6 +5842,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: A Research scan of the Cargo deck gets you Universal Translator, which by itself isn’t super interesting for Soval because he may have the Starfleet cards but gets no particular benefit from Alien traits themselves. A Military scan on the other hand will fish out Computer Virus which is super interesting against an aggressive opponent warping ships. There’s a decent amount of Away Team focused cards in",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "khan-genesis-device": [
@@ -5259,6 +5931,30 @@
       "anchor": "georgiou-s-development-cards",
       "heading": "Thruster Pack (Cargo) (Dev Cost 2 Dilithium)",
       "snippet": "Used by Michael Burnham in the opener, this was a logical piece of cargo with some great thematic ties and interesting mechanical implications for Georgiou’s deck. It’s ongoing, and deploys as a free action. You can find up to three Person cards and beam them to this card, and if you beam at least two you get an action token. That’s pretty great for deck thinning. There’s two Activations, either to recall a Person",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "kirk-needs-of-the-many": [
+   {
+    "guide": "soval.html",
+    "count": 4,
+    "hits": [
+     {
+      "anchor": "missions",
+      "heading": "Missions",
+      "snippet": "Soval’s Advanced side gives you two points for My Mind to Your Mind in addition to the reward. His second mission is Cooperation With Starfleet, and requires three deployed ships, three beamed cards with the Starfleet trait, and one Encounter in play. It rewards four points along with a Scan for Human or Starfleet, and you can send three away teams to three different locations. I love the flexibility here, but it is",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "soval-s-development-strategy",
+      "heading": "Soval’s Development Strategy",
+      "snippet": "If your Reserve isn’t empty (because you used Ancient Relay Station or you completed Needs of the Many mission), then I suggest Vulcan High Command or Minister Kuvak. This is because Vulcan High Command provides constant Away Teams along with control over the Vulcans you can Find, including ones left in your Reserve deck. Kuvak is a fine second choice because of the potential for a large hand size, but make sure",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -5373,6 +6069,20 @@
       "anchor": "available-cards",
       "heading": "Red Alert (Incident)",
       "snippet": "Picard starts the game with one Incident in hand, but it's actually not that bad. First, it allows you to play a person to your staging area and also get the benefit of making them your duty officer on the same turn, which is great for Worf and good for Riker too. It's also your best option for promoting duty officers if you no longer have the Enterprise-D in play, whether because it's been dismissed or,",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "To Boldly Go: Delphic Expanse Sphere is fine, especially with a really thin deck strategy for Soval (because it can replace almost all directives you would need to gain cards). He also benefits from sending Away Teams to controlled locations, as discussed a lot in this guide. Gomtuu provides not just a ship, but a way to gain some extra Military off of Research traits, which is fantastic for Soval. New Federation",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -5862,6 +6572,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Soval has four away teams, the Vulcan, Telepath, and Ambassador traits, and has endgame scoring for each person card that does not have the Vulcan trait. His activation lets you dismiss a Human to draw two cards, which is both mechanically valuable and a great pun. He has a Status card called the Vulcan Science Directorate. As a reaction, after you put an Anomaly or a Scientist in play, you can gain two Dilithium or",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "ktinga-battlecruiser": [
@@ -5902,6 +6626,20 @@
       "heading": "Missions",
       "snippet": "Arbiter of Succession requires players to have 3 Klingons on the same ship, which is also relatively easy as this could include cargo with the Klingon tag or the ship itself, such as the K'Tinga Battlecruiser. In addition to 3 points, this mission gives you a glory, one space on the Influence or Military track, another action token, and the ability to junk a card from the market.",
       "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Core Set: The Reliant is solid for Soval without being anything too crazy, though he should be able to free-play by reaching that five Influence requirement pretty fast. Same with the Son’a Battlecruiser and their six Military requirement. K’T’Inga Battlecruiser can be scanned for with Military skill, Bird of Prey with Influence skill, and Voth Research Vessel with Research, so T’Pol may be well-suited looking there",
+      "truncated": true,
       "mode": "text",
       "lore": false
      }
@@ -6010,6 +6748,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Soval isn’t picky about Person cards in general, and while his missions call for Research/Wild skills and Starfleet traits, pretty much anybody is a plus. That being said, I particularly like the crew of the NX-01 Enterprise, in particular Hoshi Sato for both mission completion and her ability to find Research skills/focus which will let you repeatedly play T’Pol. When you use T’Pol to scan for",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "laris": [
@@ -6081,6 +6833,20 @@
       "anchor": "notable-market-cards",
       "heading": "Notable Market Cards",
       "snippet": "For the Ally Deck, I'd especially suggest Tholians and Arin'sen for their resource gain. I enjoy using the Karemma for additional actions. And Letheans are often useful. I would avoid the Halkan Council (or at least junk it) if you hope to repeatedly benefit, as they will give you three Dilithium once and probably get logged from any of your many Attack cards. Finally, if you managed to get Betazoid as a starting",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "The repeat Ally cards aren't necessarily anything special for Soval. He’ll appreciate the flexibility Denobulans provide when scanning the Person deck, but Arin’sen, Bolians, Bynars, and Organians aren’t anything special for him. Kelpiens can alleviate the need for Incident management, though T’Pau is a better option with the Glory gain. Letheans will score well for Soval but besides that are situational as Soval",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -6170,6 +6936,20 @@
     ]
    },
    {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: A Research scan of the Cargo deck gets you Universal Translator, which by itself isn’t super interesting for Soval because he may have the Starfleet cards but gets no particular benefit from Alien traits themselves. A Military scan on the other hand will fish out Computer Virus which is super interesting against an aggressive opponent warping ships. There’s a decent amount of Away Team focused cards in",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-cargo.html",
     "count": 1,
     "hits": [
@@ -6242,6 +7022,20 @@
     ]
    },
    {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Soval isn’t picky about Person cards in general, and while his missions call for Research/Wild skills and Starfleet traits, pretty much anybody is a plus. That being said, I particularly like the crew of the NX-01 Enterprise, in particular Hoshi Sato for both mission completion and her ability to find Research skills/focus which will let you repeatedly play T’Pol. When you use T’Pol to scan for",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-cargo.html",
     "count": 1,
     "hits": [
@@ -6279,6 +7073,20 @@
       "anchor": "burnham-s-reserve-cards",
       "heading": "Burnham's Reserve Cards",
       "snippet": "Ni'Var (Location) — Go forward far enough, and Spock's vision of Vulcan united (and renamed) is reality, giving it the Vulcan and Romulan traits. When you play and control Ni'Var, you remove one glory from the Stardate card and you can either find Inspire or scan for an Ambassador. Usually, I'm going to recommend Ambassador to get the Enterprise C, but you can consider going after Riva, Lwaxana Troi, or Ambassador",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Core Set: T’Pol’s scans for Research provide Bruce Maddox, who isn’t terribly useful for finding Synthetics (unless you grab some from the market) but has some good traits for Soval. I like Lwaxana Troi for her captain refresh because there’s plenty of Humans who need some dismissing. You should be able to make good use of Captain Dorg, and his Military focus should also score well at the end of the game. Sakonna is",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -6398,6 +7206,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Soval isn’t picky about Person cards in general, and while his missions call for Research/Wild skills and Starfleet traits, pretty much anybody is a plus. That being said, I particularly like the crew of the NX-01 Enterprise, in particular Hoshi Sato for both mission completion and her ability to find Research skills/focus which will let you repeatedly play T’Pol. When you use T’Pol to scan for",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "medical-diagnostic-hat": [
@@ -6431,6 +7253,22 @@
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
       "snippet": "To Boldly Go: I’m definitely a fan of Augmentation plague due to Georgiou’s late game focus on Klingon cards, and if you can nab it early you can get some Glory every time you put a Klingon in play. You shouldn’t have to worry about specialty restrictions for cards like forced Singularity, which also gives you focus scoring for research and yet another duty officer. Same benefit to Computer Virus, and you should get",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "medusan-vessel": [
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "To Boldly Go: D’Kora Marauder is actually interesting because sending an Away Team for a Latinum is something Soval can afford, and he can scan for it with T’Pol. He’ll probably also be scanning for Medusan Vessel with its Research Skill, which is great for his Mission, your need for ships, and scanning for some Telepaths (which Mount Seleya scores for). D’Var is interesting simply for the free play deploy, which",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -6475,6 +7313,20 @@
       "anchor": "notable-market-cards",
       "heading": "Notable Market Cards",
       "snippet": "In the Cargo Deck, you can't go wrong with any of the weapons, which includes Phasers, Type III Disruptor Pistols, and Mek'Leth (Lirpa is kind of underwhelming without a lot of Vulcans). I like grabbing any military focus cards, especially Plasma Manifold because it gives an Engineering tag and the flexibility of an additional action. Anything with Science requirements or focus scoring is probably worth ignoring,",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Core Set: Tribbles only really matters against Klingon Duty Officers, but watch for chances to use it. Tachyon Detection Grid continues to just be a silver bullet against a straightforward Sela game, but it’s nothing special for Soval. Biobed would help with the Research trait and free playing an Incident, but Soval doesn’t have other Doctors to Find. Mek’leth has some general usability, but not as much against the",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -6580,6 +7432,20 @@
     ]
    },
    {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Second Contact: Moopsy looks like it would be a great card for Soval, and it might be after you’ve used Kir’Shara. But before that point, it feels like a trap for your Vulcan traits. Be wise if you let the Moopsy out. Soval can probably benefit from Protocol 12 but you’ll need to find some more Doctors. Gift Box has general utility but I’m not sure there’s that much for Soval directly.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-allies.html",
     "count": 1,
     "hits": [
@@ -6666,6 +7532,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "To Boldly Go: Delphic Expanse Sphere is fine, especially with a really thin deck strategy for Soval (because it can replace almost all directives you would need to gain cards). He also benefits from sending Away Teams to controlled locations, as discussed a lot in this guide. Gomtuu provides not just a ship, but a way to gain some extra Military off of Research traits, which is fantastic for Soval. New Federation",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "nova-fleet": [
@@ -6704,6 +7584,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Second Contact: Betazed Intelligence actually works great for Soval, as he has Telepaths and a Beverage this card can find. You’ll likely end up logging it on clean-up, but it’s a decent candidate for the IDIC log if you don’t need the additional hand size it offers. Illyrians can be really great early game if you don’t have the ability to promote the Duty Officers you need to, but if you don’t have another Augment",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "omega-particle": [
@@ -6730,6 +7624,20 @@
       "heading": "Encounters",
       "snippet": "Core Set: Ancient Gene Fragments is probably good for Georgiou, especially if she has a Scientist in play. Boltzman Brain, Iconian Gateway, and Omega Particle help her about as much as anybody else. Georgiou should be able to use Sha Kar Ree pretty effectively, so it’s certainly in the top half of the list for me.",
       "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Core Set: I don’t think Soval needs Omega Particle as much for resource generation, but he should be able to use focus scoring. Boltzmann Brain is really helpful for Soval, but I’m not sure it’s any more helpful than it is for everybody. Sha Ka Ree is interesting due to the Vulcan trait, but it will likely lead you to lose a ship, so maybe try to make it a ship that would later be dismissed due to a mission (a",
+      "truncated": true,
       "mode": "text",
       "lore": false
      }
@@ -6788,6 +7696,20 @@
       "heading": "Analyze (Directive)",
       "snippet": "With Sisko, I usually focus on getting more ships with Analyze, especially since his mission requires four ships and you only have three in your decks to start. Sisko doesn't necessarily benefit from cargo more than any other captain, but be willing to be flexible, especially if Orb of Time pops up. You may find yourself without action tokens, at which point a free two Dilithium gain isn't a bad option.",
       "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: A Research scan of the Cargo deck gets you Universal Translator, which by itself isn’t super interesting for Soval because he may have the Starfleet cards but gets no particular benefit from Alien traits themselves. A Military scan on the other hand will fish out Computer Virus which is super interesting against an aggressive opponent warping ships. There’s a decent amount of Away Team focused cards in",
+      "truncated": true,
       "mode": "text",
       "lore": false
      }
@@ -6859,6 +7781,20 @@
       "anchor": "notable-market-cards",
       "heading": "Ally Deck",
       "snippet": "To Boldly Go: While Georgiou can make use of most of these Ally cards, there are very few that I consider to be truly vital to her. As always, you’re hoping to get the Kelpiens from Saru, but let this be a second reminder that if you’re playing Burnham as she’ll scan for them too. If you’re looking for resources, grab Arin’sen, Kaelon II Science Ministry, or the Orion Syndicate. She’s also likely to get some benefit",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "The repeat Ally cards aren't necessarily anything special for Soval. He’ll appreciate the flexibility Denobulans provide when scanning the Person deck, but Arin’sen, Bolians, Bynars, and Organians aren’t anything special for him. Kelpiens can alleviate the need for Incident management, though T’Pau is a better option with the Glory gain. Letheans will score well for Soval but besides that are situational as Soval",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -6949,6 +7885,20 @@
       "anchor": "derika",
       "heading": "D'Erika Tendi (Person)",
       "snippet": "D'Erika has an attack play action which requires you to discard a card to choose two of the following four: Steal a Latinum, gain a Ship from the Junk, gain an Influence, or gain a Military. If you have another Orion in play you may exhaust a ship to do up to all four. Her Attack Activation requires you to spend two Latinum to send an Away Team to a neutral location, and you may remove an opponent Away Team from the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "To Boldly Go: I think that Soval will be in an interesting position with Kaelon II Science Ministry where, if he’s timing it right, will always get the Dilithium and Research benefits via logging with either Stel or IDIC. Orion Syndicate might be beneficial, especially if you're keeping a lot of ships deployed or if you’ve gained other Shady cards. I like Red Squadron, especially so you can keep beaming and drawing",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -7050,6 +8000,20 @@
       "lore": true
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Second Contact: I think the best card for Soval here is D’Erika Tendi simply based on her ability to gain a Ship from the junk. I think Jennifer Sh’Reyan’s Support operation is also pretty good for Soval because he’ll be gaining a lot of Person cards and then sending an Away Team to a Controlled location is exactly what his deck is doing. And Parmen is pretty awesome for everyone but Soval certainly benefits too,",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "peanut-hamper": [
@@ -7146,6 +8110,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Soval isn’t picky about Person cards in general, and while his missions call for Research/Wild skills and Starfleet traits, pretty much anybody is a plus. That being said, I particularly like the crew of the NX-01 Enterprise, in particular Hoshi Sato for both mission completion and her ability to find Research skills/focus which will let you repeatedly play T’Pol. When you use T’Pol to scan for",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "phasers": [
@@ -7187,6 +8165,20 @@
       "anchor": "denobulans",
       "heading": "Denobulans",
       "snippet": "Primarily represented by Dr. Phlox and introduced in Enterprise, the Denobulans have two actions, both of which will self-log the card. The first simply gains the player a Person card. The second requires three influence and allows for scanning three Person cards, resulting in a choice among the three drawn cards and the face up card. This is a decent way to choose from a spread of cards, which is self-evidently",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Soval isn’t picky about Person cards in general, and while his missions call for Research/Wild skills and Starfleet traits, pretty much anybody is a plus. That being said, I particularly like the crew of the NX-01 Enterprise, in particular Hoshi Sato for both mission completion and her ability to find Research skills/focus which will let you repeatedly play T’Pol. When you use T’Pol to scan for",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -7285,6 +8277,20 @@
       "anchor": "starting-hand",
       "heading": "Starting Hand Strategies",
       "snippet": "Now that we've looked at these cards in isolation, let's put them together to discuss some starting strategies. You can't predict your hand, but you can do some things to help control what you get. For instance, as long as Set a Course is in your starting hand, you're going to get to see a sixth card from your deck. Likewise, using the play ability of Diplomacy isn't a bad way to get some more cards as well. If",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "soval-advisory",
+      "heading": "Advisory (Directive)",
+      "snippet": "Advisory has a free play action allowing you to spend a Dilithium to gain an Influence and draw a card, and you can beam a Human to a ship. The only early use of this would be to Beam your United Earth Ally to a Ship, then you could use Soval to dismiss United Earth to draw two cards, which would be a decent opening move. This card also has a play action that allows for a Scan 2 of the Person deck, then a self-log.",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -7421,6 +8427,20 @@
       "anchor": "development-cards",
       "heading": "Make It So (Directive)",
       "snippet": "When evaluating late-game strategies for Developments, Picard has an issue, and that is that these cards are almost all fantastic. Therefore, the question of which Development to go after first largely depends on the point in the game you are at. If you're on Stardate card three or earlier, I always start with the Bozeman and go into Starbase 74. These cards give you a lot of flexibility going forward, especially",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "soval-vulcan-hello",
+      "heading": "Vulcan Hello (Directive) (Dev Cost 4 Dilithium)",
+      "snippet": "This custom Directive has the Attack and Communication traits, and two Military skills. Its standard Attack play action lets you dismiss an opponent’s ship at a neutral location, and send an away team to the same location, and gain a Glory if your opponent has a Klingon in play. The free action requires nine military and you can log the Vulcan Hello to select a neutral location not secured by your opponent, and take",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -8048,6 +9068,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Second Contact: Moopsy looks like it would be a great card for Soval, and it might be after you’ve used Kir’Shara. But before that point, it feels like a trap for your Vulcan traits. Be wise if you let the Moopsy out. Soval can probably benefit from Protocol 12 but you’ll need to find some more Doctors. Gift Box has general utility but I’m not sure there’s that much for Soval directly.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "rebner-pakled-planet": [
@@ -8104,6 +9138,20 @@
       "heading": "The Market Game",
       "snippet": "You also want to consider that cards with Focus scoring that match the Bot's preferred tracks aren't a good option for placing Glory on either. The Bot's resolution cards are going to favor that focus scoring, meaning it's more likely those cards get taken, and then give the Bot a ton of points at endgame. Consider this as you're looking for market cards as well. You might not particularly need that military focus",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "to-boldly-go",
+      "heading": "To Boldly Go",
+      "snippet": "Rebner: You will probably lose the Neutral Zone fight to Rebner, so don’t worry too much about it. Instead, focus on cards that defend you from attacks, if you can get them. Gain or Take any Military focus scoring you can find, as that’s all Rebner cares about for track multipliers. His game can go quickly but don’t be so worried about the rush that you don’t set up a dynamic last few turns.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -8268,6 +9316,20 @@
       "lore": true
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "To Boldly Go: I think that Soval will be in an interesting position with Kaelon II Science Ministry where, if he’s timing it right, will always get the Dilithium and Research benefits via logging with either Stel or IDIC. Orion Syndicate might be beneficial, especially if you're keeping a lot of ships deployed or if you’ve gained other Shady cards. I like Red Squadron, especially so you can keep beaming and drawing",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "reed-alert": [
@@ -8394,6 +9456,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Second Contact: With the R.I.S. Talvath in the market, you’re now not sure exactly what you’ll get with a Research scan, but this ship isn’t terrible for you. In fact, you kind of like that all the Time Travel cards are going to your opponent so you can put more Dilithium on this ship. Fesarius is good for the free play and free warp operations, and Soval has about as good a chance as anyone else in gaining that",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "risa": [
@@ -8500,6 +9576,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Core Set: T’Pol’s scans for Research provide Bruce Maddox, who isn’t terribly useful for finding Synthetics (unless you grab some from the market) but has some good traits for Soval. I like Lwaxana Troi for her captain refresh because there’s plenty of Humans who need some dismissing. You should be able to make good use of Captain Dorg, and his Military focus should also score well at the end of the game. Sakonna is",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "salt-vampires": [
@@ -8524,6 +9614,20 @@
       "lore": true
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "To Boldly Go: I think that Soval will be in an interesting position with Kaelon II Science Ministry where, if he’s timing it right, will always get the Dilithium and Research benefits via logging with either Stel or IDIC. Orion Syndicate might be beneficial, especially if you're keeping a lot of ships deployed or if you’ve gained other Shady cards. I like Red Squadron, especially so you can keep beaming and drawing",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "sarina-douglas": [
@@ -8545,6 +9649,28 @@
       "snippet": "Sarina gets two wild Skills, which is great. Unfortunately, you'll either need to discard an Incident or take an Incident each Resupply Phase, or you have to discard her. Her activation is great, and allows you to free play an Incident from your discard pile, which makes taking an incident to keep her around less of an issue. Her play action is free, and lets you free play a card with a Research skill/focus or look",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Soval isn’t picky about Person cards in general, and while his missions call for Research/Wild skills and Starfleet traits, pretty much anybody is a plus. That being said, I particularly like the crew of the NX-01 Enterprise, in particular Hoshi Sato for both mission completion and her ability to find Research skills/focus which will let you repeatedly play T’Pol. When you use T’Pol to scan for",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "to-boldly-go",
+      "heading": "To Boldly Go",
+      "snippet": "Khan: I would seek out cards that help you return Incidents, and get T’Pau as soon as possible to avoid a burn loss. Likewise, I think you should focus on scanning for Sarina Douglas (Blue Research scan is best) as soon as possible to deprive Khan of her trait.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -8600,9 +9726,45 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: A Research scan of the Cargo deck gets you Universal Translator, which by itself isn’t super interesting for Soval because he may have the Starfleet cards but gets no particular benefit from Alien traits themselves. A Military scan on the other hand will fish out Computer Virus which is super interesting against an aggressive opponent warping ships. There’s a decent amount of Away Team focused cards in",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "sehlat": [
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "soval-seleya-dkyr",
+      "heading": "Seleya (D’Kyr) (Ship)",
+      "snippet": "The Seleya has the Vulcan trait, a standard Play action which allows for deploy/warp, and discard a card to gain a Research, and a five Military required Play action where you may send an away team to the Seleya’s location after deploy/warp. It has all the Activations of a normal starting ship, which is a bit of a difficult thing for Soval early on. His lack of ships can be difficult, since T’Pol is his only way to",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "promos",
+      "heading": "Promos",
+      "snippet": "Sehlat is quite obviously amazing for Soval. There’s no downside and a lot of flexibility in this promo card, so much so that it can make Soval’s game feel like easy mode. It would be important to point out its existence to players using Soval, or playing against him. Enterprise B is a fun ship, and Soval should have plenty of Person cards to fuel Activation. Wesley Crusher is always great, more so for Person-heavy",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "cargo.html",
     "count": 1,
@@ -8918,6 +10080,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Sela: While the Scimitar is a beast, you’ve got your own weapon with Vulcan Hello. You’re not going to be able to take locations without focused attention on the neutral zone, so it might be worth it to send Away Teams to the Neutral Zone instead of your controlled locations. But don’t sacrifice card draw simply to stall out against an opponent that will overwhelm you with ships and Away Teams. Turn your attention",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "sela-sela": [
@@ -8959,6 +10135,28 @@
       "anchor": "picking",
       "heading": "Strategy for Picking Boosts/Reinforcements",
       "snippet": "I would like to suggest that the alternate boosts in the 5-Year-Missions are usually a better choice than the Reinforcements, in my opinion. Now, you may know the perfect card to Reinforce at any given time, and I'll give that to you, it may happen. But overall, the gameplay value of some of the alternate boosts is incredible. Searching for cards? Drawing extra cards? Extra specialty track movement? These are all",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 3,
+    "hits": [
+     {
+      "anchor": "soval-stel",
+      "heading": "Stel (Person)",
+      "snippet": "Stel has the Vulcan, Security, and Attack traits. His first action sends an away team to a controlled location, and you can beam a card to a deployed ship. This is compelling early on to thin your deck and get an extra card draw, so long as you have a ship to beam to. He also has a free play attack forcing your opponent to dismiss a Romulan or Andorian, and if successful, you gain a Glory. You may also log a card",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Core Set: Tribbles only really matters against Klingon Duty Officers, but watch for chances to use it. Tachyon Detection Grid continues to just be a silver bullet against a straightforward Sela game, but it’s nothing special for Soval. Biobed would help with the Research trait and free playing an Incident, but Soval doesn’t have other Doctors to Find. Mek’leth has some general usability, but not as much against the",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -9233,6 +10431,20 @@
       "anchor": "starting-hand-strategies",
       "heading": "Starting Hand Strategies",
       "snippet": "Koloth's start very much depends on what Kahless chooses to bless you with in any particular moment. Let's start with the highest risk/reward play for Koloth, and that's Good Day to Die. If you have Good Day to Die and the I.K.S. Klothos in your starting hand, you can deploy the Klothos and play Good Day to Die to log Klothos, dismiss the Gr'oth, and gain your choice of the top two Encounters. Most of the encounters",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Core Set: I don’t think Soval needs Omega Particle as much for resource generation, but he should be able to use focus scoring. Boltzmann Brain is really helpful for Soval, but I’m not sure it’s any more helpful than it is for everybody. Sha Ka Ree is interesting due to the Vulcan trait, but it will likely lead you to lose a ship, so maybe try to make it a ship that would later be dismissed due to a mission (a",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -9586,6 +10798,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Shran: The best thematic match-up, you’re going to get attacked by Talas and you’ll be attacking with Stel. Keep that in mind as you shift to finding non-Vulcan cards to use to avoid those attacks, and they do the same with Andorians. Junking or taking weapons will help you with Paan Mokar and take those same weapons away from Shran. And you’ll both be rushing to grab ships, so make it count.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "shran-tarah": [
@@ -9693,6 +10919,20 @@
       "anchor": "shran-s-reinforcement-cards",
       "heading": "Trade Embargo (Incident)",
       "snippet": "Same as the Incident in the Incident Deck, I would try to use this to be able to beam multiple cards aboard a ship in the round it’s used, just to think out the deck without logging. Decks with more reserve cards can potentially lose Development momentum compared to decks with smaller Reserve Decks, so compared to Picard I think Shran lacks momentum getting through his Reserve cards. That being said, Jhamel and",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "soval-paan-mokar",
+      "heading": "Paan Mokar (Location)",
+      "snippet": "I love the theming around this location, because it’s nearly exactly the same as the Weytahn. In fact, other than the name and a missing Imperial trait, it’s exactly the same. When taking control, you may free play a Cargo or Ship. Its Activation lets you discard a card with a Weapon, Military skill, or Military focus to send an Away Team and gain an Influence. You do have to discard Paan Mokar on clean-up if you",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -10214,9 +11454,301 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Core Set: The Reliant is solid for Soval without being anything too crazy, though he should be able to free-play by reaching that five Influence requirement pretty fast. Same with the Son’a Battlecruiser and their six Military requirement. K’T’Inga Battlecruiser can be scanned for with Military skill, Bird of Prey with Influence skill, and Voth Research Vessel with Research, so T’Pol may be well-suited looking there",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-advisory": [
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "soval-advisory",
+      "heading": "Advisory (Directive)",
+      "snippet": "Advisory has a free play action allowing you to spend a Dilithium to gain an Influence and draw a card, and you can beam a Human to a ship. The only early use of this would be to Beam your United Earth Ally to a Ship, then you could use Soval to dismiss United Earth to draw two cards, which would be a decent opening move. This card also has a play action that allows for a Scan 2 of the Person deck, then a self-log.",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-analyze": [
+   {
+    "guide": "soval.html",
+    "count": 3,
+    "hits": [
+     {
+      "anchor": "soval-s-available-cards",
+      "heading": "Soval’s Available Cards",
+      "snippet": "Soval has 9 Available cards that can potentially make up his starting hand. There are three Person cards, five Directives, and an Ally. Three of his Available cards are standard, including Utilize (Directive), Recruit (Directive), and Analyze (Directive). There’s also the Ally, which is a repeat of the United Earth Ally from Shran’s Reserves, allowing you to scan for a Human or, take an Incident to scan two of the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "soval-s-starting-hand-strategies",
+      "heading": "Soval’s Starting Hand Strategies",
+      "snippet": "Soval’s Dismiss a Human: So, how do we get a Human into play? The most obvious option is United Earth Ally from Soval’s deck, but where do you beam it? You don’t have any ships, and you’ll either need Muroc as Duty Officer to grab the Ti’Mur , or else need to grab a ship with Analyze and then draw it from the top of your deck and then play it. That can work, but it will take a bit of market awareness to pull off.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-energy-drain": [
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "soval-s-reserve-cards",
+      "heading": "Soval’s Reserve Cards",
+      "snippet": "Soval has five reserve cards consisting of a Location, Person, Cargo, Ship and Incident. There is the normal Energy Drain Incident, which can most effectively be dealt with using an Engineer, of which Soval has none in his deck (where’s Trip Tucker when you need him?).",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-infinite-diversity-in-infinite-combinations": [
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "soval-infinite-diversity-in-infinite-combinations",
+      "heading": "Infinite Diversity in Infinite Combinations (Directive)",
+      "snippet": "The Kol-Ut-Shan, this tentpole of Vulcan philosophy is represented via its own custom Directive and trait, Path of Surak (this trait will be used primarily in solo mode for the Soval Bot to react to). It functionally replaces Strange New Worlds as Soval’s chief method for gaining Encounters. For its play action, you may remove an away team from a controlled location, log a non-Vulcan Person/Cargo/Ally from your",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-kirshara": [
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "soval-kirshara",
+      "heading": "Kir’Shara (Cargo) (Dev Cost 2 Dilithium, 1 Latinum, and dismiss a Duty Officer)",
+      "snippet": "The Kir’Shara was the ancient Vulcan relic that had the original teachings of Surak, which had been lost for centuries. When Captain Archer mind-melds with a Syrrannite containing the Katra of Surak, he goes on a mission to find the Kir’Shara and prevent the looming Vulcan invasion of Andoria and potential Vulcan civil war.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "soval-kirshara",
+      "heading": "Kir’Shara (Cargo) (Dev Cost 2 Dilithium, 1 Latinum, and dismiss a Duty Officer)",
+      "snippet": "The Kir’Shara gets the Path of Surak trait. The free Play Action applies if you have seven Vulcan cards in play (excluding Captain Soval), and lets you take an Incident and the top Encounter before logging Kir’Shara. It scores for Research Focus. Gaining another Encounter is always great, it’s just an issue of whether you have seven Vulcan cards in play once you get it. If you have the opportunity to develop, use",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-minister-kuvak": [
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "soval-minister-kuvak",
+      "heading": "Minister Kuvak (Person) (Dev Cost 2 Latinum)",
+      "snippet": "Soval’s ally on the Vulcan High Council, Kuvak was played by John Rubinstein who ironically played the Mazarite captain hunting down V’Lar on a prior season of Enterprise. He is noticeably skeptical of intelligence suggesting the Andorians had obtained a version of the Xindi weapon to use against Vulcan, and was troubled bythe decision by Administrator V’Las to invade Andoria in a preemptive strike.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "soval-minister-kuvak",
+      "heading": "Minister Kuvak (Person) (Dev Cost 2 Latinum)",
+      "snippet": "Kuvak gets the Vulcan trait and a free play action that gets you a Dilithium for every card beamed to a Location or a Ship. He also has a passive ability that increases your hand size for every non-Vulcan controlled location in play (up to 3). I think that’s where he shines, because you will hopefully still have Utilize so you won’t need his play action as often. The catch here is that using IDIC repeatedly may mean",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-mount-seleya": [
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "soval-mount-seleya",
+      "heading": "Mount Seleya (Location) (Dev Cost 2 Latinum and 1 or more Vulcan Logged)",
+      "snippet": "A religious site for the Vulcans, it appears in Star Trek III, IV and Enterprise, and was the site of a battle between the Vulcans and \"those who marched beneath the raptor’s wings”, presumably the Vulcans who left to become the Romulans. It has significant spiritual significance to the Vulcan people, and is where Leonard McCoy brought Spock’s Katra after they found a resurrected Spock on the Genesis planet.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "soval-mount-seleya",
+      "heading": "Mount Seleya (Location) (Dev Cost 2 Latinum and 1 or more Vulcan Logged)",
+      "snippet": "Mount Seleya has the Vulcan and Transcendent traits, and a Research and Influence Skill. Its Control action lets you draw a card for each Vulcan in your Log, which kind of works in opposition to the goals of the Kir’Shara, unless you get Kir’Shara first and start logging cards after. Its activation is amazing though, letting you find any card at the discard cost of a person card. At the end of the game, it scores a",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-muroc": [
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "soval-muroc",
+      "heading": "Muroc (Person)",
+      "snippet": "Muroc accompanied Soval to Paan Mokar (known by the Andorians as Weytahn) to resolve a hostage crisis (ENT 2x15: Cease Fire). He has some tough decisions to make when it appears the Andorians are going back on their promises to allow Captain Archer and Soval to negotiate a ceasefire.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "soval-muroc",
+      "heading": "Muroc (Person)",
+      "snippet": "Muroc has a Military skill and the Vulcan trait. Muroc has a play action that allows you to choose two: gain an Influence, a Military, or send an away team to a location with a ship. If you have more than six Influence you can do all three and then log Muroc. His Activations make him the Vulcan Riker, as he can draw a Ship from your discard pile or free play a Ship with Vulcan. I often use T’Pol to promote him to",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-paan-mokar": [
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "soval-paan-mokar",
+      "heading": "Paan Mokar (Location)",
+      "snippet": "“Its sole value is its strategic location near Vulcan space.”",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "soval-paan-mokar",
+      "heading": "Paan Mokar (Location)",
+      "snippet": "“They were setting up a military base?”",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-plomeek-tea": [
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "soval-plomeek-tea",
+      "heading": "Plomeek Tea (Cargo)",
+      "snippet": "Those Vulcans just can’t get used to human food, preferring their bland Vulcan Beverages (this card’s traits) over ice cream or whatever else the NX-01 Chef can make.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "soval-plomeek-tea",
+      "heading": "Plomeek Tea (Cargo)",
+      "snippet": "This card has a free play action that lets you gain a Latinum, or a regular cost action where you can refresh your Captain and Duty Officer, and spend a Latinum to swap a card in the Junk with a card of the same suit in the market. I like the immediate flexibility here, and as we start to get weirder and weirder junk scenarios, this may have quite a bit of utility to it. Refreshing Soval would also be quite useful",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-recruit": [
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "soval-s-available-cards",
+      "heading": "Soval’s Available Cards",
+      "snippet": "Soval has 9 Available cards that can potentially make up his starting hand. There are three Person cards, five Directives, and an Ally. Three of his Available cards are standard, including Utilize (Directive), Recruit (Directive), and Analyze (Directive). There’s also the Ally, which is a repeat of the United Earth Ally from Shran’s Reserves, allowing you to scan for a Human or, take an Incident to scan two of the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-seleya-dkyr": [
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "soval-seleya-dkyr",
+      "heading": "Seleya (D’Kyr) (Ship)",
+      "snippet": "Presumably named for Mount Seleya, this Vulcan ship was lost in the Delphic Expanse until it was found adrift by Enterprise. Turns out, Vulcans are allergic to Trellium D, and the entire crew became zombie-like (ENT 3x5: Impulse). Soval gets pissed at Archer, claiming he didn’t make a good enough effort to rescue the crew.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "soval-seleya-dkyr",
+      "heading": "Seleya (D’Kyr) (Ship)",
+      "snippet": "The Seleya has the Vulcan trait, a standard Play action which allows for deploy/warp, and discard a card to gain a Research, and a five Military required Play action where you may send an away team to the Seleya’s location after deploy/warp. It has all the Activations of a normal starting ship, which is a bit of a difficult thing for Soval early on. His lack of ships can be difficult, since T’Pol is his only way to",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
    }
   ],
   "soval-soval": [
+   {
+    "guide": "soval.html",
+    "count": 40,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Soval has four away teams, the Vulcan, Telepath, and Ambassador traits, and has endgame scoring for each person card that does not have the Vulcan trait. His activation lets you dismiss a Human to draw two cards, which is both mechanically valuable and a great pun. He has a Status card called the Vulcan Science Directorate. As a reaction, after you put an Anomaly or a Scientist in play, you can gain two Dilithium or",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "This is the first deck we’ve seen with no starting ship, though there is a ship hanging out in your discard pile, the Ti’Mur . The Ti’Mur shows up in an early season one episode of Enterprise to “observe” the NX-01 as they nearly kill Reed and Mayweather, using grapplers to rescue them from a collapsing ice asteroid. The Ti’Mur uses their tractor beam to rescue them, a bruise to Archer’s sense of pride, while I’m",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "tbg-cargo.html",
     "count": 3,
@@ -10268,6 +11800,246 @@
     ]
    }
   ],
+  "soval-stel": [
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "soval-stel",
+      "heading": "Stel (Person)",
+      "snippet": "Stel was an investigator with the Vulcan Security Directorate investigating the bombing of the human embassy on Vulcan in 2154 until he was removed from his position after Soval discovered his connection to the terrorism (ENT 4x7: The Forge).",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "soval-stel",
+      "heading": "Stel (Person)",
+      "snippet": "Stel has the Vulcan, Security, and Attack traits. His first action sends an away team to a controlled location, and you can beam a card to a deployed ship. This is compelling early on to thin your deck and get an extra card draw, so long as you have a ship to beam to. He also has a free play attack forcing your opponent to dismiss a Romulan or Andorian, and if successful, you gain a Glory. You may also log a card",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-sub-commander-tpol": [
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "soval-sub-commander-tpol",
+      "heading": "Sub-Commander T’Pol (Person)",
+      "snippet": "Before she was Captain Archer’s First Officer and Science Officer, she worked for Soval. Her early history included work as an agent with the Ministry of Security, Deputy Science Officer under Captain Voris of the Seleya, and Ambassadorial staff for Soval at the Vulcan Embassy in San Francisco.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "soval-sub-commander-tpol",
+      "heading": "Sub-Commander T’Pol (Person)",
+      "snippet": "T'Pol gets a Research skill (two down, three to go for your first mission) and the Vulcan, Starfleet, Scientist, and Telepath traits. Thematically, I find the Telepath trait interesting as it’s unclear to me if she’s naturally telepathic (as many if not most Vulcans are, per the Voyager episode Counterpoint VOY: 5x10, where the Devore hunt the telepaths in their space, including Voyager’s Vulcans). Anyway, she has a",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-timur": [
+   {
+    "guide": "soval.html",
+    "count": 5,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "This is the first deck we’ve seen with no starting ship, though there is a ship hanging out in your discard pile, the Ti’Mur . The Ti’Mur shows up in an early season one episode of Enterprise to “observe” the NX-01 as they nearly kill Reed and Mayweather, using grapplers to rescue them from a collapsing ice asteroid. The Ti’Mur uses their tractor beam to rescue them, a bruise to Archer’s sense of pride, while I’m",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Soval does have a controlled location, Vulcan, which has a Research skill (one of your five needed for your mission) and Influence skill and the Vulcan trait. It has the common Activation from many Available and Controlled locations that allows you to draw a card if an away team is present, and if at least three away teams are on controlled locations you can draw an extra card. With Soval’s limited four away teams,",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-tpau": [
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "soval-tpau",
+      "heading": "T’Pau (Person) (Dev Cost 2 Glory)",
+      "snippet": "From the Season 4 Vulcan Unrest arc of Enterprise (ENT 4x7-9) and Amok Time (TOS 2x5), T’Pau is a member of the Syrranites, a non-violent faction of Vulcans who find mind-melds acceptable (because apparently mainstream Vulcans didn’t for thousands of years) and the Vulcan Council’s war on Andoria repugnant.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "soval-tpau",
+      "heading": "T’Pau (Person) (Dev Cost 2 Glory)",
+      "snippet": "T’Pau has the Vulcan and Telepath traits, and gains two wild skills when she is Duty Officer. Her Play action lets you draw a card, and both players may return an Incident from their hand or discard piles, and she gains a Glory for each returned Incident. You can then promote her or another Person from hand or Staging Area to Duty officer. She does cost two Glory, but her value is slightly above average at four",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-united-earth": [
+   {
+    "guide": "soval.html",
+    "count": 6,
+    "hits": [
+     {
+      "anchor": "soval-s-available-cards",
+      "heading": "Soval’s Available Cards",
+      "snippet": "Soval has 9 Available cards that can potentially make up his starting hand. There are three Person cards, five Directives, and an Ally. Three of his Available cards are standard, including Utilize (Directive), Recruit (Directive), and Analyze (Directive). There’s also the Ally, which is a repeat of the United Earth Ally from Shran’s Reserves, allowing you to scan for a Human or, take an Incident to scan two of the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "soval-advisory",
+      "heading": "Advisory (Directive)",
+      "snippet": "Advisory has a free play action allowing you to spend a Dilithium to gain an Influence and draw a card, and you can beam a Human to a ship. The only early use of this would be to Beam your United Earth Ally to a Ship, then you could use Soval to dismiss United Earth to draw two cards, which would be a decent opening move. This card also has a play action that allows for a Scan 2 of the Person deck, then a self-log.",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-utilize": [
+   {
+    "guide": "soval.html",
+    "count": 4,
+    "hits": [
+     {
+      "anchor": "soval-s-available-cards",
+      "heading": "Soval’s Available Cards",
+      "snippet": "Soval has 9 Available cards that can potentially make up his starting hand. There are three Person cards, five Directives, and an Ally. Three of his Available cards are standard, including Utilize (Directive), Recruit (Directive), and Analyze (Directive). There’s also the Ally, which is a repeat of the United Earth Ally from Shran’s Reserves, allowing you to scan for a Human or, take an Incident to scan two of the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "soval-s-starting-hand-strategies",
+      "heading": "Soval’s Starting Hand Strategies",
+      "snippet": "T’Pol’s Play Action: T’Pol’s main benefit costs two Dilithium, which you’ll need Analyze’s free play action or to use Utilize first, unless you spend your Glory (though Vulcan Science Directorate should get you some Dilithium or Glory back). Or unless you ignore the first line, though that’s a bit inefficient. Then you can draw a card, and promote a card (probably Muroc if you can).",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-vlar": [
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "soval-vlar",
+      "heading": "V’Lar (Person)",
+      "snippet": "V’Lar had been a Vulcan Ambassador for almost a century when she was made the Vulcan Ambassador to Mazar (ENT 1x23: Fallen Hero). Because of the secrecy of her assignment, it was originally believed by T’Pol and the crew of the NX-01 Enterprise that she was being extradited back to Vulcan for a serious crime.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "soval-vlar",
+      "heading": "V’Lar (Person)",
+      "snippet": "V’Lar predictably has the Vulcan and Ambassador traits. She has a Play action where you can spend Latinum to gain an Ally to your hand, presumably a reference to the corruption charges she was accused of in order to gain allies in the Mazarite society. She also has a free play action where she can take an Incident to draw a card and send an Away Team to a location where you have a ship, which as discussed is really",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-vulcan-hello": [
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "soval-vulcan-hello",
+      "heading": "Vulcan Hello (Directive) (Dev Cost 4 Dilithium)",
+      "snippet": "It’s not just the hand greeting (live long and prosper), it’s also how the Vulcans deal with the Klingons (DIS 1x1: The Vulcan Hello). Live long and prosper… and also Photon Torpedo Target Locked.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "soval-vulcan-hello",
+      "heading": "Vulcan Hello (Directive) (Dev Cost 4 Dilithium)",
+      "snippet": "This custom Directive has the Attack and Communication traits, and two Military skills. Its standard Attack play action lets you dismiss an opponent’s ship at a neutral location, and send an away team to the same location, and gain a Glory if your opponent has a Klingon in play. The free action requires nine military and you can log the Vulcan Hello to select a neutral location not secured by your opponent, and take",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-vulcan-high-command": [
+   {
+    "guide": "soval.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "soval-vulcan-high-command",
+      "heading": "Vulcan High Command (Directive) (Dev Cost 3 Dilithium)",
+      "snippet": "“I’ve dealt with the High Command. Vulcans can lie and cheat with the best of them.” Jonathan Archer. The High Command oversaw Vulcan military and civilian organizations, having the power to control their space fleet, scientific institutions, and foreign relations, including dismissing Soval as Ambassador right before the invasion of Andoria.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "soval-vulcan-high-command",
+      "heading": "Vulcan High Command (Directive) (Dev Cost 3 Dilithium)",
+      "snippet": "A mirror of Shran’s Andorian Commandos, this Directive gets the Vulcan trait and scores for Military Focus. Its free Play action lets you send an away team to a Location where you have a Ship, and find a Vulcan. Its regular Play action lets you scan for a Starfleet, draw two cards, then self-log Vulcan High Command. I love the theme here, as Soval is dismissed from the High Command after allying himself with",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "soval-vulcan-science-directorate": [
+   {
+    "guide": "soval.html",
+    "count": 6,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Soval has four away teams, the Vulcan, Telepath, and Ambassador traits, and has endgame scoring for each person card that does not have the Vulcan trait. His activation lets you dismiss a Human to draw two cards, which is both mechanically valuable and a great pun. He has a Status card called the Vulcan Science Directorate. As a reaction, after you put an Anomaly or a Scientist in play, you can gain two Dilithium or",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "soval-s-starting-hand-strategies",
+      "heading": "Soval’s Starting Hand Strategies",
+      "snippet": "T’Pol’s Play Action: T’Pol’s main benefit costs two Dilithium, which you’ll need Analyze’s free play action or to use Utilize first, unless you spend your Glory (though Vulcan Science Directorate should get you some Dilithium or Glory back). Or unless you ignore the first line, though that’s a bit inefficient. Then you can draw a card, and promote a card (probably Muroc if you can).",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "species-10-c": [
    {
     "guide": "georgiou.html",
@@ -10277,6 +12049,20 @@
       "anchor": "notable-market-cards",
       "heading": "Encounters",
       "snippet": "To Boldly Go: I hesitated including Encounters at first because most captains love most of them. Still, here’s some things I saw that could be helpful. Gomtuu really helps Georgiou move up Military fast, while still offering her a chance to increase Research Focus scoring, both of which she needs for victory. Species 10-C can certainly help, but you’re risking future Encounter gain by eating up those locations and I",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "To Boldly Go: Delphic Expanse Sphere is fine, especially with a really thin deck strategy for Soval (because it can replace almost all directives you would need to gain cards). He also benefits from sending Away Teams to controlled locations, as discussed a lot in this guide. Gomtuu provides not just a ship, but a way to gain some extra Military off of Research traits, which is fantastic for Soval. New Federation",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -10301,6 +12087,20 @@
       "anchor": "notable-market-cards",
       "heading": "Encounters",
       "snippet": "To Boldly Go: I hesitated including Encounters at first because most captains love most of them. Still, here’s some things I saw that could be helpful. Gomtuu really helps Georgiou move up Military fast, while still offering her a chance to increase Research Focus scoring, both of which she needs for victory. Species 10-C can certainly help, but you’re risking future Encounter gain by eating up those locations and I",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "To Boldly Go: Delphic Expanse Sphere is fine, especially with a really thin deck strategy for Soval (because it can replace almost all directives you would need to gain cards). He also benefits from sending Away Teams to controlled locations, as discussed a lot in this guide. Gomtuu provides not just a ship, but a way to gain some extra Military off of Research traits, which is fantastic for Soval. New Federation",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -10412,6 +12212,20 @@
     ]
    },
    {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Soval isn’t picky about Person cards in general, and while his missions call for Research/Wild skills and Starfleet traits, pretty much anybody is a plus. That being said, I particularly like the crew of the NX-01 Enterprise, in particular Hoshi Sato for both mission completion and her ability to find Research skills/focus which will let you repeatedly play T’Pol. When you use T’Pol to scan for",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-persons.html",
     "count": 1,
     "hits": [
@@ -10449,6 +12263,20 @@
       "anchor": "captains",
       "heading": "Picard",
       "snippet": "Win or lose, facing Picard will let you Reinforce an Alien-trait card. If you've been having trouble with Reinforcing the right cards, it wouldn't hurt to focus there so it doesn't matter if you win or lose. Since four Ally cards have the Alien trait (Bynars, Edosians, Suliban, and Tholians) in addition to Horta (Cargo) and Voth Research Vessel (Ship), this is probably your best bet against Picard. Transcendent only",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "The repeat Ally cards aren't necessarily anything special for Soval. He’ll appreciate the flexibility Denobulans provide when scanning the Person deck, but Arin’sen, Bolians, Bynars, and Organians aren’t anything special for him. Kelpiens can alleviate the need for Incident management, though T’Pau is a better option with the Glory gain. Letheans will score well for Soval but besides that are situational as Soval",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -10548,6 +12376,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Core Set: Tribbles only really matters against Klingon Duty Officers, but watch for chances to use it. Tachyon Detection Grid continues to just be a silver bullet against a straightforward Sela game, but it’s nothing special for Soval. Biobed would help with the Research trait and free playing an Incident, but Soval doesn’t have other Doctors to Find. Mek’leth has some general usability, but not as much against the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "tahal-meeroj": [
@@ -10619,6 +12461,20 @@
       "anchor": "putting-it-all-together",
       "heading": "Putting It All Together",
       "snippet": "Looking at the market, I would suggest that anything with Klingon, Romulan, or Vulcan tags are beneficial for Sela generally. You can also make good use of Talok (benefits from Imperial tags in play), Lursa (Activation benefits from Romulans and action gains ships and sends away teams), Admiral Pressman (gains three glory from dismissing a Cloak in play), and Dorg (attack and Shady, ship gain, and reactions from",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Soval isn’t picky about Person cards in general, and while his missions call for Research/Wild skills and Starfleet traits, pretty much anybody is a plus. That being said, I particularly like the crew of the NX-01 Enterprise, in particular Hoshi Sato for both mission completion and her ability to find Research skills/focus which will let you repeatedly play T’Pol. When you use T’Pol to scan for",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -10717,6 +12573,20 @@
       "anchor": "notable-market-cards",
       "heading": "Ally Deck",
       "snippet": "To Boldly Go: While Georgiou can make use of most of these Ally cards, there are very few that I consider to be truly vital to her. As always, you’re hoping to get the Kelpiens from Saru, but let this be a second reminder that if you’re playing Burnham as she’ll scan for them too. If you’re looking for resources, grab Arin’sen, Kaelon II Science Ministry, or the Orion Syndicate. She’s also likely to get some benefit",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "To Boldly Go: I think that Soval will be in an interesting position with Kaelon II Science Ministry where, if he’s timing it right, will always get the Dilithium and Research benefits via logging with either Stel or IDIC. Orion Syndicate might be beneficial, especially if you're keeping a lot of ships deployed or if you’ve gained other Shady cards. I like Red Squadron, especially so you can keep beaming and drawing",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -10892,6 +12762,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Core Set: Halkan Council is fine enough, but Soval has some Attack cards so you’re risking a one-off. Tholians is good for pretty much anybody, and since Soval isn’t logging locations with IDIC it’s going to probably give you a lot of resources. Edosians is great and Soval should have no problem meeting the restriction. Emerald Chain isn’t anything special as Soval doesn’t have a need for the traits or free playing",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "trade-embargo": [
@@ -11026,6 +12910,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Core Set: Tribbles only really matters against Klingon Duty Officers, but watch for chances to use it. Tachyon Detection Grid continues to just be a silver bullet against a straightforward Sela game, but it’s nothing special for Soval. Biobed would help with the Research trait and free playing an Incident, but Soval doesn’t have other Doctors to Find. Mek’leth has some general usability, but not as much against the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "tulgana-iv": [
@@ -11110,6 +13008,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "To Boldly Go: I think that Soval will be in an interesting position with Kaelon II Science Ministry where, if he’s timing it right, will always get the Dilithium and Research benefits via logging with either Stel or IDIC. Orion Syndicate might be beneficial, especially if you're keeping a lot of ships deployed or if you’ve gained other Shady cards. I like Red Squadron, especially so you can keep beaming and drawing",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "universal-translator": [
@@ -11143,6 +13055,20 @@
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
       "snippet": "To Boldly Go: I’m definitely a fan of Augmentation plague due to Georgiou’s late game focus on Klingon cards, and if you can nab it early you can get some Glory every time you put a Klingon in play. You shouldn’t have to worry about specialty restrictions for cards like forced Singularity, which also gives you focus scoring for research and yet another duty officer. Same benefit to Computer Virus, and you should get",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: A Research scan of the Cargo deck gets you Universal Translator, which by itself isn’t super interesting for Soval because he may have the Starfleet cards but gets no particular benefit from Alien traits themselves. A Military scan on the other hand will fish out Computer Virus which is super interesting against an aggressive opponent warping ships. There’s a decent amount of Away Team focused cards in",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -11201,6 +13127,20 @@
       "anchor": "putting-it-all-together",
       "heading": "Putting It All Together",
       "snippet": "Looking at the market, I would suggest that anything with Klingon, Romulan, or Vulcan tags are beneficial for Sela generally. You can also make good use of Talok (benefits from Imperial tags in play), Lursa (Activation benefits from Romulans and action gains ships and sends away teams), Admiral Pressman (gains three glory from dismissing a Cloak in play), and Dorg (attack and Shady, ship gain, and reactions from",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Core Set: Tribbles only really matters against Klingon Duty Officers, but watch for chances to use it. Tachyon Detection Grid continues to just be a silver bullet against a straightforward Sela game, but it’s nothing special for Soval. Biobed would help with the Research trait and free playing an Incident, but Soval doesn’t have other Doctors to Find. Mek’leth has some general usability, but not as much against the",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -11340,6 +13280,20 @@
     ]
    },
    {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The repeated Ships from the Core Box are all great too. Borg Probe is always a great beaming Ship. D’Kyr is a must-get if possible to complement the Vulcan fleet. Holographic Drone Ship should be playable with a Telepath, though he can probably also hit the seven Research requirement of the first free play action. Enterprise-C is okay but will cost you the Vulcan Science Institute Status. The Pasteur is probably",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-allies.html",
     "count": 1,
     "hits": [
@@ -11393,6 +13347,20 @@
       "anchor": "notable-market-cards",
       "heading": "Ally Deck",
       "snippet": "To Boldly Go: While Georgiou can make use of most of these Ally cards, there are very few that I consider to be truly vital to her. As always, you’re hoping to get the Kelpiens from Saru, but let this be a second reminder that if you’re playing Burnham as she’ll scan for them too. If you’re looking for resources, grab Arin’sen, Kaelon II Science Ministry, or the Orion Syndicate. She’s also likely to get some benefit",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "To Boldly Go: I think that Soval will be in an interesting position with Kaelon II Science Ministry where, if he’s timing it right, will always get the Dilithium and Research benefits via logging with either Stel or IDIC. Orion Syndicate might be beneficial, especially if you're keeping a lot of ships deployed or if you’ve gained other Shady cards. I like Red Squadron, especially so you can keep beaming and drawing",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -11474,6 +13442,20 @@
     ]
    },
    {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "To Boldly Go: Delphic Expanse Sphere is fine, especially with a really thin deck strategy for Soval (because it can replace almost all directives you would need to gain cards). He also benefits from sending Away Teams to controlled locations, as discussed a lot in this guide. Gomtuu provides not just a ship, but a way to gain some extra Military off of Research traits, which is fantastic for Soval. New Federation",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-encounters-incidents.html",
     "count": 1,
     "hits": [
@@ -11519,6 +13501,20 @@
       "anchor": "missions",
       "heading": "Missions",
       "snippet": "Georgiou’s Advanced side gives you three points for Call in the Reinforcements. Her second mission is Hardly a Negotiation, which requires three non-Starfleet Person cards on the same ship, and at least one of each skill track. The second part of that isn’t hard with Utilize and other random abilities, but you’ll need to intentionally gain person cards to get this one done. It rewards you with three points, a",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Soval isn’t picky about Person cards in general, and while his missions call for Research/Wild skills and Starfleet traits, pretty much anybody is a plus. That being said, I particularly like the crew of the NX-01 Enterprise, in particular Hoshi Sato for both mission completion and her ability to find Research skills/focus which will let you repeatedly play T’Pol. When you use T’Pol to scan for",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -11573,6 +13569,20 @@
       "anchor": "notable-market-cards",
       "heading": "Ship Deck",
       "snippet": "To Boldly Go: The repeat ships from the Corebox are all great, but Borg Cube gives the extra advantage of endgame scoring for Georgiou so long as you can keep it in play at the end of the game with lots of beamed cards. D’kyr Cruiser has that Vulcan trait and Military restriction that Georgiou can benefit from too. Medusian Vessel is a good pick for the Alien trait. Grabbing Vor’cha Attack Cruiser can help push the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "To Boldly Go: D’Kora Marauder is actually interesting because sending an Away Team for a Latinum is something Soval can afford, and he can scan for it with T’Pol. He’ll probably also be scanning for Medusan Vessel with its Research Skill, which is great for his Mission, your need for ships, and scanning for some Telepaths (which Mount Seleya scores for). D’Var is interesting simply for the free play deploy, which",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -11644,6 +13654,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Core Set: The Reliant is solid for Soval without being anything too crazy, though he should be able to free-play by reaching that five Influence requirement pretty fast. Same with the Son’a Battlecruiser and their six Military requirement. K’T’Inga Battlecruiser can be scanned for with Military skill, Bird of Prey with Influence skill, and Voth Research Vessel with Research, so T’Pol may be well-suited looking there",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "wesley-crusher": [
@@ -11696,6 +13720,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "promos",
+      "heading": "Promos",
+      "snippet": "Sehlat is quite obviously amazing for Soval. There’s no downside and a lot of flexibility in this promo card, so much so that it can make Soval’s game feel like easy mode. It would be important to point out its existence to players using Soval, or playing against him. Enterprise B is a fun ship, and Soval should have plenty of Person cards to fuel Activation. Wesley Crusher is always great, more so for Person-heavy",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "whale-probe-incursion": [
@@ -11738,6 +13776,22 @@
       "heading": "Advanced Locations",
       "snippet": "Moving on to the Advanced Locations, take note of these five repeats: Kelvas Docks, Verex III, Memory Alpha, Xahea, and Solum. Solum comes with an updated Vau N’akat Trait, so be sure to use it if you’re combining boxes. It’s the only Vau N’akat trait in the game so far… I’ll let you all speculate as to what that could mean. The remaining five Advanced Locations are as follows:",
       "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "xindi-aquatic-cruiser": [
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "To Boldly Go: D’Kora Marauder is actually interesting because sending an Away Team for a Latinum is something Soval can afford, and he can scan for it with T’Pol. He’ll probably also be scanning for Medusan Vessel with its Research Skill, which is great for his Mission, your need for ships, and scanning for some Telepaths (which Mount Seleya scores for). D’Var is interesting simply for the free play deploy, which",
+      "truncated": true,
       "mode": "text",
       "lore": false
      }

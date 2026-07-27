@@ -176,8 +176,20 @@ def to_marked_text(post):
     # strip formatting wrappers hugging headers (strong / underline spans)
     s = re.sub(r"<(strong|span style=text-decoration:underline)>\s*(\[\[H[23]\]\])", r"\2", s)
     s = re.sub(r"(\[\[/H[23]\]\])\s*</(strong|span)>", r"\1", s)
-    # links -> markers
-    s = re.sub(r'<a [^>]*href="([^"]+)"[^>]*>(.*?)</a>', r"[[A:\1]]\2[[/A]]", s, flags=re.S)
+    # links -> markers. SingleFile emits BOTH quoted and unquoted href
+    # (the Soval capture had `href=https://...` with no quotes; the quoted-only
+    # pattern dropped McCue's designer-diary link silently). Image links are
+    # left alone: the <img> is already an [[IMG:]] marker on its own line, and
+    # wrapping it in [[A]]/[[/A]] would strand those markers as paragraphs.
+    def _link(m):
+        url = m.group(1) or m.group(2) or m.group(3)
+        inner = m.group(4)
+        if "[[IMG:" in inner:
+            return inner
+        return "[[A:%s]]%s[[/A]]" % (url, inner)
+
+    s = re.sub(r"""<a\s[^>]*href=(?:"([^"]+)"|'([^']+)'|([^\s">]+))[^>]*>(.*?)</a>""",
+               _link, s, flags=re.S)
     s = re.sub(r"<br[^>]*>", "\n", s)
     s = s.replace("<strong>", "[[B]]").replace("</strong>", "[[/B]]")
     s = s.replace("<em>", "[[I]]").replace("</em>", "[[/I]]")
@@ -236,6 +248,14 @@ def build_body(marked, cfg, manifest, report):
     for line in marked.split("\n"):
         line = line.strip()
         if not line:
+            continue
+        if line in ("[", "]", "[]"):
+            # BGG image-markup residue: one Soval image sat inside a
+            # `<gg-markup-content class=floated>[<gg-markup-geekimage>` wrapper,
+            # leaving the opening bracket of BGG's [ImageID=...] tag as a
+            # paragraph of its own. A paragraph that is only a bracket is never
+            # prose, so this is formatting cleanup, not an edit to McCue's text.
+            report.append("dropped stray BGG bracket residue: %r" % line)
             continue
         m = re.match(r"^\[\[IMG:(.*)\]\]$", line)
         if m:
@@ -416,11 +436,32 @@ def build_body(marked, cfg, manifest, report):
         return fmt_inline(t)
 
     seen_ids = {}
+    # h3_ids: heading text (inline markers stripped) -> explicit anchor id.
+    # Use it to give a card's H3 the card's own database id, which promotes
+    # every such section from text matching to an exact anchor in the strategy
+    # index (WORKFLOW "New conventions", 27 Jul 2026). A key that matches no
+    # heading is a hard error: a silently unapplied id would ship a guide whose
+    # cards look undiscussed in the Card Scanner.
+    h3_ids = dict(cfg.get("h3_ids", {}))
+    h3_seen = set()
+
+    def strip_markers(text):
+        return re.sub(r"\[\[/?[A-Z]+(?::[^\]]*)?\]\]", "", text).strip()
 
     def uniq_id(text):
         """Stable, collision-free anchor. Repeated sub-headings (ACTIVATIONS
         under each box) would otherwise share an id."""
-        base = slugify(text)
+        bare = strip_markers(text)
+        explicit = h3_ids.get(bare) or h3_ids.get(plain(bare))
+        if explicit is None:
+            for k, v in h3_ids.items():
+                if plain(k) == plain(bare):
+                    explicit = v
+                    break
+        if explicit:
+            h3_seen.add(explicit)
+            return explicit
+        base = slugify(bare)
         seen_ids[base] = seen_ids.get(base, 0) + 1
         return base if seen_ids[base] == 1 else "%s-%d" % (base, seen_ids[base])
 
@@ -466,6 +507,11 @@ def build_body(marked, cfg, manifest, report):
         alt = cfg.get("lead_image_alt", "")
         body.insert(1, '<div class="card-img"><img src="%s" alt="%s" '
                        'loading="lazy" onclick="openLightbox(this)"></div>\n\n' % (lead, alt))
+
+    unused = [k for k, v in h3_ids.items() if v not in h3_seen]
+    if unused:
+        sys.exit("h3_ids key matched NO heading: %s\nFix the config; nothing built."
+                 % ", ".join(repr(u) for u in unused))
     return "".join(body), h2s
 
 
