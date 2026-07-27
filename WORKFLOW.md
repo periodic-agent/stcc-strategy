@@ -817,3 +817,81 @@ git clone --depth 1 https://github.com/periodic-agent/stcc-strategy /tmp/repo
 
 `push_to_github.py` is unaffected: it pushes over git, not the REST API. Run it from a directory git
 can lock (a mounted output folder may refuse `.git` operations; clone under `/tmp`).
+
+---
+
+## Session Delta — 27 Jul 2026 (Strategy Index)
+
+### What shipped
+
+Every card in `box1/2/3.json` is cross-referenced against every guide. In the Card Scanner's
+Cards view, a discussed card carries a teal `Strategy` badge (`#5ec8c8`; teal was chosen because
+it is the one hue absent from the suit palette, and gray would read as the existing
+Update/Duplicate metadata badges). The whole pill is the click target, not the badge. Clicking
+opens a full-width row drawer (`grid-column:1/-1`, so the grid never reflows sideways) with the
+guide name, section, McCue's paragraphs verbatim, and deep links into the guide. Cards with no
+mention get no badge and no click target: a click never returns an empty drawer. Escape closes.
+Coverage at ship time: 321 of 549 cards, 26 guides.
+
+### Files
+
+| Path | Role |
+|---|---|
+| `tools/build_strategy_index.py` | Generator. Stdlib only. `--report` prints coverage and top mentions; `--check` exits 1 if stale (used by CI). |
+| `tools/strategy_index_config.json` | Stopwords, aliases, per-guide deck attribution, caps. Tune here, never in the script. |
+| `tools/patch_scanner_strategy.py` | Applies the badge + drawer to `card-browser-mockup.html`. Idempotent; asserts every anchor, so a scanner refactor fails loudly. |
+| `data/strategy-index.json` | Full index with snippets (~550 KB). Fetched lazily, on first drawer open. |
+| `data/strategy-cards.json` | `{card_id: mention_count}` (~8 KB). Fetched at scanner start-up; drives the badge. |
+| `tools/strategy-drawer-preview.html` | Standalone interaction preview against live data. Not linked from the site. |
+| `.github/workflows/strategy-index.yml` | Rebuilds and commits the index on any push touching `*.html`, `box*.json`, or the generator. Gated on `--check` so the timestamp alone cannot produce a no-op commit. |
+
+The two-file data split is deliberate: 550 KB on every scanner load would be a regression on
+mobile, the scanner's primary use case.
+
+### Matching rules (generator)
+
+Two modes; anchor beats text:
+
+1. **Anchor.** A guide heading carries `id="card-id"`. Market guides are built this way, so
+   those hits are exact by construction (200 of the 874 total).
+2. **Text.** Card name in a `<p>`, matched on normalized text (accents, periods, apostrophes
+   stripped) with word boundaries. `U.S.S. Enterprise-C` and `Mek'Leth` match with no special
+   cases.
+
+Constraints that make the matches trustworthy:
+
+- **Snippets are whole paragraphs, never sentence windows.** Rule 1 requires verbatim text, and
+  a paragraph boundary cannot crop a thought; sentence splitters break on `U.S.S.`, `vs.`, `Dr.`.
+- **`<p class="lore">` is excluded from text mode.** Lore is episode trivia, not strategy; this
+  is what stops the Memory Alpha location card from matching every Memory Alpha wiki reference.
+  Anchor matches keep their lore paragraph, since there the card is the subject.
+- **Same-name captain cards** (Utilize, Recruit, Analyze, Set a Course) resolve to the captain's
+  own printing inside that captain's guide, via `deck_prefix_by_guide` in the config.
+- **Stopwords** (`Orion`, `Vulcan`, `Earth`, `Data`, `Phasers`, `Memory Alpha`, ...) match by
+  anchor only. Editing that list is the normal fix for a false positive. After importing any
+  guide, run `--report` and scan the top-mentions table; a new name at the top usually wants a
+  stopword.
+
+### New conventions
+
+- Guides that discuss specific cards should use `<h3 id="card-id">` (the market-guide pattern).
+  That promotes every card in the guide from text matching to an exact anchor and gives the
+  drawer a precise deep link.
+- `tools/test_scanner.mjs` now also asserts: badge and click wiring on discussed vs undiscussed
+  cards, drawer rendering with the McCue attribution line, every index-referenced guide exists
+  on disk, every drawer deep link points at an anchor that exists, and every indexed card id
+  still exists in `box*.json`. Renaming a guide or a heading id without rebuilding the index
+  fails the test instead of shipping dead links. Note: the lightbox file-exists assertion
+  requires a full checkout; it false-fails in a sparse clone without `img/`.
+
+### Deferred by choice
+
+Strategy filter pill in the filter row; guide references in the Images-view lightbox caption.
+Both ride on the same data with no generator changes.
+
+### Lesson recorded
+
+`patch_scanner_strategy.py` originally opened its output with `open(out, "w")` before the patch
+function ran; a failed patch truncated the scanner to zero bytes. Fixed by building the patched
+content fully before opening anything for write. Convention for all future patch scripts: never
+open the destination for writing until the new content exists in memory.
