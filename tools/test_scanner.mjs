@@ -234,6 +234,10 @@ api.setView('image');
 api.showStrategy();
 assert(api.viewMode === 'pill',
   'the header banner switches to Cards view, where the Strategy badge lives');
+assert(/<span class="card-badge strategy">Strategy<\/span>[^<]*badge/.test(html),
+  'the banner renders a real Strategy badge chip, not the word in plain text');
+assert(/\.new-banner \.card-badge\{margin-bottom:0;\}/.test(html),
+  'the inline badge drops the card-context bottom margin so the banner text stays centred');
 
 // --- strategy index: badge, drawer, and link integrity ---------------------
 // The drawer deep-links into guides, so a stale index would produce badges

@@ -197,6 +197,7 @@ a{color:var(--blue);text-decoration:none;}
 /* --- strategy index: badge + drawer --- */
 .card-badge.strategy{background:rgba(94,200,200,0.14);color:#6fd3d3;border-color:rgba(94,200,200,0.45);}
 .card-badge + .card-badge{margin-left:0.3rem;}
+.new-banner .card-badge{margin-bottom:0;}
 .card-entry.has-strategy{cursor:pointer;}
 .card-entry.has-strategy:hover{border-color:rgba(94,200,200,0.55);}
 .card-entry.drawer-open{border-color:#5ec8c8;box-shadow:0 0 0 1px rgba(94,200,200,0.35);}
@@ -263,7 +264,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   <div class="chapter-label">ST:CC Strategy Compendium</div>
   <h1 class="chapter-title"><span>Card</span> Scanner</h1>
   <div class="chapter-meta">Select boxes, filter by trait or skill, search by name. Show details or images.</div>
-  <a class="new-banner" onclick="showStrategy(event)" title="Cards discussed in the guides carry a Strategy tag"><span class="new-badge">New</span><span>Card search now links to the guides! Look for the Strategy tag</span><span class="new-arrow">→</span></a>
+  <a class="new-banner" onclick="showStrategy(event)" title="Cards discussed in the guides carry a Strategy badge"><span class="new-badge">New</span><span>Card search now links to the guides! Look for the <span class="card-badge strategy">Strategy</span> badge</span><span class="new-arrow">→</span></a>
 </header>
 
 <div class="controls">
