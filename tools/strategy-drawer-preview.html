@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strategy Drawer — interaction preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#0a0e1a;--bg2:#0f1628;--bg3:#141c35;
+  --blue:#4a9fd4;--blue2:#7ec8f0;--gold:#c8a84b;
+  --scanner:#d4699f;--scanner2:#e899c4;
+  --text:#ccd6f0;--muted:#7a8aaa;--border:rgba(74,159,212,0.25);
+  --person:#e8a94a;--ally:#9b6ecf;--ship:#7a8aaa;
+  --cargo:#3a6aaa;--location:#4ac48a;--encounter:#d4699f;--incident:#e05a5a;
+  --sp-bg:rgba(220,140,60,0.12);--sp-bd:rgba(220,140,60,0.45);--sp-tx:#e09050;
+  --rg-bg:rgba(74,159,212,0.10);--rg-bd:rgba(74,159,212,0.35);--rg-tx:#7ec8f0;
+  --ot-bg:rgba(200,60,60,0.10);--ot-bd:rgba(200,60,60,0.35);--ot-tx:#e05a5a;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:var(--text);min-height:100vh;}
+a{color:var(--blue);text-decoration:none;}
+.nav-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:0.75rem 1.5rem;}
+.nav-bar a{font-family:'Orbitron',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--scanner);}
+.chapter-header{background:linear-gradient(135deg,#160820 0%,#2a1035 50%,#160820 100%);border-bottom:2px solid var(--scanner);padding:2.5rem 2rem 2rem;text-align:center;position:relative;overflow:hidden;}
+.chapter-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(212,105,159,0.03) 60px,rgba(212,105,159,0.03) 61px);}
+.chapter-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.25em;color:var(--scanner);text-transform:uppercase;margin-bottom:0.6rem;}
+.chapter-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:700;color:#fff;letter-spacing:0.05em;text-shadow:0 0 40px rgba(212,105,159,0.5);}
+.chapter-title span{color:var(--scanner2);}
+.chapter-meta{margin-top:0.6rem;font-size:0.78rem;color:var(--muted);}
+.new-banner{display:inline-flex;align-items:center;gap:0.55rem;margin-top:1rem;padding:0.28rem 0.75rem 0.28rem 0.32rem;background:rgba(212,74,74,0.08);border:1px solid rgba(212,74,74,0.35);border-radius:999px;font-family:'Exo 2',sans-serif;font-size:0.8rem;color:var(--text);text-decoration:none;cursor:pointer;transition:border-color .2s,background .2s,transform .2s;}
+.new-banner:hover{border-color:rgba(240,126,126,0.75);background:rgba(212,74,74,0.15);transform:translateY(-1px);}
+.new-badge{font-family:'Orbitron',sans-serif;font-size:0.58rem;font-weight:700;letter-spacing:0.14em;color:#fff;text-transform:uppercase;padding:0.22rem 0.5rem;border-radius:999px;background:linear-gradient(135deg,#f0902e,#d44a4a);box-shadow:0 0 12px rgba(240,144,46,0.45);}
+.new-banner .new-arrow{color:var(--muted);font-size:0.85rem;transition:transform .2s;}
+.new-banner:hover .new-arrow{transform:translateX(3px);}
+.controls{max-width:1100px;margin:1.5rem auto 0;padding:0 1.5rem;}
+.filter-section{margin-bottom:1rem;}
+.filter-label{font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;}
+.pill-row{display:flex;flex-wrap:wrap;gap:0.35rem;}
+.search-row{display:flex;gap:0.75rem;align-items:center;margin-bottom:1.25rem;}
+.search-box{flex:1;background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:0.55rem 0.9rem;font-family:'Exo 2',sans-serif;font-size:0.9rem;color:var(--text);outline:none;transition:border-color 0.2s;}
+.search-box::placeholder{color:var(--muted);}
+.search-box:focus{border-color:var(--blue);}
+.view-toggle{display:flex;gap:0.35rem;}
+.vtoggle{font-family:'Orbitron',sans-serif;font-size:0.52rem;letter-spacing:0.1em;text-transform:uppercase;background:transparent;border:1px solid var(--border);color:var(--muted);padding:0.35rem 0.7rem;border-radius:3px;cursor:pointer;transition:all 0.15s;}
+.vtoggle.active{border-color:var(--blue);color:var(--blue2);background:rgba(74,159,212,0.1);}
+.clear-btn{font-family:'Orbitron',sans-serif;font-size:0.52rem;letter-spacing:0.1em;text-transform:uppercase;background:transparent;border:1px solid var(--border);color:var(--muted);padding:0.35rem 0.7rem;border-radius:3px;cursor:pointer;transition:all 0.15s;white-space:nowrap;}
+.clear-btn:hover{color:var(--text);border-color:var(--blue);}
+
+/* BOX PILLS */
+.box-pill{font-family:'Exo 2',sans-serif;font-size:0.72rem;padding:0.22rem 0.75rem;border-radius:3px;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:all 0.15s;user-select:none;}
+.box-pill[data-box="core"]{border-color:#4a9fd4;color:#4a9fd4;}
+.box-pill[data-box="core"].active{background:#4a9fd4;border-color:#4a9fd4;color:#000;font-weight:600;}
+.box-pill[data-box="tbg"]{border-color:#c0392b;color:#c0392b;}
+.box-pill[data-box="tbg"]:hover{border-color:#e05a5a;color:#e05a5a;}
+.box-pill[data-box="tbg"].active{background:#c0392b;border-color:#c0392b;color:#fff;font-weight:600;}
+.box-pill[data-box="2nd"]{border-color:#c8a84b;color:#c8a84b;}
+.box-pill[data-box="2nd"]:hover{border-color:#e8c96a;color:#e8c96a;}
+.box-pill[data-box="2nd"].active{background:#c8a84b;border-color:#c8a84b;color:#000;font-weight:600;}
+.box-pill[data-box="promo1"]{border-color:#4a9fd4;color:#4a9fd4;}
+.box-pill[data-box="promo1"].active{background:#4a9fd4;border-color:#4a9fd4;color:#000;font-weight:600;}
+.box-pill[data-box="promo2"]{border-color:#c0392b;color:#c0392b;}
+.box-pill[data-box="promo2"]:hover{border-color:#e05a5a;color:#e05a5a;}
+.box-pill[data-box="promo2"].active{background:#c0392b;border-color:#c0392b;color:#fff;font-weight:600;}
+
+/* PROMO PILLS */
+.promo-pill{font-family:'Exo 2',sans-serif;font-size:0.72rem;padding:0.22rem 0.75rem;border-radius:3px;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:all 0.15s;user-select:none;}
+.promo-pill[data-promo="promo1"]{border-color:#4a9fd4;color:#4a9fd4;}
+.promo-pill[data-promo="promo1"].active{background:#4a9fd4;border-color:#4a9fd4;color:#000;font-weight:600;}
+.promo-pill[data-promo="promo2"]{border-color:#c0392b;color:#c0392b;}
+.promo-pill[data-promo="promo2"]:hover{border-color:#e05a5a;color:#e05a5a;}
+.promo-pill[data-promo="promo2"].active{background:#c0392b;border-color:#c0392b;color:#fff;font-weight:600;}
+
+/* DECK PILLS */
+.deck-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;padding:0.18rem 0.6rem;border-radius:3px;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:all 0.15s;user-select:none;}
+.deck-pill.core{border-color:rgba(74,159,212,0.4);color:#4a9fd4;}
+.deck-pill.core:hover{background:rgba(74,159,212,0.15);border-color:#4a9fd4;color:#7ec8f0;}
+.deck-pill.core.active{background:#4a9fd4;border-color:#4a9fd4;color:#000;font-weight:600;}
+.deck-pill.tbg{border-color:rgba(192,57,43,0.4);color:#c0392b;}
+.deck-pill.tbg:hover{background:rgba(192,57,43,0.15);border-color:#e05a5a;color:#ff8080;}
+.deck-pill.tbg.active{background:#c0392b;border-color:#c0392b;color:#fff;font-weight:600;}
+.deck-pill.second{border-color:rgba(200,168,75,0.4);color:#c8a84b;}
+.deck-pill.second:hover{background:rgba(200,168,75,0.15);border-color:#e8c96a;color:#f0d878;}
+.deck-pill.second.active{background:#c8a84b;border-color:#c8a84b;color:#000;font-weight:600;}
+.deck-pill.common{border-color:rgba(74,159,212,0.4);color:#4a9fd4;}
+.deck-pill.common:hover{background:rgba(74,159,212,0.15);border-color:#4a9fd4;color:#7ec8f0;}
+.deck-pill.common.active{background:#4a9fd4;border-color:#4a9fd4;color:#000;font-weight:600;}
+.deck-pill.common-tbg{border-color:rgba(192,57,43,0.4);color:#c0392b;}
+.deck-pill.common-tbg:hover{background:rgba(192,57,43,0.15);border-color:#e05a5a;color:#ff8080;}
+.deck-pill.common-tbg.active{background:#c0392b;border-color:#c0392b;color:#fff;font-weight:600;}
+.deck-pill.common-2nd{border-color:rgba(200,168,75,0.4);color:#c8a84b;}
+.deck-pill.common-2nd:hover{background:rgba(200,168,75,0.15);border-color:#e8c96a;color:#f0d878;}
+.deck-pill.common-2nd.active{background:#c8a84b;border-color:#c8a84b;color:#000;font-weight:600;}
+
+/* SUIT PILLS */
+.suit-pill{font-family:'Exo 2',sans-serif;font-size:0.72rem;padding:0.22rem 0.65rem;border-radius:3px;border:1px solid;cursor:pointer;transition:background 0.15s;user-select:none;}
+.suit-pill[data-suit="Person"]{border-color:var(--person);color:var(--person);}
+.suit-pill[data-suit="Ally"]{border-color:var(--ally);color:var(--ally);}
+.suit-pill[data-suit="Ship"]{border-color:var(--ship);color:var(--ship);}
+.suit-pill[data-suit="Cargo"]{border-color:var(--cargo);color:var(--cargo);}
+.suit-pill[data-suit="Location"]{border-color:var(--location);color:var(--location);}
+.suit-pill[data-suit="Encounter"]{border-color:var(--encounter);color:var(--encounter);}
+.suit-pill[data-suit="Incident"]{border-color:var(--incident);color:var(--incident);}
+.suit-pill[data-suit="Automated Command"]{border-color:#e8e8f0;color:#e8e8f0;}
+.suit-pill[data-suit="Automated Command"]:hover{border-color:#fff;color:#fff;}
+.suit-pill.active[data-suit="Automated Command"]{background:#e8e8f0;color:#000;}
+.suit-pill.disabled{opacity:0.35;cursor:not-allowed;pointer-events:none;}
+.suit-pill.active[data-suit="Person"]{background:var(--person);color:#000;}
+.suit-pill.active[data-suit="Ally"]{background:var(--ally);color:#fff;}
+.suit-pill.active[data-suit="Ship"]{background:var(--ship);color:#fff;}
+.suit-pill.active[data-suit="Cargo"]{background:var(--cargo);color:#fff;}
+.suit-pill.active[data-suit="Location"]{background:var(--location);color:#000;}
+.suit-pill.active[data-suit="Encounter"]{background:var(--encounter);color:#fff;}
+.suit-pill.active[data-suit="Incident"]{background:var(--incident);color:#fff;}
+
+/* TRAIT PILLS */
+.species-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;padding:0.18rem 0.55rem;border-radius:3px;border:1px solid var(--sp-bd);color:var(--sp-tx);background:var(--sp-bg);cursor:pointer;transition:all 0.15s;user-select:none;}
+.species-pill:hover,.species-pill.active{background:rgba(220,140,60,0.25);border-color:#e09050;color:#f0b070;}
+.regular-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;padding:0.18rem 0.55rem;border-radius:3px;border:1px solid var(--rg-bd);color:var(--rg-tx);background:var(--rg-bg);cursor:pointer;transition:all 0.15s;user-select:none;}
+.regular-pill:hover,.regular-pill.active{background:rgba(74,159,212,0.22);border-color:var(--blue2);color:#fff;}
+.other-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;padding:0.18rem 0.55rem;border-radius:3px;border:1px solid var(--ot-bd);color:var(--ot-tx);background:var(--ot-bg);cursor:pointer;transition:all 0.15s;user-select:none;}
+.other-pill:hover,.other-pill.active{background:rgba(200,60,60,0.22);border-color:#e05a5a;color:#ff8080;}
+.skill-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;padding:0.18rem 0.55rem;border-radius:3px;border:1px solid rgba(200,168,75,0.3);color:var(--gold);background:rgba(200,168,75,0.06);cursor:pointer;transition:all 0.15s;user-select:none;}
+.skill-pill:hover,.skill-pill.active{background:rgba(200,168,75,0.2);border-color:var(--gold);color:#e8c96a;}
+
+/* COLLAPSIBLE */
+.collapsible-header{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:0.3rem 0;user-select:none;}
+.collapsible-header:hover .filter-label{color:var(--blue2);}
+.collapsible-arrow{font-size:0.7rem;color:var(--muted);transition:transform 0.2s;margin-left:0.5rem;flex-shrink:0;display:inline-block;}
+.collapsible-header.open .collapsible-arrow{transform:rotate(180deg);}
+.active-summary{font-size:0.6rem;color:var(--sp-tx);margin-left:0.5rem;font-family:'Exo 2',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:300px;}
+.active-summary.regular{color:var(--rg-tx);}
+.active-summary.other{color:var(--ot-tx);}
+.active-summary.skill{color:var(--gold);}
+.collapsible-body{display:none;padding-top:0.4rem;}
+.collapsible-body.open{display:block;}
+
+/* RESULTS */
+.results-bar{max-width:1100px;margin:0.5rem auto 0;padding:0 1.5rem 0.5rem;display:flex;align-items:center;}
+.result-count{font-family:'Orbitron',sans-serif;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);}
+.result-count span{color:var(--blue2);}
+
+/* DECK GROUPS */
+.deck-groups{max-width:1100px;margin:0 auto;padding:0 1.5rem 3rem;}
+.deck-group{margin-bottom:1.5rem;}
+.deck-group-header{font-family:'Orbitron',sans-serif;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);border-bottom:1px solid var(--border);padding-bottom:0.4rem;margin-bottom:0.6rem;display:flex;align-items:center;gap:0.5rem;}
+.deck-count{color:var(--muted);font-size:0.55rem;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0.6rem;}
+
+/* CARD ENTRIES */
+.card-entry{background:var(--bg2);border:1px solid var(--border);border-radius:5px;padding:0.7rem;transition:border-color 0.15s,transform 0.15s;}
+.card-entry:hover{border-color:var(--blue);transform:translateY(-2px);}
+.card-entry[data-suit="Person"]{border-left:2px solid var(--person);}
+.card-entry[data-suit="Ally"]{border-left:2px solid var(--ally);}
+.card-entry[data-suit="Ship"]{border-left:2px solid var(--ship);}
+.card-entry[data-suit="Cargo"]{border-left:2px solid var(--cargo);}
+.card-entry[data-suit="Location"]{border-left:2px solid var(--location);}
+.card-entry[data-suit="Encounter"]{border-left:2px solid var(--encounter);}
+.card-entry[data-suit="Incident"]{border-left:2px solid var(--incident);}
+.card-entry[data-suit="Captain"]{border-left:2px solid var(--gold);}
+.card-entry[data-suit="Directive"]{border-left:2px solid var(--muted);}
+.card-entry[data-suit="Status"]{border-left:2px solid #88aacc;}
+.card-entry[data-suit=""]{border-left:2px solid var(--muted);}
+.card-suit-bar{display:flex;align-items:center;gap:0.35rem;margin-bottom:0.35rem;}
+.suit-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.suit-dot[data-suit="Person"]{background:var(--person);}
+.suit-dot[data-suit="Ally"]{background:var(--ally);}
+.suit-dot[data-suit="Ship"]{background:var(--ship);}
+.suit-dot[data-suit="Cargo"]{background:var(--cargo);}
+.suit-dot[data-suit="Location"]{background:var(--location);}
+.suit-dot[data-suit="Encounter"]{background:var(--encounter);}
+.suit-dot[data-suit="Incident"]{background:var(--incident);}
+.suit-dot[data-suit="Captain"]{background:var(--gold);}
+.suit-dot[data-suit="Directive"]{background:var(--muted);}
+.suit-dot[data-suit="Status"]{background:#88aacc;}
+.suit-dot[data-suit=""]{background:var(--muted);}
+.suit-label{font-family:'Orbitron',sans-serif;font-size:0.48rem;letter-spacing:0.15em;text-transform:uppercase;}
+.suit-label[data-suit="Person"]{color:var(--person);}
+.suit-label[data-suit="Ally"]{color:var(--ally);}
+.suit-label[data-suit="Ship"]{color:var(--ship);}
+.suit-label[data-suit="Cargo"]{color:var(--cargo);}
+.suit-label[data-suit="Location"]{color:var(--location);}
+.suit-label[data-suit="Encounter"]{color:var(--encounter);}
+.suit-label[data-suit="Incident"]{color:var(--incident);}
+.suit-label[data-suit="Captain"]{color:var(--gold);}
+.suit-label[data-suit="Directive"]{color:var(--muted);}
+.suit-label[data-suit="Status"]{color:#88aacc;}
+.suit-label[data-suit=""]{color:var(--muted);}
+.card-name{font-family:'Exo 2',sans-serif;font-size:0.85rem;font-weight:600;color:#fff;line-height:1.3;margin-bottom:0.45rem;}
+.card-badge{display:inline-block;font-family:'Exo 2',sans-serif;font-size:0.56rem;font-weight:600;letter-spacing:0.02em;padding:0.1rem 0.4rem;border-radius:2px;margin-bottom:0.4rem;border:1px solid;}
+.card-badge.update{background:rgba(140,150,170,0.18);color:#b8c0d0;border-color:rgba(140,150,170,0.5);}
+.card-badge.duplicate{background:rgba(140,150,170,0.12);color:#9aa4b8;border-color:rgba(140,150,170,0.35);}
+.card-img-badge{position:absolute;top:6px;left:6px;font-family:'Exo 2',sans-serif;font-size:0.5rem;font-weight:600;padding:0.08rem 0.4rem;border-radius:2px;border:1px solid;z-index:2;}
+.card-img-badge.update{background:rgba(90,100,120,0.92);color:#fff;border-color:rgba(160,170,190,0.8);}
+.card-img-badge.duplicate{background:rgba(90,100,120,0.75);color:#fff;border-color:rgba(160,170,190,0.6);}
+.card-img-entry{position:relative;}
+.card-tags{display:flex;flex-wrap:wrap;gap:0.22rem;margin-bottom:0.3rem;}
+.ctag{font-size:0.58rem;padding:0.07rem 0.3rem;border-radius:2px;}
+.ctag-species{background:rgba(220,140,60,0.15);color:#d09060;border:1px solid rgba(220,140,60,0.3);}
+.ctag-species.match{background:rgba(220,140,60,0.3);color:#f0b070;border-color:#e09050;}
+.ctag-regular{background:rgba(74,159,212,0.10);color:#6ab8e0;border:1px solid rgba(74,159,212,0.25);}
+.ctag-regular.match{background:rgba(74,159,212,0.25);color:#9ed8f5;border-color:var(--blue2);}
+.ctag-other{background:rgba(200,60,60,0.10);color:#c06060;border:1px solid rgba(200,60,60,0.25);}
+.ctag-other.match{background:rgba(200,60,60,0.25);color:#ff8080;border-color:#e05a5a;}
+.card-skills{display:flex;flex-wrap:wrap;gap:0.22rem;}
+.card-skill{font-size:0.58rem;padding:0.07rem 0.3rem;border-radius:2px;background:rgba(200,168,75,0.08);color:var(--gold);border:1px solid rgba(200,168,75,0.2);}
+.card-skill.match{background:rgba(200,168,75,0.22);border-color:var(--gold);color:#e8c96a;}
+
+/* IMAGE VIEW */
+.img-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:0.6rem;}
+.card-img-entry{background:var(--bg2);border:1px solid var(--border);border-radius:5px;overflow:hidden;transition:border-color 0.15s,transform 0.15s;text-align:center;}
+.card-img-entry:hover{border-color:var(--blue);transform:translateY(-2px);}
+.card-img-entry img{width:100%;display:block;background:var(--bg3);}
+.card-img-entry img{cursor:zoom-in;}
+#lightbox{position:fixed;inset:0;background:rgba(5,8,16,0.92);display:none;align-items:center;justify-content:center;z-index:1000;cursor:zoom-out;padding:2rem;}
+#lightbox.open{display:flex;}
+#lightbox img{max-width:min(90vw,640px);max-height:90vh;width:auto;height:auto;border-radius:8px;box-shadow:0 0 60px rgba(212,105,159,0.35);border:1px solid rgba(212,105,159,0.4);}
+.card-img-name{font-size:0.65rem;padding:0.3rem 0.4rem;color:var(--text);line-height:1.2;}
+.img-placeholder{width:100%;aspect-ratio:5/7;background:var(--bg3);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.6rem;font-family:'Orbitron',sans-serif;letter-spacing:0.1em;}
+.no-results{text-align:center;padding:3rem;color:var(--muted);font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.15em;}
+footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:center;font-size:0.72rem;color:var(--muted);line-height:1.8;}
+
+
+/* ---- NEW: additions the scanner patch would need ---- */
+
+/* 1. Strategy badge. Same component as .card-badge.update / .duplicate,
+      gold instead of gray so it reads as content rather than metadata. */
+.card-badge.strategy{background:rgba(94,200,200,0.14);color:#6fd3d3;border-color:rgba(94,200,200,0.45);}
+
+/* 2. Pill becomes clickable when it has strategy content. */
+.card-entry.has-strategy{cursor:pointer;}
+.card-entry.has-strategy:hover{border-color:rgba(94,200,200,0.55);}
+.card-entry.drawer-open{border-color:#5ec8c8;box-shadow:0 0 0 1px rgba(94,200,200,0.35);}
+
+/* 3. Row drawer: spans the full grid width, opens under the clicked card's row.
+      grid-column:1/-1 is why the grid never reflows sideways. */
+.strategy-drawer{grid-column:1/-1;background:rgba(94,200,200,0.05);border:1px solid rgba(94,200,200,0.3);
+  border-radius:4px;padding:1rem 1.1rem;margin:-0.2rem 0 0.4rem;}
+.strategy-drawer-head{font-family:'Orbitron',sans-serif;font-size:0.68rem;letter-spacing:0.14em;
+  text-transform:uppercase;color:#6fd3d3;margin-bottom:0.75rem;display:flex;justify-content:space-between;align-items:center;}
+.strategy-drawer-close{cursor:pointer;color:#7a8aaa;font-size:1.1rem;line-height:1;padding:0 0.3rem;}
+.strategy-drawer-close:hover{color:#6fd3d3;}
+.sd-guide{margin-bottom:1rem;}
+.sd-guide:last-child{margin-bottom:0;}
+.sd-guide-title{font-family:'Orbitron',sans-serif;font-size:0.72rem;letter-spacing:0.08em;color:#7ec8f0;
+  text-decoration:none;display:inline-block;margin-bottom:0.15rem;}
+.sd-guide-title:hover{color:#a8ddff;}
+.sd-section{font-size:0.68rem;color:#7a8aaa;letter-spacing:0.05em;margin-bottom:0.4rem;}
+.sd-snippet{font-size:0.85rem;line-height:1.65;color:#ccd6f0;border-left:2px solid rgba(94,200,200,0.35);
+  padding-left:0.8rem;margin-bottom:0.55rem;}
+.sd-snippet.truncated::after{content:' …';color:#7a8aaa;}
+.sd-more{font-size:0.72rem;color:#7a8aaa;}
+.sd-more a{color:#7ec8f0;text-decoration:none;}
+.sd-attrib{margin-top:0.9rem;padding-top:0.6rem;border-top:1px solid rgba(122,138,170,0.2);
+  font-size:0.66rem;color:#7a8aaa;letter-spacing:0.03em;}
+
+/* preview chrome only, not part of the patch */
+.pv-wrap{max-width:1100px;margin:0 auto;padding:1.5rem;}
+.pv-note{background:rgba(74,159,212,0.07);border:1px solid rgba(74,159,212,0.25);border-radius:4px;
+  padding:0.9rem 1.1rem;margin-bottom:1.5rem;font-size:0.85rem;line-height:1.6;}
+.pv-note b{color:#7ec8f0;font-family:'Orbitron',sans-serif;font-size:0.72rem;letter-spacing:0.1em;}
+.pv-controls{display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.2rem;align-items:center;}
+.pv-controls input{background:var(--bg2,#0f1628);border:1px solid rgba(74,159,212,0.3);color:#ccd6f0;
+  font-family:'Exo 2',sans-serif;padding:0.5rem 0.8rem;border-radius:3px;flex:1;min-width:200px;}
+.pv-toggle{font-family:'Orbitron',sans-serif;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;
+  padding:0.5rem 0.8rem;border:1px solid rgba(94,200,200,0.4);color:#5ec8c8;border-radius:3px;cursor:pointer;}
+.pv-toggle.on{background:rgba(94,200,200,0.18);color:#6fd3d3;}
+.pv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:0.7rem;}
+.pv-count{font-size:0.75rem;color:#7a8aaa;margin-bottom:0.6rem;}
+</style>
+</head>
+<body>
+<div class="pv-wrap">
+
+  <div class="pv-note">
+    <b>Interaction preview</b><br>
+    Real data from <code>data/strategy-index.json</code>. The grid is a stand-in for the Card Scanner's
+    Cards view: teal <span class="card-badge strategy" style="margin:0">Strategy</span> badge marks a card
+    McCue discusses, the whole pill is the click target, and the drawer opens full-width below the clicked
+    card's row. Nothing here is wired to the live scanner yet.
+  </div>
+
+  <div class="pv-controls">
+    <input id="q" type="text" placeholder="Search by card name…" autocomplete="off">
+    <div class="pv-toggle" id="onlyStrategy">Strategy only</div>
+  </div>
+  <div class="pv-count" id="count"></div>
+  <div class="pv-grid" id="grid"></div>
+</div>
+
+<script>
+const BASES = ['', 'data/', '../data/', '../'];
+// Guides live at the repo root; this file may be served from tools/.
+const GUIDE_BASE = location.pathname.includes('/tools/') ? '../' : '';
+let CARDS = [], BADGES = {}, INDEX = null, GUIDES = {};
+let onlyStrategy = false, query = '', openId = null;
+
+async function tryFetch(name){
+  for(const b of BASES){
+    try{ const r = await fetch(b + name); if(r.ok) return await r.json(); }catch(e){}
+  }
+  throw new Error('could not locate ' + name);
+}
+
+async function boot(){
+  const boxes = await Promise.all(['box1.json','box2.json','box3.json'].map(f=>tryFetch(f).catch(()=>[])));
+  const seen = new Set();
+  boxes.flat().forEach(c=>{ if(!seen.has(c.id)){ seen.add(c.id); CARDS.push(c); } });
+  BADGES = (await tryFetch('strategy-cards.json')).cards;   // 6 KB, loaded at start-up
+  render();
+}
+
+// The full index is fetched only when the first drawer opens.
+async function ensureIndex(){
+  if(INDEX) return;
+  const j = await tryFetch('strategy-index.json');
+  INDEX = j.cards; GUIDES = j.guides;
+}
+
+function esc(s){ return s.replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+function pill(c){
+  const el = document.createElement('div');
+  const has = BADGES[c.id] !== undefined;
+  el.className = 'card-entry' + (has ? ' has-strategy' : '') + (openId===c.id ? ' drawer-open' : '');
+  el.dataset.suit = c.suit || '';
+  el.dataset.id = c.id;
+  const tags = [...(c.species_traits||[]), ...(c.regular_traits||[]), ...(c.other_traits||[])];
+  const tagsHTML = tags.map(t=>'<span class="ctag ctag-regular">'+esc(t)+'</span>').join('');
+  const skills = (c.icons||[]).filter(i=>i.specialty&&i.type).map(i=>i.specialty+' '+i.type);
+  const skillsHTML = skills.map(s=>'<span class="card-skill">'+esc(s)+'</span>').join('');
+  el.innerHTML =
+      '<div class="card-suit-bar"><div class="suit-dot" data-suit="'+c.suit+'"></div>'
+    + '<div class="suit-label" data-suit="'+c.suit+'">'+esc(c.suit||'')+'</div></div>'
+    + '<div class="card-name">'+esc(c.name)+'</div>'
+    + (has ? '<div class="card-badge strategy">Strategy</div>' : '')
+    + (tagsHTML ? '<div class="card-tags">'+tagsHTML+'</div>' : '')
+    + (skillsHTML ? '<div class="card-skills">'+skillsHTML+'</div>' : '');
+  if(has) el.onclick = ()=>toggle(c.id);
+  return el;
+}
+
+async function toggle(id){
+  openId = (openId === id) ? null : id;
+  if(openId) await ensureIndex();
+  render();
+}
+
+function drawer(card){
+  const entries = (INDEX && INDEX[card.id]) || [];
+  const el = document.createElement('div');
+  el.className = 'strategy-drawer';
+  let html = '<div class="strategy-drawer-head"><span>'+esc(card.name)+' in the guides</span>'
+           + '<span class="strategy-drawer-close">&times;</span></div>';
+  entries.forEach(e=>{
+    const meta = GUIDES[e.guide] || {title:e.guide};
+    html += '<div class="sd-guide">';
+    html += '<a class="sd-guide-title" href="'+GUIDE_BASE+e.guide+(e.hits[0].anchor?'#'+e.hits[0].anchor:'')+'">'
+          + esc(meta.title) + ' →</a>';
+    if(e.hits[0].heading) html += '<div class="sd-section">'+esc(e.hits[0].heading)+'</div>';
+    e.hits.forEach(h=>{
+      html += '<div class="sd-snippet'+(h.truncated?' truncated':'')+'">'+esc(h.snippet)+'</div>';
+    });
+    const shown = e.hits.length, extra = e.count - shown;
+    if(extra > 0) html += '<div class="sd-more">and '+extra+' more mention'+(extra>1?'s':'')
+          + ' in this guide · <a href="'+GUIDE_BASE+e.guide+'">open the guide</a></div>';
+    html += '</div>';
+  });
+  html += '<div class="sd-attrib">Content by Matthew McCue (mdmccu2) · quoted verbatim</div>';
+  el.innerHTML = html;
+  el.querySelector('.strategy-drawer-close').onclick = (ev)=>{ ev.stopPropagation(); openId=null; render(); };
+  return el;
+}
+
+function render(){
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '';
+  const q = query.toLowerCase();
+  const list = CARDS.filter(c=>
+      (!q || c.name.toLowerCase().includes(q)) &&
+      (!onlyStrategy || BADGES[c.id] !== undefined)
+  ).slice(0, 400);
+  list.forEach(c=>{
+    grid.appendChild(pill(c));
+    if(openId === c.id) grid.appendChild(drawer(c));
+  });
+  document.getElementById('count').textContent =
+      list.length + ' card' + (list.length!==1?'s':'') + ' · '
+    + list.filter(c=>BADGES[c.id]!==undefined).length + ' discussed in guides';
+}
+
+document.getElementById('q').oninput = e=>{ query = e.target.value; openId=null; render(); };
+document.getElementById('onlyStrategy').onclick = e=>{
+  onlyStrategy = !onlyStrategy; e.target.classList.toggle('on', onlyStrategy); openId=null; render();
+};
+document.addEventListener('keydown', e=>{ if(e.key==='Escape' && openId){ openId=null; render(); } });
+boot().catch(err=>{ document.getElementById('grid').innerHTML =
+  '<div class="pv-note">Could not load data: '+err.message+
+  '<br>Serve this file from the repo root, e.g. <code>python -m http.server</code>.</div>'; });
+</script>
+</body>
+</html>
