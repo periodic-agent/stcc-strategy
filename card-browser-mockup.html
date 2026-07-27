@@ -29,8 +29,8 @@ a{color:var(--blue);text-decoration:none;}
 .chapter-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:700;color:#fff;letter-spacing:0.05em;text-shadow:0 0 40px rgba(212,105,159,0.5);}
 .chapter-title span{color:var(--scanner2);}
 .chapter-meta{margin-top:0.6rem;font-size:0.78rem;color:var(--muted);}
-.new-banner{display:inline-flex;align-items:center;gap:0.55rem;margin-top:1rem;padding:0.28rem 0.75rem 0.28rem 0.32rem;background:rgba(212,74,74,0.08);border:1px solid rgba(212,74,74,0.35);border-radius:999px;font-family:'Exo 2',sans-serif;font-size:0.8rem;color:var(--text);text-decoration:none;cursor:pointer;transition:border-color .2s,background .2s,transform .2s;}
-.new-banner:hover{border-color:rgba(240,126,126,0.75);background:rgba(212,74,74,0.15);transform:translateY(-1px);}
+.new-banner{display:inline-flex;align-items:center;gap:0.55rem;margin-top:1rem;padding:0.28rem 0.75rem 0.28rem 0.32rem;background:rgba(94,200,200,0.07);border:1px solid rgba(94,200,200,0.35);border-radius:999px;font-family:'Exo 2',sans-serif;font-size:0.8rem;color:var(--text);text-decoration:none;cursor:pointer;transition:border-color .2s,background .2s,transform .2s;}
+.new-banner:hover{border-color:rgba(111,211,211,0.75);background:rgba(94,200,200,0.14);transform:translateY(-1px);}
 .new-badge{font-family:'Orbitron',sans-serif;font-size:0.58rem;font-weight:700;letter-spacing:0.14em;color:#fff;text-transform:uppercase;padding:0.22rem 0.5rem;border-radius:999px;background:linear-gradient(135deg,#f0902e,#d44a4a);box-shadow:0 0 12px rgba(240,144,46,0.45);}
 .new-banner .new-arrow{color:var(--muted);font-size:0.85rem;transition:transform .2s;}
 .new-banner:hover .new-arrow{transform:translateX(3px);}
@@ -50,6 +50,9 @@ a{color:var(--blue);text-decoration:none;}
 
 /* BOX PILLS */
 .box-pill{font-family:'Exo 2',sans-serif;font-size:0.72rem;padding:0.22rem 0.75rem;border-radius:3px;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:all 0.15s;user-select:none;}
+.box-pill[data-box="all"]{border-color:#7a8aaa;color:#9aa8bc;margin-right:0.35rem;}
+.box-pill[data-box="all"]:hover{border-color:#a8b4c8;color:#c8d2e0;}
+.box-pill[data-box="all"].active{background:#7a8aaa;border-color:#7a8aaa;color:#0a0e1a;font-weight:600;}
 .box-pill[data-box="core"]{border-color:#4a9fd4;color:#4a9fd4;}
 .box-pill[data-box="core"].active{background:#4a9fd4;border-color:#4a9fd4;color:#000;font-weight:600;}
 .box-pill[data-box="tbg"]{border-color:#c0392b;color:#c0392b;}
@@ -260,7 +263,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   <div class="chapter-label">ST:CC Strategy Compendium</div>
   <h1 class="chapter-title"><span>Card</span> Scanner</h1>
   <div class="chapter-meta">Select boxes, filter by trait or skill, search by name. Show details or images.</div>
-  <a class="new-banner" onclick="revealTBG(event)" title="Show the To Boldly Go and Second Contact cards"><span class="new-badge">New</span><span>To Boldly Go and Second Contact are available now</span><span class="new-arrow">→</span></a>
+  <a class="new-banner" onclick="showStrategy(event)" title="Cards discussed in the guides carry a Strategy tag"><span class="new-badge">New</span><span>Card search now links to the guides! Look for the Strategy tag</span><span class="new-arrow">→</span></a>
 </header>
 
 <div class="controls">
@@ -354,7 +357,11 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 <script>
 let ALL_CARDS = [];   // resolved, deduplicated card list (filled by loadBoxes)
 
-let activeBoxes  = new Set(["core"]);
+// The three main boxes open selected; promos stay off until asked for.
+// The "All" pill toggles between ALL_BOXES and DEFAULT_BOXES.
+const DEFAULT_BOXES = ['core','tbg','2nd'];
+const ALL_BOXES     = ['core','tbg','2nd','promo1','promo2'];
+let activeBoxes  = new Set(DEFAULT_BOXES);
 let activeDecks  = new Set();
 let activeSuits  = new Set();
 let activeTags   = new Set();
@@ -615,6 +622,16 @@ function makePill(text,cls,store){
 
 
 
+// Reflect activeBoxes back into the Box pill row. The All pill is active only while
+// every box is selected, so it dims as soon as any single box is toggled off.
+function syncBoxPills(){
+  document.querySelectorAll('.box-pill').forEach(p=>{
+    const id=p.dataset.box;
+    if(id==='all') p.classList.toggle('active', ALL_BOXES.every(b=>activeBoxes.has(b)));
+    else p.classList.toggle('active', activeBoxes.has(id));
+  });
+}
+
 function clearAll(){
   activeDecks.clear(); activeSuits.clear(); activeTags.clear(); activeSkills.clear(); searchText='';
   document.getElementById('searchInput').value='';
@@ -750,12 +767,10 @@ function buildImgCard(c){
 }
 
 let VISIBLE_IMG_CARDS=[];  // ordered list of {src,name} for cards shown in Images view
-function revealTBG(e){
+function showStrategy(e){
   if(e) e.preventDefault();
-  ['tbg','2nd'].forEach(b=>{
-    const pill=document.querySelector('.box-pill[data-box="'+b+'"]');
-    if(pill && !pill.classList.contains('active')) pill.click();
-  });
+  // The Strategy badge lives on the detail cards, so make sure Cards view is up before scrolling.
+  if(viewMode !== 'pill') setView('pill');
   const grp=document.getElementById('deckGroups');
   if(grp) grp.scrollIntoView({behavior:'smooth',block:'start'});
 }
@@ -823,13 +838,26 @@ async function init(){
 // Box pills
 const boxDefs = [{id:'core',label:"Captain's Chair"},{id:'tbg',label:"To Boldly Go"},{id:'2nd',label:"Second Contact"},{id:'promo1',label:"Promo 1"},{id:'promo2',label:"Promo 2"}];
 const boxContainer = document.getElementById('boxFilters');
+
+// "All" leads the row: select everything, or fall back to the default three.
+const allPill=document.createElement('span');
+allPill.className='box-pill'; allPill.dataset.box='all'; allPill.textContent='All';
+allPill.onclick=()=>{
+  const everythingOn = ALL_BOXES.every(b=>activeBoxes.has(b));
+  activeBoxes.clear();
+  (everythingOn ? DEFAULT_BOXES : ALL_BOXES).forEach(b=>activeBoxes.add(b));
+  syncBoxPills(); render();
+};
+boxContainer.appendChild(allPill);
+
 boxDefs.forEach(({id,label})=>{
   const p=document.createElement('span');
-  p.className='box-pill'+(id==='core'?' active':'');
+  p.className='box-pill';
   p.dataset.box=id; p.textContent=label;
-  p.onclick=()=>{ if(activeBoxes.has(id)) activeBoxes.delete(id); else activeBoxes.add(id); p.classList.toggle('active'); render(); };
+  p.onclick=()=>{ if(activeBoxes.has(id)) activeBoxes.delete(id); else activeBoxes.add(id); syncBoxPills(); render(); };
   boxContainer.appendChild(p);
 });
+syncBoxPills();
 
 // Deck pills
 const deckContainer = document.getElementById('deckFilters');

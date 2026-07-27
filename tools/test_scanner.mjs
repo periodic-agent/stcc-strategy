@@ -109,7 +109,7 @@ globalThis.__api = {
   get ALL_CARDS(){return ALL_CARDS;}, get activeBoxes(){return activeBoxes;},
   get viewMode(){return viewMode;}, get VISIBLE_IMG_CARDS(){return VISIBLE_IMG_CARDS;},
   render:()=>render(), cardMatches:(c)=>cardMatches(c), setView:(v)=>setView(v),
-  clearAll:()=>clearAll(), revealTBG:(e)=>revealTBG(e), openLightbox:(s)=>openLightbox(s),
+  clearAll:()=>clearAll(), showStrategy:(e)=>showStrategy(e), openLightbox:(s)=>openLightbox(s),
   stepLightbox:(d)=>stepLightbox(d),
   get STRATEGY_COUNTS(){return STRATEGY_COUNTS;}, get openStrategyId(){return openStrategyId;},
   buildPillCard:(c)=>buildPillCard(c), buildStrategyDrawer:(c)=>buildStrategyDrawer(c),
@@ -127,7 +127,7 @@ function report(label){
 }
 
 api.render();
-report('default (Captain\'s Chair)');
+report('default selection (three main boxes)');
 
 api.setView('image');
 console.log('setView("image") from global scope OK, viewMode =', api.viewMode);
@@ -194,6 +194,46 @@ assert(api.VISIBLE_IMG_CARDS.every(e=>fs.statSync(repo+'/'+e.src,{throwIfNoEntry
   'every lightbox entry points at a file that exists on disk');
 assert(typeof api.setView === 'function' && typeof api.clearAll === 'function',
   'inline-handler functions are reachable at global scope');
+
+// Box row: default selection and the "All" pill.
+function freshBoxState(){
+  api.activeBoxes.clear();
+  ['core','tbg','2nd'].forEach(b=>api.activeBoxes.add(b));
+  env.document.querySelectorAll('.box-pill').forEach(p=>{
+    const id=p.dataset.box;
+    if(id==='all') p.classList.remove('active');
+    else p.classList.toggle('active', api.activeBoxes.has(id));
+  });
+  api.render();
+}
+const allPill = env.document.querySelector('.box-pill[data-box="all"]');
+assert(!!allPill, 'the Box row carries an All pill');
+assert(env.document.getElementById('boxFilters').children[0] === allPill,
+  'the All pill is the first pill in the Box row');
+freshBoxState();
+assert([...api.activeBoxes].sort().join(',') === '2nd,core,tbg',
+  'default selection is the three main boxes, promos off');
+assert(!allPill.classList.contains('active'),
+  'All pill is dim while only the default three are selected');
+allPill.click();
+assert([...api.activeBoxes].sort().join(',') === '2nd,core,promo1,promo2,tbg',
+  'All selects every box including both promos');
+assert(allPill.classList.contains('active'), 'All pill lights up once everything is selected');
+allPill.click();
+assert([...api.activeBoxes].sort().join(',') === '2nd,core,tbg',
+  'a second All click returns to the three-box default');
+assert(!allPill.classList.contains('active'), 'All pill dims again on the way back');
+allPill.click();
+env.document.querySelector('.box-pill[data-box="promo2"]').click();
+assert(!allPill.classList.contains('active'),
+  'deselecting any single box dims the All pill');
+freshBoxState();
+
+// Header banner: repointed at the strategy index.
+api.setView('image');
+api.showStrategy();
+assert(api.viewMode === 'pill',
+  'the header banner switches to Cards view, where the Strategy badge lives');
 
 // --- strategy index: badge, drawer, and link integrity ---------------------
 // The drawer deep-links into guides, so a stale index would produce badges
