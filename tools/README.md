@@ -36,7 +36,7 @@ file for the page. The `replace` list carries only the corrections approved
 *before* the guide shipped, applied at build time so the first published text
 is the approved text.
 
-Once a guide is live, **the HTML is the source of truth** (WORKFLOW Rule 1b).
+Once a guide is live, **the HTML is the source of truth** (WORKFLOW Rule 1c).
 McCue made Periodic_agent his editor of record, so a later correction is made
 directly in the guide HTML, followed by
 

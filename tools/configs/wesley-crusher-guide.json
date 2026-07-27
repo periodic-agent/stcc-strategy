@@ -1,4 +1,5 @@
 {
+  "_note": "Reproduces the IMPORT of 19 Jul 2026, not the current page. After a guide ships, wesley-crusher-guide.html is the source of truth: later corrections edit the HTML directly and regenerate text/wesley-crusher-guide.txt with tools/extract_text.py (WORKFLOW Rule 1c). Do not add replace entries after import. Rebuilding from the capture will therefore differ from the live page; diff before copying anything over.",
   "slug": "wesley-crusher-guide",
   "box": "core",
   "page_title": "The Ultimate Guide to Wesley Crusher (Encounter)",

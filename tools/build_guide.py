@@ -547,11 +547,15 @@ def build_video(cfg):
 
 def main():
     argv, args, out_dir = sys.argv[1:], [], "out"
+    reimport = False
     i = 0
     while i < len(argv):
         if argv[i] == "--out":
             out_dir = argv[i + 1]
             i += 2
+        elif argv[i] == "--reimport":
+            reimport = True
+            i += 1
         else:
             args.append(argv[i])
             i += 1
@@ -559,6 +563,13 @@ def main():
         sys.exit(__doc__)
     src_path, cfg_path = args
     cfg = json.load(open(cfg_path, encoding="utf-8"))
+
+    shipped = "%s.html" % cfg["slug"]
+    if os.path.exists(shipped) and not reimport:
+        sys.exit("%s is already shipped. Post-ship corrections edit the HTML and\n"
+                 "regenerate text/%s.txt (WORKFLOW Rule 1c). Pass --reimport to rebuild\n"
+                 "the import anyway (McCue BGG edit, or builder change to replay)."
+                 % (shipped, cfg["slug"]))
     raw = open(src_path, encoding="utf-8", errors="replace").read()
     os.makedirs(out_dir, exist_ok=True)
     report = []

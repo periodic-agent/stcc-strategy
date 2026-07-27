@@ -1,4 +1,5 @@
 {
+  "_note": "Reproduces the IMPORT of 15 Jul 2026, not the current page. After a guide ships, georgiou.html is the source of truth: later corrections edit the HTML directly and regenerate text/georgiou.txt with tools/extract_text.py (WORKFLOW Rule 1c). Do not add replace entries after import. Rebuilding from the capture will therefore differ from the live page; diff before copying anything over.",
   "slug": "georgiou",
   "box": "tbg",
   "page_title": "Philippa Georgiou",

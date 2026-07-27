@@ -96,5 +96,5 @@
     "Vulcan High Command (Directive) (Dev Cost 3 Dilithium)": "soval-vulcan-high-command",
     "Vulcan Hello (Directive) (Dev Cost 4 Dilithium)": "soval-vulcan-hello"
   },
-  "_note": "Reproduces the IMPORT of 27 Jul 2026, not the current page. After a guide ships, soval.html is the source of truth: later corrections edit the HTML directly and regenerate text/soval.txt with tools/extract_text.py (WORKFLOW Rule 1b). Do not add replace entries after import. Rebuilding from the capture will therefore differ from the live page; diff before copying anything over."
+  "_note": "Reproduces the IMPORT of 27 Jul 2026, not the current page. After a guide ships, soval.html is the source of truth: later corrections edit the HTML directly and regenerate text/soval.txt with tools/extract_text.py (WORKFLOW Rule 1c). Do not add replace entries after import. Rebuilding from the capture will therefore differ from the live page; diff before copying anything over."
 }
