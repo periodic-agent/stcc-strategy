@@ -41,7 +41,7 @@
     "I hope you enjoyed this strategy guide for Ambassador"
   ],
   "lore": [
-    "Another week, another Captain Guide from To Boldly Go!"
+    "Today’s Captain is our first"
   ],
   "no_lore": [],
   "toc_labels": {
@@ -58,6 +58,10 @@
   ],
   "video_intro": "Playthrough by Paul Grogan (Gaming Rules!) featuring Soval:",
   "replace": [
+    [
+      "Another week, another Captain Guide from To Boldly Go! And I’m especially excited for this one because I finished watching Enterprise in October 2025, and so the thematic content is relatively fresh on my mind. ",
+      ""
+    ],
     [
       "Vulcan Hello and Vulcan High Council",
       "Vulcan Hello and Vulcan High Command"
