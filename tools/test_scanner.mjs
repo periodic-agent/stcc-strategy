@@ -110,7 +110,10 @@ globalThis.__api = {
   get viewMode(){return viewMode;}, get VISIBLE_IMG_CARDS(){return VISIBLE_IMG_CARDS;},
   render:()=>render(), cardMatches:(c)=>cardMatches(c), setView:(v)=>setView(v),
   clearAll:()=>clearAll(), revealTBG:(e)=>revealTBG(e), openLightbox:(s)=>openLightbox(s),
-  stepLightbox:(d)=>stepLightbox(d)
+  stepLightbox:(d)=>stepLightbox(d),
+  get STRATEGY_COUNTS(){return STRATEGY_COUNTS;}, get openStrategyId(){return openStrategyId;},
+  buildPillCard:(c)=>buildPillCard(c), buildStrategyDrawer:(c)=>buildStrategyDrawer(c),
+  ensureStrategyIndex:()=>ensureStrategyIndex(), toggleStrategy:(id)=>toggleStrategy(id)
 };`;
 vm.runInContext(body + '\n' + epilogue, sandbox, {filename:'scanner'});
 await new Promise(r=>setTimeout(r,300));
@@ -191,5 +194,73 @@ assert(api.VISIBLE_IMG_CARDS.every(e=>fs.statSync(repo+'/'+e.src,{throwIfNoEntry
   'every lightbox entry points at a file that exists on disk');
 assert(typeof api.setView === 'function' && typeof api.clearAll === 'function',
   'inline-handler functions are reachable at global scope');
+
+// --- strategy index: badge, drawer, and link integrity ---------------------
+// The drawer deep-links into guides, so a stale index would produce badges
+// that lead to 404s or to anchors that no longer exist. Both are asserted
+// here rather than discovered by a reader mid-game.
+
+// Earlier assertions left the scanner filtered to Box 2 only; restore the
+// full pool so these tests see every card.
+api.activeBoxes.clear(); ['core','tbg','2nd'].forEach(b=>api.activeBoxes.add(b));
+api.setView('pill'); api.render();
+
+const counts = api.STRATEGY_COUNTS;
+assert(Object.keys(counts).length > 0,
+  'strategy-cards.json loaded and non-empty');
+
+const discussed   = api.ALL_CARDS.find(c=>counts[c.id] !== undefined);
+const undiscussed = api.ALL_CARDS.find(c=>counts[c.id] === undefined);
+
+const pillYes = api.buildPillCard(discussed);
+assert(pillYes.classList.contains('has-strategy')
+       && pillYes.innerHTML.includes('card-badge strategy')
+       && typeof pillYes.onclick === 'function',
+  'a discussed card gets the Strategy badge and is clickable');
+
+const pillNo = api.buildPillCard(undiscussed);
+assert(!pillNo.classList.contains('has-strategy')
+       && !pillNo.innerHTML.includes('card-badge strategy')
+       && typeof pillNo.onclick !== 'function',
+  'an undiscussed card gets no badge and no click target');
+
+await api.ensureStrategyIndex();
+const drawer = api.buildStrategyDrawer(discussed);
+assert(drawer.className === 'strategy-drawer'
+       && drawer.innerHTML.includes('sd-guide-title')
+       && drawer.innerHTML.includes('Matthew McCue'),
+  'the drawer renders guide links and carries the attribution line');
+
+const idx = JSON.parse(fs.readFileSync(repo + '/data/strategy-index.json', 'utf8'));
+const entries = Object.entries(idx.cards);
+
+const missingGuides = [...new Set(entries.flatMap(([,es])=>es.map(e=>e.guide))
+  .filter(g=>!fs.statSync(repo + '/' + g, {throwIfNoEntry:false})?.isFile()))];
+assert(missingGuides.length === 0,
+  'every guide referenced by the index exists on disk' + (missingGuides.length?' '+JSON.stringify(missingGuides):''));
+
+const guideText = {};
+const badAnchors = [];
+for(const [cid, es] of entries){
+  for(const e of es){
+    for(const h of e.hits){
+      if(!h.anchor) continue;
+      guideText[e.guide] ??= fs.readFileSync(repo + '/' + e.guide, 'utf8');
+      if(!guideText[e.guide].includes('id="' + h.anchor + '"')) badAnchors.push(cid + ' -> ' + e.guide + '#' + h.anchor);
+    }
+  }
+}
+assert(badAnchors.length === 0,
+  'every drawer deep link points at an anchor that exists' + (badAnchors.length?' '+JSON.stringify(badAnchors.slice(0,5)):''));
+
+// Compare against the raw card data, not the scanner's resolved pool, which
+// is filtered by whatever boxes happen to be selected.
+const knownIds = new Set(['box1.json','box2.json','box3.json']
+  .filter(f=>fs.statSync(repo + '/' + f, {throwIfNoEntry:false})?.isFile())
+  .flatMap(f=>JSON.parse(fs.readFileSync(repo + '/' + f, 'utf8')).map(c=>c.id)));
+const orphanCards = Object.keys(idx.cards).filter(id=>!knownIds.has(id));
+assert(orphanCards.length === 0,
+  'every indexed card id still exists in the card data' + (orphanCards.length?' '+JSON.stringify(orphanCards.slice(0,5)):''));
+
 console.log(failures ? `\n${failures} FAILURE(S)` : '\nAll assertions passed.');
 process.exit(failures ? 1 : 0);
