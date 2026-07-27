@@ -41,7 +41,7 @@
     "I hope you enjoyed this strategy guide for Ambassador"
   ],
   "lore": [
-    "Today’s Captain is our first"
+    "Another week, another Captain Guide from To Boldly Go!"
   ],
   "no_lore": [],
   "toc_labels": {
@@ -58,10 +58,6 @@
   ],
   "video_intro": "Playthrough by Paul Grogan (Gaming Rules!) featuring Soval:",
   "replace": [
-    [
-      "Another week, another Captain Guide from To Boldly Go! And I’m especially excited for this one because I finished watching Enterprise in October 2025, and so the thematic content is relatively fresh on my mind. ",
-      ""
-    ],
     [
       "Vulcan Hello and Vulcan High Council",
       "Vulcan Hello and Vulcan High Command"
@@ -99,5 +95,6 @@
     "Mount Seleya (Location) (Dev Cost 2 Latinum and 1 or more Vulcan Logged)": "soval-mount-seleya",
     "Vulcan High Command (Directive) (Dev Cost 3 Dilithium)": "soval-vulcan-high-command",
     "Vulcan Hello (Directive) (Dev Cost 4 Dilithium)": "soval-vulcan-hello"
-  }
+  },
+  "_note": "Reproduces the IMPORT of 27 Jul 2026, not the current page. After a guide ships, soval.html is the source of truth: later corrections edit the HTML directly and regenerate text/soval.txt with tools/extract_text.py (WORKFLOW Rule 1b). Do not add replace entries after import. Rebuilding from the capture will therefore differ from the live page; diff before copying anything over."
 }
