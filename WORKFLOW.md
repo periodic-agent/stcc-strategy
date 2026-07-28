@@ -720,32 +720,45 @@ Always do a pass after automation to catch the misses.
 
 ## Video Playthroughs Section
 
-Guides with a Gaming Rules! playthrough get a **Video Playthroughs** section at the bottom (before the bottom nav-bar), with YouTube thumbnail cards.
+Guides with a content-creator playthrough get a **Video Playthroughs** section at the bottom (before the bottom nav-bar), with YouTube thumbnail cards.
 
-Current mapping (merged 05 Jun update):
+**Featured creators (credit format `Mode · Channel` in `.yt-sub`; full name in the section intro line):**
+- Gaming Rules! — Paul Grogan
+- slickerdrips — Tom Heath (added 28 Jul 2026)
+
+When a guide carries videos from both creators, the intro line names both: `Playthroughs by Paul Grogan (Gaming Rules!) and Tom Heath (slickerdrips) featuring X:`.
+
+Current mapping (merged 28 Jul 2026 slickerdrips update):
 | Guide | Video | URL |
 |---|---|---|
 | shran.html | Shran vs Sisko | `youtu.be/fpGOnYvySBY` |
-| koloth.html | Koloth vs Sisko | `youtu.be/MbuPbqFmk0s` |
+| koloth.html | Koloth vs Sisko + Picard vs Koloth (slickerdrips) | `youtu.be/MbuPbqFmk0s` + `youtube.com/watch?v=YCH6G0fO7JU` |
 | sisko.html | Koloth vs Sisko + Sela vs Sisko | `youtu.be/MbuPbqFmk0s` + `youtu.be/L0U4rMzRcJY` |
 | sela.html | Sela vs Sisko | `youtu.be/L0U4rMzRcJY` |
-| picard.html | Two-Player Tutorial | `youtube.com/live/qZnTVD4yOpU` |
+| picard.html | Two-Player Tutorial + Picard Solo (slickerdrips) + Picard vs Koloth (slickerdrips) | `youtube.com/live/qZnTVD4yOpU` + `youtube.com/watch?v=g9Ng8nUDeUQ&t=9108s` + `youtube.com/watch?v=YCH6G0fO7JU` |
 | burnham.html | Burnham Solo | `youtube.com/watch?v=QzXbE_pjKtM` |
 | solo.html | Solo Tutorial pt.1 + pt.2 + Burnham Solo | `youtube.com/live/XBHZl0Qdveg` + `youtube.com/live/goYrEDVUSC4` + `youtube.com/watch?v=QzXbE_pjKtM` |
 | vs-picard.html | Two-player tutorial + Riker vs Picard Bot | `youtube.com/live/qZnTVD4yOpU` + `youtu.be/CWhCX4qdp6Y` |
+| georgiou.html | Georgiou solo + Georgiou vs Kirk (slickerdrips) | `youtu.be/WUWw63FQ_Vk` + `youtube.com/live/dBiG8fv92i0` |
+| soval.html | Archer vs Soval | `youtu.be/BAHNWO2Yuuw` |
+| five-year-mission.html | Five Year Mission: Picard vs Koloth (slickerdrips) | `youtube.com/watch?v=YCH6G0fO7JU` |
+
+Note: `youtube.com/watch?v=YCH6G0fO7JU` (slickerdrips "Five Year Mission Part 2") deliberately appears in three guides: picard, koloth, and five-year-mission. The picard solo link carries `&t=9108s` — the Picard segment of a longer stream; keep the timestamp.
 
 TBG guides — add when built:
 | Future guide | Video | URL |
 |---|---|---|
-| georgiou.html | Georgiou solo | `youtu.be/WUWw63FQ_Vk` |
 | rebner.html | Freeman vs Rebner | `youtu.be/5g1vaB_wxiw` |
 | archer.html | Archer vs Soval | `youtu.be/BAHNWO2Yuuw` |
-| soval.html | Archer vs Soval | `youtu.be/BAHNWO2Yuuw` |
-| kirk.html | Kirk vs Khan | `youtu.be/Pc0k1oeT1r8` |
+| kirk.html | Kirk vs Khan + Georgiou vs Kirk (slickerdrips) | `youtu.be/Pc0k1oeT1r8` + `youtube.com/live/dBiG8fv92i0` |
 | khan.html | Kirk vs Khan | `youtu.be/Pc0k1oeT1r8` |
 
-Second Contact (pending):
-- Pike solo: `youtu.be/YawshG7D0JU`
+Second Contact — add when built:
+| Future guide | Video | URL |
+|---|---|---|
+| pike.html | Pike solo | `youtu.be/YawshG7D0JU` |
+| riker.html | Riker vs Freeman (slickerdrips) | `youtube.com/watch?v=CpZMwUrtc8g` |
+| freeman.html | Riker vs Freeman (slickerdrips) | `youtube.com/watch?v=CpZMwUrtc8g` |
 
 ---
 
