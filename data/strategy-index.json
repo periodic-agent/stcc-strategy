@@ -1,8 +1,8 @@
 {
- "generated": "2026-07-27T20:51:46Z",
+ "generated": "2026-07-29T02:30:23Z",
  "generator": "tools/build_strategy_index.py",
  "guide_count": 27,
- "card_count": 348,
+ "card_count": 343,
  "guides": {
   "allies.html": {
    "title": "Ally Deck Strategy Guide",
@@ -3482,22 +3482,6 @@
       "heading": "Ship Deck",
       "snippet": "Second Contact: With the R.I.S. Talvath in the market, you’re now not sure exactly what you’ll get with a Research scan, but this ship isn’t terrible for you. In fact, you kind of like that all the Time Travel cards are going to your opponent so you can put more Dilithium on this ship. Fesarius is good for the free play and free warp operations, and Soval has about as good a chance as anyone else in gaining that",
       "truncated": true,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   }
-  ],
-  "flight-training-accident": [
-   {
-    "guide": "encounters-incidents.html",
-    "count": 1,
-    "hits": [
-     {
-      "anchor": "subspace-phenomenon",
-      "heading": "Flight Training Accident — Promo Pack 1",
-      "snippet": "There is a Surprise trait, which gains the bot a glory, then they resolve the top card of their deck, followed by returning the Incident. That can lead to some truly impressive bot turns, but the challenge is worth including Flight Training Accident in possible incidents.",
-      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -9742,72 +9726,6 @@
     ]
    }
   ],
-  "sehlat": [
-   {
-    "guide": "soval.html",
-    "count": 2,
-    "hits": [
-     {
-      "anchor": "soval-seleya-dkyr",
-      "heading": "Seleya (D’Kyr) (Ship)",
-      "snippet": "The Seleya has the Vulcan trait, a standard Play action which allows for deploy/warp, and discard a card to gain a Research, and a five Military required Play action where you may send an away team to the Seleya’s location after deploy/warp. It has all the Activations of a normal starting ship, which is a bit of a difficult thing for Soval early on. His lack of ships can be difficult, since T’Pol is his only way to",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     },
-     {
-      "anchor": "promos",
-      "heading": "Promos",
-      "snippet": "Sehlat is quite obviously amazing for Soval. There’s no downside and a lot of flexibility in this promo card, so much so that it can make Soval’s game feel like easy mode. It would be important to point out its existence to players using Soval, or playing against him. Enterprise B is a fun ship, and Soval should have plenty of Person cards to fuel Activation. Wesley Crusher is always great, more so for Person-heavy",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   },
-   {
-    "guide": "cargo.html",
-    "count": 1,
-    "hits": [
-     {
-      "anchor": "tachyon-detection-grid",
-      "heading": "Sehlat — Promo Pack 1",
-      "snippet": "Sehlat is a Vulcan native creature — a kind of Vulcan sabre-tooth bear — that also appears in Enterprise. I like the Creature tag and the fact that this card has no action costs. There are three different actions here, the first being finding a Vulcan and forcing your opponent to discard a Person card. Pretty useful. The second is a Vulcan free-play, which is also useful if you have one. Finally, you can promote a",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   },
-   {
-    "guide": "five-year-mission.html",
-    "count": 1,
-    "hits": [
-     {
-      "anchor": "captains",
-      "heading": "Burnham",
-      "snippet": "Burnham always has the choice of Reinforcing a Person card, which is nice for flexibility. On a win, she could also choose a Creature card, which is somewhat limiting in the core set but you can add Sehlat from the Promo pack in addition to Horta and Tribbles. On a loss you can also Reinforce Cargo or Starfleet trait cards, which feels very broad. For alternate loss boosts, she has the option of starting with",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   },
-   {
-    "guide": "georgiou.html",
-    "count": 1,
-    "hits": [
-     {
-      "anchor": "notable-market-cards",
-      "heading": "Promos",
-      "snippet": "Sehlat is particularly useful once you have Ambassador Sarek and if you seek out more Vulcan Person cards. If you do find yourself with a lot of Person cards, you can make good use of the U.S.S. Enterprise-B to log those crewmen and turn them into Action tokens. The U.S.S. Cabot is okay, and Georgiou probably will mainly want it for the Research Skill. The Drones of Cube 90182, Frank Hollander, and the Golden Statue",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   }
-  ],
   "sela-disruptor-rifles": [
    {
     "guide": "sela.html",
@@ -13148,22 +13066,6 @@
     ]
    }
   ],
-  "uss-enterprise-b": [
-   {
-    "guide": "georgiou.html",
-    "count": 1,
-    "hits": [
-     {
-      "anchor": "notable-market-cards",
-      "heading": "Promos",
-      "snippet": "Sehlat is particularly useful once you have Ambassador Sarek and if you seek out more Vulcan Person cards. If you do find yourself with a lot of Person cards, you can make good use of the U.S.S. Enterprise-B to log those crewmen and turn them into Action tokens. The U.S.S. Cabot is okay, and Georgiou probably will mainly want it for the Research Skill. The Drones of Cube 90182, Frank Hollander, and the Golden Statue",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   }
-  ],
   "uss-enterprise-c": [
    {
     "guide": "burnham.html",
@@ -13663,88 +13565,6 @@
       "anchor": "ship-deck",
       "heading": "Ship Deck",
       "snippet": "Core Set: The Reliant is solid for Soval without being anything too crazy, though he should be able to free-play by reaching that five Influence requirement pretty fast. Same with the Son’a Battlecruiser and their six Military requirement. K’T’Inga Battlecruiser can be scanned for with Military skill, Bird of Prey with Influence skill, and Voth Research Vessel with Research, so T’Pol may be well-suited looking there",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   }
-  ],
-  "wesley-crusher": [
-   {
-    "guide": "wesley-crusher-guide.html",
-    "count": 2,
-    "hits": [
-     {
-      "anchor": null,
-      "heading": "Introduction",
-      "snippet": "Welcome to something a bit different. With the dawn of a new core set in To Boldly Go and an expansion in the form of Second Contact, I know people are going to be ignoring David’s warnings and will be mixing common cards from the jump. And even if you don’t, promo pack #1 can be mixed in with anything, which means that Wesley Crusher is about to have a field day causing crazy Activations and Reactions, in addition",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     },
-     {
-      "anchor": "general-concepts",
-      "heading": "General Concepts",
-      "snippet": "To get ahead of specific questions, I have gone through every person card released to date and have listed out how they interact with Mr. Crusher as a Duty Officer. To be sure, most of the Activations and Reactions are straightforward, but for those that aren’t, or if you just aren’t sure, here’s a list of how every Person card interacts with Wesley Crusher (Encounter).",
-      "truncated": false,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   },
-   {
-    "guide": "burnham.html",
-    "count": 1,
-    "hits": [
-     {
-      "anchor": "burnham-s-available-cards",
-      "heading": "Person Cards",
-      "snippet": "Keyla Detmer (Person) — At the time period of Discovery season three, Detmer was the helmsman of the U.S.S. Discovery-A, and retained her synthetic implants from unseen battles fought during the Federation-Klingon war. She gets the Human, Synthetic, Starfleet, and Pilot traits. Her Play action discards the top card of your deck and lets you discard a card to warp a ship and send an Away team to the location you",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   },
-   {
-    "guide": "encounters-incidents.html",
-    "count": 1,
-    "hits": [
-     {
-      "anchor": "guardian-of-forever",
-      "heading": "Wesley Crusher — Promo Pack 1",
-      "snippet": "Found in Promo pack one, Wesley Crusher appears to have his civilian garb from TNG season seven. He has the Pilot, Human, Starfleet, and Transcendent traits, all of which are completely appropriate. His play action costs an action token and allows you to enlist a Reserve or Development card, then draw a card (could be the one you just got), then self-log Wesley.",
-      "truncated": false,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   },
-   {
-    "guide": "soval.html",
-    "count": 1,
-    "hits": [
-     {
-      "anchor": "promos",
-      "heading": "Promos",
-      "snippet": "Sehlat is quite obviously amazing for Soval. There’s no downside and a lot of flexibility in this promo card, so much so that it can make Soval’s game feel like easy mode. It would be important to point out its existence to players using Soval, or playing against him. Enterprise B is a fun ship, and Soval should have plenty of Person cards to fuel Activation. Wesley Crusher is always great, more so for Person-heavy",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   }
-  ],
-  "whale-probe-incursion": [
-   {
-    "guide": "encounters-incidents.html",
-    "count": 1,
-    "hits": [
-     {
-      "anchor": "subspace-phenomenon",
-      "heading": "Flight Training Accident — Promo Pack 1",
-      "snippet": "When Nova Squadron tries a Kolvoord Starburst, you're left to lecture cadets about their commitment to scientific, historical, or personal truth. Once again, you have two options. The first requires you to Find and log a Ship to return this card, gaining an action if you have one or more Person on duty. The second allows you to return the Incident if you have a Pilot in-play, gaining one glory. I really like this",
       "truncated": true,
       "mode": "text",
       "lore": false
