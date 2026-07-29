@@ -59,3 +59,13 @@ Tracked improvements for the site. Ordered by priority.
 **Fix:** normalized the four variant top navs to `<div id="top" class="nav-bar">` + "Back to Compendium"; added the bottom bar before `<footer>` on the six; closed the footer on tbg-locations; regenerated the seven canonical text files. Fixer ships as `tools/fix_furniture_issue4.py` (Rule 7).
 
 **Status:** DONE — 19 Jul 2026. Full sweep: 26/26 guides PASS verify_guide v2.
+
+---
+
+## Issue 5 — Promo Pack 2 cards have images but no data rows
+
+**Problem:** `img/promo2/` holds 6 card scans on git (drones-of-cube-90182, frank-hollander, golden-statue-of-obrien, starbase-80, subspace-rhapsody, uss-cabot) but no box JSON carries their rows: box2.json has zero `source: "Promo"` records. The scanner therefore cannot show them. Per the documented design (WORKFLOW.md, "Promo data vs image split"), promo cards do NOT get their own JSON: their data lives in the era box JSON (Promo Pack 1 rows sit in box1.json with `source: "Promo"`; the scanner routes `source Promo` + `game_box "To Boldly Go"` to `img/promo2/` at line ~395 of the scanner). Promo Pack 2 rows belong in box2.json.
+
+**Fix:** OCR the 6 promo2 card faces for name, suit, traits, and icons; add the rows to box2.json (`source: "Promo"`, `game_box: "To Boldly Go"`, `filename` per convention). Periodic_agent will run the card OCR in the card-database chat.
+
+**Status:** OPEN — 29 Jul 2026.
