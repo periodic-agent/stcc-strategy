@@ -179,19 +179,34 @@ function assert(cond, label){
 console.log('\n=== assertions ===');
 api.activeBoxes.clear(); api.activeBoxes.add('tbg'); api.setView('image'); api.render();
 const tbgShown = api.ALL_CARDS.filter(c=>api.cardMatches(c));
-assert(tbgShown.filter(c=>c.badgeKind==='duplicate' && !(c.imgBox && c.filename)).length === 0,
-  'Box 2 alone: every duplicate falls back to its Box 1 scan');
-assert(imgSrcFor('Rom',['tbg']) === 'img/box1/rom.jpg',
-  'duplicate Rom uses the Box 1 original scan when only Box 2 is selected');
+assert(tbgShown.every(c=>!c.badgeKind || (c.imgBox && c.filename)),
+  'Box 2 alone: no duplicate or update is left without an image');
+
+// Current rule: a printing from a SELECTED box wins; printings from unselected boxes are
+// fallback only. Among equals, the newest printing wins.
+assert(imgSrcFor('Rom',['tbg']) === 'img/box2/rom.jpg',
+  'a reprint browsed in Box 2 shows the Box 2 scan');
+assert(imgSrcFor('Rom',['core']) === 'img/box1/rom.jpg',
+  'the same reprint browsed in Box 1 shows the Box 1 scan');
+assert(imgSrcFor('Rom',['core','tbg']) === 'img/box2/rom.jpg',
+  'with both boxes selected the newest printing wins');
+// Invariant, independent of which scans happen to exist: an updated card never inherits the
+// art of the printing it superseded.
 assert(imgSrcFor('Phlox',['tbg']) === 'img/box2/phlox.jpg',
   'updated Phlox uses its own Box 2 scan, never the superseded Box 1 art');
-assert(imgSrcFor('Solum',['tbg']) === 'NO IMAGE',
-  'updated Solum shows no image until its new scan lands (no stale Box 1 art)');
-assert(imgSrcFor('Solum',['core']) === 'img/box1/solum.jpg',
-  'Box 1 alone still shows the Box 1 printing of a later-updated card');
+api.activeBoxes.clear(); ['core','tbg','2nd'].forEach(b=>api.activeBoxes.add(b)); api.render();
+const updatedResolved = api.ALL_CARDS.filter(c=>c.variant === 'updated' && c.filename);
+assert(updatedResolved.length > 0 && updatedResolved.every(c=>c.imgBox !== 'core'),
+  'every updated card draws its image from the updated printing, not the original');
+
+// Disk check runs only on a full checkout; a sparse or blobless clone has no img/ tree.
 api.activeBoxes.clear(); api.activeBoxes.add('tbg'); api.setView('image'); api.render();
-assert(api.VISIBLE_IMG_CARDS.every(e=>fs.statSync(repo+'/'+e.src,{throwIfNoEntry:false})?.isFile()),
-  'every lightbox entry points at a file that exists on disk');
+if(fs.existsSync(repo + '/img/box1')){
+  assert(api.VISIBLE_IMG_CARDS.every(e=>fs.statSync(repo+'/'+e.src,{throwIfNoEntry:false})?.isFile()),
+    'every lightbox entry points at a file that exists on disk');
+} else {
+  console.log('  SKIP  disk check: img/ not checked out in this clone');
+}
 assert(typeof api.setView === 'function' && typeof api.clearAll === 'function',
   'inline-handler functions are reachable at global scope');
 
