@@ -470,9 +470,12 @@ reads "Second Contact".
 - Second Contact (gold): Pike, Riker, Freeman
 
 ### Default state on load
-- Captain's Chair box selected; TBG and Second Contact unselected
-- No deck pills selected (= all 255 Core cards visible)
+- All three main boxes selected (`DEFAULT_BOXES = core, tbg, 2nd`); promo packs off until asked for (the All pill or `box:promo1`/`box:promo2` pulls them in)
+- Search bar empty (empty bar = the default view); no deck pills selected
 - All trait/skill sections expanded
+
+### Query language (search bar)
+The search bar is the scanner's single state; pills are shortcuts that write tokens into it and light up by re-parsing it. Grammar: `key:value` tokens, spaces mean AND, leading `-` negates, quotes for multi-word values, bare words match card names, unknown keys fall back to name text. Keys (full words, no aliases): `box:` (`core`/`tbg`/`2nd`/`promo1`/`promo2`/`all`), `deck:` (captain name, or `common` = commons of every visible box), `suit:`, `trait:`, `skill:` and `focus:` (one-word icon values: `skill:military`, `focus:influence`, `skill:any`, `skill:variable`; the flattened long form `skill:"military skill"` also parses). Empty bar = the three main boxes, no other filters; `box:` tokens replace the default box set wholesale. The parser lives between `QUERY_PARSER_START/END` markers in `card-browser-mockup.html`; `tools/test_scanner_query.mjs` extracts and tests that exact code (`node tools/test_scanner_query.mjs`, run after any scanner search change). All matching still flows through the single `cardMatches` predicate; the "?" beside the bar opens the syntax popover.
 
 ### Image view
 - Toggle between Cards (pill view) and Images view

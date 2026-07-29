@@ -42,6 +42,19 @@ a{color:var(--blue);text-decoration:none;}
 .search-box{flex:1;background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:0.55rem 0.9rem;font-family:'Exo 2',sans-serif;font-size:0.9rem;color:var(--text);outline:none;transition:border-color 0.2s;}
 .search-box::placeholder{color:var(--muted);}
 .search-box:focus{border-color:var(--blue);}
+.pill-sublabel{font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin:0.35rem 0 0.3rem;}
+.search-count-row{margin:-0.85rem 0 1.1rem;padding:0 0.2rem;}
+.search-count{color:var(--muted);font-size:0.8rem;font-family:'Exo 2',sans-serif;}
+.search-count b{color:var(--blue2);font-weight:600;}
+.query-help-btn{flex:0 0 auto;width:1.9rem;height:1.9rem;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:50%;color:var(--muted);cursor:pointer;font-family:'Orbitron',sans-serif;font-size:0.8rem;user-select:none;}
+.query-help-btn:hover{color:var(--blue);border-color:var(--blue);}
+.query-help{display:none;background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:0.8rem 1rem;margin:-0.75rem 0 1.25rem;font-size:0.8rem;line-height:1.9;}
+.query-help.open{display:block;}
+.query-help code{background:var(--bg3);border-radius:3px;padding:0.05rem 0.4rem;color:var(--blue2);}
+.qh-title{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue);margin-bottom:0.3rem;}
+.qh-row span{color:var(--muted);margin-left:0.6rem;}
+.qh-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:0.15rem;}
+.qh-note{color:var(--muted);margin-top:0.4rem;font-style:italic;}
 .view-toggle{display:flex;gap:0.35rem;}
 .vtoggle{font-family:'Orbitron',sans-serif;font-size:0.52rem;letter-spacing:0.1em;text-transform:uppercase;background:transparent;border:1px solid var(--border);color:var(--muted);padding:0.35rem 0.7rem;border-radius:3px;cursor:pointer;transition:all 0.15s;}
 .vtoggle.active{border-color:var(--blue);color:var(--blue2);background:rgba(74,159,212,0.1);}
@@ -126,6 +139,16 @@ a{color:var(--blue);text-decoration:none;}
 .other-pill:hover,.other-pill.active{background:rgba(200,60,60,0.22);border-color:#e05a5a;color:#ff8080;}
 .skill-pill{font-family:'Exo 2',sans-serif;font-size:0.68rem;padding:0.18rem 0.55rem;border-radius:3px;border:1px solid rgba(200,168,75,0.3);color:var(--gold);background:rgba(200,168,75,0.06);cursor:pointer;transition:all 0.15s;user-select:none;}
 .skill-pill:hover,.skill-pill.active{background:rgba(200,168,75,0.2);border-color:var(--gold);color:#e8c96a;}
+.skill-pill.sk-military{border-color:rgba(224,90,90,0.4);color:#e05a5a;background:rgba(224,90,90,0.06);}
+.skill-pill.sk-military:hover,.skill-pill.sk-military.active{background:rgba(224,90,90,0.22);border-color:#e05a5a;color:#f08a8a;}
+.skill-pill.sk-research{border-color:rgba(74,159,212,0.4);color:var(--blue);background:rgba(74,159,212,0.06);}
+.skill-pill.sk-research:hover,.skill-pill.sk-research.active{background:rgba(74,159,212,0.22);border-color:var(--blue);color:var(--blue2);}
+.skill-pill.sk-influence{border-color:rgba(232,212,74,0.4);color:#e8d44a;background:rgba(232,212,74,0.06);}
+.skill-pill.sk-influence:hover,.skill-pill.sk-influence.active{background:rgba(232,212,74,0.22);border-color:#e8d44a;color:#f2e37a;}
+.skill-pill.sk-any{border-color:rgba(212,105,159,0.4);color:#d4699f;background:rgba(212,105,159,0.06);}
+.skill-pill.sk-any:hover,.skill-pill.sk-any.active{background:rgba(212,105,159,0.22);border-color:#d4699f;color:#e492bb;}
+.skill-pill.sk-variable{border-color:rgba(232,236,248,0.4);color:#e8ecf8;background:rgba(232,236,248,0.06);}
+.skill-pill.sk-variable:hover,.skill-pill.sk-variable.active{background:rgba(232,236,248,0.22);border-color:#e8ecf8;color:#ffffff;}
 
 /* COLLAPSIBLE */
 .collapsible-header{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:0.3rem 0;user-select:none;}
@@ -270,12 +293,28 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 <div class="controls">
 
   <div class="search-row">
-    <input type="text" class="search-box" id="searchInput" placeholder="Search by card name…" autocomplete="off">
+    <input type="text" class="search-box" id="searchInput" placeholder="Search cards… e.g. trait:klingon suit:person" autocomplete="off">
+    <span class="query-help-btn" id="queryHelpBtn" title="Search syntax">?</span>
     <div class="view-toggle">
       <button class="vtoggle active" id="btnPill" onclick="setView('pill')">Cards</button>
       <button class="vtoggle" id="btnImg" onclick="setView('image')">Images</button>
     </div>
     <button class="clear-btn" onclick="clearAll()">Clear all</button>
+  </div>
+
+  <div class="search-count-row"><span class="search-count" id="searchCount"></span></div>
+
+  <div id="queryHelp" class="query-help">
+    <div class="qh-title">Search syntax</div>
+    <div class="qh-row"><code>kirk</code><span>name contains "kirk"</span></div>
+    <div class="qh-row"><code>trait:klingon suit:person</code><span>Klingon persons (space = AND)</span></div>
+    <div class="qh-row"><code>-trait:starfleet</code><span>minus excludes</span></div>
+    <div class="qh-row"><code>trait:"mind control"</code><span>quotes for multi-word values</span></div>
+    <div class="qh-row"><code>deck:sisko suit:ship</code><span>ships in Sisko's deck</span></div>
+    <div class="qh-row"><code>deck:common</code><span>commons of every visible box</span></div>
+    <div class="qh-row"><code>skill:military</code> · <code>focus:influence</code><span>icon search; also skill:any, skill:variable</span></div>
+    <div class="qh-row"><code>box:promo1</code> · <code>box:all</code><span>promos in; empty bar = the three main boxes</span></div>
+    <div class="qh-note">Clicking any pill writes its token here — the pills are shortcuts for this language.</div>
   </div>
 
   <div class="filter-section">
@@ -335,13 +374,26 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   <div class="filter-section">
     <div class="collapsible-header open" onclick="toggleSection(this,'skillsBody','skillsSummary')">
       <div style="display:flex;align-items:center;gap:0.4rem;">
-        <div class="filter-label">Skills</div>
+        <div class="filter-label">Skill Icons</div>
         <span class="active-summary skill" id="skillsSummary"></span>
       </div>
       <span class="collapsible-arrow">&#9660;</span>
     </div>
     <div class="collapsible-body open" id="skillsBody">
       <div class="pill-row" id="skillFilters"></div>
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <div class="collapsible-header open" onclick="toggleSection(this,'focusBody','focusSummary')">
+      <div style="display:flex;align-items:center;gap:0.4rem;">
+        <div class="filter-label">Focus Icons</div>
+        <span class="active-summary skill" id="focusSummary"></span>
+      </div>
+      <span class="collapsible-arrow">&#9660;</span>
+    </div>
+    <div class="collapsible-body open" id="focusBody">
+      <div class="pill-row" id="focusFilters"></div>
     </div>
   </div>
 
@@ -367,7 +419,9 @@ let activeDecks  = new Set();
 let activeSuits  = new Set();
 let activeTags   = new Set();
 let activeSkills = new Set();
-let searchText   = "";
+let nameTerms    = [];
+// Negated counterparts, from "-key:value" / "-word" tokens (query language)
+let negDecks=new Set(), negSuits=new Set(), negTags=new Set(), negSkills=new Set(), negNames=[];
 let viewMode     = "pill";
 // --- strategy index -------------------------------------------------------
 // STRATEGY_COUNTS is card_id -> mention count, from the 8 KB companion file.
@@ -626,16 +680,131 @@ function toggleSection(header,bodyId,summaryId){
   document.getElementById(bodyId).classList.toggle('open');
 }
 
-function makePill(text,cls,store){
+function makePill(text,cls,kind){
   const p=document.createElement('span');
-  p.className=cls; p.textContent=text;
-  p.onclick=()=>{ if(store.has(text)) store.delete(text); else store.add(text); p.classList.toggle('active'); render(); };
+  p.className=cls; p.textContent=text; p.dataset.value=text;
+  p.onclick=()=>toggleToken(tokenOf(kind,text));
   return p;
 }
 
 
 
 
+
+// ---------------------------------------------------------------------------
+// Query language. The search bar is the single state of the scanner: pills are
+// shortcuts that edit it. Keys: box: deck: suit: trait: skill: — full words,
+// values quoted when multi-word, leading '-' negates, bare words match names,
+// spaces mean AND. Empty bar = the three main boxes, no other filters.
+/* QUERY_PARSER_START */
+function parseQuery(text, vocab){
+  const res={boxes:[],decks:[],suits:[],tags:[],skills:[],names:[],
+             negBoxes:[],negDecks:[],negSuits:[],negTags:[],negSkills:[],negNames:[]};
+  const tokRe=/(-)?(?:([A-Za-z]+):)?("([^"]*)"|[^\s"]+)/g;
+  let m;
+  while((m=tokRe.exec(text))){
+    const neg=!!m[1];
+    const key=(m[2]||'').toLowerCase();
+    const val=(m[4]!==undefined?m[4]:m[3]).trim();
+    if(!val) continue;
+    const lv=val.toLowerCase();
+    const put=(arr,negArr,v)=>(neg?negArr:arr).push(v);
+    if(key==='box'){
+      if(lv==='all') vocab.allBoxes.forEach(b=>put(res.boxes,res.negBoxes,b));
+      else put(res.boxes,res.negBoxes,lv);
+    } else if(key==='deck'){
+      put(res.decks,res.negDecks,vocab.decks[lv]!==undefined?vocab.decks[lv]:val);
+    } else if(key==='suit'){
+      put(res.suits,res.negSuits,vocab.suits[lv]||val);
+    } else if(key==='trait'){
+      put(res.tags,res.negTags,vocab.tags[lv]||val);
+    } else if(key==='skill'){
+      put(res.skills,res.negSkills,(vocab.skillShort&&vocab.skillShort[lv])||vocab.skills[lv]||val);
+    } else if(key==='focus'){
+      put(res.skills,res.negSkills,(vocab.focusShort&&vocab.focusShort[lv])||val);
+    } else {
+      put(res.names,res.negNames,(key?key+':':'')+lv);
+    }
+  }
+  return res;
+}
+/* QUERY_PARSER_END */
+
+let QUERY_VOCAB=null;
+function buildQueryVocab(){
+  const map=arr=>Object.fromEntries(arr.map(v=>[v.toLowerCase(),v]));
+  const decks={};
+  DECK_ORDER.forEach(d=>{ if(!d.startsWith('Common:')) decks[d.toLowerCase()]=d; });
+  decks['common']='::common';
+  const skillShort={}, focusShort={};
+  allSkills.forEach(v=>{
+    const m=v.match(/^(.+)\s+(Skill|Focus)$/);
+    if(!m) return;
+    (m[2]==='Skill'?skillShort:focusShort)[m[1].toLowerCase()]=v;
+  });
+  QUERY_VOCAB={allBoxes:ALL_BOXES,decks,suits:map(SUITS_DISPLAY),
+               tags:map([...allSpecies,...allRegular,...allOther]),skills:map(allSkills),
+               skillShort,focusShort};
+}
+
+function applyQuery(text){
+  const q=parseQuery(text,QUERY_VOCAB);
+  activeBoxes=new Set(q.boxes.length?q.boxes.filter(b=>ALL_BOXES.includes(b)):DEFAULT_BOXES);
+  q.negBoxes.forEach(b=>activeBoxes.delete(b));
+  const expand=list=>{ const out=new Set();
+    list.forEach(d=>{ if(d==='::common') [...activeBoxes].forEach(b=>{ if(b==='core'||b==='tbg'||b==='2nd') out.add('Common:'+b); });
+      else out.add(d); });
+    return out; };
+  activeDecks=expand(q.decks); negDecks=expand(q.negDecks);
+  activeSuits=new Set(q.suits); negSuits=new Set(q.negSuits);
+  activeTags=new Set(q.tags);  negTags=new Set(q.negTags);
+  activeSkills=new Set(q.skills); negSkills=new Set(q.negSkills);
+  nameTerms=q.names.map(t=>t.toLowerCase()); negNames=q.negNames.map(t=>t.toLowerCase());
+}
+
+function currentQuery(){ return document.getElementById('searchInput').value; }
+function tokenList(text){ return text.match(/-?(?:[A-Za-z]+:)?"[^"]*"|[^\s"]+/g)||[]; }
+function quoteVal(v){ return /\s/.test(v)?'"'+v+'"':v; }
+function tokenOf(kind,v){ return kind+':'+quoteVal(v); }
+function setQuery(text){
+  document.getElementById('searchInput').value=text;
+  refreshFromQuery(text);
+}
+function refreshFromQuery(text){
+  applyQuery(text);
+  syncBoxPills(); syncFilterPills();
+  render();
+}
+function toggleToken(tok){
+  const toks=tokenList(currentQuery());
+  const i=toks.findIndex(t=>t.toLowerCase()===tok.toLowerCase());
+  if(i>=0) toks.splice(i,1); else toks.push(tok);
+  setQuery(toks.join(' '));
+}
+// Ensure box b is visible given the current box tokens (used by deck pills).
+function withBoxAdded(text,b){
+  const toks=tokenList(text);
+  const boxToks=toks.filter(t=>/^box:/i.test(t));
+  if(!boxToks.length) return text;   // default view already shows core/tbg/2nd
+  if(boxToks.some(t=>t.toLowerCase()==='box:all'||t.toLowerCase()==='box:'+b)) return text;
+  toks.push('box:'+b); return toks.join(' ');
+}
+// Box pills rewrite the box: tokens wholesale (default = no tokens, all = box:all).
+function setBoxTokens(target){
+  let toks=tokenList(currentQuery()).filter(t=>!/^-?box:/i.test(t));
+  const isDefault=target.length===DEFAULT_BOXES.length&&DEFAULT_BOXES.every(b=>target.includes(b));
+  const isAll=ALL_BOXES.every(b=>target.includes(b));
+  if(isAll) toks.push('box:all');
+  else if(!target.length) toks.push('box:none');   // deselecting every box means: show nothing
+  else if(!isDefault) target.forEach(b=>toks.push('box:'+b));
+  setQuery(toks.join(' '));
+}
+function syncFilterPills(){
+  document.querySelectorAll('.suit-pill').forEach(p=>p.classList.toggle('active',activeSuits.has(p.dataset.suit)));
+  document.querySelectorAll('.species-pill,.regular-pill,.other-pill').forEach(p=>p.classList.toggle('active',activeTags.has(p.dataset.value)));
+  document.querySelectorAll('.skill-pill').forEach(p=>p.classList.toggle('active',activeSkills.has(p.dataset.value)));
+  document.querySelectorAll('.deck-pill').forEach(p=>p.classList.toggle('active',activeDecks.has(p.dataset.deck)));
+}
 
 // Reflect activeBoxes back into the Box pill row. The All pill is active only while
 // every box is selected, so it dims as soon as any single box is toggled off.
@@ -648,11 +817,8 @@ function syncBoxPills(){
 }
 
 function clearAll(){
-  activeDecks.clear(); activeSuits.clear(); activeTags.clear(); activeSkills.clear(); searchText='';
-  document.getElementById('searchInput').value='';
-  document.querySelectorAll('.suit-pill,.species-pill,.regular-pill,.other-pill,.skill-pill,.deck-pill').forEach(p=>p.classList.remove('active'));
-  updateSummaries();
-  render();
+  // Full reset: empty bar = the default view (three main boxes, no filters).
+  setQuery('');
 }
 
 function cardBox(c){
@@ -666,12 +832,20 @@ function cardMatches(c){
   // Box membership (promos now live in activeBoxes as promo1/promo2)
   if(!activeBoxes.has(c.box)) return false;
   // Promo cards skip the deck filter; everything else respects deck selection.
-  if(c.deck!=='Promo' && activeDecks.size && !activeDecks.has(deckKey(c))) return false;
+  if(c.deck!=='Promo'){
+    if(activeDecks.size && !activeDecks.has(deckKey(c))) return false;
+    if(negDecks.size && negDecks.has(deckKey(c))) return false;
+  }
   if(activeSuits.size && !activeSuits.has(c.suit)) return false;
-  if(searchText && !c.name.toLowerCase().includes(searchText)) return false;
+  if(negSuits.has(c.suit)) return false;
+  const lname=c.name.toLowerCase();
+  if(nameTerms.length && !nameTerms.every(t=>lname.includes(t))) return false;
+  if(negNames.some(t=>lname.includes(t))) return false;
   const allTags=[...c.species,...c.regular,...c.other];
   if(activeTags.size && ![...activeTags].every(t=>allTags.includes(t))) return false;
+  if([...negTags].some(t=>allTags.includes(t))) return false;
   if(activeSkills.size && ![...activeSkills].every(s=>c.skills.includes(s))) return false;
+  if([...negSkills].some(s=>c.skills.includes(s))) return false;
   return true;
 }
 
@@ -683,20 +857,9 @@ function updateSummaries(){
   document.getElementById('speciesSummary').textContent=sp.length?sp.join(', '):'';
   document.getElementById('regularSummary').textContent=rg.length?rg.join(', '):'';
   document.getElementById('otherSummary').textContent=ot.length?ot.join(', '):'';
-  document.getElementById('skillsSummary').textContent=sk.length?sk.join(', '):'';
-}
-
-function updateSearchPlaceholder(total){
-  const input=document.getElementById('searchInput');
-  const parts=[];
-  if(activeTags.size) parts.push([...activeTags].join(' + '));
-  if(activeSkills.size) parts.push([...activeSkills].join(' + '));
-  if(activeSuits.size) parts.push([...activeSuits].join(' + '));
-  if(parts.length){
-    input.placeholder=parts.join(' \u00b7 ')+' \u00b7 '+total+' card'+(total!==1?'s':'');
-  } else {
-    input.placeholder='Search by card name\u2026';
-  }
+  const skOnly=sk.filter(v=>!/Focus$/.test(v)), foOnly=sk.filter(v=>/Focus$/.test(v));
+  document.getElementById('skillsSummary').textContent=skOnly.length?skOnly.join(', '):'';
+  document.getElementById('focusSummary').textContent=foOnly.length?foOnly.join(', '):'';
 }
 
 function getPoolWithout(excludeTag, excludeSkill){
@@ -704,8 +867,12 @@ function getPoolWithout(excludeTag, excludeSkill){
     if(!activeBoxes.has(c.box)) return false;
     if(c.deck!=='Promo' && activeDecks.size && !activeDecks.has(deckKey(c))) return false;
     if(activeSuits.size && !activeSuits.has(c.suit)) return false;
-    if(searchText && !c.name.toLowerCase().includes(searchText)) return false;
+    if(negSuits.has(c.suit)) return false;
+    const lname=c.name.toLowerCase();
+    if(nameTerms.length && !nameTerms.every(t=>lname.includes(t))) return false;
+    if(negNames.some(t=>lname.includes(t))) return false;
     const allTags=[...c.species,...c.regular,...c.other];
+    if([...negTags].some(t=>allTags.includes(t))) return false;
     const tagsToCheck=[...activeTags].filter(t=>t!==excludeTag);
     if(tagsToCheck.length && !tagsToCheck.every(t=>allTags.includes(t))) return false;
     const skillsToCheck=[...activeSkills].filter(s=>s!==excludeSkill);
@@ -728,7 +895,8 @@ function updateBadges(){
   updatePillCounts('speciesFilters',allSpecies,false);
   updatePillCounts('regularFilters',allRegular,false);
   updatePillCounts('otherFilters',allOther,false);
-  updatePillCounts('skillFilters',allSkills,true);
+  updatePillCounts('skillFilters',allSkills.filter(v=>!/Focus$/.test(v)),true);
+  updatePillCounts('focusFilters',allSkills.filter(v=>/Focus$/.test(v)),true);
 }
 
 function badgeInfo(c){
@@ -827,9 +995,10 @@ function render(){
   let copies=0;
   ALL_CARDS.forEach(c=>{ if(cardMatches(c)) copies+=(c.copies||1); });
   document.getElementById('distinctDisplay').textContent=total;
+  document.getElementById('searchCount').innerHTML =
+    '<b>'+total+'</b> card'+(total!==1?'s':'')+(copies!==total?' \u00b7 '+copies+' copies':'');
   const extra=document.getElementById('copiesExtra');
   extra.textContent = (copies!==total) ? ('  ·  '+copies+' copies') : '';
-  updateSearchPlaceholder(total);
   updateBadges();
   if(!total) groups.innerHTML='<div class="no-results">No cards match the current filters.</div>';
 }
@@ -859,9 +1028,7 @@ const allPill=document.createElement('span');
 allPill.className='box-pill'; allPill.dataset.box='all'; allPill.textContent='All';
 allPill.onclick=()=>{
   const everythingOn = ALL_BOXES.every(b=>activeBoxes.has(b));
-  activeBoxes.clear();
-  (everythingOn ? DEFAULT_BOXES : ALL_BOXES).forEach(b=>activeBoxes.add(b));
-  syncBoxPills(); render();
+  setBoxTokens(everythingOn ? [...DEFAULT_BOXES] : [...ALL_BOXES]);
 };
 boxContainer.appendChild(allPill);
 
@@ -869,7 +1036,7 @@ boxDefs.forEach(({id,label})=>{
   const p=document.createElement('span');
   p.className='box-pill';
   p.dataset.box=id; p.textContent=label;
-  p.onclick=()=>{ if(activeBoxes.has(id)) activeBoxes.delete(id); else activeBoxes.add(id); syncBoxPills(); render(); };
+  p.onclick=()=>{ const t=new Set(activeBoxes); if(t.has(id)) t.delete(id); else t.add(id); setBoxTokens([...t]); };
   boxContainer.appendChild(p);
 });
 syncBoxPills();
@@ -887,23 +1054,17 @@ DECK_ORDER.forEach(d=>{
     cls = box==='tbg'?'tbg':box==='2nd'?'second':'core';
   }
   p.className='deck-pill '+cls;
-  p.textContent=deckLabel(d);
+  p.textContent=deckLabel(d); p.dataset.deck=d;
   p.onclick=()=>{
-    if(activeDecks.has(d)){
-      activeDecks.delete(d);
-    } else {
-      activeDecks.add(d);
-      // Selecting a deck auto-selects its box, so the deck pill alone yields results.
-      // Deselecting a deck never removes a box: the user may have chosen it deliberately
-      // or have another deck from that box still active.
-      if(box && !activeBoxes.has(box)){
-        activeBoxes.add(box);
-        const bp=document.querySelector('.box-pill[data-box="'+box+'"]');
-        if(bp) bp.classList.add('active');
-      }
-    }
-    p.classList.toggle('active');
-    render();
+    // Common pills share one token (deck:common = commons of every visible box).
+    const tok = d.startsWith('Common:') ? 'deck:common' : tokenOf('deck',d);
+    let text=currentQuery();
+    // Selecting a deck auto-adds its box when an explicit box list excludes it.
+    if(box && !activeBoxes.has(box)) text=withBoxAdded(text,box);
+    const toks=tokenList(text);
+    const i=toks.findIndex(t=>t.toLowerCase()===tok.toLowerCase());
+    if(i>=0) toks.splice(i,1); else toks.push(tok);
+    setQuery(toks.join(' '));
   };
   deckContainer.appendChild(p);
 });
@@ -918,17 +1079,31 @@ SUITS_DISPLAY.forEach(s=>{
     p.classList.add('disabled');
     p.title='Coming soon';
   } else {
-    p.onclick=()=>{ if(activeSuits.has(s)) activeSuits.delete(s); else activeSuits.add(s); p.classList.toggle('active'); render(); };
+    p.onclick=()=>toggleToken(tokenOf('suit',s));
   }
   suitContainer.appendChild(p);
 });
 
-document.getElementById('speciesFilters').append(...allSpecies.map(t=>makePill(t,'species-pill',activeTags)));
-document.getElementById('regularFilters').append(...allRegular.map(t=>makePill(t,'regular-pill',activeTags)));
-document.getElementById('otherFilters').append(...allOther.map(t=>makePill(t,'other-pill',activeTags)));
-document.getElementById('skillFilters').append(...allSkills.map(t=>makePill(t,'skill-pill',activeSkills)));
+document.getElementById('speciesFilters').append(...allSpecies.map(t=>makePill(t,'species-pill','trait')));
+document.getElementById('regularFilters').append(...allRegular.map(t=>makePill(t,'regular-pill','trait')));
+document.getElementById('otherFilters').append(...allOther.map(t=>makePill(t,'other-pill','trait')));
+const skillTok=t=>{ const m=t.match(/^(.+)\s+(Skill|Focus)$/);
+  return m ? (m[2]==='Focus'?'focus:':'skill:')+quoteVal(m[1].toLowerCase()) : tokenOf('skill',t); };
+allSkills.forEach(t=>{
+  const p=document.createElement('span');
+  const spec=(t.match(/^(.+)\s+(Skill|Focus)$/)||[])[1];
+  p.className='skill-pill'+(spec?' sk-'+spec.toLowerCase():'');
+  p.textContent=t; p.dataset.value=t;
+  p.onclick=()=>toggleToken(skillTok(t));
+  document.getElementById(/Focus$/.test(t)?'focusFilters':'skillFilters').appendChild(p);
+});
 
-document.getElementById('searchInput').addEventListener('input',e=>{ searchText=e.target.value.toLowerCase().trim(); render(); });
+buildQueryVocab();
+// Typing edits state directly; setQuery is only for programmatic edits (pills),
+// so the caret is never disturbed while typing.
+document.getElementById('searchInput').addEventListener('input',e=>refreshFromQuery(e.target.value));
+const helpBtn=document.getElementById('queryHelpBtn');
+if(helpBtn) helpBtn.onclick=()=>document.getElementById('queryHelp').classList.toggle('open');
 
 
   render();
