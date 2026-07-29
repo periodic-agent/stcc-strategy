@@ -26,7 +26,8 @@ Anonymity gate (see WORKFLOW.md, "Anonymity Rules") — v3, FAIL CLOSED:
 - Standalone/reusable version with directory and git-history scan modes:
   tools/push_gate.py.
 
-Implementation: shallow-clones the public repo anonymously, copies the file(s) in,
+Implementation: clones the public repo anonymously (shallow, blobless, sparse: only the paths
+being pushed are checked out, so the image library is never downloaded), copies the file(s) in,
 commits, and pushes with a one-shot authenticated URL. The token is never
 written to .git/config and is scrubbed from any error output.
 
@@ -166,8 +167,14 @@ def main():
     try:
         clone_dir = os.path.join(tmp, "repo")
         # Anonymous clone: repo is public, no token needed (or stored) here.
+        # Blobless + sparse: the repo carries hundreds of card scans, and a full clone takes
+        # long enough to be killed by a command timeout. Only the paths being pushed are
+        # materialised; their blobs are fetched on demand at checkout.
         run(["git", "clone", "--depth", "1", "--branch", BRANCH,
+             "--filter=blob:none", "--sparse",
              f"https://{REPO}", clone_dir], token)
+        run(["git", "-C", clone_dir, "sparse-checkout", "set", "--no-cone",
+             *("/" + r for _, r in pairs)], token)
 
         run(["git", "-C", clone_dir, "config", "user.name", COMMIT_NAME], token)
         run(["git", "-C", clone_dir, "config", "user.email", COMMIT_EMAIL], token)
