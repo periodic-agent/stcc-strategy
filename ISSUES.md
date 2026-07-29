@@ -66,6 +66,6 @@ Tracked improvements for the site. Ordered by priority.
 
 **Problem:** `img/promo2/` holds 6 card scans on git (drones-of-cube-90182, frank-hollander, golden-statue-of-obrien, starbase-80, subspace-rhapsody, uss-cabot) but no box JSON carries their rows: box2.json has zero `source: "Promo"` records. The scanner therefore cannot show them. Per the documented design (WORKFLOW.md, "Promo data vs image split"), promo cards do NOT get their own JSON: their data lives in the era box JSON (Promo Pack 1 rows sit in box1.json with `source: "Promo"`; the scanner routes `source Promo` + `game_box "To Boldly Go"` to `img/promo2/` at line ~395 of the scanner). Promo Pack 2 rows belong in box2.json.
 
-**Fix:** OCR the 6 promo2 card faces for name, suit, traits, and icons; add the rows to box2.json (`source: "Promo"`, `game_box: "To Boldly Go"`, `filename` per convention). Periodic_agent will run the card OCR in the card-database chat.
+**Fix (revised 29 Jul 2026):** promo packs now have their own JSON files (`promo1.json`, `promo2.json`; one box = one JSON = one image folder — see WORKFLOW.md). `promo2.json` is seeded with all 6 rows: id, name, suit, card_number (read from the card faces), `source: "Promo"`, `game_box: "Promo Pack 2"`, filename wired to `img/promo2/`. Remaining work: OCR the 6 faces for species/regular/other traits and icons, then fill those arrays in `promo2.json`. Periodic_agent will run the card OCR in the card-database chat.
 
-**Status:** OPEN — 29 Jul 2026.
+**Status:** OPEN (traits/icons only) — 29 Jul 2026. Data rows seeded and scanner-wired by `tools/split_promo_json.py`.

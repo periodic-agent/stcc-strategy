@@ -341,17 +341,22 @@ Place just before `</body>`. Tracker endpoint: `https://stcc-compendium.goatcoun
 
 ### File structure
 ```
-box1.json    -- Captain's Chair, complete (255 cards incl. Promo Pack 1)   [repo ROOT]
+box1.json    -- Captain's Chair, complete (250 cards)                         [repo ROOT]
 box2.json    -- To Boldly Go, live (248 cards incl. Khan deck)                [repo ROOT]
 box3.json    -- Second Contact, live (99 cards: Common, Freeman, Pike, Riker) [repo ROOT]
+promo1.json  -- Promo Pack 1, complete (5 cards, split out of box1.json)      [repo ROOT]
+promo2.json  -- Promo Pack 2, seeded (6 cards; traits/icons pending, Issue 5) [repo ROOT]
 ```
 The boxN.json files live at the **repo root**, not in a `data/` folder.
 
 ### Scanner data — runtime fetch + id resolver
 
 The Card Scanner (`card-browser-mockup.html`) loads card data at **runtime**. On page
-load it `fetch`es every file in `BOX_SOURCES` (`box1.json`, `box2.json`, `box3.json`)
-into `RAW_BOXES`. There is **no inline `ALL_CARDS` array and no build-time injection**.
+load it `fetch`es every file in `BOX_SOURCES` (`box1.json`, `box2.json`, `box3.json`,
+`promo1.json`, `promo2.json`) into `RAW_BOXES`, stamping each card with its source
+file's box key (`_srcBox`) — the source file, not the card's `game_box`, decides
+which box a card belongs to. There is **no inline `ALL_CARDS` array and no
+build-time injection**.
 To wire a new box, add one line to `BOX_SOURCES` and push its JSON — nothing else.
 (`tools/build_scanner_data.py` was the old inline injector; it is **legacy**, no longer
 part of the pipeline.)
@@ -560,7 +565,7 @@ Repeatable procedure — run whenever the community sheet gains cards. A future 
 4. **Validate.** The script runs the four checks above; checks 1 and 4 are gates and exit non-zero (`--warn-unresolved` overrides, use sparingly). Also: no duplicate ids (suffix `-2`, keep both — see duplicate note above), traits against the **Vocabulary** tab (warn on novel, never drop), counts per suit. Fix the **sheet**, never the JSON — hand-edits are overwritten on the next regen.
    - **Holding back an incomplete deck** (e.g. a captain deck whose skill/focus icons are not yet entered) is a **one-off filter at ship time**, applied by dropping those `source` rows after the build — *never* a build-script option. An `--exclude-deck` flag was tried and deliberately removed: once the icons land, a plain regen brings the deck in automatically, which is the behavior you want. No decks are currently held: Khan (TBG) and Pike/Riker (2C) have since shipped, so box2.json carries all 248 TBG cards and box3.json all 99 Second Contact cards.
 5. **Wire the box (first time only).** The scanner fetches box JSON at **runtime** — there is no injection step. A brand-new box needs one line added to `BOX_SOURCES` in `card-browser-mockup.html`; boxes already listed need nothing (pushing the JSON is enough). Never run an inline-injection tool.
-6. **Preview + present.** Because the scanner fetches at runtime, a local preview must **embed** the data: in a `-preview` copy, replace the `BOX_SOURCES` fetch loop with `RAW_BOXES = window.__BOXES__` and inject `<script>window.__BOXES__={box1:…,box2:…,box3:…}</script>`, and point `IMG_BASE` at the live site (**no `<base>` tag** — it breaks anchor links). Present the changed `boxN.json` and the preview for review.
+6. **Preview + present.** Because the scanner fetches at runtime, a local preview must **embed** the data: in a `-preview` copy, replace the `BOX_SOURCES` fetch loop with `RAW_BOXES = window.__BOXES__` and inject `<script>window.__BOXES__={box1:…,box2:…,box3:…,promo1:…,promo2:…}</script>`, and point `IMG_BASE` at the live site (**no `<base>` tag** — it breaks anchor links). Present the changed `boxN.json` and the preview for review.
 7. **Push on Periodic_agent's explicit approval only** — the changed `boxN.json` (+ `card-browser-mockup.html` only if `BOX_SOURCES` changed) + `tools/build_box2_from_sheet.py` (Rule 7) in one commit, via `push_to_github.py --pii-file <denylist> --token-file <token>` (both from project knowledge; fails closed without the denylist). Scanner footer stays `Card images © WizKids.` (Rule 6); do not add a content-attribution line.
 
 ---
@@ -609,10 +614,10 @@ The Card Scanner uses different *internal* box keys (`core`, `tbg`, `2nd`) in it
 | `core` | Captain's Chair | `img/box1/` | `box1.json` |
 | `tbg` | To Boldly Go | `img/box2/` | `box2.json` |
 | `2nd` | Second Contact | `img/box3/` | `box3.json` |
-| `promo1` | Promo Pack 1 | `img/promo1/` | `box1.json` |
-| `promo2` | Promo Pack 2 | `img/promo2/` | `box2.json` (expected) |
+| `promo1` | Promo Pack 1 | `img/promo1/` | `promo1.json` |
+| `promo2` | Promo Pack 2 | `img/promo2/` | `promo2.json` |
 
-**Promo data vs image split:** Promo cards are stored as data *inside* the main box JSON for their era — Promo Pack 1 cards live in `box1.json` (tagged `source:"Promo"`, `box:"promo1"`), and Promo Pack 2 cards are expected to live in `box2.json`. But their *images* get their own folders (`img/promo1/`, `img/promo2/`) because the scanner treats promo packs as separate boxes in the UI. So a promo card's data and its image folder come from different places — this is intentional.
+**One box = one JSON = one image folder** (decision Jul 2026, per Periodic_agent): every box, promo packs included, has its own JSON at repo root matching its image folder. Promo packs are linked to an expansion *wave*, not to a single box (Promo Pack 2 shipped alongside both To Boldly Go and Second Contact), so their data no longer lives inside an era box JSON. Promo rows keep `source: "Promo"` and carry `game_box: "Promo Pack 1"` / `"Promo Pack 2"`; the scanner assigns box membership from the source *file* (`_srcBox` stamp in `loadBoxes`), with `game_box` only as fallback for injected preview data. The earlier design (promo data inside box1.json/box2.json) was retired by `tools/split_promo_json.py`.
 
 In the scanner code this table is the `BOX_FOLDER = { core:'box1', tbg:'box2', '2nd':'box3', promo1:'promo1', promo2:'promo2' }` constant. Image src is built as `img/<BOX_FOLDER[box]>/<filename>`. A missing image (404) falls back to a `NO IMAGE` placeholder via `onerror`, so partial image coverage is fine. Coverage as of July 2026: `img/box3/` is complete (99/99; the 76 Freeman/Pike/Riker files are full-resolution contributor scans, 1488x2079, JPG q95 4:4:4), `img/box1/` holds 248 of 255, `img/box2/` holds 106 of 248; uncovered cards show the placeholder. The Box 3 scans were a one-off contributor image package, imported by matching the card number printed bottom-left on each face (the unique key in box3.json) plus title-banner and deck-folder cross-checks; the import scripts and the scan-to-card mapping are parked on local disk beside the scan package (`img_table_scans/box 3/import_tools/`), deliberately not in the repo.
 

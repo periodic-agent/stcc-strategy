@@ -1,0 +1,92 @@
+[
+  {
+    "id": "sehlat",
+    "name": "Sehlat",
+    "suit": "Cargo",
+    "source": "Promo",
+    "game_box": "Promo Pack 1",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Creature"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "sehlat.jpg",
+    "icons": []
+  },
+  {
+    "id": "uss-enterprise-b",
+    "name": "U.S.S. Enterprise-B",
+    "suit": "Ship",
+    "source": "Promo",
+    "game_box": "Promo Pack 1",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "uss-enterprise-b.jpg",
+    "icons": []
+  },
+  {
+    "id": "wesley-crusher",
+    "name": "Wesley Crusher",
+    "suit": "Encounter",
+    "source": "Promo",
+    "game_box": "Promo Pack 1",
+    "species_traits": [
+      "Human",
+      "Transcendent"
+    ],
+    "regular_traits": [
+      "Pilot",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "wesley-crusher.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ]
+  },
+  {
+    "id": "flight-training-accident",
+    "name": "Flight Training Accident",
+    "suit": "Incident",
+    "source": "Promo",
+    "game_box": "Promo Pack 1",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Surprise"
+    ],
+    "filename": "flight-training-accident.jpg",
+    "icons": []
+  },
+  {
+    "id": "whale-probe-incursion",
+    "name": "Whale Probe Incursion",
+    "suit": "Incident",
+    "source": "Promo",
+    "game_box": "Promo Pack 1",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [],
+    "other_traits": [
+      "Attack",
+      "Surprise"
+    ],
+    "filename": "whale-probe-incursion.jpg",
+    "icons": []
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "drones-of-cube-90182",
+    "name": "Drones of Cube 90182",
+    "suit": "Ally",
+    "source": "Promo",
+    "game_box": "Promo Pack 2",
+    "card_number": "0ALL01/?",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "drones-of-cube-90182.jpg",
+    "icons": []
+  },
+  {
+    "id": "frank-hollander",
+    "name": "Frank Hollander",
+    "suit": "Cargo",
+    "source": "Promo",
+    "game_box": "Promo Pack 2",
+    "card_number": "0CAR02/?",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "frank-hollander.jpg",
+    "icons": []
+  },
+  {
+    "id": "golden-statue-of-obrien",
+    "name": "Golden Statue of O'Brien",
+    "suit": "Cargo",
+    "source": "Promo",
+    "game_box": "Promo Pack 2",
+    "card_number": "0CAR03/?",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "golden-statue-of-obrien.jpg",
+    "icons": []
+  },
+  {
+    "id": "starbase-80",
+    "name": "Starbase 80",
+    "suit": "Location",
+    "source": "Promo",
+    "game_box": "Promo Pack 2",
+    "card_number": "0LOC01/?",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "starbase-80.jpg",
+    "icons": []
+  },
+  {
+    "id": "subspace-rhapsody",
+    "name": "Subspace Rhapsody",
+    "suit": "Incident",
+    "source": "Promo",
+    "game_box": "Promo Pack 2",
+    "card_number": "0INC03/?",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "subspace-rhapsody.jpg",
+    "icons": []
+  },
+  {
+    "id": "uss-cabot",
+    "name": "U.S.S. Cabot",
+    "suit": "Ship",
+    "source": "Promo",
+    "game_box": "Promo Pack 2",
+    "card_number": "0SHI02/?",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "uss-cabot.jpg",
+    "icons": []
+  }
+]

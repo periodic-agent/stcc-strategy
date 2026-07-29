@@ -380,21 +380,27 @@ let openStrategyId  = null;
 
 let RAW_BOXES = {};   // { box1:[...], box2:[...] } raw loaded JSON, kept for cross-referencing
 
-// Which box JSON files exist and their internal box-key + display label.
+// Which box JSON files exist, their internal box-key + display label.
+// One box = one JSON = one image folder; promo packs have their own files
+// (they belong to an expansion wave, not to a single box).
 const BOX_SOURCES = [
-  { file:'box1.json', label:"Captain's Chair", short:"Captain's Chair" },
-  { file:'box2.json', label:'To Boldly Go',    short:'To Boldly Go' },
-  { file:'box3.json', label:'Second Contact',     short:'Second Contact' },
+  { file:'box1.json',   key:'core',   label:"Captain's Chair", short:"Captain's Chair" },
+  { file:'box2.json',   key:'tbg',    label:'To Boldly Go',    short:'To Boldly Go' },
+  { file:'box3.json',   key:'2nd',    label:'Second Contact',  short:'Second Contact' },
+  { file:'promo1.json', key:'promo1', label:'Promo 1',         short:'Promo 1' },
+  { file:'promo2.json', key:'promo2', label:'Promo 2',         short:'Promo 2' },
 ];
 
 // Map a raw card's game context to the scanner's internal box key.
-// Common/captain cards -> core/tbg/2nd by game_box; Promo cards keep promo1/promo2 (set below).
+// Primary: the source file's key, stamped on each card at load (_srcBox).
+// Fallback (e.g. injected preview data without stamps): game_box lookup;
+// promo rows carry game_box "Promo Pack 1" / "Promo Pack 2".
 const GAMEBOX_KEY = { "Captain's Chair":'core', "To Boldly Go":'tbg', "Second Contact":'2nd' };
 
 function rawBoxKey(c){
+  if(c._srcBox) return c._srcBox;
   if(c.source === 'Promo'){
-    // promo pack number by game_box era
-    return c.game_box === 'To Boldly Go' ? 'promo2' : 'promo1';
+    return c.game_box === 'Promo Pack 2' ? 'promo2' : 'promo1';
   }
   const k = GAMEBOX_KEY[c.game_box];
   if(!k){ console.warn('rawBoxKey: unrecognized game_box', JSON.stringify(c.game_box), 'on', c.id, '- card omitted, not filed under core'); return null; }
@@ -522,7 +528,11 @@ async function loadBoxes(){
   for(const s of BOX_SOURCES){
     try{
       const r = await fetch(s.file, {cache:'no-store'});
-      if(r.ok){ RAW_BOXES[s.file.replace('.json','')] = await r.json(); }
+      if(r.ok){
+        const arr = await r.json();
+        arr.forEach(c => { c._srcBox = s.key; });   // source file decides the box
+        RAW_BOXES[s.file.replace('.json','')] = arr;
+      }
     }catch(e){ console.warn('Could not load', s.file, e); }
   }
   await loadStrategyCounts();
