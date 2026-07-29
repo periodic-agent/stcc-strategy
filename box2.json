@@ -12,7 +12,7 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "admiral-jarok.jpg",
     "icons": []
   },
   {
@@ -111,7 +111,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "harry-mudd.jpg",
     "icons": []
   },
   {
@@ -185,7 +185,7 @@
       "Shady"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "lursa.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -323,7 +323,7 @@
       "Communication"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "riva.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -350,7 +350,7 @@
       "Engineer"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "rom.jpg",
     "icons": []
   },
   {
@@ -415,7 +415,7 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "sukal.jpg",
     "icons": []
   },
   {
@@ -436,7 +436,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "talok.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -459,7 +459,7 @@
       "Business"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "tevrin-krit.jpg",
     "icons": []
   },
   {
@@ -613,7 +613,7 @@
     "other_traits": [
       "Ongoing"
     ],
-    "filename": "",
+    "filename": "cloaking-device.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -682,7 +682,7 @@
     "other_traits": [
       "Ongoing"
     ],
-    "filename": "",
+    "filename": "forced-singularity.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -704,7 +704,7 @@
       "Hologram"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "holosuite.jpg",
     "icons": []
   },
   {
@@ -724,7 +724,7 @@
     "other_traits": [
       "Ongoing"
     ],
-    "filename": "",
+    "filename": "horta.jpg",
     "icons": []
   },
   {
@@ -860,7 +860,7 @@
       "Engineer"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "plasma-manifold.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -901,7 +901,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "type-iii-disruptor-pistols.jpg",
     "icons": []
   },
   {
@@ -940,7 +940,7 @@
       "Communication"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "ancient-relay-station.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -959,7 +959,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-iv.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -1022,7 +1022,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "delta-vega.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -1062,7 +1062,7 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "dozaria.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -1087,7 +1087,7 @@
       "Anomaly"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "indri-viii.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -1112,7 +1112,7 @@
       "Business"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "risa.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -1206,7 +1206,7 @@
       "Starbase"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "kelvas-docks.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -1251,7 +1251,7 @@
       "Communication"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "memory-alpha.jpg",
     "icons": []
   },
   {
@@ -1267,7 +1267,7 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "solum.jpg",
     "icons": []
   },
   {
@@ -1338,7 +1338,7 @@
       "Shady"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "verex-iii.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -1357,7 +1357,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "xahea.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -1382,7 +1382,7 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "arinsen.jpg",
     "icons": []
   },
   {
@@ -1396,7 +1396,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "bolians.jpg",
     "icons": []
   },
   {
@@ -1414,7 +1414,7 @@
       "Engineer"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "bynars.jpg",
     "icons": []
   },
   {
@@ -1428,7 +1428,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "denobulans.jpg",
     "icons": []
   },
   {
@@ -1462,7 +1462,7 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "kelpiens.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -1486,7 +1486,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "letheans.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -1509,7 +1509,7 @@
       "Anomaly"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "organians.jpg",
     "icons": []
   },
   {
@@ -1588,7 +1588,7 @@
       "Time Travel"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "suliban.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -1700,7 +1700,7 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "borg-probe.jpg",
     "icons": []
   },
   {
@@ -1743,7 +1743,7 @@
       "Scientist"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "dkyr-cruiser.jpg",
     "icons": []
   },
   {
@@ -1781,7 +1781,7 @@
       "Hologram"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "holographic-drone-ship.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -1806,7 +1806,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "kazon-raider.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -1852,7 +1852,7 @@
       "Business"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "pakled-freighter.jpg",
     "icons": []
   },
   {
@@ -1870,7 +1870,7 @@
       "Time Travel"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "uss-enterprise-c.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -1893,7 +1893,7 @@
       "Communication"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "uss-pasteur.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -1957,7 +1957,7 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "xindi-reptillian-battleship.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -2031,7 +2031,7 @@
     "other_traits": [
       "Ongoing"
     ],
-    "filename": "",
+    "filename": "guardian-of-forever.jpg",
     "icons": []
   },
   {
@@ -2047,7 +2047,7 @@
     "other_traits": [
       "Wildcard"
     ],
-    "filename": "",
+    "filename": "koala.jpg",
     "icons": []
   },
   {
@@ -2130,7 +2130,7 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "vger.jpg",
     "icons": []
   },
   {
@@ -2162,7 +2162,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "hostile-contact.jpg",
     "icons": []
   },
   {
@@ -2176,7 +2176,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "political-crisis.jpg",
     "icons": []
   },
   {
@@ -2204,7 +2204,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "subspace-phenomenon.jpg",
     "icons": []
   },
   {
@@ -2218,7 +2218,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "trade-embargo.jpg",
     "icons": []
   },
   {
@@ -2236,7 +2236,7 @@
       "Shady"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "rebner-rebner.jpg",
     "icons": []
   },
   {
@@ -2254,7 +2254,7 @@
       "Business"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "rebner-mondor.jpg",
     "icons": []
   },
   {
@@ -2270,7 +2270,7 @@
       "Helmet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "rebner-big-enough-helmet.jpg",
     "icons": []
   },
   {
@@ -2286,7 +2286,7 @@
       "Business"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "rebner-karzill-vi.jpg",
     "icons": []
   },
   {
@@ -2304,7 +2304,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "rebner-varuvian-bomb.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -2327,7 +2327,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "rebner-jackabogs-clumpship.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -2348,7 +2348,7 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "rebner-harpy.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -2371,7 +2371,7 @@
       "Imperial"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "rebner-the-pakled-emperor.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -2396,7 +2396,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "rebner-rumdar.jpg",
     "icons": []
   },
   {
@@ -2414,7 +2414,7 @@
       "Ambassador"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "rebner-ambassador-grubdin.jpg",
     "icons": []
   },
   {
@@ -2432,7 +2432,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "rebner-the-clumpship-pakled.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -2453,7 +2453,7 @@
       "Helmet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "rebner-even-bigger-helmet.jpg",
     "icons": []
   },
   {
@@ -2471,7 +2471,7 @@
       "Engineer"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "rebner-reginod.jpg",
     "icons": []
   },
   {
@@ -2485,7 +2485,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "rebner-red-alarm.jpg",
     "icons": []
   },
   {
@@ -2499,7 +2499,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "rebner-rebelution.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -2520,7 +2520,7 @@
     "other_traits": [
       "Ongoing"
     ],
-    "filename": "",
+    "filename": "rebner-pakled-decree.jpg",
     "icons": []
   },
   {
@@ -2534,7 +2534,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "rebner-salvage.jpg",
     "icons": []
   },
   {
@@ -2550,7 +2550,7 @@
     "other_traits": [
       "Ongoing"
     ],
-    "filename": "",
+    "filename": "rebner-samaritan-snare.jpg",
     "icons": []
   },
   {
@@ -2566,7 +2566,7 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "rebner-grebnedlog.jpg",
     "icons": []
   },
   {
@@ -2582,7 +2582,7 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "rebner-pakled-planet.jpg",
     "icons": []
   },
   {
@@ -2598,7 +2598,7 @@
       "Helmet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "rebner-big-helmet.jpg",
     "icons": []
   },
   {
@@ -2614,7 +2614,7 @@
       "Helmet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "rebner-big-helmet-2.jpg",
     "icons": []
   },
   {
@@ -3074,7 +3074,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-jonathan-archer.jpg",
     "icons": []
   },
   {
@@ -3088,7 +3088,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-earth.jpg",
     "icons": []
   },
   {
@@ -3107,7 +3107,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-nx-01-enterprise.jpg",
     "icons": []
   },
   {
@@ -3125,7 +3125,7 @@
     "other_traits": [
       "Wildcard"
     ],
-    "filename": "",
+    "filename": "archer-founding-the-federation.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -3148,7 +3148,7 @@
       "Time Travel"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-agent-daniels.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -3175,7 +3175,7 @@
       "Imperial"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-commander-shran.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -3203,7 +3203,7 @@
       "Ambassador"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-ambassador-soval.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -3230,7 +3230,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-admiral-forrest.jpg",
     "icons": []
   },
   {
@@ -3248,7 +3248,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "archer-xindi-council.jpg",
     "icons": []
   },
   {
@@ -3265,7 +3265,7 @@
       "Engineer"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-automated-repair-station.jpg",
     "icons": []
   },
   {
@@ -3285,7 +3285,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "archer-major-hayes-maco.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -3311,7 +3311,7 @@
       "Scientist"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-tpol.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -3330,7 +3330,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-strange-new-worlds.jpg",
     "icons": []
   },
   {
@@ -3344,7 +3344,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-first-contact.jpg",
     "icons": []
   },
   {
@@ -3358,7 +3358,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-inspire.jpg",
     "icons": []
   },
   {
@@ -3372,7 +3372,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-reach-any-star.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -3394,7 +3394,7 @@
       "Creature"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-porthos.jpg",
     "icons": []
   },
   {
@@ -3411,7 +3411,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-shuttlepod-1.jpg",
     "icons": []
   },
   {
@@ -3431,7 +3431,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-trip-tucker-iii.jpg",
     "icons": []
   },
   {
@@ -3445,7 +3445,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-recruit.jpg",
     "icons": []
   },
   {
@@ -3459,7 +3459,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-analyze.jpg",
     "icons": []
   },
   {
@@ -3473,7 +3473,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-strength-of-the-soul.jpg",
     "icons": []
   },
   {
@@ -3487,7 +3487,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "archer-faith-of-the-heart.jpg",
     "icons": []
   },
   {
@@ -3964,7 +3964,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-james-t-kirk.jpg",
     "icons": []
   },
   {
@@ -3980,7 +3980,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-uss-enterprise-refit.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -4001,7 +4001,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-starfleet-headquarters.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -4022,7 +4022,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "kirk-what-have-i-done.jpg",
     "icons": []
   },
   {
@@ -4038,7 +4038,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-uss-enterprise-a.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -4065,7 +4065,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "kirk-uss-excelsior.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -4097,7 +4097,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-hikaru-sulu.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -4121,7 +4121,7 @@
       "Ambassador"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-sarek.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -4142,7 +4142,7 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-vulcan.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -4172,7 +4172,7 @@
       "Time Travel"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-time-warp.jpg",
     "icons": [
       {
         "type": "Focus",
@@ -4195,7 +4195,7 @@
       "Cloak"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-hms-bounty.jpg",
     "icons": []
   },
   {
@@ -4214,7 +4214,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-montgomery-scotty-scott.jpg",
     "icons": []
   },
   {
@@ -4235,7 +4235,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "kirk-pavel-chekov.jpg",
     "icons": []
   },
   {
@@ -4249,7 +4249,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-analyze.jpg",
     "icons": []
   },
   {
@@ -4263,7 +4263,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-needs-of-the-many.jpg",
     "icons": []
   },
   {
@@ -4277,7 +4277,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-subspace-phenomenon.jpg",
     "icons": []
   },
   {
@@ -4293,7 +4293,7 @@
     "other_traits": [
       "Ongoing"
     ],
-    "filename": "",
+    "filename": "kirk-levitation-boots.jpg",
     "icons": []
   },
   {
@@ -4307,7 +4307,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-recruit.jpg",
     "icons": []
   },
   {
@@ -4321,7 +4321,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-utilize.jpg",
     "icons": []
   },
   {
@@ -4335,7 +4335,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-set-a-course.jpg",
     "icons": []
   },
   {
@@ -4349,7 +4349,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-strange-new-worlds.jpg",
     "icons": []
   },
   {
@@ -4368,7 +4368,7 @@
       "Communication"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-nyota-uhura.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -4392,7 +4392,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-leonard-mccoy.jpg",
     "icons": []
   },
   {
@@ -4413,7 +4413,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-captain-spock.jpg",
     "icons": [
       {
         "type": "Skill",
@@ -4432,7 +4432,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "kirk-maximum-warp.jpg",
     "icons": []
   },
   {
@@ -4450,7 +4450,7 @@
       "Augment"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "khan-khan-noonien-singh.jpg",
     "icons": []
   },
   {
@@ -4468,7 +4468,7 @@
       "Augment"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "khan-wrathful-khan.jpg",
     "icons": []
   },
   {
@@ -4482,7 +4482,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "khan-ceti-alpha-v.jpg",
     "icons": []
   },
   {
@@ -4500,7 +4500,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "khan-devastated-ceti-alpha-v.jpg",
     "icons": []
   },
   {
@@ -4514,7 +4514,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "khan-ceti-alpha-vi.jpg",
     "icons": []
   },
   {
@@ -4531,7 +4531,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "khan-hijacked-uss-reliant.jpg",
     "icons": []
   },
   {
@@ -4547,7 +4547,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "khan-surprise-attack.jpg",
     "icons": []
   },
   {
@@ -4566,7 +4566,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "khan-cpt-terrell.jpg",
     "icons": []
   },
   {
@@ -4588,7 +4588,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "khan-cmdr-chekov.jpg",
     "icons": []
   },
   {
@@ -4607,7 +4607,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "khan-ceti-eel.jpg",
     "icons": []
   },
   {
@@ -4621,7 +4621,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "khan-infiltrate.jpg",
     "icons": []
   },
   {
@@ -4637,7 +4637,7 @@
     "other_traits": [
       "Attack"
     ],
-    "filename": "",
+    "filename": "khan-revenge-is-a-dish-best-served-cold.jpg",
     "icons": []
   },
   {
@@ -4654,7 +4654,7 @@
       "Attack",
       "Ongoing"
     ],
-    "filename": "",
+    "filename": "khan-genesis-device.jpg",
     "icons": []
   },
   {
@@ -4671,7 +4671,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "khan-vacated-regula-i.jpg",
     "icons": []
   },
   {
@@ -4689,7 +4689,7 @@
       "Starfleet"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "khan-marla-mcgivers.jpg",
     "icons": []
   },
   {
@@ -4705,7 +4705,7 @@
       "Anomaly"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "khan-mutara-nebula.jpg",
     "icons": []
   },
   {
@@ -4719,7 +4719,7 @@
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "khan-salvage.jpg",
     "icons": []
   },
   {
@@ -4735,7 +4735,7 @@
     ],
     "regular_traits": [],
     "other_traits": [],
-    "filename": "",
+    "filename": "khan-ss-botany-bay.jpg",
     "icons": []
   },
   {
@@ -4754,7 +4754,7 @@
       "Ops"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "khan-wajahut.jpg",
     "icons": []
   },
   {
@@ -4773,7 +4773,7 @@
       "Ops"
     ],
     "other_traits": [],
-    "filename": "",
+    "filename": "khan-joachim.jpg",
     "icons": []
   },
   {
@@ -4790,7 +4790,7 @@
       "Attack",
       "Surprise"
     ],
-    "filename": "",
+    "filename": "khan-to-the-last-i-will-grapple-with-thee.jpg",
     "icons": []
   },
   {
@@ -4807,7 +4807,7 @@
       "Attack",
       "Surprise"
     ],
-    "filename": "",
+    "filename": "khan-from-hells-heart-i-stab-at-thee.jpg",
     "icons": []
   },
   {
@@ -4824,7 +4824,7 @@
       "Attack",
       "Surprise"
     ],
-    "filename": "",
+    "filename": "khan-i-spit-my-last-breath-at-thee.jpg",
     "icons": []
   },
   {
@@ -4840,7 +4840,7 @@
     "other_traits": [
       "Surprise"
     ],
-    "filename": "",
+    "filename": "khan-two-dimensional-thinking.jpg",
     "icons": []
   }
 ]

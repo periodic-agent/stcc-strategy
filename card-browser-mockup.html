@@ -440,19 +440,23 @@ function resolveCards(rawPool){
     const boxes = [...new Set(group.map(rawBoxKey))];
 
     // Image: only a printing whose TEXT matches the resolved version qualifies.
-    // - reprint/original: all printings share text -> any qualifies -> prefer newest non-empty.
+    // - reprint/original: all printings share text -> any qualifies.
     // - updated: only the printing(s) equal to `chosen` qualify.
-    // Candidates come from EVERY loaded printing of this id, not just the selected boxes:
-    // a Box 2 reprint carries no scan of its own, so with only Box 2 selected it must still
-    // fall back to the Box 1 original art.
+    // Rule (Jul 2026): every printing prefers its OWN scan. Printings in the
+    // currently selected boxes rank first (newest printing wins among them);
+    // printings outside the selection are fallback only, so browsing TBG shows
+    // the TBG scan of a reprint, not the Box 1 art. The old "Box 1 art wins"
+    // rule predates full reprint scan coverage and is retired.
     const imgPool = FULL_BY_ID[chosen.id] || group;
     let imgCandidates = (chosen.variant==='updated')
       ? imgPool.filter(c=>c.variant==='updated')     // updated text: only updated printings qualify
       : imgPool.filter(c=>c.variant!=='updated');    // base text: originals and reprints share it
-    // Duplicates show the earliest printing's scan (Box 1 art wins).
-    // Updated cards take the newest updated printing, the one whose text changed.
-    const dir = (chosen.variant==='updated') ? -1 : 1;
-    imgCandidates = imgCandidates.slice().sort((a,b)=>dir*(boxRank(rawBoxKey(a))-boxRank(rawBoxKey(b))));
+    const inGroup = new Set(group);
+    imgCandidates = imgCandidates.slice().sort((a,b)=>{
+      const ga = inGroup.has(a) ? 0 : 1, gb = inGroup.has(b) ? 0 : 1;
+      if(ga !== gb) return ga - gb;                                  // selected boxes first
+      return boxRank(rawBoxKey(b)) - boxRank(rawBoxKey(a));          // then newest printing
+    });
     let chosenImg = imgCandidates.find(c=>c.filename && c.filename.trim());
     const imgBox = chosenImg ? rawBoxKey(chosenImg) : null;
     const imgFile = chosenImg ? chosenImg.filename : '';

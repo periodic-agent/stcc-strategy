@@ -480,8 +480,14 @@ reads "Second Contact".
 - Image src is built as `img/<BOX_FOLDER[box]>/<filename>` (see box-key bridge table below); a missing image (404) falls back to a `NO IMAGE` placeholder via `onerror`, so partial image coverage is fine
 - Image assets pending volunteer scanning
 
-### Update cycle (revised 04 Jul 2026)
-**The community sheet on Google Drive is canonical for Box 2 and Box 3 card data.**
+### Update cycle (revised 29 Jul 2026)
+**The Google Drive sheet is RETIRED for Boxes 1-3.** Card data for Captain's Chair, To
+Boldly Go, Second Contact and both promo packs is complete; the five JSON files at repo
+root are now the canonical card database and are edited directly, like box1.json always
+was. The sheet, its volunteer workflow, and `tools/build_box2_from_sheet.py` go dormant
+until Box 4/5 land, at which point this cycle reactivates for the new box only. The
+"fix the sheet, never the JSON" rule applies only while a box is on the active sheet
+pipeline. Historical description of the cycle follows, kept for that reactivation.
 - File: `stcc-card-database.xlsx` on Periodic_agent's Drive (kept as .xlsx; volunteers edit via shared link in Sheets Office mode). Drive file ID stays constant.
 - Tabs: README, TBG (Box 2), Second Contact (Box 3), Vocabulary. Status column tracks progress (AI-seeded — verify / verified / needs entry / unreadable). Card image column links to the live site.
 - **Never regenerate the sheet wholesale.** To add cards: read the live sheet (Google Drive connector), merge by Card code (fallback key: box + name + suit), append ONLY new rows, hand Periodic_agent the updated .xlsx. Periodic_agent updates Drive via right-click → Manage versions → Upload new version (keeps the ID and the shared link; never delete-and-reupload).
@@ -620,7 +626,7 @@ The Card Scanner uses different *internal* box keys (`core`, `tbg`, `2nd`) in it
 
 **One box = one JSON = one image folder** (decision Jul 2026, per Periodic_agent): every box, promo packs included, has its own JSON at repo root matching its image folder. Promo packs are linked to an expansion *wave*, not to a single box (Promo Pack 2 shipped alongside both To Boldly Go and Second Contact), so their data no longer lives inside an era box JSON. Promo rows keep `source: "Promo"` and carry `game_box: "Promo Pack 1"` / `"Promo Pack 2"`; the scanner assigns box membership from the source *file* (`_srcBox` stamp in `loadBoxes`), with `game_box` only as fallback for injected preview data. The earlier design (promo data inside box1.json/box2.json) was retired by `tools/split_promo_json.py`.
 
-In the scanner code this table is the `BOX_FOLDER = { core:'box1', tbg:'box2', '2nd':'box3', promo1:'promo1', promo2:'promo2' }` constant. Image src is built as `img/<BOX_FOLDER[box]>/<filename>`. A missing image (404) falls back to a `NO IMAGE` placeholder via `onerror`, so partial image coverage is fine. Coverage as of July 2026: `img/box3/` is complete (99/99; the 76 Freeman/Pike/Riker files come from contributor scans, stored at the display standard, 1170 px q80), `img/box1/` holds 248 of 250, `img/box2/` holds 106 of 248; uncovered cards show the placeholder. The Box 3 scans were a one-off contributor image package, imported by matching the card number printed bottom-left on each face (the unique key in box3.json) plus title-banner and deck-folder cross-checks; the import scripts and the scan-to-card mapping are parked on local disk beside the scan package (`img_table_scans/box 3/import_tools/`), deliberately not in the repo.
+In the scanner code this table is the `BOX_FOLDER = { core:'box1', tbg:'box2', '2nd':'box3', promo1:'promo1', promo2:'promo2' }` constant. Image src is built as `img/<BOX_FOLDER[box]>/<filename>`. A missing image (404) falls back to a `NO IMAGE` placeholder via `onerror`, so partial image coverage is fine. Coverage as of 29 Jul 2026: `img/box2/` is complete (248/248, contributor scans, reprints and updated cards included) and `img/box3/` is complete (99/99); both at the display standard, 1170 px q80. `img/box1/` holds 248 of 250 (the 2 bot-play Directives are deliberately not done yet); uncovered cards show the placeholder. The Box 2 and Box 3 scans came as contributor image packages, imported by matching the card number printed bottom-left on each face (the unique key in the box JSON) plus title-banner and deck-folder cross-checks; the import scripts and scan-to-card mappings are parked on local disk beside each scan package (`img_table_scans/box N/import_tools/`), deliberately not in the repo.
 
 > **Why this table exists:** the original Image-view gap was an undocumented mismatch between the scanner's internal keys (`core`/`tbg`/`2nd`) and the on-disk folders (`box1`/`box2`/`box3`). Documenting the bridge — not just the path — is what prevents a future instance from reintroducing it. If you add a box, add its row here AND to `BOX_FOLDER` in the scanner in the same change.
 
@@ -794,8 +800,11 @@ Rules, in order:
 
 1. Only printings whose **text matches the resolved version** qualify. An `updated` card draws
    from `updated` printings only; an original or reprint draws from originals and reprints.
-2. **Duplicates show the earliest printing's scan.** Box 1 art wins for every reprint, by rule
-   and not by accident, so filling a reprint `filename` in a later box never flips the art.
+2. **Every printing prefers its own scan** (rule flipped Jul 2026, per Periodic_agent, once
+   reprint scans reached full coverage). Printings inside the currently selected boxes rank
+   first, newest printing winning among them; printings outside the selection are fallback
+   only. Browsing TBG therefore shows the TBG scan of a reprint; browsing Box 1 alone shows
+   the Box 1 art. The old "Box 1 art wins" rule is retired.
 3. **Updated cards take the newest updated printing.** If its scan has not landed yet the card
    shows NO IMAGE. Superseded art is never shown for a card whose text changed.
 4. Promo keys (`promo1`, `promo2`) are absent from `BOX_ORDER`; `boxRank()` sorts them after
