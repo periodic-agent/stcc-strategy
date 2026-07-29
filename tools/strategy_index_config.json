@@ -42,6 +42,7 @@
  "_deck_note": "Captain guides. When several cards share a name (Utilize, Recruit, Analyze), a mention inside these guides is attributed to that captain's own printing.",
  "exclude_files": [
   "index.html",
+  "cards.html",
   "card-browser-mockup.html",
   "harmless_kitten.html"
  ],

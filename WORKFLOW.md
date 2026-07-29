@@ -143,7 +143,7 @@ Formatted by **Periodic_agent**
 | TBG captain guides | `tbg-[name].html` |
 | Market guides | `persons.html`, `allies.html`, `ships.html`, `cargo.html`, `locations.html`, `encounters-incidents.html` |
 | Strategy guides | `solo.html`, `five-year-mission.html`, `vs-picard.html` |
-| Card Scanner | `card-browser-mockup.html` (filename kept as-is during development) |
+| Card Scanner | `cards.html` (renamed 2026-07-29 from `card-browser-mockup.html`, which now redirects to it; keep the stub, links were published under the old path) |
 
 ---
 
@@ -301,10 +301,10 @@ Replace `<SUIT>` with the suit hex from the Card Scanner palette table below.
 
 **Entry sub-text:** empty for all guide entries. Keep complexity ratings on captain entries. Keep "Core Box · Beta" on Card Scanner.
 
-**Card Scanner:** sits as a prominent `box-banner purple` above Box 1 — NOT inside a card-grid. Purple dot (`#d4699f`), full-width, links to `card-browser-mockup.html`. Title: "Card Scanner", subtitle: "Explore all cards and decks".
+**Card Scanner:** sits as a prominent `box-banner purple` above Box 1 — NOT inside a card-grid. Purple dot (`#d4699f`), full-width, links to `cards.html`. Title: "Card Scanner", subtitle: "Explore all cards and decks".
 
 ```html
-<a href="card-browser-mockup.html" class="box-banner purple">
+<a href="cards.html" class="box-banner purple">
   <div class="box-dot"></div>
   <div>
     <div class="box-banner-title">Card Scanner</div>
@@ -352,7 +352,7 @@ The boxN.json files live at the **repo root**, not in a `data/` folder.
 
 ### Scanner data — runtime fetch + id resolver
 
-The Card Scanner (`card-browser-mockup.html`) loads card data at **runtime**. On page
+The Card Scanner (`cards.html`) loads card data at **runtime**. On page
 load it `fetch`es every file in `BOX_SOURCES` (`box1.json`, `box2.json`, `box3.json`,
 `promo1.json`, `promo2.json`) into `RAW_BOXES`, stamping each card with its source
 file's box key (`_srcBox`) — the source file, not the card's `game_box`, decides
@@ -475,7 +475,7 @@ reads "Second Contact".
 - All trait/skill sections expanded
 
 ### Query language (search bar)
-The search bar is the scanner's single state; pills are shortcuts that write tokens into it and light up by re-parsing it. Grammar: `key:value` tokens, spaces mean AND, leading `-` negates, quotes for multi-word values, bare words match card names, unknown keys fall back to name text. Keys (full words, no aliases): `box:` (`core`/`tbg`/`2nd`/`promo1`/`promo2`/`all`), `deck:` (captain name, or `common` = commons of every visible box), `suit:`, `trait:`, `skill:` and `focus:` (one-word icon values: `skill:military`, `focus:influence`, `skill:any`, `skill:variable`; the flattened long form `skill:"military skill"` also parses). Empty bar = the three main boxes, no other filters; `box:` tokens replace the default box set wholesale. The parser lives between `QUERY_PARSER_START/END` markers in `card-browser-mockup.html`; `tools/test_scanner_query.mjs` extracts and tests that exact code (`node tools/test_scanner_query.mjs`, run after any scanner search change). All matching still flows through the single `cardMatches` predicate; the "?" beside the bar opens the syntax popover.
+The search bar is the scanner's single state; pills are shortcuts that write tokens into it and light up by re-parsing it. Grammar: `key:value` tokens, spaces mean AND, leading `-` negates, quotes for multi-word values, bare words match card names, unknown keys fall back to name text. Keys (full words, no aliases): `box:` (`core`/`tbg`/`2nd`/`promo1`/`promo2`/`all`), `deck:` (captain name, or `common` = commons of every visible box), `suit:`, `trait:`, `skill:` and `focus:` (one-word icon values: `skill:military`, `focus:influence`, `skill:any`, `skill:variable`; the flattened long form `skill:"military skill"` also parses). Empty bar = the three main boxes, no other filters; `box:` tokens replace the default box set wholesale. The parser lives between `QUERY_PARSER_START/END` markers in `cards.html`; `tools/test_scanner_query.mjs` extracts and tests that exact code (`node tools/test_scanner_query.mjs`, run after any scanner search change). All matching still flows through the single `cardMatches` predicate; the "?" beside the bar opens the syntax popover.
 
 ### Image view
 - Toggle between Cards (pill view) and Images view
@@ -574,9 +574,9 @@ Repeatable procedure — run whenever the community sheet gains cards. A future 
 3. **Rebuild `box2.json`** (repo root) with `python tools/build_box2_from_sheet.py sheet.xlsx "TBG (Box 2)" "To Boldly Go" --box1 box1.json -o box2.json`. Canonical schema (identical to box1.json) plus `card_number` and `variant`: `id` (see Card Image Filename Convention — `id` == filename stem, deck prefix on crew-deck cards), `name`, `suit`, `source` = Deck column, `game_box` = `"To Boldly Go"`, `species_traits`/`regular_traits`/`other_traits` = comma-split, `icons` = one `{type: Skill}` per Skill-icon plus one `{type: Focus}` per Focus-icon (**repeated objects, no `count`**; specialty ∈ Research/Influence/Military/Any/Variable), `filename` (`""` if no image — the scanner shows a NO IMAGE placeholder). Include every row with at least a name and suit, whatever its status. **`game_box` must be exactly one of `Captain's Chair` / `To Boldly Go` / `Second Contact`** — the script hard-fails otherwise. For Box 3 use tab `Second Contact (Box 3)` and `game_box "Second Contact"`.
 4. **Validate.** The script runs the four checks above; checks 1 and 4 are gates and exit non-zero (`--warn-unresolved` overrides, use sparingly). Also: no duplicate ids (suffix `-2`, keep both — see duplicate note above), traits against the **Vocabulary** tab (warn on novel, never drop), counts per suit. Fix the **sheet**, never the JSON — hand-edits are overwritten on the next regen.
    - **Holding back an incomplete deck** (e.g. a captain deck whose skill/focus icons are not yet entered) is a **one-off filter at ship time**, applied by dropping those `source` rows after the build — *never* a build-script option. An `--exclude-deck` flag was tried and deliberately removed: once the icons land, a plain regen brings the deck in automatically, which is the behavior you want. No decks are currently held: Khan (TBG) and Pike/Riker (2C) have since shipped, so box2.json carries all 248 TBG cards and box3.json all 99 Second Contact cards.
-5. **Wire the box (first time only).** The scanner fetches box JSON at **runtime** — there is no injection step. A brand-new box needs one line added to `BOX_SOURCES` in `card-browser-mockup.html`; boxes already listed need nothing (pushing the JSON is enough). Never run an inline-injection tool.
+5. **Wire the box (first time only).** The scanner fetches box JSON at **runtime** — there is no injection step. A brand-new box needs one line added to `BOX_SOURCES` in `cards.html`; boxes already listed need nothing (pushing the JSON is enough). Never run an inline-injection tool.
 6. **Preview + present.** Because the scanner fetches at runtime, a local preview must **embed** the data: in a `-preview` copy, replace the `BOX_SOURCES` fetch loop with `RAW_BOXES = window.__BOXES__` and inject `<script>window.__BOXES__={box1:…,box2:…,box3:…,promo1:…,promo2:…}</script>`, and point `IMG_BASE` at the live site (**no `<base>` tag** — it breaks anchor links). Present the changed `boxN.json` and the preview for review.
-7. **Push on Periodic_agent's explicit approval only** — the changed `boxN.json` (+ `card-browser-mockup.html` only if `BOX_SOURCES` changed) + `tools/build_box2_from_sheet.py` (Rule 7) in one commit, via `push_to_github.py --pii-file <denylist> --token-file <token>` (both from project knowledge; fails closed without the denylist). Scanner footer stays `Card images © WizKids.` (Rule 6); do not add a content-attribution line.
+7. **Push on Periodic_agent's explicit approval only** — the changed `boxN.json` (+ `cards.html` only if `BOX_SOURCES` changed) + `tools/build_box2_from_sheet.py` (Rule 7) in one commit, via `push_to_github.py --pii-file <denylist> --token-file <token>` (both from project knowledge; fails closed without the denylist). Scanner footer stays `Card images © WizKids.` (Rule 6); do not add a content-attribution line.
 
 ---
 
@@ -873,7 +873,7 @@ Coverage at ship time: 321 of 549 cards, 26 guides.
 |---|---|
 | `tools/build_strategy_index.py` | Generator. Stdlib only. `--report` prints coverage and top mentions; `--check` exits 1 if stale (used by CI). |
 | `tools/strategy_index_config.json` | Stopwords, aliases, per-guide deck attribution, caps. Tune here, never in the script. |
-| `tools/patch_scanner_strategy.py` | Applies the badge + drawer to `card-browser-mockup.html`. Idempotent; asserts every anchor, so a scanner refactor fails loudly. |
+| `tools/patch_scanner_strategy.py` | Applies the badge + drawer to `cards.html`. Idempotent; asserts every anchor, so a scanner refactor fails loudly. |
 | `data/strategy-index.json` | Full index with snippets (~550 KB). Fetched lazily, on first drawer open. |
 | `data/strategy-cards.json` | `{card_id: mention_count}` (~8 KB). Fetched at scanner start-up; drives the badge. |
 | `tools/strategy-drawer-preview.html` | Standalone interaction preview against live data. Not linked from the site. |

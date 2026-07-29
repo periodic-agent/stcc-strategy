@@ -90,7 +90,7 @@ function boxRank(k){ const i=BOX_ORDER.indexOf(k); return i<0 ? 90 : i; }"""
 
 
 def main():
-    path = sys.argv[1] if len(sys.argv) > 1 else "card-browser-mockup.html"
+    path = sys.argv[1] if len(sys.argv) > 1 else "cards.html"
     src = open(path, encoding="utf-8").read()
     if "FULL_BY_ID" in src:
         print("already patched; nothing to do")

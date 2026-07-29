@@ -93,7 +93,7 @@ function extractScripts(html){
 
 
 const repo = process.argv[2];
-const file = process.argv[3] || (repo + '/card-browser-mockup.html');
+const file = process.argv[3] || (repo + '/cards.html');
 const html = fs.readFileSync(file,'utf8');
 const env = makeEnv(repo);
 const sandbox = { ...env, window:{}, setTimeout, Set, Map, JSON, Math, Object, Array, String, Number };

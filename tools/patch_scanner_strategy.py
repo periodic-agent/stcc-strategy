@@ -197,7 +197,7 @@ def apply(html):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--repo", default=".")
-    ap.add_argument("--file", default="card-browser-mockup.html")
+    ap.add_argument("--file", default="cards.html")
     ap.add_argument("--out", default=None)
     ap.add_argument("--check", action="store_true")
     args = ap.parse_args()

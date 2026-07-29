@@ -87,7 +87,7 @@ syncBoxPills();"""
 
 
 def main():
-    path = sys.argv[1] if len(sys.argv) > 1 else "card-browser-mockup.html"
+    path = sys.argv[1] if len(sys.argv) > 1 else "cards.html"
     src = open(path, encoding="utf-8").read()
     if "ALL_BOXES" in src:
         print("already patched; nothing to do")

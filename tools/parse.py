@@ -39,7 +39,7 @@ def normalize(decl_or_sel, f):
     for a,b in final.items(): s = s.replace(a,b)
     return s
 
-FILES = sorted(f for f in glob.glob('*.html') if f not in ('harmless_kitten.html','card-browser-mockup.html','index.html'))
+FILES = sorted(f for f in glob.glob('*.html') if f not in ('harmless_kitten.html','card-browser-mockup.html','cards.html','index.html'))
 
 def parsed(f):
     css = re.search(r'<style>(.*?)</style>', open(f).read(), re.S).group(1)

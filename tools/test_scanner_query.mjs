@@ -6,7 +6,7 @@
 
 import { readFileSync } from "fs";
 
-const html = readFileSync(new URL("../card-browser-mockup.html", import.meta.url), "utf8");
+const html = readFileSync(new URL("../cards.html", import.meta.url), "utf8");
 const m = html.match(/\/\* QUERY_PARSER_START \*\/([\s\S]*?)\/\* QUERY_PARSER_END \*\//);
 if (!m) { console.error("FAIL: parser markers not found"); process.exit(1); }
 const parseQuery = new Function(m[1] + "; return parseQuery;")();

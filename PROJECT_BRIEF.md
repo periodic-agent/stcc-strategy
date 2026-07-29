@@ -44,7 +44,7 @@ Two files from project knowledge are required at run time, and only these two ex
 Files deploy via GitHub Pages in ~60 seconds.
 
 ## Tools
-- **card-browser-mockup.html** — interactive Card Scanner. Filters by box, deck, suit, trait, skill, and name search. Data: `box1.json` (255 cards) + `box2.json` (community-sourced, growing). Cards/Images view toggle.
+- **cards.html** — interactive Card Scanner. Filters by box, deck, suit, trait, skill, and name search. Data: `box1.json` (255 cards) + `box2.json` (community-sourced, growing). Cards/Images view toggle.
 - **tools/** — build pipeline (build_guide.py, verify_guide.py), scanner data generator, image migrators, push gate (push_gate.py). Generators ship with their output (WORKFLOW.md Rule 7).
 
 ## Live guides (as of 19 Jul 2026 — the index is authoritative; regenerate this list from index.html when stale)
