@@ -172,7 +172,7 @@ def main(icons_dir, sf_dir, out):
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
 <title>Skill Banners &amp; Trait Icons POC — ST:CC Card Scanner</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;600&family=Antonio:wght@600&display=swap" rel="stylesheet">
 <style>
 :root{{--bg:#0a0e1a;--bg2:#0f1628;--blue:#4a9fd4;--blue2:#7ec8f0;--muted:#7a8aaa;--border:rgba(74,159,212,0.25);
 --person:#d9bd45;--sp-bg:rgba(220,140,60,0.12);--sp-bd:rgba(220,140,60,0.45);--sp-tx:#e09050;
@@ -211,7 +211,7 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .ce-traits{{display:flex;flex-direction:row;align-items:flex-start;justify-content:flex-end;gap:.26rem;flex:none;max-width:55%;flex-wrap:wrap}}
 .vt{{display:flex;flex-direction:column;align-items:center}}
 .vt img{{width:21px;height:21px;z-index:2}}
-.vt .ctag{{writing-mode:vertical-rl;text-orientation:mixed;padding:.5rem .12rem .32rem;line-height:1.15;font-size:.6rem;font-weight:600;border-radius:0 0 4px 4px;margin-top:-4px;border:none}}
+.vt .ctag{{writing-mode:vertical-rl;text-orientation:mixed;padding:.55rem .14rem .36rem;line-height:1.1;font-family:'Antonio',sans-serif;font-size:.66rem;font-weight:600;letter-spacing:.05em;border-radius:0 0 4px 4px;margin-top:-4px;border:none}}
 /* solid card-style pills: white label on the family color, like the printed cards */
 .ctag-species{{background:#e2a04a;color:#fff}}
 .ctag-regular{{background:#8ec6d8;color:#fff}}
