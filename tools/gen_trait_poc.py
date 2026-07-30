@@ -6,30 +6,79 @@ tools/extract_trait_icons.py and tools/extract_skillfocus_icons.py.
 Usage: python3 gen_trait_poc.py <icons_dir> <skillfocus_dir> <out_html>
 """
 import sys, base64, glob, os, io
-from PIL import Image, ImageFilter
+from PIL import Image, ImageDraw
+
+SPECIES = {'alien', 'human', 'klingon', 'romulan', 'trill', 'ferengi', 'betazoid', 'android', 'synthetic'}
+OTHER = {'attack', 'ongoing', 'wildcard'}
 
 def b64(f):
     return 'data:image/png;base64,' + base64.b64encode(open(f, 'rb').read()).decode()
 
-def b64_outlined(f, grow=5):
-    """Trait medallions get a thin white border following their shape:
-    dilate the alpha mask and lay white underneath."""
-    img = Image.open(f).convert('RGBA')
+def _shape_mask(size, octagon, ss=4):
+    """Clean geometric mask at supersampled resolution: octagon (species) or circle."""
+    s = size * ss
+    m = Image.new('L', (s, s), 0)
+    d = ImageDraw.Draw(m)
+    if octagon:
+        c = 0.30 * s  # corner cut, mirrors the card's octagon clip
+        d.polygon([(c, 0), (s - c, 0), (s, c), (s, s - c), (s - c, s), (c, s), (0, s - c), (0, c)], fill=255)
+    else:
+        d.ellipse([0, 0, s - 1, s - 1], fill=255)
+    return m.resize((size, size), Image.LANCZOS)
+
+def _is_octagon(img):
+    """Detect the medallion's shape from its own alpha. Probe the four points
+    at 15% in from each bbox corner: a circle is still opaque there (distance
+    from center ~0.495 < 0.5), an octagon with ~30% corner cuts is not
+    (x+y = 0.30 boundary)."""
+    from PIL import ImageFilter as _IF
     a = img.split()[3]
-    dil = a.filter(ImageFilter.MaxFilter(grow))
-    white = Image.new('RGBA', img.size, (255, 255, 255, 0))
-    white.putalpha(dil)
-    outlined = Image.alpha_composite(white, img)
+    # denoise: hard threshold + erosion kills flood-fill edge specks that
+    # otherwise inflate the bbox to the crop edges
+    clean = a.point(lambda v: 255 if v > 200 else 0).filter(_IF.MinFilter(5))
+    bbox = clean.getbbox()
+    if not bbox:
+        return False
+    x0, y0, x1, y1 = bbox
+    w, h = x1 - x0, y1 - y0
+    px = clean.load()
+
+    def width_at(fy):
+        y = int(y0 + fy * h)
+        row = [x for x in range(x0, x1) if px[x, y] > 128]
+        return (max(row) - min(row) + 1) if row else 0
+
+    # An octagon reaches full width by ~30% height (its corner cuts end);
+    # a circle only at 50%. Measured: octagons >= 0.97, circles <= 0.91.
+    ratio = (width_at(0.30) + width_at(0.70)) / (2 * max(width_at(0.50), 1))
+    return ratio > 0.94
+
+def b64_outlined(f, trait, size=96, border=4):
+    """Composite the extracted art onto a crisp white octagon/circle backing:
+    white shape full-size, art clipped to the inset shape. Removes ragged
+    flood-fill edges and gives every medallion a clean thin white border.
+    Shape (octagon vs circle) is auto-detected from the source art, since the
+    cyclopedia does not map shape strictly to trait family (e.g. Imperial is
+    an octagon despite being a regular trait)."""
+    octagon = _is_octagon(Image.open(f).convert('RGBA'))
+    art = Image.open(f).convert('RGBA').resize((size, size), Image.LANCZOS)
+    inner = _shape_mask(size - 2 * border, octagon)
+    art_c = art.resize((size - 2 * border, size - 2 * border), Image.LANCZOS)
+    clipped = Image.new('RGBA', inner.size, (0, 0, 0, 0))
+    clipped.paste(art_c, (0, 0), inner)
+    outer = _shape_mask(size, octagon)
+    canvas = Image.new('RGBA', (size, size), (0, 0, 0, 0))
+    white = Image.new('RGBA', (size, size), (255, 255, 255, 255))
+    canvas.paste(white, (0, 0), outer)
+    canvas.paste(clipped, (border, border), clipped)
     buf = io.BytesIO()
-    outlined.save(buf, format='PNG')
+    canvas.save(buf, format='PNG')
     return 'data:image/png;base64,' + base64.b64encode(buf.getvalue()).decode()
 
 def main(icons_dir, sf_dir, out):
-    tr = {os.path.basename(f)[:-4]: b64_outlined(f) for f in sorted(glob.glob(icons_dir + '/*.png'))}
+    tr = {os.path.basename(f)[:-4]: b64_outlined(f, os.path.basename(f)[:-4])
+          for f in sorted(glob.glob(icons_dir + '/*.png'))}
     sf = {os.path.basename(f)[:-4]: b64(f) for f in sorted(glob.glob(sf_dir + '/*.png'))}
-
-    SPECIES = {'alien', 'human', 'klingon', 'romulan', 'trill', 'ferengi', 'betazoid', 'android', 'synthetic'}
-    OTHER = {'attack', 'ongoing', 'wildcard'}
     fam = lambda t: 'species' if t in SPECIES else 'other' if t in OTHER else 'regular'
 
     def fp(t, icon=True):
