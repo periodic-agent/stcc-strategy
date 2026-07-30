@@ -998,7 +998,7 @@ function buildPillCard(c){
   const skillsHTML=c.skills.filter(s=>!/Focus$/.test(s)).map(mkChip).join('');
   const focusHTML=c.skills.filter(s=>/Focus$/.test(s)).map(mkChip).join('');
   const badge=badgeInfo(c);
-  const badgeHTML = badge ? '<div class="card-badge '+badge.cls+'">'+badge.text+'</div>' : '';
+  const badgeMark = badge ? (badge.cls==='update'?'\u2020':'\u2022')+' '+badge.text : '';
   // Strategy badge is additive: a card can be both a Duplicate and discussed.
   const strat = hasStrategy(c);
   if(strat){ el.classList.add('has-strategy'); el.onclick=()=>toggleStrategy(c.id); }
@@ -1008,12 +1008,15 @@ function buildPillCard(c){
     +'<div class="card-name">'+c.name+'</div>'
     +'<div class="card-suit-bar"><div class="suit-dot" data-suit="'+c.suit+'"></div><div class="suit-label" data-suit="'+c.suit+'">'+c.suit+'</div></div>'
     +(skillsHTML?'<div class="card-skills">'+skillsHTML+'</div>':'')
-    +badgeHTML+stratHTML
+    +stratHTML
     +'</div>'
     +(tagsHTML?'<div class="ce-traits">'+tagsHTML+'</div>':'')
     +'</div>'
-    +((c.card_number||focusHTML)?'<div class="ce-bottom">'
-        +(c.card_number?'<span class="ce-num">'+c.card_number+'</span>':'')
+    +((c.card_number||focusHTML||badge)?'<div class="ce-bottom">'
+        +((c.card_number||badge)?'<span class="ce-num">'
+            +(c.card_number||'')
+            +(badge?(c.card_number?' ':'')+badgeMark:'')
+          +'</span>':'')
         +(focusHTML?'<div class="ce-focus">'+focusHTML+'</div>':'')
       +'</div>':'');
   return el;
