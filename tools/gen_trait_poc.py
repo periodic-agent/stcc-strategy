@@ -53,7 +53,7 @@ def _is_octagon(img):
     ratio = (width_at(0.30) + width_at(0.70)) / (2 * max(width_at(0.50), 1))
     return ratio > 0.94
 
-def b64_outlined(f, trait, size=96, border=4):
+def b64_outlined(f, trait, size=96, border=2):
     """Composite the extracted art onto a crisp white octagon/circle backing:
     white shape full-size, art clipped to the inset shape. Removes ragged
     flood-fill edges and gives every medallion a clean thin white border.
@@ -174,7 +174,6 @@ def main(icons_dir, sf_dir, out):
         ('Lursa', 'Person', 'var(--person)', [], ['shady', 'klingon'], 'military', '2PER10/26 • Duplicate', 'captaindeck'),
         ('Delta Vega', 'Location', '#4ac48a', ['military'], [], 'any', '1LOC08/20', 'location'),
     ]
-    row_corner = ''.join(card(*c, 'stripes') for c in DEMO_CARDS)
     row_text = ''.join(card(*c, 'text') for c in DEMO_CARDS)
 
     html = f'''<!DOCTYPE html>
@@ -198,7 +197,7 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .regular-pill{{border-color:var(--rg-bd);color:var(--rg-tx);background:var(--rg-bg)}}
 .other-pill{{border-color:var(--ot-bd);color:var(--ot-tx);background:var(--ot-bg)}}
 .pillx img{{width:18px;height:18px}}
-.card-entry{{background:var(--bg2);border:1px solid var(--border);border-radius:5px;padding:.6rem;width:195px;aspect-ratio:63/88;position:relative;overflow:hidden;display:flex;flex-direction:column}}
+.card-entry{{background:var(--bg2);border:1px solid var(--border);border-radius:5px;padding:.6rem .6rem 34px;width:195px;aspect-ratio:63/88;position:relative;overflow:hidden;display:flex;flex-direction:column}}
 /* footer: bottom tenth of the card is the class-colored gradient band */
 .bottomband{{position:absolute;left:0;right:0;bottom:0;height:10%;z-index:1;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}}
@@ -249,7 +248,7 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .ctag-regular{{background:#8ec6d8;color:#fff}}
 .ctag-other{{background:#c85340;color:#fff}}
 .ctag-variable{{background:#eef1f6;color:#20242e}}
-.ce-bottom{{margin-top:auto;padding-top:.4rem;display:flex;justify-content:space-between;align-items:flex-end}}
+.ce-bottom{{margin-top:auto;padding-top:.4rem;display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:3}}
 .ce-num{{font-size:.55rem;color:var(--muted);letter-spacing:.06em}}
 .ce-focus{{margin-left:auto}}
 .row{{display:flex;gap:1rem;flex-wrap:wrap}}
@@ -267,10 +266,7 @@ every variant. Two focus treatments are presented below for comparison.</p>
 <h2>1 — The full skill &amp; focus icon set</h2>
 <div class="sheet">{sfrow}</div>
 
-<h2>2 — Footer: colored band, number chip, focus as diagonal corner stripes</h2>
-<div class="row">{row_corner}</div>
-
-<h2>3 — Same cards, focus as icon + text chip instead of stripes</h2>
+<h2>2 — Footer: colored band, number chip, focus pill (icon + text)</h2>
 <div class="row">{row_text}</div>
 
 <h2>4 — Filter pills: current vs with medallions</h2>
