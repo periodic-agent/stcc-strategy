@@ -173,6 +173,7 @@ def main(icons_dir, sf_dir, out):
         ('Bird-of-Prey', 'Ship', '#7a8aaa', ['influence'], ['klingon', 'attack', 'romulan'], '', '1SHI01/13', 'common'),
         ('Lursa', 'Person', 'var(--person)', [], ['shady', 'klingon'], 'military', '2PER10/26 • Duplicate', 'captaindeck'),
         ('Delta Vega', 'Location', '#4ac48a', ['military'], [], 'any', '1LOC08/20', 'location'),
+        ('Keyla Detmer', 'Person', 'var(--person)', ['variable', 'variable'], ['human', 'pilot', 'starfleet', 'synthetic'], '', '', 'captaindeck'),
     ]
     row_text = ''.join(card(*c, 'text') for c in DEMO_CARDS)
 
