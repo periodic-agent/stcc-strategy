@@ -13,7 +13,7 @@
   --blue:#4a9fd4;--blue2:#7ec8f0;--gold:#c8a84b;
   --scanner:#d4699f;--scanner2:#e899c4;
   --text:#ccd6f0;--muted:#7a8aaa;--border:rgba(74,159,212,0.25);
-  --person:#e8a94a;--ally:#9b6ecf;--ship:#7a8aaa;
+  --person:#d9bd45;--ally:#9b6ecf;--ship:#7a8aaa;
   --cargo:#3a6aaa;--location:#4ac48a;--encounter:#d4699f;--incident:#e05a5a;
   --sp-bg:rgba(220,140,60,0.12);--sp-bd:rgba(220,140,60,0.45);--sp-tx:#e09050;
   --rg-bg:rgba(74,159,212,0.10);--rg-bd:rgba(74,159,212,0.35);--rg-tx:#7ec8f0;
@@ -281,27 +281,23 @@ a{color:var(--blue);text-decoration:none;}
 footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:center;font-size:0.72rem;color:var(--muted);line-height:1.8;}
 
 /* ===== v2 subtle restyle: card-vocabulary pills & chips ===== */
+/* pills keep the original font and square-with-rounded-corner shape;
+   outline a touch thicker */
 .box-pill,.promo-pill,.deck-pill,.suit-pill,.species-pill,.regular-pill,.other-pill,.skill-pill{
-  border-radius:999px;font-family:var(--card-font);font-weight:600;letter-spacing:.06em;
-  text-transform:uppercase;display:inline-flex;align-items:center;gap:.4em;
+  border-width:1.5px;border-style:solid;
 }
-.suit-pill,.box-pill,.promo-pill{font-size:.78rem;padding:.2rem .75rem;}
-.deck-pill,.species-pill,.regular-pill,.other-pill,.skill-pill{font-size:.74rem;padding:.16rem .65rem;}
-/* Any Skill / Any Focus: multicolor contour (red, blue, yellow) */
+/* Any Skill / Any Focus: tricolor contour, hard stops (red | blue | yellow) */
 .skill-pill.sk-any{color:#e8ecf8;border:1.5px solid transparent;
   background:linear-gradient(var(--bg2),var(--bg2)) padding-box,
-             linear-gradient(90deg,var(--fx-red),var(--fx-blue),var(--fx-yellow)) border-box;}
+             linear-gradient(90deg,var(--fx-red) 0 33.4%,var(--fx-blue) 33.4% 66.7%,var(--fx-yellow) 66.7% 100%) border-box;}
 .skill-pill.sk-any:hover,.skill-pill.sk-any.active{color:#fff;
   background:linear-gradient(rgba(216,224,240,0.16),rgba(216,224,240,0.16)) padding-box,
-             linear-gradient(90deg,var(--fx-red),var(--fx-blue),var(--fx-yellow)) border-box;}
+             linear-gradient(90deg,var(--fx-red) 0 33.4%,var(--fx-blue) 33.4% 66.7%,var(--fx-yellow) 66.7% 100%) border-box;}
 /* Wildcard trait displays as "Variable", styled white like the Variable skill */
 .other-pill[data-value="Wildcard"]{border-color:rgba(232,236,248,0.4);color:#e8ecf8;background:rgba(232,236,248,0.06);}
 .other-pill[data-value="Wildcard"]:hover,.other-pill[data-value="Wildcard"].active{background:rgba(232,236,248,0.22);border-color:#e8ecf8;color:#fff;}
 .ctag-variable{background:rgba(232,236,248,0.08);color:#e8ecf8;border-color:rgba(232,236,248,0.35);}
 .ctag-variable.match{background:rgba(232,236,248,0.25);color:#fff;border-color:#e8ecf8;}
-/* card entry chips */
-.ctag,.card-skill{font-family:var(--card-font);font-weight:600;letter-spacing:.07em;text-transform:uppercase;font-size:.63rem;}
-.ctag-species{clip-path:polygon(4px 0,calc(100% - 4px) 0,100% 4px,100% calc(100% - 4px),calc(100% - 4px) 100%,4px 100%,0 calc(100% - 4px),0 4px);}
 .card-skill.sk-research{background:rgba(46,134,184,0.10);color:#5cb4e4;border-color:rgba(46,134,184,0.35);}
 .card-skill.sk-research.match{background:rgba(46,134,184,0.28);border-color:#5cb4e4;color:#a8dcf8;}
 .card-skill.sk-influence{background:rgba(232,212,74,0.08);color:#e8d44a;border-color:rgba(232,212,74,0.3);}
@@ -320,11 +316,19 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .card-entry{position:relative;overflow:hidden;display:flex;flex-direction:column;}
 .ce-row{display:flex;gap:.45rem;align-items:flex-start;}
 .ce-main{flex:1;min-width:0;}
-.ce-traits{display:flex;flex-direction:column;align-items:flex-end;gap:.22rem;flex:none;max-width:46%;}
-.ce-focus{margin-top:auto;padding-top:.45rem;display:flex;justify-content:flex-end;gap:.22rem;}
+.ce-traits{display:flex;flex-direction:row;align-items:flex-start;justify-content:flex-end;gap:.22rem;flex:none;max-width:52%;flex-wrap:wrap;}
+.ce-traits .ctag{writing-mode:vertical-rl;text-orientation:mixed;padding:.4rem .1rem;line-height:1.15;}
+.ce-bottom{margin-top:auto;padding-top:.45rem;display:flex;justify-content:space-between;align-items:flex-end;gap:.4rem;}
+.ce-num{font-size:.55rem;color:var(--muted);letter-spacing:.06em;white-space:nowrap;}
+.ce-focus{display:flex;justify-content:flex-end;gap:.22rem;margin-left:auto;}
 .card-entry .card-name{margin-bottom:.25rem;}
 .card-entry .card-suit-bar{margin-bottom:.4rem;}
 .card-entry .card-skills{margin-bottom:.35rem;}
+/* meta info (Duplicate / Update / Strategy) as plain text, not pillboxes */
+.card-entry .card-badge{background:none;border:none;padding:0;border-radius:0;font-weight:400;font-size:.62rem;letter-spacing:.04em;}
+.card-entry .card-badge.update{color:#b8c0d0;}
+.card-entry .card-badge.duplicate{color:#9aa4b8;}
+.card-entry .card-badge.strategy{color:#6fd3d3;text-decoration:underline dotted;text-underline-offset:2px;cursor:pointer;}
 .card-entry::after{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;opacity:.85;}
 .card-entry[data-cls="common"]::after{background:linear-gradient(90deg,#aeb9c6,#93a6b4);}
 .card-entry[data-cls="location"]::after{background:linear-gradient(90deg,#2e5fa3,#3d9e58);}
@@ -596,7 +600,8 @@ function resolveCards(rawPool){
       other: chosen.other_traits||[],
       skills: normIcons(chosen.icons),
       filename: imgFile,
-      imgBox: imgBox,                      // which box folder the image lives in
+      imgBox: imgBox,
+      card_number: chosen.card_number || '',                      // which box folder the image lives in
       boxes: boxes,                        // all boxes this id appears in
       copies: group.length,               // physical printings across loaded boxes
       variant: chosen.variant || 'original',
@@ -980,7 +985,8 @@ function buildPillCard(c){
   el.dataset.cls = c.suit==='Captain' ? 'captain'
     : (c.deck && c.deck!=='Common' && c.deck!=='Promo') ? 'captaindeck'
     : c.suit==='Location' ? 'location' : 'common';
-  const allTags=[...c.species,...c.regular,...c.other];
+  const allTags=[...c.species,...c.regular,...c.other]
+    .sort((a,b)=>displayLabel(a).length-displayLabel(b).length);
   const tagsHTML=allTags.map(t=>{
     const cat=t==='Wildcard'?'variable':c.species.includes(t)?'species':c.other.includes(t)?'other':'regular';
     return '<span class="ctag ctag-'+cat+(activeTags.has(t)?' match':'')+'">'+displayLabel(t)+'</span>';
@@ -1007,7 +1013,10 @@ function buildPillCard(c){
     +'</div>'
     +(tagsHTML?'<div class="ce-traits">'+tagsHTML+'</div>':'')
     +'</div>'
-    +(focusHTML?'<div class="ce-focus">'+focusHTML+'</div>':'');
+    +((c.card_number||focusHTML)?'<div class="ce-bottom">'
+        +(c.card_number?'<span class="ce-num">'+c.card_number+'</span>':'')
+        +(focusHTML?'<div class="ce-focus">'+focusHTML+'</div>':'')
+      +'</div>':'');
   return el;
 }
 
