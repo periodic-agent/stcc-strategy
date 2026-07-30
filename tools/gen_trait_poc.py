@@ -209,7 +209,7 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .is-focus::after{{content:'';position:absolute;right:-5px;bottom:-5px;width:11px;height:11px;transform:rotate(45deg);background:currentColor;opacity:.75}}
 .focorner{{position:absolute;right:2px;bottom:5px;width:34px;height:34px;z-index:2}}
 .ce-traits{{display:flex;flex-direction:row;align-items:flex-start;justify-content:flex-end;gap:0;flex:none;max-width:55%;flex-wrap:wrap}}
-.vt{{display:flex;flex-direction:column;align-items:center;position:relative;margin-left:-6px}}
+.vt{{display:flex;flex-direction:column;align-items:center;position:relative;margin-left:-3px}}
 .vt:first-child{{margin-left:0}}
 .vt img{{width:21px;height:21px;z-index:2}}
 .vt .ctag{{writing-mode:vertical-rl;text-orientation:sideways;display:flex;align-items:center;justify-content:center;padding:.6rem .14rem .32rem;line-height:1;font-family:'Antonio',sans-serif;font-size:.66rem;font-weight:600;letter-spacing:.05em;border-radius:0 0 999px 999px;margin-top:-4px;border:none}}
