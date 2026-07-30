@@ -1,0 +1,170 @@
+#!/usr/bin/env python3
+"""Generate mockups/trait-icons-poc.html from extracted cyclopedia icons.
+
+Inputs: icons/ (trait medallions) and icons_sf/ (skill/focus icons), produced by
+tools/extract_trait_icons.py and tools/extract_skillfocus_icons.py.
+Usage: python3 gen_trait_poc.py <icons_dir> <skillfocus_dir> <out_html>
+"""
+import sys, base64, glob, os, io
+from PIL import Image, ImageFilter
+
+def b64(f):
+    return 'data:image/png;base64,' + base64.b64encode(open(f, 'rb').read()).decode()
+
+def b64_outlined(f, grow=5):
+    """Trait medallions get a thin white border following their shape:
+    dilate the alpha mask and lay white underneath."""
+    img = Image.open(f).convert('RGBA')
+    a = img.split()[3]
+    dil = a.filter(ImageFilter.MaxFilter(grow))
+    white = Image.new('RGBA', img.size, (255, 255, 255, 0))
+    white.putalpha(dil)
+    outlined = Image.alpha_composite(white, img)
+    buf = io.BytesIO()
+    outlined.save(buf, format='PNG')
+    return 'data:image/png;base64,' + base64.b64encode(buf.getvalue()).decode()
+
+def main(icons_dir, sf_dir, out):
+    tr = {os.path.basename(f)[:-4]: b64_outlined(f) for f in sorted(glob.glob(icons_dir + '/*.png'))}
+    sf = {os.path.basename(f)[:-4]: b64(f) for f in sorted(glob.glob(sf_dir + '/*.png'))}
+
+    SPECIES = {'alien', 'human', 'klingon', 'romulan', 'trill', 'ferengi', 'betazoid', 'android', 'synthetic'}
+    OTHER = {'attack', 'ongoing', 'wildcard'}
+    fam = lambda t: 'species' if t in SPECIES else 'other' if t in OTHER else 'regular'
+
+    def fp(t, icon=True):
+        cls = {'species': 'species-pill', 'regular': 'regular-pill', 'other': 'other-pill'}[fam(t)]
+        img = f'<img src="{tr[t]}" alt="">' if icon else ''
+        return f'<span class="{cls}{" pillx" if icon else ""}">{img}{t.capitalize()} (12)</span>'
+
+    def vchip(t):
+        cls = {'species': 'ctag-species', 'regular': 'ctag-regular', 'other': 'ctag-other'}[fam(t)]
+        if t == 'wildcard': cls = 'ctag-variable'
+        return f'<div class="vt"><img src="{tr[t]}" alt=""><span class="ctag {cls}">{t.capitalize()}</span></div>'
+
+    def card(name, suit, suitcol, skills, traits, focus, num, cls, fmode):
+        """fmode: 'corner' = big icon tight to lower-right; 'text' = icon+text chip"""
+        sk = ''.join(f'<img class="skimg" src="{sf["skill-" + s]}" alt="" title="{s.capitalize()} skill">' for s in skills)
+        tr_ = ''.join(vchip(t) for t in traits)
+        fo = ''
+        if focus:
+            if fmode == 'corner':
+                fo = f'<img class="focorner" src="{sf["focus-" + focus]}" alt="" title="{focus.capitalize()} focus">'
+            else:
+                fo = (f'<div class="ce-focus"><span class="card-skill sk-{focus} is-focus" title="{focus.capitalize()} focus">'
+                      f'<img class="ci" src="{sf["focus-" + focus]}" alt="">{focus.capitalize()}</span></div>')
+        corner = fo if (focus and fmode == 'corner') else ''
+        bottom_fo = fo if (focus and fmode == 'text') else ''
+        return f'''<div class="card-entry" data-cls="{cls}" style="border-left:2px solid {suitcol}">
+<div class="ce-row"><div class="ce-main">
+<div class="card-name">{name}</div>
+<div class="card-suit-bar"><div class="suit-dot" style="background:{suitcol}"></div><div class="suit-label" style="color:{suitcol}">{suit}</div></div>
+<div class="card-skills">{sk}</div>
+</div><div class="ce-traits">{tr_}</div></div>
+<div class="ce-bottom"><span class="ce-num">{num}</span>{bottom_fo}</div>{corner}</div>'''
+
+    demo = ['human', 'klingon', 'romulan', 'betazoid', 'starfleet', 'scientist', 'engineer',
+            'ambassador', 'telepath', 'shady', 'attack', 'ongoing', 'wildcard']
+    sheet = ''.join(f'<div class="cell"><img src="{v}" alt=""><div>{k}</div></div>' for k, v in tr.items())
+    order = ['skill-research', 'skill-influence', 'skill-military', 'skill-any', 'skill-variable',
+             'focus-research', 'focus-influence', 'focus-military', 'focus-any']
+    sfrow = ''.join(f'<div class="cell big"><img src="{sf[k]}" alt=""><div>{k}</div></div>' for k in order if k in sf)
+
+    DEMO_CARDS = [
+        ('Bruce Maddox', 'Person', 'var(--person)', ['research'], ['human', 'engineer', 'starfleet', 'scientist'], 'research', '', 'common'),
+        ('Bird-of-Prey', 'Ship', '#7a8aaa', ['influence'], ['klingon', 'attack', 'romulan'], '', '1SHI01/13', 'common'),
+        ('Lursa', 'Person', 'var(--person)', [], ['shady', 'klingon'], 'military', '2PER10/26 • Duplicate', 'captaindeck'),
+    ]
+    row_corner = ''.join(card(*c, 'corner') for c in DEMO_CARDS)
+    row_text = ''.join(card(*c, 'text') for c in DEMO_CARDS)
+
+    html = f'''<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Skill Banners &amp; Trait Icons POC — ST:CC Card Scanner</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{{--bg:#0a0e1a;--bg2:#0f1628;--blue:#4a9fd4;--blue2:#7ec8f0;--muted:#7a8aaa;--border:rgba(74,159,212,0.25);
+--person:#d9bd45;--sp-bg:rgba(220,140,60,0.12);--sp-bd:rgba(220,140,60,0.45);--sp-tx:#e09050;
+--rg-bg:rgba(74,159,212,0.10);--rg-bd:rgba(74,159,212,0.35);--rg-tx:#7ec8f0;
+--ot-bg:rgba(200,60,60,0.10);--ot-bd:rgba(200,60,60,0.35);--ot-tx:#e05a5a;}}
+body{{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:#ccd6f0;padding:2rem;max-width:1100px;margin:0 auto}}
+h1{{font-family:Orbitron,sans-serif;font-size:1.1rem;color:#d4699f;letter-spacing:.08em}}
+h2{{font-family:Orbitron,sans-serif;font-size:.8rem;color:#7ec8f0;letter-spacing:.15em;text-transform:uppercase;margin:2.2rem 0 .8rem}}
+p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
+.pill-row{{display:flex;flex-wrap:wrap;gap:.35rem;margin:.5rem 0}}
+.species-pill,.regular-pill,.other-pill{{font-size:.68rem;padding:.18rem .55rem;border-radius:3px;border:1.5px solid;cursor:pointer;user-select:none;display:inline-flex;align-items:center;gap:.35rem}}
+.species-pill{{border-color:var(--sp-bd);color:var(--sp-tx);background:var(--sp-bg)}}
+.regular-pill{{border-color:var(--rg-bd);color:var(--rg-tx);background:var(--rg-bg)}}
+.other-pill{{border-color:var(--ot-bd);color:var(--ot-tx);background:var(--ot-bg)}}
+.pillx img{{width:18px;height:18px}}
+.card-entry{{background:var(--bg2);border:1px solid var(--border);border-radius:5px;padding:.6rem;width:195px;aspect-ratio:63/88;position:relative;overflow:hidden;display:flex;flex-direction:column}}
+.card-entry::after{{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;opacity:.85}}
+.card-entry[data-cls="common"]::after{{background:linear-gradient(90deg,#aeb9c6,#93a6b4)}}
+.card-entry[data-cls="captaindeck"]::after{{background:linear-gradient(90deg,#1d3a6e,#d97a2e)}}
+.ce-row{{display:flex;gap:.4rem;align-items:flex-start}}
+.ce-main{{flex:1;min-width:0}}
+.card-name{{font-size:.82rem;font-weight:600;color:#fff;line-height:1.3;margin-bottom:.25rem}}
+.card-suit-bar{{display:flex;align-items:center;gap:.35rem;margin-bottom:.45rem}}
+.suit-dot{{width:6px;height:6px;border-radius:50%}}
+.suit-label{{font-family:Orbitron,sans-serif;font-size:.48rem;letter-spacing:.15em;text-transform:uppercase}}
+.card-skills{{display:flex;flex-direction:column;align-items:flex-start;gap:.3rem}}
+.skimg{{width:28px;height:28px}}
+.card-skill{{font-size:.6rem;padding:.09rem .32rem;border-radius:2px;border:1px solid;display:inline-flex;align-items:center;gap:.32rem}}
+.card-skill .ci{{width:18px;height:18px}}
+.sk-research{{background:rgba(46,134,184,0.10);color:#5cb4e4;border-color:rgba(46,134,184,0.35)}}
+.sk-influence{{background:rgba(232,212,74,0.08);color:#e8d44a;border-color:rgba(232,212,74,0.3)}}
+.sk-military{{background:rgba(224,90,90,0.08);color:#e57a6e;border-color:rgba(224,90,90,0.32)}}
+.is-focus{{position:relative;overflow:hidden;padding-right:.85em}}
+.is-focus::after{{content:'';position:absolute;right:-5px;bottom:-5px;width:11px;height:11px;transform:rotate(45deg);background:currentColor;opacity:.75}}
+.focorner{{position:absolute;right:2px;bottom:5px;width:34px;height:34px;z-index:2}}
+.ce-traits{{display:flex;flex-direction:row;align-items:flex-start;justify-content:flex-end;gap:.26rem;flex:none;max-width:55%;flex-wrap:wrap}}
+.vt{{display:flex;flex-direction:column;align-items:center}}
+.vt img{{width:21px;height:21px;z-index:2}}
+.vt .ctag{{writing-mode:vertical-rl;text-orientation:mixed;padding:.5rem .12rem .32rem;line-height:1.15;font-size:.6rem;border-radius:0 0 3px 3px;margin-top:-4px;border:1px solid}}
+.ctag-species{{background:rgba(220,140,60,0.15);color:#d09060;border-color:rgba(220,140,60,0.3)}}
+.ctag-regular{{background:rgba(74,159,212,0.10);color:#6ab8e0;border-color:rgba(74,159,212,0.25)}}
+.ctag-other{{background:rgba(200,60,60,0.10);color:#c06060;border-color:rgba(200,60,60,0.25)}}
+.ctag-variable{{background:rgba(232,236,248,0.08);color:#e8ecf8;border-color:rgba(232,236,248,0.35)}}
+.ce-bottom{{margin-top:auto;padding-top:.4rem;display:flex;justify-content:space-between;align-items:flex-end}}
+.ce-num{{font-size:.55rem;color:var(--muted);letter-spacing:.06em}}
+.ce-focus{{margin-left:auto}}
+.row{{display:flex;gap:1rem;flex-wrap:wrap}}
+.sheet{{display:flex;flex-wrap:wrap;gap:14px}}
+.cell{{text-align:center;font-size:.6rem;color:var(--muted)}}
+.cell img{{width:52px;height:52px;display:block;margin:0 auto 4px;object-fit:contain}}
+.cell.big img{{width:64px;height:64px}}
+footer{{margin-top:3rem;border-top:1px solid var(--border);padding-top:1rem;font-size:.72rem;color:var(--muted);line-height:1.8}}
+</style></head><body>
+<h1>SKILL BANNERS &amp; TRAIT ICONS — PROOF OF CONCEPT v3</h1>
+<p class="note">Icon grammar: solid "D" block = skill, diagonal stripe with black wedge = focus,
+color = specialty, tricolor = Any, black ? = Variable. Skills are now banner-only (no text) in
+every variant. Two focus treatments are presented below for comparison.</p>
+
+<h2>1 — The full skill &amp; focus icon set</h2>
+<div class="sheet">{sfrow}</div>
+
+<h2>2 — Focus option A: big icon, tight to the lower-right corner, no text</h2>
+<div class="row">{row_corner}</div>
+
+<h2>3 — Focus option B: icon + text chip</h2>
+<div class="row">{row_text}</div>
+
+<h2>4 — Filter pills: current vs with medallions</h2>
+<div class="pill-row">{''.join(fp(t, False) for t in demo)}</div>
+<div class="pill-row">{''.join(fp(t) for t in demo)}</div>
+
+<h2>5 — All extracted trait medallions (22 of ~40)</h2>
+<div class="sheet">{sheet}</div>
+
+<footer>Proof of concept only, not linked from the compendium. Trait and skill iconography &#169;
+WizKids; vector redraws from the STCC Traits Cyclopedia v2.1 (attribution handled by
+Periodic_agent). Extraction: tools/extract_trait_icons.py, tools/extract_skillfocus_icons.py;
+page generated by tools/gen_trait_poc.py.</footer>
+</body></html>'''
+    open(out, 'w').write(html)
+    print('wrote', out, len(html), 'bytes')
+
+if __name__ == '__main__':
+    main(sys.argv[1], sys.argv[2], sys.argv[3])
