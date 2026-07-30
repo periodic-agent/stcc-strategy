@@ -211,7 +211,7 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .ce-traits{{display:flex;flex-direction:row;align-items:flex-start;justify-content:flex-end;gap:.26rem;flex:none;max-width:55%;flex-wrap:wrap}}
 .vt{{display:flex;flex-direction:column;align-items:center}}
 .vt img{{width:21px;height:21px;z-index:2}}
-.vt .ctag{{writing-mode:vertical-rl;text-orientation:mixed;display:flex;align-items:center;justify-content:center;padding:.6rem .14rem .32rem;line-height:1.1;font-family:'Antonio',sans-serif;font-size:.66rem;font-weight:600;letter-spacing:.05em;border-radius:0 0 999px 999px;margin-top:-4px;border:none}}
+.vt .ctag{{writing-mode:vertical-rl;text-orientation:mixed;display:flex;align-items:center;justify-content:center;padding:.6rem .04rem .32rem .24rem;line-height:1.1;font-family:'Antonio',sans-serif;font-size:.66rem;font-weight:600;letter-spacing:.05em;border-radius:0 0 999px 999px;margin-top:-4px;border:none}}
 /* solid card-style pills: white label on the family color, like the printed cards */
 .ctag-species{{background:#e2a04a;color:#fff}}
 .ctag-regular{{background:#8ec6d8;color:#fff}}
