@@ -75,10 +75,50 @@ def b64_outlined(f, trait, size=96, border=4):
     canvas.save(buf, format='PNG')
     return 'data:image/png;base64,' + base64.b64encode(buf.getvalue()).decode()
 
+def b64_skill_banner(f, widen=1.6):
+    """Skill icons print as a banner rooted in the card's left edge. The
+    cyclopedia's D block is near-square, so extend it leftward: every row is
+    padded with its own leftmost opaque color (handles the tricolor Any).
+    The Variable '?' gets a white banner backing instead."""
+    img = Image.open(f).convert('RGBA')
+    w, h = img.size
+    W = int(w * widen)
+    canvas = Image.new('RGBA', (W, h), (0, 0, 0, 0))
+    key = os.path.basename(f)
+    if 'variable' in key:
+        ss = 4
+        m = Image.new('L', (W * ss, h * ss), 0)
+        d = ImageDraw.Draw(m)
+        r = h * ss // 2
+        d.rectangle([0, 0, W * ss - r, h * ss], fill=255)
+        d.pieslice([W * ss - 2 * r, 0, W * ss, h * ss], -90, 90, fill=255)
+        m = m.resize((W, h), Image.LANCZOS)
+        white = Image.new('RGBA', (W, h), (255, 255, 255, 255))
+        canvas.paste(white, (0, 0), m)
+        q = img.resize((int(w * 0.8), int(h * 0.8)), Image.LANCZOS)
+        canvas.paste(q, ((W - q.width) // 2, (h - q.height) // 2), q)
+    else:
+        canvas.paste(img, (W - w, 0), img)
+        px = img.load()
+        cp = canvas.load()
+        for y in range(h):
+            row = [x for x in range(w) if px[x, y][3] > 200]
+            if not row:
+                continue
+            lx = min(row)
+            color = px[min(lx + 2, w - 1), y]
+            for x in range(0, W - w + lx + 2):
+                cp[x, y] = color
+    buf = io.BytesIO()
+    canvas.save(buf, format='PNG')
+    return 'data:image/png;base64,' + base64.b64encode(buf.getvalue()).decode()
+
 def main(icons_dir, sf_dir, out):
     tr = {os.path.basename(f)[:-4]: b64_outlined(f, os.path.basename(f)[:-4])
           for f in sorted(glob.glob(icons_dir + '/*.png'))}
     sf = {os.path.basename(f)[:-4]: b64(f) for f in sorted(glob.glob(sf_dir + '/*.png'))}
+    sfb = {os.path.basename(f)[:-4]: b64_skill_banner(f) for f in sorted(glob.glob(sf_dir + '/*.png'))
+           if os.path.basename(f).startswith('skill-')}
     fam = lambda t: 'species' if t in SPECIES else 'other' if t in OTHER else 'regular'
 
     def fp(t, icon=True):
@@ -89,11 +129,11 @@ def main(icons_dir, sf_dir, out):
     def vchip(t):
         cls = {'species': 'ctag-species', 'regular': 'ctag-regular', 'other': 'ctag-other'}[fam(t)]
         if t == 'wildcard': cls = 'ctag-variable'
-        return f'<div class="vt"><img src="{tr[t]}" alt=""><span class="ctag {cls}">{t.capitalize()}</span></div>'
+        return f'<div class="vt"><img src="{tr[t]}" alt=""><span class="ctag {cls}">{t.upper()}</span></div>'
 
     def card(name, suit, suitcol, skills, traits, focus, num, cls, fmode):
         """fmode: 'corner' = big icon tight to lower-right; 'text' = icon+text chip"""
-        sk = ''.join(f'<img class="skimg" src="{sf["skill-" + s]}" alt="" title="{s.capitalize()} skill">' for s in skills)
+        sk = ''.join(f'<img class="skimg" src="{sfb["skill-" + s]}" alt="" title="{s.capitalize()} skill">' for s in skills)
         tr_ = ''.join(vchip(t) for t in traits)
         fo = ''
         if focus:
@@ -159,7 +199,7 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .suit-dot{{width:6px;height:6px;border-radius:50%}}
 .suit-label{{font-family:Orbitron,sans-serif;font-size:.48rem;letter-spacing:.15em;text-transform:uppercase}}
 .card-skills{{display:flex;flex-direction:column;align-items:flex-start;gap:.3rem}}
-.skimg{{width:28px;height:28px}}
+.skimg{{height:28px;width:auto}}
 .card-skill{{font-size:.6rem;padding:.09rem .32rem;border-radius:2px;border:1px solid;display:inline-flex;align-items:center;gap:.32rem}}
 .card-skill .ci{{width:18px;height:18px}}
 .sk-research{{background:rgba(46,134,184,0.10);color:#5cb4e4;border-color:rgba(46,134,184,0.35)}}
