@@ -194,10 +194,10 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .card-entry[data-cls="captaindeck"]::after{{background:linear-gradient(90deg,#1d3a6e,#d97a2e)}}
 .ce-row{{display:flex;gap:.4rem;align-items:flex-start}}
 .ce-main{{flex:1;min-width:0}}
-.card-name{{font-size:.82rem;font-weight:600;color:#fff;line-height:1.3;margin-bottom:.25rem}}
+.card-name{{font-size:.82rem;font-weight:600;color:#fff;line-height:1.3;margin-bottom:.25rem;text-transform:uppercase}}
 .card-suit-bar{{display:flex;align-items:center;gap:.35rem;margin-bottom:.45rem}}
 .suit-dot{{width:6px;height:6px;border-radius:50%}}
-.suit-label{{font-family:Orbitron,sans-serif;font-size:.48rem;letter-spacing:.15em;text-transform:uppercase}}
+.suit-label{{font-family:'Antonio',sans-serif;font-size:.66rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}}
 .card-skills{{display:flex;flex-direction:column;align-items:flex-start;gap:.3rem}}
 .skimg{{height:28px;width:auto}}
 .card-skill{{font-size:.6rem;padding:.09rem .32rem;border-radius:2px;border:1px solid;display:inline-flex;align-items:center;gap:.32rem}}
