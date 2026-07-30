@@ -38,12 +38,18 @@ a{color:var(--blue);text-decoration:none;}
 .filter-section{margin-bottom:1rem;}
 .filter-label{font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;}
 .pill-row{display:flex;flex-wrap:wrap;gap:0.35rem;}
-.search-row{display:flex;gap:0.75rem;align-items:center;margin-bottom:1.25rem;}
-.search-box{flex:1;background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:0.55rem 0.9rem;font-family:'Exo 2',sans-serif;font-size:0.9rem;color:var(--text);outline:none;transition:border-color 0.2s;}
+.search-row{display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;margin-bottom:0.6rem;}
+.search-box{flex:1 1 12rem;min-width:0;background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:0.55rem 0.9rem;font-family:'Exo 2',sans-serif;font-size:0.9rem;color:var(--text);outline:none;transition:border-color 0.2s;}
 .search-box::placeholder{color:var(--muted);}
 .search-box:focus{border-color:var(--blue);}
 .pill-sublabel{font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin:0.35rem 0 0.3rem;}
-.search-count-row{margin:-0.85rem 0 1.1rem;padding:0 0.2rem;}
+.search-count-row{display:flex;flex-wrap:wrap;align-items:center;gap:0.6rem;margin:0 0 1.1rem;padding:0 0.2rem;}
+.search-count-row .view-toggle{margin-left:auto;}
+@media (max-width:560px){
+  .vtoggle,.clear-btn{padding:0.3rem 0.5rem;letter-spacing:0.06em;}
+  .search-count-row{gap:0.4rem;}
+  .search-count-row .view-toggle{margin-left:0;}
+}
 .search-count{color:var(--muted);font-size:0.8rem;font-family:'Exo 2',sans-serif;}
 .search-count b{color:var(--blue2);font-weight:600;}
 .query-help-btn{flex:0 0 auto;width:1.9rem;height:1.9rem;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:50%;color:var(--muted);cursor:pointer;font-family:'Orbitron',sans-serif;font-size:0.8rem;user-select:none;}
@@ -295,14 +301,16 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   <div class="search-row">
     <input type="text" class="search-box" id="searchInput" placeholder="Search cards… e.g. trait:klingon suit:person" autocomplete="off">
     <span class="query-help-btn" id="queryHelpBtn" title="Search syntax">?</span>
+  </div>
+
+  <div class="search-count-row">
+    <span class="search-count" id="searchCount"></span>
     <div class="view-toggle">
       <button class="vtoggle active" id="btnPill" onclick="setView('pill')">Cards</button>
       <button class="vtoggle" id="btnImg" onclick="setView('image')">Images</button>
     </div>
-    <button class="clear-btn" onclick="clearAll()">Clear all</button>
+    <button class="clear-btn" onclick="clearAll()">Reset</button>
   </div>
-
-  <div class="search-count-row"><span class="search-count" id="searchCount"></span></div>
 
   <div id="queryHelp" class="query-help">
     <div class="qh-title">Search syntax</div>
@@ -399,7 +407,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 
 </div>
 
-<div class="results-bar">
+<div class="results-bar" hidden>
   <div class="result-count"><span id="distinctDisplay">0</span> distinct cards<span id="copiesExtra"></span></div>
 </div>
 
