@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ST:CC Card Scanner</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
 <script data-goatcounter="https://stcc-compendium.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <style>
 :root{
@@ -12,11 +12,14 @@
   --blue:#4a9fd4;--blue2:#7ec8f0;--gold:#c8a84b;
   --scanner:#d4699f;--scanner2:#e899c4;
   --text:#ccd6f0;--muted:#7a8aaa;--border:rgba(74,159,212,0.25);
-  --person:#e8a94a;--ally:#9b6ecf;--ship:#7a8aaa;
+  --person:#d9bd45;--ally:#9b6ecf;--ship:#7a8aaa;
   --cargo:#3a6aaa;--location:#4ac48a;--encounter:#d4699f;--incident:#e05a5a;
   --sp-bg:rgba(220,140,60,0.12);--sp-bd:rgba(220,140,60,0.45);--sp-tx:#e09050;
   --rg-bg:rgba(74,159,212,0.10);--rg-bd:rgba(74,159,212,0.35);--rg-tx:#7ec8f0;
   --ot-bg:rgba(200,60,60,0.10);--ot-bd:rgba(200,60,60,0.35);--ot-tx:#e05a5a;
+  /* card-accurate accents (from TM-style mockup) */
+  --fx-blue:#149be6;--fx-yellow:#f2ce10;--fx-red:#e6281a;
+  --card-font:'Barlow Condensed',sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:var(--text);min-height:100vh;}
@@ -275,6 +278,61 @@ a{color:var(--blue);text-decoration:none;}
 .img-placeholder{width:100%;aspect-ratio:5/7;background:var(--bg3);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.6rem;font-family:'Orbitron',sans-serif;letter-spacing:0.1em;}
 .no-results{text-align:center;padding:3rem;color:var(--muted);font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.15em;}
 footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:center;font-size:0.72rem;color:var(--muted);line-height:1.8;}
+
+/* ===== v2 subtle restyle: card-vocabulary pills & chips ===== */
+/* pills keep the original font and square-with-rounded-corner shape;
+   outline a touch thicker */
+.box-pill,.promo-pill,.deck-pill,.suit-pill,.species-pill,.regular-pill,.other-pill,.skill-pill{
+  border-width:1.5px;border-style:solid;
+}
+/* Any Skill / Any Focus: tricolor contour, hard stops (red | blue | yellow) */
+.skill-pill.sk-any{color:#e8ecf8;border:1.5px solid transparent;
+  background:linear-gradient(var(--bg2),var(--bg2)) padding-box,
+             linear-gradient(90deg,var(--fx-red),var(--fx-blue),var(--fx-yellow)) border-box;}
+.skill-pill.sk-any:hover,.skill-pill.sk-any.active{color:#fff;
+  background:linear-gradient(rgba(216,224,240,0.16),rgba(216,224,240,0.16)) padding-box,
+             linear-gradient(90deg,var(--fx-red),var(--fx-blue),var(--fx-yellow)) border-box;}
+/* Wildcard trait displays as "Variable", styled white like the Variable skill */
+.other-pill[data-value="Wildcard"]{border-color:rgba(232,236,248,0.4);color:#e8ecf8;background:rgba(232,236,248,0.06);}
+.other-pill[data-value="Wildcard"]:hover,.other-pill[data-value="Wildcard"].active{background:rgba(232,236,248,0.22);border-color:#e8ecf8;color:#fff;}
+.ctag-variable{background:rgba(232,236,248,0.08);color:#e8ecf8;border-color:rgba(232,236,248,0.35);}
+.ctag-variable.match{background:rgba(232,236,248,0.25);color:#fff;border-color:#e8ecf8;}
+.card-skill.sk-research{background:rgba(46,134,184,0.10);color:#5cb4e4;border-color:rgba(46,134,184,0.35);}
+.card-skill.sk-research.match{background:rgba(46,134,184,0.28);border-color:#5cb4e4;color:#a8dcf8;}
+.card-skill.sk-influence{background:rgba(232,212,74,0.08);color:#e8d44a;border-color:rgba(232,212,74,0.3);}
+.card-skill.sk-influence.match{background:rgba(232,212,74,0.24);border-color:#e8d44a;color:#f5e88a;}
+.card-skill.sk-military{background:rgba(224,90,90,0.08);color:#e57a6e;border-color:rgba(224,90,90,0.32);}
+.card-skill.sk-military.match{background:rgba(224,90,90,0.26);border-color:#e05a5a;color:#ffa090;}
+.card-skill.sk-any{background:rgba(216,224,240,0.06);color:#d8e0f0;border-color:rgba(216,224,240,0.3);}
+.card-skill.sk-any.match{background:rgba(216,224,240,0.2);border-color:#d8e0f0;color:#fff;}
+.card-skill.sk-variable{background:rgba(255,255,255,0.06);color:#f2f4fa;border-color:rgba(255,255,255,0.35);}
+/* focus chips carry the diagonal corner wedge from the card face */
+.card-skill.is-focus{position:relative;overflow:hidden;padding-right:0.85em;}
+.card-skill.is-focus::after{content:'';position:absolute;right:-5px;bottom:-5px;width:11px;height:11px;
+  transform:rotate(45deg);background:currentColor;opacity:.75;}
+/* card entry reorganization: name / suit / skills / badges left, traits column
+   upper right, focus lower right, class band at the very bottom */
+.card-entry{position:relative;overflow:hidden;display:flex;flex-direction:column;}
+.ce-row{display:flex;gap:.45rem;align-items:flex-start;}
+.ce-main{flex:1;min-width:0;}
+.ce-traits{display:flex;flex-direction:row;align-items:flex-start;justify-content:flex-end;gap:.22rem;flex:none;max-width:52%;flex-wrap:wrap;}
+.ce-traits .ctag{writing-mode:vertical-rl;text-orientation:mixed;padding:.4rem .1rem;line-height:1.15;}
+.ce-bottom{margin-top:auto;padding-top:.45rem;display:flex;justify-content:space-between;align-items:flex-end;gap:.4rem;}
+.ce-num{font-size:.55rem;color:var(--muted);letter-spacing:.06em;white-space:nowrap;}
+.ce-focus{display:flex;justify-content:flex-end;gap:.22rem;margin-left:auto;}
+.card-entry .card-name{margin-bottom:.25rem;}
+.card-entry .card-suit-bar{margin-bottom:.4rem;}
+.card-entry .card-skills{margin-bottom:.35rem;flex-direction:column;align-items:flex-start;}
+/* meta info (Duplicate / Update / Strategy) as plain text, not pillboxes */
+.card-entry .card-badge{background:none;border:none;padding:0;border-radius:0;font-weight:400;font-size:.62rem;letter-spacing:.04em;}
+.card-entry .card-badge.update{color:#b8c0d0;}
+.card-entry .card-badge.duplicate{color:#9aa4b8;}
+.card-entry .card-badge.strategy{color:#6fd3d3;text-decoration:underline dotted;text-underline-offset:2px;cursor:pointer;}
+.card-entry::after{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;opacity:.85;}
+.card-entry[data-cls="common"]::after{background:linear-gradient(90deg,#aeb9c6,#93a6b4);}
+.card-entry[data-cls="location"]::after{background:linear-gradient(90deg,#2e5fa3,#3d9e58);}
+.card-entry[data-cls="captain"]::after{background:linear-gradient(90deg,#d9c04a,#6b4a26);}
+.card-entry[data-cls="captaindeck"]::after{background:linear-gradient(90deg,#1d3a6e,#d97a2e);}
 </style>
 <meta name="description" content="Searchable card database for Star Trek: Captain's Chair. Filter every card by box, deck, suit, traits, skills and name — built for mid-game lookups.">
 <link rel="canonical" href="https://periodic-agent.github.io/stcc-strategy/cards.html">
@@ -382,7 +440,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   <div class="filter-section">
     <div class="collapsible-header open" onclick="toggleSection(this,'skillsBody','skillsSummary')">
       <div style="display:flex;align-items:center;gap:0.4rem;">
-        <div class="filter-label">Skill Icons</div>
+        <div class="filter-label">Skills</div>
         <span class="active-summary skill" id="skillsSummary"></span>
       </div>
       <span class="collapsible-arrow">&#9660;</span>
@@ -395,7 +453,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   <div class="filter-section">
     <div class="collapsible-header open" onclick="toggleSection(this,'focusBody','focusSummary')">
       <div style="display:flex;align-items:center;gap:0.4rem;">
-        <div class="filter-label">Focus Icons</div>
+        <div class="filter-label">Focus</div>
         <span class="active-summary skill" id="focusSummary"></span>
       </div>
       <span class="collapsible-arrow">&#9660;</span>
@@ -541,7 +599,8 @@ function resolveCards(rawPool){
       other: chosen.other_traits||[],
       skills: normIcons(chosen.icons),
       filename: imgFile,
-      imgBox: imgBox,                      // which box folder the image lives in
+      imgBox: imgBox,
+      card_number: chosen.card_number || '',                      // which box folder the image lives in
       boxes: boxes,                        // all boxes this id appears in
       copies: group.length,               // physical printings across loaded boxes
       variant: chosen.variant || 'original',
@@ -690,7 +749,7 @@ function toggleSection(header,bodyId,summaryId){
 
 function makePill(text,cls,kind){
   const p=document.createElement('span');
-  p.className=cls; p.textContent=text; p.dataset.value=text;
+  p.className=cls; p.textContent=displayLabel(text); p.dataset.value=text;
   p.onclick=()=>toggleToken(tokenOf(kind,text));
   return p;
 }
@@ -896,7 +955,7 @@ function updateBadges(){
       const val=items[i]; if(!val) return;
       const pool=isSkill?getPoolWithout(null,activeSkills.has(val)?val:null):getPoolWithout(activeTags.has(val)?val:null,null);
       const count=pool.filter(c=>isSkill?c.skills.includes(val):[...c.species,...c.regular,...c.other].includes(val)).length;
-      pill.textContent=count>0?val+' ('+count+')':val;
+      pill.textContent=count>0?displayLabel(val)+' ('+count+')':displayLabel(val);
       pill.style.opacity=count>0?'1':'0.35';
     });
   };
@@ -905,6 +964,11 @@ function updateBadges(){
   updatePillCounts('otherFilters',allOther,false);
   updatePillCounts('skillFilters',allSkills.filter(v=>!/Focus$/.test(v)),true);
   updatePillCounts('focusFilters',allSkills.filter(v=>/Focus$/.test(v)),true);
+}
+
+// Display labels: filters/chips never repeat "Skill"/"Focus"; Wildcard shows as Variable.
+function displayLabel(v){
+  return v.replace(/\s+(Skill|Focus)$/,'');
 }
 
 function badgeInfo(c){
@@ -916,24 +980,44 @@ function badgeInfo(c){
 function buildPillCard(c){
   const el=document.createElement('div');
   el.className='card-entry'; el.dataset.suit=c.suit||'';
-  const allTags=[...c.species,...c.regular,...c.other];
+  el.dataset.cls = c.suit==='Captain' ? 'captain'
+    : (c.deck && c.deck!=='Common' && c.deck!=='Promo') ? 'captaindeck'
+    : c.suit==='Location' ? 'location' : 'common';
+  const allTags=[...c.species,...c.regular,...c.other]
+    .sort((a,b)=>displayLabel(a).length-displayLabel(b).length);
   const tagsHTML=allTags.map(t=>{
-    const cat=c.species.includes(t)?'species':c.other.includes(t)?'other':'regular';
-    return '<span class="ctag ctag-'+cat+(activeTags.has(t)?' match':'')+'">'+ t+'</span>';
+    const cat=t==='Wildcard'?'variable':c.species.includes(t)?'species':c.other.includes(t)?'other':'regular';
+    return '<span class="ctag ctag-'+cat+(activeTags.has(t)?' match':'')+'">'+displayLabel(t)+'</span>';
   }).join('');
-  const skillsHTML=c.skills.map(s=>'<span class="card-skill'+(activeSkills.has(s)?' match':'')+'">'+s+'</span>').join('');
+  const mkChip=s=>{
+    const spec=s.split(' ')[0].toLowerCase();
+    const isF=/Focus$/.test(s);
+    return '<span class="card-skill sk-'+spec+(isF?' is-focus':'')+(activeSkills.has(s)?' match':'')+'">'+displayLabel(s)+'</span>';
+  };
+  const skillsHTML=c.skills.filter(s=>!/Focus$/.test(s)).map(mkChip).join('');
+  const focusHTML=c.skills.filter(s=>/Focus$/.test(s)).map(mkChip).join('');
   const badge=badgeInfo(c);
-  const badgeHTML = badge ? '<div class="card-badge '+badge.cls+'">'+badge.text+'</div>' : '';
+  const badgeMark = badge ? (badge.cls==='update'?'\u2020':'\u2022')+' '+badge.text : '';
   // Strategy badge is additive: a card can be both a Duplicate and discussed.
   const strat = hasStrategy(c);
   if(strat){ el.classList.add('has-strategy'); el.onclick=()=>toggleStrategy(c.id); }
   if(openStrategyId===c.id) el.classList.add('drawer-open');
   const stratHTML = strat ? '<div class="card-badge strategy">Strategy</div>' : '';
-  el.innerHTML='<div class="card-suit-bar"><div class="suit-dot" data-suit="'+c.suit+'"></div><div class="suit-label" data-suit="'+c.suit+'">'+c.suit+'</div></div>'
+  el.innerHTML='<div class="ce-row"><div class="ce-main">'
     +'<div class="card-name">'+c.name+'</div>'
-    +badgeHTML+stratHTML
-    +(tagsHTML?'<div class="card-tags">'+tagsHTML+'</div>':'')
-    +(skillsHTML?'<div class="card-skills">'+skillsHTML+'</div>':'');
+    +'<div class="card-suit-bar"><div class="suit-dot" data-suit="'+c.suit+'"></div><div class="suit-label" data-suit="'+c.suit+'">'+c.suit+'</div></div>'
+    +(skillsHTML?'<div class="card-skills">'+skillsHTML+'</div>':'')
+    +stratHTML
+    +'</div>'
+    +(tagsHTML?'<div class="ce-traits">'+tagsHTML+'</div>':'')
+    +'</div>'
+    +((c.card_number||focusHTML||badge)?'<div class="ce-bottom">'
+        +((c.card_number||badge)?'<span class="ce-num">'
+            +(c.card_number||'')
+            +(badge?(c.card_number?' ':'')+badgeMark:'')
+          +'</span>':'')
+        +(focusHTML?'<div class="ce-focus">'+focusHTML+'</div>':'')
+      +'</div>':'');
   return el;
 }
 
