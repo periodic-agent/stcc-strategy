@@ -4,16 +4,13 @@
 Companion to extract_trait_icons.py (same anchoring idea: card names are the
 only searchable text). Each card row in the common-cards lists carries its
 skill/focus icons at the right edge of the column (x ~ name.x0+95..134).
-Icon shapes observed: circle = skill, corner-stripe "D" = focus, tricolor
-stripe = Any, black "?" = Variable. Anchors are single-icon cards so the
-crop-to-name mapping is unambiguous; multi-icon rows (e.g. Bruce Maddox,
-Research Skill + Research Focus) are split by x-gap clustering and labeled
-after visual confirmation.
-
-Known gaps / findings (July 2026):
-- No Military-Skill single-icon anchor matched on searchable pages yet.
-- Delta Vega and Boreth show stripe (focus-style) icons in the cyclopedia but
-  box1.json records their icons as Skills; data cross-check pending.
+Icon grammar (verified against box JSONs and card scans, 30 Jul 2026):
+solid "D" block = SKILL; diagonal stripe with black corner wedge = FOCUS;
+colored by specialty; tricolor = Any; black "?" = Variable. Under this
+mapping every cyclopedia icon agrees with the box JSONs (an earlier
+"discrepancy" flag was a misreading of the shapes). Anchors are single-icon
+cards so the crop-to-name mapping is unambiguous; the Bruce Maddox pair
+(Research Skill + Research Focus, left-to-right) is split by fixed bounds.
 
 Usage: python3 extract_skillfocus_icons.py <cyclopedia.pdf> <outdir>
 Requires: pymupdf, Pillow.
@@ -28,8 +25,9 @@ ZOOM = 12
 # key -> (anchor card names to try, cluster pick: index or 'all')
 ANCHORS = {
     'skill-influence':  (['RISA'], 0),                    # Influence Skill (box1)
+    'skill-military':   (['CORVAN II'], 0),               # Military Skill
     'skill-variable':   (['MALIK'], 0),                   # leftmost "?" of three
-    'any':              (['BORETH'], 0),                  # Any Skill (Koloth deck page)
+    'skill-any':        (['BORETH'], 0),                  # Any Skill (Koloth deck page)
     'focus-influence':  (['ADMIRAL NECHEYEV'], 0),        # Influence Focus
     'focus-research':   (['LENARA KAHN'], 0),             # Research Focus
     'focus-military':   (['LURSA'], 0),                   # Military Focus
@@ -91,12 +89,12 @@ def main(pdf_path, outdir):
                 print('ok', key, name, 'page', pno + 1); got = True; break
             if got: break
         if not got: print('!!', key)
-    # Bruce Maddox pair: circle (skill) at x 134.2-143.9, stripe (focus) at 144.9-156.3
+    # Bruce Maddox pair: skill (plain D) left, focus (stripe) right
     page = doc[1]
     r = page.search_for('BRUCE MADDOX')
     if r:
-        save_clip(page, fitz.Rect(134.2, 194.5, 143.9, 204.3), os.path.join(outdir, 'skill-research.png'))
-        save_clip(page, fitz.Rect(144.9, 194.5, 156.3, 204.3), os.path.join(outdir, 'focus-research.png'))
+        save_clip(page, fitz.Rect(133.8, 194.0, 144.2, 204.8), os.path.join(outdir, 'skill-research.png'))
+        save_clip(page, fitz.Rect(144.3, 194.0, 156.6, 204.8), os.path.join(outdir, 'focus-research.png'))
         print('ok skill-research / focus-research (Maddox pair)')
 
 if __name__ == '__main__':
