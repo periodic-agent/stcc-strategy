@@ -289,10 +289,10 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 /* Any Skill / Any Focus: tricolor contour, hard stops (red | blue | yellow) */
 .skill-pill.sk-any{color:#e8ecf8;border:1.5px solid transparent;
   background:linear-gradient(var(--bg2),var(--bg2)) padding-box,
-             linear-gradient(90deg,var(--fx-red) 0 33.4%,var(--fx-blue) 33.4% 66.7%,var(--fx-yellow) 66.7% 100%) border-box;}
+             linear-gradient(90deg,var(--fx-red),var(--fx-blue),var(--fx-yellow)) border-box;}
 .skill-pill.sk-any:hover,.skill-pill.sk-any.active{color:#fff;
   background:linear-gradient(rgba(216,224,240,0.16),rgba(216,224,240,0.16)) padding-box,
-             linear-gradient(90deg,var(--fx-red) 0 33.4%,var(--fx-blue) 33.4% 66.7%,var(--fx-yellow) 66.7% 100%) border-box;}
+             linear-gradient(90deg,var(--fx-red),var(--fx-blue),var(--fx-yellow)) border-box;}
 /* Wildcard trait displays as "Variable", styled white like the Variable skill */
 .other-pill[data-value="Wildcard"]{border-color:rgba(232,236,248,0.4);color:#e8ecf8;background:rgba(232,236,248,0.06);}
 .other-pill[data-value="Wildcard"]:hover,.other-pill[data-value="Wildcard"].active{background:rgba(232,236,248,0.22);border-color:#e8ecf8;color:#fff;}
@@ -323,7 +323,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .ce-focus{display:flex;justify-content:flex-end;gap:.22rem;margin-left:auto;}
 .card-entry .card-name{margin-bottom:.25rem;}
 .card-entry .card-suit-bar{margin-bottom:.4rem;}
-.card-entry .card-skills{margin-bottom:.35rem;}
+.card-entry .card-skills{margin-bottom:.35rem;flex-direction:column;align-items:flex-start;}
 /* meta info (Duplicate / Update / Strategy) as plain text, not pillboxes */
 .card-entry .card-badge{background:none;border:none;padding:0;border-radius:0;font-weight:400;font-size:.62rem;letter-spacing:.04em;}
 .card-entry .card-badge.update{color:#b8c0d0;}
@@ -969,7 +969,6 @@ function updateBadges(){
 
 // Display labels: filters/chips never repeat "Skill"/"Focus"; Wildcard shows as Variable.
 function displayLabel(v){
-  if(v==='Wildcard') return 'Variable';
   return v.replace(/\s+(Skill|Focus)$/,'');
 }
 
