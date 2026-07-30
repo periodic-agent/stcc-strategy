@@ -132,25 +132,34 @@ def main(icons_dir, sf_dir, out):
         return f'<div class="vt" style="z-index:{z}"><img src="{tr[t]}" alt=""><span class="ctag {cls}">{t.upper()}</span></div>'
 
     def card(name, suit, suitcol, skills, traits, focus, num, cls, fmode):
-        """fmode: 'corner' = big icon tight to lower-right; 'text' = icon+text chip"""
+        """fmode: 'stripes' = diagonal focus stripes over the corner (card-accurate);
+        'text' = icon+text focus chip above the band"""
         sk = ''.join(f'<img class="skimg" src="{sfb["skill-" + s]}" alt="" title="{s.capitalize()} skill">' for s in skills)
         tr_ = ''.join(vchip(t, z=len(traits) - i) for i, t in enumerate(traits))
-        fo = ''
+        stripes = ''
+        chip = ''
         if focus:
-            if fmode == 'corner':
-                fo = f'<img class="focorner" src="{sf["focus-" + focus]}" alt="" title="{focus.capitalize()} focus">'
+            if fmode == 'stripes':
+                if focus == 'any':
+                    stripes = '<div class="fstripe fs-any" title="Any focus"><div class="stripe s1"></div><div class="stripe s2"></div><div class="stripe s3"></div></div>'
+                else:
+                    stripes = f'<div class="fstripe fs-{focus}" title="{focus.capitalize()} focus"><div class="thin"></div><div class="main"></div><div class="thin"></div></div>'
             else:
-                fo = (f'<div class="ce-focus"><span class="card-skill sk-{focus} is-focus" title="{focus.capitalize()} focus">'
-                      f'<img class="ci" src="{sf["focus-" + focus]}" alt="">{focus.capitalize()}</span></div>')
-        corner = fo if (focus and fmode == 'corner') else ''
-        bottom_fo = fo if (focus and fmode == 'text') else ''
+                chip = (f'<div class="ce-bottom"><div class="ce-focus"><span class="card-skill sk-{focus} is-focus" title="{focus.capitalize()} focus">'
+                        f'<img class="ci" src="{sf["focus-" + focus]}" alt="">{focus.capitalize()}</span></div></div>')
+        numchip = ''
+        if num:
+            parts = num.split(' ', 1)
+            meta = f'<span class="meta">{parts[1]}</span>' if len(parts) > 1 else ''
+            numchip = f'<span class="cid">{parts[0]}{meta}</span>'
         return f'''<div class="card-entry" data-cls="{cls}" style="border-left:2px solid {suitcol}">
+<div class="bottomband bb-{cls}"></div>
 <div class="ce-row"><div class="ce-main">
 <div class="card-name">{name}</div>
 <div class="card-suit-bar"><div class="suit-dot" style="background:{suitcol}"></div><div class="suit-label" style="color:{suitcol}">{suit}</div></div>
 <div class="card-skills">{sk}</div>
 </div><div class="ce-traits">{tr_}</div></div>
-<div class="ce-bottom"><span class="ce-num">{num}</span>{bottom_fo}</div>{corner}</div>'''
+{chip}{stripes}{numchip}</div>'''
 
     demo = ['human', 'klingon', 'romulan', 'betazoid', 'starfleet', 'scientist', 'engineer',
             'ambassador', 'telepath', 'shady', 'attack', 'ongoing', 'wildcard']
@@ -163,8 +172,9 @@ def main(icons_dir, sf_dir, out):
         ('Bruce Maddox', 'Person', 'var(--person)', ['research'], ['human', 'engineer', 'starfleet', 'scientist'], 'research', '', 'common'),
         ('Bird-of-Prey', 'Ship', '#7a8aaa', ['influence'], ['klingon', 'attack', 'romulan'], '', '1SHI01/13', 'common'),
         ('Lursa', 'Person', 'var(--person)', [], ['shady', 'klingon'], 'military', '2PER10/26 • Duplicate', 'captaindeck'),
+        ('Delta Vega', 'Location', '#4ac48a', ['military'], [], 'any', '1LOC08/20', 'location'),
     ]
-    row_corner = ''.join(card(*c, 'corner') for c in DEMO_CARDS)
+    row_corner = ''.join(card(*c, 'stripes') for c in DEMO_CARDS)
     row_text = ''.join(card(*c, 'text') for c in DEMO_CARDS)
 
     html = f'''<!DOCTYPE html>
@@ -189,9 +199,30 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .other-pill{{border-color:var(--ot-bd);color:var(--ot-tx);background:var(--ot-bg)}}
 .pillx img{{width:18px;height:18px}}
 .card-entry{{background:var(--bg2);border:1px solid var(--border);border-radius:5px;padding:.6rem;width:195px;aspect-ratio:63/88;position:relative;overflow:hidden;display:flex;flex-direction:column}}
-.card-entry::after{{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;opacity:.85}}
-.card-entry[data-cls="common"]::after{{background:linear-gradient(90deg,#aeb9c6,#93a6b4)}}
-.card-entry[data-cls="captaindeck"]::after{{background:linear-gradient(90deg,#1d3a6e,#d97a2e)}}
+/* footer: bottom tenth of the card is the class-colored gradient band */
+.bottomband{{position:absolute;left:0;right:0;bottom:0;height:10%;z-index:1;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}}
+.bb-common{{background:linear-gradient(90deg,#aeb9c6,#93a6b4)}}
+.bb-location{{background:linear-gradient(90deg,#2e5fa3,#3d9e58)}}
+.bb-captain{{background:linear-gradient(90deg,#d9c04a,#6b4a26)}}
+.bb-captaindeck{{background:linear-gradient(90deg,#1d3a6e,#d97a2e)}}
+/* card number: dark chip riding the band, flush left like the print */
+.cid{{position:absolute;left:0;bottom:6px;z-index:3;background:#14171f;color:#e8ecf5;
+  font-family:'Antonio',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.07em;
+  padding:.12rem .55rem .12rem .45rem;border-radius:0 999px 999px 0;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}}
+.cid .meta{{color:#8a94ac;font-weight:400;margin-left:.35rem}}
+/* focus: bright diagonal stripes crossing the lower-right corner, half on the band */
+.fstripe{{position:absolute;right:-26px;bottom:16px;width:110px;z-index:2;
+  transform:rotate(-45deg);transform-origin:center}}
+.fstripe .thin{{height:2px;background:var(--fs,#e6281a);margin:2px 0;opacity:.95}}
+.fstripe .main{{height:8px;background:var(--fs,#e6281a);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35), inset 0 -1px 0 rgba(0,0,0,.3)}}
+.fs-research{{--fs:#149be6}} .fs-influence{{--fs:#f2ce10}} .fs-military{{--fs:#e6281a}}
+.fstripe.fs-any{{background:#000;padding:2px 0}}
+.fstripe.fs-any .stripe{{height:5px}}
+.fstripe.fs-any .stripe + .stripe{{margin-top:2px}}
+.fs-any .s1{{background:#149be6}} .fs-any .s2{{background:#f2ce10}} .fs-any .s3{{background:#e6281a}}
 .ce-row{{display:flex;gap:.4rem;align-items:flex-start}}
 .ce-main{{flex:1;min-width:0}}
 .card-name{{font-size:.82rem;font-weight:600;color:#fff;line-height:1.3;margin-bottom:.25rem;text-transform:uppercase}}
@@ -236,10 +267,10 @@ every variant. Two focus treatments are presented below for comparison.</p>
 <h2>1 — The full skill &amp; focus icon set</h2>
 <div class="sheet">{sfrow}</div>
 
-<h2>2 — Focus option A: big icon, tight to the lower-right corner, no text</h2>
+<h2>2 — Footer: colored band, number chip, focus as diagonal corner stripes</h2>
 <div class="row">{row_corner}</div>
 
-<h2>3 — Focus option B: icon + text chip</h2>
+<h2>3 — Same cards, focus as icon + text chip instead of stripes</h2>
 <div class="row">{row_text}</div>
 
 <h2>4 — Filter pills: current vs with medallions</h2>
