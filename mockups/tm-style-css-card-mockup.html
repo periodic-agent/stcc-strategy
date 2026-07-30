@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TM-style CSS Card Mockup — ST:CC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Exo+2:wght@400;600&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root{
+  --sk-research:#2e86b8;
+  --sk-influence:#c8b52e;
+  --sk-military:#c0392b;
+
+  /* focus stripes: saturated, brighter than the suit/skill banners */
+  --fx-blue:#149be6;
+  --fx-yellow:#f2ce10;
+  --fx-red:#e6281a;
+
+  --tr-species:#e2a04a;
+  --tr-regular:#8ec6d8;
+  --tr-other:#c85340;
+
+  --suit-person:#c9a52e;
+  --suit-ally:#9b6ecf;
+  --suit-ship:#2b2b31;
+  --suit-cargo:#3a6aaa;
+  --suit-location:#3d7d4f;
+  --suit-encounter:#d4699f;
+  --suit-incident:#c0392b;
+  --suit-captain:#c8a84b;
+  --suit-directive:#7a8aaa;
+  --suit-status:#88aacc;
+
+  --ink:#ffffff;
+  --card-font:'Barlow Condensed',sans-serif;
+}
+body{background:#0d0d17;color:#c8c8d8;font-family:'Exo 2',sans-serif;margin:0;padding:28px}
+h1{font-family:Orbitron,sans-serif;font-size:1.3rem;color:#d4699f;letter-spacing:.08em}
+h2{font-family:Orbitron,sans-serif;font-size:.95rem;color:#7ec8f0;margin:36px 0 14px;letter-spacing:.1em;text-transform:uppercase}
+p.note{max-width:72ch;font-size:.85rem;color:#8890a8}
+.row{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-start}
+
+/* ============================================================
+   CARD TILE — all dimensions in em; scale via font-size.
+   Default 16px -> 240px wide. .tile.s (10px) -> 150px wide.
+   ============================================================ */
+.tile{
+  position:relative;width:15em;aspect-ratio:63/88;border-radius:.75em;
+  font-size:16px;
+  background:radial-gradient(120% 90% at 70% 25%, #1a2a4a 0%, #0a1020 55%, #05070d 100%);
+  box-shadow:0 .25em 1.1em rgba(0,0,0,.6), inset 0 0 0 1px rgba(255,255,255,.08);
+  overflow:hidden;font-family:var(--card-font);
+}
+.tile.s{font-size:10px}
+.starfield{position:absolute;inset:0;background-image:
+  radial-gradient(1px 1px at 20% 30%,#fff8 0 1px,transparent 1px),
+  radial-gradient(1px 1px at 70% 60%,#fff6 0 1px,transparent 1px),
+  radial-gradient(1px 1px at 45% 80%,#fff5 0 1px,transparent 1px),
+  radial-gradient(1.5px 1.5px at 85% 20%,#fff7 0 1px,transparent 1.5px),
+  radial-gradient(1px 1px at 10% 70%,#fff4 0 1px,transparent 1px);}
+
+/* name + suit pills: flush with the left edge */
+.name-pill,.suit-pill{
+  display:inline-flex;align-items:center;gap:.31em;position:relative;z-index:3;
+  color:var(--ink);font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  border-radius:0 .75em .75em 0;padding:.125em .625em .125em .56em;
+  box-shadow:0 1px 3px rgba(0,0,0,.55);
+  white-space:nowrap;max-width:10.5em;overflow:hidden;text-overflow:ellipsis;
+}
+.name-pill{margin:.56em 0 0 0;font-size:.8em;max-width:11.5em}
+.suit-pill{margin:.25em 0 0 0;font-size:.75em;opacity:.96}
+.suit-pill svg{width:.9em;height:.9em;flex:none}
+.tile.dark-name .name-pill{background:#2b2b31}
+
+/* ---- SKILL BANNERS: rooted in left edge, rounded cap, no symbols ---- */
+.skills{position:absolute;left:0;top:4.9em;display:flex;flex-direction:column;gap:.44em;z-index:2}
+.skill-banner{
+  height:1.5em;width:2.7em;border-radius:0 .75em .75em 0;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:1em;color:#111;
+  box-shadow:0 .12em .3em rgba(0,0,0,.5),
+             inset 0 1px 0 rgba(255,255,255,.45),
+             inset 0 -1px 0 rgba(0,0,0,.25);
+}
+.sb-research{background:var(--sk-research)}
+.sb-influence{background:var(--sk-influence)}
+.sb-military{background:var(--sk-military)}
+.sb-any{background:linear-gradient(180deg,
+  var(--fx-blue) 0 33.4%, var(--fx-yellow) 33.4% 66.7%, var(--fx-red) 66.7% 100%)}
+.sb-wild{background:#fff}
+
+/* ---- TRAIT PILLS: DOM order = shortest word first (leftmost) ---- */
+.traits{position:absolute;right:.5em;top:0;display:flex;gap:.31em;z-index:2}
+.trait{display:flex;flex-direction:column;align-items:center}
+.medal-wrap{width:1.75em;height:1.75em;margin-top:.375em;z-index:2;position:relative;
+  filter:drop-shadow(0 .12em .2em rgba(0,0,0,.6))}
+.medal{position:absolute;inset:0;background:#fff}
+.medal::after{content:'';position:absolute;inset:.125em;
+  background:color-mix(in srgb, var(--m,#20323e) 40%, transparent)}
+.trait .medal, .trait .medal::after{border-radius:50%}
+.trait.species .medal, .trait.species .medal::after{
+  border-radius:0;
+  clip-path:polygon(30% 0,70% 0,100% 30%,100% 70%,70% 100%,30% 100%,0 70%,0 30%);
+}
+.trait.species .medal{--m:var(--tr-species)}
+.trait.regular .medal{--m:var(--tr-regular)}
+.trait.other   .medal{--m:var(--tr-other)}
+.trait .band{
+  writing-mode:vertical-rl;text-orientation:mixed;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--ink);font-weight:600;font-size:.8125em;letter-spacing:.1em;text-transform:uppercase;
+  padding:1.1em 0 .77em;width:1.7em;
+  border-radius:0 0 .85em .85em;margin-top:-.7em;
+  box-shadow:0 .15em .38em rgba(0,0,0,.5);
+}
+.trait.species .band{background:var(--tr-species)}
+.trait.regular .band{background:var(--tr-regular)}
+.trait.other   .band{background:var(--tr-other)}
+
+/* ---- BOTTOM BAND: bottom 10%, gradient by card class.
+   Precedence: captain card > deck membership > location > common ---- */
+.bottomband{position:absolute;left:0;right:0;bottom:0;height:10%;z-index:1;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+.bb-common{background:linear-gradient(90deg,#aeb9c6,#93a6b4)}
+.bb-location{background:linear-gradient(90deg,#2e5fa3,#3d9e58)}
+.bb-captain{background:linear-gradient(90deg,#d9c04a,#6b4a26)}
+.bb-captaindeck{background:linear-gradient(90deg,#1d3a6e,#d97a2e)}
+
+/* ---- FOCUS: diagonal corner stripe(s) ---- */
+.fstripe{position:absolute;right:-1.9em;bottom:1.4em;width:7.4em;z-index:2;
+  transform:rotate(-45deg);transform-origin:center}
+.fstripe .thin{height:.125em;background:var(--fs,#c0392b);margin:.16em 0;opacity:.95}
+.fstripe .main{height:.625em;background:var(--fs,#c0392b);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35), inset 0 -1px 0 rgba(0,0,0,.3)}
+.fs-research{--fs:var(--fx-blue)} .fs-influence{--fs:var(--fx-yellow)}
+.fs-military{--fs:var(--fx-red)}
+/* any focus: three color stripes separated by thin black space */
+.fstripe.fs-any{background:#000;padding:.14em 0}
+.fstripe.fs-any .stripe{height:.45em}
+.fstripe.fs-any .stripe + .stripe{margin-top:.14em}
+.fs-any .s1{background:var(--fx-blue)}
+.fs-any .s2{background:var(--fx-yellow)}
+.fs-any .s3{background:var(--fx-red)}
+
+.corner{position:absolute;right:.44em;bottom:.44em;display:flex;align-items:center;z-index:3}
+.corner .glory{width:1.6em;height:1.75em;filter:drop-shadow(0 .12em .2em rgba(0,0,0,.6))}
+
+/* card id */
+.cid{position:absolute;left:0;bottom:.5em;background:#111;color:#eee;font-size:.625em;z-index:3;
+  font-weight:600;letter-spacing:.08em;padding:.2em 1em .2em .8em;border-radius:0 .8em .8em 0;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+
+/* ============================================================
+   FILTER PILLBOXES
+   ============================================================ */
+.pillrow{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 18px}
+.fpill{
+  display:inline-flex;align-items:center;gap:6px;font-family:var(--card-font);
+  font-weight:600;font-size:14px;letter-spacing:.05em;text-transform:uppercase;color:#fff;
+  border-radius:999px;padding:3px 13px;cursor:pointer;border:1.5px solid rgba(255,255,255,.35);
+  background:#222738;transition:transform .1s;
+}
+.fpill:hover{transform:translateY(-1px)}
+.fpill .dot{width:18px;height:18px;border-radius:50%}
+.fpill .dot.any{background:linear-gradient(180deg,
+  var(--sk-research) 0 33.4%, var(--sk-influence) 33.4% 66.7%, var(--sk-military) 66.7% 100%)}
+.fpill .dot.wild{background:#fff;color:#111;display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:12px}
+.fpill.off{opacity:.38;filter:saturate(.4)}
+
+.ref{width:240px;border-radius:12px;display:block}
+figure{margin:0;text-align:center}
+figcaption{font-size:.72rem;color:#7a80a0;margin-top:6px}
+.grid{display:flex;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<!-- ============ SVG SPRITE ============ -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <g id="su-person" fill="#fff"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></g>
+    <g id="su-ship" fill="#fff"><path d="M12 3c3 3 4 7 4 10l4 4-1.5 2-4-2h-5l-4 2L4 17l4-4c0-3 1-7 4-10z"/></g>
+    <g id="su-location" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="12" r="5.5"/><ellipse cx="12" cy="12" rx="10" ry="3.4" transform="rotate(-18 12 12)"/></g>
+    <g id="su-cargo" fill="none" stroke="#fff" stroke-width="1.8"><rect x="4" y="7" width="16" height="12" rx="1"/><path d="M4 11h16M12 7v12"/></g>
+    <!-- Glory: white speech bubble, delta inside -->
+    <g id="ic-glory">
+      <path d="M4.5 17.5 L2 24 L9 20.5 Z" fill="#fff"/>
+      <circle cx="12" cy="11" r="9.6" fill="#fff"/>
+      <path d="M12 3.6c1.9 3.3 4.3 8.4 6.2 13.2-2.2-1.6-4.2-2.4-6.2-2.4s-4 .8-6.2 2.4C7.7 12 10.1 6.9 12 3.6z" fill="#c3d3e6"/>
+    </g>
+  </defs>
+</svg>
+
+<h1>TM-STYLE CSS CARD MOCKUP</h1>
+<p class="note">Changes: skill banners are now symbol-free color blocks (narrower, shorter), with Any =
+three stripes and Wild = white with a black ?; Any focus = three diagonal stripes with thin black
+gaps; glory redrawn as the speech-bubble marker; the whole tile is em-scaled so the scanner can pack
+small cards (150px) or smaller by changing one font-size.</p>
+
+<h2>1 — Full-size tiles</h2>
+<div class="row">
+
+  <!-- SOVAL: Influence skill, Research focus, Archer deck -->
+  <div class="tile">
+    <div class="starfield"></div>
+    <div class="bottomband bb-captaindeck"></div>
+    <div class="fstripe fs-research"><div class="thin"></div><div class="main"></div><div class="thin"></div></div>
+    <span class="name-pill" style="background:var(--suit-person)">Ambassador Soval</span><br>
+    <span class="suit-pill" style="background:var(--suit-person)">
+      <svg viewBox="0 0 24 24"><use href="#su-person"/></svg>Person</span>
+    <div class="skills"><div class="skill-banner sb-influence"></div></div>
+    <div class="traits">
+      <div class="trait species"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Vulcan</div></div>
+      <div class="trait regular"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Telepath</div></div>
+      <div class="trait regular"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Ambassador</div></div>
+    </div>
+    <div class="corner">
+      <svg class="glory" viewBox="0 0 24 26"><use href="#ic-glory"/><text x="12" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#10161f">?</text></svg>
+    </div>
+    <span class="cid">2ARC07/23</span>
+  </div>
+
+  <!-- ENTERPRISE-D: Any skill, Picard deck -->
+  <div class="tile dark-name">
+    <div class="starfield"></div>
+    <div class="bottomband bb-captaindeck"></div>
+    <span class="name-pill">U.S.S. Enterprise-D</span><br>
+    <span class="suit-pill" style="background:var(--suit-ship)">
+      <svg viewBox="0 0 24 24"><use href="#su-ship"/></svg>Ship</span>
+    <div class="skills"><div class="skill-banner sb-any"></div></div>
+    <div class="traits">
+      <div class="trait regular"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Starfleet</div></div>
+    </div>
+    <div class="corner">
+      <svg class="glory" viewBox="0 0 24 26"><use href="#ic-glory"/><text x="12" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#10161f">2</text></svg>
+    </div>
+    <span class="cid">1PIC02/10</span>
+  </div>
+
+  <!-- KEYLA DETMER: two Wild skills, Burnham deck -->
+  <div class="tile">
+    <div class="starfield"></div>
+    <div class="bottomband bb-captaindeck"></div>
+    <span class="name-pill" style="background:var(--suit-person)">Keyla Detmer</span><br>
+    <span class="suit-pill" style="background:var(--suit-person)">
+      <svg viewBox="0 0 24 24"><use href="#su-person"/></svg>Person</span>
+    <div class="skills">
+      <div class="skill-banner sb-wild">?</div>
+      <div class="skill-banner sb-wild">?</div>
+    </div>
+    <div class="traits">
+      <div class="trait species"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Human</div></div>
+      <div class="trait regular"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Pilot</div></div>
+      <div class="trait regular"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Starfleet</div></div>
+      <div class="trait species"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Synthetic</div></div>
+    </div>
+    <div class="corner">
+      <svg class="glory" viewBox="0 0 24 26"><use href="#ic-glory"/><text x="12" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#10161f">?</text></svg>
+    </div>
+    <span class="cid">1BUR03/10</span>
+  </div>
+
+  <!-- DELTA VEGA: Location, Military skill, Any focus demo -->
+  <div class="tile">
+    <div class="starfield"></div>
+    <div class="bottomband bb-location"></div>
+    <div class="fstripe fs-any">
+      <div class="stripe s1"></div><div class="stripe s2"></div><div class="stripe s3"></div>
+    </div>
+    <span class="name-pill" style="background:var(--suit-location)">Delta Vega</span><br>
+    <span class="suit-pill" style="background:var(--suit-location)">
+      <svg viewBox="0 0 24 24"><use href="#su-location"/></svg>Location</span>
+    <div class="skills"><div class="skill-banner sb-military"></div></div>
+    <div class="corner">
+      <svg class="glory" viewBox="0 0 24 26"><use href="#ic-glory"/><text x="12" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#10161f">2</text></svg>
+    </div>
+    <span class="cid">1LOC08/20</span>
+  </div>
+</div>
+<p class="note">Delta Vega wears the Any-focus stripe set for demonstration (its real focus is none;
+skill Military). Detmer shows stacked Wild banners; Enterprise-D the striped Any banner.</p>
+
+<h2>2 — Packed scanner grid (.tile.s = 150px, one font-size change)</h2>
+<div class="grid">
+  <div class="tile s">
+    <div class="starfield"></div><div class="bottomband bb-captaindeck"></div>
+    <div class="fstripe fs-research"><div class="thin"></div><div class="main"></div><div class="thin"></div></div>
+    <span class="name-pill" style="background:var(--suit-person)">Ambassador Soval</span><br>
+    <span class="suit-pill" style="background:var(--suit-person)"><svg viewBox="0 0 24 24"><use href="#su-person"/></svg>Person</span>
+    <div class="skills"><div class="skill-banner sb-influence"></div></div>
+    <div class="traits">
+      <div class="trait species"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Vulcan</div></div>
+      <div class="trait regular"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Telepath</div></div>
+      <div class="trait regular"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Ambassador</div></div>
+    </div>
+    <div class="corner"><svg class="glory" viewBox="0 0 24 26"><use href="#ic-glory"/><text x="12" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#10161f">?</text></svg></div>
+    <span class="cid">2ARC07/23</span>
+  </div>
+  <div class="tile s dark-name">
+    <div class="starfield"></div><div class="bottomband bb-captaindeck"></div>
+    <span class="name-pill">U.S.S. Enterprise-D</span><br>
+    <span class="suit-pill" style="background:var(--suit-ship)"><svg viewBox="0 0 24 24"><use href="#su-ship"/></svg>Ship</span>
+    <div class="skills"><div class="skill-banner sb-any"></div></div>
+    <div class="traits">
+      <div class="trait regular"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Starfleet</div></div>
+    </div>
+    <div class="corner"><svg class="glory" viewBox="0 0 24 26"><use href="#ic-glory"/><text x="12" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#10161f">2</text></svg></div>
+    <span class="cid">1PIC02/10</span>
+  </div>
+  <div class="tile s">
+    <div class="starfield"></div><div class="bottomband bb-captaindeck"></div>
+    <span class="name-pill" style="background:var(--suit-person)">Keyla Detmer</span><br>
+    <span class="suit-pill" style="background:var(--suit-person)"><svg viewBox="0 0 24 24"><use href="#su-person"/></svg>Person</span>
+    <div class="skills"><div class="skill-banner sb-wild">?</div><div class="skill-banner sb-wild">?</div></div>
+    <div class="traits">
+      <div class="trait species"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Human</div></div>
+      <div class="trait regular"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Pilot</div></div>
+      <div class="trait regular"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Starfleet</div></div>
+      <div class="trait species"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Synthetic</div></div>
+    </div>
+    <div class="corner"><svg class="glory" viewBox="0 0 24 26"><use href="#ic-glory"/><text x="12" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#10161f">?</text></svg></div>
+    <span class="cid">1BUR03/10</span>
+  </div>
+  <div class="tile s">
+    <div class="starfield"></div><div class="bottomband bb-location"></div>
+    <div class="fstripe fs-any"><div class="stripe s1"></div><div class="stripe s2"></div><div class="stripe s3"></div></div>
+    <span class="name-pill" style="background:var(--suit-location)">Delta Vega</span><br>
+    <span class="suit-pill" style="background:var(--suit-location)"><svg viewBox="0 0 24 24"><use href="#su-location"/></svg>Location</span>
+    <div class="skills"><div class="skill-banner sb-military"></div></div>
+    <div class="corner"><svg class="glory" viewBox="0 0 24 26"><use href="#ic-glory"/><text x="12" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#10161f">2</text></svg></div>
+    <span class="cid">1LOC08/20</span>
+  </div>
+  <div class="tile s">
+    <div class="starfield"></div><div class="bottomband bb-common"></div>
+    <div class="fstripe fs-military"><div class="thin"></div><div class="main"></div><div class="thin"></div></div>
+    <span class="name-pill" style="background:var(--suit-person)">Lursa</span><br>
+    <span class="suit-pill" style="background:var(--suit-person)"><svg viewBox="0 0 24 24"><use href="#su-person"/></svg>Person</span>
+    <div class="traits">
+      <div class="trait regular"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Shady</div></div>
+      <div class="trait species"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Klingon</div></div>
+    </div>
+    <div class="corner"><svg class="glory" viewBox="0 0 24 26"><use href="#ic-glory"/><text x="12" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#10161f">?</text></svg></div>
+    <span class="cid">2PER10/26</span>
+  </div>
+  <div class="tile s dark-name">
+    <div class="starfield"></div><div class="bottomband bb-common"></div>
+    <span class="name-pill">Bird-of-Prey</span><br>
+    <span class="suit-pill" style="background:var(--suit-ship)"><svg viewBox="0 0 24 24"><use href="#su-ship"/></svg>Ship</span>
+    <div class="skills"><div class="skill-banner sb-influence"></div></div>
+    <div class="traits">
+      <div class="trait regular"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Cloak</div></div>
+      <div class="trait other"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Attack</div></div>
+      <div class="trait species"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Romulan</div></div>
+      <div class="trait regular"><div class="medal-wrap"><div class="medal"></div></div><div class="band">Imperial</div></div>
+    </div>
+    <div class="corner"><svg class="glory" viewBox="0 0 24 26"><use href="#ic-glory"/><text x="12" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#10161f">2</text></svg></div>
+    <span class="cid">1SHI01/13</span>
+  </div>
+</div>
+
+<h2>3 — Bottom band variants</h2>
+<div class="row" style="gap:14px">
+  <div style="width:200px"><div class="bottomband bb-common" style="position:static;height:26px;border-radius:4px"></div><figcaption>Common</figcaption></div>
+  <div style="width:200px"><div class="bottomband bb-location" style="position:static;height:26px;border-radius:4px"></div><figcaption>Location</figcaption></div>
+  <div style="width:200px"><div class="bottomband bb-captain" style="position:static;height:26px;border-radius:4px"></div><figcaption>Captain card</figcaption></div>
+  <div style="width:200px"><div class="bottomband bb-captaindeck" style="position:static;height:26px;border-radius:4px"></div><figcaption>Captain-deck card</figcaption></div>
+</div>
+<p class="note">Mapping precedence (per Periodic_agent): suit Captain → captain gradient; else source
+is a captain name → captain-deck gradient (deck membership wins, including Locations in decks); else
+suit Location → location gradient; else common.</p>
+
+<h2>4 — Filter pillboxes</h2>
+<div class="pillrow">
+  <span class="fpill"><span class="dot" style="background:var(--sk-research)"></span>Research</span>
+  <span class="fpill"><span class="dot" style="background:var(--sk-influence)"></span>Influence</span>
+  <span class="fpill"><span class="dot" style="background:var(--sk-military)"></span>Military</span>
+  <span class="fpill"><span class="dot any"></span>Any</span>
+  <span class="fpill"><span class="dot wild">?</span>Wild</span>
+</div>
+<div class="pillrow">
+  <span class="fpill" style="border-color:var(--tr-species)"><span class="dot" style="background:var(--tr-species)"></span>Klingon</span>
+  <span class="fpill" style="border-color:var(--tr-regular)"><span class="dot" style="background:var(--tr-regular)"></span>Telepath</span>
+  <span class="fpill" style="border-color:var(--tr-other)"><span class="dot" style="background:var(--tr-other)"></span>Attack</span>
+  <span class="fpill off"><span class="dot" style="background:var(--suit-cargo)"></span>Cargo (off)</span>
+</div>
+
+<h2>5 — Notes</h2>
+<p class="note">
+a. Glory values remain hardcoded placeholders until a glory field lands in the box JSONs.<br>
+b. Specialty is now conveyed purely by color (banner and stripe); no glyphs anywhere on the tile.<br>
+c. Scale is one knob: .tile is 240px at font-size 16px, .tile.s is 150px at 10px; any value works.
+</p>
+
+</body>
+</html>
