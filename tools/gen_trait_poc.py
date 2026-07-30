@@ -75,7 +75,7 @@ def b64_outlined(f, trait, size=96, border=4):
     canvas.save(buf, format='PNG')
     return 'data:image/png;base64,' + base64.b64encode(buf.getvalue()).decode()
 
-def b64_skill_banner(f, widen=1.6):
+def b64_skill_banner(f, widen=1.35):
     """Skill icons print as a banner rooted in the card's left edge. The
     cyclopedia's D block is near-square, so extend it leftward: every row is
     padded with its own leftmost opaque color (handles the tricolor Any).
@@ -213,7 +213,7 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
   box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}}
 .cid .meta{{color:#8a94ac;font-weight:400;margin-left:.35rem}}
 /* focus: bright diagonal stripes crossing the lower-right corner, half on the band */
-.fstripe{{position:absolute;right:-26px;bottom:16px;width:110px;z-index:2;
+.fstripe{{position:absolute;right:-30px;bottom:9px;width:104px;z-index:2;
   transform:rotate(-45deg);transform-origin:center}}
 .fstripe .thin{{height:2px;background:var(--fs,#e6281a);margin:2px 0;opacity:.95}}
 .fstripe .main{{height:8px;background:var(--fs,#e6281a);
