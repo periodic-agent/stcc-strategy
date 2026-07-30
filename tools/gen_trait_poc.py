@@ -171,11 +171,12 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .ce-traits{{display:flex;flex-direction:row;align-items:flex-start;justify-content:flex-end;gap:.26rem;flex:none;max-width:55%;flex-wrap:wrap}}
 .vt{{display:flex;flex-direction:column;align-items:center}}
 .vt img{{width:21px;height:21px;z-index:2}}
-.vt .ctag{{writing-mode:vertical-rl;text-orientation:mixed;padding:.5rem .12rem .32rem;line-height:1.15;font-size:.6rem;border-radius:0 0 3px 3px;margin-top:-4px;border:1px solid}}
-.ctag-species{{background:rgba(220,140,60,0.15);color:#d09060;border-color:rgba(220,140,60,0.3)}}
-.ctag-regular{{background:rgba(74,159,212,0.10);color:#6ab8e0;border-color:rgba(74,159,212,0.25)}}
-.ctag-other{{background:rgba(200,60,60,0.10);color:#c06060;border-color:rgba(200,60,60,0.25)}}
-.ctag-variable{{background:rgba(232,236,248,0.08);color:#e8ecf8;border-color:rgba(232,236,248,0.35)}}
+.vt .ctag{{writing-mode:vertical-rl;text-orientation:mixed;padding:.5rem .12rem .32rem;line-height:1.15;font-size:.6rem;font-weight:600;border-radius:0 0 4px 4px;margin-top:-4px;border:none}}
+/* solid card-style pills: white label on the family color, like the printed cards */
+.ctag-species{{background:#e2a04a;color:#fff}}
+.ctag-regular{{background:#8ec6d8;color:#fff}}
+.ctag-other{{background:#c85340;color:#fff}}
+.ctag-variable{{background:#eef1f6;color:#20242e}}
 .ce-bottom{{margin-top:auto;padding-top:.4rem;display:flex;justify-content:space-between;align-items:flex-end}}
 .ce-num{{font-size:.55rem;color:var(--muted);letter-spacing:.06em}}
 .ce-focus{{margin-left:auto}}
