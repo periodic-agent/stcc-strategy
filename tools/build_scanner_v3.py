@@ -31,7 +31,7 @@ def build_assets(out_js):
 
     trait = {os.path.basename(f)[:-4]: b64_outlined(f, os.path.basename(f)[:-4], border=2)
              for f in sorted(glob.glob('icons/*.png'))}
-    trait_chip = {os.path.basename(f)[:-4]: b64_outlined(f, os.path.basename(f)[:-4], border=6)
+    trait_chip = {os.path.basename(f)[:-4]: b64_outlined(f, os.path.basename(f)[:-4], border=9)
                   for f in sorted(glob.glob('icons/*.png'))}
     skill = {os.path.basename(f)[:-4].replace('skill-', ''): b64_skill_banner(f)
              for f in sorted(glob.glob('icons_sf/skill-*.png'))}
@@ -49,7 +49,6 @@ def build_assets(out_js):
 
 CSS = """
 /* ===== v3 card-face design (POC port) ===== */
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@600&display=swap');
 /* capsule outlines everywhere */
 .box-pill,.promo-pill,.deck-pill,.suit-pill,.species-pill,.regular-pill,.other-pill,.skill-pill{border-radius:999px;}
 /* rulebook chips (trait + suit filters) */
@@ -74,13 +73,14 @@ CSS = """
 .skill-pill{display:inline-flex;align-items:center;}
 /* ===== card entries ===== */
 .card-entry{border-radius:10px;}
-.nb{display:block;width:fit-content;margin-left:-0.7rem;max-width:calc(100% + .2rem);
-  padding:.08rem .85rem .08rem .7rem;border-radius:0 999px 999px 0;background:#556;
-  color:#fff;font-family:'Antonio',sans-serif;font-weight:600;font-size:.82rem;
-  letter-spacing:.05em;text-transform:uppercase;line-height:1.2;margin-bottom:.3rem;}
+.nb{display:flex;align-items:center;width:fit-content;margin-left:-0.7rem;max-width:calc(100% + .2rem);
+  min-height:18px;box-sizing:border-box;padding:.05rem .8rem .05rem .35rem;
+  border-radius:0 999px 999px 0;background:#556;
+  color:#fff;font-family:'Antonio',sans-serif;font-weight:600;font-size:.74rem;
+  letter-spacing:.04em;text-transform:uppercase;line-height:1.15;margin-bottom:.3rem;}
 .sb{display:inline-flex;align-items:center;gap:.4rem;align-self:flex-start;margin-left:-0.7rem;
-  padding:0 .8rem 0 .7rem;height:18px;box-sizing:border-box;border-radius:0 999px 999px 0;background:#556;
-  color:#fff;font-family:'Antonio',sans-serif;font-weight:600;font-size:.72rem;
+  padding:0 .8rem 0 .3rem;height:18px;box-sizing:border-box;border-radius:0 999px 999px 0;background:#556;
+  color:#fff;font-family:'Antonio',sans-serif;font-weight:600;font-size:.66rem;
   letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem;}
 .sb img{height:.95em;width:auto;}
 .skcol{display:flex;flex-direction:column;align-items:flex-start;gap:.3rem;margin-left:-0.7rem;margin-bottom:.35rem;}
@@ -93,7 +93,7 @@ CSS = """
 .vt img{width:26px;height:26px;z-index:2;}
 .vt-spacer{width:26px;height:5px;}
 .vctag{writing-mode:vertical-rl;text-orientation:sideways;display:flex;align-items:center;justify-content:center;
-  padding:.65rem 0 .36rem;width:18px;line-height:1;font-family:'Antonio',sans-serif;font-size:.66rem;
+  padding:.65rem 0 .36rem;width:18px;line-height:1;font-family:'Antonio',sans-serif;font-size:.62rem;
   font-weight:600;letter-spacing:.05em;border-radius:0 0 999px 999px;margin-top:-5px;color:#fff;}
 .vt img + .vctag{margin-top:-5px;}
 .vt .vt-spacer + .vctag{margin-top:0;border-radius:999px;padding-top:.5rem;}
@@ -106,7 +106,7 @@ CSS = """
 .focorner.match{filter:drop-shadow(0 0 3px #fff);}
 .ce-bottom{margin-top:auto;padding-top:.45rem;display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:3;}
 .cid2{background:#14171f;color:#e8ecf5;display:inline-block;margin-left:-0.7rem;
-  font-family:'Antonio',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.07em;
+  font-family:'Antonio',sans-serif;font-size:.56rem;font-weight:600;letter-spacing:.07em;
   padding:.12rem .55rem;border-radius:0 999px 999px 0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22);}
 .cid2 .meta{color:#8a94ac;font-weight:400;margin-left:.35rem;}
 """
@@ -175,8 +175,7 @@ NEW_MAKEPILL = """function makePill(text,cls,kind){
 def patch_html(src, out):
     s = open(src).read()
     # fonts + assets script
-    s = s.replace('family=Exo+2:wght@300;400;600&display=swap',
-                  'family=Exo+2:wght@300;400;600&family=Antonio:wght@600&display=swap')
+    s = s.replace('family=Barlow+Condensed:wght@500;600;700', 'family=Antonio:wght@600')
     s = s.replace('</head>', '<script src="cardface-assets.js"></script>\n</head>', 1)
     # preview marker
     s = s.replace('<meta name="viewport" content="width=device-width, initial-scale=1.0">',
