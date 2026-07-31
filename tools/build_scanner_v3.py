@@ -222,8 +222,10 @@ def patch_html(src, out, assets_js='cardface-assets.js'):
     s = s.replace('<div class="qh-note">Clicking any pill writes its token here \u2014 the pills are shortcuts for this language.</div>',
                   '<div class="qh-note">Clicking any pill writes its token here \u2014 the pills are shortcuts for this language.</div>\n    <div class="qh-note">Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>')
     # glory passthrough in the resolver (dormant until box JSONs carry it)
-    s = s.replace("card_number: chosen.card_number || '',",
-                  "card_number: chosen.card_number || '',\n      glory: (chosen.glory !== undefined && chosen.glory !== null) ? chosen.glory : null,")
+    s = s.replace("card_number: chosen.card_number || '',\n      badgeKind",
+                  "card_number: chosen.card_number || '',\n"
+                  "      glory: (() => { for (const pr of group) { if (pr.glory !== undefined && pr.glory !== null) return pr.glory; } return null; })(),\n"
+                  "      badgeKind")
     # ===== shareable URLs: mirror the query into location.hash, restore on load =====
     s = s.replace("""function refreshFromQuery(text){
   applyQuery(text);

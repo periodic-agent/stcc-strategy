@@ -671,13 +671,12 @@ function resolveCards(rawPool){
       skills: normIcons(chosen.icons),
       filename: imgFile,
       imgBox: imgBox,
-      card_number: chosen.card_number || '',
-      glory: (chosen.glory !== undefined && chosen.glory !== null) ? chosen.glory : null,                      // which box folder the image lives in
+      card_number: chosen.card_number || '',                      // which box folder the image lives in
       boxes: boxes,                        // all boxes this id appears in
       copies: group.length,               // physical printings across loaded boxes
       variant: chosen.variant || 'original',
       card_number: chosen.card_number || '',
-      glory: (chosen.glory !== undefined && chosen.glory !== null) ? chosen.glory : null,
+      glory: (() => { for (const pr of group) { if (pr.glory !== undefined && pr.glory !== null) return pr.glory; } return null; })(),
       badgeKind
     });
   });
