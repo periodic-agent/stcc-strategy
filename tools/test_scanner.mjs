@@ -279,15 +279,23 @@ const discussed   = api.ALL_CARDS.find(c=>counts[c.id] !== undefined);
 const undiscussed = api.ALL_CARDS.find(c=>counts[c.id] === undefined);
 
 const pillYes = api.buildPillCard(discussed);
-assert(pillYes.classList.contains('has-strategy')
-       && typeof pillYes.onclick === 'function',
-  'a discussed card is clickable (has-strategy; card-face design carries no inline badge text)');
+assert(pillYes.classList.contains('has-strategy'),
+  'a discussed card still carries has-strategy (guide links surface in the lightbox caption)');
+
+const withImg = api.ALL_CARDS.find(c=>c.filename && c.imgBox);
+const pillImg = api.buildPillCard(withImg);
+assert(pillImg.classList.contains('has-img') && typeof pillImg.onclick === 'function',
+  'a card with an image is clickable and opens the lightbox');
+
+const noImg = api.ALL_CARDS.find(c=>!c.filename);
+const pillNoImg = noImg ? api.buildPillCard(noImg) : null;
+assert(!pillNoImg || (!pillNoImg.classList.contains('has-img') && typeof pillNoImg.onclick !== 'function'),
+  'an image-less card gets no click target');
 
 const pillNo = api.buildPillCard(undiscussed);
 assert(!pillNo.classList.contains('has-strategy')
-       && !pillNo.innerHTML.includes('card-badge strategy')
-       && typeof pillNo.onclick !== 'function',
-  'an undiscussed card gets no badge and no click target');
+       && !pillNo.innerHTML.includes('card-badge strategy'),
+  'an undiscussed card carries no strategy affordance');
 
 await api.ensureStrategyIndex();
 const drawer = api.buildStrategyDrawer(discussed);

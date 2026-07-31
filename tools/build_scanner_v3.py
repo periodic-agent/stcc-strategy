@@ -111,10 +111,17 @@ CSS = """
 .vt-species{background:#e2a04a;}
 .vt-regular{background:#79b3c7;}
 .vt-other{background:#c85340;}
-.vt-variable{background:#eef1f6;color:#20242e;}
+.vt-variable{background:#f6c9bd;color:#141821;}
 .focorner{position:absolute;right:-3px;bottom:-3px;height:43px;width:auto;z-index:2;}
 .card-entry.has-focus .ce-traits2{margin-bottom:46px;}
 .glorybadge{position:absolute;right:5px;bottom:3px;width:33px;height:30px;z-index:2;}
+.card-entry.has-img{cursor:pointer;}
+#lightbox{flex-direction:column;gap:.7rem;}
+#lightbox-cap{display:flex;flex-direction:column;align-items:center;gap:.3rem;max-width:min(90vw,640px);text-align:center;cursor:default;}
+#lightbox-cap .lb-name{font-family:'Antonio',sans-serif;font-size:1.05rem;letter-spacing:.04em;color:#e8ecf8;text-transform:uppercase;}
+#lightbox-cap .lb-links{display:flex;flex-wrap:wrap;gap:.4rem .9rem;justify-content:center;}
+#lightbox-cap .lb-links a{color:#6fd3d3;font-family:'Exo 2',sans-serif;font-size:.85rem;text-decoration:underline dotted;text-underline-offset:2px;}
+
 .ce-bottom{margin-top:auto;padding-top:.45rem;display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:3;}
 .cid2{background:#14171f;color:#e8ecf5;display:inline-block;margin-left:-0.7rem;
   font-family:'Antonio',sans-serif;font-size:.56rem;font-weight:600;letter-spacing:.07em;
@@ -270,6 +277,55 @@ window.addEventListener('hashchange',()=>{
   const src=isF?CARDFACE.focus[spec2]:CARDFACE.skill[spec2];
   p.innerHTML=(src?'<img src="'+src+'" alt="">':'')+'<span class="lbl">'+displayLabel(t)+'</span><span class="cnt"></span>';}
   p.dataset.value=t;""")
+    # ---- card click opens the image lightbox (not the strategy drawer) ----
+    s = s.replace(
+        "if(strat){ el.classList.add('has-strategy'); el.onclick=()=>toggleStrategy(c.id); }",
+        "if(strat) el.classList.add('has-strategy');\n"
+        "  if(c.filename && c.imgBox){\n"
+        "    const lbSrc=IMG_BASE+'/'+BOX_FOLDER[c.imgBox]+'/'+c.filename;\n"
+        "    const lbIdx=VISIBLE_IMG_CARDS.push({src:lbSrc,name:c.name,id:c.id})-1;\n"
+        "    el.classList.add('has-img');\n"
+        "    el.onclick=()=>showLightboxAt(lbIdx);\n"
+        "  }")
+    # image-view tiles carry the card id too, so the caption works in both views
+    s = s.replace(
+        "VISIBLE_IMG_CARDS.push({src:IMG_BASE+'/'+BOX_FOLDER[c.imgBox]+'/'+c.filename, name:c.name});",
+        "VISIBLE_IMG_CARDS.push({src:IMG_BASE+'/'+BOX_FOLDER[c.imgBox]+'/'+c.filename, name:c.name, id:c.id});")
+    # lightbox caption element (clicks inside it do not close the lightbox)
+    s = s.replace(
+        '<img id="lightbox-img" src="" alt="">',
+        '<img id="lightbox-img" src="" alt="">\n  <div id="lightbox-cap" onclick="event.stopPropagation()"></div>')
+    # caption renderer, defined just above openLightbox
+    s = s.replace(
+        "function openLightbox(src){",
+        """function lightboxCap(card){
+  const cap=document.getElementById('lightbox-cap');
+  if(!cap) return;
+  let html='<span class="lb-name">'+card.name+'</span>';
+  if(card.id && Object.prototype.hasOwnProperty.call(STRATEGY_COUNTS, card.id)){
+    if(STRATEGY_INDEX && STRATEGY_INDEX[card.id]){
+      const links=STRATEGY_INDEX[card.id].map(e=>{
+        const meta=STRATEGY_GUIDES[e.guide]||{title:e.guide};
+        const anchor=e.hits&&e.hits[0]&&e.hits[0].anchor?'#'+e.hits[0].anchor:'';
+        return '<a href="'+e.guide+anchor+'">'+meta.title+' \\u2192</a>';
+      }).join('');
+      html+='<span class="lb-links">'+links+'</span>';
+    } else {
+      ensureStrategyIndex().then(()=>{
+        const cur=VISIBLE_IMG_CARDS[LIGHTBOX_INDEX];
+        if(cur && cur.id===card.id) lightboxCap(card);
+      });
+    }
+  }
+  cap.innerHTML=html;
+}
+
+function openLightbox(src){""")
+    # hook the caption into showLightboxAt
+    s = s.replace(
+        "  document.getElementById('lightbox-img').alt=card.name;",
+        "  document.getElementById('lightbox-img').alt=card.name;\n  lightboxCap(card);")
+
     open(out, 'w').write(s)
     print('wrote', out, len(s) // 1024, 'KB')
 

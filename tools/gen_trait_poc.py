@@ -292,7 +292,7 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .ctag-species{{background:#e2a04a;color:#fff}}
 .ctag-regular{{background:#8ec6d8;color:#fff}}
 .ctag-other{{background:#c85340;color:#fff}}
-.ctag-variable{{background:#eef1f6;color:#20242e}}
+.ctag-variable{{background:#f6c9bd;color:#141821}}
 .ce-bottom{{margin-top:auto;padding-top:.4rem;display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:3}}
 .ce-num{{font-size:.55rem;color:var(--muted);letter-spacing:.06em}}
 .ce-focus{{margin-left:auto}}

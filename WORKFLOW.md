@@ -455,8 +455,13 @@ copy of the pre-card-face scanner and emits `cardface-assets.js`).
   rounded lower-right corner. No-focus cards with non-null `glory` show a glory
   badge there instead (horizontal white oval, enlarged delta overhanging ~2 px,
   Antonio digit). Card number + Update/Duplicate markers bottom-left; the "New"
-  banner is retired. Strategy drawer opens by clicking a discussed card
-  (`has-strategy`); there is no inline Strategy badge text.
+  banner is retired. Clicking any card with an image (`has-img`) opens the
+  lightbox at that card in BOTH views; the lightbox caption shows the card name
+  and, for discussed cards, the guide links (strategy snippets no longer open
+  from the card itself; `buildStrategyDrawer`/`toggleStrategy` remain in code
+  but have no card-click entry point). Cards without an image are not clickable.
+  Wildcard is the only trait banner with black text: pale salmon `#f6c9bd`
+  (all other trait banners carry white text on their family color).
 - **Font**: Antonio 600 (Google Fonts) for all card-vocabulary elements;
   Orbitron/Exo 2 remain for page chrome.
 - **Filter chips**: rulebook-style banners; outline-only at rest (colored border
