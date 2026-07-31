@@ -349,7 +349,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   line-height:1;text-transform:uppercase;background:transparent;
   border:1.5px solid var(--cc,#8494ad);color:var(--cc,#8494ad);}
 .cardpill img{height:19px;width:19px;}
-.cardpill .cnt{font-size:.62rem;font-weight:400;opacity:.75;margin-left:.05rem;}
+.cardpill .cnt{font-size:.62rem;font-weight:400;opacity:.75;margin-left:.05rem;display:inline-block;min-width:2.4em;text-align:left;}
 .cardpill:hover{background:rgba(255,255,255,.07);}
 .cardpill.active{background:var(--cc,#8494ad) !important;color:#fff !important;}
 .cp-species{--cc:#e2a04a;}
@@ -360,7 +360,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .suit-pill.suitchip{padding-left:.55rem;border:1.5px solid var(--cc);color:var(--cc);background:transparent;}
 .suit-pill.suitchip img{height:13px;width:auto;}
 .suit-pill.suitchip.active[data-suit]{background:var(--cc);color:#fff;}
-.skill-pill .cnt{font-size:.6rem;opacity:.8;margin-left:.25rem;}
+.skill-pill .cnt{font-size:.6rem;opacity:.8;margin-left:.25rem;display:inline-block;min-width:2.4em;text-align:left;}
 .skill-pill img{height:13px;width:auto;vertical-align:-2px;margin-right:.3rem;}
 .skill-pill{display:inline-flex;align-items:center;}
 /* ===== card entries ===== */
@@ -1029,7 +1029,7 @@ function updateBadges(){
       const pool=isSkill?getPoolWithout(null,activeSkills.has(val)?val:null):getPoolWithout(activeTags.has(val)?val:null,null);
       const count=pool.filter(c=>isSkill?c.skills.includes(val):[...c.species,...c.regular,...c.other].includes(val)).length;
       const cnt=pill.querySelector('.cnt');
-      if(cnt) cnt.textContent=count>0?'('+count+')':'';
+      if(cnt) cnt.textContent='('+count+')';
       else pill.textContent=count>0?displayLabel(val)+' ('+count+')':displayLabel(val);
       pill.style.opacity=count>0?'1':'0.35';
     });
