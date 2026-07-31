@@ -83,6 +83,7 @@ CSS = """
 .skill-pill img{height:13px;width:auto;vertical-align:-2px;margin-right:.3rem;}
 .skill-pill{display:inline-flex;align-items:center;}
 /* ===== card entries ===== */
+.card-grid{grid-template-columns:repeat(auto-fill,minmax(248px,1fr));}
 .card-entry{border-radius:10px;}
 .nb{display:flex;align-items:center;width:fit-content;margin-left:-0.7rem;max-width:calc(100% + .2rem);
   min-height:18px;box-sizing:border-box;padding:.05rem .8rem .05rem .35rem;
@@ -97,7 +98,7 @@ CSS = """
 .skcol{display:flex;flex-direction:column;align-items:flex-start;gap:.3rem;margin-left:-0.7rem;margin-bottom:.35rem;}
 .skimg{height:28px;width:auto;}
 .ce-traits2{display:flex;flex-direction:row;align-items:flex-start;justify-content:flex-end;gap:0;
-  flex:none;max-width:55%;flex-wrap:wrap;}
+  flex:none;max-width:66%;flex-wrap:wrap;}
 .vt{display:flex;flex-direction:column;align-items:center;position:relative;margin-left:-4px;}
 .vt:first-child{margin-left:0;}
 .vt img{width:26px;height:26px;z-index:2;}
