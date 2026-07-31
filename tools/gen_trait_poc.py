@@ -196,6 +196,7 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .regular-pill{{border-color:var(--rg-bd);color:var(--rg-tx);background:var(--rg-bg)}}
 .other-pill{{border-color:var(--ot-bd);color:var(--ot-tx);background:var(--ot-bg)}}
 .pillx img{{width:18px;height:18px}}
+.pill-row.compact .pillx img{{width:14px;height:14px}}
 .card-entry{{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:.6rem;width:195px;min-height:175px;position:relative;overflow:hidden;display:flex;flex-direction:column}}
 /* card number: dark chip, flush left in the bottom row */
 .cid{{background:#14171f;color:#e8ecf5;display:inline-block;margin-left:-0.6rem;
@@ -252,8 +253,9 @@ every variant. Two focus treatments are presented below for comparison.</p>
 <h2>2 — Compact entries: true-SVG focus asset nested in the rounded corner</h2>
 <div class="row">{row_text}</div>
 
-<h2>4 — Filter pills: current vs with medallions</h2>
+<h2>4 — Filter pills: text-only vs 14px medallions (same pill height) vs 18px</h2>
 <div class="pill-row">{''.join(fp(t, False) for t in demo)}</div>
+<div class="pill-row compact">{''.join(fp(t) for t in demo)}</div>
 <div class="pill-row">{''.join(fp(t) for t in demo)}</div>
 
 <h2>5 — All extracted trait medallions (22 of ~40)</h2>
