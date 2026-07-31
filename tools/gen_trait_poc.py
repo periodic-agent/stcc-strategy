@@ -217,7 +217,7 @@ h1{{font-family:Orbitron,sans-serif;font-size:1.1rem;color:#d4699f;letter-spacin
 h2{{font-family:Orbitron,sans-serif;font-size:.8rem;color:#7ec8f0;letter-spacing:.15em;text-transform:uppercase;margin:2.2rem 0 .8rem}}
 p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .pill-row{{display:flex;flex-wrap:wrap;gap:.35rem;margin:.5rem 0}}
-.species-pill,.regular-pill,.other-pill{{font-size:.68rem;padding:.18rem .55rem;border-radius:3px;border:1.5px solid;cursor:pointer;user-select:none;display:inline-flex;align-items:center;gap:.35rem}}
+.species-pill,.regular-pill,.other-pill{{font-size:.68rem;padding:.18rem .7rem;border-radius:999px;border:1.5px solid;cursor:pointer;user-select:none;display:inline-flex;align-items:center;gap:.35rem}}
 .species-pill{{border-color:var(--sp-bd);color:var(--sp-tx);background:var(--sp-bg)}}
 .regular-pill{{border-color:var(--rg-bd);color:var(--rg-tx);background:var(--rg-bg)}}
 .other-pill{{border-color:var(--ot-bd);color:var(--ot-tx);background:var(--ot-bg)}}
