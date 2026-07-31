@@ -75,7 +75,7 @@ def b64_outlined(f, trait, size=96, border=2):
     canvas.save(buf, format='PNG')
     return 'data:image/png;base64,' + base64.b64encode(buf.getvalue()).decode()
 
-def b64_skill_banner(f, widen=1.35):
+def b64_skill_banner(f, widen=1.2):
     """Skill icons print as a banner rooted in the card's left edge. The
     cyclopedia's D block is near-square, so extend it leftward: every row is
     padded with its own leftmost opaque color (handles the tricolor Any).
@@ -145,21 +145,23 @@ def main(icons_dir, sf_dir, out):
                 else:
                     stripes = f'<div class="fstripe fs-{focus}" title="{focus.capitalize()} focus"><div class="thin"></div><div class="main"></div><div class="thin"></div></div>'
             else:
-                chip = (f'<div class="ce-bottom"><div class="ce-focus"><span class="card-skill sk-{focus} is-focus" title="{focus.capitalize()} focus">'
-                        f'<img class="ci" src="{sf["focus-" + focus]}" alt="">{focus.capitalize()}</span></div></div>')
+                chip = (f'<div class="ce-focus"><span class="card-skill sk-{focus} is-focus" title="{focus.capitalize()} focus">'
+                        f'<img class="ci" src="{sf["focus-" + focus]}" alt="">{focus.capitalize()}</span></div>')
         numchip = ''
         if num:
             parts = num.split(' ', 1)
             meta = f'<span class="meta">{parts[1]}</span>' if len(parts) > 1 else ''
             numchip = f'<span class="cid">{parts[0]}{meta}</span>'
+        bottom = ''
+        if numchip or chip:
+            bottom = f'<div class="ce-bottom">{numchip or "<span></span>"}{chip}</div>'
         return f'''<div class="card-entry" data-cls="{cls}" style="border-left:2px solid {suitcol}">
-<div class="bottomband bb-{cls}"></div>
 <div class="ce-row"><div class="ce-main">
 <div class="card-name">{name}</div>
 <div class="card-suit-bar"><div class="suit-dot" style="background:{suitcol}"></div><div class="suit-label" style="color:{suitcol}">{suit}</div></div>
 <div class="card-skills">{sk}</div>
 </div><div class="ce-traits">{tr_}</div></div>
-{chip}{stripes}{numchip}</div>'''
+{bottom}</div>'''
 
     demo = ['human', 'klingon', 'romulan', 'betazoid', 'starfleet', 'scientist', 'engineer',
             'ambassador', 'telepath', 'shady', 'attack', 'ongoing', 'wildcard']
@@ -198,18 +200,11 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .regular-pill{{border-color:var(--rg-bd);color:var(--rg-tx);background:var(--rg-bg)}}
 .other-pill{{border-color:var(--ot-bd);color:var(--ot-tx);background:var(--ot-bg)}}
 .pillx img{{width:18px;height:18px}}
-.card-entry{{background:var(--bg2);border:1px solid var(--border);border-radius:5px;padding:.6rem .6rem 34px;width:195px;aspect-ratio:63/88;position:relative;overflow:hidden;display:flex;flex-direction:column}}
-/* footer: bottom tenth of the card is the class-colored gradient band */
-.bottomband{{position:absolute;left:0;right:0;bottom:0;height:10%;z-index:1;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}}
-.bb-common{{background:linear-gradient(90deg,#aeb9c6,#93a6b4)}}
-.bb-location{{background:linear-gradient(90deg,#2e5fa3,#3d9e58)}}
-.bb-captain{{background:linear-gradient(90deg,#d9c04a,#6b4a26)}}
-.bb-captaindeck{{background:linear-gradient(90deg,#1d3a6e,#d97a2e)}}
-/* card number: dark chip riding the band, flush left like the print */
-.cid{{position:absolute;left:0;bottom:6px;z-index:3;background:#14171f;color:#e8ecf5;
+.card-entry{{background:var(--bg2);border:1px solid var(--border);border-radius:5px;padding:.6rem;width:195px;min-height:175px;position:relative;overflow:hidden;display:flex;flex-direction:column}}
+/* card number: dark chip, flush left in the bottom row */
+.cid{{background:#14171f;color:#e8ecf5;display:inline-block;margin-left:-0.6rem;
   font-family:'Antonio',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.07em;
-  padding:.12rem .55rem .12rem .45rem;border-radius:0 999px 999px 0;
+  padding:.12rem .55rem .12rem .55rem;border-radius:0 999px 999px 0;
   box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}}
 .cid .meta{{color:#8a94ac;font-weight:400;margin-left:.35rem}}
 /* focus: bright diagonal stripes crossing the lower-right corner, half on the band */
@@ -267,7 +262,7 @@ every variant. Two focus treatments are presented below for comparison.</p>
 <h2>1 — The full skill &amp; focus icon set</h2>
 <div class="sheet">{sfrow}</div>
 
-<h2>2 — Footer: colored band, number chip, focus pill (icon + text)</h2>
+<h2>2 — Compact entries: number chip + focus pill, no footer band</h2>
 <div class="row">{row_text}</div>
 
 <h2>4 — Filter pills: current vs with medallions</h2>
