@@ -31,7 +31,7 @@ def build_assets(out_js):
 
     trait = {os.path.basename(f)[:-4]: b64_outlined(f, os.path.basename(f)[:-4], border=2)
              for f in sorted(glob.glob('icons/*.png'))}
-    trait_chip = {os.path.basename(f)[:-4]: b64_outlined(f, os.path.basename(f)[:-4], border=12)
+    trait_chip = {os.path.basename(f)[:-4]: b64_outlined(f, os.path.basename(f)[:-4], border=0)
                   for f in sorted(glob.glob('icons/*.png'))}
     skill = {os.path.basename(f)[:-4].replace('skill-', ''): b64_skill_banner(f)
              for f in sorted(glob.glob('icons_sf/skill-*.png'))}
