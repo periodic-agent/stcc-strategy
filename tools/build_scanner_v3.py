@@ -150,7 +150,7 @@ NEW_BUILD = """function buildPillCard(c){
     corner='<svg class="glorybadge" viewBox="0 0 32 29" title="Glory '+c.glory+'">'
       +'<ellipse cx="16" cy="14.5" rx="15.5" ry="11" fill="#fff"/>'
       +'<path transform="translate(16 14.5) scale(1.7) translate(-13 -11.65)" d="M13 3.6c2.3 4 5.2 10.2 7.5 16.1-2.7-2-5.1-2.9-7.5-2.9s-4.8.9-7.5 2.9C7.8 13.8 10.7 7.6 13 3.6z" fill="#c3cfdd"/>'
-      +'<text x="16" y="22.7" text-anchor="middle" font-size="23" font-weight="700" fill="#10161f" font-family="Antonio,sans-serif">'+c.glory+'</text></svg>';
+      +'<text x="16" y="21.7" text-anchor="middle" font-size="20" font-weight="700" fill="#10161f" font-family="Antonio,sans-serif">'+c.glory+'</text></svg>';
   }
   if(foci.length){
     const spec=foci[0].split(' ')[0].toLowerCase();
