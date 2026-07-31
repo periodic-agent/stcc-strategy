@@ -119,6 +119,8 @@ def b64_svg(f):
 def main(icons_dir, sf_dir, out):
     tr = {os.path.basename(f)[:-4]: b64_outlined(f, os.path.basename(f)[:-4])
           for f in sorted(glob.glob(icons_dir + '/*.png'))}
+    trc = {os.path.basename(f)[:-4]: b64_outlined(f, os.path.basename(f)[:-4], border=6)
+           for f in sorted(glob.glob(icons_dir + '/*.png'))}
     fsvg = {os.path.basename(f)[:-4]: b64_svg(f) for f in sorted(glob.glob('icons_svg/focus-*.svg'))}
     import re as _re
     def _white_svg(f):
@@ -137,10 +139,11 @@ def main(icons_dir, sf_dir, out):
         img = f'<img src="{tr[t]}" alt="">' if icon else ''
         return f'<span class="{cls}{" pillx" if icon else ""}">{img}{t.capitalize()} (12)</span>'
 
-    def fp_card(t):
+    def fp_card(t, active=False):
         cls = {'species': 'cp-species', 'regular': 'cp-regular', 'other': 'cp-other'}[fam(t)]
         if t == 'wildcard': cls = 'cp-wild'
-        return (f'<span class="cardpill {cls}"><img src="{tr[t]}" alt="">'
+        act = ' active' if active else ''
+        return (f'<span class="cardpill {cls}{act}"><img src="{trc[t]}" alt="">'
                 f'{t.upper()}<span class="cnt">(12)</span></span>')
 
     def vchip(t, z=1):
@@ -221,6 +224,9 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .cp-species{{background:#e2a04a}} .cp-regular{{background:#8ec6d8}} .cp-other{{background:#c85340}}
 .cp-wild{{background:#eef1f6;color:#20242e}}
 .cardpill:hover{{filter:brightness(1.12)}}
+.cardpill.active{{color:#14171f}}
+.cardpill.active .cnt{{opacity:.65}}
+.cp-wild.active{{color:#20242e;box-shadow:0 0 0 1.5px #20242e inset}}
 .pill-row.compact .pillx img{{width:14px;height:14px}}
 .card-entry{{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:.6rem;width:195px;min-height:175px;position:relative;overflow:hidden;display:flex;flex-direction:column}}
 /* card number: dark chip, flush left in the bottom row */
@@ -290,6 +296,8 @@ every variant. Two focus treatments are presented below for comparison.</p>
 <h2>4 — Filter pills, all or nothing: original scanner style vs rulebook chips</h2>
 <div class="pill-row">{''.join(fp(t, False) for t in demo)}</div>
 <div class="pill-row">{''.join(fp_card(t) for t in demo)}</div>
+<p class="note">Active state = black text (demo: Klingon, Starfleet, Attack active):</p>
+<div class="pill-row">{''.join(fp_card(t, active=t in ('klingon', 'starfleet', 'attack')) for t in demo)}</div>
 
 <h2>5 — All extracted trait medallions (22 of ~40)</h2>
 <div class="sheet">{sheet}</div>
