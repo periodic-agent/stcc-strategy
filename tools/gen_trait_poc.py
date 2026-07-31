@@ -174,11 +174,10 @@ def main(icons_dir, sf_dir, out):
         if focus:
             corner = f'<img class="focorner" src="{fsvg["focus-" + focus]}" alt="" title="{focus.capitalize()} focus">'
         elif glory is not None:
-            corner = ('<svg class="glorybadge" viewBox="0 0 24 26">'
-                      '<path d="M4.5 17.5 L2 24 L9 20.5 Z" fill="#fff"/>'
-                      '<circle cx="12" cy="11" r="9.6" fill="#fff"/>'
-                      '<path d="M12 3.6c1.9 3.3 4.3 8.4 6.2 13.2-2.2-1.6-4.2-2.4-6.2-2.4s-4 .8-6.2 2.4C7.7 12 10.1 6.9 12 3.6z" fill="#c3d3e6"/>'
-                      f'<text x="12" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#10161f" font-family="Antonio,sans-serif">{glory}</text></svg>')
+            corner = ('<svg class="glorybadge" viewBox="0 0 26 30">'
+                      '<ellipse cx="13" cy="15" rx="12.5" ry="14.5" fill="#fff"/>'
+                      '<path d="M13 3.6c2.3 4 5.2 10.2 7.5 16.1-2.7-2-5.1-2.9-7.5-2.9s-4.8.9-7.5 2.9C7.8 13.8 10.7 7.6 13 3.6z" fill="#c3cfdd"/>'
+                      f'<text x="13" y="19" text-anchor="middle" font-size="12" font-weight="700" fill="#10161f" font-family="Antonio,sans-serif">{glory}</text></svg>')
         numchip = ''
         if num:
             parts = num.split(' ', 1)
@@ -258,7 +257,7 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .cid .meta{{color:#8a94ac;font-weight:400;margin-left:.35rem}}
 /* focus: the true-SVG cyclopedia asset, nested flush into the rounded corner */
 .focorner{{position:absolute;right:-1px;bottom:-1px;height:42px;width:auto;z-index:2}}
-.glorybadge{{position:absolute;right:5px;bottom:5px;width:26px;height:29px;z-index:2}}
+.glorybadge{{position:absolute;right:6px;bottom:6px;width:27px;height:31px;z-index:2}}
 .ce-row{{display:flex;gap:.4rem;align-items:flex-start}}
 .ce-main{{flex:1;min-width:0}}
 /* name + suit: left-rooted colored banners, rounded end, like the printed card */
