@@ -33,11 +33,11 @@ p.note{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}
 .ce-main{flex:1;min-width:0}
 /* name + suit: left-rooted colored banners, rounded end, like the printed card */
 .name-banner{display:block;width:fit-content;margin-left:-0.6rem;max-width:calc(100% + .1rem);
-  padding:.18rem .85rem .18rem .6rem;border-radius:0 999px 999px 0;background:#555;
+  padding:.08rem .85rem .08rem .6rem;border-radius:0 999px 999px 0;background:#555;
   color:#fff;font-family:'Antonio',sans-serif;font-weight:600;font-size:.82rem;
   letter-spacing:.05em;text-transform:uppercase;line-height:1.2;margin-bottom:.3rem}
 .suit-banner{display:inline-flex;align-items:center;gap:.4rem;align-self:flex-start;margin-left:-0.6rem;
-  padding:.14rem .8rem .14rem .6rem;border-radius:0 999px 999px 0;background:#555;
+  padding:0 .8rem 0 .6rem;height:18px;box-sizing:border-box;border-radius:0 999px 999px 0;background:#555;
   color:#fff;font-family:'Antonio',sans-serif;font-weight:600;font-size:.72rem;
   letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem}
 .suit-banner img{height:.95em;width:auto}
@@ -55,10 +55,10 @@ p.note{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}
 .is-focus::after{content:'';position:absolute;right:-5px;bottom:-5px;width:11px;height:11px;transform:rotate(45deg);background:currentColor;opacity:.75}
 .focorner{position:absolute;right:2px;bottom:5px;width:34px;height:34px;z-index:2}
 .ce-traits{display:flex;flex-direction:row;align-items:flex-start;justify-content:flex-end;gap:0;flex:none;max-width:55%;flex-wrap:wrap}
-.vt{display:flex;flex-direction:column;align-items:center;position:relative;margin-left:-3px}
+.vt{display:flex;flex-direction:column;align-items:center;position:relative;margin-left:-4px}
 .vt:first-child{margin-left:0}
-.vt img{width:21px;height:21px;z-index:2}
-.vt .ctag{writing-mode:vertical-rl;text-orientation:sideways;display:flex;align-items:center;justify-content:center;padding:.6rem .14rem .32rem;line-height:1;font-family:'Antonio',sans-serif;font-size:.66rem;font-weight:600;letter-spacing:.05em;border-radius:0 0 999px 999px;margin-top:-4px;border:none}
+.vt img{width:26px;height:26px;z-index:2}
+.vt .ctag{writing-mode:vertical-rl;text-orientation:sideways;display:flex;align-items:center;justify-content:center;padding:.65rem 0 .36rem;width:18px;line-height:1;font-family:'Antonio',sans-serif;font-size:.66rem;font-weight:600;letter-spacing:.05em;border-radius:0 0 999px 999px;margin-top:-5px;border:none}
 /* solid card-style pills: white label on the family color, like the printed cards */
 .ctag-species{background:#e2a04a;color:#fff}
 .ctag-regular{background:#8ec6d8;color:#fff}
