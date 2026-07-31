@@ -367,6 +367,8 @@ record per id:
 - **text** = the `updated` printing if any, else the earliest-box printing;
 - **image** = newest box with a non-empty `filename` whose text matches the resolved
   version (an `updated` printing takes only its own image);
+- **glory** = coalesced across ALL printings of the id (first non-null wins) — Box 1
+  reprints inherit the Box 2/3 annotation; `null` on every printing means no badge;
 - **copies** = number of physical printings; **badge** = `update` beats `duplicate`,
   read only from the group's own variants (never looks forward, so adding a later box
   never changes an existing badge).
@@ -435,10 +437,49 @@ reads "Second Contact".
 - **Captain and Directive are acceptable deviations from the rulebook** -- not official "suits" but used as suit values in the database for practical filtering. Noted and intentional.
 - Captain cards colored gold, Directive cards gray, Status cards light blue
 
+### Card-face design (live since 31 Jul 2026)
+
+`cards.html` renders each card as a mini card face built from vector assets
+extracted from the fan-made Traits Cyclopedia v2.1 PDF (extractors in `tools/`:
+`extract_trait_icons.py`, `extract_skillfocus_icons.py`, `extract_focus_svg.py`,
+`extract_suit_svg.py`; page builder `tools/build_scanner_v3.py`, which patches a
+copy of the pre-card-face scanner and emits `cardface-assets.js`).
+
+- **`cardface-assets.js`** (repo root, ~1.8 MB): data-URI bundle of 62 trait
+  medallions (white-ringed on cards, bare in filter chips), 5 skill banners,
+  4 true-SVG focus icons, 9 suit glyphs. Loaded with a `?v=<md5-8>` content
+  hash for cache busting. Rebuild via `build_scanner_v3.py` whenever assets change.
+- **Card entry**: name + suit in left-rooted colored banners (suit glyph in the
+  suit banner), skill banners flush left, traits as vertical pills sorted
+  shortest-first with overlapping medallions, focus icon bleeding into the
+  rounded lower-right corner. No-focus cards with non-null `glory` show a glory
+  badge there instead (horizontal white oval, enlarged delta overhanging ~2 px,
+  Antonio digit). Card number + Update/Duplicate markers bottom-left; the "New"
+  banner is retired. Strategy drawer opens by clicking a discussed card
+  (`has-strategy`); there is no inline Strategy badge text.
+- **Font**: Antonio 600 (Google Fonts) for all card-vocabulary elements;
+  Orbitron/Exo 2 remain for page chrome.
+- **Filter chips**: rulebook-style banners; outline-only at rest (colored border
+  + text via the `--cc` CSS var, icon kept), color-filled with white text when
+  active. Counts always render (incl. "(0)") in a per-chip width-locked slot so
+  selection never reflows the row.
+- **Shareable URLs**: the search-bar state mirrors to `location.hash`
+  (`#q=...`) via `history.replaceState`; restored on load, back/forward handled
+  by `hashchange`. Documented in the help popover.
+- **Glory data**: `glory` key on every box2/box3 card, integer or `null`
+  (uniform shape; focus cards are always `null` because they print "?").
+  Box 1 and promos carry no glory key; the resolver treats absent as null.
+- `tools/test_scanner.mjs` runs the harness against `cards.html` including
+  local external scripts (`cardface-assets.js`); run it plus
+  `tools/test_scanner_query.mjs` before any scanner push.
+- `mockups/trait-icons-poc.html` (generator `tools/gen_trait_poc.py`) is the
+  design sandbox that fed this work; `cards_v3.html` was the working preview and
+  now redirects to `cards.html`.
+
 ### Suit color palette (Card Scanner)
 | Suit | Color |
 |---|---|
-| Person | `#e8a94a` amber |
+| Person | `#c9ab35` gold-amber (dimmed for white text) |
 | Ally | `#9b6ecf` purple |
 | Ship | `#7a8aaa` gray |
 | Cargo | `#3a6aaa` dark blue |
@@ -446,7 +487,7 @@ reads "Second Contact".
 | Encounter | `#d4699f` pink |
 | Incident | `#e05a5a` red |
 | Captain | `#c8a84b` gold |
-| Directive | `#7a8aaa` muted |
+| Directive | `#8494ad` muted |
 | Status | `#88aacc` light blue |
 
 ### Trait badge styling

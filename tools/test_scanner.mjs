@@ -22,7 +22,7 @@ function makeEnv(repoDir){
   const listeners = {};
   function El(tag){
     return {
-      tagName:tag, _cls:new Set(), dataset:{}, style:{}, children:[], attrs:{},
+      tagName:tag, _cls:new Set(), dataset:{}, style:{setProperty(){}}, children:[], attrs:{},
       _text:'', _html:'',
       set className(v){ this._cls = new Set(String(v).split(/\s+/).filter(Boolean)); },
       get className(){ return [...this._cls].join(' '); },
@@ -40,7 +40,7 @@ function makeEnv(repoDir){
       set outerHTML(v){ this._outer=v; },
       appendChild(c){ this.children.push(c); return c; },
       append(...cs){ cs.forEach(c=>this.children.push(c)); },
-      addEventListener(){}, scrollIntoView(){},
+      addEventListener(){}, scrollIntoView(){}, getBoundingClientRect(){ return {width:0,height:0,x:0,y:0}; },
       setAttribute(k,v){ this.attrs[k]=v; }, getAttribute(k){ return this.attrs[k]; },
       querySelectorAll(sel){ return collect(this).filter(e=>matches(e,sel)); },
       querySelector(sel){ return this.querySelectorAll(sel)[0]||null; },
@@ -85,8 +85,15 @@ function makeEnv(repoDir){
   return {document, fetch:fetchLocal, console, listeners};
 }
 
-function extractScripts(html){
-  const out=[]; const re=/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/g; let m;
+function extractScripts(html, repoDir){
+  const out=[];
+  // local external scripts (e.g. cardface-assets.js?v=hash) load first, as in the browser
+  const rs=/<script[^>]*\bsrc="([^"]+)"[^>]*><\/script>/g; let m;
+  while((m=rs.exec(html))){
+    const src=m[1];
+    if(!/^(https?:)?\/\//.test(src)) out.push(fs.readFileSync(repoDir + '/' + src.split('?')[0], 'utf8'));
+  }
+  const re=/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/g;
   while((m=re.exec(html))) out.push(m[1]);
   return out;
 }
@@ -96,14 +103,14 @@ const repo = process.argv[2];
 const file = process.argv[3] || (repo + '/cards.html');
 const html = fs.readFileSync(file,'utf8');
 const env = makeEnv(repo);
-const sandbox = { ...env, window:{}, setTimeout, Set, Map, JSON, Math, Object, Array, String, Number };
+const sandbox = { ...env, window:{addEventListener:()=>{}}, location:{hash:'', search:'', pathname:'/cards.html'}, history:{replaceState(){}, pushState(){}}, setTimeout, Set, Map, JSON, Math, Object, Array, String, Number };
 sandbox.globalThis = sandbox;
 vm.createContext(sandbox);
 
 // All inline blocks share one global lexical scope in a browser; concatenate to match.
 // The epilogue sits at that same scope, exactly like an inline onclick handler does,
 // so anything it cannot see, a real button click cannot see either.
-const body = extractScripts(html).join('\n;\n');
+const body = extractScripts(html, repo).join('\n;\n');
 const epilogue = `
 globalThis.__api = {
   get ALL_CARDS(){return ALL_CARDS;}, get activeBoxes(){return activeBoxes;},
@@ -249,8 +256,8 @@ api.setView('image');
 api.showStrategy();
 assert(api.viewMode === 'pill',
   'the header banner switches to Cards view, where the Strategy badge lives');
-assert(/<span class="card-badge strategy">Strategy<\/span>[^<]*badge/.test(html),
-  'the banner renders a real Strategy badge chip, not the word in plain text');
+assert(!/class="new-banner"/.test(html),
+  'the New banner is retired in the card-face design (strategy opens by clicking a discussed card)');
 assert(/\.new-banner \.card-badge\{margin-bottom:0;\}/.test(html),
   'the inline badge drops the card-context bottom margin so the banner text stays centred');
 
@@ -273,9 +280,8 @@ const undiscussed = api.ALL_CARDS.find(c=>counts[c.id] === undefined);
 
 const pillYes = api.buildPillCard(discussed);
 assert(pillYes.classList.contains('has-strategy')
-       && pillYes.innerHTML.includes('card-badge strategy')
        && typeof pillYes.onclick === 'function',
-  'a discussed card gets the Strategy badge and is clickable');
+  'a discussed card is clickable (has-strategy; card-face design carries no inline badge text)');
 
 const pillNo = api.buildPillCard(undiscussed);
 assert(!pillNo.classList.contains('has-strategy')

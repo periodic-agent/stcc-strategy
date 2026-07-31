@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
 <title>ST:CC Card Scanner</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;600&family=Antonio:wght@600&display=swap" rel="stylesheet">
 <script data-goatcounter="https://stcc-compendium.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <style>
 :root{
@@ -333,6 +334,74 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .card-entry[data-cls="location"]::after{background:linear-gradient(90deg,#2e5fa3,#3d9e58);}
 .card-entry[data-cls="captain"]::after{background:linear-gradient(90deg,#d9c04a,#6b4a26);}
 .card-entry[data-cls="captaindeck"]::after{background:linear-gradient(90deg,#1d3a6e,#d97a2e);}
+
+/* ===== v3 card-face design (POC port) ===== */
+/* capsule outlines everywhere */
+.box-pill,.promo-pill,.deck-pill,.suit-pill,.species-pill,.regular-pill,.other-pill,.skill-pill{border-radius:999px;}
+.box-pill,.promo-pill,.deck-pill{font-family:'Antonio',sans-serif;font-weight:600;
+  letter-spacing:.04em;text-transform:uppercase;font-size:.8rem;
+  height:22px;box-sizing:border-box;display:inline-flex;align-items:center;padding:0 .8rem;}
+/* rulebook chips (trait + suit filters) */
+/* chips: empty (outline) at rest, light up with color + white text when selected */
+.cardpill{display:inline-flex;align-items:center;gap:.4rem;border-radius:999px;
+  height:22px;box-sizing:border-box;padding:0 .5rem 0 .1rem;cursor:pointer;user-select:none;
+  font-family:'Antonio',sans-serif;font-weight:600;font-size:.86rem;letter-spacing:.03em;
+  line-height:1;text-transform:uppercase;background:transparent;
+  border:1.5px solid var(--cc,#8494ad);color:var(--cc,#8494ad);}
+.cardpill img{height:19px;width:19px;}
+.cardpill .cnt{font-size:.62rem;font-weight:400;opacity:.75;margin-left:.05rem;display:inline-block;text-align:left;}
+.cardpill:hover{background:rgba(255,255,255,.07);}
+.cardpill.active{background:var(--cc,#8494ad) !important;color:#fff !important;}
+.cp-species{--cc:#e2a04a;}
+.cp-regular{--cc:#79b3c7;}
+.cp-other{--cc:#c85340;}
+.cp-wild{--cc:#eef1f6;}
+.cp-wild.active{color:#20242e !important;}
+.suit-pill.suitchip{padding-left:.55rem;border:1.5px solid var(--cc);color:var(--cc);background:transparent;}
+.suit-pill.suitchip img{height:13px;width:auto;}
+.suit-pill.suitchip.active[data-suit]{background:var(--cc);color:#fff;}
+.skill-pill .cnt{font-size:.6rem;opacity:.8;margin-left:.25rem;display:inline-block;text-align:left;}
+.skill-pill img{height:13px;width:auto;vertical-align:-2px;margin-right:.3rem;}
+.skill-pill{display:inline-flex;align-items:center;}
+/* ===== card entries ===== */
+.card-grid{grid-template-columns:repeat(auto-fill,minmax(248px,1fr));}
+.card-entry{border-radius:10px;}
+.nb{display:flex;align-items:center;width:fit-content;margin-left:-0.7rem;max-width:calc(100% + .2rem);
+  min-height:18px;box-sizing:border-box;padding:.05rem .8rem .05rem .35rem;
+  border-radius:0 999px 999px 0;background:#556;
+  color:#fff;font-family:'Antonio',sans-serif;font-weight:600;font-size:.74rem;
+  letter-spacing:.04em;text-transform:uppercase;line-height:1.15;margin-bottom:.3rem;}
+.sb{display:inline-flex;align-items:center;gap:.4rem;align-self:flex-start;margin-left:-0.7rem;
+  padding:0 .8rem 0 .3rem;height:18px;box-sizing:border-box;border-radius:0 999px 999px 0;background:#556;
+  color:#fff;font-family:'Antonio',sans-serif;font-weight:600;font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem;}
+.sb img{height:.95em;width:auto;}
+.skcol{display:flex;flex-direction:column;align-items:flex-start;gap:.3rem;margin-left:-0.7rem;margin-bottom:.35rem;}
+.skimg{height:28px;width:auto;}
+.ce-traits2{display:flex;flex-direction:row;align-items:flex-start;justify-content:flex-end;gap:0;
+  flex:none;max-width:66%;flex-wrap:wrap;}
+.vt{display:flex;flex-direction:column;align-items:center;position:relative;margin-left:-4px;}
+.vt:first-child{margin-left:0;}
+.vt img{width:26px;height:26px;z-index:2;}
+.vt-spacer{width:26px;height:5px;}
+.vctag{writing-mode:vertical-rl;text-orientation:sideways;display:flex;align-items:center;justify-content:center;
+  padding:.65rem 0 .36rem;width:18px;line-height:1;font-family:'Antonio',sans-serif;font-size:.62rem;
+  font-weight:600;letter-spacing:.05em;border-radius:0 0 999px 999px;margin-top:-5px;color:#fff;}
+.vt img + .vctag{margin-top:-5px;}
+.vt .vt-spacer + .vctag{margin-top:0;border-radius:999px;padding-top:.5rem;}
+.vt-species{background:#e2a04a;}
+.vt-regular{background:#79b3c7;}
+.vt-other{background:#c85340;}
+.vt-variable{background:#eef1f6;color:#20242e;}
+.focorner{position:absolute;right:-3px;bottom:-3px;height:43px;width:auto;z-index:2;}
+.card-entry.has-focus .ce-traits2{margin-bottom:46px;}
+.glorybadge{position:absolute;right:5px;bottom:3px;width:33px;height:30px;z-index:2;}
+.ce-bottom{margin-top:auto;padding-top:.45rem;display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:3;}
+.cid2{background:#14171f;color:#e8ecf5;display:inline-block;margin-left:-0.7rem;
+  font-family:'Antonio',sans-serif;font-size:.56rem;font-weight:600;letter-spacing:.07em;
+  padding:.12rem .55rem;border-radius:0 999px 999px 0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22);}
+.cid2 .meta{color:#8a94ac;font-weight:400;margin-left:.35rem;}
+
 </style>
 <meta name="description" content="Searchable card database for Star Trek: Captain's Chair. Filter every card by box, deck, suit, traits, skills and name — built for mid-game lookups.">
 <link rel="canonical" href="https://periodic-agent.github.io/stcc-strategy/cards.html">
@@ -342,6 +411,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 <meta property="og:url" content="https://periodic-agent.github.io/stcc-strategy/cards.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<script src="cardface-assets.js?v=f0c09cdc"></script>
 </head>
 <body>
 
@@ -351,7 +421,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   <div class="chapter-label">ST:CC Strategy Compendium</div>
   <h1 class="chapter-title"><span>Card</span> Scanner</h1>
   <div class="chapter-meta">Select boxes, filter by trait or skill, search by name. Show details or images.</div>
-  <a class="new-banner" onclick="showStrategy(event)" title="Cards discussed in the guides carry a Strategy badge"><span class="new-badge">New</span><span>Card search now links to the guides! Look for the <span class="card-badge strategy">Strategy</span> badge</span><span class="new-arrow">→</span></a>
+  
 </header>
 
 <div class="controls">
@@ -381,6 +451,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>skill:military</code> · <code>focus:influence</code><span>icon search; also skill:any, skill:variable</span></div>
     <div class="qh-row"><code>box:promo1</code> · <code>box:all</code><span>promos in; empty bar = the three main boxes</span></div>
     <div class="qh-note">Clicking any pill writes its token here — the pills are shortcuts for this language.</div>
+    <div class="qh-note">Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>
   </div>
 
   <div class="filter-section">
@@ -605,6 +676,7 @@ function resolveCards(rawPool){
       copies: group.length,               // physical printings across loaded boxes
       variant: chosen.variant || 'original',
       card_number: chosen.card_number || '',
+      glory: (() => { for (const pr of group) { if (pr.glory !== undefined && pr.glory !== null) return pr.glory; } return null; })(),
       badgeKind
     });
   });
@@ -749,7 +821,12 @@ function toggleSection(header,bodyId,summaryId){
 
 function makePill(text,cls,kind){
   const p=document.createElement('span');
-  p.className=cls; p.textContent=displayLabel(text); p.dataset.value=text;
+  let chip=cls==='species-pill'?'cp-species':cls==='other-pill'?'cp-other':'cp-regular';
+  if(text==='Wildcard') chip='cp-wild';
+  p.className=cls+' cardpill '+chip;
+  const ic=CARDFACE.traitChip[text.toLowerCase().replace(/['’]/g,'').replace(/\s+/g,'-')];
+  p.innerHTML=(ic?'<img src="'+ic+'" alt="">':'')+'<span class="lbl">'+displayLabel(text)+'</span><span class="cnt"></span>';
+  p.dataset.value=text;
   p.onclick=()=>toggleToken(tokenOf(kind,text));
   return p;
 }
@@ -841,7 +918,16 @@ function refreshFromQuery(text){
   applyQuery(text);
   syncBoxPills(); syncFilterPills();
   render();
+  try{
+    const q=text.trim();
+    history.replaceState(null,'', q ? '#q='+encodeURIComponent(q) : location.pathname+location.search);
+  }catch(e){}
 }
+window.addEventListener('hashchange',()=>{
+  const m=location.hash.match(/^#q=(.+)$/);
+  const q=m?decodeURIComponent(m[1]):'';
+  if(q!==document.getElementById('searchInput').value) setQuery(q);
+});
 function toggleToken(tok){
   const toks=tokenList(currentQuery());
   const i=toks.findIndex(t=>t.toLowerCase()===tok.toLowerCase());
@@ -950,12 +1036,14 @@ function getPoolWithout(excludeTag, excludeSkill){
 
 function updateBadges(){
   const updatePillCounts=(containerid,items,isSkill)=>{
-    const pills=document.getElementById(containerid).querySelectorAll('span');
+    const pills=document.getElementById(containerid).querySelectorAll(':scope > span');
     pills.forEach((pill,i)=>{
       const val=items[i]; if(!val) return;
       const pool=isSkill?getPoolWithout(null,activeSkills.has(val)?val:null):getPoolWithout(activeTags.has(val)?val:null,null);
       const count=pool.filter(c=>isSkill?c.skills.includes(val):[...c.species,...c.regular,...c.other].includes(val)).length;
-      pill.textContent=count>0?displayLabel(val)+' ('+count+')':displayLabel(val);
+      const cnt=pill.querySelector('.cnt');
+      if(cnt){cnt.textContent='('+count+')'; if(!cnt.style.minWidth) cnt.style.minWidth=Math.ceil(cnt.getBoundingClientRect().width)+'px';}
+      else pill.textContent=count>0?displayLabel(val)+' ('+count+')':displayLabel(val);
       pill.style.opacity=count>0?'1':'0.35';
     });
   };
@@ -978,46 +1066,57 @@ function badgeInfo(c){
 }
 
 function buildPillCard(c){
+  const SUIT_COL={'Person':'#c9ab35','Ally':'#9b6ecf','Ship':'#7a8aaa','Cargo':'#3a6aaa','Location':'#4ac48a','Encounter':'#d4699f','Incident':'#e05a5a','Captain':'#c8a84b','Directive':'#8494ad','Status':'#88aacc'};
   const el=document.createElement('div');
   el.className='card-entry'; el.dataset.suit=c.suit||'';
-  el.dataset.cls = c.suit==='Captain' ? 'captain'
-    : (c.deck && c.deck!=='Common' && c.deck!=='Promo') ? 'captaindeck'
-    : c.suit==='Location' ? 'location' : 'common';
-  const allTags=[...c.species,...c.regular,...c.other]
-    .sort((a,b)=>displayLabel(a).length-displayLabel(b).length);
-  const tagsHTML=allTags.map(t=>{
-    const cat=t==='Wildcard'?'variable':c.species.includes(t)?'species':c.other.includes(t)?'other':'regular';
-    return '<span class="ctag ctag-'+cat+(activeTags.has(t)?' match':'')+'">'+displayLabel(t)+'</span>';
+  const col=SUIT_COL[c.suit]||'#8494ad';
+  const sk_=(c.suit||'').toLowerCase();
+  const sIcon=CARDFACE.suit[sk_]?'<img src="'+CARDFACE.suit[sk_]+'" alt="">':'';
+  const tkey=t=>t.toLowerCase().replace(/['’]/g,'').replace(/\s+/g,'-');
+  const allTags=[...c.species,...c.regular,...c.other].sort((a,b)=>a.length-b.length);
+  const vt=allTags.map((t,i)=>{
+    let fam=t==='Wildcard'?'variable':c.species.includes(t)?'species':c.other.includes(t)?'other':'regular';
+    const ic=CARDFACE.trait[tkey(t)];
+    return '<div class="vt" style="z-index:'+(allTags.length-i)+'">'
+      +(ic?'<img src="'+ic+'" alt="">':'<span class="vt-spacer"></span>')
+      +'<span class="vctag vt-'+fam+(activeTags.has(t)?' match':'')+'">'+t.toUpperCase()+'</span></div>';
   }).join('');
-  const mkChip=s=>{
+  const skillsHTML=c.skills.filter(s=>!/Focus$/.test(s)).map(s=>{
     const spec=s.split(' ')[0].toLowerCase();
-    const isF=/Focus$/.test(s);
-    return '<span class="card-skill sk-'+spec+(isF?' is-focus':'')+(activeSkills.has(s)?' match':'')+'">'+displayLabel(s)+'</span>';
-  };
-  const skillsHTML=c.skills.filter(s=>!/Focus$/.test(s)).map(mkChip).join('');
-  const focusHTML=c.skills.filter(s=>/Focus$/.test(s)).map(mkChip).join('');
+    const src=CARDFACE.skill[spec];
+    return src?'<img class="skimg'+(activeSkills.has(s)?' match':'')+'" src="'+src+'" title="'+s+'" alt="">':'';
+  }).join('');
+  const foci=c.skills.filter(s=>/Focus$/.test(s));
+  let corner='';
+  if(!foci.length && c.glory!==null && c.glory!==undefined){
+    el.classList.add('has-focus');
+    corner='<svg class="glorybadge" viewBox="0 0 32 29" title="Glory '+c.glory+'">'
+      +'<ellipse cx="16" cy="14.5" rx="15.5" ry="11" fill="#fff"/>'
+      +'<path transform="translate(16 14.5) scale(1.7) translate(-13 -11.65)" d="M13 3.6c2.3 4 5.2 10.2 7.5 16.1-2.7-2-5.1-2.9-7.5-2.9s-4.8.9-7.5 2.9C7.8 13.8 10.7 7.6 13 3.6z" fill="#c3cfdd"/>'
+      +'<text x="16" y="21.7" text-anchor="middle" font-size="20" font-weight="700" fill="#10161f" font-family="Antonio,sans-serif">'+c.glory+'</text></svg>';
+  }
+  if(foci.length){
+    const spec=foci[0].split(' ')[0].toLowerCase();
+    if(CARDFACE.focus[spec]) {el.classList.add('has-focus'); corner='<img class="focorner'+(activeSkills.has(foci[0])?' match':'')+'" src="'+CARDFACE.focus[spec]+'" title="'+foci[0]+'" alt="">';}
+  }
   const badge=badgeInfo(c);
-  const badgeMark = badge ? (badge.cls==='update'?'\u2020':'\u2022')+' '+badge.text : '';
-  // Strategy badge is additive: a card can be both a Duplicate and discussed.
-  const strat = hasStrategy(c);
+  const strat=hasStrategy(c);
   if(strat){ el.classList.add('has-strategy'); el.onclick=()=>toggleStrategy(c.id); }
   if(openStrategyId===c.id) el.classList.add('drawer-open');
-  const stratHTML = strat ? '<div class="card-badge strategy">Strategy</div>' : '';
+  const stratHTML='';
+  const badgeMark=badge?(badge.cls==='update'?'\u2020':'\u2022')+' '+badge.text:'';
+  let numline='';
+  if(c.card_number||badge){
+    numline='<div class="ce-bottom"><span class="cid2">'+(c.card_number||'')
+      +(badge?(c.card_number?' ':'')+'<span class="meta">'+badgeMark+'</span>':'')+'</span></div>';
+  }
   el.innerHTML='<div class="ce-row"><div class="ce-main">'
-    +'<div class="card-name">'+c.name+'</div>'
-    +'<div class="card-suit-bar"><div class="suit-dot" data-suit="'+c.suit+'"></div><div class="suit-label" data-suit="'+c.suit+'">'+c.suit+'</div></div>'
-    +(skillsHTML?'<div class="card-skills">'+skillsHTML+'</div>':'')
+    +'<div class="nb" style="background:'+col+'">'+c.name+'</div>'
+    +'<div class="sb" style="background:'+col+'">'+sIcon+c.suit+'</div>'
+    +(skillsHTML?'<div class="skcol">'+skillsHTML+'</div>':'')
     +stratHTML
-    +'</div>'
-    +(tagsHTML?'<div class="ce-traits">'+tagsHTML+'</div>':'')
-    +'</div>'
-    +((c.card_number||focusHTML||badge)?'<div class="ce-bottom">'
-        +((c.card_number||badge)?'<span class="ce-num">'
-            +(c.card_number||'')
-            +(badge?(c.card_number?' ':'')+badgeMark:'')
-          +'</span>':'')
-        +(focusHTML?'<div class="ce-focus">'+focusHTML+'</div>':'')
-      +'</div>':'');
+    +'</div><div class="ce-traits2">'+vt+'</div></div>'
+    +numline+corner;
   return el;
 }
 
@@ -1164,8 +1263,12 @@ DECK_ORDER.forEach(d=>{
 // Suit pills
 const suitContainer=document.getElementById('suitFilters');
 SUITS_DISPLAY.forEach(s=>{
+  const SUIT_COL={'Person':'#c9ab35','Ally':'#9b6ecf','Ship':'#7a8aaa','Cargo':'#3a6aaa','Location':'#4ac48a','Encounter':'#d4699f','Incident':'#e05a5a','Captain':'#c8a84b','Directive':'#8494ad','Status':'#88aacc','Automated Command':'#8494ad'};
   const p=document.createElement('span');
-  p.className='suit-pill'; p.dataset.suit=s; p.textContent=s;
+  p.className='suit-pill cardpill suitchip'; p.dataset.suit=s;
+  p.style.setProperty('--cc', SUIT_COL[s]||'#8494ad');
+  const gi=CARDFACE.suit[s.toLowerCase()];
+  p.innerHTML=(gi?'<img src="'+gi+'" alt="">':'')+'<span class="lbl">'+s+'</span>';
   // Automated Command has no data/scans yet -- show but disable until cards land.
   if(s==='Automated Command'){
     p.classList.add('disabled');
@@ -1185,7 +1288,12 @@ allSkills.forEach(t=>{
   const p=document.createElement('span');
   const spec=(t.match(/^(.+)\s+(Skill|Focus)$/)||[])[1];
   p.className='skill-pill'+(spec?' sk-'+spec.toLowerCase():'');
-  p.textContent=t; p.dataset.value=t;
+  {const m2=t.match(/^(.+)\s+(Skill|Focus)$/);
+  const spec2=m2?m2[1].toLowerCase():'';
+  const isF=m2&&m2[2]==='Focus';
+  const src=isF?CARDFACE.focus[spec2]:CARDFACE.skill[spec2];
+  p.innerHTML=(src?'<img src="'+src+'" alt="">':'')+'<span class="lbl">'+displayLabel(t)+'</span><span class="cnt"></span>';}
+  p.dataset.value=t;
   p.onclick=()=>toggleToken(skillTok(t));
   document.getElementById(/Focus$/.test(t)?'focusFilters':'skillFilters').appendChild(p);
 });
@@ -1196,6 +1304,11 @@ buildQueryVocab();
 document.getElementById('searchInput').addEventListener('input',e=>refreshFromQuery(e.target.value));
 const helpBtn=document.getElementById('queryHelpBtn');
 if(helpBtn) helpBtn.onclick=()=>document.getElementById('queryHelp').classList.toggle('open');
+// restore a shared/bookmarked query from the URL hash
+{const m=location.hash.match(/^#q=(.+)$/);
+ if(m){const q=decodeURIComponent(m[1]);
+   document.getElementById('searchInput').value=q;
+   applyQuery(q); syncBoxPills(); syncFilterPills();}}
 
 
   render();

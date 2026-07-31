@@ -44,7 +44,7 @@ Two files from project knowledge are required at run time, and only these two ex
 Files deploy via GitHub Pages in ~60 seconds.
 
 ## Tools
-- **cards.html** — interactive Card Scanner. Filters by box, deck, suit, trait, skill, and name search. Data: `box1.json` (255 cards) + `box2.json` (community-sourced, growing). Cards/Images view toggle.
+- **cards.html** — interactive Card Scanner, card-face design (vector assets from the Traits Cyclopedia in `cardface-assets.js`; see WORKFLOW.md "Card-face design"). Filters by box, deck, suit, trait, skill, focus, and name search; shareable URLs via `#q=`. Glory badges on no-focus cards (box2/box3 data). Data at runtime: `box1.json` (250) + `box2.json` (248) + `box3.json` (99) + `promo1.json`/`promo2.json`. Cards/Images view toggle.
 - **tools/** — build pipeline (build_guide.py, verify_guide.py), scanner data generator, image migrators, push gate (push_gate.py). Generators ship with their output (WORKFLOW.md Rule 7).
 
 ## Live guides (as of 19 Jul 2026 — the index is authoritative; regenerate this list from index.html when stale)
