@@ -72,7 +72,7 @@ CSS = """
 .cardpill:hover{background:rgba(255,255,255,.07);}
 .cardpill.active{background:var(--cc,#8494ad) !important;color:#fff !important;}
 .cp-species{--cc:#e2a04a;}
-.cp-regular{--cc:#8ec6d8;}
+.cp-regular{--cc:#79b3c7;}
 .cp-other{--cc:#c85340;}
 .cp-wild{--cc:#eef1f6;}
 .cp-wild.active{color:#20242e !important;}
@@ -109,7 +109,7 @@ CSS = """
 .vt img + .vctag{margin-top:-5px;}
 .vt .vt-spacer + .vctag{margin-top:0;border-radius:999px;padding-top:.5rem;}
 .vt-species{background:#e2a04a;}
-.vt-regular{background:#8ec6d8;}
+.vt-regular{background:#79b3c7;}
 .vt-other{background:#c85340;}
 .vt-variable{background:#eef1f6;color:#20242e;}
 .focorner{position:absolute;right:-3px;bottom:-3px;height:43px;width:auto;z-index:2;}
@@ -121,7 +121,7 @@ CSS = """
 """
 
 NEW_BUILD = """function buildPillCard(c){
-  const SUIT_COL={'Person':'#d9bd45','Ally':'#9b6ecf','Ship':'#7a8aaa','Cargo':'#3a6aaa','Location':'#4ac48a','Encounter':'#d4699f','Incident':'#e05a5a','Captain':'#c8a84b','Directive':'#8494ad','Status':'#88aacc'};
+  const SUIT_COL={'Person':'#c9ab35','Ally':'#9b6ecf','Ship':'#7a8aaa','Cargo':'#3a6aaa','Location':'#4ac48a','Encounter':'#d4699f','Incident':'#e05a5a','Captain':'#c8a84b','Directive':'#8494ad','Status':'#88aacc'};
   const el=document.createElement('div');
   el.className='card-entry'; el.dataset.suit=c.suit||'';
   const col=SUIT_COL[c.suit]||'#8494ad';
@@ -242,7 +242,7 @@ window.addEventListener('hashchange',()=>{
     # suit pills -> chips
     s = s.replace("""  const p=document.createElement('span');
   p.className='suit-pill'; p.dataset.suit=s; p.textContent=s;""",
-"""  const SUIT_COL={'Person':'#d9bd45','Ally':'#9b6ecf','Ship':'#7a8aaa','Cargo':'#3a6aaa','Location':'#4ac48a','Encounter':'#d4699f','Incident':'#e05a5a','Captain':'#c8a84b','Directive':'#8494ad','Status':'#88aacc','Automated Command':'#8494ad'};
+"""  const SUIT_COL={'Person':'#c9ab35','Ally':'#9b6ecf','Ship':'#7a8aaa','Cargo':'#3a6aaa','Location':'#4ac48a','Encounter':'#d4699f','Incident':'#e05a5a','Captain':'#c8a84b','Directive':'#8494ad','Status':'#88aacc','Automated Command':'#8494ad'};
   const p=document.createElement('span');
   p.className='suit-pill cardpill suitchip'; p.dataset.suit=s;
   p.style.setProperty('--cc', SUIT_COL[s]||'#8494ad');
