@@ -137,6 +137,12 @@ def main(icons_dir, sf_dir, out):
         img = f'<img src="{tr[t]}" alt="">' if icon else ''
         return f'<span class="{cls}{" pillx" if icon else ""}">{img}{t.capitalize()} (12)</span>'
 
+    def fp_card(t):
+        cls = {'species': 'cp-species', 'regular': 'cp-regular', 'other': 'cp-other'}[fam(t)]
+        if t == 'wildcard': cls = 'cp-wild'
+        return (f'<span class="cardpill {cls}"><img src="{tr[t]}" alt="">'
+                f'{t.upper()}<span class="cnt">(12)</span></span>')
+
     def vchip(t, z=1):
         cls = {'species': 'ctag-species', 'regular': 'ctag-regular', 'other': 'ctag-other'}[fam(t)]
         if t == 'wildcard': cls = 'ctag-variable'
@@ -204,6 +210,17 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .regular-pill{{border-color:var(--rg-bd);color:var(--rg-tx);background:var(--rg-bg)}}
 .other-pill{{border-color:var(--ot-bd);color:var(--ot-tx);background:var(--ot-bg)}}
 .pillx img{{width:18px;height:18px}}
+/* rulebook-style filter chip: full-round solid pill, medallion at the left cap,
+   tall condensed text tight to the edges */
+.cardpill{{display:inline-flex;align-items:center;gap:.4rem;border-radius:999px;
+  height:22px;padding:0 .75rem 0 .1rem;color:#fff;cursor:pointer;user-select:none;
+  font-family:'Antonio',sans-serif;font-weight:600;font-size:.86rem;letter-spacing:.03em;
+  line-height:1;text-transform:uppercase}}
+.cardpill img{{height:21px;width:21px}}
+.cardpill .cnt{{font-size:.62rem;font-weight:400;opacity:.75;margin-left:.05rem}}
+.cp-species{{background:#e2a04a}} .cp-regular{{background:#8ec6d8}} .cp-other{{background:#c85340}}
+.cp-wild{{background:#eef1f6;color:#20242e}}
+.cardpill:hover{{filter:brightness(1.12)}}
 .pill-row.compact .pillx img{{width:14px;height:14px}}
 .card-entry{{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:.6rem;width:195px;min-height:175px;position:relative;overflow:hidden;display:flex;flex-direction:column}}
 /* card number: dark chip, flush left in the bottom row */
@@ -270,10 +287,9 @@ every variant. Two focus treatments are presented below for comparison.</p>
 <h2>2 — Compact entries: true-SVG focus asset nested in the rounded corner</h2>
 <div class="row">{row_text}</div>
 
-<h2>4 — Filter pills: text-only vs 14px medallions (same pill height) vs 18px</h2>
+<h2>4 — Filter pills, all or nothing: original scanner style vs rulebook chips</h2>
 <div class="pill-row">{''.join(fp(t, False) for t in demo)}</div>
-<div class="pill-row compact">{''.join(fp(t) for t in demo)}</div>
-<div class="pill-row">{''.join(fp(t) for t in demo)}</div>
+<div class="pill-row">{''.join(fp_card(t) for t in demo)}</div>
 
 <h2>5 — All extracted trait medallions (22 of ~40)</h2>
 <div class="sheet">{sheet}</div>
