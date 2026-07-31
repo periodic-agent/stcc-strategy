@@ -119,7 +119,14 @@ def b64_svg(f):
 def main(icons_dir, sf_dir, out):
     tr = {os.path.basename(f)[:-4]: b64_outlined(f, os.path.basename(f)[:-4])
           for f in sorted(glob.glob(icons_dir + '/*.png'))}
-    fsvg = {os.path.basename(f)[:-4]: b64_svg(f) for f in sorted(glob.glob('icons_svg/*.svg'))}
+    fsvg = {os.path.basename(f)[:-4]: b64_svg(f) for f in sorted(glob.glob('icons_svg/focus-*.svg'))}
+    import re as _re
+    def _white_svg(f):
+        t = open(f).read()
+        t = _re.sub(r'fill="rgb\([^"]*\)"', 'fill="#fff"', t)
+        return 'data:image/svg+xml;base64,' + base64.b64encode(t.encode()).decode()
+    ssvg = {os.path.basename(f)[:-4].replace('suit-', ''): _white_svg(f)
+            for f in sorted(glob.glob('icons_svg/suit-*.svg'))}
     sf = {os.path.basename(f)[:-4]: b64(f) for f in sorted(glob.glob(sf_dir + '/*.png'))}
     sfb = {os.path.basename(f)[:-4]: b64_skill_banner(f) for f in sorted(glob.glob(sf_dir + '/*.png'))
            if os.path.basename(f).startswith('skill-')}
@@ -139,6 +146,7 @@ def main(icons_dir, sf_dir, out):
         """fmode: 'stripes' = diagonal focus stripes over the corner (card-accurate);
         'text' = icon+text focus chip above the band"""
         sk = ''.join(f'<img class="skimg" src="{sfb["skill-" + s]}" alt="" title="{s.capitalize()} skill">' for s in skills)
+        traits = sorted(traits, key=lambda t: len(t))
         tr_ = ''.join(vchip(t, z=len(traits) - i) for i, t in enumerate(traits))
         corner = ''
         if focus:
@@ -153,8 +161,8 @@ def main(icons_dir, sf_dir, out):
             bottom = f'<div class="ce-bottom">{numchip}</div>'
         return f'''<div class="card-entry" data-cls="{cls}" style="border-left:2px solid {suitcol}">
 <div class="ce-row"><div class="ce-main">
-<div class="card-name">{name}</div>
-<div class="card-suit-bar"><div class="suit-dot" style="background:{suitcol}"></div><div class="suit-label" style="color:{suitcol}">{suit}</div></div>
+<div class="name-banner" style="background:{suitcol}">{name}</div>
+<div class="suit-banner" style="background:{suitcol}"><img src="{ssvg[suit.lower()]}" alt="">{suit}</div>
 <div class="card-skills">{sk}</div>
 </div><div class="ce-traits">{tr_}</div></div>
 {bottom}{corner}</div>'''
@@ -208,7 +216,16 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .focorner{{position:absolute;right:-1px;bottom:-1px;height:42px;width:auto;z-index:2}}
 .ce-row{{display:flex;gap:.4rem;align-items:flex-start}}
 .ce-main{{flex:1;min-width:0}}
-.card-name{{font-size:.82rem;font-weight:600;color:#fff;line-height:1.3;margin-bottom:.25rem;text-transform:uppercase}}
+/* name + suit: left-rooted colored banners, rounded end, like the printed card */
+.name-banner{{display:block;align-self:flex-start;margin-left:-0.6rem;max-width:calc(100% + .1rem);
+  padding:.18rem .85rem .18rem .6rem;border-radius:0 999px 999px 0;background:#555;
+  color:#fff;font-family:'Antonio',sans-serif;font-weight:600;font-size:.82rem;
+  letter-spacing:.05em;text-transform:uppercase;line-height:1.2;margin-bottom:.3rem}}
+.suit-banner{{display:inline-flex;align-items:center;gap:.4rem;align-self:flex-start;margin-left:-0.6rem;
+  padding:.14rem .8rem .14rem .6rem;border-radius:0 999px 999px 0;background:#555;
+  color:#fff;font-family:'Antonio',sans-serif;font-weight:600;font-size:.72rem;
+  letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem}}
+.suit-banner img{{height:.95em;width:auto}}
 .card-suit-bar{{display:flex;align-items:center;gap:.35rem;margin-bottom:.45rem}}
 .suit-dot{{width:6px;height:6px;border-radius:50%}}
 .suit-label{{font-family:'Antonio',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}}
