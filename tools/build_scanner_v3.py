@@ -35,7 +35,13 @@ def build_assets(out_js):
                   for f in sorted(glob.glob('icons/*.png'))}
     skill = {os.path.basename(f)[:-4].replace('skill-', ''): b64_skill_banner(f)
              for f in sorted(glob.glob('icons_sf/skill-*.png'))}
-    focus = {os.path.basename(f)[:-4].replace('focus-', ''): b64svg(f)
+    def b64svg_focus(f):
+        # the asset's near-black corner wedge vanishes against the scanner's
+        # dark card background; lift it to a readable navy so the icon
+        # visibly connects to both card edges like the print
+        t = open(f).read().replace('rgb(35,31,32)', '#39416e')
+        return 'data:image/svg+xml;base64,' + base64.b64encode(t.encode()).decode()
+    focus = {os.path.basename(f)[:-4].replace('focus-', ''): b64svg_focus(f)
              for f in sorted(glob.glob('icons_svg/focus-*.svg'))}
     suit = {os.path.basename(f)[:-4].replace('suit-', ''): b64svg_white(f)
             for f in sorted(glob.glob('icons_svg/suit-*.svg'))}
@@ -85,7 +91,6 @@ CSS = """
 .sb img{height:.95em;width:auto;}
 .skcol{display:flex;flex-direction:column;align-items:flex-start;gap:.3rem;margin-left:-0.7rem;margin-bottom:.35rem;}
 .skimg{height:28px;width:auto;}
-.skimg.match{filter:drop-shadow(0 0 3px #fff);}
 .ce-traits2{display:flex;flex-direction:row;align-items:flex-start;justify-content:flex-end;gap:0;
   flex:none;max-width:55%;flex-wrap:wrap;}
 .vt{display:flex;flex-direction:column;align-items:center;position:relative;margin-left:-4px;}
@@ -102,8 +107,7 @@ CSS = """
 .vt-other{background:#c85340;}
 .vt-variable{background:#eef1f6;color:#20242e;}
 .vctag.match{box-shadow:0 0 0 2px #fff;}
-.focorner{position:absolute;right:-1px;bottom:-1px;height:40px;width:auto;z-index:2;}
-.focorner.match{filter:drop-shadow(0 0 3px #fff);}
+.focorner{position:absolute;right:-3px;bottom:-3px;height:43px;width:auto;z-index:2;}
 .ce-bottom{margin-top:auto;padding-top:.45rem;display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:3;}
 .cid2{background:#14171f;color:#e8ecf5;display:inline-block;margin-left:-0.7rem;
   font-family:'Antonio',sans-serif;font-size:.56rem;font-weight:600;letter-spacing:.07em;
@@ -142,7 +146,7 @@ NEW_BUILD = """function buildPillCard(c){
   const strat=hasStrategy(c);
   if(strat){ el.classList.add('has-strategy'); el.onclick=()=>toggleStrategy(c.id); }
   if(openStrategyId===c.id) el.classList.add('drawer-open');
-  const stratHTML=strat?'<div class="card-badge strategy">Strategy</div>':'';
+  const stratHTML='';
   const badgeMark=badge?(badge.cls==='update'?'\\u2020':'\\u2022')+' '+badge.text:'';
   let numline='';
   if(c.card_number||badge){
