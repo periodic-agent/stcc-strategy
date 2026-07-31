@@ -63,12 +63,12 @@ CSS = """
 /* rulebook chips (trait + suit filters) */
 /* chips: empty (outline) at rest, light up with color + white text when selected */
 .cardpill{display:inline-flex;align-items:center;gap:.4rem;border-radius:999px;
-  height:22px;box-sizing:border-box;padding:0 .75rem 0 .1rem;cursor:pointer;user-select:none;
+  height:22px;box-sizing:border-box;padding:0 .5rem 0 .1rem;cursor:pointer;user-select:none;
   font-family:'Antonio',sans-serif;font-weight:600;font-size:.86rem;letter-spacing:.03em;
   line-height:1;text-transform:uppercase;background:transparent;
   border:1.5px solid var(--cc,#8494ad);color:var(--cc,#8494ad);}
 .cardpill img{height:19px;width:19px;}
-.cardpill .cnt{font-size:.62rem;font-weight:400;opacity:.75;margin-left:.05rem;display:inline-block;min-width:2.4em;text-align:left;}
+.cardpill .cnt{font-size:.62rem;font-weight:400;opacity:.75;margin-left:.05rem;display:inline-block;text-align:left;}
 .cardpill:hover{background:rgba(255,255,255,.07);}
 .cardpill.active{background:var(--cc,#8494ad) !important;color:#fff !important;}
 .cp-species{--cc:#e2a04a;}
@@ -79,7 +79,7 @@ CSS = """
 .suit-pill.suitchip{padding-left:.55rem;border:1.5px solid var(--cc);color:var(--cc);background:transparent;}
 .suit-pill.suitchip img{height:13px;width:auto;}
 .suit-pill.suitchip.active[data-suit]{background:var(--cc);color:#fff;}
-.skill-pill .cnt{font-size:.6rem;opacity:.8;margin-left:.25rem;display:inline-block;min-width:2.4em;text-align:left;}
+.skill-pill .cnt{font-size:.6rem;opacity:.8;margin-left:.25rem;display:inline-block;text-align:left;}
 .skill-pill img{height:13px;width:auto;vertical-align:-2px;margin-right:.3rem;}
 .skill-pill{display:inline-flex;align-items:center;}
 /* ===== card entries ===== */
@@ -206,7 +206,7 @@ def patch_html(src, out, assets_js='cardface-assets.js'):
                   "const pills=document.getElementById(containerid).querySelectorAll(':scope > span');")
     # counts write into .cnt span
     s = s.replace("pill.textContent=count>0?displayLabel(val)+' ('+count+')':displayLabel(val);",
-                  "const cnt=pill.querySelector('.cnt');\n      if(cnt) cnt.textContent='('+count+')';\n      else pill.textContent=count>0?displayLabel(val)+' ('+count+')':displayLabel(val);")
+                  "const cnt=pill.querySelector('.cnt');\n      if(cnt){cnt.textContent='('+count+')'; if(!cnt.style.minWidth) cnt.style.minWidth=Math.ceil(cnt.getBoundingClientRect().width)+'px';}\n      else pill.textContent=count>0?displayLabel(val)+' ('+count+')':displayLabel(val);")
     # suit pills -> chips
     s = s.replace("""  const p=document.createElement('span');
   p.className='suit-pill'; p.dataset.suit=s; p.textContent=s;""",
