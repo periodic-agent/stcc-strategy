@@ -87,12 +87,15 @@ def b64_skill_banner(f, widen=1.2):
     canvas = Image.new('RGBA', (W, h), (0, 0, 0, 0))
     key = os.path.basename(f)
     if 'variable' in key:
+        # the colored banners carry ~4% transparent crop padding top/bottom;
+        # inset the white banner the same amount so all banners render equal
         ss = 4
         m = Image.new('L', (W * ss, h * ss), 0)
         d = ImageDraw.Draw(m)
-        r = h * ss // 2
-        d.rectangle([0, 0, W * ss - r, h * ss], fill=255)
-        d.pieslice([W * ss - 2 * r, 0, W * ss, h * ss], -90, 90, fill=255)
+        y0, y1 = int(h * ss * 0.045), int(h * ss * 0.955)
+        r = (y1 - y0) // 2
+        d.rectangle([0, y0, W * ss - r, y1], fill=255)
+        d.pieslice([W * ss - 2 * r, y0, W * ss, y1], -90, 90, fill=255)
         m = m.resize((W, h), Image.LANCZOS)
         white = Image.new('RGBA', (W, h), (255, 255, 255, 255))
         canvas.paste(white, (0, 0), m)
