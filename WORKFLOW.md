@@ -456,10 +456,10 @@ copy of the pre-card-face scanner and emits `cardface-assets.js`).
   badge there instead (horizontal white oval, enlarged delta overhanging ~2 px,
   Antonio digit). Card number + Update/Duplicate markers bottom-left; the "New"
   banner is retired. Clicking any card with an image (`has-img`) opens the
-  lightbox at that card in BOTH views; the lightbox caption shows the card name
-  and, for discussed cards, the guide links (strategy snippets no longer open
-  from the card itself; `buildStrategyDrawer`/`toggleStrategy` remain in code
-  but have no card-click entry point). Cards without an image are not clickable.
+  plain image lightbox at that card in BOTH views (no caption, no guide links;
+  decision 31 Jul 2026: image only, for a cleaner experience).
+  `buildStrategyDrawer`/`toggleStrategy` remain in code but have no UI entry
+  point. Cards without an image are not clickable.
   Wildcard is the only trait banner with black text: pale salmon `#f6c9bd`
   (all other trait banners carry white text on their family color).
 - **Font**: Antonio 600 (Google Fonts) for all card-vocabulary elements;
