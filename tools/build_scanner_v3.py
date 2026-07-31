@@ -65,16 +65,17 @@ CSS = """
   line-height:1;text-transform:uppercase;background:#556;}
 .cardpill img{height:21px;width:21px;}
 .cardpill .cnt{font-size:.62rem;font-weight:400;opacity:.75;margin-left:.05rem;}
-.cardpill:hover{filter:brightness(1.12);}
+.cardpill{filter:saturate(.55) brightness(.78);}
+.cardpill:hover{filter:saturate(.9) brightness(1);}
+.cardpill.active{filter:none;box-shadow:0 0 0 1.5px rgba(255,255,255,.85);}
 .cp-species{background:#e2a04a !important;color:#fff;}
 .cp-regular{background:#8ec6d8 !important;color:#fff;}
 .cp-other{background:#c85340 !important;color:#fff;}
 .cp-wild{background:#eef1f6 !important;color:#20242e !important;}
-.cardpill.active{color:#14171f !important;}
-.cp-wild.active{box-shadow:0 0 0 1.5px #20242e inset;}
+.cp-wild.active{box-shadow:0 0 0 1.5px rgba(32,36,46,.8);}
 .suit-pill.suitchip{border:none;color:#fff;padding-left:.55rem;}
 .suit-pill.suitchip img{height:13px;width:auto;}
-.suit-pill.suitchip.active[data-suit]{color:#14171f;background:inherit;}
+.suit-pill.suitchip.active[data-suit]{background:inherit;}
 .skill-pill .cnt{font-size:.6rem;opacity:.8;margin-left:.25rem;}
 .skill-pill img{height:13px;width:auto;vertical-align:-2px;margin-right:.3rem;}
 .skill-pill{display:inline-flex;align-items:center;}
@@ -183,6 +184,8 @@ def patch_html(src, out, assets_js='cardface-assets.js'):
     # fonts + assets script
     s = s.replace('family=Barlow+Condensed:wght@500;600;700', 'family=Antonio:wght@600')
     s = s.replace('</head>', f'<script src="cardface-assets.js?v={ver}"></script>\n</head>', 1)
+    # drop the "New" banner in the header
+    s = re.sub(r'<a class="new-banner".*?</a>', '', s, count=1, flags=re.S)
     # preview marker
     s = s.replace('<meta name="viewport" content="width=device-width, initial-scale=1.0">',
                   '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n<meta name="robots" content="noindex">', 1)
