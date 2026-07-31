@@ -174,10 +174,10 @@ def main(icons_dir, sf_dir, out):
         if focus:
             corner = f'<img class="focorner" src="{fsvg["focus-" + focus]}" alt="" title="{focus.capitalize()} focus">'
         elif glory is not None:
-            corner = ('<svg class="glorybadge" viewBox="0 0 32 23">'
-                      '<ellipse cx="16" cy="11.5" rx="15.5" ry="11" fill="#fff"/>'
-                      '<path transform="translate(16 11.5) scale(1.15) translate(-13 -11.65)" d="M13 3.6c2.3 4 5.2 10.2 7.5 16.1-2.7-2-5.1-2.9-7.5-2.9s-4.8.9-7.5 2.9C7.8 13.8 10.7 7.6 13 3.6z" fill="#c3cfdd"/>'
-                      f'<text x="16" y="18.6" text-anchor="middle" font-size="20" font-weight="700" fill="#10161f" font-family="Antonio,sans-serif">{glory}</text></svg>')
+            corner = ('<svg class="glorybadge" viewBox="0 0 32 27">'
+                      '<ellipse cx="16" cy="13.5" rx="15.5" ry="11" fill="#fff"/>'
+                      '<path transform="translate(16 13.5) scale(1.52) translate(-13 -11.65)" d="M13 3.6c2.3 4 5.2 10.2 7.5 16.1-2.7-2-5.1-2.9-7.5-2.9s-4.8.9-7.5 2.9C7.8 13.8 10.7 7.6 13 3.6z" fill="#c3cfdd"/>'
+                      f'<text x="16" y="20.6" text-anchor="middle" font-size="20" font-weight="700" fill="#10161f" font-family="Antonio,sans-serif">{glory}</text></svg>')
         numchip = ''
         if num:
             parts = num.split(' ', 1)
@@ -257,7 +257,7 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .cid .meta{{color:#8a94ac;font-weight:400;margin-left:.35rem}}
 /* focus: the true-SVG cyclopedia asset, nested flush into the rounded corner */
 .focorner{{position:absolute;right:-1px;bottom:-1px;height:42px;width:auto;z-index:2}}
-.glorybadge{{position:absolute;right:5px;bottom:6px;width:33px;height:24px;z-index:2}}
+.glorybadge{{position:absolute;right:5px;bottom:4px;width:33px;height:28px;z-index:2}}
 .ce-row{{display:flex;gap:.4rem;align-items:flex-start}}
 .ce-main{{flex:1;min-width:0}}
 /* name + suit: left-rooted colored banners, rounded end, like the printed card */
