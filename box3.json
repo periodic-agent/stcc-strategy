@@ -7,6 +7,7 @@
     "game_box": "Second Contact",
     "card_number": "3PER01/13",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human",
       "Vulcan"
@@ -28,6 +29,7 @@
     "game_box": "Second Contact",
     "card_number": "3PER02/13",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human",
       "Klingon"
@@ -50,6 +52,7 @@
     "game_box": "Second Contact",
     "card_number": "3PER03/13",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -78,6 +81,7 @@
     "game_box": "Second Contact",
     "card_number": "3PER04/13",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -97,6 +101,7 @@
     "game_box": "Second Contact",
     "card_number": "3PER05/13",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -118,6 +123,7 @@
     "game_box": "Second Contact",
     "card_number": "3PER06/13",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -139,6 +145,7 @@
     "game_box": "Second Contact",
     "card_number": "3PER07/13",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Trill"
     ],
@@ -164,6 +171,7 @@
     "game_box": "Second Contact",
     "card_number": "3PER08/13",
     "variant": "original",
+    "glory": 4,
     "species_traits": [],
     "regular_traits": [
       "Doctor",
@@ -183,6 +191,7 @@
     "game_box": "Second Contact",
     "card_number": "3PER09/13",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Orion"
     ],
@@ -203,6 +212,7 @@
     "game_box": "Second Contact",
     "card_number": "3PER10/13",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Andorian"
     ],
@@ -224,6 +234,7 @@
     "game_box": "Second Contact",
     "card_number": "3PER11/13",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Alien"
     ],
@@ -247,6 +258,7 @@
     "game_box": "Second Contact",
     "card_number": "3PER12/13",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Klingon"
     ],
@@ -265,6 +277,7 @@
     "game_box": "Second Contact",
     "card_number": "3PER13/13",
     "variant": "original",
+    "glory": 1,
     "species_traits": [],
     "regular_traits": [
       "Ancient",
@@ -285,6 +298,7 @@
     "game_box": "Second Contact",
     "card_number": "3ALL01/3",
     "variant": "original",
+    "glory": 3,
     "species_traits": [
       "Betazoid"
     ],
@@ -304,6 +318,7 @@
     "game_box": "Second Contact",
     "card_number": "3ALL02/3",
     "variant": "original",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [
       "Augment"
@@ -320,6 +335,7 @@
     "game_box": "Second Contact",
     "card_number": "3ALL03/3",
     "variant": "original",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -336,6 +352,7 @@
     "game_box": "Second Contact",
     "card_number": "3CAR01/3",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Betazoid"
     ],
@@ -356,6 +373,7 @@
     "game_box": "Second Contact",
     "card_number": "3CAR02/3",
     "variant": "original",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Creature"
@@ -375,6 +393,7 @@
     "game_box": "Second Contact",
     "card_number": "3CAR03/3",
     "variant": "original",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Shady",
@@ -393,6 +412,7 @@
     "game_box": "Second Contact",
     "card_number": "3SHI01/2",
     "variant": "original",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Ambassador"
@@ -409,6 +429,7 @@
     "game_box": "Second Contact",
     "card_number": "3SHI02/2",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Romulan"
     ],
@@ -432,6 +453,7 @@
     "game_box": "Second Contact",
     "card_number": "3LOC01/2",
     "variant": "original",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Anomaly",
@@ -449,6 +471,7 @@
     "game_box": "Second Contact",
     "card_number": "3LOC02/2",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Orion"
     ],
@@ -474,6 +497,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE01/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -492,6 +516,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE02/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -508,6 +533,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE03/25",
     "variant": "original",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -529,6 +555,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE04/25",
     "variant": "original",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -545,6 +572,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE05/25",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Vulcan"
     ],
@@ -571,6 +599,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE06/25",
     "variant": "original",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -590,6 +619,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE07/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Engineer"
@@ -613,6 +643,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE08/25",
     "variant": "original",
+    "glory": 1,
     "species_traits": [],
     "regular_traits": [
       "Doctor"
@@ -634,6 +665,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE09/25",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Alien"
     ],
@@ -658,6 +690,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE10/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Bajoran"
     ],
@@ -688,6 +721,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE11/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -704,6 +738,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE12/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Doctor",
@@ -726,6 +761,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE13/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human",
       "Synthetic"
@@ -748,6 +784,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE14/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Orion"
     ],
@@ -779,6 +816,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE15/25",
     "variant": "original",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -793,6 +831,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE16/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -807,6 +846,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE17/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -821,6 +861,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE18/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -837,6 +878,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE19/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starbase",
@@ -854,6 +896,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE20/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -868,6 +911,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE21/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -884,6 +928,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE22/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -902,6 +947,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE23/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -922,6 +968,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE24/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -942,6 +989,7 @@
     "game_box": "Second Contact",
     "card_number": "3FRE25/25",
     "variant": "original",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -956,6 +1004,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK01/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -980,6 +1029,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK02/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -994,6 +1044,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK03/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starbase",
@@ -1011,6 +1062,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK04/26",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Human"
     ],
@@ -1035,6 +1087,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK05/26",
     "variant": "original",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [
       "Telepath"
@@ -1051,6 +1104,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK06/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Alien"
     ],
@@ -1075,6 +1129,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK07/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1094,6 +1149,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK08/26",
     "variant": "original",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [
       "Engineer",
@@ -1111,6 +1167,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK09/26",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Human"
     ],
@@ -1134,6 +1191,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK10/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -1157,6 +1215,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK11/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -1175,6 +1234,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK12/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -1198,6 +1258,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK13/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Augment",
@@ -1215,6 +1276,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK14/26",
     "variant": "original",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1229,6 +1291,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK15/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Time Travel"
@@ -1245,6 +1308,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK16/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1259,6 +1323,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK17/26",
     "variant": "original",
+    "glory": -4,
     "species_traits": [],
     "regular_traits": [
       "Time Travel"
@@ -1278,6 +1343,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK18/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1292,6 +1358,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK19/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -1313,6 +1380,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK20/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Aenar"
     ],
@@ -1338,6 +1406,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK21/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human",
       "Vulcan"
@@ -1364,6 +1433,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK22/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -1388,6 +1458,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK23/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -1413,6 +1484,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK24/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -1432,6 +1504,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK25/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1446,6 +1519,7 @@
     "game_box": "Second Contact",
     "card_number": "3PIK26/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -1470,6 +1544,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK01/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -1493,6 +1568,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK02/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -1518,6 +1594,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK03/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1532,6 +1609,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK04/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -1557,6 +1635,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK05/25",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Human"
     ],
@@ -1584,6 +1663,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK06/25",
     "variant": "original",
+    "glory": 4,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -1611,6 +1691,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK07/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Weapon"
@@ -1634,6 +1715,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK08/25",
     "variant": "original",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1648,6 +1730,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK09/25",
     "variant": "original",
+    "glory": 4,
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -1664,6 +1747,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK10/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Beverage"
@@ -1680,6 +1764,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK11/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Hologram",
@@ -1697,6 +1782,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK12/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -1729,6 +1815,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK13/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -1748,6 +1835,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK14/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -1774,6 +1862,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK15/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Betazoid",
       "Human"
@@ -1799,6 +1888,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK16/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Ops",
@@ -1821,6 +1911,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK17/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1835,6 +1926,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK18/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1849,6 +1941,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK19/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1863,6 +1956,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK20/25",
     "variant": "original",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1877,6 +1971,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK21/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1891,6 +1986,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK22/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starbase",
@@ -1908,6 +2004,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK23/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1922,6 +2019,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK24/25",
     "variant": "original",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1936,6 +2034,7 @@
     "game_box": "Second Contact",
     "card_number": "3RIK25/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],

@@ -7,6 +7,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER01/26•",
     "variant": "reprint",
+    "glory": 1,
     "species_traits": [
       "Romulan"
     ],
@@ -23,6 +24,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER02/26",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Tellarite"
     ],
@@ -43,6 +45,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER03/26",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Human",
       "Klingon"
@@ -65,6 +68,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER04/26",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Andorian"
     ],
@@ -83,6 +87,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER05/26",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Xindi"
     ],
@@ -101,6 +106,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER06/26•",
     "variant": "reprint",
+    "glory": 1,
     "species_traits": [
       "Human"
     ],
@@ -122,6 +128,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER07/26",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Human"
     ],
@@ -142,6 +149,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER08/26",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Pakled"
     ],
@@ -160,6 +168,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER09/26",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Synthetic"
     ],
@@ -178,6 +187,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER10/26•",
     "variant": "reprint",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -201,6 +211,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER11/26",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Human"
     ],
@@ -222,6 +233,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER12/26",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Human"
     ],
@@ -256,6 +268,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER13/26",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Human"
     ],
@@ -279,6 +292,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER14/26†",
     "variant": "updated",
+    "glory": 1,
     "species_traits": [],
     "regular_traits": [
       "NX-01",
@@ -296,6 +310,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER15/26",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Human",
       "Bajoran",
@@ -316,6 +331,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER16/26•",
     "variant": "reprint",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Telepath",
@@ -343,6 +359,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER17/26•",
     "variant": "reprint",
+    "glory": 1,
     "species_traits": [
       "Ferengi"
     ],
@@ -361,6 +378,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER18/26",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Human"
     ],
@@ -388,6 +406,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER19/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Android",
       "Synthetic"
@@ -410,6 +429,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER20/26•",
     "variant": "reprint",
+    "glory": 1,
     "species_traits": [
       "Kelpien"
     ],
@@ -426,6 +446,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER21/26•",
     "variant": "reprint",
+    "glory": null,
     "species_traits": [
       "Vulcan",
       "Romulan"
@@ -452,6 +473,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER22/26•",
     "variant": "reprint",
+    "glory": 1,
     "species_traits": [
       "Tellarite"
     ],
@@ -470,6 +492,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER23/26",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Orion",
       "Andorian"
@@ -494,6 +517,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER24/26",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Human"
     ],
@@ -514,6 +538,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER25/26",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Andorian"
     ],
@@ -543,6 +568,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2PER26/26",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Vulcan"
     ],
@@ -563,6 +589,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR01/18",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -588,6 +615,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR02/18†",
     "variant": "updated",
+    "glory": 2,
     "species_traits": [
       "Borg"
     ],
@@ -606,6 +634,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR03/18•",
     "variant": "reprint",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Cloak"
@@ -629,6 +658,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR04/18",
     "variant": "original",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Engineer",
@@ -654,6 +684,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR05/18",
     "variant": "original",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Helmet",
@@ -673,6 +704,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR06/18•",
     "variant": "reprint",
+    "glory": null,
     "species_traits": [
       "Romulan"
     ],
@@ -698,6 +730,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR07/18•",
     "variant": "reprint",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Business",
@@ -715,6 +748,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR08/18•",
     "variant": "reprint",
+    "glory": 2,
     "species_traits": [
       "Alien"
     ],
@@ -735,6 +769,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR09/18",
     "variant": "original",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Doctor",
@@ -755,6 +790,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR10/18",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Xindi"
     ],
@@ -774,6 +810,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR11/18†",
     "variant": "updated",
+    "glory": 2,
     "species_traits": [
       "Vulcan"
     ],
@@ -794,6 +831,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR12/18",
     "variant": "original",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Helmet",
@@ -811,6 +849,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR13/18†",
     "variant": "updated",
+    "glory": null,
     "species_traits": [
       "Bajoran",
       "Transcendent"
@@ -835,6 +874,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR14/18†",
     "variant": "updated",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Weapon",
@@ -855,6 +895,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR15/18•",
     "variant": "reprint",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Engineer"
@@ -876,6 +917,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR16/18",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Alien"
     ],
@@ -894,6 +936,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR17/18•",
     "variant": "reprint",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Weapon"
@@ -912,6 +955,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2CAR18/18",
     "variant": "original",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Communication"
@@ -933,6 +977,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC01/20•",
     "variant": "reprint",
+    "glory": null,
     "species_traits": [
       "Alien"
     ],
@@ -956,6 +1001,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC02/20•",
     "variant": "reprint",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -975,6 +1021,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC03/20",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet",
@@ -997,6 +1044,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC04/20",
     "variant": "original",
+    "glory": 1,
     "species_traits": [],
     "regular_traits": [
       "Augment",
@@ -1019,6 +1067,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC05/20•",
     "variant": "reprint",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1038,6 +1087,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC06/20",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Xindi"
     ],
@@ -1057,6 +1107,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC07/20•",
     "variant": "reprint",
+    "glory": 3,
     "species_traits": [
       "Breen"
     ],
@@ -1082,6 +1133,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC08/20•",
     "variant": "reprint",
+    "glory": 5,
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -1107,6 +1159,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC09/20•",
     "variant": "reprint",
+    "glory": 4,
     "species_traits": [],
     "regular_traits": [
       "Business"
@@ -1128,6 +1181,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC10/20",
     "variant": "original",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -1144,6 +1198,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC11/20",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Xindi"
     ],
@@ -1175,6 +1230,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC12/20",
     "variant": "original",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Ambassador",
@@ -1197,6 +1253,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC13/20•",
     "variant": "reprint",
+    "glory": null,
     "species_traits": [
       "Cardassian"
     ],
@@ -1222,6 +1279,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC14/20",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human",
       "Romulan",
@@ -1245,6 +1303,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC15/20•",
     "variant": "reprint",
+    "glory": 5,
     "species_traits": [],
     "regular_traits": [
       "Starfleet",
@@ -1262,6 +1321,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC16/20†",
     "variant": "updated",
+    "glory": 10,
     "species_traits": [
       "Vau N'Akat"
     ],
@@ -1278,6 +1338,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC17/20",
     "variant": "original",
+    "glory": 5,
     "species_traits": [],
     "regular_traits": [
       "Starbase",
@@ -1304,6 +1365,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC18/20",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Tellarite"
     ],
@@ -1331,6 +1393,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC19/20•",
     "variant": "reprint",
+    "glory": null,
     "species_traits": [
       "Orion"
     ],
@@ -1354,6 +1417,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2LOC20/20•",
     "variant": "reprint",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1377,6 +1441,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ALL01/16•",
     "variant": "reprint",
+    "glory": 3,
     "species_traits": [
       "Klingon"
     ],
@@ -1393,6 +1458,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ALL02/16•",
     "variant": "reprint",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1407,6 +1473,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ALL03/16•",
     "variant": "reprint",
+    "glory": 3,
     "species_traits": [
       "Alien"
     ],
@@ -1425,6 +1492,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ALL04/16•",
     "variant": "reprint",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1439,6 +1507,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ALL05/16",
     "variant": "original",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [
       "Scientist"
@@ -1457,6 +1526,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ALL06/16•",
     "variant": "reprint",
+    "glory": null,
     "species_traits": [
       "Kelpien"
     ],
@@ -1478,6 +1548,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ALL07/16•",
     "variant": "reprint",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Shady",
@@ -1502,6 +1573,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ALL08/16•",
     "variant": "reprint",
+    "glory": 3,
     "species_traits": [
       "Transcendent"
     ],
@@ -1520,6 +1592,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ALL09/16",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Orion"
     ],
@@ -1545,6 +1618,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ALL10/16",
     "variant": "original",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [
       "Pilot",
@@ -1564,6 +1638,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ALL11/16",
     "variant": "original",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [
       "Telepath",
@@ -1581,6 +1656,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ALL12/16•",
     "variant": "reprint",
+    "glory": null,
     "species_traits": [
       "Alien"
     ],
@@ -1604,6 +1680,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ALL13/16",
     "variant": "original",
+    "glory": 3,
     "species_traits": [
       "Tellarite"
     ],
@@ -1627,6 +1704,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ALL14/16",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Borg"
     ],
@@ -1650,6 +1728,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ALL15/16",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Changeling"
     ],
@@ -1673,6 +1752,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ALL16/16",
     "variant": "original",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [
       "Shady",
@@ -1695,6 +1775,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SHI01/13•",
     "variant": "reprint",
+    "glory": 2,
     "species_traits": [
       "Borg"
     ],
@@ -1711,6 +1792,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SHI02/13",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Ferengi"
     ],
@@ -1736,6 +1818,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SHI03/13•",
     "variant": "reprint",
+    "glory": 2,
     "species_traits": [
       "Vulcan"
     ],
@@ -1754,6 +1837,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SHI04/13",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Orion"
     ],
@@ -1772,6 +1856,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SHI05/13†",
     "variant": "updated",
+    "glory": null,
     "species_traits": [
       "Aenar",
       "Romulan"
@@ -1797,6 +1882,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SHI06/13†",
     "variant": "updated",
+    "glory": null,
     "species_traits": [
       "Kazon"
     ],
@@ -1822,6 +1908,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SHI07/13",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Alien"
     ],
@@ -1845,6 +1932,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SHI08/13•",
     "variant": "reprint",
+    "glory": 2,
     "species_traits": [
       "Pakled"
     ],
@@ -1863,6 +1951,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SHI09/13†",
     "variant": "updated",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet",
@@ -1886,6 +1975,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SHI10/13•",
     "variant": "reprint",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Doctor",
@@ -1909,6 +1999,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SHI11/13",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Klingon"
     ],
@@ -1927,6 +2018,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SHI12/13",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Xindi"
     ],
@@ -1952,6 +2044,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SHI13/13•",
     "variant": "reprint",
+    "glory": null,
     "species_traits": [
       "Xindi"
     ],
@@ -1973,6 +2066,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ENC01/8",
     "variant": "original",
+    "glory": 4,
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -1994,6 +2088,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ENC02/8",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Alien"
     ],
@@ -2021,6 +2116,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ENC03/8•",
     "variant": "reprint",
+    "glory": 3,
     "species_traits": [
       "Transcendent"
     ],
@@ -2042,6 +2138,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ENC04/8•",
     "variant": "reprint",
+    "glory": 8,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -2058,6 +2155,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ENC05/8",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet",
@@ -2080,6 +2178,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ENC06/8",
     "variant": "original",
+    "glory": 3,
     "species_traits": [
       "Alien"
     ],
@@ -2099,6 +2198,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ENC07/8",
     "variant": "original",
+    "glory": 6,
     "species_traits": [
       "Vulcan"
     ],
@@ -2125,6 +2225,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ENC08/8•",
     "variant": "reprint",
+    "glory": 9,
     "species_traits": [
       "Synthetic"
     ],
@@ -2141,6 +2242,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2INC01/6",
     "variant": "original",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -2159,6 +2261,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2INC02/6•",
     "variant": "reprint",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2173,6 +2276,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2INC03/6•",
     "variant": "reprint",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2187,6 +2291,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2INC04/6",
     "variant": "original",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2201,6 +2306,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2INC05/6•",
     "variant": "reprint",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2215,6 +2321,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2INC06/6•",
     "variant": "reprint",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2229,6 +2336,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB01/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Pakled"
     ],
@@ -2247,6 +2355,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB02/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Pakled"
     ],
@@ -2265,6 +2374,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB03/22",
     "variant": "original",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [
       "Helmet"
@@ -2281,6 +2391,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB04/22",
     "variant": "original",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [
       "Business"
@@ -2297,6 +2408,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB05/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Weapon"
@@ -2320,6 +2432,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB06/22",
     "variant": "original",
+    "glory": 4,
     "species_traits": [
       "Pakled"
     ],
@@ -2343,6 +2456,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB07/22",
     "variant": "original",
+    "glory": 1,
     "species_traits": [
       "Pakled"
     ],
@@ -2364,6 +2478,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB08/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Pakled"
     ],
@@ -2387,6 +2502,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB09/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Pakled"
     ],
@@ -2407,6 +2523,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB10/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Pakled"
     ],
@@ -2425,6 +2542,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB11/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Pakled"
     ],
@@ -2448,6 +2566,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB12/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Helmet"
@@ -2464,6 +2583,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB13/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Pakled"
     ],
@@ -2482,6 +2602,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB14/22",
     "variant": "original",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2496,6 +2617,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB15/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2515,6 +2637,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB16/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -2531,6 +2654,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB17/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2545,6 +2669,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB18/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -2561,6 +2686,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB19/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Pakled"
     ],
@@ -2577,6 +2703,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB20/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Pakled"
     ],
@@ -2593,6 +2720,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB21/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Helmet"
@@ -2609,6 +2737,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2REB22/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Helmet"
@@ -2625,6 +2754,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE001/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -2643,6 +2773,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE002/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -2664,6 +2795,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE003/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Kelpien"
     ],
@@ -2685,6 +2817,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE004/23",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Vulcan"
     ],
@@ -2709,6 +2842,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE005/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Anomaly",
@@ -2733,6 +2867,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE006/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -2757,6 +2892,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE007/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Ancient",
@@ -2781,6 +2917,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE008/23",
     "variant": "original",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -2797,6 +2934,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE009/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -2820,6 +2958,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE010/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2834,6 +2973,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE011/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2848,6 +2988,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE012/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Kelpien"
     ],
@@ -2866,6 +3007,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE013/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -2887,6 +3029,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE014/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -2903,6 +3046,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE015/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2917,6 +3061,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE016/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2931,6 +3076,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE017/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2945,6 +3091,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE018/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2959,6 +3106,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE019/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan"
     ],
@@ -2982,6 +3130,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE020/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -3001,6 +3150,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE021/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -3025,6 +3175,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE022/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -3051,6 +3202,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2GE023/23",
     "variant": "original",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3065,6 +3217,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC01/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -3085,6 +3238,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC02/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3099,6 +3253,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC03/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -3118,6 +3273,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC04/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Ambassador"
@@ -3141,6 +3297,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC05/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -3168,6 +3325,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC06/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Andorian"
     ],
@@ -3195,6 +3353,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC07/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan"
     ],
@@ -3223,6 +3382,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC08/23",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Human"
     ],
@@ -3241,6 +3401,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC09/23",
     "variant": "original",
+    "glory": 4,
     "species_traits": [
       "Xindi"
     ],
@@ -3259,6 +3420,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC10/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starbase",
@@ -3276,6 +3438,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC11/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -3301,6 +3464,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC12/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan"
     ],
@@ -3327,6 +3491,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC13/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3341,6 +3506,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC14/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3355,6 +3521,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC15/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3369,6 +3536,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC16/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3388,6 +3556,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC17/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "NX-01",
@@ -3405,6 +3574,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC18/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "NX-01",
@@ -3422,6 +3592,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC19/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -3442,6 +3613,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC20/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3456,6 +3628,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC21/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3470,6 +3643,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC22/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3484,6 +3658,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2ARC23/23",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3498,6 +3673,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV01/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan"
     ],
@@ -3517,6 +3693,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV02/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3531,6 +3708,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV03/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan"
     ],
@@ -3556,6 +3734,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV04/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan",
       "Transcendent"
@@ -3582,6 +3761,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV05/24",
     "variant": "original",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Communication"
@@ -3609,6 +3789,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV06/24",
     "variant": "original",
+    "glory": 4,
     "species_traits": [
       "Vulcan"
     ],
@@ -3636,6 +3817,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV07/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan"
     ],
@@ -3657,6 +3839,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV08/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Path of Surak"
@@ -3678,6 +3861,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV09/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan"
     ],
@@ -3699,6 +3883,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV10/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan"
     ],
@@ -3715,6 +3900,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV11/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan",
       "Andorian"
@@ -3732,6 +3918,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV12/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan"
     ],
@@ -3755,6 +3942,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV13/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan"
     ],
@@ -3773,6 +3961,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV14/24",
     "variant": "original",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3787,6 +3976,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV15/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan"
     ],
@@ -3807,6 +3997,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV16/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan"
     ],
@@ -3828,6 +4019,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV17/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3842,6 +4034,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV18/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3856,6 +4049,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV19/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Path of Surak"
@@ -3872,6 +4066,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV20/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3886,6 +4081,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV21/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan"
     ],
@@ -3911,6 +4107,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV22/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -3927,6 +4124,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV23/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3941,6 +4139,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2SOV24/24",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan"
     ],
@@ -3957,6 +4156,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK01/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -3975,6 +4175,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK02/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -3996,6 +4197,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK03/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -4017,6 +4219,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK04/25",
     "variant": "original",
+    "glory": 4,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -4033,6 +4236,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK05/25",
     "variant": "original",
+    "glory": 4,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -4058,6 +4262,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK06/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -4089,6 +4294,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK07/25",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Human"
     ],
@@ -4113,6 +4319,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK08/25",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Vulcan"
     ],
@@ -4137,6 +4344,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK09/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Vulcan"
     ],
@@ -4166,6 +4374,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK10/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Anomaly",
@@ -4188,6 +4397,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK11/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -4206,6 +4416,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK12/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -4225,6 +4436,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK13/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -4246,6 +4458,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK14/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4260,6 +4473,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK15/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4274,6 +4488,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK16/25",
     "variant": "original",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4288,6 +4503,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK17/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -4304,6 +4520,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK18/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4318,6 +4535,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK19/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4332,6 +4550,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK20/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4346,6 +4565,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK21/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4360,6 +4580,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK22/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -4384,6 +4605,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK23/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -4403,6 +4625,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK24/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human",
       "Vulcan"
@@ -4429,6 +4652,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KIRK25/25",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4443,6 +4667,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA01A/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -4461,6 +4686,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA01B/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -4479,6 +4705,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA02A/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4493,6 +4720,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA02B/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -4511,6 +4739,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA03/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4525,6 +4754,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA04/22",
     "variant": "original",
+    "glory": 5,
     "species_traits": [],
     "regular_traits": [
       "Augment",
@@ -4542,6 +4772,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA05/22",
     "variant": "original",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -4558,6 +4789,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA06/22",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Human"
     ],
@@ -4577,6 +4809,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA07/22",
     "variant": "original",
+    "glory": 2,
     "species_traits": [
       "Human"
     ],
@@ -4599,6 +4832,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA08/22",
     "variant": "original",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [
       "Creature",
@@ -4618,6 +4852,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA09/22",
     "variant": "original",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4632,6 +4867,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA10/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -4648,6 +4884,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA11/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -4665,6 +4902,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA12/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starbase",
@@ -4682,6 +4920,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA13/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -4700,6 +4939,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA14/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -4716,6 +4956,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA15/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4730,6 +4971,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA16/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -4746,6 +4988,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA17/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -4765,6 +5008,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA18/22",
     "variant": "original",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -4784,6 +5028,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA19/22",
     "variant": "original",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -4801,6 +5046,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA20/22",
     "variant": "original",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -4818,6 +5064,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA21/22",
     "variant": "original",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -4835,6 +5082,7 @@
     "game_box": "To Boldly Go",
     "card_number": "2KHA22/22",
     "variant": "original",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
