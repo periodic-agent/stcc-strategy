@@ -164,7 +164,7 @@ def main(icons_dir, sf_dir, out):
         if t == 'wildcard': cls = 'ctag-variable'
         return f'<div class="vt" style="z-index:{z}"><img src="{tr[t]}" alt=""><span class="ctag {cls}">{t.upper()}</span></div>'
 
-    def card(name, suit, suitcol, skills, traits, focus, num, cls, fmode):
+    def card(name, suit, suitcol, skills, traits, focus, num, cls, fmode, glory=None):
         """fmode: 'stripes' = diagonal focus stripes over the corner (card-accurate);
         'text' = icon+text focus chip above the band"""
         sk = ''.join(f'<img class="skimg" src="{sfb["skill-" + s]}" alt="" title="{s.capitalize()} skill">' for s in skills)
@@ -173,6 +173,12 @@ def main(icons_dir, sf_dir, out):
         corner = ''
         if focus:
             corner = f'<img class="focorner" src="{fsvg["focus-" + focus]}" alt="" title="{focus.capitalize()} focus">'
+        elif glory is not None:
+            corner = ('<svg class="glorybadge" viewBox="0 0 24 26">'
+                      '<path d="M4.5 17.5 L2 24 L9 20.5 Z" fill="#fff"/>'
+                      '<circle cx="12" cy="11" r="9.6" fill="#fff"/>'
+                      '<path d="M12 3.6c1.9 3.3 4.3 8.4 6.2 13.2-2.2-1.6-4.2-2.4-6.2-2.4s-4 .8-6.2 2.4C7.7 12 10.1 6.9 12 3.6z" fill="#c3d3e6"/>'
+                      f'<text x="12" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#10161f" font-family="Antonio,sans-serif">{glory}</text></svg>')
         numchip = ''
         if num:
             parts = num.split(' ', 1)
@@ -198,12 +204,12 @@ def main(icons_dir, sf_dir, out):
 
     DEMO_CARDS = [
         ('Bruce Maddox', 'Person', 'var(--person)', ['research'], ['human', 'engineer', 'starfleet', 'scientist'], 'research', '', 'common'),
-        ('Bird-of-Prey', 'Ship', '#7a8aaa', ['influence'], ['klingon', 'attack', 'romulan'], '', '1SHI01/13', 'common'),
+        ('Bird-of-Prey', 'Ship', '#7a8aaa', ['influence'], ['klingon', 'attack', 'romulan'], '', '1SHI01/13', 'common', 2),
         ('Lursa', 'Person', 'var(--person)', [], ['shady', 'klingon'], 'military', '2PER10/26 • Duplicate', 'captaindeck'),
         ('Delta Vega', 'Location', '#4ac48a', ['military'], [], 'any', '1LOC08/20', 'location'),
-        ('Keyla Detmer', 'Person', 'var(--person)', ['variable', 'variable'], ['human', 'pilot', 'starfleet', 'synthetic'], '', '', 'captaindeck'),
+        ('Keyla Detmer', 'Person', 'var(--person)', ['variable', 'variable'], ['human', 'pilot', 'starfleet', 'synthetic'], '', '', 'captaindeck', 3),
     ]
-    row_text = ''.join(card(*c, 'text') for c in DEMO_CARDS)
+    row_text = ''.join(card(*c[:8], 'text', *(c[8:] or ())) for c in DEMO_CARDS)
 
     html = f'''<!DOCTYPE html>
 <html lang="en"><head>
@@ -252,6 +258,7 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .cid .meta{{color:#8a94ac;font-weight:400;margin-left:.35rem}}
 /* focus: the true-SVG cyclopedia asset, nested flush into the rounded corner */
 .focorner{{position:absolute;right:-1px;bottom:-1px;height:42px;width:auto;z-index:2}}
+.glorybadge{{position:absolute;right:5px;bottom:5px;width:26px;height:29px;z-index:2}}
 .ce-row{{display:flex;gap:.4rem;align-items:flex-start}}
 .ce-main{{flex:1;min-width:0}}
 /* name + suit: left-rooted colored banners, rounded end, like the printed card */
