@@ -114,6 +114,7 @@ CSS = """
 .vt-variable{background:#eef1f6;color:#20242e;}
 .focorner{position:absolute;right:-3px;bottom:-3px;height:43px;width:auto;z-index:2;}
 .card-entry.has-focus .ce-traits2{margin-bottom:46px;}
+.glorybadge{position:absolute;right:5px;bottom:5px;width:26px;height:29px;z-index:2;}
 .ce-bottom{margin-top:auto;padding-top:.45rem;display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:3;}
 .cid2{background:#14171f;color:#e8ecf5;display:inline-block;margin-left:-0.7rem;
   font-family:'Antonio',sans-serif;font-size:.56rem;font-weight:600;letter-spacing:.07em;
@@ -144,6 +145,14 @@ NEW_BUILD = """function buildPillCard(c){
   }).join('');
   const foci=c.skills.filter(s=>/Focus$/.test(s));
   let corner='';
+  if(!foci.length && c.glory!==null && c.glory!==undefined){
+    el.classList.add('has-focus');
+    corner='<svg class="glorybadge" viewBox="0 0 24 26" title="Glory '+c.glory+'">'
+      +'<path d="M4.5 17.5 L2 24 L9 20.5 Z" fill="#fff"/>'
+      +'<circle cx="12" cy="11" r="9.6" fill="#fff"/>'
+      +'<path d="M12 3.6c1.9 3.3 4.3 8.4 6.2 13.2-2.2-1.6-4.2-2.4-6.2-2.4s-4 .8-6.2 2.4C7.7 12 10.1 6.9 12 3.6z" fill="#c3d3e6"/>'
+      +'<text x="12" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#10161f" font-family="Antonio,sans-serif">'+c.glory+'</text></svg>';
+  }
   if(foci.length){
     const spec=foci[0].split(' ')[0].toLowerCase();
     if(CARDFACE.focus[spec]) {el.classList.add('has-focus'); corner='<img class="focorner'+(activeSkills.has(foci[0])?' match':'')+'" src="'+CARDFACE.focus[spec]+'" title="'+foci[0]+'" alt="">';}
@@ -213,6 +222,9 @@ def patch_html(src, out, assets_js='cardface-assets.js'):
                   '<div class="qh-note">Clicking any pill writes its token here &#8212; the pills are shortcuts for this language.</div>\n    <div class="qh-note">Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>')
     s = s.replace('<div class="qh-note">Clicking any pill writes its token here \u2014 the pills are shortcuts for this language.</div>',
                   '<div class="qh-note">Clicking any pill writes its token here \u2014 the pills are shortcuts for this language.</div>\n    <div class="qh-note">Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>')
+    # glory passthrough in the resolver (dormant until box JSONs carry it)
+    s = s.replace("card_number: chosen.card_number || '',",
+                  "card_number: chosen.card_number || '',\n      glory: (chosen.glory !== undefined && chosen.glory !== null) ? chosen.glory : null,")
     # ===== shareable URLs: mirror the query into location.hash, restore on load =====
     s = s.replace("""function refreshFromQuery(text){
   applyQuery(text);
