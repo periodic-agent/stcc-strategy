@@ -57,6 +57,7 @@ CSS = """
 /* ===== v3 card-face design (POC port) ===== */
 /* capsule outlines everywhere */
 .box-pill,.promo-pill,.deck-pill,.suit-pill,.species-pill,.regular-pill,.other-pill,.skill-pill{border-radius:999px;}
+.deck-pill{height:22px;box-sizing:border-box;display:inline-flex;align-items:center;padding:0 .8rem;font-size:.76rem;}
 /* rulebook chips (trait + suit filters) */
 .cardpill{display:inline-flex;align-items:center;gap:.4rem;border-radius:999px;border:none !important;
   height:22px;padding:0 .75rem 0 .1rem;color:#fff;cursor:pointer;user-select:none;
@@ -106,7 +107,6 @@ CSS = """
 .vt-regular{background:#8ec6d8;}
 .vt-other{background:#c85340;}
 .vt-variable{background:#eef1f6;color:#20242e;}
-.vctag.match{box-shadow:0 0 0 2px #fff;}
 .focorner{position:absolute;right:-3px;bottom:-3px;height:43px;width:auto;z-index:2;}
 .ce-bottom{margin-top:auto;padding-top:.45rem;display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:3;}
 .cid2{background:#14171f;color:#e8ecf5;display:inline-block;margin-left:-0.7rem;
@@ -122,7 +122,7 @@ NEW_BUILD = """function buildPillCard(c){
   const col=SUIT_COL[c.suit]||'#8494ad';
   const sk_=(c.suit||'').toLowerCase();
   const sIcon=CARDFACE.suit[sk_]?'<img src="'+CARDFACE.suit[sk_]+'" alt="">':'';
-  const tkey=t=>t.toLowerCase().replace(/\\s+/g,'-');
+  const tkey=t=>t.toLowerCase().replace(/['\u2019]/g,'').replace(/\\s+/g,'-');
   const allTags=[...c.species,...c.regular,...c.other].sort((a,b)=>a.length-b.length);
   const vt=allTags.map((t,i)=>{
     let fam=t==='Wildcard'?'variable':c.species.includes(t)?'species':c.other.includes(t)?'other':'regular';
@@ -168,7 +168,7 @@ NEW_MAKEPILL = """function makePill(text,cls,kind){
   let chip=cls==='species-pill'?'cp-species':cls==='other-pill'?'cp-other':'cp-regular';
   if(text==='Wildcard') chip='cp-wild';
   p.className=cls+' cardpill '+chip;
-  const ic=CARDFACE.traitChip[text.toLowerCase().replace(/\\s+/g,'-')];
+  const ic=CARDFACE.traitChip[text.toLowerCase().replace(/['\u2019]/g,'').replace(/\\s+/g,'-')];
   p.innerHTML=(ic?'<img src="'+ic+'" alt="">':'')+'<span class="lbl">'+displayLabel(text)+'</span><span class="cnt"></span>';
   p.dataset.value=text;
   p.onclick=()=>toggleToken(tokenOf(kind,text));
@@ -176,11 +176,13 @@ NEW_MAKEPILL = """function makePill(text,cls,kind){
 }"""
 
 
-def patch_html(src, out):
+def patch_html(src, out, assets_js='cardface-assets.js'):
+    import hashlib
+    ver = hashlib.md5(open(assets_js, 'rb').read()).hexdigest()[:8]
     s = open(src).read()
     # fonts + assets script
     s = s.replace('family=Barlow+Condensed:wght@500;600;700', 'family=Antonio:wght@600')
-    s = s.replace('</head>', '<script src="cardface-assets.js"></script>\n</head>', 1)
+    s = s.replace('</head>', f'<script src="cardface-assets.js?v={ver}"></script>\n</head>', 1)
     # preview marker
     s = s.replace('<meta name="viewport" content="width=device-width, initial-scale=1.0">',
                   '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n<meta name="robots" content="noindex">', 1)
