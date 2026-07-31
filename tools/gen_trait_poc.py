@@ -113,9 +113,13 @@ def b64_skill_banner(f, widen=1.2):
     canvas.save(buf, format='PNG')
     return 'data:image/png;base64,' + base64.b64encode(buf.getvalue()).decode()
 
+def b64_svg(f):
+    return 'data:image/svg+xml;base64,' + base64.b64encode(open(f, 'rb').read()).decode()
+
 def main(icons_dir, sf_dir, out):
     tr = {os.path.basename(f)[:-4]: b64_outlined(f, os.path.basename(f)[:-4])
           for f in sorted(glob.glob(icons_dir + '/*.png'))}
+    fsvg = {os.path.basename(f)[:-4]: b64_svg(f) for f in sorted(glob.glob('icons_svg/*.svg'))}
     sf = {os.path.basename(f)[:-4]: b64(f) for f in sorted(glob.glob(sf_dir + '/*.png'))}
     sfb = {os.path.basename(f)[:-4]: b64_skill_banner(f) for f in sorted(glob.glob(sf_dir + '/*.png'))
            if os.path.basename(f).startswith('skill-')}
@@ -136,32 +140,24 @@ def main(icons_dir, sf_dir, out):
         'text' = icon+text focus chip above the band"""
         sk = ''.join(f'<img class="skimg" src="{sfb["skill-" + s]}" alt="" title="{s.capitalize()} skill">' for s in skills)
         tr_ = ''.join(vchip(t, z=len(traits) - i) for i, t in enumerate(traits))
-        stripes = ''
-        chip = ''
+        corner = ''
         if focus:
-            if fmode == 'stripes':
-                if focus == 'any':
-                    stripes = '<div class="fstripe fs-any" title="Any focus"><div class="stripe s1"></div><div class="stripe s2"></div><div class="stripe s3"></div></div>'
-                else:
-                    stripes = f'<div class="fstripe fs-{focus}" title="{focus.capitalize()} focus"><div class="thin"></div><div class="main"></div><div class="thin"></div></div>'
-            else:
-                chip = (f'<div class="ce-focus"><span class="card-skill sk-{focus} is-focus" title="{focus.capitalize()} focus">'
-                        f'<img class="ci" src="{sf["focus-" + focus]}" alt="">{focus.capitalize()}</span></div>')
+            corner = f'<img class="focorner" src="{fsvg["focus-" + focus]}" alt="" title="{focus.capitalize()} focus">'
         numchip = ''
         if num:
             parts = num.split(' ', 1)
             meta = f'<span class="meta">{parts[1]}</span>' if len(parts) > 1 else ''
             numchip = f'<span class="cid">{parts[0]}{meta}</span>'
         bottom = ''
-        if numchip or chip:
-            bottom = f'<div class="ce-bottom">{numchip or "<span></span>"}{chip}</div>'
+        if numchip:
+            bottom = f'<div class="ce-bottom">{numchip}</div>'
         return f'''<div class="card-entry" data-cls="{cls}" style="border-left:2px solid {suitcol}">
 <div class="ce-row"><div class="ce-main">
 <div class="card-name">{name}</div>
 <div class="card-suit-bar"><div class="suit-dot" style="background:{suitcol}"></div><div class="suit-label" style="color:{suitcol}">{suit}</div></div>
 <div class="card-skills">{sk}</div>
 </div><div class="ce-traits">{tr_}</div></div>
-{bottom}</div>'''
+{bottom}{corner}</div>'''
 
     demo = ['human', 'klingon', 'romulan', 'betazoid', 'starfleet', 'scientist', 'engineer',
             'ambassador', 'telepath', 'shady', 'attack', 'ongoing', 'wildcard']
@@ -200,24 +196,15 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .regular-pill{{border-color:var(--rg-bd);color:var(--rg-tx);background:var(--rg-bg)}}
 .other-pill{{border-color:var(--ot-bd);color:var(--ot-tx);background:var(--ot-bg)}}
 .pillx img{{width:18px;height:18px}}
-.card-entry{{background:var(--bg2);border:1px solid var(--border);border-radius:5px;padding:.6rem;width:195px;min-height:175px;position:relative;overflow:hidden;display:flex;flex-direction:column}}
+.card-entry{{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:.6rem;width:195px;min-height:175px;position:relative;overflow:hidden;display:flex;flex-direction:column}}
 /* card number: dark chip, flush left in the bottom row */
 .cid{{background:#14171f;color:#e8ecf5;display:inline-block;margin-left:-0.6rem;
   font-family:'Antonio',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.07em;
   padding:.12rem .55rem .12rem .55rem;border-radius:0 999px 999px 0;
   box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}}
 .cid .meta{{color:#8a94ac;font-weight:400;margin-left:.35rem}}
-/* focus: bright diagonal stripes crossing the lower-right corner, half on the band */
-.fstripe{{position:absolute;right:-30px;bottom:9px;width:104px;z-index:2;
-  transform:rotate(-45deg);transform-origin:center}}
-.fstripe .thin{{height:2px;background:var(--fs,#e6281a);margin:2px 0;opacity:.95}}
-.fstripe .main{{height:8px;background:var(--fs,#e6281a);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.35), inset 0 -1px 0 rgba(0,0,0,.3)}}
-.fs-research{{--fs:#149be6}} .fs-influence{{--fs:#f2ce10}} .fs-military{{--fs:#e6281a}}
-.fstripe.fs-any{{background:#000;padding:2px 0}}
-.fstripe.fs-any .stripe{{height:5px}}
-.fstripe.fs-any .stripe + .stripe{{margin-top:2px}}
-.fs-any .s1{{background:#149be6}} .fs-any .s2{{background:#f2ce10}} .fs-any .s3{{background:#e6281a}}
+/* focus: the true-SVG cyclopedia asset, nested flush into the rounded corner */
+.focorner{{position:absolute;right:-1px;bottom:-1px;height:42px;width:auto;z-index:2}}
 .ce-row{{display:flex;gap:.4rem;align-items:flex-start}}
 .ce-main{{flex:1;min-width:0}}
 .card-name{{font-size:.82rem;font-weight:600;color:#fff;line-height:1.3;margin-bottom:.25rem;text-transform:uppercase}}
@@ -262,7 +249,7 @@ every variant. Two focus treatments are presented below for comparison.</p>
 <h2>1 — The full skill &amp; focus icon set</h2>
 <div class="sheet">{sfrow}</div>
 
-<h2>2 — Compact entries: number chip + focus pill, no footer band</h2>
+<h2>2 — Compact entries: true-SVG focus asset nested in the rounded corner</h2>
 <div class="row">{row_text}</div>
 
 <h2>4 — Filter pills: current vs with medallions</h2>
