@@ -207,6 +207,33 @@ def patch_html(src, out, assets_js='cardface-assets.js'):
     # counts write into .cnt span
     s = s.replace("pill.textContent=count>0?displayLabel(val)+' ('+count+')':displayLabel(val);",
                   "const cnt=pill.querySelector('.cnt');\n      if(cnt){cnt.textContent='('+count+')'; if(!cnt.style.minWidth) cnt.style.minWidth=Math.ceil(cnt.getBoundingClientRect().width)+'px';}\n      else pill.textContent=count>0?displayLabel(val)+' ('+count+')':displayLabel(val);")
+    # ===== shareable URLs: mirror the query into location.hash, restore on load =====
+    s = s.replace("""function refreshFromQuery(text){
+  applyQuery(text);
+  syncBoxPills(); syncFilterPills();
+  render();
+}""",
+"""function refreshFromQuery(text){
+  applyQuery(text);
+  syncBoxPills(); syncFilterPills();
+  render();
+  try{
+    const q=text.trim();
+    history.replaceState(null,'', q ? '#q='+encodeURIComponent(q) : location.pathname+location.search);
+  }catch(e){}
+}
+window.addEventListener('hashchange',()=>{
+  const m=location.hash.match(/^#q=(.+)$/);
+  const q=m?decodeURIComponent(m[1]):'';
+  if(q!==document.getElementById('searchInput').value) setQuery(q);
+});""")
+    s = s.replace("if(helpBtn) helpBtn.onclick=()=>document.getElementById('queryHelp').classList.toggle('open');",
+"""if(helpBtn) helpBtn.onclick=()=>document.getElementById('queryHelp').classList.toggle('open');
+// restore a shared/bookmarked query from the URL hash
+{const m=location.hash.match(/^#q=(.+)$/);
+ if(m){const q=decodeURIComponent(m[1]);
+   document.getElementById('searchInput').value=q;
+   applyQuery(q); syncBoxPills(); syncFilterPills();}}""")
     # suit pills -> chips
     s = s.replace("""  const p=document.createElement('span');
   p.className='suit-pill'; p.dataset.suit=s; p.textContent=s;""",

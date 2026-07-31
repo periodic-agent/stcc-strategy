@@ -914,7 +914,16 @@ function refreshFromQuery(text){
   applyQuery(text);
   syncBoxPills(); syncFilterPills();
   render();
+  try{
+    const q=text.trim();
+    history.replaceState(null,'', q ? '#q='+encodeURIComponent(q) : location.pathname+location.search);
+  }catch(e){}
 }
+window.addEventListener('hashchange',()=>{
+  const m=location.hash.match(/^#q=(.+)$/);
+  const q=m?decodeURIComponent(m[1]):'';
+  if(q!==document.getElementById('searchInput').value) setQuery(q);
+});
 function toggleToken(tok){
   const toks=tokenList(currentQuery());
   const i=toks.findIndex(t=>t.toLowerCase()===tok.toLowerCase());
@@ -1284,6 +1293,11 @@ buildQueryVocab();
 document.getElementById('searchInput').addEventListener('input',e=>refreshFromQuery(e.target.value));
 const helpBtn=document.getElementById('queryHelpBtn');
 if(helpBtn) helpBtn.onclick=()=>document.getElementById('queryHelp').classList.toggle('open');
+// restore a shared/bookmarked query from the URL hash
+{const m=location.hash.match(/^#q=(.+)$/);
+ if(m){const q=decodeURIComponent(m[1]);
+   document.getElementById('searchInput').value=q;
+   applyQuery(q); syncBoxPills(); syncFilterPills();}}
 
 
   render();
