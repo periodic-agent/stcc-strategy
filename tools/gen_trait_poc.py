@@ -146,6 +146,15 @@ def main(icons_dir, sf_dir, out):
         return (f'<span class="cardpill {cls}{act}"><img src="{trc[t]}" alt="">'
                 f'{t.upper()}<span class="cnt">(12)</span></span>')
 
+    SUITCOL = {'person': '#d9bd45', 'ally': '#9b6ecf', 'ship': '#7a8aaa', 'cargo': '#3a6aaa',
+               'location': '#4ac48a', 'encounter': '#d4699f', 'incident': '#e05a5a',
+               'captain': '#c8a84b', 'directive': '#8494ad'}
+
+    def fp_suit(t, active=False):
+        act = ' active' if active else ''
+        return (f'<span class="cardpill suitchip{act}" style="background:{SUITCOL[t]}">'
+                f'<img src="{ssvg[t]}" alt="">{t.upper()}<span class="cnt">(12)</span></span>')
+
     def vchip(t, z=1):
         cls = {'species': 'ctag-species', 'regular': 'ctag-regular', 'other': 'ctag-other'}[fam(t)]
         if t == 'wildcard': cls = 'ctag-variable'
@@ -224,6 +233,8 @@ p.note{{font-size:.85rem;color:var(--muted);max-width:74ch;line-height:1.6}}
 .cp-species{{background:#e2a04a}} .cp-regular{{background:#8ec6d8}} .cp-other{{background:#c85340}}
 .cp-wild{{background:#eef1f6;color:#20242e}}
 .cardpill:hover{{filter:brightness(1.12)}}
+.cardpill.suitchip{{padding-left:.55rem}}
+.cardpill.suitchip img{{height:13px;width:auto}}
 .cardpill.active{{color:#14171f}}
 .cardpill.active .cnt{{opacity:.65}}
 .cp-wild.active{{color:#20242e;box-shadow:0 0 0 1.5px #20242e inset}}
@@ -298,6 +309,8 @@ every variant. Two focus treatments are presented below for comparison.</p>
 <div class="pill-row">{''.join(fp_card(t) for t in demo)}</div>
 <p class="note">Active state = black text (demo: Klingon, Starfleet, Attack active):</p>
 <div class="pill-row">{''.join(fp_card(t, active=t in ('klingon', 'starfleet', 'attack')) for t in demo)}</div>
+<p class="note">Suit chips (demo: Person and Location active):</p>
+<div class="pill-row">{''.join(fp_suit(t, active=t in ('person', 'location')) for t in ['person', 'ally', 'ship', 'cargo', 'location', 'encounter', 'incident', 'captain', 'directive'])}</div>
 
 <h2>5 — All extracted trait medallions (22 of ~40)</h2>
 <div class="sheet">{sheet}</div>
