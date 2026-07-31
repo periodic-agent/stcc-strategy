@@ -114,7 +114,7 @@ CSS = """
 .vt-variable{background:#eef1f6;color:#20242e;}
 .focorner{position:absolute;right:-3px;bottom:-3px;height:43px;width:auto;z-index:2;}
 .card-entry.has-focus .ce-traits2{margin-bottom:46px;}
-.glorybadge{position:absolute;right:6px;bottom:6px;width:27px;height:31px;z-index:2;}
+.glorybadge{position:absolute;right:5px;bottom:6px;width:33px;height:24px;z-index:2;}
 .ce-bottom{margin-top:auto;padding-top:.45rem;display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:3;}
 .cid2{background:#14171f;color:#e8ecf5;display:inline-block;margin-left:-0.7rem;
   font-family:'Antonio',sans-serif;font-size:.56rem;font-weight:600;letter-spacing:.07em;
@@ -147,10 +147,10 @@ NEW_BUILD = """function buildPillCard(c){
   let corner='';
   if(!foci.length && c.glory!==null && c.glory!==undefined){
     el.classList.add('has-focus');
-    corner='<svg class="glorybadge" viewBox="0 0 26 30" title="Glory '+c.glory+'">'
-      +'<ellipse cx="13" cy="15" rx="12.5" ry="14.5" fill="#fff"/>'
-      +'<path d="M13 3.6c2.3 4 5.2 10.2 7.5 16.1-2.7-2-5.1-2.9-7.5-2.9s-4.8.9-7.5 2.9C7.8 13.8 10.7 7.6 13 3.6z" fill="#c3cfdd"/>'
-      +'<text x="13" y="19" text-anchor="middle" font-size="12" font-weight="700" fill="#10161f" font-family="Antonio,sans-serif">'+c.glory+'</text></svg>';
+    corner='<svg class="glorybadge" viewBox="0 0 32 23" title="Glory '+c.glory+'">'
+      +'<ellipse cx="16" cy="11.5" rx="15.5" ry="11" fill="#fff"/>'
+      +'<path transform="translate(16 11.5) scale(1.15) translate(-13 -11.65)" d="M13 3.6c2.3 4 5.2 10.2 7.5 16.1-2.7-2-5.1-2.9-7.5-2.9s-4.8.9-7.5 2.9C7.8 13.8 10.7 7.6 13 3.6z" fill="#c3cfdd"/>'
+      +'<text x="16" y="18.6" text-anchor="middle" font-size="20" font-weight="700" fill="#10161f" font-family="Antonio,sans-serif">'+c.glory+'</text></svg>';
   }
   if(foci.length){
     const spec=foci[0].split(' ')[0].toLowerCase();
