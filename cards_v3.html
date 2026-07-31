@@ -394,6 +394,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .vt-other{background:#c85340;}
 .vt-variable{background:#eef1f6;color:#20242e;}
 .focorner{position:absolute;right:-3px;bottom:-3px;height:43px;width:auto;z-index:2;}
+.card-entry.has-focus .ce-traits2{margin-bottom:46px;}
 .ce-bottom{margin-top:auto;padding-top:.45rem;display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:3;}
 .cid2{background:#14171f;color:#e8ecf5;display:inline-block;margin-left:-0.7rem;
   font-family:'Antonio',sans-serif;font-size:.56rem;font-weight:600;letter-spacing:.07em;
@@ -1087,7 +1088,7 @@ function buildPillCard(c){
   let corner='';
   if(foci.length){
     const spec=foci[0].split(' ')[0].toLowerCase();
-    if(CARDFACE.focus[spec]) corner='<img class="focorner'+(activeSkills.has(foci[0])?' match':'')+'" src="'+CARDFACE.focus[spec]+'" title="'+foci[0]+'" alt="">';
+    if(CARDFACE.focus[spec]) {el.classList.add('has-focus'); corner='<img class="focorner'+(activeSkills.has(foci[0])?' match':'')+'" src="'+CARDFACE.focus[spec]+'" title="'+foci[0]+'" alt="">';}
   }
   const badge=badgeInfo(c);
   const strat=hasStrategy(c);
