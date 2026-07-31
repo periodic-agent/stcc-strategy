@@ -207,6 +207,11 @@ def patch_html(src, out, assets_js='cardface-assets.js'):
     # counts write into .cnt span
     s = s.replace("pill.textContent=count>0?displayLabel(val)+' ('+count+')':displayLabel(val);",
                   "const cnt=pill.querySelector('.cnt');\n      if(cnt){cnt.textContent='('+count+')'; if(!cnt.style.minWidth) cnt.style.minWidth=Math.ceil(cnt.getBoundingClientRect().width)+'px';}\n      else pill.textContent=count>0?displayLabel(val)+' ('+count+')':displayLabel(val);")
+    # help bubble: document shareable URLs
+    s = s.replace('<div class="qh-note">Clicking any pill writes its token here &#8212; the pills are shortcuts for this language.</div>',
+                  '<div class="qh-note">Clicking any pill writes its token here &#8212; the pills are shortcuts for this language.</div>\n    <div class="qh-note">Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>')
+    s = s.replace('<div class="qh-note">Clicking any pill writes its token here \u2014 the pills are shortcuts for this language.</div>',
+                  '<div class="qh-note">Clicking any pill writes its token here \u2014 the pills are shortcuts for this language.</div>\n    <div class="qh-note">Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>')
     # ===== shareable URLs: mirror the query into location.hash, restore on load =====
     s = s.replace("""function refreshFromQuery(text){
   applyQuery(text);
