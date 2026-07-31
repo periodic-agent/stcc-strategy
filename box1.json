@@ -3492,7 +3492,7 @@
   {
     "id": "sisko-deep-space-9",
     "name": "Deep Space 9",
-    "suit": "Location",
+    "suit": "Ship",
     "source": "Sisko",
     "game_box": "Captain's Chair",
     "species_traits": [
