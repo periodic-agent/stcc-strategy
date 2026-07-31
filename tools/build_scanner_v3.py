@@ -62,18 +62,18 @@ CSS = """
 .cardpill{display:inline-flex;align-items:center;gap:.4rem;border-radius:999px;border:none !important;
   height:22px;padding:0 .75rem 0 .1rem;color:#fff;cursor:pointer;user-select:none;
   font-family:'Antonio',sans-serif;font-weight:600;font-size:.86rem;letter-spacing:.03em;
-  line-height:1;text-transform:uppercase;background:#556;}
+  line-height:1;text-transform:uppercase;background:#556;color:#1a1d26;}
 .cardpill img{height:21px;width:21px;}
 .cardpill .cnt{font-size:.62rem;font-weight:400;opacity:.75;margin-left:.05rem;}
-.cardpill{filter:saturate(.55) brightness(.78);}
-.cardpill:hover{filter:saturate(.9) brightness(1);}
-.cardpill.active{filter:none;box-shadow:0 0 0 1.5px rgba(255,255,255,.85);}
-.cp-species{background:#e2a04a !important;color:#fff;}
-.cp-regular{background:#8ec6d8 !important;color:#fff;}
-.cp-other{background:#c85340 !important;color:#fff;}
+.cardpill:hover{filter:brightness(1.1);}
+.cardpill.active{color:#fff !important;}
+.cp-wild.active{color:#20242e !important;}
+.cp-species{background:#e2a04a !important;}
+.cp-regular{background:#8ec6d8 !important;}
+.cp-other{background:#c85340 !important;}
 .cp-wild{background:#eef1f6 !important;color:#20242e !important;}
 .cp-wild.active{box-shadow:0 0 0 1.5px rgba(32,36,46,.8);}
-.suit-pill.suitchip{border:none;color:#fff;padding-left:.55rem;}
+.suit-pill.suitchip{border:none;color:#1a1d26;padding-left:.55rem;}
 .suit-pill.suitchip img{height:13px;width:auto;}
 .suit-pill.suitchip.active[data-suit]{background:inherit;}
 .skill-pill .cnt{font-size:.6rem;opacity:.8;margin-left:.25rem;}
