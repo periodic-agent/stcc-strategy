@@ -79,9 +79,14 @@ CSS = """
 .suit-pill.suitchip{padding-left:.55rem;border:1.5px solid var(--cc);color:var(--cc);background:transparent;}
 .suit-pill.suitchip img{height:13px;width:auto;}
 .suit-pill.suitchip.active[data-suit]{background:var(--cc);color:#fff;}
-.skill-pill .cnt{font-size:.6rem;opacity:.8;margin-left:.25rem;display:inline-block;text-align:left;}
-.skill-pill img{height:13px;width:auto;vertical-align:-2px;margin-right:.3rem;}
-.skill-pill{display:inline-flex;align-items:center;}
+/* Skills/Focus chips match the trait and suit chips exactly: same 22px height,
+   same Antonio face, size, tracking and caps. They kept the old Exo 2 metrics
+   and rendered ~1.2px shorter, which read as a different family of control. */
+.skill-pill{display:inline-flex;align-items:center;height:22px;box-sizing:border-box;
+  padding:0 .55rem 0 .35rem;font-family:'Antonio',sans-serif;font-weight:600;
+  font-size:.86rem;letter-spacing:.03em;line-height:1;text-transform:uppercase;}
+.skill-pill .cnt{font-size:.62rem;font-weight:400;opacity:.75;margin-left:.35rem;display:inline-block;text-align:left;}
+.skill-pill img{height:15px;width:auto;vertical-align:0;margin-right:.35rem;}
 /* ===== card entries ===== */
 .card-grid{grid-template-columns:repeat(auto-fill,minmax(248px,1fr));}
 .card-entry{border-radius:10px;}

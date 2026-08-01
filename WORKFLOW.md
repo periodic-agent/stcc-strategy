@@ -481,7 +481,12 @@ copy of the pre-card-face scanner and emits `cardface-assets.js`).
   Orbitron/Exo 2 remain for page chrome.
 - **Filter chips**: rulebook-style banners; outline-only at rest (colored border
   + text via the `--cc` CSS var, icon kept), color-filled with white text when
-  active. Counts always render (incl. "(0)") in a per-chip width-locked slot so
+  active. Every chip row shares one geometry: 22px height, Antonio 600 at
+  `.86rem`, `.03em` tracking, uppercase, count in a `.62rem` dimmed `.cnt` slot.
+  Skills/Focus (`.skill-pill`) kept the older Exo 2 metrics and rendered ~1.2px
+  shorter until 1 Aug 2026; they now inherit the same block. Their active state
+  is still a translucent family-colour wash rather than the solid fill used by
+  trait and suit chips. Counts always render (incl. "(0)") in a per-chip width-locked slot so
   selection never reflows the row.
 - **Shareable URLs**: the search-bar state mirrors to `location.hash`
   (`#q=...`) via `history.replaceState`; restored on load, back/forward handled
