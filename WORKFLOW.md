@@ -143,6 +143,15 @@ Formatted by **Periodic_agent**
 | TBG captain guides | `tbg-[name].html` |
 | Market guides | `persons.html`, `allies.html`, `ships.html`, `cargo.html`, `locations.html`, `encounters-incidents.html` |
 | Strategy guides | `solo.html`, `five-year-mission.html`, `vs-picard.html` |
+> **`cards.html` is the source of truth.** Several chats edit it directly, so it
+> is never regenerated from a private base: doing so silently drops whatever the
+> other chats added (this nearly ate the `glory:` / `position:` / `variant:`
+> query tokens on 1 Aug 2026). Changes go in as idempotent patch scripts that
+> assert every anchor and fail loudly, e.g. `tools/patch_captain_suit.py`.
+> `tools/build_scanner_v3.py` now defaults to assets-only
+> (`python3 build_scanner_v3.py cardface-assets.js`); its page-patching path is
+> legacy and documents how the card-face layer was first applied.
+
 | Card Scanner | `cards.html` (renamed 2026-07-29 from `card-browser-mockup.html`, which now redirects to it; keep the stub, links were published under the old path) |
 
 ---
@@ -472,6 +481,23 @@ copy of the pre-card-face scanner and emits `cardface-assets.js`).
   pill: one that would touch the number chip (the chip widens with an
   Update/Duplicate mark) is right-anchored instead via `.wide`; 18 of 403 pills
   today. The footer renders when any of card number, badge, or position exists.
+- **Captain suit** (1 Aug 2026): `"Captain"` leads `SUITS_DISPLAY`, which also
+  registers the `suit:Captain` token; 16 cards. Captains are not market people,
+  so their name and suit banners are light gray `#d7dce6` with `#10161f` text
+  and the card's left border matches. The chip carries the same gray: its
+  active state needs an explicit black label (the inherited white would be
+  invisible on the fill), and the chair glyph is darkened by
+  `filter:brightness(0)` only where it sits on gray (card banner, active chip),
+  staying white at rest where a black glyph would vanish into the page.
+  `EXCLUDED_SUITS` is unrelated and untouched; it governs only the trait chip
+  vocabulary.
+- **Away-team marker**: `.awayteam`, an inline SVG speech bubble under the suit
+  banner carrying `away_team`. The printed marker's group-of-people glyph has no
+  vector source, so the bubble holds the value instead of an icon. `away_team`
+  is a STRING and may be `"2+"` / `"4+"`; one font size serves every value.
+  Empty renders nothing, which is correct for Wrathful Khan (the printed card
+  has no marker) and for every non-captain. The resolver coalesces it across
+  printings like `glory` and `position_indicator`.
 - **`position_indicator`**: present on every record in all five JSONs, string or
   null; 415 of 610 non-null. Values seen: Available, Development, Reserve,
   Starting, Advanced, Captain, Discard, Deployed, Rewards, Controlled Location,

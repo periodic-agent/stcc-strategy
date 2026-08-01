@@ -345,6 +345,17 @@ window.addEventListener('hashchange',()=>{
 
 
 if __name__ == '__main__':
-    src, out_html, out_js = sys.argv[1], sys.argv[2], sys.argv[3]
-    build_assets(out_js)
-    patch_html(src, out_html)
+    # cards.html is the repo's source of truth: several chats edit it directly,
+    # so regenerating it from a private base would silently drop their work.
+    # Default mode therefore builds ONLY the asset bundle. patch_html is kept
+    # for reference (it documents how the card-face layer was first applied)
+    # and still runs when an explicit source and output are given.
+    if len(sys.argv) == 2:
+        build_assets(sys.argv[1])
+    elif len(sys.argv) == 4:
+        src, out_html, out_js = sys.argv[1], sys.argv[2], sys.argv[3]
+        build_assets(out_js)
+        patch_html(src, out_html)
+    else:
+        sys.exit('usage: build_scanner_v3.py <out_assets.js>            # assets only (normal)\n'
+                 '       build_scanner_v3.py <src.html> <out.html> <out.js>  # legacy full rebuild')
