@@ -5,6 +5,8 @@
     "suit": "Cargo",
     "source": "Promo",
     "game_box": "Promo Pack 1",
+    "card_number": "0CAR01/?",
+    "glory": 2,
     "species_traits": [
       "Vulcan"
     ],
@@ -23,6 +25,8 @@
     "suit": "Ship",
     "source": "Promo",
     "game_box": "Promo Pack 1",
+    "card_number": "0SHI01/?",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -37,6 +41,8 @@
     "suit": "Encounter",
     "source": "Promo",
     "game_box": "Promo Pack 1",
+    "card_number": "0ENC01/?",
+    "glory": 6,
     "species_traits": [
       "Human",
       "Transcendent"
@@ -64,6 +70,8 @@
     "suit": "Incident",
     "source": "Promo",
     "game_box": "Promo Pack 1",
+    "card_number": "0INC01/?",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -78,6 +86,8 @@
     "suit": "Incident",
     "source": "Promo",
     "game_box": "Promo Pack 1",
+    "card_number": "0INC02/?",
+    "glory": -2,
     "species_traits": [
       "Alien"
     ],

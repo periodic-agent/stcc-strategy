@@ -5,6 +5,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER01/25",
+    "glory": 1,
     "species_traits": [
       "Romulan"
     ],
@@ -19,6 +21,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER02/25",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -40,6 +44,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER03/25",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -62,6 +68,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER04/25",
+    "glory": 1,
     "species_traits": [
       "Klingon"
     ],
@@ -79,6 +87,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER05/25",
+    "glory": 1,
     "species_traits": [
       "Android",
       "Synthetic"
@@ -96,6 +106,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER06/25",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -123,6 +135,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER07/25",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -146,6 +160,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER08/25",
+    "glory": 1,
     "species_traits": [
       "Human"
     ],
@@ -165,6 +181,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER09/25",
+    "glory": 1,
     "species_traits": [
       "Cardassian"
     ],
@@ -182,6 +200,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER10/25",
+    "glory": 1,
     "species_traits": [
       "Changeling"
     ],
@@ -196,6 +216,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER11/25",
+    "glory": 1,
     "species_traits": [
       "Romulan"
     ],
@@ -210,6 +232,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER12/25",
+    "glory": null,
     "species_traits": [
       "Trill"
     ],
@@ -231,6 +255,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER13/25",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -252,6 +278,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER14/25",
+    "glory": 1,
     "species_traits": [
       "Betazoid"
     ],
@@ -269,6 +297,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER15/25",
+    "glory": null,
     "species_traits": [
       "Romulan"
     ],
@@ -292,6 +322,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER16/25",
+    "glory": 1,
     "species_traits": [
       "Synthetic"
     ],
@@ -311,6 +343,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER17/25",
+    "glory": 1,
     "species_traits": [
       "Synthetic"
     ],
@@ -325,6 +359,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER18/25",
+    "glory": 1,
     "species_traits": [],
     "regular_traits": [
       "Doctor"
@@ -339,6 +375,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER19/25",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Ambassador",
@@ -364,6 +402,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER20/25",
+    "glory": 1,
     "species_traits": [
       "Ferengi"
     ],
@@ -380,6 +420,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER21/25",
+    "glory": 1,
     "species_traits": [
       "Vulcan"
     ],
@@ -396,6 +438,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER22/25",
+    "glory": 1,
     "species_traits": [
       "Kelpien"
     ],
@@ -410,6 +454,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER23/25",
+    "glory": null,
     "species_traits": [
       "Romulan",
       "Vulcan"
@@ -434,6 +480,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER24/25",
+    "glory": 1,
     "species_traits": [
       "Tellarite"
     ],
@@ -450,6 +498,8 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1PER25/25",
+    "glory": 1,
     "species_traits": [
       "Human"
     ],
@@ -467,6 +517,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1CAR01/16",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Doctor"
@@ -490,6 +542,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1CAR02/16",
+    "glory": 2,
     "species_traits": [
       "Borg"
     ],
@@ -506,6 +560,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1CAR03/16",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Cloak"
@@ -527,6 +583,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1CAR04/16",
+    "glory": 2,
     "species_traits": [
       "Ferengi"
     ],
@@ -543,6 +601,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1CAR05/16",
+    "glory": null,
     "species_traits": [
       "Romulan"
     ],
@@ -566,6 +626,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1CAR06/16",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Hologram",
@@ -581,6 +643,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1CAR07/16",
+    "glory": 2,
     "species_traits": [
       "Alien"
     ],
@@ -599,6 +663,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1CAR08/16",
+    "glory": 2,
     "species_traits": [
       "Vulcan"
     ],
@@ -617,6 +683,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1CAR09/16",
+    "glory": 2,
     "species_traits": [
       "Klingon"
     ],
@@ -635,6 +703,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1CAR10/16",
+    "glory": null,
     "species_traits": [
       "Bajoran"
     ],
@@ -656,6 +726,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1CAR11/16",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Starfleet",
@@ -674,6 +746,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1CAR12/16",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Engineer"
@@ -693,6 +767,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1CAR13/16",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Communication"
@@ -714,6 +790,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1CAR14/16",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Creature"
@@ -730,6 +808,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1CAR15/16",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Weapon"
@@ -746,6 +826,8 @@
     "suit": "Cargo",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1CAR16/16",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -760,6 +842,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1SHI01/13",
+    "glory": 2,
     "species_traits": [
       "Romulan"
     ],
@@ -784,6 +868,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1SHI02/13",
+    "glory": 2,
     "species_traits": [
       "Borg"
     ],
@@ -798,6 +884,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1SHI03/13",
+    "glory": 2,
     "species_traits": [
       "Vulcan"
     ],
@@ -814,6 +902,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1SHI04/13",
+    "glory": null,
     "species_traits": [
       "Aenar",
       "Romulan"
@@ -837,6 +927,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1SHI05/13",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -862,6 +954,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1SHI06/13",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Shady"
@@ -883,6 +977,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1SHI07/13",
+    "glory": 2,
     "species_traits": [
       "Pakled"
     ],
@@ -899,6 +995,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1SHI08/13",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Shady",
@@ -916,6 +1014,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1SHI09/13",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet",
@@ -937,6 +1037,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1SHI10/13",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet",
@@ -958,6 +1060,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1SHI11/13",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -972,6 +1076,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1SHI12/13",
+    "glory": 2,
     "species_traits": [
       "Alien"
     ],
@@ -993,6 +1099,8 @@
     "suit": "Ship",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1SHI13/13",
+    "glory": null,
     "species_traits": [
       "Xindi"
     ],
@@ -1012,6 +1120,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ALL01/13",
+    "glory": 3,
     "species_traits": [
       "Klingon"
     ],
@@ -1026,6 +1136,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ALL02/13",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1038,6 +1150,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ALL03/13",
+    "glory": 3,
     "species_traits": [
       "Alien"
     ],
@@ -1054,6 +1168,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ALL04/13",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1066,6 +1182,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ALL05/13",
+    "glory": 3,
     "species_traits": [
       "Alien"
     ],
@@ -1080,6 +1198,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ALL06/13",
+    "glory": 3,
     "species_traits": [
       "Orion",
       "Andorian"
@@ -1099,6 +1219,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ALL07/13",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1111,6 +1233,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ALL08/13",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [
       "Business",
@@ -1126,6 +1250,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ALL09/13",
+    "glory": null,
     "species_traits": [
       "Kelpien"
     ],
@@ -1145,6 +1271,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ALL10/13",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Telepath",
@@ -1167,6 +1295,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ALL11/13",
+    "glory": 3,
     "species_traits": [
       "Transcendent"
     ],
@@ -1183,6 +1313,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ALL12/13",
+    "glory": null,
     "species_traits": [
       "Alien"
     ],
@@ -1204,6 +1336,8 @@
     "suit": "Ally",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ALL13/13",
+    "glory": 3,
     "species_traits": [
       "Alien"
     ],
@@ -1218,6 +1352,8 @@
     "suit": "Encounter",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ENC01/8",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Anomaly",
@@ -1238,6 +1374,8 @@
     "suit": "Encounter",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ENC02/8",
+    "glory": 6,
     "species_traits": [],
     "regular_traits": [
       "Telepath",
@@ -1253,6 +1391,8 @@
     "suit": "Encounter",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ENC03/8",
+    "glory": 3,
     "species_traits": [
       "Transcendent"
     ],
@@ -1272,6 +1412,8 @@
     "suit": "Encounter",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ENC04/8",
+    "glory": null,
     "species_traits": [
       "Alien"
     ],
@@ -1293,6 +1435,8 @@
     "suit": "Encounter",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ENC05/8",
+    "glory": 8,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -1307,6 +1451,8 @@
     "suit": "Encounter",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ENC06/8",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Scientist"
@@ -1326,6 +1472,8 @@
     "suit": "Encounter",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ENC07/8",
+    "glory": 1,
     "species_traits": [
       "Transcendent",
       "Vulcan"
@@ -1344,6 +1492,8 @@
     "suit": "Encounter",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1ENC08/8",
+    "glory": 9,
     "species_traits": [
       "Synthetic"
     ],
@@ -1358,6 +1508,8 @@
     "suit": "Incident",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1INC01/6",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1370,6 +1522,8 @@
     "suit": "Incident",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1INC02/6",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1382,6 +1536,8 @@
     "suit": "Incident",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1INC03/6",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1394,6 +1550,8 @@
     "suit": "Incident",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1INC04/6",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1406,6 +1564,8 @@
     "suit": "Incident",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1INC05/6",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1418,6 +1578,8 @@
     "suit": "Incident",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1INC06/6",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1430,6 +1592,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC01/20",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [
       "Scientist",
@@ -1450,6 +1614,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC02/20",
+    "glory": null,
     "species_traits": [
       "Alien"
     ],
@@ -1471,6 +1637,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC03/20",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1488,6 +1656,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC04/20",
+    "glory": 1,
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -1502,6 +1672,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC05/20",
+    "glory": 3,
     "species_traits": [
       "Betazoid"
     ],
@@ -1529,6 +1701,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC06/20",
+    "glory": 3,
     "species_traits": [
       "Human"
     ],
@@ -1551,6 +1725,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC07/20",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starbase"
@@ -1570,6 +1746,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC08/20",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1587,6 +1765,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC09/20",
+    "glory": 1,
     "species_traits": [
       "Bajoran",
       "Romulan"
@@ -1604,6 +1784,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC10/20",
+    "glory": 3,
     "species_traits": [
       "Breen"
     ],
@@ -1627,6 +1809,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC11/20",
+    "glory": 5,
     "species_traits": [],
     "regular_traits": [
       "Business",
@@ -1642,6 +1826,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC12/20",
+    "glory": 5,
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -1665,6 +1851,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC13/20",
+    "glory": null,
     "species_traits": [
       "Cardassian"
     ],
@@ -1688,6 +1876,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC14/20",
+    "glory": 5,
     "species_traits": [],
     "regular_traits": [
       "Starfleet",
@@ -1703,6 +1893,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC15/20",
+    "glory": 1,
     "species_traits": [],
     "regular_traits": [
       "Starfleet",
@@ -1728,6 +1920,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC16/20",
+    "glory": 4,
     "species_traits": [],
     "regular_traits": [
       "Business"
@@ -1747,6 +1941,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC17/20",
+    "glory": 10,
     "species_traits": [
       "Alien"
     ],
@@ -1761,6 +1957,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC18/20",
+    "glory": 1,
     "species_traits": [
       "Klingon"
     ],
@@ -1779,6 +1977,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC19/20",
+    "glory": null,
     "species_traits": [
       "Orion"
     ],
@@ -1800,6 +2000,8 @@
     "suit": "Location",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": "1LOC20/20",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1821,6 +2023,8 @@
     "suit": "Captain",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC01/24",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -1837,6 +2041,8 @@
     "suit": "Person",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC13/24",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -1854,6 +2060,8 @@
     "suit": "Person",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC12/24",
+    "glory": null,
     "species_traits": [
       "Android",
       "Synthetic"
@@ -1872,6 +2080,8 @@
     "suit": "Person",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC08/24",
+    "glory": 2,
     "species_traits": [
       "Betazoid",
       "Human"
@@ -1895,6 +2105,8 @@
     "suit": "Person",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC09/24",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -1918,6 +2130,8 @@
     "suit": "Person",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC24/24",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -1934,6 +2148,8 @@
     "suit": "Person",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC23/24",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -1953,6 +2169,8 @@
     "suit": "Ally",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC04/24",
+    "glory": 3,
     "species_traits": [
       "Alien"
     ],
@@ -1967,6 +2185,8 @@
     "suit": "Location",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC06/24",
+    "glory": 1,
     "species_traits": [
       "Android"
     ],
@@ -1992,6 +2212,8 @@
     "suit": "Location",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC21/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Anomaly",
@@ -2012,6 +2234,8 @@
     "suit": "Location",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC07/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet",
@@ -2040,6 +2264,8 @@
     "suit": "Cargo",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC05/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Cloak",
@@ -2063,6 +2289,8 @@
     "suit": "Ship",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC14/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -2077,6 +2305,8 @@
     "suit": "Ship",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC10/24",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Starfleet",
@@ -2098,6 +2328,8 @@
     "suit": "Ship",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC02/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -2117,6 +2349,8 @@
     "suit": "Directive",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC15/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2129,6 +2363,8 @@
     "suit": "Directive",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC16/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2141,6 +2377,8 @@
     "suit": "Directive",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC11/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2153,6 +2391,8 @@
     "suit": "Directive",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC03/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2170,6 +2410,8 @@
     "suit": "Directive",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC17/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2182,6 +2424,8 @@
     "suit": "Directive",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC22/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2194,6 +2438,8 @@
     "suit": "Directive",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC18/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2206,6 +2452,8 @@
     "suit": "Directive",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC19/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2218,6 +2466,8 @@
     "suit": "Incident",
     "source": "Picard",
     "game_box": "Captain's Chair",
+    "card_number": "1PIC20/24",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2230,6 +2480,8 @@
     "suit": "Captain",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR01/26",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -2252,6 +2504,8 @@
     "suit": "Person",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR23/26",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Business",
@@ -2267,6 +2521,8 @@
     "suit": "Person",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR06/26",
+    "glory": 2,
     "species_traits": [
       "Human",
       "Trill"
@@ -2284,6 +2540,8 @@
     "suit": "Person",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR05/26",
+    "glory": 2,
     "species_traits": [
       "Human"
     ],
@@ -2309,6 +2567,8 @@
     "suit": "Person",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR08/26",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -2332,6 +2592,8 @@
     "suit": "Person",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR13/26",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -2349,6 +2611,8 @@
     "suit": "Person",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR07/26",
+    "glory": 3,
     "species_traits": [
       "Human"
     ],
@@ -2366,6 +2630,8 @@
     "suit": "Person",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR21/26",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -2383,6 +2649,8 @@
     "suit": "Person",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR20/26",
+    "glory": null,
     "species_traits": [
       "Human",
       "Synthetic"
@@ -2410,6 +2678,8 @@
     "suit": "Person",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR24/26",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -2432,6 +2702,8 @@
     "suit": "Person",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR25/26",
+    "glory": null,
     "species_traits": [
       "Kelpien"
     ],
@@ -2448,6 +2720,8 @@
     "suit": "Person",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR22/26",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -2466,6 +2740,8 @@
     "suit": "Location",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR09/26",
+    "glory": 3,
     "species_traits": [
       "Human"
     ],
@@ -2480,6 +2756,8 @@
     "suit": "Location",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR12/26",
+    "glory": null,
     "species_traits": [
       "Vulcan",
       "Romulan"
@@ -2500,6 +2778,8 @@
     "suit": "Location",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR10/26",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -2514,6 +2794,8 @@
     "suit": "Cargo",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR11/26",
+    "glory": 2,
     "species_traits": [
       "Alien"
     ],
@@ -2530,6 +2812,8 @@
     "suit": "Person",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR14/26",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Creature"
@@ -2544,6 +2828,8 @@
     "suit": "Ship",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR15/26",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Cloak"
@@ -2558,6 +2844,8 @@
     "suit": "Ship",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR03/26",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet",
@@ -2582,6 +2870,8 @@
     "suit": "Ship",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR04/26",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet",
@@ -2610,6 +2900,8 @@
     "suit": "Directive",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR16/26",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2622,6 +2914,8 @@
     "suit": "Directive",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR19/26",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2634,6 +2928,8 @@
     "suit": "Directive",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR17/26",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2646,6 +2942,8 @@
     "suit": "Directive",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR18/26",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2658,6 +2956,8 @@
     "suit": "Incident",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR26/26",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2670,6 +2970,8 @@
     "suit": "Captain",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL01/24",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -2691,6 +2993,8 @@
     "suit": "Person",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL21/24",
+    "glory": null,
     "species_traits": [
       "Klingon",
       "Human"
@@ -2710,6 +3014,8 @@
     "suit": "Person",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL06/24",
+    "glory": 2,
     "species_traits": [
       "Trill"
     ],
@@ -2726,6 +3032,8 @@
     "suit": "Person",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL07/24",
+    "glory": 3,
     "species_traits": [
       "Klingon"
     ],
@@ -2742,6 +3050,8 @@
     "suit": "Person",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL08/24",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -2763,6 +3073,8 @@
     "suit": "Person",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL22/24",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -2779,6 +3091,8 @@
     "suit": "Person",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL23/24",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -2793,6 +3107,8 @@
     "suit": "Person",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL14/24",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -2809,6 +3125,8 @@
     "suit": "Location",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL05/24",
+    "glory": 1,
     "species_traits": [
       "Klingon"
     ],
@@ -2831,6 +3149,8 @@
     "suit": "Location",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL20/24",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -2856,6 +3176,8 @@
     "suit": "Location",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL13/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2873,6 +3195,8 @@
     "suit": "Cargo",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL19/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Weapon"
@@ -2889,6 +3213,8 @@
     "suit": "Cargo",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL03/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Cloak"
@@ -2911,6 +3237,8 @@
     "suit": "Cargo",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL04/24",
+    "glory": 6,
     "species_traits": [
       "Klingon"
     ],
@@ -2928,6 +3256,8 @@
     "suit": "Ship",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL09/24",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -2947,6 +3277,8 @@
     "suit": "Ship",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL02/24",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -2961,6 +3293,8 @@
     "suit": "Ship",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL24/24",
+    "glory": null,
     "species_traits": [
       "Klingon"
     ],
@@ -2975,6 +3309,8 @@
     "suit": "Directive",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL15/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2987,6 +3323,8 @@
     "suit": "Directive",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL16/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3004,6 +3342,8 @@
     "suit": "Directive",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL17/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3016,6 +3356,8 @@
     "suit": "Directive",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL10/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3028,6 +3370,8 @@
     "suit": "Directive",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL18/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3040,6 +3384,8 @@
     "suit": "Incident",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL11/24",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3052,6 +3398,8 @@
     "suit": "Incident",
     "source": "Koloth",
     "game_box": "Captain's Chair",
+    "card_number": "1KOL12/24",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3064,6 +3412,8 @@
     "suit": "Captain",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR01/24",
+    "glory": null,
     "species_traits": [
       "Andorian"
     ],
@@ -3085,6 +3435,8 @@
     "suit": "Person",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR20/24",
+    "glory": null,
     "species_traits": [
       "Andorian"
     ],
@@ -3108,6 +3460,8 @@
     "suit": "Person",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR21/24",
+    "glory": null,
     "species_traits": [
       "Andorian"
     ],
@@ -3131,6 +3485,8 @@
     "suit": "Person",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR10/24",
+    "glory": null,
     "species_traits": [
       "Aenar"
     ],
@@ -3148,6 +3504,8 @@
     "suit": "Person",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR09/24",
+    "glory": null,
     "species_traits": [
       "Andorian"
     ],
@@ -3169,6 +3527,8 @@
     "suit": "Location",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR23/24",
+    "glory": null,
     "species_traits": [
       "Andorian"
     ],
@@ -3183,6 +3543,8 @@
     "suit": "Location",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR12/24",
+    "glory": null,
     "species_traits": [
       "Andorian",
       "Vulcan"
@@ -3200,6 +3562,8 @@
     "suit": "Location",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR04/24",
+    "glory": 3,
     "species_traits": [],
     "regular_traits": [
       "Business"
@@ -3214,6 +3578,8 @@
     "suit": "Ally",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR13/24",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -3228,6 +3594,8 @@
     "suit": "Ally",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR03/24",
+    "glory": 3,
     "species_traits": [
       "Aenar"
     ],
@@ -3244,6 +3612,8 @@
     "suit": "Cargo",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR08/24",
+    "glory": null,
     "species_traits": [
       "Andorian"
     ],
@@ -3265,6 +3635,8 @@
     "suit": "Cargo",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR24/24",
+    "glory": null,
     "species_traits": [
       "Andorian"
     ],
@@ -3284,6 +3656,8 @@
     "suit": "Cargo",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR06/24",
+    "glory": 2,
     "species_traits": [],
     "regular_traits": [
       "Business"
@@ -3298,6 +3672,8 @@
     "suit": "Cargo",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR19/24",
+    "glory": null,
     "species_traits": [
       "Andorian"
     ],
@@ -3316,6 +3692,8 @@
     "suit": "Ship",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR07/24",
+    "glory": 4,
     "species_traits": [
       "Andorian"
     ],
@@ -3335,6 +3713,8 @@
     "suit": "Ship",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR02/24",
+    "glory": null,
     "species_traits": [
       "Andorian"
     ],
@@ -3354,6 +3734,8 @@
     "suit": "Directive",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR05/24",
+    "glory": null,
     "species_traits": [
       "Andorian"
     ],
@@ -3375,6 +3757,8 @@
     "suit": "Directive",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR17/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3387,6 +3771,8 @@
     "suit": "Directive",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR16/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3399,6 +3785,8 @@
     "suit": "Directive",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR18/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3411,6 +3799,8 @@
     "suit": "Directive",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR22/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3423,6 +3813,8 @@
     "suit": "Directive",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR11/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3435,6 +3827,8 @@
     "suit": "Incident",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR15/24",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3447,6 +3841,8 @@
     "suit": "Incident",
     "source": "Shran",
     "game_box": "Captain's Chair",
+    "card_number": "1SHR14/24",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3459,6 +3855,8 @@
     "suit": "Captain",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS01/25",
+    "glory": null,
     "species_traits": [
       "Human",
       "Transcendent"
@@ -3476,6 +3874,8 @@
     "suit": "Location",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS02/25",
+    "glory": null,
     "species_traits": [
       "Bajoran"
     ],
@@ -3495,6 +3895,8 @@
     "suit": "Ship",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS03/25",
+    "glory": null,
     "species_traits": [
       "Cardassian"
     ],
@@ -3511,6 +3913,8 @@
     "suit": "Person",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS13/25",
+    "glory": null,
     "species_traits": [
       "Human"
     ],
@@ -3528,6 +3932,8 @@
     "suit": "Person",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS14/25",
+    "glory": null,
     "species_traits": [
       "Changeling"
     ],
@@ -3544,6 +3950,8 @@
     "suit": "Ally",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS12/25",
+    "glory": null,
     "species_traits": [
       "Bajoran"
     ],
@@ -3558,6 +3966,8 @@
     "suit": "Directive",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS11/25",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3570,6 +3980,8 @@
     "suit": "Ship",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS15/25",
+    "glory": null,
     "species_traits": [
       "Romulan"
     ],
@@ -3589,6 +4001,8 @@
     "suit": "Location",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS07/25",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet",
@@ -3613,6 +4027,8 @@
     "suit": "Person",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS09/25",
+    "glory": 2,
     "species_traits": [
       "Cardassian"
     ],
@@ -3632,6 +4048,8 @@
     "suit": "Person",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS08/25",
+    "glory": 2,
     "species_traits": [
       "Human"
     ],
@@ -3650,6 +4068,8 @@
     "suit": "Person",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS22/25",
+    "glory": null,
     "species_traits": [
       "Trill"
     ],
@@ -3672,6 +4092,8 @@
     "suit": "Person",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS23/25",
+    "glory": null,
     "species_traits": [
       "Bajoran"
     ],
@@ -3690,6 +4112,8 @@
     "suit": "Person",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS24/25",
+    "glory": null,
     "species_traits": [
       "Ferengi"
     ],
@@ -3707,6 +4131,8 @@
     "suit": "Person",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS10/25",
+    "glory": 2,
     "species_traits": [
       "Klingon"
     ],
@@ -3730,6 +4156,8 @@
     "suit": "Location",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS21/25",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -3753,6 +4181,8 @@
     "suit": "Cargo",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS04/25",
+    "glory": null,
     "species_traits": [
       "Transcendent"
     ],
@@ -3774,6 +4204,8 @@
     "suit": "Encounter",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS05/25",
+    "glory": 1,
     "species_traits": [
       "Transcendent"
     ],
@@ -3792,6 +4224,8 @@
     "suit": "Cargo",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS06/25",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -3816,6 +4250,8 @@
     "suit": "Ship",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS25/25",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -3830,6 +4266,8 @@
     "suit": "Directive",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS16/25",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3842,6 +4280,8 @@
     "suit": "Directive",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS18/25",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3854,6 +4294,8 @@
     "suit": "Directive",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS20/25",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3866,6 +4308,8 @@
     "suit": "Directive",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS17/25",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3878,6 +4322,8 @@
     "suit": "Incident",
     "source": "Sisko",
     "game_box": "Captain's Chair",
+    "card_number": "1SIS19/25",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -3890,6 +4336,8 @@
     "suit": "Captain",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL01/24",
+    "glory": null,
     "species_traits": [
       "Romulan",
       "Human"
@@ -3907,6 +4355,8 @@
     "suit": "Person",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL04/24",
+    "glory": null,
     "species_traits": [
       "Romulan"
     ],
@@ -3926,6 +4376,8 @@
     "suit": "Person",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL18/24",
+    "glory": null,
     "species_traits": [
       "Romulan"
     ],
@@ -3942,6 +4394,8 @@
     "suit": "Person",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL05/24",
+    "glory": null,
     "species_traits": [
       "Romulan"
     ],
@@ -3968,6 +4422,8 @@
     "suit": "Person",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL16/24",
+    "glory": null,
     "species_traits": [
       "Romulan"
     ],
@@ -3984,6 +4440,8 @@
     "suit": "Person",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL06/24",
+    "glory": 3,
     "species_traits": [
       "Reman",
       "Human"
@@ -4003,6 +4461,8 @@
     "suit": "Person",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL12/24",
+    "glory": null,
     "species_traits": [
       "Romulan",
       "Vulcan"
@@ -4021,6 +4481,8 @@
     "suit": "Person",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL14/24",
+    "glory": null,
     "species_traits": [
       "Romulan"
     ],
@@ -4037,6 +4499,8 @@
     "suit": "Ally",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL24/24",
+    "glory": null,
     "species_traits": [
       "Reman"
     ],
@@ -4054,6 +4518,8 @@
     "suit": "Location",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL19/24",
+    "glory": null,
     "species_traits": [
       "Reman"
     ],
@@ -4070,6 +4536,8 @@
     "suit": "Location",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL20/24",
+    "glory": null,
     "species_traits": [
       "Romulan"
     ],
@@ -4095,6 +4563,8 @@
     "suit": "Cargo",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL15/24",
+    "glory": null,
     "species_traits": [
       "Romulan"
     ],
@@ -4113,6 +4583,8 @@
     "suit": "Cargo",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL08/24",
+    "glory": null,
     "species_traits": [
       "Romulan"
     ],
@@ -4136,6 +4608,8 @@
     "suit": "Ship",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL02/24",
+    "glory": null,
     "species_traits": [
       "Romulan"
     ],
@@ -4157,6 +4631,8 @@
     "suit": "Ship",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL17/24",
+    "glory": null,
     "species_traits": [
       "Romulan"
     ],
@@ -4178,6 +4654,8 @@
     "suit": "Ship",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL23/24",
+    "glory": null,
     "species_traits": [
       "Romulan"
     ],
@@ -4199,6 +4677,8 @@
     "suit": "Ship",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL03/24",
+    "glory": 4,
     "species_traits": [
       "Romulan"
     ],
@@ -4222,6 +4702,8 @@
     "suit": "Ship",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL07/24",
+    "glory": 4,
     "species_traits": [
       "Reman"
     ],
@@ -4245,6 +4727,8 @@
     "suit": "Directive",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL09/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4257,6 +4741,8 @@
     "suit": "Directive",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL10/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4274,6 +4760,8 @@
     "suit": "Directive",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL11/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4286,6 +4774,8 @@
     "suit": "Directive",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL21/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4298,6 +4788,8 @@
     "suit": "Directive",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL22/24",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4310,6 +4802,8 @@
     "suit": "Incident",
     "source": "Sela",
     "game_box": "Captain's Chair",
+    "card_number": "1SEL13/24",
+    "glory": -2,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4322,6 +4816,8 @@
     "suit": "Status",
     "source": "Burnham",
     "game_box": "Captain's Chair",
+    "card_number": "1BUR02/26",
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4334,6 +4830,8 @@
     "suit": "Directive",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": null,
+    "glory": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -4346,6 +4844,8 @@
     "suit": "Directive",
     "source": "Common",
     "game_box": "Captain's Chair",
+    "card_number": null,
+    "glory": null,
     "species_traits": [],
     "regular_traits": [
       "Shady",
