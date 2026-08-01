@@ -475,7 +475,7 @@
     "card_number": "3LOC01/2",
     "variant": "original",
     "glory": 2,
-    "position_indicator": null,
+    "position_indicator": "Starting",
     "species_traits": [],
     "regular_traits": [
       "Anomaly",
@@ -494,7 +494,7 @@
     "card_number": "3LOC02/2",
     "variant": "original",
     "glory": 1,
-    "position_indicator": null,
+    "position_indicator": "Advanced",
     "species_traits": [
       "Orion"
     ],
