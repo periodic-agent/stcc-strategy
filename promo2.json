@@ -7,9 +7,13 @@
     "game_box": "Promo Pack 2",
     "card_number": "0ALL01/?",
     "glory": 3,
-    "species_traits": [],
+    "species_traits": [
+      "Borg"
+    ],
     "regular_traits": [],
-    "other_traits": [],
+    "other_traits": [
+      "Lower Decker"
+    ],
     "filename": "drones-of-cube-90182.jpg",
     "icons": []
   },
@@ -21,8 +25,13 @@
     "game_box": "Promo Pack 2",
     "card_number": "0CAR02/?",
     "glory": 2,
-    "species_traits": [],
-    "regular_traits": [],
+    "species_traits": [
+      "Android"
+    ],
+    "regular_traits": [
+      "Anomaly",
+      "Hologram"
+    ],
     "other_traits": [],
     "filename": "frank-hollander.jpg",
     "icons": []
@@ -36,8 +45,12 @@
     "card_number": "0CAR03/?",
     "glory": 2,
     "species_traits": [],
-    "regular_traits": [],
-    "other_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
     "filename": "golden-statue-of-obrien.jpg",
     "icons": []
   },
@@ -50,7 +63,11 @@
     "card_number": "0LOC01/?",
     "glory": 3,
     "species_traits": [],
-    "regular_traits": [],
+    "regular_traits": [
+      "Ops",
+      "Starfleet",
+      "Starbase"
+    ],
     "other_traits": [],
     "filename": "starbase-80.jpg",
     "icons": []
@@ -64,7 +81,10 @@
     "card_number": "0INC03/?",
     "glory": -2,
     "species_traits": [],
-    "regular_traits": [],
+    "regular_traits": [
+      "Anomaly",
+      "Communication"
+    ],
     "other_traits": [],
     "filename": "subspace-rhapsody.jpg",
     "icons": []
@@ -78,9 +98,17 @@
     "card_number": "0SHI02/?",
     "glory": 2,
     "species_traits": [],
-    "regular_traits": [],
+    "regular_traits": [
+      "Scientist",
+      "Starfleet"
+    ],
     "other_traits": [],
     "filename": "uss-cabot.jpg",
-    "icons": []
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ]
   }
 ]
