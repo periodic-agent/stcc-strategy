@@ -120,7 +120,8 @@ globalThis.__api = {
   stepLightbox:(d)=>stepLightbox(d),
   get STRATEGY_COUNTS(){return STRATEGY_COUNTS;}, get openStrategyId(){return openStrategyId;},
   buildPillCard:(c)=>buildPillCard(c), buildStrategyDrawer:(c)=>buildStrategyDrawer(c),
-  ensureStrategyIndex:()=>ensureStrategyIndex(), toggleStrategy:(id)=>toggleStrategy(id)
+  ensureStrategyIndex:()=>ensureStrategyIndex(), toggleStrategy:(id)=>toggleStrategy(id),
+  applyQuery:(t)=>applyQuery(t)
 };`;
 vm.runInContext(body + '\n' + epilogue, sandbox, {filename:'scanner'});
 await new Promise(r=>setTimeout(r,300));
@@ -216,6 +217,42 @@ if(fs.existsSync(repo + '/img/box1')){
 }
 assert(typeof api.setView === 'function' && typeof api.clearAll === 'function',
   'inline-handler functions are reachable at global scope');
+
+// --- query keys: glory, position, variant -----------------------------------
+function runQuery(q){
+  api.applyQuery(q); api.render();
+  return api.ALL_CARDS.filter(c=>api.cardMatches(c));
+}
+const g4 = runQuery('glory:4');
+assert(g4.length > 0 && g4.every(c=>Number(c.glory) === 4),
+  'glory:4 returns only cards whose glory is 4');
+const gGe = runQuery('glory>=4');
+assert(gGe.length >= g4.length && gGe.every(c=>Number(c.glory) >= 4),
+  'glory>=4 respects the comparison and is a superset of glory:4');
+assert(runQuery('glory>0').every(c=>c.glory !== null && c.glory !== undefined),
+  'no card without a glory value is ever returned by a glory query');
+const allDefault = runQuery('');
+const gloryless = allDefault.filter(c=>c.glory === null || c.glory === undefined);
+assert(gloryless.length > 0 && runQuery('glory<99').length === allDefault.length - gloryless.length,
+  'glory-less cards are excluded from an open-ended range, not swept in');
+
+const reserve = runQuery('position:reserve');
+assert(reserve.length > 0 && reserve.every(c=>c.position_indicator === 'Reserve'),
+  'position:reserve matches the starting-position indicator');
+assert(runQuery('position:incident-deck').every(c=>c.position_indicator === 'Incident Deck'),
+  'a hyphen in a position value stands in for a space');
+assert(runQuery('position:rewards').every(c=>c.position_indicator === 'Rewards'),
+  'position:rewards finds the Box 3 Commons carrying it');
+
+const dupes = runQuery('box:all variant:duplicate');
+assert(dupes.length > 0 && dupes.every(c=>c.badgeKind === 'duplicate'),
+  'variant:duplicate returns exactly the cards wearing the Duplicate badge');
+const upd = runQuery('box:all variant:update');
+assert(upd.length > 0 && upd.every(c=>c.badgeKind === 'update'),
+  'variant:update returns exactly the cards wearing the Update badge');
+assert(runQuery('box:core variant:duplicate').length === 0,
+  'with only Box 1 selected nothing wears a badge, so variant:duplicate is empty');
+api.applyQuery(''); api.render();
 
 // Box row: default selection and the "All" pill.
 function freshBoxState(){
