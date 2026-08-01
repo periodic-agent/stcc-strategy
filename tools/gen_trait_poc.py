@@ -6,7 +6,7 @@ tools/extract_trait_icons.py and tools/extract_skillfocus_icons.py.
 Usage: python3 gen_trait_poc.py <icons_dir> <skillfocus_dir> <out_html>
 """
 import sys, base64, glob, os, io
-from PIL import Image, ImageDraw
+from PIL import Image, ImageOps, ImageDraw
 
 SPECIES = {'alien', 'human', 'klingon', 'romulan', 'trill', 'ferengi', 'betazoid', 'android', 'synthetic'}
 OTHER = {'attack', 'ongoing', 'wildcard'}
@@ -76,11 +76,22 @@ def b64_outlined(f, trait, size=96, border=2):
     canvas.save(buf, format='PNG')
     return 'data:image/png;base64,' + base64.b64encode(buf.getvalue()).decode()
 
-def b64_skill_banner(f, widen=1.2):
+def b64_skill_banner(f, widen=1.2, chip=False):
     """Skill icons print as a banner rooted in the card's left edge. The
     cyclopedia's D block is near-square, so extend it leftward: every row is
     padded with its own leftmost opaque color (handles the tricolor Any).
-    The Variable '?' gets a white banner backing instead."""
+    The Variable '?' gets a white banner backing instead.
+
+    chip=True returns the filter-chip variant, with the cap mirrored to the
+    LEFT so it nests concentrically inside the pill's rounded left edge and the
+    flat edge falls on the right. The D block is mirrored first (so the glyph
+    stays inside it rather than riding over the cap), the glyph's bounding box
+    is then mirrored back in place to undo the reversal, and the colour is
+    extended rightward. Every row of these banners is a single colour (solid,
+    or the horizontal tricolour of Any), so the second flip leaves the field
+    underneath untouched. The result is cropped to its alpha box, so at the
+    chip's inner height the cap radius equals the pill's inner radius.
+    """
     img = Image.open(f).convert('RGBA')
     w, h = img.size
     W = int(w * widen)
@@ -92,15 +103,83 @@ def b64_skill_banner(f, widen=1.2):
         ss = 4
         m = Image.new('L', (W * ss, h * ss), 0)
         d = ImageDraw.Draw(m)
-        y0, y1 = int(h * ss * 0.045), int(h * ss * 0.955)
+        y0, y1 = (0, h * ss - 1) if chip else (int(h * ss * 0.045), int(h * ss * 0.955))
         r = (y1 - y0) // 2
-        d.rectangle([0, y0, W * ss - r, y1], fill=255)
-        d.pieslice([W * ss - 2 * r, y0, W * ss, y1], -90, 90, fill=255)
+        if chip:
+            d.rectangle([r, y0, W * ss, y1], fill=255)
+            d.pieslice([0, y0, 2 * r, y1], 90, 270, fill=255)
+        else:
+            d.rectangle([0, y0, W * ss - r, y1], fill=255)
+            d.pieslice([W * ss - 2 * r, y0, W * ss, y1], -90, 90, fill=255)
         m = m.resize((W, h), Image.LANCZOS)
         white = Image.new('RGBA', (W, h), (255, 255, 255, 255))
         canvas.paste(white, (0, 0), m)
         q = img.resize((int(w * 0.8), int(h * 0.8)), Image.LANCZOS)
         canvas.paste(q, ((W - q.width) // 2, (h - q.height) // 2), q)
+    elif chip:
+        # Mirror the block so the cap lands left; glyph POSITIONS mirror with it,
+        # which guarantees they still fit the shape. Each glyph is then flipped
+        # back inside its own bounding box so the symbol reads unreversed. Glyphs
+        # are found as white components merged by proximity: a handshake or a
+        # star field is many disconnected white islands, and flipping those
+        # individually would scramble the drawing.
+        blk = ImageOps.mirror(img)
+        bp = blk.load()
+        white = lambda p: p[3] > 150 and min(p[:3]) > 150
+        seen, boxes = set(), []
+        for sy in range(h):
+            for sx in range(w):
+                if (sx, sy) in seen or not white(bp[sx, sy]):
+                    continue
+                comp, stack = [], [(sx, sy)]
+                seen.add((sx, sy))
+                while stack:
+                    x, y = stack.pop()
+                    comp.append((x, y))
+                    for nx, ny in ((x+1, y), (x-1, y), (x, y+1), (x, y-1)):
+                        if 0 <= nx < w and 0 <= ny < h and (nx, ny) not in seen and white(bp[nx, ny]):
+                            seen.add((nx, ny))
+                            stack.append((nx, ny))
+                boxes.append([min(p[0] for p in comp), min(p[1] for p in comp),
+                              max(p[0] for p in comp) + 1, max(p[1] for p in comp) + 1])
+        pad = max(4, w // 18)
+        merged = True
+        while merged:
+            merged = False
+            for i in range(len(boxes)):
+                for j in range(len(boxes) - 1, i, -1):
+                    a, b = boxes[i], boxes[j]
+                    if (a[0] - pad < b[2] and b[0] - pad < a[2]
+                            and a[1] - pad < b[3] and b[1] - pad < a[3]):
+                        boxes[i] = [min(a[0], b[0]), min(a[1], b[1]),
+                                    max(a[2], b[2]), max(a[3], b[3])]
+                        boxes.pop(j)
+                        merged = True
+        for bx in boxes:
+            if (bx[2] - bx[0]) * (bx[3] - bx[1]) < 40:
+                continue
+            # Only flip back when every pixel of the flipped glyph still lands on
+            # opaque field. Any's three symbols hug what used to be the straight
+            # edge and would spill out of the cap, so they stay mirrored (they
+            # read the same at chip size); the rest flip cleanly.
+            fits = all(bp[bx[0] + bx[2] - 1 - x, y][3] > 200
+                       for y in range(bx[1], bx[3]) for x in range(bx[0], bx[2])
+                       if white(bp[x, y]))
+            if not fits:
+                continue
+            reg = blk.crop(tuple(bx))
+            blk.paste(ImageOps.mirror(reg), tuple(bx))
+        bp = blk.load()
+        canvas.paste(blk, (0, 0), blk)
+        cp = canvas.load()
+        for y in range(h):
+            row = [x for x in range(w) if bp[x, y][3] > 200]
+            if not row:
+                continue
+            rx = max(row)
+            color = bp[max(rx - 2, 0), y]
+            for x in range(max(rx - 2, 0), W):
+                cp[x, y] = color
     else:
         canvas.paste(img, (W - w, 0), img)
         px = img.load()
@@ -113,6 +192,10 @@ def b64_skill_banner(f, widen=1.2):
             color = px[min(lx + 2, w - 1), y]
             for x in range(0, W - w + lx + 2):
                 cp[x, y] = color
+    if chip:
+        bb = canvas.getbbox()
+        if bb:
+            canvas = canvas.crop(bb)
     buf = io.BytesIO()
     canvas.save(buf, format='PNG')
     return 'data:image/png;base64,' + base64.b64encode(buf.getvalue()).decode()

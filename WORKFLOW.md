@@ -484,7 +484,15 @@ copy of the pre-card-face scanner and emits `cardface-assets.js`).
   active. Every chip row shares one geometry: 22px height, Antonio 600 at
   `.86rem`, `.03em` tracking, uppercase, count in a `.62rem` dimmed `.cnt` slot.
   Skills/Focus (`.skill-pill`) kept the older Exo 2 metrics and rendered ~1.2px
-  shorter until 1 Aug 2026; they now inherit the same block. Their active state
+  shorter until 1 Aug 2026; they now inherit the same block. The Skills chips
+  use a mirrored banner asset (`CARDFACE.skillChip`, `b64_skill_banner(chip=True)`):
+  the cap sits on the LEFT so it nests concentrically inside the pill's rounded
+  edge, flat edge on the right, sized to the chip's 19px inner height so the two
+  radii match; the card banners (`CARDFACE.skill`) keep the printed orientation,
+  cap right. The generator mirrors the block (glyph positions mirror with it, so
+  they are guaranteed to fit), then flips each proximity-merged glyph cluster
+  back inside its own box, skipping any flip whose result would spill off the
+  field (only Any, whose symbols stay mirrored). Their active state
   is still a translucent family-colour wash rather than the solid fill used by
   trait and suit chips. Counts always render (incl. "(0)") in a per-chip width-locked slot so
   selection never reflows the row.

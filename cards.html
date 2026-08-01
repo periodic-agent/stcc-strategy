@@ -364,10 +364,14 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
    same Antonio face, size, tracking and caps. They kept the old Exo 2 metrics
    and rendered ~1.2px shorter, which read as a different family of control. */
 .skill-pill{display:inline-flex;align-items:center;height:22px;box-sizing:border-box;
-  padding:0 .55rem 0 .35rem;font-family:'Antonio',sans-serif;font-weight:600;
+  padding:0 .55rem 0 0;overflow:hidden;font-family:'Antonio',sans-serif;font-weight:600;
   font-size:.86rem;letter-spacing:.03em;line-height:1;text-transform:uppercase;}
 .skill-pill .cnt{font-size:.62rem;font-weight:400;opacity:.75;margin-left:.35rem;display:inline-block;text-align:left;}
-.skill-pill img{height:15px;width:auto;vertical-align:0;margin-right:.35rem;}
+.skill-pill img{height:15px;width:auto;vertical-align:0;margin-left:.35rem;margin-right:.35rem;}
+/* The skill banner's cap is mirrored left in the chip asset, so at the chip's
+   inner height (22px box less 2x1.5px border) its radius equals the pill's own
+   inner radius: flush left, the two curves are concentric. */
+.skill-pill img.skb{height:19px;margin-left:0;margin-right:.4rem;}
 /* ===== card entries ===== */
 .card-grid{grid-template-columns:repeat(auto-fill,minmax(248px,1fr));}
 .card-entry{border-radius:10px;}
@@ -434,7 +438,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 <meta property="og:url" content="https://periodic-agent.github.io/stcc-strategy/cards.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<script src="cardface-assets.js?v=f0c09cdc"></script>
+<script src="cardface-assets.js?v=2b7ff593"></script>
 </head>
 <body>
 
@@ -1333,8 +1337,8 @@ allSkills.forEach(t=>{
   {const m2=t.match(/^(.+)\s+(Skill|Focus)$/);
   const spec2=m2?m2[1].toLowerCase():'';
   const isF=m2&&m2[2]==='Focus';
-  const src=isF?CARDFACE.focus[spec2]:CARDFACE.skill[spec2];
-  p.innerHTML=(src?'<img src="'+src+'" alt="">':'')+'<span class="lbl">'+displayLabel(t)+'</span><span class="cnt"></span>';}
+  const src=isF?CARDFACE.focus[spec2]:(CARDFACE.skillChip||CARDFACE.skill)[spec2];
+  p.innerHTML=(src?'<img class="'+(isF?'fxi':'skb')+'" src="'+src+'" alt="">':'')+'<span class="lbl">'+displayLabel(t)+'</span><span class="cnt"></span>';}
   p.dataset.value=t;
   p.onclick=()=>toggleToken(skillTok(t));
   document.getElementById(/Focus$/.test(t)?'focusFilters':'skillFilters').appendChild(p);
