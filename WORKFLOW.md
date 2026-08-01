@@ -214,7 +214,7 @@ All 22 guides link one shared stylesheet instead of carrying inline CSS:
 
 ### Card images in guides
 - Cards: `img/box1|box2|box3/<name>.jpg` per the Card Image Filename Convention below; captain boards: `img/guides/<captain>/<captain>-board-basic|advanced.jpg`.
-- **Display-image standard (Jul 2026):** the repo carries display copies only — max width 1170 px (native iPhone width; lightbox renders 1:1), JPG quality 80, progressive, ~500-600 KB per card. High-resolution originals stay on local disk, off git. Every image import runs `tools/shrink_card_images.py` over the new files before pushing. **The filter gates on width alone and is idempotent**: a file already at or under 1170 px is finished and is never re-encoded. An earlier version also re-compressed anything over 400 KB, which meant every already-standard card (they run ~600 KB) took a fresh JPEG pass on each run and quietly accumulated generation loss; running it over the whole tree is now safe.
+- **Display-image standard (Jul 2026):** the repo carries display copies only — max width 1170 px (native iPhone width; lightbox renders 1:1), JPG quality 80, progressive, ~500-600 KB per card. High-resolution originals stay on local disk, off git. Every image import runs `tools/shrink_card_images.py` over the new files before pushing; the script skips anything already within the standard.
 - Captain guide photos: scrollable horizontal `.card-row` (height: 220px, mobile: 170px)
 - Single card images (TBG style): `.card-img` block (max-width: 260px)
 - All images: lightbox on click
@@ -343,42 +343,12 @@ Place just before `</body>`. Tracker endpoint: `https://stcc-compendium.goatcoun
 ### File structure
 ```
 box1.json    -- Captain's Chair, complete (250 cards)                         [repo ROOT]
-box2.json    -- To Boldly Go, live (250 cards incl. Khan deck + 2 Directives) [repo ROOT]
+box2.json    -- To Boldly Go, live (248 cards incl. Khan deck)                [repo ROOT]
 box3.json    -- Second Contact, live (99 cards: Common, Freeman, Pike, Riker) [repo ROOT]
 promo1.json  -- Promo Pack 1, complete (5 cards, split out of box1.json)      [repo ROOT]
 promo2.json  -- Promo Pack 2, seeded (6 cards; traits/icons pending, Issue 5) [repo ROOT]
 ```
 The boxN.json files live at the **repo root**, not in a `data/` folder.
-
-**`position_indicator`** (added 1 Aug 2026) is on all five files: the starting position
-printed in the card footer, one of **Available, Reserve, Development, Discard, Deployed,
-Controlled Location, Incident Deck, Rewards, Captain, Status, Starting, Advanced, Solo
-Challenge, Solo Campaign**, or **null**. Locations use Starting / Advanced in this same
-field. Only crew (captain) decks and Locations carry an indicator; market cards are null,
-the one exception being Rewards (Box 3 Common Persons `3PER01/13`-`3PER08/13`). Footers
-that print "SOLO CHALLENGE ONLY" / "SOLO CAMPAIGN ONLY" are recorded without the ONLY,
-since the same card drops it between printings. `2KHA02B` (Devastated Ceti Alpha V) is
-the flip side of `2KHA02A` and its starting position is deliberately not tracked, so its
-null is a decision rather than a gap.
-
-The values came from the scan packages, not from reading cards: the contributor foldered
-each scan by its starting position, and the import mappings already tie every scan file
-to a card number, so 380 of the values were a plain join. 24 cards whose folder was
-ambiguous (`own_ships` pools a captain's ships; `table` in the Box 2 and Box 3 packages
-mixes deployed with controlled location and incident deck) were answered directly by
-Periodic_agent, and the 4 solo Directives were read from their footers. Provenance per
-card is preserved in `img_table_scans/position_indicators_resolved.csv` on local disk.
-
-**`card_number` and `glory` are on all five files** (Box 1 and the promos gained them
-1 Aug 2026, read off the card faces). `card_number` is the number printed bottom-left,
-unique within its box: `1XXXnn/tt` for Box 1, `2XXX…` / `3XXX…` for the expansions, and
-`0XXXnn/?` for promo cards, whose denominator is a literal `?` on the card. `glory` is
-the integer in the bottom-right badge, **null** when the badge shows an icon plus `?`
-or `?*` (variable glory) and null when the card carries no badge at all; the scanner
-draws a glory badge for any non-null value. Two Box 1 records (Reinforce, Conspiracy,
-the bot-play Directives) carry null for both fields because they have never been
-scanned. Box 1 and the promo files still have no `variant` field: every one of those
-records is an original printing, and the scanner falls back to `'original'`.
 
 ### Scanner data — runtime fetch + id resolver
 
@@ -647,7 +617,7 @@ id + filename together (and the image renamed to match), or the reprint won't pa
 Repeatable procedure — run whenever the community sheet gains cards. A future session can follow this as a checklist:
 1. **Fetch fresh.** `git clone --depth 1 https://github.com/periodic-agent/stcc-strategy.git` (raw-URL fallback, see Session Startup). `box1.json` and `box2.json` are at the repo **root**.
 2. **Read the sheet** via the Google Drive connector — file ID `186ZpFkLQsLX1blU3z45znMPwH9fE6yO3`, tab `TBG (Box 2)` (or `Second Contact (Box 3)`). Read-only; **never write to the sheet.** Export as .xlsx to get all tabs at once. Note: the Drive `.xlsx` export can trail live edits by a few minutes / one refresh — if a regen looks a step behind an edit you just made, re-pull before assuming a bug.
-3. **Rebuild `box2.json`** (repo root) with `python tools/build_box2_from_sheet.py sheet.xlsx "TBG (Box 2)" "To Boldly Go" --box1 box1.json -o box2.json`. Canonical schema (identical to box1.json) plus `card_number` and `variant`: `id` (see Card Image Filename Convention — `id` == filename stem, deck prefix on crew-deck cards), `name`, `suit`, `source` = Deck column, `game_box` = `"To Boldly Go"`, `species_traits`/`regular_traits`/`other_traits` = comma-split, `icons` = one `{type: Skill}` per Skill-icon plus one `{type: Focus}` per Focus-icon (**repeated objects, no `count`**; specialty ∈ Research/Influence/Military/Any/Variable), `filename` (`""` if no image — the scanner shows a NO IMAGE placeholder). Include every row with at least a name and suit, whatever its status. **`game_box` must be exactly one of `Captain's Chair` / `To Boldly Go` / `Second Contact`** — the script hard-fails otherwise. For Box 3 use tab `Second Contact (Box 3)` and `game_box "Second Contact"`.
+3. **Rebuild `box2.json`** (repo root) with `python tools/build_box2_from_sheet.py sheet.xlsx "TBG (Box 2)" "To Boldly Go" --box1 box1.json -o box2.json`. Canonical schema (identical to box1.json, which also carries `card_number` on all 250 records) plus `variant`: `id` (see Card Image Filename Convention — `id` == filename stem, deck prefix on crew-deck cards), `name`, `suit`, `source` = Deck column, `game_box` = `"To Boldly Go"`, `species_traits`/`regular_traits`/`other_traits` = comma-split, `icons` = one `{type: Skill}` per Skill-icon plus one `{type: Focus}` per Focus-icon (**repeated objects, no `count`**; specialty ∈ Research/Influence/Military/Any/Variable), `filename` (`""` if no image — the scanner shows a NO IMAGE placeholder). Include every row with at least a name and suit, whatever its status. **`game_box` must be exactly one of `Captain's Chair` / `To Boldly Go` / `Second Contact`** — the script hard-fails otherwise. For Box 3 use tab `Second Contact (Box 3)` and `game_box "Second Contact"`.
 4. **Validate.** The script runs the four checks above; checks 1 and 4 are gates and exit non-zero (`--warn-unresolved` overrides, use sparingly). Also: no duplicate ids (suffix `-2`, keep both — see duplicate note above), traits against the **Vocabulary** tab (warn on novel, never drop), counts per suit. Fix the **sheet**, never the JSON — hand-edits are overwritten on the next regen.
    - **Holding back an incomplete deck** (e.g. a captain deck whose skill/focus icons are not yet entered) is a **one-off filter at ship time**, applied by dropping those `source` rows after the build — *never* a build-script option. An `--exclude-deck` flag was tried and deliberately removed: once the icons land, a plain regen brings the deck in automatically, which is the behavior you want. No decks are currently held: Khan (TBG) and Pike/Riker (2C) have since shipped, so box2.json carries all 248 TBG cards and box3.json all 99 Second Contact cards.
 5. **Wire the box (first time only).** The scanner fetches box JSON at **runtime** — there is no injection step. A brand-new box needs one line added to `BOX_SOURCES` in `cards.html`; boxes already listed need nothing (pushing the JSON is enough). Never run an inline-injection tool.
@@ -705,7 +675,7 @@ The Card Scanner uses different *internal* box keys (`core`, `tbg`, `2nd`) in it
 
 **One box = one JSON = one image folder** (decision Jul 2026, per Periodic_agent): every box, promo packs included, has its own JSON at repo root matching its image folder. Promo packs are linked to an expansion *wave*, not to a single box (Promo Pack 2 shipped alongside both To Boldly Go and Second Contact), so their data no longer lives inside an era box JSON. Promo rows keep `source: "Promo"` and carry `game_box: "Promo Pack 1"` / `"Promo Pack 2"`; the scanner assigns box membership from the source *file* (`_srcBox` stamp in `loadBoxes`), with `game_box` only as fallback for injected preview data. The earlier design (promo data inside box1.json/box2.json) was retired by `tools/split_promo_json.py`.
 
-In the scanner code this table is the `BOX_FOLDER = { core:'box1', tbg:'box2', '2nd':'box3', promo1:'promo1', promo2:'promo2' }` constant. Image src is built as `img/<BOX_FOLDER[box]>/<filename>`. A missing image (404) falls back to a `NO IMAGE` placeholder via `onerror`, so partial image coverage is fine. Coverage as of 1 Aug 2026: **the library is complete** — box1 250/250, box2 250/250, box3 99/99, promo1 5/5, promo2 6/6, every record carrying a card_number and an image. The last gaps closed the same day: the solo-challenge Directives (Conspiracy 1DIR01/2 and Reinforce 1DIR02/2 in Box 1; Reinforce 2DIR02/2• as a reprint and Time is Running Out 2DIR01/2 as a new record in Box 2) came from the `core_cards_plus_solo_challenge` package, and Promo Pack 2 got proper scans replacing its web-res guide extractions. One caveat: the 23 Box 3 Common cards are still guide extractions at ~359x500, not scans; the scans exist in the local Box 3 package if that is ever worth a pass. All of it came as contributor image packages. Box 2 and Box 3 were imported by matching the card number printed bottom-left on each face (already the unique key in those JSONs) plus title-banner and deck-folder cross-checks. **Box 1 inverted that**, because box1.json had no card numbers: the join key was the title banner plus the deck folder (stripping the disambiguating parenthetical that box1.json uses to separate the per-captain directives, `Analyze (Picard)` and so on), and the corner numbers became new data, validated by every deck's numbers forming a gap-free permutation and by 53 reprint glory cross-checks against box2.json / box3.json that matched exactly. The Box 1 scans replaced an earlier glare-affected set wholesale, captain decks included, for consistency of lighting and colour. Import scripts, readings and scan-to-card mappings are parked on local disk beside each scan package (`img_table_scans/box N/import_tools/`), deliberately not in the repo.
+In the scanner code this table is the `BOX_FOLDER = { core:'box1', tbg:'box2', '2nd':'box3', promo1:'promo1', promo2:'promo2' }` constant. Image src is built as `img/<BOX_FOLDER[box]>/<filename>`. A missing image (404) falls back to a `NO IMAGE` placeholder via `onerror`, so partial image coverage is fine. Coverage as of 29 Jul 2026: `img/box2/` is complete (248/248, contributor scans, reprints and updated cards included) and `img/box3/` is complete (99/99); both at the display standard, 1170 px q80. `img/box1/` holds 248 of 250 (the 2 bot-play Directives are deliberately not done yet); uncovered cards show the placeholder. The Box 2 and Box 3 scans came as contributor image packages, imported by matching the card number printed bottom-left on each face (the unique key in the box JSON) plus title-banner and deck-folder cross-checks; the import scripts and scan-to-card mappings are parked on local disk beside each scan package (`img_table_scans/box N/import_tools/`), deliberately not in the repo.
 
 > **Why this table exists:** the original Image-view gap was an undocumented mismatch between the scanner's internal keys (`core`/`tbg`/`2nd`) and the on-disk folders (`box1`/`box2`/`box3`). Documenting the bridge — not just the path — is what prevents a future instance from reintroducing it. If you add a box, add its row here AND to `BOX_FOLDER` in the scanner in the same change.
 
