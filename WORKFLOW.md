@@ -463,7 +463,10 @@ copy of the pre-card-face scanner and emits `cardface-assets.js`).
   shortest-first with overlapping medallions, focus icon bleeding into the
   rounded lower-right corner. No-focus cards with non-null `glory` show a glory
   badge there instead (horizontal white oval, enlarged delta overhanging ~2 px,
-  Antonio digit). Card number + Update/Duplicate markers bottom-left; the "New"
+  Antonio digit). The delta is `#c3cfdd` gray, or `#f0a893` light red-orange
+  when glory is negative, echoing the printed card; oval and digit unchanged
+  (35 cards negative today: -2 on 33, -4 on 2). Applied by
+  `tools/patch_glory_negative.py`. Card number + Update/Duplicate markers bottom-left; the "New"
   banner is retired. Clicking any card with an image (`has-img`) opens the
   plain image lightbox at that card in BOTH views (no caption, no guide links;
   decision 31 Jul 2026: image only, for a cleaner experience).
@@ -530,9 +533,11 @@ copy of the pre-card-face scanner and emits `cardface-assets.js`).
 - **Shareable URLs**: the search-bar state mirrors to `location.hash`
   (`#q=...`) via `history.replaceState`; restored on load, back/forward handled
   by `hashchange`. Documented in the help popover.
-- **Glory data**: `glory` key on every box2/box3 card, integer or `null`
-  (uniform shape; focus cards are always `null` because they print "?").
-  Box 1 and promos carry no glory key; the resolver treats absent as null.
+- **Glory data**: `glory` key on every record in box1/2/3 (and present in the
+  promo files), integer or `null` (uniform shape; focus cards are always `null`
+  because they print "?"). Values can be negative. The resolver coalesces glory
+  across printings, first non-null wins, so Box 1 reprints inherit a Box 2/3
+  annotation.
 - `tools/test_scanner.mjs` runs the harness against `cards.html` including
   local external scripts (`cardface-assets.js`); run it plus
   `tools/test_scanner_query.mjs` before any scanner push.
