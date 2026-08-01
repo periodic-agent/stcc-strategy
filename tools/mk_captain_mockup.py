@@ -1,0 +1,113 @@
+#!/usr/bin/env python3
+"""Standalone preview of the proposed Captain card-face treatment.
+
+Renders a handful of captain cards using the LIVE cards.html CSS and the live
+asset bundle, with the proposed changes applied in memory only:
+  - name + suit banners light gray (#d7dce6) with black text, black chair glyph
+  - card left border light gray instead of gold
+  - away-team marker (speech bubble over a numbered tab) under the suit banner
+Nothing here writes or pushes cards.html; it exists to look at the design.
+"""
+import re, json, base64, sys
+
+GRAY, INK = '#d7dce6', '#10161f'
+
+def main(live_dir='live_sync', out='mockups_captain_preview.html'):
+    page = open(f'{live_dir}/cards.html').read()
+    assets = open(f'{live_dir}/cardface-assets.js').read()
+    CF = json.loads(assets[assets.index('{'):assets.rindex(';')])
+
+    dark = re.sub(r'fill="rgb\([^"]*\)"', 'fill="' + INK + '"',
+                  open('icons_svg/suit-captain.svg').read())
+    chair = 'data:image/svg+xml;base64,' + base64.b64encode(dark.encode()).decode()
+
+    css = page[page.index('<style>') + 7: page.index('</style>')]
+
+    caps = []
+    for b in ('box1', 'box2', 'box3'):
+        for c in json.load(open(f'{live_dir}/{b}.json')):
+            if c.get('suit') == 'Captain':
+                caps.append(c)
+    order = ['Jean-Luc Picard', 'Michael Burnham', 'Jonathan Archer',
+             'Christopher Pike', 'Sela', 'Wrathful Khan']
+    picked = [c for n in order for c in caps if c['name'] == n]
+
+    def away_svg(v):
+        """Speech bubble over a tab carrying the away-team value."""
+        if not v:
+            return ''
+        fs = 13 if len(v) < 2 else 10.5
+        return (
+            '<svg class="awayteam" viewBox="0 0 30 40" role="img" aria-label="Away team ' + v + '">'
+            '<title>Away team ' + v + '</title>'
+            '<path d="M4.2 1.1h21.6a3.1 3.1 0 0 1 3.1 3.1v14.6a3.1 3.1 0 0 1-3.1 3.1'
+            'h-8.2l-2.6 4.6-2.6-4.6H4.2a3.1 3.1 0 0 1-3.1-3.1V4.2a3.1 3.1 0 0 1 3.1-3.1z" '
+            'fill="#1b2f4d" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>'
+            '<rect x="6.4" y="23.4" width="17.2" height="15.6" rx="1.8" '
+            'fill="#2f5f96" stroke="#fff" stroke-width="1.5"/>'
+            '<text x="15" y="35" text-anchor="middle" font-family="Antonio,sans-serif" '
+            'font-weight="700" font-size="' + str(fs) + '" fill="#fff">' + v + '</text></svg>')
+
+    def card(c):
+        traits = sorted(c['species_traits'] + c['regular_traits'] + c['other_traits'],
+                        key=len)
+        vt = ''
+        for i, t in enumerate(traits):
+            key = t.lower().replace("'", '').replace('’', '')
+            key = re.sub(r'\s+', '-', key)
+            ic = CF['trait'].get(key)
+            fam = ('variable' if t == 'Wildcard'
+                   else 'species' if t in c['species_traits']
+                   else 'other' if t in c['other_traits'] else 'regular')
+            vt += ('<div class="vt" style="z-index:%d">' % (len(traits) - i)
+                   + ('<img src="%s" alt="">' % ic if ic else '<span class="vt-spacer"></span>')
+                   + '<span class="vctag vt-%s">%s</span></div>' % (fam, t.upper()))
+        foci = [i for i in c['icons'] if i['type'] == 'Focus']
+        corner = ''
+        if foci:
+            f = CF['focus'].get(foci[0]['specialty'].lower())
+            if f:
+                corner = '<img class="focorner" src="%s" alt="">' % f
+        pos = c.get('position_indicator') or ''
+        num = c.get('card_number') or ''
+        foot = ''
+        if num or pos:
+            foot = ('<div class="ce-bottom"><div class="ce-footrow">'
+                    '<span class="cid2">' + num + '</span>'
+                    + ('<span class="posin">' + pos + '</span>' if pos else '')
+                    + '</div></div>')
+        return ('<div class="card-entry cap' + (' has-focus' if corner else '') + '" data-suit="Captain">'
+                '<div class="ce-row"><div class="ce-main">'
+                '<div class="nb" style="background:' + GRAY + '">' + c['name'] + '</div>'
+                '<div class="sb" style="background:' + GRAY + '">'
+                '<img src="' + chair + '" alt="">CAPTAIN</div>'
+                + away_svg((c.get('away_team') or '').strip())
+                + '</div><div class="ce-traits2">' + vt + '</div></div>'
+                + foot + corner + '</div>')
+
+    extra = """
+/* ---- proposed Captain treatment (mockup only) ---- */
+.card-entry.cap{border-left:2px solid %s;}
+.card-entry.cap .nb,.card-entry.cap .sb{color:%s;}
+.awayteam{display:block;width:33px;height:44px;margin:.15rem 0 .4rem -0.15rem;}
+""" % (GRAY, INK)
+
+    html = ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">'
+            '<title>Captain card mockup</title>'
+            '<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600'
+            '&family=Orbitron:wght@600;700&family=Exo+2:wght@400;600&display=swap" rel="stylesheet">'
+            '<style>' + css + extra + '</style></head><body>'
+            '<div style="padding:2rem;max-width:1200px;margin:0 auto">'
+            '<h2 style="font-family:Orbitron,sans-serif;color:#e8ecf5;letter-spacing:.08em;'
+            'font-size:1rem">CAPTAIN CARD MOCKUP</h2>'
+            '<p style="font-family:\'Exo 2\',sans-serif;color:#8a94ac;font-size:.85rem;max-width:60ch">'
+            'Light gray banners with black text and a black chair glyph, gray left border, '
+            'away-team marker under the suit banner. Wrathful Khan carries no away team, '
+            'mirroring the printed card. Preview only; cards.html is untouched.</p>'
+            '<div class="card-grid">' + ''.join(card(c) for c in picked) + '</div>'
+            '</div></body></html>')
+    open(out, 'w').write(html)
+    print('wrote', out, len(html) // 1024, 'KB,', len(picked), 'cards')
+
+if __name__ == '__main__':
+    main(*sys.argv[1:])
