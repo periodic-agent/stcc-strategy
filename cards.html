@@ -161,7 +161,8 @@ a{color:var(--blue);text-decoration:none;}
 .skill-pill.sk-variable:hover,.skill-pill.sk-variable.active{background:rgba(232,236,248,0.22);border-color:#e8ecf8;color:#ffffff;}
 
 /* COLLAPSIBLE */
-.collapsible-header{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:0.3rem 0;user-select:none;}
+.collapsible-header{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:0.3rem 0 0;user-select:none;}
+.collapsible-header .filter-label{margin-bottom:0;}
 .collapsible-header:hover .filter-label{color:var(--blue2);}
 .collapsible-arrow{font-size:0.7rem;color:var(--muted);transition:transform 0.2s;margin-left:0.5rem;flex-shrink:0;display:inline-block;}
 .collapsible-header.open .collapsible-arrow{transform:rotate(180deg);}
@@ -169,7 +170,7 @@ a{color:var(--blue);text-decoration:none;}
 .active-summary.regular{color:var(--rg-tx);}
 .active-summary.other{color:var(--ot-tx);}
 .active-summary.skill{color:var(--gold);}
-.collapsible-body{display:none;padding-top:0.4rem;}
+.collapsible-body{display:none;padding-top:0.5rem;}
 .collapsible-body.open{display:block;}
 
 /* RESULTS */
@@ -194,7 +195,7 @@ a{color:var(--blue);text-decoration:none;}
 .card-entry[data-suit="Location"]{border-left:2px solid var(--location);}
 .card-entry[data-suit="Encounter"]{border-left:2px solid var(--encounter);}
 .card-entry[data-suit="Incident"]{border-left:2px solid var(--incident);}
-.card-entry[data-suit="Captain"]{border-left:2px solid #d7dce6;}
+.card-entry[data-suit="Captain"]{border-left:2px solid var(--gold);}
 .card-entry[data-suit="Directive"]{border-left:2px solid var(--muted);}
 .card-entry[data-suit="Status"]{border-left:2px solid #88aacc;}
 .card-entry[data-suit=""]{border-left:2px solid var(--muted);}
@@ -429,21 +430,6 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .posin.wide{left:auto;right:2px;transform:translateY(-50%);}
 .card-entry.has-focus .posin.wide{right:38px;}
 
-
-/* ===== Captain suit =====
-   Captains are not market people: their banners are light gray with black text,
-   so the glyph and the chip's active label have to go black too (the inherited
-   white would be invisible on the fill). */
-.card-entry[data-suit="Captain"] .nb,
-.card-entry[data-suit="Captain"] .sb{color:#10161f;}
-.suit-pill.suitchip[data-suit="Captain"].active{color:#10161f !important;}
-/* The glyph is white everywhere else; darken it only where it sits on gray.
-   A filter beats shipping a second copy of every suit glyph. */
-.card-entry[data-suit="Captain"] .sb img,
-.suit-pill.suitchip[data-suit="Captain"].active img{filter:brightness(0);}
-/* Away-team marker: the printed group-of-people glyph has no vector source, so
-   the bubble carries the value itself. Values are strings ("5", "2+"). */
-.awayteam{display:block;width:31px;height:28px;margin:.15rem 0 .4rem -0.15rem;}
 </style>
 <meta name="description" content="Searchable card database for Star Trek: Captain's Chair. Filter every card by box, deck, suit, traits, skills and name — built for mid-game lookups.">
 <link rel="canonical" href="https://periodic-agent.github.io/stcc-strategy/cards.html">
@@ -727,7 +713,6 @@ function resolveCards(rawPool){
       card_number: chosen.card_number || '',
       glory: (() => { for (const pr of group) { if (pr.glory !== undefined && pr.glory !== null) return pr.glory; } return null; })(),
       position_indicator: (() => { for (const pr of group) { if (pr.position_indicator !== undefined && pr.position_indicator !== null && pr.position_indicator !== '') return pr.position_indicator; } return null; })(),
-      away_team: (() => { for (const pr of group) { if (pr.away_team) return String(pr.away_team); } return ''; })(),
       badgeKind
     });
   });
@@ -751,7 +736,7 @@ function resolveSelected(){
 }
 
 
-const SUITS_DISPLAY = ["Captain","Person","Ally","Ship","Cargo","Location","Encounter","Incident","Automated Command"];
+const SUITS_DISPLAY = ["Person","Ally","Ship","Cargo","Location","Encounter","Incident","Automated Command"];
 const EXCLUDED_SUITS = new Set(["Captain","Directive","Status"]);
 
 const DECK_ORDER = ["Common:core","Sisko","Picard","Koloth","Burnham","Sela","Shran","Common:tbg","Georgiou","Soval","Kirk","Archer","Rebner","Khan","Common:2nd","Pike","Riker","Freeman"];
@@ -1165,7 +1150,7 @@ function badgeInfo(c){
 }
 
 function buildPillCard(c){
-  const SUIT_COL={'Person':'#c9ab35','Ally':'#9b6ecf','Ship':'#7a8aaa','Cargo':'#3a6aaa','Location':'#4ac48a','Encounter':'#d4699f','Incident':'#e05a5a','Captain':'#d7dce6','Directive':'#8494ad','Status':'#88aacc'};
+  const SUIT_COL={'Person':'#c9ab35','Ally':'#9b6ecf','Ship':'#7a8aaa','Cargo':'#3a6aaa','Location':'#4ac48a','Encounter':'#d4699f','Incident':'#e05a5a','Captain':'#c8a84b','Directive':'#8494ad','Status':'#88aacc'};
   const el=document.createElement('div');
   el.className='card-entry'; el.dataset.suit=c.suit||'';
   const col=SUIT_COL[c.suit]||'#8494ad';
@@ -1198,8 +1183,6 @@ function buildPillCard(c){
     const spec=foci[0].split(' ')[0].toLowerCase();
     if(CARDFACE.focus[spec]) {el.classList.add('has-focus'); corner='<img class="focorner'+(activeSkills.has(foci[0])?' match':'')+'" src="'+CARDFACE.focus[spec]+'" title="'+foci[0]+'" alt="">';}
   }
-  const away=(c.away_team||'').trim();
-  const awayHTML=away?('<svg class="awayteam" viewBox="0 0 30 27" role="img" aria-label="Away team '+away+'"><title>Away team '+away+'</title><path d="M4.2 1.1h21.6a3.1 3.1 0 0 1 3.1 3.1v14.6a3.1 3.1 0 0 1-3.1 3.1h-8.2l-2.6 4.6-2.6-4.6H4.2a3.1 3.1 0 0 1-3.1-3.1V4.2a3.1 3.1 0 0 1 3.1-3.1z" fill="#1b2f4d" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><text x="15" y="16.6" text-anchor="middle" font-family="Antonio,sans-serif" font-weight="700" font-size="12" fill="#fff">'+away+'</text></svg>'):'';
   const badge=badgeInfo(c);
   const strat=hasStrategy(c);
   if(strat) el.classList.add('has-strategy');
@@ -1222,7 +1205,6 @@ function buildPillCard(c){
   el.innerHTML='<div class="ce-row"><div class="ce-main">'
     +'<div class="nb" style="background:'+col+'">'+c.name+'</div>'
     +'<div class="sb" style="background:'+col+'">'+sIcon+c.suit+'</div>'
-    +awayHTML
     +(skillsHTML?'<div class="skcol">'+skillsHTML+'</div>':'')
     +stratHTML
     +'</div><div class="ce-traits2">'+vt+'</div></div>'
@@ -1236,8 +1218,6 @@ function buildImgCard(c){
   const folder = c.imgBox ? BOX_FOLDER[c.imgBox] : null;
   const src = (folder && c.filename) ? (IMG_BASE+'/'+folder+'/'+c.filename) : '';
   // Try to load the real card image; if it 404s, swap in the NO IMAGE placeholder.
-  const away=(c.away_team||'').trim();
-  const awayHTML=away?('<svg class="awayteam" viewBox="0 0 30 27" role="img" aria-label="Away team '+away+'"><title>Away team '+away+'</title><path d="M4.2 1.1h21.6a3.1 3.1 0 0 1 3.1 3.1v14.6a3.1 3.1 0 0 1-3.1 3.1h-8.2l-2.6 4.6-2.6-4.6H4.2a3.1 3.1 0 0 1-3.1-3.1V4.2a3.1 3.1 0 0 1 3.1-3.1z" fill="#1b2f4d" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><text x="15" y="16.6" text-anchor="middle" font-family="Antonio,sans-serif" font-weight="700" font-size="12" fill="#fff">'+away+'</text></svg>'):'';
   const badge=badgeInfo(c);
   const badgeOv = badge ? '<div class="card-img-badge '+badge.cls+'">'+(badge.cls==='update'?'\u2020':'\u2022')+'</div>' : '';
   if(src){
@@ -1385,7 +1365,7 @@ DECK_ORDER.forEach(d=>{
 // Suit pills
 const suitContainer=document.getElementById('suitFilters');
 SUITS_DISPLAY.forEach(s=>{
-  const SUIT_COL={'Person':'#c9ab35','Ally':'#9b6ecf','Ship':'#7a8aaa','Cargo':'#3a6aaa','Location':'#4ac48a','Encounter':'#d4699f','Incident':'#e05a5a','Captain':'#d7dce6','Directive':'#8494ad','Status':'#88aacc','Automated Command':'#8494ad'};
+  const SUIT_COL={'Person':'#c9ab35','Ally':'#9b6ecf','Ship':'#7a8aaa','Cargo':'#3a6aaa','Location':'#4ac48a','Encounter':'#d4699f','Incident':'#e05a5a','Captain':'#c8a84b','Directive':'#8494ad','Status':'#88aacc','Automated Command':'#8494ad'};
   const p=document.createElement('span');
   p.className='suit-pill cardpill suitchip'; p.dataset.suit=s;
   p.style.setProperty('--cc', SUIT_COL[s]||'#8494ad');
