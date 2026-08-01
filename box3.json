@@ -522,6 +522,7 @@
     "variant": "original",
     "glory": null,
     "position_indicator": "Captain",
+    "away_team": "5",
     "species_traits": [
       "Human"
     ],
@@ -1054,6 +1055,7 @@
     "variant": "original",
     "glory": null,
     "position_indicator": "Captain",
+    "away_team": "4+",
     "species_traits": [
       "Human"
     ],
@@ -1620,6 +1622,7 @@
     "variant": "original",
     "glory": null,
     "position_indicator": "Captain",
+    "away_team": "4",
     "species_traits": [
       "Human"
     ],

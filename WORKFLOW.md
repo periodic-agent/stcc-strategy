@@ -477,6 +477,11 @@ copy of the pre-card-face scanner and emits `cardface-assets.js`).
   Starting, Advanced, Captain, Discard, Deployed, Rewards, Controlled Location,
   Status, Incident Deck, Solo Campaign, Solo Challenge. The resolver coalesces
   it across printings (first non-null wins), like `glory`.
+- **`away_team`**: on **Captain-suit records only** (all 16; no other record carries
+  the key). The away-team size printed on the captain card, stored as a **string**
+  because two captains print a plus: Archer `"2+"`, Pike `"4+"`. Wrathful Khan
+  (`2KHA01B/22`) holds `""` — it is the flip side of Khan Noonien Singh and the value
+  is not tracked, the same treatment as Devastated Ceti Alpha V's position indicator.
 - **Font**: Antonio 600 (Google Fonts) for all card-vocabulary elements;
   Orbitron/Exo 2 remain for page chrome.
 - **Filter chips**: rulebook-style banners; outline-only at rest (colored border

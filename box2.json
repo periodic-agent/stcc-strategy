@@ -2445,6 +2445,7 @@
     "variant": "original",
     "glory": null,
     "position_indicator": "Captain",
+    "away_team": "6",
     "species_traits": [
       "Pakled"
     ],
@@ -2885,6 +2886,7 @@
     "variant": "original",
     "glory": null,
     "position_indicator": "Captain",
+    "away_team": "5",
     "species_traits": [
       "Human"
     ],
@@ -3371,6 +3373,7 @@
     "variant": "original",
     "glory": null,
     "position_indicator": "Captain",
+    "away_team": "2+",
     "species_traits": [
       "Human"
     ],
@@ -3850,6 +3853,7 @@
     "variant": "original",
     "glory": null,
     "position_indicator": "Captain",
+    "away_team": "4",
     "species_traits": [
       "Vulcan"
     ],
@@ -4357,6 +4361,7 @@
     "variant": "original",
     "glory": null,
     "position_indicator": "Captain",
+    "away_team": "5",
     "species_traits": [
       "Human"
     ],
@@ -4893,6 +4898,7 @@
     "variant": "original",
     "glory": null,
     "position_indicator": "Captain",
+    "away_team": "4",
     "species_traits": [
       "Human"
     ],
@@ -4913,6 +4919,7 @@
     "variant": "original",
     "glory": null,
     "position_indicator": "Captain",
+    "away_team": "",
     "species_traits": [
       "Human"
     ],

@@ -2127,6 +2127,7 @@
     "card_number": "1PIC01/24",
     "glory": null,
     "position_indicator": "Captain",
+    "away_team": "5",
     "species_traits": [
       "Human"
     ],
@@ -2608,6 +2609,7 @@
     "card_number": "1BUR01/26",
     "glory": null,
     "position_indicator": "Captain",
+    "away_team": "5",
     "species_traits": [
       "Human"
     ],
@@ -3123,6 +3125,7 @@
     "card_number": "1KOL01/24",
     "glory": null,
     "position_indicator": "Captain",
+    "away_team": "6",
     "species_traits": [
       "Klingon"
     ],
@@ -3589,6 +3592,7 @@
     "card_number": "1SHR01/24",
     "glory": null,
     "position_indicator": "Captain",
+    "away_team": "5",
     "species_traits": [
       "Andorian"
     ],
@@ -4056,6 +4060,7 @@
     "card_number": "1SIS01/25",
     "glory": null,
     "position_indicator": "Captain",
+    "away_team": "6",
     "species_traits": [
       "Human",
       "Transcendent"
@@ -4562,6 +4567,7 @@
     "card_number": "1SEL01/24",
     "glory": null,
     "position_indicator": "Captain",
+    "away_team": "4",
     "species_traits": [
       "Romulan",
       "Human"
