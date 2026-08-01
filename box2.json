@@ -5090,5 +5090,37 @@
     ],
     "filename": "khan-two-dimensional-thinking.jpg",
     "icons": []
+  },
+  {
+    "id": "reinforce",
+    "name": "Reinforce",
+    "suit": "Directive",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2DIR02/2•",
+    "variant": "reprint",
+    "glory": null,
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "reinforce.jpg",
+    "icons": []
+  },
+  {
+    "id": "time-is-running-out",
+    "name": "Time is Running Out",
+    "suit": "Directive",
+    "source": "Common",
+    "game_box": "To Boldly Go",
+    "card_number": "2DIR01/2",
+    "variant": "original",
+    "glory": null,
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Surprise"
+    ],
+    "filename": "time-is-running-out.jpg",
+    "icons": []
   }
 ]

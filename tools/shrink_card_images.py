@@ -29,14 +29,21 @@ from PIL import Image
 
 MAX_W = 1170        # native iPhone width; pristine in the lightbox
 QUALITY = 80
-SIZE_SKIP = 400_000  # files at or under this size are left alone
 
 
 def shrink(path, apply):
+    """Resize only images WIDER than the standard.
+
+    The gate is width alone, deliberately. An earlier version also re-encoded any
+    file over 400 KB, which meant every already-standard card (they run ~600 KB at
+    1170 px q80) was re-compressed on each run: the filter was not idempotent and
+    quietly stacked JPEG generation loss. Width is the definition of the standard,
+    so a file already at or under MAX_W is done and must be left untouched.
+    """
     before = os.path.getsize(path)
     im = Image.open(path)
     w, h = im.size
-    if w <= MAX_W and before <= SIZE_SKIP:
+    if w <= MAX_W:
         return None
     icc = im.info.get("icc_profile")
     if im.mode not in ("RGB", "L"):
