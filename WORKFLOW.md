@@ -350,6 +350,17 @@ promo2.json  -- Promo Pack 2, seeded (6 cards; traits/icons pending, Issue 5) [r
 ```
 The boxN.json files live at the **repo root**, not in a `data/` folder.
 
+**`card_number` and `glory` are on all five files** (Box 1 and the promos gained them
+1 Aug 2026, read off the card faces). `card_number` is the number printed bottom-left,
+unique within its box: `1XXXnn/tt` for Box 1, `2XXX…` / `3XXX…` for the expansions, and
+`0XXXnn/?` for promo cards, whose denominator is a literal `?` on the card. `glory` is
+the integer in the bottom-right badge, **null** when the badge shows an icon plus `?`
+or `?*` (variable glory) and null when the card carries no badge at all; the scanner
+draws a glory badge for any non-null value. Two Box 1 records (Reinforce, Conspiracy,
+the bot-play Directives) carry null for both fields because they have never been
+scanned. Box 1 and the promo files still have no `variant` field: every one of those
+records is an original printing, and the scanner falls back to `'original'`.
+
 ### Scanner data — runtime fetch + id resolver
 
 The Card Scanner (`cards.html`) loads card data at **runtime**. On page
@@ -675,7 +686,7 @@ The Card Scanner uses different *internal* box keys (`core`, `tbg`, `2nd`) in it
 
 **One box = one JSON = one image folder** (decision Jul 2026, per Periodic_agent): every box, promo packs included, has its own JSON at repo root matching its image folder. Promo packs are linked to an expansion *wave*, not to a single box (Promo Pack 2 shipped alongside both To Boldly Go and Second Contact), so their data no longer lives inside an era box JSON. Promo rows keep `source: "Promo"` and carry `game_box: "Promo Pack 1"` / `"Promo Pack 2"`; the scanner assigns box membership from the source *file* (`_srcBox` stamp in `loadBoxes`), with `game_box` only as fallback for injected preview data. The earlier design (promo data inside box1.json/box2.json) was retired by `tools/split_promo_json.py`.
 
-In the scanner code this table is the `BOX_FOLDER = { core:'box1', tbg:'box2', '2nd':'box3', promo1:'promo1', promo2:'promo2' }` constant. Image src is built as `img/<BOX_FOLDER[box]>/<filename>`. A missing image (404) falls back to a `NO IMAGE` placeholder via `onerror`, so partial image coverage is fine. Coverage as of 29 Jul 2026: `img/box2/` is complete (248/248, contributor scans, reprints and updated cards included) and `img/box3/` is complete (99/99); both at the display standard, 1170 px q80. `img/box1/` holds 248 of 250 (the 2 bot-play Directives are deliberately not done yet); uncovered cards show the placeholder. The Box 2 and Box 3 scans came as contributor image packages, imported by matching the card number printed bottom-left on each face (the unique key in the box JSON) plus title-banner and deck-folder cross-checks; the import scripts and scan-to-card mappings are parked on local disk beside each scan package (`img_table_scans/box N/import_tools/`), deliberately not in the repo.
+In the scanner code this table is the `BOX_FOLDER = { core:'box1', tbg:'box2', '2nd':'box3', promo1:'promo1', promo2:'promo2' }` constant. Image src is built as `img/<BOX_FOLDER[box]>/<filename>`. A missing image (404) falls back to a `NO IMAGE` placeholder via `onerror`, so partial image coverage is fine. Coverage as of 1 Aug 2026: every box is at the display standard (1170 px q80) and effectively complete. `img/box1/` holds 248 of 250 (only the 2 bot-play Directives, Reinforce and Conspiracy, are unscanned), `img/box2/` 248/248, `img/box3/` 99/99, `img/promo1/` 5/5, `img/promo2/` 6/6; uncovered cards show the placeholder. All of it came as contributor image packages. Box 2 and Box 3 were imported by matching the card number printed bottom-left on each face (already the unique key in those JSONs) plus title-banner and deck-folder cross-checks. **Box 1 inverted that**, because box1.json had no card numbers: the join key was the title banner plus the deck folder (stripping the disambiguating parenthetical that box1.json uses to separate the per-captain directives, `Analyze (Picard)` and so on), and the corner numbers became new data, validated by every deck's numbers forming a gap-free permutation and by 53 reprint glory cross-checks against box2.json / box3.json that matched exactly. The Box 1 scans replaced an earlier glare-affected set wholesale, captain decks included, for consistency of lighting and colour. Import scripts, readings and scan-to-card mappings are parked on local disk beside each scan package (`img_table_scans/box N/import_tools/`), deliberately not in the repo.
 
 > **Why this table exists:** the original Image-view gap was an undocumented mismatch between the scanner's internal keys (`core`/`tbg`/`2nd`) and the on-disk folders (`box1`/`box2`/`box3`). Documenting the bridge — not just the path — is what prevents a future instance from reintroducing it. If you add a box, add its row here AND to `BOX_FOLDER` in the scanner in the same change.
 
