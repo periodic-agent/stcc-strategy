@@ -350,6 +350,25 @@ promo2.json  -- Promo Pack 2, seeded (6 cards; traits/icons pending, Issue 5) [r
 ```
 The boxN.json files live at the **repo root**, not in a `data/` folder.
 
+**`position_indicator`** (added 1 Aug 2026) is on all five files: the starting position
+printed in the card footer, one of **Available, Reserve, Development, Discard, Deployed,
+Controlled Location, Incident Deck, Rewards, Captain, Status, Starting, Advanced, Solo
+Challenge, Solo Campaign**, or **null**. Locations use Starting / Advanced in this same
+field. Only crew (captain) decks and Locations carry an indicator; market cards are null,
+the one exception being Rewards (Box 3 Common Persons `3PER01/13`-`3PER08/13`). Footers
+that print "SOLO CHALLENGE ONLY" / "SOLO CAMPAIGN ONLY" are recorded without the ONLY,
+since the same card drops it between printings. `2KHA02B` (Devastated Ceti Alpha V) is
+the flip side of `2KHA02A` and its starting position is deliberately not tracked, so its
+null is a decision rather than a gap.
+
+The values came from the scan packages, not from reading cards: the contributor foldered
+each scan by its starting position, and the import mappings already tie every scan file
+to a card number, so 380 of the values were a plain join. 24 cards whose folder was
+ambiguous (`own_ships` pools a captain's ships; `table` in the Box 2 and Box 3 packages
+mixes deployed with controlled location and incident deck) were answered directly by
+Periodic_agent, and the 4 solo Directives were read from their footers. Provenance per
+card is preserved in `img_table_scans/position_indicators_resolved.csv` on local disk.
+
 **`card_number` and `glory` are on all five files** (Box 1 and the promos gained them
 1 Aug 2026, read off the card faces). `card_number` is the number printed bottom-left,
 unique within its box: `1XXXnn/tt` for Box 1, `2XXX…` / `3XXX…` for the expansions, and

@@ -7,6 +7,7 @@
     "game_box": "Promo Pack 1",
     "card_number": "0CAR01/?",
     "glory": 2,
+    "position_indicator": null,
     "species_traits": [
       "Vulcan"
     ],
@@ -27,6 +28,7 @@
     "game_box": "Promo Pack 1",
     "card_number": "0SHI01/?",
     "glory": 2,
+    "position_indicator": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -43,6 +45,7 @@
     "game_box": "Promo Pack 1",
     "card_number": "0ENC01/?",
     "glory": 6,
+    "position_indicator": null,
     "species_traits": [
       "Human",
       "Transcendent"
@@ -72,6 +75,7 @@
     "game_box": "Promo Pack 1",
     "card_number": "0INC01/?",
     "glory": -2,
+    "position_indicator": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -88,6 +92,7 @@
     "game_box": "Promo Pack 1",
     "card_number": "0INC02/?",
     "glory": -2,
+    "position_indicator": null,
     "species_traits": [
       "Alien"
     ],

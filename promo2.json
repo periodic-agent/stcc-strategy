@@ -7,6 +7,7 @@
     "game_box": "Promo Pack 2",
     "card_number": "0ALL01/?",
     "glory": 3,
+    "position_indicator": null,
     "species_traits": [
       "Borg"
     ],
@@ -25,6 +26,7 @@
     "game_box": "Promo Pack 2",
     "card_number": "0CAR02/?",
     "glory": 2,
+    "position_indicator": null,
     "species_traits": [
       "Android"
     ],
@@ -44,6 +46,7 @@
     "game_box": "Promo Pack 2",
     "card_number": "0CAR03/?",
     "glory": 2,
+    "position_indicator": null,
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -62,6 +65,7 @@
     "game_box": "Promo Pack 2",
     "card_number": "0LOC01/?",
     "glory": 3,
+    "position_indicator": null,
     "species_traits": [],
     "regular_traits": [
       "Ops",
@@ -80,6 +84,7 @@
     "game_box": "Promo Pack 2",
     "card_number": "0INC03/?",
     "glory": -2,
+    "position_indicator": null,
     "species_traits": [],
     "regular_traits": [
       "Anomaly",
@@ -97,6 +102,7 @@
     "game_box": "Promo Pack 2",
     "card_number": "0SHI02/?",
     "glory": 2,
+    "position_indicator": null,
     "species_traits": [],
     "regular_traits": [
       "Scientist",

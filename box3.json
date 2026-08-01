@@ -8,6 +8,7 @@
     "card_number": "3PER01/13",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Rewards",
     "species_traits": [
       "Human",
       "Vulcan"
@@ -30,6 +31,7 @@
     "card_number": "3PER02/13",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Rewards",
     "species_traits": [
       "Human",
       "Klingon"
@@ -53,6 +55,7 @@
     "card_number": "3PER03/13",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Rewards",
     "species_traits": [
       "Klingon"
     ],
@@ -82,6 +85,7 @@
     "card_number": "3PER04/13",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Rewards",
     "species_traits": [
       "Human"
     ],
@@ -102,6 +106,7 @@
     "card_number": "3PER05/13",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Rewards",
     "species_traits": [
       "Human"
     ],
@@ -124,6 +129,7 @@
     "card_number": "3PER06/13",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Rewards",
     "species_traits": [
       "Human"
     ],
@@ -146,6 +152,7 @@
     "card_number": "3PER07/13",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Rewards",
     "species_traits": [
       "Trill"
     ],
@@ -172,6 +179,7 @@
     "card_number": "3PER08/13",
     "variant": "original",
     "glory": 4,
+    "position_indicator": "Rewards",
     "species_traits": [],
     "regular_traits": [
       "Doctor",
@@ -192,6 +200,7 @@
     "card_number": "3PER09/13",
     "variant": "original",
     "glory": 1,
+    "position_indicator": null,
     "species_traits": [
       "Orion"
     ],
@@ -213,6 +222,7 @@
     "card_number": "3PER10/13",
     "variant": "original",
     "glory": 1,
+    "position_indicator": null,
     "species_traits": [
       "Andorian"
     ],
@@ -235,6 +245,7 @@
     "card_number": "3PER11/13",
     "variant": "original",
     "glory": 1,
+    "position_indicator": null,
     "species_traits": [
       "Alien"
     ],
@@ -259,6 +270,7 @@
     "card_number": "3PER12/13",
     "variant": "original",
     "glory": 1,
+    "position_indicator": null,
     "species_traits": [
       "Klingon"
     ],
@@ -278,6 +290,7 @@
     "card_number": "3PER13/13",
     "variant": "original",
     "glory": 1,
+    "position_indicator": null,
     "species_traits": [],
     "regular_traits": [
       "Ancient",
@@ -299,6 +312,7 @@
     "card_number": "3ALL01/3",
     "variant": "original",
     "glory": 3,
+    "position_indicator": null,
     "species_traits": [
       "Betazoid"
     ],
@@ -319,6 +333,7 @@
     "card_number": "3ALL02/3",
     "variant": "original",
     "glory": 3,
+    "position_indicator": null,
     "species_traits": [],
     "regular_traits": [
       "Augment"
@@ -336,6 +351,7 @@
     "card_number": "3ALL03/3",
     "variant": "original",
     "glory": 3,
+    "position_indicator": null,
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -353,6 +369,7 @@
     "card_number": "3CAR01/3",
     "variant": "original",
     "glory": 2,
+    "position_indicator": null,
     "species_traits": [
       "Betazoid"
     ],
@@ -374,6 +391,7 @@
     "card_number": "3CAR02/3",
     "variant": "original",
     "glory": 2,
+    "position_indicator": null,
     "species_traits": [],
     "regular_traits": [
       "Creature"
@@ -394,6 +412,7 @@
     "card_number": "3CAR03/3",
     "variant": "original",
     "glory": 2,
+    "position_indicator": null,
     "species_traits": [],
     "regular_traits": [
       "Shady",
@@ -413,6 +432,7 @@
     "card_number": "3SHI01/2",
     "variant": "original",
     "glory": 2,
+    "position_indicator": null,
     "species_traits": [],
     "regular_traits": [
       "Ambassador"
@@ -430,6 +450,7 @@
     "card_number": "3SHI02/2",
     "variant": "original",
     "glory": 2,
+    "position_indicator": null,
     "species_traits": [
       "Romulan"
     ],
@@ -454,6 +475,7 @@
     "card_number": "3LOC01/2",
     "variant": "original",
     "glory": 2,
+    "position_indicator": null,
     "species_traits": [],
     "regular_traits": [
       "Anomaly",
@@ -472,6 +494,7 @@
     "card_number": "3LOC02/2",
     "variant": "original",
     "glory": 1,
+    "position_indicator": null,
     "species_traits": [
       "Orion"
     ],
@@ -498,6 +521,7 @@
     "card_number": "3FRE01/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Captain",
     "species_traits": [
       "Human"
     ],
@@ -517,6 +541,7 @@
     "card_number": "3FRE02/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Deployed",
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -534,6 +559,7 @@
     "card_number": "3FRE03/25",
     "variant": "original",
     "glory": 3,
+    "position_indicator": "Development",
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -556,6 +582,7 @@
     "card_number": "3FRE04/25",
     "variant": "original",
     "glory": 3,
+    "position_indicator": "Development",
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -573,6 +600,7 @@
     "card_number": "3FRE05/25",
     "variant": "original",
     "glory": 2,
+    "position_indicator": "Development",
     "species_traits": [
       "Vulcan"
     ],
@@ -600,6 +628,7 @@
     "card_number": "3FRE06/25",
     "variant": "original",
     "glory": 2,
+    "position_indicator": "Development",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -620,6 +649,7 @@
     "card_number": "3FRE07/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Development",
     "species_traits": [],
     "regular_traits": [
       "Engineer"
@@ -644,6 +674,7 @@
     "card_number": "3FRE08/25",
     "variant": "original",
     "glory": 1,
+    "position_indicator": "Development",
     "species_traits": [],
     "regular_traits": [
       "Doctor"
@@ -666,6 +697,7 @@
     "card_number": "3FRE09/25",
     "variant": "original",
     "glory": 2,
+    "position_indicator": "Development",
     "species_traits": [
       "Alien"
     ],
@@ -691,6 +723,7 @@
     "card_number": "3FRE10/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Development",
     "species_traits": [
       "Bajoran"
     ],
@@ -722,6 +755,7 @@
     "card_number": "3FRE11/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Reserve",
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -739,6 +773,7 @@
     "card_number": "3FRE12/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Reserve",
     "species_traits": [],
     "regular_traits": [
       "Doctor",
@@ -762,6 +797,7 @@
     "card_number": "3FRE13/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Reserve",
     "species_traits": [
       "Human",
       "Synthetic"
@@ -785,6 +821,7 @@
     "card_number": "3FRE14/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Reserve",
     "species_traits": [
       "Orion"
     ],
@@ -817,6 +854,7 @@
     "card_number": "3FRE15/25",
     "variant": "original",
     "glory": -2,
+    "position_indicator": "Reserve",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -832,6 +870,7 @@
     "card_number": "3FRE16/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -847,6 +886,7 @@
     "card_number": "3FRE17/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -862,6 +902,7 @@
     "card_number": "3FRE18/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -879,6 +920,7 @@
     "card_number": "3FRE19/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [
       "Starbase",
@@ -897,6 +939,7 @@
     "card_number": "3FRE20/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -912,6 +955,7 @@
     "card_number": "3FRE21/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -929,6 +973,7 @@
     "card_number": "3FRE22/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [
       "Human"
     ],
@@ -948,6 +993,7 @@
     "card_number": "3FRE23/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [
       "Human"
     ],
@@ -969,6 +1015,7 @@
     "card_number": "3FRE24/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [
       "Human"
     ],
@@ -990,6 +1037,7 @@
     "card_number": "3FRE25/25",
     "variant": "original",
     "glory": -2,
+    "position_indicator": "Incident Deck",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1005,6 +1053,7 @@
     "card_number": "3PIK01/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Captain",
     "species_traits": [
       "Human"
     ],
@@ -1030,6 +1079,7 @@
     "card_number": "3PIK02/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Status",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1045,6 +1095,7 @@
     "card_number": "3PIK03/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Controlled Location",
     "species_traits": [],
     "regular_traits": [
       "Starbase",
@@ -1063,6 +1114,7 @@
     "card_number": "3PIK04/26",
     "variant": "original",
     "glory": 2,
+    "position_indicator": "Available",
     "species_traits": [
       "Human"
     ],
@@ -1088,6 +1140,7 @@
     "card_number": "3PIK05/26",
     "variant": "original",
     "glory": 3,
+    "position_indicator": "Development",
     "species_traits": [],
     "regular_traits": [
       "Telepath"
@@ -1105,6 +1158,7 @@
     "card_number": "3PIK06/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Development",
     "species_traits": [
       "Alien"
     ],
@@ -1130,6 +1184,7 @@
     "card_number": "3PIK07/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Development",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1150,6 +1205,7 @@
     "card_number": "3PIK08/26",
     "variant": "original",
     "glory": 3,
+    "position_indicator": "Development",
     "species_traits": [],
     "regular_traits": [
       "Engineer",
@@ -1168,6 +1224,7 @@
     "card_number": "3PIK09/26",
     "variant": "original",
     "glory": 2,
+    "position_indicator": "Development",
     "species_traits": [
       "Human"
     ],
@@ -1192,6 +1249,7 @@
     "card_number": "3PIK10/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Development",
     "species_traits": [
       "Human"
     ],
@@ -1216,6 +1274,7 @@
     "card_number": "3PIK11/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Reserve",
     "species_traits": [
       "Klingon"
     ],
@@ -1235,6 +1294,7 @@
     "card_number": "3PIK12/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Reserve",
     "species_traits": [
       "Human"
     ],
@@ -1259,6 +1319,7 @@
     "card_number": "3PIK13/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Reserve",
     "species_traits": [],
     "regular_traits": [
       "Augment",
@@ -1277,6 +1338,7 @@
     "card_number": "3PIK14/26",
     "variant": "original",
     "glory": -2,
+    "position_indicator": "Discard",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1292,6 +1354,7 @@
     "card_number": "3PIK15/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Reserve",
     "species_traits": [],
     "regular_traits": [
       "Time Travel"
@@ -1309,6 +1372,7 @@
     "card_number": "3PIK16/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1324,6 +1388,7 @@
     "card_number": "3PIK17/26",
     "variant": "original",
     "glory": -4,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [
       "Time Travel"
@@ -1344,6 +1409,7 @@
     "card_number": "3PIK18/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1359,6 +1425,7 @@
     "card_number": "3PIK19/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -1381,6 +1448,7 @@
     "card_number": "3PIK20/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [
       "Aenar"
     ],
@@ -1407,6 +1475,7 @@
     "card_number": "3PIK21/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [
       "Human",
       "Vulcan"
@@ -1434,6 +1503,7 @@
     "card_number": "3PIK22/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [
       "Human"
     ],
@@ -1459,6 +1529,7 @@
     "card_number": "3PIK23/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [
       "Human"
     ],
@@ -1485,6 +1556,7 @@
     "card_number": "3PIK24/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [
       "Human"
     ],
@@ -1505,6 +1577,7 @@
     "card_number": "3PIK25/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Discard",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1520,6 +1593,7 @@
     "card_number": "3PIK26/26",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Discard",
     "species_traits": [
       "Human"
     ],
@@ -1545,6 +1619,7 @@
     "card_number": "3RIK01/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Captain",
     "species_traits": [
       "Human"
     ],
@@ -1569,6 +1644,7 @@
     "card_number": "3RIK02/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Deployed",
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -1595,6 +1671,7 @@
     "card_number": "3RIK03/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Development",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1610,6 +1687,7 @@
     "card_number": "3RIK04/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Development",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [
@@ -1636,6 +1714,7 @@
     "card_number": "3RIK05/25",
     "variant": "original",
     "glory": 2,
+    "position_indicator": "Development",
     "species_traits": [
       "Human"
     ],
@@ -1664,6 +1743,7 @@
     "card_number": "3RIK06/25",
     "variant": "original",
     "glory": 4,
+    "position_indicator": "Development",
     "species_traits": [],
     "regular_traits": [
       "Starfleet"
@@ -1692,6 +1772,7 @@
     "card_number": "3RIK07/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Development",
     "species_traits": [],
     "regular_traits": [
       "Weapon"
@@ -1716,6 +1797,7 @@
     "card_number": "3RIK08/25",
     "variant": "original",
     "glory": 2,
+    "position_indicator": "Development",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1731,6 +1813,7 @@
     "card_number": "3RIK09/25",
     "variant": "original",
     "glory": 4,
+    "position_indicator": "Status",
     "species_traits": [],
     "regular_traits": [
       "Anomaly"
@@ -1748,6 +1831,7 @@
     "card_number": "3RIK10/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Reserve",
     "species_traits": [],
     "regular_traits": [
       "Beverage"
@@ -1765,6 +1849,7 @@
     "card_number": "3RIK11/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Reserve",
     "species_traits": [],
     "regular_traits": [
       "Hologram",
@@ -1783,6 +1868,7 @@
     "card_number": "3RIK12/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Reserve",
     "species_traits": [
       "Human"
     ],
@@ -1816,6 +1902,7 @@
     "card_number": "3RIK13/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Reserve",
     "species_traits": [
       "Human"
     ],
@@ -1836,6 +1923,7 @@
     "card_number": "3RIK14/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Reserve",
     "species_traits": [
       "Human"
     ],
@@ -1863,6 +1951,7 @@
     "card_number": "3RIK15/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [
       "Betazoid",
       "Human"
@@ -1889,6 +1978,7 @@
     "card_number": "3RIK16/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [
       "Ops",
@@ -1912,6 +2002,7 @@
     "card_number": "3RIK17/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1927,6 +2018,7 @@
     "card_number": "3RIK18/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1942,6 +2034,7 @@
     "card_number": "3RIK19/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1957,6 +2050,7 @@
     "card_number": "3RIK20/25",
     "variant": "original",
     "glory": -2,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1972,6 +2066,7 @@
     "card_number": "3RIK21/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -1987,6 +2082,7 @@
     "card_number": "3RIK22/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Available",
     "species_traits": [],
     "regular_traits": [
       "Starbase",
@@ -2005,6 +2101,7 @@
     "card_number": "3RIK23/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Discard",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2020,6 +2117,7 @@
     "card_number": "3RIK24/25",
     "variant": "original",
     "glory": -2,
+    "position_indicator": "Discard",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
@@ -2035,6 +2133,7 @@
     "card_number": "3RIK25/25",
     "variant": "original",
     "glory": null,
+    "position_indicator": "Discard",
     "species_traits": [],
     "regular_traits": [],
     "other_traits": [],
