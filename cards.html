@@ -477,6 +477,9 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>deck:common</code><span>commons of every visible box</span></div>
     <div class="qh-row"><code>skill:military</code> · <code>focus:influence</code><span>icon search; also skill:any, skill:variable</span></div>
     <div class="qh-row"><code>box:promo1</code> · <code>box:all</code><span>promos in; empty bar = the three main boxes</span></div>
+    <div class="qh-row"><code>glory:4</code> · <code>glory&gt;=3</code><span>glory value; cards without glory never match</span></div>
+    <div class="qh-row"><code>position:reserve</code> · <code>position:incident-deck</code><span>starting position; hyphens for spaces</span></div>
+    <div class="qh-row"><code>variant:update</code> · <code>variant:duplicate</code><span>cards wearing that badge in the current boxes</span></div>
     <div class="qh-note">Clicking any pill writes its token here — the pills are shortcuts for this language.</div>
     <div class="qh-note">Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>
   </div>
@@ -584,8 +587,12 @@ let activeSuits  = new Set();
 let activeTags   = new Set();
 let activeSkills = new Set();
 let nameTerms    = [];
+let gloryTests   = [];          // [{op,n}] from glory:N / glory>N
+let activePositions = new Set();
+let activeVariants  = new Set();
 // Negated counterparts, from "-key:value" / "-word" tokens (query language)
 let negDecks=new Set(), negSuits=new Set(), negTags=new Set(), negSkills=new Set(), negNames=[];
+let negGlory=[], negPositions=new Set(), negVariants=new Set();
 let viewMode     = "pill";
 // --- strategy index -------------------------------------------------------
 // STRATEGY_COUNTS is card_id -> mention count, from the 8 KB companion file.
@@ -871,13 +878,21 @@ function makePill(text,cls,kind){
 /* QUERY_PARSER_START */
 function parseQuery(text, vocab){
   const res={boxes:[],decks:[],suits:[],tags:[],skills:[],names:[],
-             negBoxes:[],negDecks:[],negSuits:[],negTags:[],negSkills:[],negNames:[]};
-  const tokRe=/(-)?(?:([A-Za-z]+):)?("([^"]*)"|[^\s"]+)/g;
+             negBoxes:[],negDecks:[],negSuits:[],negTags:[],negSkills:[],negNames:[],
+             glory:[],negGlory:[],positions:[],negPositions:[],variants:[],negVariants:[]};
+  // A key may be followed by ':' or by a comparison operator, so both glory>4 and
+  // glory:>4 parse. The operator is captured separately from the value.
+  const tokRe=/(-)?(?:([A-Za-z]+)\s*(:|>=|<=|>|<))?("([^"]*)"|[^\s"]+)/g;
   let m;
   while((m=tokRe.exec(text))){
     const neg=!!m[1];
     const key=(m[2]||'').toLowerCase();
-    const val=(m[4]!==undefined?m[4]:m[3]).trim();
+    let op=(m[3]||'');
+    let val=(m[5]!==undefined?m[5]:m[4]).trim();
+    if(!val) continue;
+    // glory:>=4 puts the operator in the value; move it onto op.
+    const opInVal=val.match(/^(>=|<=|>|<|=)\s*(.*)$/);
+    if(opInVal && key){ op=opInVal[1]==='='?':':opInVal[1]; val=opInVal[2].trim(); }
     if(!val) continue;
     const lv=val.toLowerCase();
     const put=(arr,negArr,v)=>(neg?negArr:arr).push(v);
@@ -894,6 +909,17 @@ function parseQuery(text, vocab){
       put(res.skills,res.negSkills,(vocab.skillShort&&vocab.skillShort[lv])||vocab.skills[lv]||val);
     } else if(key==='focus'){
       put(res.skills,res.negSkills,(vocab.focusShort&&vocab.focusShort[lv])||val);
+    } else if(key==='glory'){
+      const n=Number(lv);
+      if(Number.isFinite(n)) put(res.glory,res.negGlory,{op:(op===':'?'=':op)||'=',n:n});
+    } else if(key==='position'){
+      // Hyphens stand in for spaces: position:incident-deck === position:"incident deck".
+      const norm=lv.replace(/-/g,' ').replace(/\s+/g,' ');
+      put(res.positions,res.negPositions,(vocab.positions&&vocab.positions[norm])||val);
+    } else if(key==='variant'){
+      const v = (lv==='updated'||lv==='update') ? 'update'
+              : (lv==='duplicate'||lv==='reprint'||lv==='dupe') ? 'duplicate' : lv;
+      put(res.variants,res.negVariants,v);
     } else {
       put(res.names,res.negNames,(key?key+':':'')+lv);
     }
@@ -914,7 +940,11 @@ function buildQueryVocab(){
     if(!m) return;
     (m[2]==='Skill'?skillShort:focusShort)[m[1].toLowerCase()]=v;
   });
-  QUERY_VOCAB={allBoxes:ALL_BOXES,decks,suits:map(SUITS_DISPLAY),
+  // Position vocabulary is read from the data, not hardcoded, so a new indicator
+  // in a future box is searchable the day it lands.
+  const positions={};
+  FULL_POOL.forEach(c=>{ const p=c.position_indicator; if(p) positions[String(p).toLowerCase()]=p; });
+  QUERY_VOCAB={allBoxes:ALL_BOXES,decks,suits:map(SUITS_DISPLAY),positions,
                tags:map([...allSpecies,...allRegular,...allOther]),skills:map(allSkills),
                skillShort,focusShort};
 }
@@ -932,6 +962,9 @@ function applyQuery(text){
   activeTags=new Set(q.tags);  negTags=new Set(q.negTags);
   activeSkills=new Set(q.skills); negSkills=new Set(q.negSkills);
   nameTerms=q.names.map(t=>t.toLowerCase()); negNames=q.negNames.map(t=>t.toLowerCase());
+  gloryTests=q.glory; negGlory=q.negGlory;
+  activePositions=new Set(q.positions); negPositions=new Set(q.negPositions);
+  activeVariants=new Set(q.variants);   negVariants=new Set(q.negVariants);
 }
 
 function currentQuery(){ return document.getElementById('searchInput').value; }
@@ -1027,7 +1060,29 @@ function cardMatches(c){
   if([...negTags].some(t=>allTags.includes(t))) return false;
   if(activeSkills.size && ![...activeSkills].every(s=>c.skills.includes(s))) return false;
   if([...negSkills].some(s=>c.skills.includes(s))) return false;
+  // Glory: a card with no glory value never matches a glory test, in either direction.
+  if(gloryTests.length && !gloryTests.every(t=>gloryMatches(c.glory,t))) return false;
+  if(negGlory.some(t=>gloryMatches(c.glory,t))) return false;
+  const pos=c.position_indicator;
+  if(activePositions.size && !(pos && activePositions.has(pos))) return false;
+  if(pos && negPositions.has(pos)) return false;
+  // Variant matches the badge as displayed, which depends on the selected boxes.
+  if(activeVariants.size && !(c.badgeKind && activeVariants.has(c.badgeKind))) return false;
+  if(c.badgeKind && negVariants.has(c.badgeKind)) return false;
   return true;
+}
+
+function gloryMatches(g,t){
+  if(g===null||g===undefined) return false;
+  const n=Number(g);
+  if(!Number.isFinite(n)) return false;
+  switch(t.op){
+    case '>':  return n >  t.n;
+    case '<':  return n <  t.n;
+    case '>=': return n >= t.n;
+    case '<=': return n <= t.n;
+    default:   return n === t.n;
+  }
 }
 
 function updateSummaries(){
