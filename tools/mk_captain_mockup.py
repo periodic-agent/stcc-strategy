@@ -37,12 +37,12 @@ def main(live_dir='live_sync', out='mockups_captain_preview.html'):
 
         The printed marker's group-of-people glyph has no vector source, so the
         bubble holds the number itself rather than sitting empty above a tab.
-        Values are strings and can be two characters ("2+", "4+"); the digit
-        steps down a little so both fit the same bubble.
+        Values are strings and can be two characters ("2+", "4+"); one size is
+        used for every value so a lone digit does not read larger than a "2+".
         """
         if not v:
             return ''
-        fs = 15 if len(v) < 2 else 12
+        fs = 12
         return (
             '<svg class="awayteam" viewBox="0 0 30 27" role="img" aria-label="Away team ' + v + '">'
             '<title>Away team ' + v + '</title>'
