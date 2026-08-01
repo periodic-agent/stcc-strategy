@@ -117,11 +117,27 @@ CSS = """
 .glorybadge{position:absolute;right:5px;bottom:3px;width:33px;height:30px;z-index:2;}
 .card-entry.has-img{cursor:pointer;}
 
-.ce-bottom{margin-top:auto;padding-top:.45rem;display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:3;}
-.cid2{background:#14171f;color:#e8ecf5;display:inline-block;margin-left:-0.7rem;
+.ce-bottom{margin-top:auto;padding-top:.45rem;position:relative;z-index:3;display:block;}
+/* inner row: the footer rule is a ::before at top:50% of THIS box, so it lands on
+   the chips' centreline without guessing at .ce-bottom's padding. */
+.ce-footrow{position:relative;display:flex;align-items:center;min-height:1.05em;}
+.ce-footrow::before{content:'';position:absolute;left:0;right:0;top:50%;height:1px;
+  background:rgba(200,212,235,.30);z-index:0;}
+.cid2{background:#14171f;color:#e8ecf5;display:inline-block;margin-left:-0.7rem;position:relative;z-index:1;
   font-family:'Antonio',sans-serif;font-size:.56rem;font-weight:600;letter-spacing:.07em;
   padding:.12rem .55rem;border-radius:0 999px 999px 0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22);}
 .cid2 .meta{color:#8a94ac;font-weight:400;margin-left:.35rem;}
+/* starting-position pill: centred on the card, rounded both ends, opaque so the
+   rule passes behind it. */
+.posin{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1;
+  background:#14171f;color:#e8ecf5;white-space:nowrap;
+  font-family:'Antonio',sans-serif;font-size:.56rem;font-weight:600;letter-spacing:.07em;
+  text-transform:uppercase;padding:.12rem .55rem;border-radius:999px;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.22);}
+/* A label too wide to sit centred without touching the number chip is right-anchored
+   instead (only "Controlled Location" today); clearance widens when a corner icon exists. */
+.posin.wide{left:auto;right:2px;transform:translateY(-50%);}
+.card-entry.has-focus .posin.wide{right:38px;}
 """
 
 NEW_BUILD = """function buildPillCard(c){
@@ -165,9 +181,11 @@ NEW_BUILD = """function buildPillCard(c){
   const stratHTML='';
   const badgeMark=badge?(badge.cls==='update'?'\\u2020':'\\u2022')+' '+badge.text:'';
   let numline='';
-  if(c.card_number||badge){
-    numline='<div class="ce-bottom"><span class="cid2">'+(c.card_number||'')
-      +(badge?(c.card_number?' ':'')+'<span class="meta">'+badgeMark+'</span>':'')+'</span></div>';
+  const posin=(c.position_indicator===undefined||c.position_indicator===null)?'':String(c.position_indicator);
+  if(c.card_number||badge||posin){
+    numline='<div class="ce-bottom"><div class="ce-footrow"><span class="cid2">'+(c.card_number||'')
+      +(badge?(c.card_number?' ':'')+'<span class="meta">'+badgeMark+'</span>':'')+'</span>'
+      +(posin?'<span class="posin">'+posin+'</span>':'')+'</div></div>';
   }
   el.innerHTML='<div class="ce-row"><div class="ce-main">'
     +'<div class="nb" style="background:'+col+'">'+c.name+'</div>'
@@ -224,9 +242,31 @@ def patch_html(src, out, assets_js='cardface-assets.js'):
     s = s.replace('<div class="qh-note">Clicking any pill writes its token here \u2014 the pills are shortcuts for this language.</div>',
                   '<div class="qh-note">Clicking any pill writes its token here \u2014 the pills are shortcuts for this language.</div>\n    <div class="qh-note">Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>')
     # glory passthrough in the resolver (dormant until box JSONs carry it)
+    # ===== position pill: measured collision pass =====
+    # The number chip's width varies (card number plus an optional Update/Duplicate
+    # mark), so a text-length heuristic cannot predict a collision. After each
+    # render, measure: a centred pill that would touch the number chip is
+    # right-anchored instead (.wide). Runs once per render, one layout flush.
+    s = s.replace(
+        "  updateBadges();\n  if(!total) groups.innerHTML=",
+        "  updateBadges();\n  placePosPills();\n  if(!total) groups.innerHTML=")
+    s = s.replace(
+        "function render(){",
+        """function placePosPills(){
+  document.querySelectorAll('.card-entry .posin').forEach(p=>{
+    p.classList.remove('wide');
+    const row=p.parentElement, cid=row.querySelector('.cid2');
+    if(!cid) return;
+    if(p.getBoundingClientRect().left < cid.getBoundingClientRect().right + 4) p.classList.add('wide');
+  });
+}
+
+function render(){""")
+
     s = s.replace("card_number: chosen.card_number || '',\n      badgeKind",
                   "card_number: chosen.card_number || '',\n"
                   "      glory: (() => { for (const pr of group) { if (pr.glory !== undefined && pr.glory !== null) return pr.glory; } return null; })(),\n"
+                  "      position_indicator: (() => { for (const pr of group) { if (pr.position_indicator !== undefined && pr.position_indicator !== null && pr.position_indicator !== '') return pr.position_indicator; } return null; })(),\n"
                   "      badgeKind")
     # ===== shareable URLs: mirror the query into location.hash, restore on load =====
     s = s.replace("""function refreshFromQuery(text){

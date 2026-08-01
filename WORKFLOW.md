@@ -462,6 +462,21 @@ copy of the pre-card-face scanner and emits `cardface-assets.js`).
   point. Cards without an image are not clickable.
   Wildcard is the only trait banner with black text: pale salmon `#f6c9bd`
   (all other trait banners carry white text on their family color).
+- **Card footer**: a 1px rule spans the footer row (`.ce-footrow::before`) at the
+  chips' centreline; the opaque number chip (`.cid2`, left-rooted, rounded right
+  only), the starting-position pill (`.posin`) and the corner focus/glory art
+  mask it, so the line reads as running out of the number chip, behind the pill,
+  and into the corner icon. `.posin` shows `position_indicator` (uppercase,
+  same Antonio size as the card number, rounded both ends), absolutely centred
+  on the card. `placePosPills()` runs at the end of `render()` and measures each
+  pill: one that would touch the number chip (the chip widens with an
+  Update/Duplicate mark) is right-anchored instead via `.wide`; 18 of 403 pills
+  today. The footer renders when any of card number, badge, or position exists.
+- **`position_indicator`**: present on every record in all five JSONs, string or
+  null; 415 of 610 non-null. Values seen: Available, Development, Reserve,
+  Starting, Advanced, Captain, Discard, Deployed, Rewards, Controlled Location,
+  Status, Incident Deck, Solo Campaign, Solo Challenge. The resolver coalesces
+  it across printings (first non-null wins), like `glory`.
 - **Font**: Antonio 600 (Google Fonts) for all card-vocabulary elements;
   Orbitron/Exo 2 remain for page chrome.
 - **Filter chips**: rulebook-style banners; outline-only at rest (colored border
