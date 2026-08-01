@@ -5,7 +5,7 @@ Renders a handful of captain cards using the LIVE cards.html CSS and the live
 asset bundle, with the proposed changes applied in memory only:
   - name + suit banners light gray (#d7dce6) with black text, black chair glyph
   - card left border light gray instead of gold
-  - away-team marker (speech bubble over a numbered tab) under the suit banner
+  - away-team marker (speech bubble carrying the number) under the suit banner
 Nothing here writes or pushes cards.html; it exists to look at the design.
 """
 import re, json, base64, sys
@@ -33,19 +33,23 @@ def main(live_dir='live_sync', out='mockups_captain_preview.html'):
     picked = [c for n in order for c in caps if c['name'] == n]
 
     def away_svg(v):
-        """Speech bubble over a tab carrying the away-team value."""
+        """Speech bubble carrying the away-team value.
+
+        The printed marker's group-of-people glyph has no vector source, so the
+        bubble holds the number itself rather than sitting empty above a tab.
+        Values are strings and can be two characters ("2+", "4+"); the digit
+        steps down a little so both fit the same bubble.
+        """
         if not v:
             return ''
-        fs = 13 if len(v) < 2 else 10.5
+        fs = 15 if len(v) < 2 else 12
         return (
-            '<svg class="awayteam" viewBox="0 0 30 40" role="img" aria-label="Away team ' + v + '">'
+            '<svg class="awayteam" viewBox="0 0 30 27" role="img" aria-label="Away team ' + v + '">'
             '<title>Away team ' + v + '</title>'
             '<path d="M4.2 1.1h21.6a3.1 3.1 0 0 1 3.1 3.1v14.6a3.1 3.1 0 0 1-3.1 3.1'
             'h-8.2l-2.6 4.6-2.6-4.6H4.2a3.1 3.1 0 0 1-3.1-3.1V4.2a3.1 3.1 0 0 1 3.1-3.1z" '
             'fill="#1b2f4d" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>'
-            '<rect x="6.4" y="23.4" width="17.2" height="15.6" rx="1.8" '
-            'fill="#2f5f96" stroke="#fff" stroke-width="1.5"/>'
-            '<text x="15" y="35" text-anchor="middle" font-family="Antonio,sans-serif" '
+            '<text x="15" y="16.6" text-anchor="middle" font-family="Antonio,sans-serif" '
             'font-weight="700" font-size="' + str(fs) + '" fill="#fff">' + v + '</text></svg>')
 
     def card(c):
@@ -89,7 +93,7 @@ def main(live_dir='live_sync', out='mockups_captain_preview.html'):
 /* ---- proposed Captain treatment (mockup only) ---- */
 .card-entry.cap{border-left:2px solid %s;}
 .card-entry.cap .nb,.card-entry.cap .sb{color:%s;}
-.awayteam{display:block;width:33px;height:44px;margin:.15rem 0 .4rem -0.15rem;}
+.awayteam{display:block;width:31px;height:28px;margin:.15rem 0 .4rem -0.15rem;}
 """ % (GRAY, INK)
 
     html = ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">'
