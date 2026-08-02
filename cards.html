@@ -27,17 +27,12 @@ body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:v
 a{color:var(--blue);text-decoration:none;}
 .nav-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:0.75rem 1.5rem;}
 .nav-bar a{font-family:'Orbitron',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--scanner);}
-.chapter-header{background:linear-gradient(135deg,#160820 0%,#2a1035 50%,#160820 100%);border-bottom:2px solid var(--scanner);padding:2.5rem 2rem 2rem;text-align:center;position:relative;overflow:hidden;}
+.chapter-header{background:linear-gradient(135deg,#160820 0%,#2a1035 50%,#160820 100%);border-bottom:2px solid var(--scanner);padding:1.2rem 2rem 1rem;text-align:center;position:relative;overflow:hidden;}
 .chapter-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(212,105,159,0.03) 60px,rgba(212,105,159,0.03) 61px);}
 .chapter-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.25em;color:var(--scanner);text-transform:uppercase;margin-bottom:0.6rem;}
 .chapter-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:700;color:#fff;letter-spacing:0.05em;text-shadow:0 0 40px rgba(212,105,159,0.5);}
 .chapter-title span{color:var(--scanner2);}
-.chapter-meta{margin-top:0.6rem;font-size:0.78rem;color:var(--muted);}
-.new-banner{display:inline-flex;align-items:center;gap:0.55rem;margin-top:1rem;padding:0.28rem 0.75rem 0.28rem 0.32rem;background:rgba(94,200,200,0.07);border:1px solid rgba(94,200,200,0.35);border-radius:999px;font-family:'Exo 2',sans-serif;font-size:0.8rem;color:var(--text);text-decoration:none;cursor:pointer;transition:border-color .2s,background .2s,transform .2s;}
-.new-banner:hover{border-color:rgba(111,211,211,0.75);background:rgba(94,200,200,0.14);transform:translateY(-1px);}
-.new-badge{font-family:'Orbitron',sans-serif;font-size:0.58rem;font-weight:700;letter-spacing:0.14em;color:#fff;text-transform:uppercase;padding:0.22rem 0.5rem;border-radius:999px;background:linear-gradient(135deg,#f0902e,#d44a4a);box-shadow:0 0 12px rgba(240,144,46,0.45);}
-.new-banner .new-arrow{color:var(--muted);font-size:0.85rem;transition:transform .2s;}
-.new-banner:hover .new-arrow{transform:translateX(3px);}
+.chapter-meta{margin-top:0.4rem;font-size:0.78rem;color:var(--muted);}
 .controls{max-width:1100px;margin:1.5rem auto 0;padding:0 1.5rem;}
 .filter-section{margin-bottom:1rem;}
 .filter-label{font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;}
@@ -231,7 +226,6 @@ a{color:var(--blue);text-decoration:none;}
 /* --- strategy index: badge + drawer --- */
 .card-badge.strategy{background:rgba(94,200,200,0.14);color:#6fd3d3;border-color:rgba(94,200,200,0.45);}
 .card-badge + .card-badge{margin-left:0.3rem;}
-.new-banner .card-badge{margin-bottom:0;}
 .card-entry.has-strategy{cursor:pointer;}
 .card-entry.has-strategy:hover{border-color:rgba(94,200,200,0.55);}
 .card-entry.drawer-open{border-color:#5ec8c8;box-shadow:0 0 0 1px rgba(94,200,200,0.35);}
@@ -461,10 +455,8 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 <div class="nav-bar"><a href="index.html">← Back to Compendium</a></div>
 
 <header class="chapter-header">
-  <div class="chapter-label">ST:CC Strategy Compendium</div>
   <h1 class="chapter-title"><span>Card</span> Scanner</h1>
-  <div class="chapter-meta">Select boxes, filter by trait or skill, search by name. Show details or images.</div>
-  
+  <div class="chapter-meta">Select boxes, filter by suit, trait, or skill, search by name, starting position.</div>
 </header>
 
 <div class="controls">
@@ -506,7 +498,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   </div>
 
   <div class="filter-section">
-    <div class="filter-label">Deck</div>
+    <div class="filter-label">Market and Crew decks</div>
     <div class="pill-row" id="deckFilters"></div>
   </div>
 
@@ -961,7 +953,11 @@ function buildQueryVocab(){
   // in a future box is searchable the day it lands.
   const positions={};
   FULL_POOL.forEach(c=>{ const p=c.position_indicator; if(p) positions[String(p).toLowerCase()]=p; });
-  QUERY_VOCAB={allBoxes:ALL_BOXES,decks,suits:map(SUITS_DISPLAY),positions,
+  // Suits are folded from the DATA, not from the pill list: Captain, Directive and Status
+  // have cards but no pill, and used to be unmatchable in lowercase.
+  const suits=map(SUITS_DISPLAY);
+  FULL_POOL.forEach(c=>{ if(c.suit) suits[String(c.suit).toLowerCase()]=c.suit; });
+  QUERY_VOCAB={allBoxes:ALL_BOXES,decks,suits,positions,
                tags:map([...allSpecies,...allRegular,...allOther]),skills:map(allSkills),
                skillShort,focusShort};
 }
@@ -1069,9 +1065,13 @@ function cardMatches(c){
   }
   if(activeSuits.size && !activeSuits.has(c.suit)) return false;
   if(negSuits.has(c.suit)) return false;
+  // A bare word matches the card name OR its suit, so "status" finds Status cards as well as
+  // cards with status in the name. suit: stays exact.
   const lname=c.name.toLowerCase();
-  if(nameTerms.length && !nameTerms.every(t=>lname.includes(t))) return false;
-  if(negNames.some(t=>lname.includes(t))) return false;
+  const lsuit=(c.suit||'').toLowerCase();
+  const bare=t=>lname.includes(t)||lsuit===t;
+  if(nameTerms.length && !nameTerms.every(bare)) return false;
+  if(negNames.some(bare)) return false;
   const allTags=[...c.species,...c.regular,...c.other];
   if(activeTags.size && ![...activeTags].every(t=>allTags.includes(t))) return false;
   if([...negTags].some(t=>allTags.includes(t))) return false;

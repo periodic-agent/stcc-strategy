@@ -252,6 +252,21 @@ assert(upd.length > 0 && upd.every(c=>c.badgeKind === 'update'),
   'variant:update returns exactly the cards wearing the Update badge');
 assert(runQuery('box:core variant:duplicate').length === 0,
   'with only Box 1 selected nothing wears a badge, so variant:duplicate is empty');
+// suit vocabulary and bare suit words
+const statusExact = runQuery('box:all suit:status');
+assert(statusExact.length > 0 && statusExact.every(c=>c.suit === 'Status'),
+  'suit:status matches in lowercase, not only suit:Status');
+assert(runQuery('box:all suit:captain').every(c=>c.suit === 'Captain'),
+  'suit:captain returns captain cards');
+assert(runQuery('box:all suit:directive').every(c=>c.suit === 'Directive'),
+  'suit:directive returns directive cards');
+const bareCaptain = runQuery('box:all captain');
+assert(bareCaptain.some(c=>c.suit === 'Captain') && bareCaptain.some(c=>c.suit !== 'Captain' && /captain/i.test(c.name)),
+  'a bare suit word returns the union of that suit and name matches');
+assert(bareCaptain.length >= runQuery('box:all suit:captain').length,
+  'the bare word is a superset of the exact suit search');
+assert(!runQuery('box:all -captain').some(c=>c.suit === 'Captain' || /captain/i.test(c.name)),
+  'negating a bare suit word drops both the suit and the name matches');
 api.applyQuery(''); api.render();
 
 // Box row: default selection and the "All" pill.
@@ -295,8 +310,8 @@ assert(api.viewMode === 'pill',
   'the header banner switches to Cards view, where the Strategy badge lives');
 assert(!/class="new-banner"/.test(html),
   'the New banner is retired in the card-face design (strategy opens by clicking a discussed card)');
-assert(/\.new-banner \.card-badge\{margin-bottom:0;\}/.test(html),
-  'the inline badge drops the card-context bottom margin so the banner text stays centred');
+assert(!/\.new-banner/.test(html),
+  'no orphaned New banner CSS is left behind now that the markup is gone');
 
 // --- strategy index: badge, drawer, and link integrity ---------------------
 // The drawer deep-links into guides, so a stale index would produce badges
