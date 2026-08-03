@@ -267,6 +267,14 @@ assert(bareCaptain.length >= runQuery('box:all suit:captain').length,
   'the bare word is a superset of the exact suit search');
 assert(!runQuery('box:all -captain').some(c=>c.suit === 'Captain' || /captain/i.test(c.name)),
   'negating a bare suit word drops both the suit and the name matches');
+// hidden query
+const egg = runQuery('picard combo');
+assert(egg.length === 4 && ['picard-daystrom-institute','moriarty','picard-uss-bozeman','holographic-drone-ship']
+         .every(id=>egg.some(c=>c.id===id)),
+  'the hidden picard combo query returns its four cards');
+assert(runQuery('combo picard').length === 4, 'word order does not matter');
+assert(runQuery('picard').length > 4 && runQuery('combo').length !== 4,
+  'either word alone behaves as an ordinary name search');
 api.applyQuery(''); api.render();
 
 // Box row: default selection and the "All" pill.

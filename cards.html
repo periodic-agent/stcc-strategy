@@ -595,6 +595,12 @@ let activeSuits  = new Set();
 let activeTags   = new Set();
 let activeSkills = new Set();
 let nameTerms    = [];
+let comboIds     = null;        // set by the hidden query below, else null
+// Hidden queries: exact bare-word set -> a fixed hand of card ids.
+const EASTER_EGGS = [
+  { words:['combo','picard'],
+    ids:['picard-daystrom-institute','moriarty','picard-uss-bozeman','holographic-drone-ship'] }
+];
 let gloryTests   = [];          // [{op,n}] from glory:N / glory>N
 let activePositions = new Set();
 let activeVariants  = new Set();
@@ -975,6 +981,10 @@ function applyQuery(text){
   activeTags=new Set(q.tags);  negTags=new Set(q.negTags);
   activeSkills=new Set(q.skills); negSkills=new Set(q.negSkills);
   nameTerms=q.names.map(t=>t.toLowerCase()); negNames=q.negNames.map(t=>t.toLowerCase());
+  // A hidden query takes over completely: no other token is present to combine with.
+  const bare=[...nameTerms].sort().join(' ');
+  const egg=EASTER_EGGS.find(e=>e.words.join(' ')===bare);
+  comboIds = egg ? new Set(egg.ids) : null;
   gloryTests=q.glory; negGlory=q.negGlory;
   activePositions=new Set(q.positions); negPositions=new Set(q.negPositions);
   activeVariants=new Set(q.variants);   negVariants=new Set(q.negVariants);
@@ -1056,6 +1066,7 @@ function cardBox(c){
 function deckKey(c){ return c.deck==='Common' ? 'Common:'+c.box : c.deck; }
 
 function cardMatches(c){
+  if(comboIds) return comboIds.has(c.id) && activeBoxes.has(c.box);
   // Box membership (promos now live in activeBoxes as promo1/promo2)
   if(!activeBoxes.has(c.box)) return false;
   // Promo cards skip the deck filter; everything else respects deck selection.
