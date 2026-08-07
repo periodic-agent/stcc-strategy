@@ -1,5 +1,24 @@
 User-agent: *
 Allow: /
+
+# Fan-site pages, the Card Scanner, and card images are for crawling.
+# Internal project docs and tooling are public but not search material.
+Disallow: /WORKFLOW.md
+Disallow: /PROJECT_BRIEF.md
+Disallow: /ISSUES.md
+Disallow: /README.md
+Disallow: /tools/
+Disallow: /text/
+Disallow: /mockups/
+Disallow: /data/
+Disallow: /box1.json
+Disallow: /box2.json
+Disallow: /box3.json
+Disallow: /promo1.json
+Disallow: /promo2.json
+Disallow: /push_to_github.py
+Disallow: /extract_cards.py
+Disallow: /download_allies_images.py
 Disallow: /harmless_kitten.html
 
 Sitemap: https://periodic-agent.github.io/stcc-strategy/sitemap.xml
