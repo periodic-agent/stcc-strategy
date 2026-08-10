@@ -1,8 +1,8 @@
 {
- "generated": "2026-07-29T02:30:23Z",
+ "generated": "2026-08-10T21:13:04Z",
  "generator": "tools/build_strategy_index.py",
- "guide_count": 27,
- "card_count": 343,
+ "guide_count": 28,
+ "card_count": 359,
  "guides": {
   "allies.html": {
    "title": "Ally Deck Strategy Guide",
@@ -30,6 +30,10 @@
   },
   "georgiou.html": {
    "title": "Philippa Georgiou",
+   "label": "To Boldly Go"
+  },
+  "kirk.html": {
+   "title": "James T. Kirk",
    "label": "To Boldly Go"
   },
   "koloth.html": {
@@ -130,6 +134,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Admiral Jarok is good for a Development but Kirk has enough attacks that I would avoid promoting him. Ambassador Gral is a great choice simply for Incident management and a “controlled” Burn win. Ash Tyler triggers Kirk’s Reaction and you might be able to use him for hand size, but you won’t have a situation with more Klingons than Starfleet. Hoshi Sato can be really helpful in searching for Vulcans",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "koloth.html",
     "count": 1,
     "hits": [
@@ -199,6 +217,20 @@
       "snippet": "Admiral Terry Quinn himself graces ST:CC with a wonderfully thematic card. His free Play action allows an attack to get free played, saving you an action token. He also can promote a duty officer from hand or discard pile if you don't have one already. His resupply action supports a strong security force, and his activation allows you to dismiss a card with cloak in play to gain 3 glory and log him, just like Picard",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Core Set: Ambassador Kamrag lets Kirk scan for some more Klingons, which is helpful as a potential completion route for The Undiscovered Country along with the Captain Reaction benefit. Kirk should have a decent number of Person cards to benefit from Joret Dal. Captain Dorg feels like he should be helpful, but without Weapon cards, he loses some of his bite. B-4 can help you there with getting Cargo, but is",
+      "truncated": true,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -281,6 +313,20 @@
       "snippet": "There don't seem to be a lot of downsides to having Ambassador Gral on your crew. His actions are both free-play, and finding a card is nearly always useful, even if it's limited to Influence skill/focus. His attack targets your opponent's Vulcans or Andorians (watch out Soval and Shran) for a Glory, and is a free promotion for Gral or another Tellarite. Even if you don't have another Tellarite, he can self-promote,",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Admiral Jarok is good for a Development but Kirk has enough attacks that I would avoid promoting him. Ambassador Gral is a great choice simply for Incident management and a “controlled” Burn win. Ash Tyler triggers Kirk’s Reaction and you might be able to use him for hand size, but you won’t have a situation with more Klingons than Starfleet. Hoshi Sato can be really helpful in searching for Vulcans",
+      "truncated": true,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -398,6 +444,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Core Set: Omega Particle for resource generation is both good for Kirk and provides a reliable focus scoring if you can max it out at four or five points. Boltzmann Brain is great for everybody, unless you just hit a point where you stopped taking Incidents. Sha Ka Ree is pretty good due to the Vulcan trait, and Kirk can afford to lose the ship needed to beam. Ancient Gene Fragments can be good if you get it early",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -443,6 +503,28 @@
       "anchor": "georgiou-development-strategy",
       "heading": "Georgiou Development Strategy",
       "snippet": "If you manage to get a location like Ancient Relay Station, this becomes an even easier decision. It’s Admiral Anderson every time, and not for the card draw, but for his play action. Being able to enlist other developments (without a requirement like Picard’s U.S.S. Bozeman ) is worth its weight in gold. You could easily burn through your entire development pile and simply be grabbing the best market cards for one",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "kirk-time-warp",
+      "heading": "Time Warp (Directive) (Dev Cost 2 Dilithium and take an Incident)",
+      "snippet": "Anyway, this custom directive gets the Time Travel and Anomaly traits. Its two play actions are free, allowing you to find any card, or alternatively recall a non-Time Travel card from your staging area. It scores for Research Focus. Keep in mind that Find also applies to Reserve unless indicated, so if you can use an Ancient Relay Station to get an early Development, you can really cut down on your time in your",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-development-strategy",
+      "heading": "Kirk’s Development Strategy",
+      "snippet": "As always, development strategy is highly dependent on your game state, current tempo, and how close you are to the end of the game. Let’s start with an early Dev, from Ancient Relay Station or completing The Undiscovered Country mission. If you have the ability to grab Time Warp early, I think you should do so. Its utility is just too good to pass up, both to Find cards and recall non-Time Travel cards. What",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -568,6 +650,28 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 3,
+    "hits": [
+     {
+      "anchor": "kirk-s-starting-hand-strategies",
+      "heading": "Kirk’s Starting Hand Strategies",
+      "snippet": "Let’s go the opposite direction. What if you don’t have any cards in your starting hand that give you the ability to draw more cards? All is not actually lost, as you can set up for a nearly equally dynamic second turn by making sure you end the round with all three of your Person cards in the discard pile (and you’ll be able to just beam them to Levitation boots in round two from your discard). Alternatively, you",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-reserve-cards",
+      "heading": "Kirk’s Reserve Cards",
+      "snippet": "Kirk has five Reserve Cards consisting of two Directives, two Person Cards, and a Ship. One of the Directives is Analyze, which we’ve seen before and is the basic Directive for gaining Ships, Cargo or some free Dilithium. The other Reserve cards are new:",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "sisko.html",
     "count": 3,
     "hits": [
@@ -612,6 +716,22 @@
       "heading": "Ma'ah (Person)",
       "snippet": "Ma'ah is a Klingon Lower Decker, and his Support action triggers when another Klingon is put into play, gaining you a ship at the cost of an Incident, or an Action Token and discarding an Incident. I think that his support action is best used as an off-brand Analyze, having the same effect of gaining a Ship at the cost of Taking and Incident, only without having to pay any action tokens. His play action dismisses",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "archer-faith-of-the-heart": [
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "putting-it-all-together",
+      "heading": "Putting It All Together",
+      "snippet": "I hope you enjoyed this strategy guide for Captain Kirk’s deck. Finally, we’ll have to retire the “where is Kirk?” meme. Of course, I don’t see Janeway yet, so I’m sure there will be plenty of requests for her next. But we do have Picard, Kirk, and Sisko now in the game. I wonder who we’ll talk about next… Don’t worry, I have a plan, y’all just have some faith. Of the heart.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -742,6 +862,28 @@
   ],
   "archer-recruit": [
    {
+    "guide": "kirk.html",
+    "count": 4,
+    "hits": [
+     {
+      "anchor": "kirk-s-available-cards",
+      "heading": "Kirk’s Available Cards",
+      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-starting-hand-strategies",
+      "heading": "Kirk’s Starting Hand Strategies",
+      "snippet": "Now you have an empty discard pile, Levitation boots in play with two Person cards beamed, Set a Course and Maximum Warp in your staging area, and four cards in your hand. That would be either McCoy or Uhura, and Recruit, Utilize, and Strange New Worlds. From there you have a few options. If you want to get a turn one encounter, make sure you’ve already warped the Enterprise to Starfleet Headquarters via Maximum",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "picard.html",
     "count": 2,
     "hits": [
@@ -829,6 +971,28 @@
    }
   ],
   "archer-strange-new-worlds": [
+   {
+    "guide": "kirk.html",
+    "count": 16,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Kirk has five away teams along with the Human and Starfleet traits. His Reaction allows you to gain a Military after putting a card with the Klingon trait in play, because he’s never trusted Klingons, and he never will. Alternatively, you can use his Activation to put a card on top of your deck to draw a Directive from your Discard pile, which allows for some decent flexibility in, say, gaining Utilize or Strange",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-available-cards",
+      "heading": "Kirk’s Available Cards",
+      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "burnham.html",
     "count": 4,
@@ -1066,6 +1230,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Arin’sen has the potential for a big play if you’ve been gathering Klingons for Kirk. Otherwise, Denobulans, Bolians, Bynars, Organians, and Kelpians don’t really have any unique benefit for Kirk. Lethians can work if you need to draw Levitation Boots from your Discard pile, but since they log themselves that will only work one time. Suliban have that fun Time-Travel recall ability, and the alien trait can be useful.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "koloth.html",
     "count": 1,
     "hits": [
@@ -1146,6 +1324,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Admiral Jarok is good for a Development but Kirk has enough attacks that I would avoid promoting him. Ambassador Gral is a great choice simply for Incident management and a “controlled” Burn win. Ash Tyler triggers Kirk’s Reaction and you might be able to use him for hand size, but you won’t have a situation with more Klingons than Starfleet. Hoshi Sato can be really helpful in searching for Vulcans",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-cargo.html",
     "count": 1,
     "hits": [
@@ -1199,6 +1391,20 @@
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
       "snippet": "To Boldly Go: I’m definitely a fan of Augmentation plague due to Georgiou’s late game focus on Klingon cards, and if you can nab it early you can get some Glory every time you put a Klingon in play. You shouldn’t have to worry about specialty restrictions for cards like forced Singularity, which also gives you focus scoring for research and yet another duty officer. Same benefit to Computer Virus, and you should get",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: Augmentation Plague has some synergy with its Reaction, allowing Kirk to gain a Glory when he’s putting Klingons in play, in addition to the Research Focus. Kirk has plenty of Ships that can benefit from Cloaking Device. EVA Suits may not be as useful because you already have Levitation Boots, but can still have some use. I like using Forced Singularity to find Scotty, which is more useful for Kirk",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -1346,6 +1552,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Second Contact: Betazed Intelligence helps you find Sarek, but other than that you’re probably only getting one turn with a slightly increased handsize before this logs. Illyrians are good because you can use Sarek to have 3 Duty officers, but you’ll only get one shot at it unless you can leverage an Augment somehow. The play actions aren’t bad for Kirk either. Nova Fleet is also great, though not any more for Kirk",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "shran.html",
     "count": 1,
     "hits": [
@@ -1375,6 +1595,20 @@
    }
   ],
   "betazed-intelligence": [
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Second Contact: Betazed Intelligence helps you find Sarek, but other than that you’re probably only getting one turn with a slightly increased handsize before this logs. Illyrians are good because you can use Sarek to have 3 Duty officers, but you’ll only get one shot at it unless you can leverage an Augment somehow. The play actions aren’t bad for Kirk either. Nova Fleet is also great, though not any more for Kirk",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "soval.html",
     "count": 1,
@@ -1420,6 +1654,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Core Set: Tribbles and Tachyon Detection Grid continue to be useful against specific captains, but aren’t uniquely good for Kirk in my opinion. Biobed is great for Kirk and can allow you to Find Bones, or simply keep your Incidents managed. Mek’leth is most useful for Kirk for the Klingon trait. Kirk should be able to meet the restriction for Unstable Wormhole easily, and it’s mostly just for him to help predict",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -1457,6 +1705,20 @@
       "anchor": "captains",
       "heading": "Sela",
       "snippet": "Sela's Reinforce traits are a tiny bit more specific than most Captains. On a win you can reinforce an Attack, Shady, or Cloak card. At first blush this seems limited, as no one Suit is included, but there's a lot of Attack (17) and Shady (9) cards, and even two common cloaks (Cloaking device and Bird-Of-Prey). The real question will be whether your captain can benefit from those Attack cards. On a loss, you can",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Core Set: The Reliant is solid for Kirk based on his ease of moving up the Influence track. Same with the Son’a Battlecruiser and their six Military requirements. K’T’Inga Battlecruiser is a great option for Kirk because of the Klingon trait, Military Skill, and Away Team ability. Bird of Prey is good too, but I’m not sure Kirk gets any unique benefit. Voth Research Vessel is great for Kirk and you should be able to",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -1522,6 +1784,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Arin’sen has the potential for a big play if you’ve been gathering Klingons for Kirk. Otherwise, Denobulans, Bolians, Bynars, Organians, and Kelpians don’t really have any unique benefit for Kirk. Lethians can work if you need to draw Levitation Boots from your Discard pile, but since they log themselves that will only work one time. Suliban have that fun Time-Travel recall ability, and the alien trait can be useful.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -1566,6 +1842,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Core Set: Omega Particle for resource generation is both good for Kirk and provides a reliable focus scoring if you can max it out at four or five points. Boltzmann Brain is great for everybody, unless you just hit a point where you stopped taking Incidents. Sha Ka Ree is pretty good due to the Vulcan trait, and Kirk can afford to lose the ship needed to beam. Ancient Gene Fragments can be good if you get it early",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -1591,6 +1881,20 @@
       "snippet": "This ship has the Borg tag, naturally. It has a free play action to deploy and warp the ship, but you can optionally spend an action token and one Dilithium to gain a person and log that card. That seems kind of silly (it's just a point, unless the card has a focus or market glory on it), except that if you have a Borg captain you can assimilate that card instead. What does that mean? What does that do? I don't know",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The repeated Ships from the Core Box are all pretty much great for everyone. Borg Probe is always a great beaming Ship and Kirk wants it just as much as everyone else. D’Kyr can work in coordination with Kirk’s other Vulcan cards and some market cards. Holographic Drone Ship should be playable with a Telepath (Spock or Sarek), though Kirk can probably also hit the seven Research requirement of the first free play",
+      "truncated": true,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -1976,6 +2280,28 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 3,
+    "hits": [
+     {
+      "anchor": "kirk-s-available-cards",
+      "heading": "Kirk’s Available Cards",
+      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-starting-hand-strategies",
+      "heading": "Kirk’s Starting Hand Strategies",
+      "snippet": "Kirk starts out with some of the best card-draw options in the game. Between Set a Course and Maximum Warp, you can potentially see a total of 3 additional cards in your deck. You also have the potential to use Subspace Phenomenon to discard Spock and then draw two cards and discard one, which if you’re keeping track, is your whole starting deck. Let’s game that out for a second: If you can access those four cards",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "sc-market-locations-rewards.html",
     "count": 1,
     "hits": [
@@ -2342,6 +2668,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Arin’sen has the potential for a big play if you’ve been gathering Klingons for Kirk. Otherwise, Denobulans, Bolians, Bynars, Organians, and Kelpians don’t really have any unique benefit for Kirk. Lethians can work if you need to draw Levitation Boots from your Discard pile, but since they log themselves that will only work one time. Suliban have that fun Time-Travel recall ability, and the alien trait can be useful.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -2393,6 +2733,20 @@
       "anchor": "notable-market-cards",
       "heading": "Person Deck",
       "snippet": "Core Set: Once again we have Klingon with a Military Focus on Captain Dorg who will work well for Georgiou, as will Ambassador Kamarag. Lenara Kahn is a good way to get Anomaly cards and gain some Research. Sakona’s not bad especially for the Vulcan trait and Military requirement as duty officer, so long as you’ve found some Weapons. I like Peanut Hamper simply to avoid Dilithium scarcity. Let me know if you all see",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Core Set: Ambassador Kamrag lets Kirk scan for some more Klingons, which is helpful as a potential completion route for The Undiscovered Country along with the Captain Reaction benefit. Kirk should have a decent number of Person cards to benefit from Joret Dal. Captain Dorg feels like he should be helpful, but without Weapon cards, he loses some of his bite. B-4 can help you there with getting Cargo, but is",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -2489,6 +2843,20 @@
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
       "snippet": "To Boldly Go: I’m definitely a fan of Augmentation plague due to Georgiou’s late game focus on Klingon cards, and if you can nab it early you can get some Glory every time you put a Klingon in play. You shouldn’t have to worry about specialty restrictions for cards like forced Singularity, which also gives you focus scoring for research and yet another duty officer. Same benefit to Computer Virus, and you should get",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: Augmentation Plague has some synergy with its Reaction, allowing Kirk to gain a Glory when he’s putting Klingons in play, in addition to the Research Focus. Kirk has plenty of Ships that can benefit from Cloaking Device. EVA Suits may not be as useful because you already have Levitation Boots, but can still have some use. I like using Forced Singularity to find Scotty, which is more useful for Kirk",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -2768,6 +3136,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "To Boldly Go: Delphic Expanse Sphere is good for sending away teams to controlled locations to set up Strange New Worlds. Gomtuu is amazing for Kirk because it counts as an Encounter on a Ship by itself, meaning you only need to beam one more Encounter here to complete Kirk’s mission. New Federation Applicants is fine for Incident management and card draw, and the wild focus offers some good flexibility for scoring.",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -2844,6 +3226,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Arin’sen has the potential for a big play if you’ve been gathering Klingons for Kirk. Otherwise, Denobulans, Bolians, Bynars, Organians, and Kelpians don’t really have any unique benefit for Kirk. Lethians can work if you need to draw Levitation Boots from your Discard pile, but since they log themselves that will only work one time. Suliban have that fun Time-Travel recall ability, and the alien trait can be useful.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -2882,6 +3278,20 @@
       "heading": "Person Deck",
       "snippet": "Second Contact: Second Contact adds some helpful traits and abilities from Person cards, including the Klingon Ma’ah and Alien K’Ranch. Parmen’s not the best due to the six Influence requirement for his activation, but his find ability is tremendous. D’Erika Tendi is pretty great too because of track gain and Ship gain. And Jennifer Sh’reyan provides another option for Set a Course in her Activation, meaning you can",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Second Contact: All five person cards from Second Contact are great for Kirk…but I don’t particularly see them being bad for anybody. Both Ma’ah and D’Erika Tendi are great for ships, which makes Kirk even more deadly in the Neutral Zone. Parmen, K’Ranch, and Jennifer all benefit to different degrees as you gain person cards, which Uhura will help you with too. There’s no bad persons, only bad circumstances.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -2973,6 +3383,20 @@
       "anchor": "notable-market-cards",
       "heading": "Ship Deck",
       "snippet": "To Boldly Go: The repeat ships from the Corebox are all great, but Borg Cube gives the extra advantage of endgame scoring for Georgiou so long as you can keep it in play at the end of the game with lots of beamed cards. D’kyr Cruiser has that Vulcan trait and Military restriction that Georgiou can benefit from too. Medusian Vessel is a good pick for the Alien trait. Grabbing Vor’cha Attack Cruiser can help push the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "To Boldly Go: D’Kora Marauder will really only benefit Kirk if he can get a Latinum engine going, and his kit isn’t really designed for that. Medusan Vessel is nice for gaining some more Telepaths but I’m not sure Kirk benefits from it uniquely except for the Alien trait. D’Var has the free play deploy, but beyond that its pretty standard for Kirk. Vor’Cha Attack Cruiser is great, because Kirk always wants Klingons",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -3072,6 +3496,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "To Boldly Go: D’Kora Marauder will really only benefit Kirk if he can get a Latinum engine going, and his kit isn’t really designed for that. Medusan Vessel is nice for gaining some more Telepaths but I’m not sure Kirk benefits from it uniquely except for the Alien trait. D’Var has the free play deploy, but beyond that its pretty standard for Kirk. Vor’Cha Attack Cruiser is great, because Kirk always wants Klingons",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "sc-market-locations-rewards.html",
     "count": 1,
     "hits": [
@@ -3137,6 +3575,20 @@
       "anchor": "notable-market-cards",
       "heading": "Ally Deck",
       "snippet": "Core Set: The standouts when adding the core set back in tend to be more military focused. Karemma gives Georgiou some much-needed Latinum and extra actions. Tholians are excellent for Georgiou, especially once she’s got quite a few ships under her control. I will note that the Edosians are a bit underwhelming and it might be hard to reach the Influence threshold. The Emerald Chain can help with Military gain, but",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Core Set: Halkan Council is good earlier on, before Kirk gets all his Attack cards, plus it’s thematic. Tholians is good for pretty much anybody, but Kirk will be trying to play Strange New Worlds as often as possible so timing will matter and you probably won’t have more than two or three controlled locations at most. Edosians is really good since Kirk needs those Encounters, and the restrictions should be",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -3217,6 +3669,20 @@
       "anchor": "notable-market-cards",
       "heading": "Ally Deck",
       "snippet": "Core Set: The standouts when adding the core set back in tend to be more military focused. Karemma gives Georgiou some much-needed Latinum and extra actions. Tholians are excellent for Georgiou, especially once she’s got quite a few ships under her control. I will note that the Edosians are a bit underwhelming and it might be hard to reach the Influence threshold. The Emerald Chain can help with Military gain, but",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Core Set: Halkan Council is good earlier on, before Kirk gets all his Attack cards, plus it’s thematic. Tholians is good for pretty much anybody, but Kirk will be trying to play Strange New Worlds as often as possible so timing will matter and you probably won’t have more than two or three controlled locations at most. Edosians is really good since Kirk needs those Encounters, and the restrictions should be",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -3378,6 +3844,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: Augmentation Plague has some synergy with its Reaction, allowing Kirk to gain a Glory when he’s putting Klingons in play, in addition to the Research Focus. Kirk has plenty of Ships that can benefit from Cloaking Device. EVA Suits may not be as useful because you already have Levitation Boots, but can still have some use. I like using Forced Singularity to find Scotty, which is more useful for Kirk",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -3415,6 +3895,20 @@
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
       "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free-play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Core Set: Tribbles and Tachyon Detection Grid continue to be useful against specific captains, but aren’t uniquely good for Kirk in my opinion. Biobed is great for Kirk and can allow you to Find Bones, or simply keep your Incidents managed. Mek’leth is most useful for Kirk for the Klingon trait. Kirk should be able to meet the restriction for Unstable Wormhole easily, and it’s mostly just for him to help predict",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -3467,6 +3961,20 @@
       "anchor": "notable-market-cards",
       "heading": "Ship Deck",
       "snippet": "Second Contact: Fesarius is great for everyone, and Georgiou has plenty of Starfleet Person cards to use to gain an encounter with Fesarius . The R.I.S. Talvath isn’t anything special but might help you with pushing the endgame.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Second Contact: The R.I.S. Talvath is pretty good because there’s going to be plenty of Anomaly/Communication/Time Travel cards in play. Fesarius is good for the free play and free warp operations, and Kirk has plenty of Person cards that can be sent here (Spock could get logged twice).",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -3569,6 +4077,20 @@
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
       "snippet": "To Boldly Go: I’m definitely a fan of Augmentation plague due to Georgiou’s late game focus on Klingon cards, and if you can nab it early you can get some Glory every time you put a Klingon in play. You shouldn’t have to worry about specialty restrictions for cards like forced Singularity, which also gives you focus scoring for research and yet another duty officer. Same benefit to Computer Virus, and you should get",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: Augmentation Plague has some synergy with its Reaction, allowing Kirk to gain a Glory when he’s putting Klingons in play, in addition to the Research Focus. Kirk has plenty of Ships that can benefit from Cloaking Device. EVA Suits may not be as useful because you already have Levitation Boots, but can still have some use. I like using Forced Singularity to find Scotty, which is more useful for Kirk",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -3724,6 +4246,28 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 4,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Second Contact: All five person cards from Second Contact are great for Kirk…but I don’t particularly see them being bad for anybody. Both Ma’ah and D’Erika Tendi are great for ships, which makes Kirk even more deadly in the Neutral Zone. Parmen, K’Ranch, and Jennifer all benefit to different degrees as you gain person cards, which Uhura will help you with too. There’s no bad persons, only bad circumstances.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Second Contact: I would really be careful with Moopsy. Kirk is already going to be logging cards with Spock, so logging even more Person cards is a dangerous game. But card draw is great, and you can still benefit from your opponent logging Person cards. Protocol 12 works with Bones but you’ll need to find some more Doctors. Gift Box has general utility but as I’ve noted before, Kirk really isn’t too heavy a Cargo",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "combining-markets.html",
     "count": 2,
     "hits": [
@@ -3811,6 +4355,28 @@
    }
   ],
   "freeman-set-a-course": [
+   {
+    "guide": "kirk.html",
+    "count": 5,
+    "hits": [
+     {
+      "anchor": "kirk-s-available-cards",
+      "heading": "Kirk’s Available Cards",
+      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-starting-hand-strategies",
+      "heading": "Kirk’s Starting Hand Strategies",
+      "snippet": "Kirk starts out with some of the best card-draw options in the game. Between Set a Course and Maximum Warp, you can potentially see a total of 3 additional cards in your deck. You also have the potential to use Subspace Phenomenon to discard Spock and then draw two cards and discard one, which if you’re keeping track, is your whole starting deck. Let’s game that out for a second: If you can access those four cards",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "picard.html",
     "count": 3,
@@ -4288,6 +4854,28 @@
   ],
   "georgiou-utilize": [
    {
+    "guide": "kirk.html",
+    "count": 9,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Kirk has five away teams along with the Human and Starfleet traits. His Reaction allows you to gain a Military after putting a card with the Klingon trait in play, because he’s never trusted Klingons, and he never will. Alternatively, you can use his Activation to put a card on top of your deck to draw a Directive from your Discard pile, which allows for some decent flexibility in, say, gaining Utilize or Strange",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-available-cards",
+      "heading": "Kirk’s Available Cards",
+      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "shran.html",
     "count": 6,
     "hits": [
@@ -4596,6 +5184,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Second Contact: I would really be careful with Moopsy. Kirk is already going to be logging cards with Spock, so logging even more Person cards is a dangerous game. But card draw is great, and you can still benefit from your opponent logging Person cards. Protocol 12 works with Bones but you’ll need to find some more Doctors. Gift Box has general utility but as I’ve noted before, Kirk really isn’t too heavy a Cargo",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -4630,6 +5232,28 @@
       "truncated": false,
       "mode": "anchor",
       "lore": true
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "missions",
+      "heading": "Missions",
+      "snippet": "Kirk’s player board’s basic side track multipliers max out at 5x for all skill tracks, all at the 10th space of the tracks. As always the advanced side’s thresholds are one less. His basic mission is Where No Man Has Gone Before, which is a perfect reference to Star Trek’s opening credits mission statement. It requires Kirk to have two Encounters on the same ship, and the Research track at four or higher. This means",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "To Boldly Go: Delphic Expanse Sphere is good for sending away teams to controlled locations to set up Strange New Worlds. Gomtuu is amazing for Kirk because it counts as an Encounter on a Ship by itself, meaning you only need to beam one more Encounter here to complete Kirk’s mission. New Federation Applicants is fine for Incident management and card draw, and the wild focus offers some good flexibility for scoring.",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
      }
     ]
    },
@@ -4702,6 +5326,28 @@
       "heading": "Encounters",
       "snippet": "To Boldly Go: I hesitated including Encounters at first because most captains love most of them. Still, here’s some things I saw that could be helpful. Gomtuu really helps Georgiou move up Military fast, while still offering her a chance to increase Research Focus scoring, both of which she needs for victory. Species 10-C can certainly help, but you’re risking future Encounter gain by eating up those locations and I",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "missions",
+      "heading": "Missions",
+      "snippet": "Kirk’s player board’s basic side track multipliers max out at 5x for all skill tracks, all at the 10th space of the tracks. As always the advanced side’s thresholds are one less. His basic mission is Where No Man Has Gone Before, which is a perfect reference to Star Trek’s opening credits mission statement. It requires Kirk to have two Encounters on the same ship, and the Research track at four or higher. This means",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "second play action. V’Ger and Koala have no downsides for Kirk, nor does the Guardian of Forever.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -4787,6 +5433,20 @@
       "anchor": "notable-market-cards",
       "heading": "Ally Deck",
       "snippet": "Core Set: The standouts when adding the core set back in tend to be more military focused. Karemma gives Georgiou some much-needed Latinum and extra actions. Tholians are excellent for Georgiou, especially once she’s got quite a few ships under her control. I will note that the Edosians are a bit underwhelming and it might be hard to reach the Influence threshold. The Emerald Chain can help with Military gain, but",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Core Set: Halkan Council is good earlier on, before Kirk gets all his Attack cards, plus it’s thematic. Tholians is good for pretty much anybody, but Kirk will be trying to play Strange New Worlds as often as possible so timing will matter and you probably won’t have more than two or three controlled locations at most. Edosians is really good since Kirk needs those Encounters, and the restrictions should be",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -4883,6 +5543,20 @@
       "anchor": "captains",
       "heading": "Shran",
       "snippet": "A win against Shran can allow you a Reinforce of a Weapon or Business trait. For now, that's Tevrin Krit, Holosuite, Pakled Freighter, or Karemma for Business, and Lirpa, Mek'leth, Phasers, Disruptor Pistols, or Holographic Drone Ship for Weapons. I think that's a good amount of flexibility to get something defensive or offensive against the Bot, and I love finding a reason to remove Bot away teams in exchange for",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The repeated Ships from the Core Box are all pretty much great for everyone. Borg Probe is always a great beaming Ship and Kirk wants it just as much as everyone else. D’Kyr can work in coordination with Kirk’s other Vulcan cards and some market cards. Holographic Drone Ship should be playable with a Telepath (Spock or Sarek), though Kirk can probably also hit the seven Research requirement of the first free play",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -5136,6 +5810,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Admiral Jarok is good for a Development but Kirk has enough attacks that I would avoid promoting him. Ambassador Gral is a great choice simply for Incident management and a “controlled” Burn win. Ash Tyler triggers Kirk’s Reaction and you might be able to use him for hand size, but you won’t have a situation with more Klingons than Starfleet. Hoshi Sato can be really helpful in searching for Vulcans",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -5266,6 +5954,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Core Set: Omega Particle for resource generation is both good for Kirk and provides a reliable focus scoring if you can max it out at four or five points. Boltzmann Brain is great for everybody, unless you just hit a point where you stopped taking Incidents. Sha Ka Ree is pretty good due to the Vulcan trait, and Kirk can afford to lose the ship needed to beam. Ancient Gene Fragments can be good if you get it early",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "persons.html",
     "count": 1,
     "hits": [
@@ -5332,6 +6034,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Second Contact: Betazed Intelligence helps you find Sarek, but other than that you’re probably only getting one turn with a slightly increased handsize before this logs. Illyrians are good because you can use Sarek to have 3 Duty officers, but you’ll only get one shot at it unless you can leverage an Augment somehow. The play actions aren’t bad for Kirk either. Nova Fleet is also great, though not any more for Kirk",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -5381,6 +6097,20 @@
       "snippet": "Jackabog use shiny things to get broken ships, and when Jackabog strong he gets very good card. Anyone can use Jackabog with helmets! With Helmet, Jackabog gets cards, which is good for Rebner, because he doesn't get many cards. But every captain likes cards! Jackabog is a good person card, but he is a shady person. We are done now. A quick point: because of that Activation, any captain can benefit from Jackabog as",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Admiral Jarok is good for a Development but Kirk has enough attacks that I would avoid promoting him. Ambassador Gral is a great choice simply for Incident management and a “controlled” Burn win. Ash Tyler triggers Kirk’s Reaction and you might be able to use him for hand size, but you won’t have a situation with more Klingons than Starfleet. Hoshi Sato can be really helpful in searching for Vulcans",
+      "truncated": true,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -5436,6 +6166,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: Augmentation Plague has some synergy with its Reaction, allowing Kirk to gain a Glory when he’s putting Klingons in play, in addition to the Research Focus. Kirk has plenty of Ships that can benefit from Cloaking Device. EVA Suits may not be as useful because you already have Levitation Boots, but can still have some use. I like using Forced Singularity to find Scotty, which is more useful for Kirk",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "jennifer-shreyan": [
@@ -5484,6 +6228,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Core Set: Ambassador Kamrag lets Kirk scan for some more Klingons, which is helpful as a potential completion route for The Undiscovered Country along with the Captain Reaction benefit. Kirk should have a decent number of Person cards to benefit from Joret Dal. Captain Dorg feels like he should be helpful, but without Weapon cards, he loses some of his bite. B-4 can help you there with getting Cargo, but is",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "sisko.html",
     "count": 1,
     "hits": [
@@ -5507,6 +6265,20 @@
       "anchor": "notable-market-cards",
       "heading": "Ally Deck",
       "snippet": "To Boldly Go: While Georgiou can make use of most of these Ally cards, there are very few that I consider to be truly vital to her. As always, you’re hoping to get the Kelpiens from Saru, but let this be a second reminder that if you’re playing Burnham as she’ll scan for them too. If you’re looking for resources, grab Arin’sen, Kaelon II Science Ministry, or the Orion Syndicate. She’s also likely to get some benefit",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "To Boldly Go: The Kaelon II Science Ministry can be useful if you’re willing to log Person/Directive cards, and Kirk’s as willing if not more than most Captains. Orion Syndicate is great for Kirk due to his massive fleet of deck ships, and it’ll fuel your Latinum production which you need pretty badly. I like Red Squadron for Kirk about as much as everyone else, and the more I play the more I enjoy the ability to",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -5565,6 +6337,20 @@
       "anchor": "notable-market-cards",
       "heading": "Ally Deck",
       "snippet": "Core Set: The standouts when adding the core set back in tend to be more military focused. Karemma gives Georgiou some much-needed Latinum and extra actions. Tholians are excellent for Georgiou, especially once she’s got quite a few ships under her control. I will note that the Edosians are a bit underwhelming and it might be hard to reach the Influence threshold. The Emerald Chain can help with Military gain, but",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Core Set: Halkan Council is good earlier on, before Kirk gets all his Attack cards, plus it’s thematic. Tholians is good for pretty much anybody, but Kirk will be trying to play Strange New Worlds as often as possible so timing will matter and you probably won’t have more than two or three controlled locations at most. Edosians is really good since Kirk needs those Encounters, and the restrictions should be",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -5892,6 +6678,28 @@
   ],
   "kirk-captain-spock": [
    {
+    "guide": "kirk.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "kirk-captain-spock",
+      "heading": "Captain Spock (Person)",
+      "snippet": "Promoted to Captain prior to the events of The Wrath of Khan in 2285, Spock was officially in charge of the Enterprise for its use as a training vessel for cadets, but conceded command to Admiral Kirk during the Genesis Device Incident. His logical Vulcan demeanor and the necessity to repair the warp drive resulted in the death of Spock in 2285. Fortunately, he was resurrected on the Genesis Planet, went through",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "kirk-captain-spock",
+      "heading": "Captain Spock (Person)",
+      "snippet": "Spock has a slew of traits, both Human and Vulcan, as well as Telepath, Scientist, and Starfleet. He also has a Research skill. His Play Action lets you log a card from your hand or discard pile to gain three Dilithium, and if the card has a skill you can move up the associated track (choosing if multiple or wild). Spock’s Reaction triggers when gaining a Person card, at which point you can spend a Dilithium to send",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "sc-market-locations-rewards.html",
     "count": 1,
     "hits": [
@@ -5906,7 +6714,117 @@
     ]
    }
   ],
+  "kirk-hikaru-sulu": [
+   {
+    "guide": "kirk.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "kirk-hikaru-sulu",
+      "heading": "Hikaru Sulu (Person) (Dev Cost 2 Dilithium)",
+      "snippet": "Oh my! It’s the Enterprise helmsman, and the Captain of the Excelsior. Sulu’s movie exploits include piloting the U.S.S. Enterprise Refit (I don’t think these kids can steer), flying a Huey 204 Helicopter, and targeting explosions and firing.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "kirk-hikaru-sulu",
+      "heading": "Hikaru Sulu (Person) (Dev Cost 2 Dilithium)",
+      "snippet": "Sulu has the Pilot, Human, and Starfleet traits in addition to a Military skill. His Play Action has you Take an Incident to your discard pile, and then send two Away Teams to a location where you have a ship. It’s a slightly different version of what we see from Worf, without the discard from the top of your deck and of course you need a ship to send those Away Teams. His reaction lets you ignore the negative",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "kirk-hms-bounty": [
+   {
+    "guide": "kirk.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "kirk-hms-bounty",
+      "heading": "H.M.S. Bounty (Ship)",
+      "snippet": "A reference to the 18th Century Royal Navy ship taken from its Captain by mutineers, it was Dr. McCoy’s suggestion for a new name for the B’rel class Klingon Bird-of-Prey taken over by the crew in The Search For Spock, though it was not named as such until The Voyage Home.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "kirk-hms-bounty",
+      "heading": "H.M.S. Bounty (Ship)",
+      "snippet": "The H.M.S. Bounty has the cloak and Klingon traits, along with two free play actions. The first is a simple deploy action, while the second requires five Influence and lets you discard an incident to send an Away Team to any location, with the standard “ignoring any opponent Ship” text typical of cards with the Cloak trait. You can also warp and beam with the standard Activations. This ship will also consistently",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "kirk-james-t-kirk": [
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "notable-market-cards",
+      "heading": "Notable Market Cards",
+      "snippet": "Welcome to a purely hypothetical discussion of James T. Kirk and the common market. As always, I appreciate everyone sharing any really interesting combos you’ve found in the market in the comments on BGG or the Discord (in the Kirk conversation). Cards found in both the core box and To Boldly Go are discussed in the section for To Boldly Go. A quick note for Kirk: Because he has so many skills accessible to him,",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "kirk-leonard-mccoy": [
+   {
+    "guide": "kirk.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "kirk-leonard-mccoy",
+      "heading": "Leonard McCoy (Person)",
+      "snippet": "He’s a Doctor, not a Strategema expert. As Kirk’s confidant and the Chief Medical Officer on board the Enterprise (Refit and A), Leonard “Bones” McCoy, oversaw the casualties of the Battle of the Mutara Nebula. He subsequently became the carrier of Spock’s Katra, insisting on going back to the Genesis planet and subsequently Vulcan to reunite the Katra with Spock’s resurrected body. He got to berate some 20th",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "kirk-leonard-mccoy",
+      "heading": "Leonard McCoy (Person)",
+      "snippet": "Leonard McCoy has the Human, Doctor, and Starfleet traits, and uses his action to gain a Research and return an Incident. His Reaction lets you free play an Incident from your hand or discard pile when you discard or log a Person during your action step. That’s a pretty flexible ability considering Spock’s play action centers around logging cards. Still, I like returning Incidents more than Free Playing them",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "kirk-levitation-boots": [
+   {
+    "guide": "kirk.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "kirk-levitation-boots",
+      "heading": "Levitation Boots (Cargo)",
+      "snippet": "I’ll admit that the first time I saw this cargo, I mistakenly thought it was from Star Trek VI, The Final Frontier, as there were anti-gravity boots worn by Ambassador Gorkon’s Starfleet Assassins (the hunt for the boots becomes a major plot point in the investigation). However, these aren’t those boots. These are the boots that Spock wears while looking for Kirk as he’s free-climbing El Capitan in Star Trek V: The",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "kirk-levitation-boots",
+      "heading": "Levitation Boots (Cargo)",
+      "snippet": "Levitation Boots is a free play card that deploys to your fleet area. You can then beam up to three Person cards from your hand or discard pile, though you’d obviously prefer discard pile. While you can beam more Person cards from your hand at the cost of a Dilithium, you’ll more often be recalling a Person card beamed to Levitation Boots. If you ever have no cards beamed here, you’ll dismiss the card. I’ll talk",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "georgiou.html",
     "count": 1,
@@ -5922,7 +6840,45 @@
     ]
    }
   ],
+  "kirk-montgomery-scotty-scott": [
+   {
+    "guide": "kirk.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "kirk-montgomery-scotty-scott",
+      "heading": "Montgomery “Scotty” Scott (Person)",
+      "snippet": "A ship full of cadets needs a good leader, and Scotty inspires them all to stay at their post. Constantly working to undo the damage caused to the Enterprise, he exaggerates his repair schedule just enough to make the Captain believe he’s a miracle worker. From sabotaging the Excelsior to maybe inventing transparent Aluminum, Scotty transfers over to the Enterprise-A and keeps her running for two more movies. He’s",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "kirk-montgomery-scotty-scott",
+      "heading": "Montgomery “Scotty” Scott (Person)",
+      "snippet": "Scotty is the ever vigilant Chief Engineer of the Enterprise, earning his Human, Starfleet, and Engineer Traits. He has a Free Play action that lets you find a ship, and if it's found in your reserve deck (the H.M.S. Bounty ), you take an Incident. This can absolutely be worth it to speed up your tempo, but even if you’re just fishing Ships out of your deck that’s helpful. His other Play Action lets you dismiss a",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "kirk-needs-of-the-many": [
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "kirk-needs-of-the-many",
+      "heading": "Needs of the Many (Directive)",
+      "snippet": "An oft-cited Vulcan (and Human) philosophical statement, uttered most directly in connection with Spock’s sacrifice in Wrath of Khan, appears as a thematic free-play Directive. You’ll dismiss a deployed ship or Duty Officer, then log that dismissed card to enlist a person from your Developments. I like to use this thematically to log Spock (or someone else), though you could also use it to Log the U.S.S. Enterprise",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "soval.html",
     "count": 4,
@@ -5946,7 +6902,77 @@
     ]
    }
   ],
+  "kirk-nyota-uhura": [
+   {
+    "guide": "kirk.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "kirk-nyota-uhura",
+      "heading": "Nyota Uhura (Person)",
+      "snippet": "The long-standing communications officer of the U.S.S. Enterprise, played by Nichelle Nichols. Her movie exploits include fake dying in the Kobayashi Maru simulation, illegally beaming Kirk and company to the Enterprise to aid in its theft, stealing Uranium protons in 20th Century San Francisco, and helping expose a conspiracy to sabotage peace negotiations between the Federation and the Klingons. Also, that weird",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "kirk-nyota-uhura",
+      "heading": "Nyota Uhura (Person)",
+      "snippet": "Uhura gets an Influence skill with the Human, Starfleet, and Communication (duh) traits. She has two Actions, both of which cost an action token. The first gives Kirk the ability to gain Person or Ally cards for two Dilithium. The second requires five Influence, and lets you gain an Alien in the market or the Junk. Her Activation lets you spend up to three Dilithium for Glory so long as you have three different",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "kirk-pavel-chekov": [
+   {
+    "guide": "kirk.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "kirk-pavel-chekov",
+      "heading": "Pavel Chekov (Person)",
+      "snippet": "Chekov goes through quite the evolution in the movie-era, from First Officer of the Reliant to Khan’s controlled minion, he escapes mind control and lives to find the Nuclear Wessels. He also gets to put his investigative skills to work, because if the boots don’t fit, you must acquit.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "kirk-pavel-chekov",
+      "heading": "Pavel Chekov (Person)",
+      "snippet": "The first appearance of Mr. Chekov in To Boldly Go, he has the Ops, Attack, Human, and Starfleet traits. His Play Action requires you discard the top card of your deck to send an Away Team to a location, and if your opponent already has an Away Team there they discard a card. Chekov’s reaction triggers upon warping a ship to a neutral location, and if you discard a Person card you can send an Away Team and gain a",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "kirk-sarek": [
+   {
+    "guide": "kirk.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "kirk-sarek",
+      "heading": "Sarek (Person) (Dev Cost 1 Dilithium and 1 Latinum)",
+      "snippet": "Father of Spock, we’ve seen him before in this box, though this is the Mark Lenard version. That being said, the text on these two cards is nearly identical, with only the word “Ambassador” differentiating them. It’s cool to see how these cards can mechanically benefit both decks, while remaining mechanically consistent.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "kirk-sarek",
+      "heading": "Sarek (Person) (Dev Cost 1 Dilithium and 1 Latinum)",
+      "snippet": "Sarek still has an Influence skill with the Vulcan, Telepath, and Ambassador traits. He also has the same exact Play Action as his Burnham deck counterpart, gaining 1 Influence for each Vulcan in play (there are three total Vulcan traits in the deck) and you may promote Sarek and optionally another Person from your Staging Area to Duty Officers, and he can support two extra Duty Officers with his passive ability.",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "georgiou.html",
     "count": 5,
@@ -5970,7 +6996,53 @@
     ]
    }
   ],
+  "kirk-starfleet-headquarters": [
+   {
+    "guide": "kirk.html",
+    "count": 5,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Kirk starts with the U.S.S. Enterprise Refit , which is exactly what you would expect from a “starting Enterprise ” - essentially a copy of Picard's Enterprise-D . Kirk also gets to start with a controlled location in Starfleet Headquarters. Famously shown in San Francisco, it gives Kirk another wild skill and the Starfleet trait. There’s no Activation text here (so no standard Farpoint/Andoria/Bajor style card",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-starting-hand-strategies",
+      "heading": "Kirk’s Starting Hand Strategies",
+      "snippet": "Now you have an empty discard pile, Levitation boots in play with two Person cards beamed, Set a Course and Maximum Warp in your staging area, and four cards in your hand. That would be either McCoy or Uhura, and Recruit, Utilize, and Strange New Worlds. From there you have a few options. If you want to get a turn one encounter, make sure you’ve already warped the Enterprise to Starfleet Headquarters via Maximum",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "kirk-time-warp": [
+   {
+    "guide": "kirk.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "kirk-time-warp",
+      "heading": "Time Warp (Directive) (Dev Cost 2 Dilithium and take an Incident)",
+      "snippet": "Time travel. What, like it’s hard? Just slingshot around the sun and have a Spock (or Borg Queen) with you.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "kirk-time-warp",
+      "heading": "Time Warp (Directive) (Dev Cost 2 Dilithium and take an Incident)",
+      "snippet": "Anyway, this custom directive gets the Time Travel and Anomaly traits. Its two play actions are free, allowing you to find any card, or alternatively recall a non-Time Travel card from your staging area. It scores for Research Focus. Keep in mind that Find also applies to Reserve unless indicated, so if you can use an Ancient Relay Station to get an early Development, you can really cut down on your time in your",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "georgiou.html",
     "count": 1,
@@ -5981,6 +7053,102 @@
       "snippet": "Kirk: You play in a similar playground, as his ability triggers off Klingon cards. His Developments are a bit more dynamic than yours, but take longer to get set up. A rush game is likely the right call, unless you can quickly set up Red Angel and beat Kirk with the momentum of an extra turn (and even then, his Time Warp Directive will help him catch up to you there).",
       "truncated": false,
       "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "kirk-uss-enterprise-a": [
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "kirk-uss-enterprise-a",
+      "heading": "U.S.S. Enterprise-A (Ship) (Dev Cost 6 Dilithium or free if the U.S.S. Enterprise (Refit) is logged)",
+      "snippet": "The Enterprise-A is a beefed up version of the original. Two wild skills instead of one, with a Play action that allows you to warp or beam a card, then optionally discard a card to beam another card. You could easily beam three cards here in one turn, or four with Scotty as Duty Officer. This is incredibly useful to thin the deck and help accomplish missions. It has the Standard Activations for warp, beam, and",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "kirk-uss-enterprise-refit": [
+   {
+    "guide": "kirk.html",
+    "count": 6,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Kirk starts with the U.S.S. Enterprise Refit , which is exactly what you would expect from a “starting Enterprise ” - essentially a copy of Picard's Enterprise-D . Kirk also gets to start with a controlled location in Starfleet Headquarters. Famously shown in San Francisco, it gives Kirk another wild skill and the Starfleet trait. There’s no Activation text here (so no standard Farpoint/Andoria/Bajor style card",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-starting-hand-strategies",
+      "heading": "Kirk’s Starting Hand Strategies",
+      "snippet": "Now you have an empty discard pile, Levitation boots in play with two Person cards beamed, Set a Course and Maximum Warp in your staging area, and four cards in your hand. That would be either McCoy or Uhura, and Recruit, Utilize, and Strange New Worlds. From there you have a few options. If you want to get a turn one encounter, make sure you’ve already warped the Enterprise to Starfleet Headquarters via Maximum",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "kirk-uss-excelsior": [
+   {
+    "guide": "kirk.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "kirk-uss-excelsior",
+      "heading": "U.S.S. Excelsior (Ship) (Dev Cost 6 Dilithium or free if Hikaru Sulu is your Duty Officer)",
+      "snippet": "Sulu’s ship deserves a discount if he’s on Duty, right? Primarily seen in Star Trek VI: The Undiscovered Country, Sulu’s Excelsior is the first to notice the environmental damage on the Klingon Homeworld. It was also sabotaged by Scotty in The Search for Spock, allowing for the theft of the U.S.S. Enterprise (Refit).",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "kirk-uss-excelsior",
+      "heading": "U.S.S. Excelsior (Ship) (Dev Cost 6 Dilithium or free if Hikaru Sulu is your Duty Officer)",
+      "snippet": "The Excelsior gets two Wild skills with the Attack and Starfleet traits. When you use the Deploy Action, if your opponent has one or more ships at a neutral location, they take an Incident, and you can Find the Set a Course Directive. This makes the Excelsior a great choice for deploying multiple times, if you can get it out early enough. To that end, one of its Activations lets you spend a Dilithium to recall the",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "kirk-vulcan": [
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "kirk-vulcan",
+      "heading": "Vulcan (Location) (Dev Cost 4 Dilithium)",
+      "snippet": "Vulcan has two Research skills and the Vulcan trait, and serves as Kirk and crew’s asylum from the Federation following their theft and subsequent destruction of the Enterprise. Your Research must be four or higher to control, but once you do you may Find a Vulcan card (likely Captain Spock or Sarek, unless you found some market Vulcans), draw Utilize from your discard pile, and free play an Incident. If you don’t",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "kirk-what-have-i-done": [
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "kirk-what-have-i-done",
+      "heading": "What Have I Done (Directive) (Dev Cost 3 Latinum)",
+      "snippet": "Kirk’s lament as he sets the Enterprise to self-destruct is a costly one, especially considering that we’re in a post-scarcity world. But after paying that Latinum cost, you get a custom directive with the Attack trait. You can Log a deployed ship to send up to 3 away teams to the same location, and if it is secured you control it, and your opponent takes an Incident and dismisses one of their Duty Officers. Then",
+      "truncated": true,
+      "mode": "anchor",
       "lore": false
      }
     ]
@@ -6040,6 +7208,20 @@
       "heading": "Encounters",
       "snippet": "To Boldly Go: I hesitated including Encounters at first because most captains love most of them. Still, here’s some things I saw that could be helpful. Gomtuu really helps Georgiou move up Military fast, while still offering her a chance to increase Research Focus scoring, both of which she needs for victory. Species 10-C can certainly help, but you’re risking future Encounter gain by eating up those locations and I",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "second play action. V’Ger and Koala have no downsides for Kirk, nor does the Guardian of Forever.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -6532,6 +7714,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Second Contact: All five person cards from Second Contact are great for Kirk…but I don’t particularly see them being bad for anybody. Both Ma’ah and D’Erika Tendi are great for ships, which makes Kirk even more deadly in the Neutral Zone. Parmen, K’Ranch, and Jennifer all benefit to different degrees as you gain person cards, which Uhura will help you with too. There’s no bad persons, only bad circumstances.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "krulmuth-b": [
@@ -6581,6 +7777,20 @@
       "anchor": "notable-market-cards",
       "heading": "Ship Deck",
       "snippet": "Core Set: The only real necessary grab here is the K’tinga Battlecruiser, which has that Military skill and focus with sending an away team. You also should be able to make use of the Son’a Battlecruiser , but it will be more helpful in multiplayer than solo because of how stealing rules work. Georgiou is also in perfect position to gain another encounter from the Voth Research Vessel , so I wouldn’t pass it up,",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Core Set: The Reliant is solid for Kirk based on his ease of moving up the Influence track. Same with the Son’a Battlecruiser and their six Military requirements. K’T’Inga Battlecruiser is a great option for Kirk because of the Klingon trait, Military Skill, and Away Team ability. Bird of Prey is good too, but I’m not sure Kirk gets any unique benefit. Voth Research Vessel is great for Kirk and you should be able to",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -6682,6 +7892,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Core Set: Ambassador Kamrag lets Kirk scan for some more Klingons, which is helpful as a potential completion route for The Undiscovered Country along with the Captain Reaction benefit. Kirk should have a decent number of Person cards to benefit from Joret Dal. Captain Dorg feels like he should be helpful, but without Weapon cards, he loses some of his bite. B-4 can help you there with getting Cargo, but is",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-allies.html",
     "count": 1,
     "hits": [
@@ -6715,6 +7939,20 @@
       "snippet": "It's kind of funny that Landru's a Person card since he's a lot older than anyone in the Starfleet era. But since the projection of Landru is just that, a projection, he can't be played. He can be your Duty Officer, and you can beam person cards to him (become one with Landru!). Once you have two person cards there, you can log them for an action (as long as you have at least two Influence) to draw the top Location",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Admiral Jarok is good for a Development but Kirk has enough attacks that I would avoid promoting him. Ambassador Gral is a great choice simply for Incident management and a “controlled” Burn win. Ash Tyler triggers Kirk’s Reaction and you might be able to use him for hand size, but you won’t have a situation with more Klingons than Starfleet. Hoshi Sato can be really helpful in searching for Vulcans",
+      "truncated": true,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -6906,6 +8144,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: Augmentation Plague has some synergy with its Reaction, allowing Kirk to gain a Glory when he’s putting Klingons in play, in addition to the Research Focus. Kirk has plenty of Ships that can benefit from Cloaking Device. EVA Suits may not be as useful because you already have Levitation Boots, but can still have some use. I like using Forced Singularity to find Scotty, which is more useful for Kirk",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "koloth.html",
     "count": 1,
     "hits": [
@@ -7064,6 +8316,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Core Set: Ambassador Kamrag lets Kirk scan for some more Klingons, which is helpful as a potential completion route for The Undiscovered Country along with the Captain Reaction benefit. Kirk should have a decent number of Person cards to benefit from Joret Dal. Captain Dorg feels like he should be helpful, but without Weapon cards, he loses some of his bite. B-4 can help you there with getting Cargo, but is",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -7124,6 +8390,20 @@
       "heading": "Person Deck",
       "snippet": "Second Contact: Second Contact adds some helpful traits and abilities from Person cards, including the Klingon Ma’ah and Alien K’Ranch. Parmen’s not the best due to the six Influence requirement for his activation, but his find ability is tremendous. D’Erika Tendi is pretty great too because of track gain and Ship gain. And Jennifer Sh’reyan provides another option for Set a Course in her Activation, meaning you can",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Second Contact: All five person cards from Second Contact are great for Kirk…but I don’t particularly see them being bad for anybody. Both Ma’ah and D’Erika Tendi are great for ships, which makes Kirk even more deadly in the Neutral Zone. Parmen, K’Ranch, and Jennifer all benefit to different degrees as you gain person cards, which Uhura will help you with too. There’s no bad persons, only bad circumstances.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -7242,9 +8522,37 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: Augmentation Plague has some synergy with its Reaction, allowing Kirk to gain a Glory when he’s putting Klingons in play, in addition to the Research Focus. Kirk has plenty of Ships that can benefit from Cloaking Device. EVA Suits may not be as useful because you already have Levitation Boots, but can still have some use. I like using Forced Singularity to find Scotty, which is more useful for Kirk",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "medusan-vessel": [
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "To Boldly Go: D’Kora Marauder will really only benefit Kirk if he can get a Latinum engine going, and his kit isn’t really designed for that. Medusan Vessel is nice for gaining some more Telepaths but I’m not sure Kirk benefits from it uniquely except for the Alien trait. D’Var has the free play deploy, but beyond that its pretty standard for Kirk. Vor’Cha Attack Cruiser is great, because Kirk always wants Klingons",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "soval.html",
     "count": 1,
@@ -7283,6 +8591,20 @@
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
       "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free-play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Core Set: Tribbles and Tachyon Detection Grid continue to be useful against specific captains, but aren’t uniquely good for Kirk in my opinion. Biobed is great for Kirk and can allow you to Find Bones, or simply keep your Incidents managed. Mek’leth is most useful for Kirk for the Klingon trait. Kirk should be able to meet the restriction for Unstable Wormhole easily, and it’s mostly just for him to help predict",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -7416,6 +8738,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Second Contact: I would really be careful with Moopsy. Kirk is already going to be logging cards with Spock, so logging even more Person cards is a dangerous game. But card draw is great, and you can still benefit from your opponent logging Person cards. Protocol 12 works with Bones but you’ll need to find some more Doctors. Gift Box has general utility but as I’ve noted before, Kirk really isn’t too heavy a Cargo",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -7518,6 +8854,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "To Boldly Go: Delphic Expanse Sphere is good for sending away teams to controlled locations to set up Strange New Worlds. Gomtuu is amazing for Kirk because it counts as an Encounter on a Ship by itself, meaning you only need to beam one more Encounter here to complete Kirk’s mission. New Federation Applicants is fine for Incident management and card draw, and the wild focus offers some good flexibility for scoring.",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -7570,6 +8920,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Second Contact: Betazed Intelligence helps you find Sarek, but other than that you’re probably only getting one turn with a slightly increased handsize before this logs. Illyrians are good because you can use Sarek to have 3 Duty officers, but you’ll only get one shot at it unless you can leverage an Augment somehow. The play actions aren’t bad for Kirk either. Nova Fleet is also great, though not any more for Kirk",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -7608,6 +8972,20 @@
       "heading": "Encounters",
       "snippet": "Core Set: Ancient Gene Fragments is probably good for Georgiou, especially if she has a Scientist in play. Boltzman Brain, Iconian Gateway, and Omega Particle help her about as much as anybody else. Georgiou should be able to use Sha Kar Ree pretty effectively, so it’s certainly in the top half of the list for me.",
       "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Core Set: Omega Particle for resource generation is both good for Kirk and provides a reliable focus scoring if you can max it out at four or five points. Boltzmann Brain is great for everybody, unless you just hit a point where you stopped taking Incidents. Sha Ka Ree is pretty good due to the Vulcan trait, and Kirk can afford to lose the ship needed to beam. Ancient Gene Fragments can be good if you get it early",
+      "truncated": true,
       "mode": "text",
       "lore": false
      }
@@ -7772,6 +9150,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Arin’sen has the potential for a big play if you’ve been gathering Klingons for Kirk. Otherwise, Denobulans, Bolians, Bynars, Organians, and Kelpians don’t really have any unique benefit for Kirk. Lethians can work if you need to draw Levitation Boots from your Discard pile, but since they log themselves that will only work one time. Suliban have that fun Time-Travel recall ability, and the alien trait can be useful.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -7855,6 +9247,20 @@
       "anchor": "notable-market-cards",
       "heading": "Ally Deck",
       "snippet": "To Boldly Go: While Georgiou can make use of most of these Ally cards, there are very few that I consider to be truly vital to her. As always, you’re hoping to get the Kelpiens from Saru, but let this be a second reminder that if you’re playing Burnham as she’ll scan for them too. If you’re looking for resources, grab Arin’sen, Kaelon II Science Ministry, or the Orion Syndicate. She’s also likely to get some benefit",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "To Boldly Go: The Kaelon II Science Ministry can be useful if you’re willing to log Person/Directive cards, and Kirk’s as willing if not more than most Captains. Orion Syndicate is great for Kirk due to his massive fleet of deck ships, and it’ll fuel your Latinum production which you need pretty badly. I like Red Squadron for Kirk about as much as everyone else, and the more I play the more I enjoy the ability to",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -7986,6 +9392,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Second Contact: All five person cards from Second Contact are great for Kirk…but I don’t particularly see them being bad for anybody. Both Ma’ah and D’Erika Tendi are great for ships, which makes Kirk even more deadly in the Neutral Zone. Parmen, K’Ranch, and Jennifer all benefit to different degrees as you gain person cards, which Uhura will help you with too. There’s no bad persons, only bad circumstances.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -8037,6 +9457,20 @@
       "anchor": "notable-market-cards",
       "heading": "Person Deck",
       "snippet": "Core Set: Once again we have Klingon with a Military Focus on Captain Dorg who will work well for Georgiou, as will Ambassador Kamarag. Lenara Kahn is a good way to get Anomaly cards and gain some Research. Sakona’s not bad especially for the Vulcan trait and Military requirement as duty officer, so long as you’ve found some Weapons. I like Peanut Hamper simply to avoid Dilithium scarcity. Let me know if you all see",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Core Set: Ambassador Kamrag lets Kirk scan for some more Klingons, which is helpful as a potential completion route for The Undiscovered Country along with the Captain Reaction benefit. Kirk should have a decent number of Person cards to benefit from Joret Dal. Captain Dorg feels like he should be helpful, but without Weapon cards, he loses some of his bite. B-4 can help you there with getting Cargo, but is",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -8764,6 +10198,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "kirk-hikaru-sulu",
+      "heading": "Hikaru Sulu (Person) (Dev Cost 2 Dilithium)",
+      "snippet": "Sulu has the Pilot, Human, and Starfleet traits in addition to a Military skill. His Play Action has you Take an Incident to your discard pile, and then send two Away Teams to a location where you have a ship. It’s a slightly different version of what we see from Worf, without the discard from the top of your deck and of course you need a ship to send those Away Teams. His reaction lets you ignore the negative",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "ships.html",
     "count": 1,
     "hits": [
@@ -8825,6 +10273,28 @@
    }
   ],
   "pike-uss-enterprise": [
+   {
+    "guide": "kirk.html",
+    "count": 6,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Kirk starts with the U.S.S. Enterprise Refit , which is exactly what you would expect from a “starting Enterprise ” - essentially a copy of Picard's Enterprise-D . Kirk also gets to start with a controlled location in Starfleet Headquarters. Famously shown in San Francisco, it gives Kirk another wild skill and the Starfleet trait. There’s no Activation text here (so no standard Farpoint/Andoria/Bajor style card",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-starting-hand-strategies",
+      "heading": "Kirk’s Starting Hand Strategies",
+      "snippet": "Now you have an empty discard pile, Levitation boots in play with two Person cards beamed, Set a Course and Maximum Warp in your staging area, and four cards in your hand. That would be either McCoy or Uhura, and Recruit, Utilize, and Strange New Worlds. From there you have a few options. If you want to get a turn one encounter, make sure you’ve already warped the Enterprise to Starfleet Headquarters via Maximum",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "georgiou.html",
     "count": 1,
@@ -9054,6 +10524,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Second Contact: I would really be careful with Moopsy. Kirk is already going to be logging cards with Spock, so logging even more Person cards is a dangerous game. But card draw is great, and you can still benefit from your opponent logging Person cards. Protocol 12 works with Bones but you’ll need to find some more Doctors. Gift Box has general utility but as I’ve noted before, Kirk really isn’t too heavy a Cargo",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -9107,6 +10591,20 @@
       "anchor": "individual-captain-considerations",
       "heading": "To Boldly Go",
       "snippet": "Rebner: Rebner’s got a lot of ships and is going to fight you for cards that increase Military or reward for military focus. That’s fine, so long as you get enough to meet your goals and focus on Research. Still, don’t feed the Pakleds, and try to back them into a corner where they get less helmets and military. Also be careful with some of their developments, which can have some nasty neutral zone effects.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "to-boldly-go",
+      "heading": "To Boldly Go",
+      "snippet": "Rebner: You can go toe-to-toe in the Neutral Zone when it comes to Ships, so feel free to fight and slow him down when you can, just be aware of his Developments. If you can get some defense from attacks, that would be optimal, and get those Military skill and focus cards. If the game appears to be rushing, then focus on your best tracks and Developments.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -9302,6 +10800,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "To Boldly Go: The Kaelon II Science Ministry can be useful if you’re willing to log Person/Directive cards, and Kirk’s as willing if not more than most Captains. Orion Syndicate is great for Kirk due to his massive fleet of deck ships, and it’ll fuel your Latinum production which you need pretty badly. I like Red Squadron for Kirk about as much as everyone else, and the more I play the more I enjoy the ability to",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -9426,6 +10938,38 @@
     ]
    }
   ],
+  "riker-proximity-blast": [
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "second-contact",
+      "heading": "Second Contact",
+      "snippet": "Riker: Riker’s toolkit is a pretty standard Starfleet deck, just with a couple weird cards, but he actually mirrors you pretty closely. The U.S.S. Zheng He has a similar Incident text to the Excelsior and Proximity Blast has some similarities to your What Have I Done Directive. But he won’t be able to move up tracks very quickly, and will basically ignore Influence, so keep that in mind when considering which focus",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "riker-uss-zheng-he": [
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "second-contact",
+      "heading": "Second Contact",
+      "snippet": "Riker: Riker’s toolkit is a pretty standard Starfleet deck, just with a couple weird cards, but he actually mirrors you pretty closely. The U.S.S. Zheng He has a similar Incident text to the Excelsior and Proximity Blast has some similarities to your What Have I Done Directive. But he won’t be able to move up tracks very quickly, and will basically ignore Influence, so keep that in mind when considering which focus",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "ris-talvath": [
    {
     "guide": "georgiou.html",
@@ -9435,6 +10979,20 @@
       "anchor": "notable-market-cards",
       "heading": "Ship Deck",
       "snippet": "Second Contact: Fesarius is great for everyone, and Georgiou has plenty of Starfleet Person cards to use to gain an encounter with Fesarius . The R.I.S. Talvath isn’t anything special but might help you with pushing the endgame.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Second Contact: The R.I.S. Talvath is pretty good because there’s going to be plenty of Anomaly/Communication/Time Travel cards in play. Fesarius is good for the free play and free warp operations, and Kirk has plenty of Person cards that can be sent here (Spock could get logged twice).",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -9600,6 +11158,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "To Boldly Go: The Kaelon II Science Ministry can be useful if you’re willing to log Person/Directive cards, and Kirk’s as willing if not more than most Captains. Orion Syndicate is great for Kirk due to his massive fleet of deck ships, and it’ll fuel your Latinum production which you need pretty badly. I like Red Squadron for Kirk about as much as everyone else, and the more I play the more I enjoy the ability to",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -9672,6 +11244,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Admiral Jarok is good for a Development but Kirk has enough attacks that I would avoid promoting him. Ambassador Gral is a great choice simply for Incident management and a “controlled” Burn win. Ash Tyler triggers Kirk’s Reaction and you might be able to use him for hand size, but you won’t have a situation with more Klingons than Starfleet. Hoshi Sato can be really helpful in searching for Vulcans",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "saurian-brandy": [
@@ -9705,6 +11291,20 @@
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
       "snippet": "To Boldly Go: I’m definitely a fan of Augmentation plague due to Georgiou’s late game focus on Klingon cards, and if you can nab it early you can get some Glory every time you put a Klingon in play. You shouldn’t have to worry about specialty restrictions for cards like forced Singularity, which also gives you focus scoring for research and yet another duty officer. Same benefit to Computer Virus, and you should get",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Core Set: Ambassador Kamrag lets Kirk scan for some more Klingons, which is helpful as a potential completion route for The Undiscovered Country along with the Captain Reaction benefit. Kirk should have a decent number of Person cards to benefit from Joret Dal. Captain Dorg feels like he should be helpful, but without Weapon cards, he loses some of his bite. B-4 can help you there with getting Cargo, but is",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -9986,6 +11586,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Sela: I think Sela is a bit like Sisko for Kirk in the sense that she can really mess with his Neutral Zone game, which can mess with any leverage you have to take as many Encounters as possible quickly. Lock in and force her to take Incidents whenever you can. Try to rush the game before she can get to the Scimitar .",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "locations.html",
     "count": 1,
     "hits": [
@@ -10170,6 +11784,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Sela: I think Sela is a bit like Sisko for Kirk in the sense that she can really mess with his Neutral Zone game, which can mess with any leverage you have to take as many Encounters as possible quickly. Lock in and force her to take Incidents whenever you can. Try to rush the game before she can get to the Scimitar .",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "shran.html",
     "count": 1,
     "hits": [
@@ -10342,6 +11970,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Core Set: Omega Particle for resource generation is both good for Kirk and provides a reliable focus scoring if you can max it out at four or five points. Boltzmann Brain is great for everybody, unless you just hit a point where you stopped taking Incidents. Sha Ka Ree is pretty good due to the Vulcan trait, and Kirk can afford to lose the ship needed to beam. Ancient Gene Fragments can be good if you get it early",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "koloth.html",
     "count": 1,
     "hits": [
@@ -10463,6 +12105,20 @@
       "anchor": "burnham-s-development-cards",
       "heading": "Burnham's Development Cards",
       "snippet": "Admiral Vance (Person) (Dev Cost: 2 Dilithium) — The head of an Earth-less Starfleet, Admiral Vance gets the Starfleet and Human traits, as well as an Influence and Military skill. Vance's play action gains you an Ally and draws a card, which is good unless the Ally deck is depleted (which has happened a lot by the time I'd consider getting him out). Vance's Activation is pretty much the standard card-drawing",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Kirk starts with the U.S.S. Enterprise Refit , which is exactly what you would expect from a “starting Enterprise ” - essentially a copy of Picard's Enterprise-D . Kirk also gets to start with a controlled location in Starfleet Headquarters. Famously shown in San Francisco, it gives Kirk another wild skill and the Starfleet trait. There’s no Activation text here (so no standard Farpoint/Andoria/Bajor style card",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -10934,6 +12590,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Kirk starts with the U.S.S. Enterprise Refit , which is exactly what you would expect from a “starting Enterprise ” - essentially a copy of Picard's Enterprise-D . Kirk also gets to start with a controlled location in Starfleet Headquarters. Famously shown in San Francisco, it gives Kirk another wild skill and the Starfleet trait. There’s no Activation text here (so no standard Farpoint/Andoria/Bajor style card",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "koloth.html",
     "count": 1,
     "hits": [
@@ -11360,6 +13030,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Core Set: The Reliant is solid for Kirk based on his ease of moving up the Influence track. Same with the Son’a Battlecruiser and their six Military requirements. K’T’Inga Battlecruiser is a great option for Kirk because of the Klingon trait, Military Skill, and Away Team ability. Bird of Prey is good too, but I’m not sure Kirk gets any unique benefit. Voth Research Vessel is great for Kirk and you should be able to",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "koloth.html",
     "count": 1,
     "hits": [
@@ -11661,6 +13345,28 @@
       "anchor": "captain-card-starting-components",
       "heading": "Captain Card & Starting Components",
       "snippet": "This is the first deck we’ve seen with no starting ship, though there is a ship hanging out in your discard pile, the Ti’Mur . The Ti’Mur shows up in an early season one episode of Enterprise to “observe” the NX-01 as they nearly kill Reed and Mayweather, using grapplers to rescue them from a collapsing ice asteroid. The Ti’Mur uses their tractor beam to rescue them, a bruise to Archer’s sense of pride, while I’m",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 3,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: Augmentation Plague has some synergy with its Reaction, allowing Kirk to gain a Glory when he’s putting Klingons in play, in addition to the Research Focus. Kirk has plenty of Ships that can benefit from Cloaking Device. EVA Suits may not be as useful because you already have Levitation Boots, but can still have some use. I like using Forced Singularity to find Scotty, which is more useful for Kirk",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "promos",
+      "heading": "Promos",
+      "snippet": "Sehlat is slightly better for Kirk than most considering Spock and Sarek in his deck. Enterprise B is both thematically cool for Kirk, but also a great way to use your Person cards for good. Wesley Crusher is always great, more so for Person-heavy captains like Kirk (just like Soval before him). Golden Statue of O’Brien can be triggered with Scotty, but otherwise you’ll need the market to really utilize this card.",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -11974,6 +13680,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "To Boldly Go: Delphic Expanse Sphere is good for sending away teams to controlled locations to set up Strange New Worlds. Gomtuu is amazing for Kirk because it counts as an Encounter on a Ship by itself, meaning you only need to beam one more Encounter here to complete Kirk’s mission. New Federation Applicants is fine for Incident management and card draw, and the wild focus offers some good flexibility for scoring.",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -12005,6 +13725,20 @@
       "anchor": "notable-market-cards",
       "heading": "Encounters",
       "snippet": "To Boldly Go: I hesitated including Encounters at first because most captains love most of them. Still, here’s some things I saw that could be helpful. Gomtuu really helps Georgiou move up Military fast, while still offering her a chance to increase Research Focus scoring, both of which she needs for victory. Species 10-C can certainly help, but you’re risking future Encounter gain by eating up those locations and I",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "To Boldly Go: Delphic Expanse Sphere is good for sending away teams to controlled locations to set up Strange New Worlds. Gomtuu is amazing for Kirk because it counts as an Encounter on a Ship by itself, meaning you only need to beam one more Encounter here to complete Kirk’s mission. New Federation Applicants is fine for Incident management and card draw, and the wild focus offers some good flexibility for scoring.",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -12045,6 +13779,28 @@
       "snippet": "Representing the Whale Probe that threatened Earth in Star Trek IV: The Voyage Home, this promo Incident has the Alien, Attack, and Surprise traits. It has an Attack play action, which requires you to recall a deployed ship, if you are able to do so, meaning that if you don't have a deployed ship you can still play the card. Then, you force your opponent to recall a deployed ship, and if you have a creature in play,",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 5,
+    "hits": [
+     {
+      "anchor": "kirk-s-available-cards",
+      "heading": "Kirk’s Available Cards",
+      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-starting-hand-strategies",
+      "heading": "Kirk’s Starting Hand Strategies",
+      "snippet": "Kirk starts out with some of the best card-draw options in the game. Between Set a Course and Maximum Warp, you can potentially see a total of 3 additional cards in your deck. You also have the potential to use Subspace Phenomenon to discard Spock and then draw two cards and discard one, which if you’re keeping track, is your whole starting deck. Let’s game that out for a second: If you can access those four cards",
+      "truncated": true,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -12188,6 +13944,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Arin’sen has the potential for a big play if you’ve been gathering Klingons for Kirk. Otherwise, Denobulans, Bolians, Bynars, Organians, and Kelpians don’t really have any unique benefit for Kirk. Lethians can work if you need to draw Levitation Boots from your Discard pile, but since they log themselves that will only work one time. Suliban have that fun Time-Travel recall ability, and the alien trait can be useful.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -12247,6 +14017,20 @@
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
       "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free-play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Core Set: Tribbles and Tachyon Detection Grid continue to be useful against specific captains, but aren’t uniquely good for Kirk in my opinion. Biobed is great for Kirk and can allow you to Find Bones, or simply keep your Incidents managed. Mek’leth is most useful for Kirk for the Klingon trait. Kirk should be able to meet the restriction for Unstable Wormhole easily, and it’s mostly just for him to help predict",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -12484,6 +14268,28 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "kirk-uss-excelsior",
+      "heading": "U.S.S. Excelsior (Ship) (Dev Cost 6 Dilithium or free if Hikaru Sulu is your Duty Officer)",
+      "snippet": "The Excelsior gets two Wild skills with the Attack and Starfleet traits. When you use the Deploy Action, if your opponent has one or more ships at a neutral location, they take an Incident, and you can Find the Set a Course Directive. This makes the Excelsior a great choice for deploying multiple times, if you can get it out early enough. To that end, one of its Activations lets you spend a Dilithium to recall the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "To Boldly Go: The Kaelon II Science Ministry can be useful if you’re willing to log Person/Directive cards, and Kirk’s as willing if not more than most Captains. Orion Syndicate is great for Kirk due to his massive fleet of deck ships, and it’ll fuel your Latinum production which you need pretty badly. I like Red Squadron for Kirk about as much as everyone else, and the more I play the more I enjoy the ability to",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -12668,6 +14474,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Core Set: Halkan Council is good earlier on, before Kirk gets all his Attack cards, plus it’s thematic. Tholians is good for pretty much anybody, but Kirk will be trying to play Strange New Worlds as often as possible so timing will matter and you probably won’t have more than two or three controlled locations at most. Edosians is really good since Kirk needs those Encounters, and the restrictions should be",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "koloth.html",
     "count": 1,
     "hits": [
@@ -12734,6 +14554,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "To Boldly Go : Admiral Jarok is good for a Development but Kirk has enough attacks that I would avoid promoting him. Ambassador Gral is a great choice simply for Incident management and a “controlled” Burn win. Ash Tyler triggers Kirk’s Reaction and you might be able to use him for hand size, but you won’t have a situation with more Klingons than Starfleet. Hoshi Sato can be really helpful in searching for Vulcans",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "tribbles": [
@@ -12795,6 +14629,20 @@
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
       "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free-play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Core Set: Tribbles and Tachyon Detection Grid continue to be useful against specific captains, but aren’t uniquely good for Kirk in my opinion. Biobed is great for Kirk and can allow you to Find Bones, or simply keep your Incidents managed. Mek’leth is most useful for Kirk for the Klingon trait. Kirk should be able to meet the restriction for Unstable Wormhole easily, and it’s mostly just for him to help predict",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -12928,6 +14776,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "To Boldly Go: The Kaelon II Science Ministry can be useful if you’re willing to log Person/Directive cards, and Kirk’s as willing if not more than most Captains. Orion Syndicate is great for Kirk due to his massive fleet of deck ships, and it’ll fuel your Latinum production which you need pretty badly. I like Red Squadron for Kirk about as much as everyone else, and the more I play the more I enjoy the ability to",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -12961,6 +14823,28 @@
       "snippet": "The Translator's cargo's first play action lets you discard a Starfleet to scan for an Alien. The second lets you take the top encounter and discard it if you have three cards with Alien (not encounters) in play. Then you dismiss all your ships and beamed cards with Alien and log the Universal Translator. I'm a big fan of encounters that reward you for working towards a goal, and this is no exception. However,",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "kirk-nyota-uhura",
+      "heading": "Nyota Uhura (Person)",
+      "snippet": "Uhura gets an Influence skill with the Human, Starfleet, and Communication (duh) traits. She has two Actions, both of which cost an action token. The first gives Kirk the ability to gain Person or Ally cards for two Dilithium. The second requires five Influence, and lets you gain an Alien in the market or the Junk. Her Activation lets you spend up to three Dilithium for Glory so long as you have three different",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Core Set: Ambassador Kamrag lets Kirk scan for some more Klingons, which is helpful as a potential completion route for The Undiscovered Country along with the Captain Reaction benefit. Kirk should have a decent number of Person cards to benefit from Joret Dal. Captain Dorg feels like he should be helpful, but without Weapon cards, he loses some of his bite. B-4 can help you there with getting Cargo, but is",
+      "truncated": true,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -13031,6 +14915,20 @@
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
       "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free-play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Core Set: Tribbles and Tachyon Detection Grid continue to be useful against specific captains, but aren’t uniquely good for Kirk in my opinion. Biobed is great for Kirk and can allow you to Find Bones, or simply keep your Incidents managed. Mek’leth is most useful for Kirk for the Klingon trait. Kirk should be able to meet the restriction for Unstable Wormhole easily, and it’s mostly just for him to help predict",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -13134,6 +15032,20 @@
       "heading": "Trade Embargo",
       "snippet": "Shran's second Incident, Trade Embargo forces you to spend a Latinum to return it to the Incident Pile, which isn't too steep. You also get to refresh a ship, which is actually a better benefit than the action token and Latinum cost depending on which ship it is (Enterprise C? Scimitar? Voth Research Vessel?).",
       "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The repeated Ships from the Core Box are all pretty much great for everyone. Borg Probe is always a great beaming Ship and Kirk wants it just as much as everyone else. D’Kyr can work in coordination with Kirk’s other Vulcan cards and some market cards. Holographic Drone Ship should be playable with a Telepath (Spock or Sarek), though Kirk can probably also hit the seven Research requirement of the first free play",
+      "truncated": true,
       "mode": "text",
       "lore": false
      }
@@ -13256,6 +15168,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "To Boldly Go: The Kaelon II Science Ministry can be useful if you’re willing to log Person/Directive cards, and Kirk’s as willing if not more than most Captains. Orion Syndicate is great for Kirk due to his massive fleet of deck ships, and it’ll fuel your Latinum production which you need pretty badly. I like Red Squadron for Kirk about as much as everyone else, and the more I play the more I enjoy the ability to",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -13324,6 +15250,20 @@
       "heading": "Encounters",
       "snippet": "To Boldly Go: I hesitated including Encounters at first because most captains love most of them. Still, here’s some things I saw that could be helpful. Gomtuu really helps Georgiou move up Military fast, while still offering her a chance to increase Research Focus scoring, both of which she needs for victory. Species 10-C can certainly help, but you’re risking future Encounter gain by eating up those locations and I",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "second play action. V’Ger and Koala have no downsides for Kirk, nor does the Guardian of Forever.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -13460,6 +15400,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "To Boldly Go: The Kaelon II Science Ministry can be useful if you’re willing to log Person/Directive cards, and Kirk’s as willing if not more than most Captains. Orion Syndicate is great for Kirk due to his massive fleet of deck ships, and it’ll fuel your Latinum production which you need pretty badly. I like Red Squadron for Kirk about as much as everyone else, and the more I play the more I enjoy the ability to",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "vorcha-attack-cruiser": [
@@ -13471,6 +15425,20 @@
       "anchor": "notable-market-cards",
       "heading": "Ship Deck",
       "snippet": "To Boldly Go: The repeat ships from the Corebox are all great, but Borg Cube gives the extra advantage of endgame scoring for Georgiou so long as you can keep it in play at the end of the game with lots of beamed cards. D’kyr Cruiser has that Vulcan trait and Military restriction that Georgiou can benefit from too. Medusian Vessel is a good pick for the Alien trait. Grabbing Vor’cha Attack Cruiser can help push the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "To Boldly Go: D’Kora Marauder will really only benefit Kirk if he can get a Latinum engine going, and his kit isn’t really designed for that. Medusan Vessel is nice for gaining some more Telepaths but I’m not sure Kirk benefits from it uniquely except for the Alien trait. D’Var has the free play deploy, but beyond that its pretty standard for Kirk. Vor’Cha Attack Cruiser is great, because Kirk always wants Klingons",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -13558,6 +15526,20 @@
     ]
    },
    {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Core Set: The Reliant is solid for Kirk based on his ease of moving up the Influence track. Same with the Son’a Battlecruiser and their six Military requirements. K’T’Inga Battlecruiser is a great option for Kirk because of the Klingon trait, Military Skill, and Away Team ability. Bird of Prey is good too, but I’m not sure Kirk gets any unique benefit. Voth Research Vessel is great for Kirk and you should be able to",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -13603,6 +15585,20 @@
    }
   ],
   "xindi-aquatic-cruiser": [
+   {
+    "guide": "kirk.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "To Boldly Go: D’Kora Marauder will really only benefit Kirk if he can get a Latinum engine going, and his kit isn’t really designed for that. Medusan Vessel is nice for gaining some more Telepaths but I’m not sure Kirk benefits from it uniquely except for the Alien trait. D’Var has the free play deploy, but beyond that its pretty standard for Kirk. Vor’Cha Attack Cruiser is great, because Kirk always wants Klingons",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "soval.html",
     "count": 1,
