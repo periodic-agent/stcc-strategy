@@ -1,0 +1,81 @@
+{
+  "slug": "kirk",
+  "box": "tbg",
+  "page_title": "Kirk",
+  "title_html": "James T. <span>Kirk</span>",
+  "description": "James T. Kirk strategy guide for Star Trek: Captain's Chair — To Boldly Go: captain board, missions, available cards, reserve and development decks, market picks and captain match-ups. By Matthew McCue.",
+  "posted": "10 Aug 2026",
+  "tags": [
+    "Starfleet",
+    "Human",
+    "Complexity 4/10"
+  ],
+  "og_image": "img/box2/kirk-james-t-kirk.jpg",
+  "image_names": {
+    "Kirk Captain Card": "james-t-kirk",
+    "'Montgomery": "montgomery-scotty-scott"
+  },
+  "board_alts": [
+    "Kirk Basic Board",
+    "Kirk Advanced Board"
+  ],
+  "insert_h2": [
+    {
+      "title": "Missions",
+      "before": "Kirk’s player board’s basic side track multipliers"
+    },
+    {
+      "title": "Captain Card & Starting Components",
+      "before": "Kirk has five away teams"
+    }
+  ],
+  "cut": [
+    "Okay, folks. It’s time for a big one."
+  ],
+  "lore": [],
+  "no_lore": [],
+  "toc_labels": {
+    "Kirk’s Available Cards": "Available Cards",
+    "Kirk’s Starting Hand Strategies": "Starting Hand Strategies",
+    "Kirk’s Reserve Cards": "Reserve Cards",
+    "Kirk’s Reserve Deck Strategy": "Reserve Deck Strategy",
+    "Kirk’s Development Cards": "Development Cards",
+    "Kirk’s Development Strategy": "Development Strategy"
+  },
+  "videos": [
+    {
+      "url": "https://youtu.be/Pc0k1oeT1r8",
+      "label": "Kirk vs Khan",
+      "sub": "Two-player · Gaming Rules!"
+    },
+    {
+      "url": "https://www.youtube.com/live/dBiG8fv92i0",
+      "label": "Georgiou vs Kirk",
+      "sub": "Two-player · slickerdrips"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=DF52b6sDLxI",
+      "label": "Kirk Playthrough",
+      "sub": "One Stop Co-op Shop"
+    }
+  ],
+  "video_intro": "Playthroughs by Paul Grogan (Gaming Rules!), Tom Heath (slickerdrips) and One Stop Co-op Shop featuring Kirk:",
+  "replace": [],
+  "h3_ids": {
+    "Nyota Uhura (Person)": "kirk-nyota-uhura",
+    "Leonard McCoy (Person)": "kirk-leonard-mccoy",
+    "Captain Spock (Person)": "kirk-captain-spock",
+    "Levitation Boots (Cargo)": "kirk-levitation-boots",
+    "Needs of the Many (Directive)": "kirk-needs-of-the-many",
+    "Pavel Chekov (Person)": "kirk-pavel-chekov",
+    "Montgomery “Scotty” Scott (Person)": "kirk-montgomery-scotty-scott",
+    "H.M.S. Bounty (Ship)": "kirk-hms-bounty",
+    "Hikaru Sulu (Person) (Dev Cost 2 Dilithium)": "kirk-hikaru-sulu",
+    "Sarek (Person) (Dev Cost 1 Dilithium and 1 Latinum)": "kirk-sarek",
+    "U.S.S. Enterprise-A (Ship) (Dev Cost 6 Dilithium or free if the U.S.S. Enterprise (Refit) is logged)": "kirk-uss-enterprise-a",
+    "U.S.S. Excelsior (Ship) (Dev Cost 6 Dilithium or free if Hikaru Sulu is your Duty Officer)": "kirk-uss-excelsior",
+    "Vulcan (Location) (Dev Cost 4 Dilithium)": "kirk-vulcan",
+    "Time Warp (Directive) (Dev Cost 2 Dilithium and take an Incident)": "kirk-time-warp",
+    "What Have I Done (Directive) (Dev Cost 3 Latinum)": "kirk-what-have-i-done"
+  }
+}
