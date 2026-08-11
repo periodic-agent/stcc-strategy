@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-10T21:13:04Z",
+ "generated": "2026-08-11T16:04:12Z",
  "generator": "tools/build_strategy_index.py",
  "guide_count": 28,
  "card_count": 359,
@@ -876,7 +876,7 @@
      {
       "anchor": "kirk-s-starting-hand-strategies",
       "heading": "Kirk’s Starting Hand Strategies",
-      "snippet": "Now you have an empty discard pile, Levitation boots in play with two Person cards beamed, Set a Course and Maximum Warp in your staging area, and four cards in your hand. That would be either McCoy or Uhura, and Recruit, Utilize, and Strange New Worlds. From there you have a few options. If you want to get a turn one encounter, make sure you’ve already warped the Enterprise to Starfleet Headquarters via Maximum",
+      "snippet": "You have Spock, Maximum warp, Set a Course, Subspace Phenomenon, and one other card in your starting hand. You play Subspace Phenomenon, discarding Spock, and draw two cards and discard one of them. You NEED to keep Levitation Boot if possible, and you hope that you've discarded Uhura or Bones as the discarded card. Your hand is now Maximum Warp, Set a Course, Levitation Boots (for this to work), and one other card.",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -973,7 +973,7 @@
   "archer-strange-new-worlds": [
    {
     "guide": "kirk.html",
-    "count": 16,
+    "count": 17,
     "hits": [
      {
       "anchor": "captain-card-starting-components",
@@ -2258,6 +2258,28 @@
   ],
   "burnham-maximum-warp": [
    {
+    "guide": "kirk.html",
+    "count": 4,
+    "hits": [
+     {
+      "anchor": "kirk-s-available-cards",
+      "heading": "Kirk’s Available Cards",
+      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-starting-hand-strategies",
+      "heading": "Kirk’s Starting Hand Strategies",
+      "snippet": "Kirk starts out with some of the best card-draw options in the game. Between Set a Course and Maximum Warp, you can potentially see a total of 3 additional cards in your deck. You also have the potential to use Subspace Phenomenon to discard Spock and then draw two cards and discard one, which if you’re keeping track, is your whole starting deck. Let’s game that out for a second, and I'll note that the first time I",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "burnham.html",
     "count": 3,
     "hits": [
@@ -2273,28 +2295,6 @@
       "anchor": "starting-hand-strategies",
       "heading": "Starting Hand Strategies",
       "snippet": "There's a lot of different ways you can take Burnham's deck, but let's start with the card-draw potential. Both Inspire and Maximum Warp allow you to draw two cards, discarding one of them, and you can get one or two cards from playing Tilly. This means that if these cards are in your starting hand (or better, if Inspire isn't and Saru is), you'll be nearly going through your deck, or even getting through it, before",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   },
-   {
-    "guide": "kirk.html",
-    "count": 3,
-    "hits": [
-     {
-      "anchor": "kirk-s-available-cards",
-      "heading": "Kirk’s Available Cards",
-      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     },
-     {
-      "anchor": "kirk-s-starting-hand-strategies",
-      "heading": "Kirk’s Starting Hand Strategies",
-      "snippet": "Kirk starts out with some of the best card-draw options in the game. Between Set a Course and Maximum Warp, you can potentially see a total of 3 additional cards in your deck. You also have the potential to use Subspace Phenomenon to discard Spock and then draw two cards and discard one, which if you’re keeping track, is your whole starting deck. Let’s game that out for a second: If you can access those four cards",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -4357,7 +4357,7 @@
   "freeman-set-a-course": [
    {
     "guide": "kirk.html",
-    "count": 5,
+    "count": 6,
     "hits": [
      {
       "anchor": "kirk-s-available-cards",
@@ -4370,7 +4370,7 @@
      {
       "anchor": "kirk-s-starting-hand-strategies",
       "heading": "Kirk’s Starting Hand Strategies",
-      "snippet": "Kirk starts out with some of the best card-draw options in the game. Between Set a Course and Maximum Warp, you can potentially see a total of 3 additional cards in your deck. You also have the potential to use Subspace Phenomenon to discard Spock and then draw two cards and discard one, which if you’re keeping track, is your whole starting deck. Let’s game that out for a second: If you can access those four cards",
+      "snippet": "Kirk starts out with some of the best card-draw options in the game. Between Set a Course and Maximum Warp, you can potentially see a total of 3 additional cards in your deck. You also have the potential to use Subspace Phenomenon to discard Spock and then draw two cards and discard one, which if you’re keeping track, is your whole starting deck. Let’s game that out for a second, and I'll note that the first time I",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -7012,7 +7012,7 @@
      {
       "anchor": "kirk-s-starting-hand-strategies",
       "heading": "Kirk’s Starting Hand Strategies",
-      "snippet": "Now you have an empty discard pile, Levitation boots in play with two Person cards beamed, Set a Course and Maximum Warp in your staging area, and four cards in your hand. That would be either McCoy or Uhura, and Recruit, Utilize, and Strange New Worlds. From there you have a few options. If you want to get a turn one encounter, make sure you’ve already warped the Enterprise to Starfleet Headquarters via Maximum",
+      "snippet": "You have Spock, Maximum warp, Set a Course, Subspace Phenomenon, and one other card in your starting hand. You play Subspace Phenomenon, discarding Spock, and draw two cards and discard one of them. You NEED to keep Levitation Boot if possible, and you hope that you've discarded Uhura or Bones as the discarded card. Your hand is now Maximum Warp, Set a Course, Levitation Boots (for this to work), and one other card.",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -7090,7 +7090,7 @@
      {
       "anchor": "kirk-s-starting-hand-strategies",
       "heading": "Kirk’s Starting Hand Strategies",
-      "snippet": "Now you have an empty discard pile, Levitation boots in play with two Person cards beamed, Set a Course and Maximum Warp in your staging area, and four cards in your hand. That would be either McCoy or Uhura, and Recruit, Utilize, and Strange New Worlds. From there you have a few options. If you want to get a turn one encounter, make sure you’ve already warped the Enterprise to Starfleet Headquarters via Maximum",
+      "snippet": "You have Spock, Maximum warp, Set a Course, Subspace Phenomenon, and one other card in your starting hand. You play Subspace Phenomenon, discarding Spock, and draw two cards and discard one of them. You NEED to keep Levitation Boot if possible, and you hope that you've discarded Uhura or Bones as the discarded card. Your hand is now Maximum Warp, Set a Course, Levitation Boots (for this to work), and one other card.",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -10288,7 +10288,7 @@
      {
       "anchor": "kirk-s-starting-hand-strategies",
       "heading": "Kirk’s Starting Hand Strategies",
-      "snippet": "Now you have an empty discard pile, Levitation boots in play with two Person cards beamed, Set a Course and Maximum Warp in your staging area, and four cards in your hand. That would be either McCoy or Uhura, and Recruit, Utilize, and Strange New Worlds. From there you have a few options. If you want to get a turn one encounter, make sure you’ve already warped the Enterprise to Starfleet Headquarters via Maximum",
+      "snippet": "You have Spock, Maximum warp, Set a Course, Subspace Phenomenon, and one other card in your starting hand. You play Subspace Phenomenon, discarding Spock, and draw two cards and discard one of them. You NEED to keep Levitation Boot if possible, and you hope that you've discarded Uhura or Bones as the discarded card. Your hand is now Maximum Warp, Set a Course, Levitation Boots (for this to work), and one other card.",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -13798,7 +13798,7 @@
      {
       "anchor": "kirk-s-starting-hand-strategies",
       "heading": "Kirk’s Starting Hand Strategies",
-      "snippet": "Kirk starts out with some of the best card-draw options in the game. Between Set a Course and Maximum Warp, you can potentially see a total of 3 additional cards in your deck. You also have the potential to use Subspace Phenomenon to discard Spock and then draw two cards and discard one, which if you’re keeping track, is your whole starting deck. Let’s game that out for a second: If you can access those four cards",
+      "snippet": "Kirk starts out with some of the best card-draw options in the game. Between Set a Course and Maximum Warp, you can potentially see a total of 3 additional cards in your deck. You also have the potential to use Subspace Phenomenon to discard Spock and then draw two cards and discard one, which if you’re keeping track, is your whole starting deck. Let’s game that out for a second, and I'll note that the first time I",
       "truncated": true,
       "mode": "text",
       "lore": false
