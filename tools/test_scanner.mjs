@@ -267,6 +267,21 @@ assert(bareCaptain.length >= runQuery('box:all suit:captain').length,
   'the bare word is a superset of the exact suit search');
 assert(!runQuery('box:all -captain').some(c=>c.suit === 'Captain' || /captain/i.test(c.name)),
   'negating a bare suit word drops both the suit and the name matches');
+// suit chip row
+const suitPills=[...env.document.getElementById('suitFilters').children];
+const suitLabels=suitPills.map(p=>p.dataset.suit);
+assert(suitLabels.join(',') === 'Captain,Person,Cargo,Ship,Ally,Encounter,Incident,Location,Directive',
+  'suit chips follow rulebook order and end with Directive');
+assert(!suitLabels.includes('Automated Command') && !/Automated Command/.test(html),
+  'the Automated Command placeholder is gone, markup and CSS');
+const dirPill=suitPills.find(p=>p.dataset.suit==='Directive');
+assert(dirPill && typeof dirPill.onclick === 'function' && !dirPill._cls.has('disabled'),
+  'the Directive chip is live, not disabled');
+assert(/CARDFACE\.suit\[/.test(html) || dirPill.innerHTML.includes('<img'),
+  'the Directive chip carries its glyph from the shared asset bundle');
+assert(runQuery('box:all suit:directive').length > 0,
+  'the Directive chip has cards behind it');
+
 // hidden query
 const egg = runQuery('picard combo');
 assert(egg.length === 4 && ['picard-daystrom-institute','moriarty','picard-uss-bozeman','holographic-drone-ship']

@@ -123,9 +123,6 @@ a{color:var(--blue);text-decoration:none;}
 .suit-pill[data-suit="Location"]{border-color:var(--location);color:var(--location);}
 .suit-pill[data-suit="Encounter"]{border-color:var(--encounter);color:var(--encounter);}
 .suit-pill[data-suit="Incident"]{border-color:var(--incident);color:var(--incident);}
-.suit-pill[data-suit="Automated Command"]{border-color:#e8e8f0;color:#e8e8f0;}
-.suit-pill[data-suit="Automated Command"]:hover{border-color:#fff;color:#fff;}
-.suit-pill.active[data-suit="Automated Command"]{background:#e8e8f0;color:#000;}
 .suit-pill.disabled{opacity:0.35;cursor:not-allowed;pointer-events:none;}
 .suit-pill.active[data-suit="Person"]{background:var(--person);color:#000;}
 .suit-pill.active[data-suit="Ally"]{background:var(--ally);color:#fff;}
@@ -750,8 +747,9 @@ function resolveSelected(){
 }
 
 
-const SUITS_DISPLAY = ["Captain","Person","Ally","Ship","Cargo","Location","Encounter","Incident","Automated Command"];
-const EXCLUDED_SUITS = new Set(["Captain","Directive","Status"]);
+// Rulebook order. Directive has a chip; Status stays query-only (no glyph, 5 cards).
+const SUITS_DISPLAY = ["Captain","Person","Cargo","Ship","Ally","Encounter","Incident","Location","Directive"];
+const EXCLUDED_SUITS = new Set(["Captain","Status"]);
 
 const DECK_ORDER = ["Common:core","Sisko","Picard","Koloth","Burnham","Sela","Shran","Common:tbg","Georgiou","Soval","Kirk","Archer","Rebner","Khan","Common:2nd","Pike","Riker","Freeman"];
 const DECK_BOX = {
@@ -1399,19 +1397,13 @@ DECK_ORDER.forEach(d=>{
 // Suit pills
 const suitContainer=document.getElementById('suitFilters');
 SUITS_DISPLAY.forEach(s=>{
-  const SUIT_COL={'Person':'#c9ab35','Ally':'#9b6ecf','Ship':'#7a8aaa','Cargo':'#3a6aaa','Location':'#4ac48a','Encounter':'#d4699f','Incident':'#e05a5a','Captain':'#d7dce6','Directive':'#8494ad','Status':'#88aacc','Automated Command':'#8494ad'};
+  const SUIT_COL={'Person':'#c9ab35','Ally':'#9b6ecf','Ship':'#7a8aaa','Cargo':'#3a6aaa','Location':'#4ac48a','Encounter':'#d4699f','Incident':'#e05a5a','Captain':'#d7dce6','Directive':'#5a6678','Status':'#88aacc'};
   const p=document.createElement('span');
   p.className='suit-pill cardpill suitchip'; p.dataset.suit=s;
   p.style.setProperty('--cc', SUIT_COL[s]||'#8494ad');
   const gi=CARDFACE.suit[s.toLowerCase()];
   p.innerHTML=(gi?'<img src="'+gi+'" alt="">':'')+'<span class="lbl">'+s+'</span>';
-  // Automated Command has no data/scans yet -- show but disable until cards land.
-  if(s==='Automated Command'){
-    p.classList.add('disabled');
-    p.title='Coming soon';
-  } else {
-    p.onclick=()=>toggleToken(tokenOf('suit',s));
-  }
+  p.onclick=()=>toggleToken(tokenOf('suit',s));
   suitContainer.appendChild(p);
 });
 
