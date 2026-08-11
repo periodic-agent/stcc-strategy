@@ -20,6 +20,28 @@ Strategy content by **Matthew McCue (mdmccu2)**, reproduced verbatim from his BG
 - Remaining To Boldly Go captain guides (Archer, Rebner, Khan)
 - Second Contact captain guides (Pike, Riker, Freeman)
 
+## Using the data and images (yes, you're welcome to)
+
+The card database and card images are a community resource. Link them in
+forum posts, Discord, spreadsheets, or your own tools; that's what they're
+for. Use the site URLs (stable, CDN-served), not raw git links:
+
+- **Card data:** `https://periodic-agent.github.io/stcc-strategy/box1.json`
+  (same pattern for `box2`, `box3`, `promo1`, `promo2`). One JSON object per
+  card: name, suit, deck, traits, skill/focus icons, image filename.
+- **Card images:** `https://periodic-agent.github.io/stcc-strategy/img/box1/<card-name>.jpg`
+  (folders `box1`..`box3`, `promo1`, `promo2`). Filenames are lowercase,
+  hyphenated, deck-prefixed for crew cards: `sisko-garak.jpg`,
+  `picard-jean-luc-picard.jpg`. The easiest way to grab a link: find the
+  card in the [Card Scanner](https://periodic-agent.github.io/stcc-strategy/cards.html)
+  and copy the image address.
+
+**Filenames are permanent.** Once a card image ships, its URL never changes,
+so your links won't rot.
+
+Card images © WizKids. A pointer back to the Compendium is appreciated but
+not required.
+
 ## Repo layout
 
 | Path | Contents |
