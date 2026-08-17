@@ -18,6 +18,9 @@ BOXES = [("core", "box1.json"), ("tbg", "box2.json"), ("2nd", "box3.json"),
 GROUP_KEYS = [("species", "species_traits"), ("regular", "regular_traits"),
               ("other", "other_traits")]
 ICON_PX = 44
+# Traits Archer can never have in play because they exist only inside another
+# captain's deck. Confirmed against the card data, not assumed.
+EXCLUDE = {"Path of Surak"}
 ICON_COLORS = 64
 
 
@@ -104,21 +107,8 @@ a{color:var(--tool2);text-decoration:none;}
   padding:0.35rem 0.8rem;border:1px solid var(--border);border-radius:3px;background:transparent;color:var(--muted);cursor:pointer;}
 .btn-reset:hover{border-color:var(--tool);color:var(--tool2);}
 
-/* ---- controls ---- */
+/* ---- layout ---- */
 .wrap{max-width:1100px;margin:1.25rem auto 0;padding:0 1.5rem;}
-.filter-label{font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;}
-.pill-row{display:flex;flex-wrap:wrap;gap:0.35rem;align-items:center;}
-.box-pill{font-family:'Exo 2',sans-serif;font-size:0.72rem;padding:0.22rem 0.75rem;border-radius:3px;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:all 0.15s;user-select:none;}
-.box-pill[data-box="core"]{border-color:#4a9fd4;color:#4a9fd4;}
-.box-pill[data-box="core"].active{background:#4a9fd4;border-color:#4a9fd4;color:#000;font-weight:600;}
-.box-pill[data-box="tbg"]{border-color:#c0392b;color:#c0392b;}
-.box-pill[data-box="tbg"].active{background:#c0392b;border-color:#c0392b;color:#fff;font-weight:600;}
-.box-pill[data-box="2nd"]{border-color:#c8a84b;color:#c8a84b;}
-.box-pill[data-box="2nd"].active{background:#c8a84b;border-color:#c8a84b;color:#000;font-weight:600;}
-.box-pill[data-box="promo1"]{border-color:#4a9fd4;color:#4a9fd4;}
-.box-pill[data-box="promo1"].active{background:#4a9fd4;border-color:#4a9fd4;color:#000;font-weight:600;}
-.box-pill[data-box="promo2"]{border-color:#c0392b;color:#c0392b;}
-.box-pill[data-box="promo2"].active{background:#c0392b;border-color:#c0392b;color:#fff;font-weight:600;}
 
 /* ---- trait chips (identical geometry to the Card Scanner) ---- */
 .section{margin-top:1.5rem;}
@@ -191,9 +181,6 @@ footer{margin-top:2.5rem;border-top:1px solid var(--border);padding:1.25rem 1.5r
 
 <div class="wrap">
 
-  <div class="filter-label">Boxes in play</div>
-  <div class="pill-row" id="boxrow"></div>
-
   <div class="section" id="sec-species">
     <div class="sec-head"><span class="sec-title">Species Traits</span><span class="sec-tally" id="tally-species"></span></div>
     <div class="chips" id="chips-species"></div>
@@ -221,30 +208,12 @@ footer{margin-top:2.5rem;border-top:1px solid var(--border);padding:1.25rem 1.5r
 <script>
 const TRAITS = __TRAITS__;
 const ICONS = __ICONS__;
-const BOX_LABEL = {core:"Core Box", tbg:"To Boldly Go", "2nd":"Second Contact", promo1:"Promo 1", promo2:"Promo 2"};
-const BOX_ORDER = ["core","tbg","2nd","promo1","promo2"];
-const DEFAULT_BOXES = ["core","tbg"];
 const DIVISOR = 3;
 
-let boxes = new Set(DEFAULT_BOXES);
 let sel = new Set();
 
 function slug(n){ return n.toLowerCase().replace(/['\u2019]/g,"").replace(/\s+/g,"-"); }
-function visible(t){ return t.boxes.some(b => boxes.has(b)); }
-function counted(t){ return visible(t) && sel.has(t.name); }
-
-function buildBoxes(){
-  const row = document.getElementById("boxrow");
-  row.innerHTML = "";
-  BOX_ORDER.forEach(b => {
-    const p = document.createElement("span");
-    p.className = "box-pill" + (boxes.has(b) ? " active" : "");
-    p.dataset.box = b;
-    p.textContent = BOX_LABEL[b];
-    p.onclick = () => { boxes.has(b) ? boxes.delete(b) : boxes.add(b); buildBoxes(); render(); };
-    row.appendChild(p);
-  });
-}
+function counted(t){ return sel.has(t.name); }
 
 function buildChips(){
   ["species","regular","other"].forEach(g => {
@@ -270,14 +239,9 @@ function render(){
   TRAITS.forEach(t => {
     const el = document.querySelector('.cardpill[data-name="' + t.name.replace(/"/g,'\\"') + '"]');
     if (!el) return;
-    const vis = visible(t);
-    el.style.display = vis ? "" : "none";
     el.classList.toggle("active", sel.has(t.name));
-    if (vis) {
-      groupTotals[t.group][1]++;
-      if (sel.has(t.name)) groupTotals[t.group][0]++;
-    }
-    if (counted(t)) n++;
+    groupTotals[t.group][1]++;
+    if (sel.has(t.name)) { groupTotals[t.group][0]++; n++; }
   });
   ["species","regular","other"].forEach(g => {
     const [a, b] = groupTotals[g];
@@ -299,8 +263,6 @@ function render(){
 function writeHash(){
   const parts = [];
   if (sel.size) parts.push("t=" + [...sel].map(slug).join(","));
-  const bs = [...boxes].sort();
-  if (bs.join(",") !== [...DEFAULT_BOXES].sort().join(",")) parts.push("b=" + bs.join(","));
   const h = parts.join("&");
   // Sandboxed previews (opaque origin, about:srcdoc, blob:) refuse history
   // access and throw SecurityError. The hash is a convenience, not state, so
@@ -315,7 +277,6 @@ function readHash(){
   const h = location.hash.replace(/^#/, "");
   if (!h) return;
   const q = Object.fromEntries(h.split("&").map(s => s.split("=")));
-  if (q.b) boxes = new Set(q.b.split(",").filter(b => BOX_ORDER.includes(b)));
   if (q.t) {
     const bySlug = {};
     TRAITS.forEach(t => bySlug[slug(t.name)] = t.name);
@@ -327,7 +288,6 @@ document.getElementById("reset").onclick = () => { sel.clear(); render(); };
 
 buildChips();
 readHash();
-buildBoxes();
 render();
 </script>
 </body>
@@ -342,9 +302,9 @@ def main():
     a = ap.parse_args()
 
     taxonomy, membership = read_traits(a.repo)
-    icons = read_icons(a.repo, taxonomy.keys())
-    traits = [{"name": n, "group": taxonomy[n], "boxes": sorted(membership[n])}
-              for n in sorted(taxonomy)]
+    icons = read_icons(a.repo, [t for t in taxonomy if t not in EXCLUDE])
+    traits = [{"name": n, "group": taxonomy[n]}
+              for n in sorted(taxonomy) if n not in EXCLUDE]
 
     html = (TEMPLATE
             .replace("__TRAITS__", json.dumps(traits, ensure_ascii=False))
