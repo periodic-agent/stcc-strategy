@@ -344,12 +344,9 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .cardpill .cnt{font-size:.62rem;font-weight:400;opacity:.75;margin-left:.05rem;display:inline-block;text-align:left;}
 .cardpill:hover{background:rgba(255,255,255,.07);}
 .cardpill.active{background:var(--cc,#8494ad) !important;color:#fff !important;}
-/* Same palette as the card-face pills; see .vt-species and friends. */
-.cp-species{--cc:#e09050;}
-.cp-regular{--cc:#4a9fd4;}
-.cp-other{--cc:#e05a5a;}
-/* Filled, these three are bright enough that near-black beats white. */
-.cp-species.active,.cp-regular.active,.cp-other.active{color:#14161c !important;}
+.cp-species{--cc:#e2a04a;}
+.cp-regular{--cc:#79b3c7;}
+.cp-other{--cc:#c85340;}
 .cp-wild{--cc:#eef1f6;}
 .cp-wild.active{color:#20242e !important;}
 .suit-pill.suitchip{padding-left:.55rem;border:1.5px solid var(--cc);color:var(--cc);background:transparent;}
@@ -393,11 +390,9 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   font-weight:600;letter-spacing:.05em;border-radius:0 0 999px 999px;margin-top:-5px;color:#fff;}
 .vt img + .vctag{margin-top:-5px;}
 .vt .vt-spacer + .vctag{margin-top:0;border-radius:999px;padding-top:.5rem;}
-/* Site palette, not the scans: the printed cards are far too muted to sample.
-   Dark ink because these fills are bright enough that white would be the weaker pair. */
-.vt-species{background:#e09050;color:#14161c;}
-.vt-regular{background:#4a9fd4;color:#14161c;}
-.vt-other{background:#e05a5a;color:#14161c;}
+.vt-species{background:#e2a04a;}
+.vt-regular{background:#79b3c7;}
+.vt-other{background:#c85340;}
 .vt-variable{background:#f6c9bd;color:#141821;}
 .focorner{position:absolute;right:-3px;bottom:-3px;height:43px;width:auto;z-index:2;}
 .card-entry.has-focus .ce-traits2{margin-bottom:46px;}
@@ -1302,6 +1297,20 @@ function specPill(spec,src,alt){
   return '<span class="specpill" style="background:'+col+'"><img src="'+src+'" alt="'+alt+'"></span>';
 }
 
+// Family colours shared with the vertical pills on the card face (.vt-species and friends).
+const TRAIT_FAM_COL={species:'#e2a04a',regular:'#79b3c7',other:'#c85340',variable:'#f6c9bd'};
+// Resolved against the live trait lists rather than a hardcoded table, so a trait that
+// arrives with a future box is coloured without an edit here.
+function traitFamily(name){
+  if(String(name).toLowerCase()==='wildcard') return 'variable';
+  const has=(list,n)=>Array.isArray(list)&&list.some(x=>x.toLowerCase()===n);
+  const n=String(name).toLowerCase();
+  if(has(allSpecies,n)) return 'species';
+  if(has(allOther,n))   return 'other';
+  if(has(allRegular,n)) return 'regular';
+  return 'regular';
+}
+
 function stripIcon(key){
   // CARDFACE is a top-level const, so it is not a property of window: guard
   // with typeof, not window.CARDFACE, which is always undefined here.
@@ -1320,7 +1329,10 @@ function stripToken(t){
   if((m=t.match(/^trait:(.+)$/))){
     const k=m[1].toLowerCase().replace(/['\u2019]/g,'').replace(/\s+/g,'-');
     const ic=CARDFACE.traitChip[k];
-    return '<span class="stripchip'+(ic?'':' plain')+'" style="background:#556">'
+    const fam=traitFamily(m[1]);
+    const col=TRAIT_FAM_COL[fam]||'#556';
+    const ink=fam==='variable'?'#141821':'#fff';
+    return '<span class="stripchip'+(ic?'':' plain')+'" style="background:'+col+';color:'+ink+'">'
       +(ic?'<img src="'+ic+'" alt="">':'')+m[1].toUpperCase()+'</span>';
   }
   if((m=t.match(/^spec:(.+)$/))){

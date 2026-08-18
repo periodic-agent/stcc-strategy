@@ -319,19 +319,20 @@ assert(/"resupply":\s*\{[^}]*"body":\s*"#dff0da"/.test(html) && /"play":\s*\{[^}
   'the Resupply and Control family carries a light green body, Play stays neutral');
 api.applyQuery(''); api.render();
 
-// trait pill colours follow the site palette, not the scans
-assert(/\.vt-species\{background:#e09050;color:#14161c;\}/.test(html)
-    && /\.vt-regular\{background:#4a9fd4;color:#14161c;\}/.test(html)
-    && /\.vt-other\{background:#e05a5a;color:#14161c;\}/.test(html),
-  'card-face trait pills use the filter palette with dark ink');
-assert(!/\.vt-(species|regular|other)\{background:(#e2a04a|#79b3c7|#c85340)/.test(html),
-  'the muted scan-sampled fills are gone from the card-face pills');
-
-assert(/\.cp-species\{--cc:#e09050;\}/.test(html) && /\.cp-regular\{--cc:#4a9fd4;\}/.test(html)
-    && /\.cp-other\{--cc:#e05a5a;\}/.test(html),
-  'filter chips share the card-face palette');
-assert(!/#e2a04a|#79b3c7|#c85340/.test(html),
-  'no scan-sampled trait colour survives anywhere in the page');
+// Vertical pills and filter chips keep their sampled colours; only the inline chips changed.
+assert(/\.vt-species\{background:#e2a04a;\}/.test(html) && /\.cp-species\{--cc:#e2a04a;\}/.test(html),
+  'the card-face pills and filter chips keep their original colours');
+api.applyQuery('box:all'); api.render();
+const klingonCard = api.ALL_CARDS.find(c=>(c.strips||[]).some(s=>/\bKlingon\b/.test(s.text||'')));
+const klHTML = api.buildPillCard(klingonCard).innerHTML.replace(/\s+/g,' ');
+assert(/background:#e2a04a;color:#fff/.test(klHTML),
+  'a species trait chip inside strip text takes the species colour');
+assert(!/style="background:#556"/.test(klHTML),
+  'no inline trait chip is left on the flat slate colour');
+let slate=0;
+api.ALL_CARDS.forEach(c=>{ if(/background:#556/.test(api.buildPillCard(c).innerHTML)) slate++; });
+assert(slate === 0, 'no card anywhere still renders a slate-grey trait chip');
+api.applyQuery(''); api.render();
 
 // specialty medallions
 api.applyQuery('box:all'); api.render();
