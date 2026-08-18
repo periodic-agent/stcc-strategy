@@ -319,6 +319,37 @@ assert(/"resupply":\s*\{[^}]*"body":\s*"#dff0da"/.test(html) && /"play":\s*\{[^}
   'the Resupply and Control family carries a light green body, Play stays neutral');
 api.applyQuery(''); api.render();
 
+// trait pill colours follow the site palette, not the scans
+assert(/\.vt-species\{background:#e09050;color:#14161c;\}/.test(html)
+    && /\.vt-regular\{background:#4a9fd4;color:#14161c;\}/.test(html)
+    && /\.vt-other\{background:#e05a5a;color:#14161c;\}/.test(html),
+  'card-face trait pills use the filter palette with dark ink');
+assert(!/\.vt-(species|regular|other)\{background:(#e2a04a|#79b3c7|#c85340)/.test(html),
+  'the muted scan-sampled fills are gone from the card-face pills');
+
+assert(/\.cp-species\{--cc:#e09050;\}/.test(html) && /\.cp-regular\{--cc:#4a9fd4;\}/.test(html)
+    && /\.cp-other\{--cc:#e05a5a;\}/.test(html),
+  'filter chips share the card-face palette');
+assert(!/#e2a04a|#79b3c7|#c85340/.test(html),
+  'no scan-sampled trait colour survives anywhere in the page');
+
+// specialty medallions
+api.applyQuery('box:all'); api.render();
+const lwaxPill = api.buildPillCard(api.ALL_CARDS.find(c=>c.name==='Lwaxana Troi')).innerHTML;
+assert(/<span class="specpill" style="background:#c0b422"><img[^>]*alt="Influence"/.test(lwaxPill),
+  'a bare specialty renders as a rounded pill in its own colour');
+const dorg = api.buildPillCard(api.ALL_CARDS.find(c=>c.name==='Captain Dorg')).innerHTML;
+assert(!/\{spec:|\{skill:|\{focus:/.test(dorg),
+  'a Skill token is not rewritten by the bare-specialty pass (no literal braces on the card)');
+assert((dorg.match(/specpill/g)||[]).length >= 2,
+  'the Skill tokens on that card still render as medallions');
+let strayBraces = 0;
+api.ALL_CARDS.forEach(c=>{ if(/\{[a-z]+:/.test(api.buildPillCard(c).innerHTML)) strayBraces++; });
+assert(strayBraces === 0, 'no card anywhere renders an unresolved {token}');
+assert(/\.specpill\{[^}]*border-radius:999px/.test(html),
+  'the pill is rounded at both ends');
+api.applyQuery(''); api.render();
+
 // hidden query
 const egg = runQuery('picard combo');
 assert(egg.length === 4 && ['picard-daystrom-institute','moriarty','picard-uss-bozeman','holographic-drone-ship']

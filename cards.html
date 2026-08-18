@@ -344,9 +344,12 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .cardpill .cnt{font-size:.62rem;font-weight:400;opacity:.75;margin-left:.05rem;display:inline-block;text-align:left;}
 .cardpill:hover{background:rgba(255,255,255,.07);}
 .cardpill.active{background:var(--cc,#8494ad) !important;color:#fff !important;}
-.cp-species{--cc:#e2a04a;}
-.cp-regular{--cc:#79b3c7;}
-.cp-other{--cc:#c85340;}
+/* Same palette as the card-face pills; see .vt-species and friends. */
+.cp-species{--cc:#e09050;}
+.cp-regular{--cc:#4a9fd4;}
+.cp-other{--cc:#e05a5a;}
+/* Filled, these three are bright enough that near-black beats white. */
+.cp-species.active,.cp-regular.active,.cp-other.active{color:#14161c !important;}
 .cp-wild{--cc:#eef1f6;}
 .cp-wild.active{color:#20242e !important;}
 .suit-pill.suitchip{padding-left:.55rem;border:1.5px solid var(--cc);color:var(--cc);background:transparent;}
@@ -390,9 +393,11 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   font-weight:600;letter-spacing:.05em;border-radius:0 0 999px 999px;margin-top:-5px;color:#fff;}
 .vt img + .vctag{margin-top:-5px;}
 .vt .vt-spacer + .vctag{margin-top:0;border-radius:999px;padding-top:.5rem;}
-.vt-species{background:#e2a04a;}
-.vt-regular{background:#79b3c7;}
-.vt-other{background:#c85340;}
+/* Site palette, not the scans: the printed cards are far too muted to sample.
+   Dark ink because these fills are bright enough that white would be the weaker pair. */
+.vt-species{background:#e09050;color:#14161c;}
+.vt-regular{background:#4a9fd4;color:#14161c;}
+.vt-other{background:#e05a5a;color:#14161c;}
 .vt-variable{background:#f6c9bd;color:#141821;}
 .focorner{position:absolute;right:-3px;bottom:-3px;height:43px;width:auto;z-index:2;}
 .card-entry.has-focus .ce-traits2{margin-bottom:46px;}
@@ -455,6 +460,10 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .opstrip.inbar .kwblock{flex:none;display:flex;align-items:center;padding:.2rem .4rem .22rem;
   font-family:'Antonio',sans-serif;font-weight:600;font-size:.76rem;letter-spacing:.02em;}
 .stripimg{height:1.35em;width:auto;vertical-align:-.32em;margin:0 .08em;}
+/* The specialty art is a pennant; the pill fills its notch and rounds its square end. */
+.specpill{display:inline-flex;align-items:center;height:1.35em;border-radius:999px;
+  overflow:hidden;vertical-align:-.32em;margin:0 .08em;}
+.specpill img{height:1.35em;width:auto;display:block;}
 .stripimg.cost{margin:0 .22em 0 0;}
 .stripchip{display:inline-flex;align-items:center;gap:.18em;height:1.2em;padding:0 .38em 0 .1em;
   border-radius:999px;font-family:'Antonio',sans-serif;font-weight:600;font-size:.85em;
@@ -1283,6 +1292,15 @@ const STRIP_SUIT_COL={Person:'#c9ab35',Ally:'#9b6ecf',Ship:'#7a8aaa',Cargo:'#3a6
 const STRIP_RES={dilithium:'dilithium',latinum:'latinum',glory:'glory-token',
                  action:'action',actions:'action'};
 const STRIP_SPEC=['Research','Influence','Military','Any','Variable'];
+// Sampled from the medallion art itself, so the pill and the glyph agree exactly.
+const SPEC_COL={military:'#ab2242',research:'#015c80',influence:'#c0b422',
+                any:'#5a6678',variable:'#5a6678'};
+function specPill(spec,src,alt){
+  const col=SPEC_COL[String(spec).toLowerCase()];
+  if(!src) return alt;
+  if(!col) return '<img class="stripimg" src="'+src+'" alt="'+alt+'">';
+  return '<span class="specpill" style="background:'+col+'"><img src="'+src+'" alt="'+alt+'"></span>';
+}
 
 function stripIcon(key){
   // CARDFACE is a top-level const, so it is not a property of window: guard
@@ -1307,12 +1325,16 @@ function stripToken(t){
   }
   if((m=t.match(/^spec:(.+)$/))){
     const src=(CARDFACE.skillChip||CARDFACE.skill||{})[m[1].toLowerCase()];
-    return src?'<img class="stripimg" src="'+src+'" alt="'+m[1]+'">':m[1];
+    return specPill(m[1],src,m[1]);
   }
   if((m=t.match(/^(skill|focus):(.+)$/))){
     const bank=m[1]==='focus'?CARDFACE.focus:CARDFACE.skillChip;
     const src=bank&&bank[m[2].toLowerCase()];
-    return src?'<img class="stripimg" src="'+src+'" alt="'+m[2]+'">':m[2]+' '+m[1];
+    if(!src) return m[2]+' '+m[1];
+    // Focus art is already a rounded marker; only the pennant needs the pill.
+    return m[1]==='focus'
+      ? '<img class="stripimg" src="'+src+'" alt="'+m[2]+'">'
+      : specPill(m[2],src,m[2]);
   }
   if((m=t.match(/^res:(.+)$/))){
     const src=stripIcon(STRIP_RES[m[1].toLowerCase()]);
@@ -1325,6 +1347,13 @@ function stripToken(t){
   return t;
 }
 
+// Apply fn only to the parts of the string that are not already inside a {token}.
+// Without this, the bare-specialty pass rewrites the payload of {skill:Influence}
+// and the strip renders the literal braces.
+function outsideTokens(t,fn){
+  return String(t).split(/(\{[^}]*\})/).map(seg=>seg.charAt(0)==='{'?seg:fn(seg)).join('');
+}
+
 function stripAutoTokens(text){
   let t=text;
   STRIP_SPEC.forEach(sp=>{
@@ -1332,10 +1361,11 @@ function stripAutoTokens(text){
       (_,k)=>'{'+(k==='Focus'?'focus':'skill')+':'+sp+'}');
   });
   // A bare specialty ("gain 1 Military") gets the same medallion as the Skill/Focus pair
-  // above; run after that pass so "Military Skill" is already consumed.
+  // above; run after that pass so "Military Skill" is already consumed, and only outside
+  // the tokens that pass produced.
   STRIP_SPEC.forEach(sp=>{
     if(sp==='Any'||sp==='Variable') return;
-    t=t.replace(new RegExp('\\b'+sp+'\\b','g'),'{spec:'+sp+'}');
+    t=outsideTokens(t,seg=>seg.replace(new RegExp('\\b'+sp+'\\b','g'),'{spec:'+sp+'}'));
   });
   Object.keys(STRIP_SUIT_COL).forEach(w=>{
     t=t.replace(new RegExp('\\b'+w+'s?\\b','g'),()=>'{suit:'+w+'}');
