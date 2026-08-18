@@ -300,6 +300,25 @@ assert(runQuery('box:all activation:draw').every(c=>(c.strips||[]).some(x=>
 assert(/reaction:&quot;putting a shady&quot;|reaction:"putting a shady"/.test(html),
   'the help bubble documents kind-scoped text search with an example');
 
+// strip presentation
+const stripChips=[...env.document.getElementById('stripFilters').children].map(c=>c.dataset.strip);
+assert(!stripChips.includes('cost') && !stripChips.includes('banner'),
+  'Dev. Cost and No Play have no filter chip');
+assert(stripChips.length === 11 && stripChips.includes('control'),
+  'the remaining eleven strip chips are intact');
+assert(runQuery('box:all strip:cost').length > 0,
+  'the hidden kinds are still queryable by key');
+assert(/\.opstrip \.body\{flex:1/.test(html),
+  'strip bodies stretch the full width of the card');
+api.applyQuery('box:all'); api.render();
+const lwax = api.ALL_CARDS.find(c=>c.name === 'Lwaxana Troi');
+const lwaxHTML = api.buildPillCard(lwax).innerHTML;
+assert(/alt="Influence"/.test(lwaxHTML) && !/\b(Influence|Military|Research)\b/.test(lwaxHTML.replace(/<img[^>]*>/g,'')),
+  'a bare specialty word renders as its medallion, not as text');
+assert(/"resupply":\s*\{[^}]*"body":\s*"#dff0da"/.test(html) && /"play":\s*\{[^}]*"body":\s*"#e9e8e2"/.test(html),
+  'the Resupply and Control family carries a light green body, Play stays neutral');
+api.applyQuery(''); api.render();
+
 // hidden query
 const egg = runQuery('picard combo');
 assert(egg.length === 4 && ['picard-daystrom-institute','moriarty','picard-uss-bozeman','holographic-drone-ship']
