@@ -334,6 +334,28 @@ api.ALL_CARDS.forEach(c=>{ if(/background:#556/.test(api.buildPillCard(c).innerH
 assert(slate === 0, 'no card anywhere still renders a slate-grey trait chip');
 api.applyQuery(''); api.render();
 
+// Dev. Cost renders last
+api.applyQuery('box:all'); api.render();
+let costNotLast=0, costCards=0;
+api.ALL_CARDS.forEach(c=>{
+  const kinds=(c.strips||[]).map(s=>String(s.kind||'').toLowerCase());
+  if(!kinds.includes('cost')) return;
+  costCards++;
+  const h=api.buildPillCard(c).innerHTML;
+  const labels=[...h.matchAll(/class="kw[^"]*"[^>]*>([A-Z. -]+):/g)].map(m=>m[1].trim());
+  const block=[...h.matchAll(/class="kwblock"[^>]*>([A-Z. -]+):/g)].map(m=>m[1].trim());
+  const order=[...labels,...block];
+  if(!h.includes('DEV. COST')) return;
+  if(h.indexOf('DEV. COST') < h.lastIndexOf('class="kw"')) costNotLast++;
+});
+assert(costCards > 0 && costNotLast === 0,
+  'every card with a development cost renders it below its operations');
+const bozeman = api.ALL_CARDS.find(c=>c.name === 'U.S.S. Bozeman');
+const bh = api.buildPillCard(bozeman).innerHTML;
+assert(bh.indexOf('PLAY:') < bh.indexOf('DEV. COST'),
+  'a card whose JSON lists cost first still prints it last');
+api.applyQuery(''); api.render();
+
 // specialty medallions
 api.applyQuery('box:all'); api.render();
 const lwaxPill = api.buildPillCard(api.ALL_CARDS.find(c=>c.name==='Lwaxana Troi')).innerHTML;

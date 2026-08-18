@@ -1408,7 +1408,12 @@ function stripLabel(kind){
 // Consecutive strips of the same colour family share one box, which is how the
 // cards print them (PLAY with SUPPORT, REACTION with PASSIVE).
 function buildStrips(c){
-  const list=c.strips||[];
+  // Dev. Cost prints under the operations; the transcription often has it first.
+  // Stable sort, so nothing else moves.
+  const list=(c.strips||[]).slice()
+    .map((s,i)=>[s,i])
+    .sort((a,b)=>((String(a[0].kind||'').toLowerCase()==='cost')-(String(b[0].kind||'').toLowerCase()==='cost'))||(a[1]-b[1]))
+    .map(p=>p[0]);
   if(!list.length) return '';
   const boxes=[];
   list.forEach(st=>{
