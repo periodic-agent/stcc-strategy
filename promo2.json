@@ -1,120 +1,240 @@
 [
-  {
-    "id": "drones-of-cube-90182",
-    "name": "Drones of Cube 90182",
-    "suit": "Ally",
-    "source": "Promo",
-    "game_box": "Promo Pack 2",
-    "card_number": "0ALL01/?",
-    "glory": 3,
-    "position_indicator": null,
-    "species_traits": [
-      "Borg"
-    ],
-    "regular_traits": [],
-    "other_traits": [
-      "Lower Decker"
-    ],
-    "filename": "drones-of-cube-90182.jpg",
-    "icons": []
-  },
-  {
-    "id": "frank-hollander",
-    "name": "Frank Hollander",
-    "suit": "Cargo",
-    "source": "Promo",
-    "game_box": "Promo Pack 2",
-    "card_number": "0CAR02/?",
-    "glory": 2,
-    "position_indicator": null,
-    "species_traits": [
-      "Android"
-    ],
-    "regular_traits": [
-      "Anomaly",
-      "Hologram"
-    ],
-    "other_traits": [],
-    "filename": "frank-hollander.jpg",
-    "icons": []
-  },
-  {
-    "id": "golden-statue-of-obrien",
-    "name": "Golden Statue of O'Brien",
-    "suit": "Cargo",
-    "source": "Promo",
-    "game_box": "Promo Pack 2",
-    "card_number": "0CAR03/?",
-    "glory": 2,
-    "position_indicator": null,
-    "species_traits": [],
-    "regular_traits": [
-      "Starfleet"
-    ],
-    "other_traits": [
-      "Ongoing"
-    ],
-    "filename": "golden-statue-of-obrien.jpg",
-    "icons": []
-  },
-  {
-    "id": "starbase-80",
-    "name": "Starbase 80",
-    "suit": "Location",
-    "source": "Promo",
-    "game_box": "Promo Pack 2",
-    "card_number": "0LOC01/?",
-    "glory": 3,
-    "position_indicator": "Advanced",
-    "species_traits": [],
-    "regular_traits": [
-      "Ops",
-      "Starfleet",
-      "Starbase"
-    ],
-    "other_traits": [],
-    "filename": "starbase-80.jpg",
-    "icons": []
-  },
-  {
-    "id": "subspace-rhapsody",
-    "name": "Subspace Rhapsody",
-    "suit": "Incident",
-    "source": "Promo",
-    "game_box": "Promo Pack 2",
-    "card_number": "0INC03/?",
-    "glory": -2,
-    "position_indicator": null,
-    "species_traits": [],
-    "regular_traits": [
-      "Anomaly",
-      "Communication"
-    ],
-    "other_traits": [],
-    "filename": "subspace-rhapsody.jpg",
-    "icons": []
-  },
-  {
-    "id": "uss-cabot",
-    "name": "U.S.S. Cabot",
-    "suit": "Ship",
-    "source": "Promo",
-    "game_box": "Promo Pack 2",
-    "card_number": "0SHI02/?",
-    "glory": 2,
-    "position_indicator": null,
-    "species_traits": [],
-    "regular_traits": [
-      "Scientist",
-      "Starfleet"
-    ],
-    "other_traits": [],
-    "filename": "uss-cabot.jpg",
-    "icons": [
-      {
-        "type": "Skill",
-        "specialty": "Research"
-      }
-    ]
-  }
+ {
+  "id": "drones-of-cube-90182",
+  "name": "Drones of Cube 90182",
+  "suit": "Ally",
+  "source": "Promo",
+  "game_box": "Promo Pack 2",
+  "card_number": "0ALL01/?",
+  "glory": 3,
+  "position_indicator": null,
+  "species_traits": [
+   "Borg"
+  ],
+  "regular_traits": [],
+  "other_traits": [
+   "Lower Decker"
+  ],
+  "filename": "drones-of-cube-90182.jpg",
+  "icons": [],
+  "strips": [
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Beam this card to a ship. Either: refresh that Ship OR draw a card OR spend 1 Dilithium to do both."
+   },
+   {
+    "kind": "support",
+    "action": null,
+    "qual": null,
+    "text": "After putting a Borg into play, spending 1 Dilithium to draw a card and gain 2 Research."
+   },
+   {
+    "kind": "support",
+    "action": null,
+    "qual": "Requires 5 Collective",
+    "text": "After assimilating a card, gain 1 Collective and draw 2 cards."
+   }
+  ]
+ },
+ {
+  "id": "frank-hollander",
+  "name": "Frank Hollander",
+  "suit": "Cargo",
+  "source": "Promo",
+  "game_box": "Promo Pack 2",
+  "card_number": "0CAR02/?",
+  "glory": 2,
+  "position_indicator": null,
+  "species_traits": [
+   "Android"
+  ],
+  "regular_traits": [
+   "Anomaly",
+   "Hologram"
+  ],
+  "other_traits": [],
+  "filename": "frank-hollander.jpg",
+  "icons": [],
+  "strips": [
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Log a Cargo from your hand, Discard pile, or in play to gain 1 Glory. You may free play a Hologram / Incident."
+   }
+  ]
+ },
+ {
+  "id": "golden-statue-of-obrien",
+  "name": "Golden Statue of O'Brien",
+  "suit": "Cargo",
+  "source": "Promo",
+  "game_box": "Promo Pack 2",
+  "card_number": "0CAR03/?",
+  "glory": 2,
+  "position_indicator": null,
+  "species_traits": [],
+  "regular_traits": [
+   "Starfleet"
+  ],
+  "other_traits": [
+   "Ongoing"
+  ],
+  "filename": "golden-statue-of-obrien.jpg",
+  "icons": [],
+  "strips": [
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "You my find an Engineer. Deploy this card."
+   },
+   {
+    "kind": "reaction",
+    "action": null,
+    "qual": null,
+    "text": "After logging an Engineer recalled a beamed card."
+   },
+   {
+    "kind": "endgame",
+    "action": null,
+    "qual": null,
+    "text": "Score 1 for each Engineer in your Log."
+   }
+  ]
+ },
+ {
+  "id": "starbase-80",
+  "name": "Starbase 80",
+  "suit": "Location",
+  "source": "Promo",
+  "game_box": "Promo Pack 2",
+  "card_number": "0LOC01/?",
+  "glory": 3,
+  "position_indicator": "Advanced",
+  "species_traits": [],
+  "regular_traits": [
+   "Ops",
+   "Starfleet",
+   "Starbase"
+  ],
+  "other_traits": [],
+  "filename": "starbase-80.jpg",
+  "icons": [],
+  "strips": [
+   {
+    "kind": "control",
+    "action": null,
+    "qual": null,
+    "text": "Gain a Person / Cargo / Ship from the Junk."
+   },
+   {
+    "kind": "activation",
+    "action": true,
+    "qual": "Action",
+    "text": "Beam a Person here to junk an Incident from your hand or Discard pile. You may junk a card from the Market."
+   },
+   {
+    "kind": "reaction",
+    "action": null,
+    "qual": null,
+    "text": "When gaining a card, log a card beamed here to include the Junk."
+   },
+   {
+    "kind": "passive",
+    "action": null,
+    "qual": null,
+    "text": "When taking an Incident, you may take it from the Junk."
+   }
+  ]
+ },
+ {
+  "id": "subspace-rhapsody",
+  "name": "Subspace Rhapsody",
+  "suit": "Incident",
+  "source": "Promo",
+  "game_box": "Promo Pack 2",
+  "card_number": "0INC03/?",
+  "glory": -2,
+  "position_indicator": null,
+  "species_traits": [],
+  "regular_traits": [
+   "Anomaly",
+   "Communication"
+  ],
+  "other_traits": [],
+  "filename": "subspace-rhapsody.jpg",
+  "icons": [],
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Put a Directive in your Staging Area (without triggering its play operation) to return this card. You may sing the text of its first play operation to refresh either a Duty Officer OR your Captain."
+   },
+   {
+    "kind": "special",
+    "action": null,
+    "qual": null,
+    "text": "During setup, replace a random Incident in the Incident deck with this card."
+   }
+  ]
+ },
+ {
+  "id": "uss-cabot",
+  "name": "U.S.S. Cabot",
+  "suit": "Ship",
+  "source": "Promo",
+  "game_box": "Promo Pack 2",
+  "card_number": "0SHI02/?",
+  "glory": 2,
+  "position_indicator": null,
+  "species_traits": [],
+  "regular_traits": [
+   "Scientist",
+   "Starfleet"
+  ],
+  "other_traits": [],
+  "filename": "uss-cabot.jpg",
+  "icons": [
+   {
+    "type": "Skill",
+    "specialty": "Research"
+   }
+  ],
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Deploy this ship. You may take an Incident to scan for Creature."
+   },
+   {
+    "kind": "resupply",
+    "action": null,
+    "qual": null,
+    "text": "Draw a card for each Creature in play. If you drew 3 or more, gain 1 Glory and log this card."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Spend 1 Dilithium to warp this ship."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Discard a card to beam a card here."
+   },
+   {
+    "kind": "passive",
+    "action": null,
+    "qual": null,
+    "text": "After exhausting this card either: free play Tribbles OR draw Tribbles from your Discard pile."
+   }
+  ]
+ }
 ]

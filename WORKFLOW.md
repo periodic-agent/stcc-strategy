@@ -593,14 +593,29 @@ The search bar is the scanner's single state; pills are shortcuts that write tok
 - Image src is built as `img/<BOX_FOLDER[box]>/<filename>` (see box-key bridge table below); a missing image (404) falls back to a `NO IMAGE` placeholder via `onerror`, so partial image coverage is fine
 - Image assets pending volunteer scanning
 
-### Update cycle (revised 29 Jul 2026)
-**The Google Drive sheet is RETIRED for Boxes 1-3.** Card data for Captain's Chair, To
-Boldly Go, Second Contact and both promo packs is complete; the five JSON files at repo
-root are now the canonical card database and are edited directly, like box1.json always
-was. The sheet, its volunteer workflow, and `tools/build_box2_from_sheet.py` go dormant
-until Box 4/5 land, at which point this cycle reactivates for the new box only. The
-"fix the sheet, never the JSON" rule applies only while a box is on the active sheet
-pipeline. Historical description of the cycle follows, kept for that reactivation.
+### Update cycle (revised 17 Aug 2026 -- CARD TEXT edition)
+**The sheet is back, with a new job: card text.** Metadata for Boxes 1-3 and both promo
+packs remains complete and canonical in the five JSON files at repo root (that part of
+the 29 Jul 2026 retirement stands). What the JSONs still lack is rule text, so the Drive
+sheet was regenerated from the ground up by `tools/build_text_workbook.py` (supersedes
+`build_workbook.py`): one tab per box (now including Captain's Chair), one row per JSON
+card (610), metadata pre-filled from the JSONs as read-only reference, card-image links,
+and **Card text as the last column** -- seeded for 540 cards from Periodic_agent's
+transcription (`data/card-text-source.csv`), empty/orange for the 70 that need entry
+(Archer, Rebner and Khan decks, treated as ordinary decks). 36 Mission cards ride along
+flagged "not in JSON yet" until the JSONs gain a Mission suit. Contributor/Notes columns
+were dropped; credit history lives in the archived retired sheet.
+- Division of authority: **metadata bugs -> fix the JSON; card text -> fix the sheet** until
+  text verification completes, then text flows back into the JSONs via a future
+  `tools/build_text_from_sheet.py` (same read-only-sheet discipline as
+  `build_box2_from_sheet.py`) and the sheet retires again.
+- Same Drive file ID as before; Periodic_agent replaces content via right-click ->
+  Manage versions -> Upload new version (never delete-and-reupload). Archived copy of the
+  retired metadata sheet: `archive/stcc-card-database-retired-2026-08-17.xlsx`.
+- Card text is transcribed **exactly as printed**, typos included (see Misprints below).
+  Abilities are separated by a line containing `---`.
+
+Historical description of the metadata cycle follows, kept for Box 4/5 reactivation.
 - File: `stcc-card-database.xlsx` on Periodic_agent's Drive (kept as .xlsx; volunteers edit via shared link in Sheets Office mode). Drive file ID stays constant.
 - Tabs: README, TBG (Box 2), Second Contact (Box 3), Vocabulary. Status column tracks progress (AI-seeded — verify / verified / needs entry / unreadable). Card image column links to the live site.
 - **Never regenerate the sheet wholesale.** To add cards: read the live sheet (Google Drive connector), merge by Card code (fallback key: box + name + suit), append ONLY new rows, hand Periodic_agent the updated .xlsx. Periodic_agent updates Drive via right-click → Manage versions → Upload new version (keeps the ID and the shared link; never delete-and-reupload).

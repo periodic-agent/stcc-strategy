@@ -1,0 +1,3340 @@
+card numbers for sorting ([suit sort number]-[suit] [box number] [card number]),Box,Deck,Suit,Name,Traits,Text,Skills,Points
+"01-Person 01 01
+01-Person 02 01","Core Box
+To Boldly Go",Market,Person,Admiral Jarok,Romulan,"Play - Action, Requires 3 Military: Your opponent may draw a card. Enlist a Development.
+---
+Reaction - After you are attacked, gain 1 Glory. Then, you may log a card fro your hand or Discard pile.
+---
+Passive - You cannot play or promote cards with Attack. You may have an additional Person with Starfleet on duty.",-,1.0
+01-Person 01 02,Core Box,Market,Person,Admiral Necheyev,"Starfleet
+Human","Play - Action: You may warp a Ship. You may free play a Directive from your hand or your Discard pile. Up to 3 times: beam a card to a Ship
+---
+Resupply - Draw a card for each Ops you have in play (max 3).
+---
+Activation - Spend 1 Dilithium to warp any number of your Ship.",-,Influence
+01-Person 01 03,Core Box,Market,Person,Admiral Pressman,"Starfleet
+Human
+Shady","Play - Free: Free play an Attack. If you have no Duty Officer, you may promote a Person to Duty Officer from your hand or Discard pile.
+---
+Resupply - Draw a card for each Security you have in play (max 3).
+---
+Activation - Dismiss a Cloak you have in play to log this card and gain 3 Glory.",-,Military
+01-Person 01 04,Core Box,Market,Person,Ambassador Kamarag,"Ambassador
+Imperial
+Klingon","Play - Action: Spend 2 Dilithium to gain 1 Military and you may scan for either a Klingon or a Starfleet.
+---
+Reaction - After your opponent takes control of a Location, return an Incident from you hand or Discard pile.",-,1.0
+01-Person 01 05,Core Box,Market,Person,B-4,"Synthetic
+Android
+Attack","Play - Action: Gain a Cargo from the Junk.
+---
+Play - Action: Take an Incident to scan for a Synthetic, including from the Junk.
+---
+Activation - Attack: Log a card from you hand. If you do, your opponent takes an Incident and you gain 1 Dilithium for every 2 cards in your Log (rounded down).",-,1.0
+01-Person 01 06,Core Box,Market,Person,Bruce Maddox,"Scientist
+Starfleet
+Engineer
+Human","Play - Free: Find and free play a Synthetic.
+---
+Reaction - After putting an Android into play, draw a card and gain 2 Glory.",Research,Research
+01-Person 01 07,Core Box,Market,Person,Captain Dorg,"Klingon
+Attack
+Shady","Play - Action: Discard a card. If the Discarded card is a Weapon, gain a Ship. If it has Influence Skill, Points, Military Skill, Points, gain 2 Glory.
+---
+Reaction - After putting a Shady into play, dismiss a Klingon (can be this card) to gain an Action.
+---
+Reaction - Attack: After putting a Klingon or Pakled into play, remove up to 2 opponent Away Teams from the same Location. Gain 1 Glory for each Away Team removed this way.",-,Military
+"01-Person 01 08
+01-Person 02 06","Core Box
+To Boldly Go",Market,Person,Harry Mudd,"Time Travel
+Attack
+Human
+Shady","Play - Action, Attack, Requires 3 Influence: Force you opponent to log a Person from their hand or Discard pile. If they do, they may draw a card. If they cannot, they take an Incident. You may promote this card to Duty Officer.
+---
+Activation - Dismiss this card to recall a non-Time Travel card from your Staging Area.",-,1.0
+01-Person 01 09,Core Box,Market,Person,Joret Dal,"Cardassian
+Starfleet
+Spy","Play - Action: You may put a Person on the top of you deck to send an Away Team to a Location. You may log a Person from your hand or Discard pile. If you do both, gain 1 Glory and you may promote this card to Duty Officer.
+---
+Passive - Increase you hand size by 1.",-,1.0
+01-Person 01 10,Core Box,Market,Person,Laas,Changeling,"Play - Free: Put a Person into your Staging Area (without triggering their play operation) to duplicate a play operation of a Person or Cargo from the Market or Discard pile.
+---
+Activation - Spend 1 Dilithium to find a card in your Draw deck.",-,1.0
+01-Person 01 11,Core Box,Market,Person,Laris,Romulan,"Play - Free: Spend 1 Dilithium to gain 1 Research or Influence. If you have an Android in play, draw 2 cards.
+---
+Resupply - Duplicate a Resupply operation you have already resolved this turn.
+---
+Activation - Spend 2 Dilithium or 1 Latinum to refrest a Captain, Cargo, Ship, or Location.",-,1.0
+01-Person 01 12,Core Box,Market,Person,Lenara Khan,"Scientist
+Trill","Play - Action: You may spend 1 Dilithium to gain 2 Research. You may take an Incident to scan for an Anomaly.
+---
+Activation - Spend 1 Latinum to gain 1 Glory for each Anomaly you have in play (max 3). Dismiss this card.",-,Research
+"01-Person 01 13
+01-Person 02 10","Core Box
+To Boldly Go",Market,Person,Lursa,"Klingon
+Shady","Play - Action: Gain 1 Latinum. You may beam this card to a Ship to send an Away Team to its Location. You may spend 1 Dilithium and take an Incident to gain a ship.
+---
+Activation - Discard a card to draw a card. If the discarded card is a Romulan, gain 1 Military. If it is a Business, gain 1 Latinum. If it has both traits, gain both rewards.",-,Military
+01-Person 01 14,Core Box,Market,Person,Lwaxana Troi,"Ambassador
+Betazoid
+Telepath","Play - Free: Refresh your Captain or your Duty Officer.
+---
+Play - Action: Spend 1 Latinum to gain 2 Influence.
+---
+Reaction - Requires 6 Influence: After putting a Person into play, draw a card.",-,1.0
+01-Person 01 15,Core Box,Market,Person,Mirok,"Scientist
+Romulan
+Attack","Play - Free, Attack: You may log a Cloak from your hand or from play to force your opponent to log a Ship from their Discard pile. If they do, gain 1 Glory. If they cannot, they take an Incident. You may promote this card to Duty Officer.
+---
+Reaction - After putting a Cargo into play, draw a card.",-,Research
+01-Person 01 16,Core Box,Market,Person,Moriarty,"Synthetic
+Hologram
+Attack
+Shady","Play - Free, Attack, Requires 5 Research: You may spend 2 Dilithium to scan for either a Hologram or an Engineer. Force your opponent to discard 2 cards.
+---
+Reaction - After putting  Synthetic into play, gain 1 Glory. After putting a Hologram into play, draw a card. If the card you pu into play has both traits, gain both rewards.",-,1.0
+01-Person 01 17,Core Box,Market,Person,Peanut Hamper,Synthetic,"Play - Free: Spend 2 Dilithium to scan 1 of Cargo.
+---
+Play - Free: Gain 3 Dilithium. You may recall your Duty Officer. Promote this card to Duty Officer.
+---
+Resupply - Gain 1 Glory.
+---
+Passive - After you are attacked, put this card on the top of your deck.
+---
+Reaction - After putting a Shady into play, put this card on the top of your deck and gain 1 Latinum.",-,1.0
+"01-Person 01 18
+01-Person 02 14","Core Box
+To Boldly Go",Market,Person,Phlox,"Doctor
+NX-01","Play - Action: Return an Incident from your hand.
+---
+Play - Action, Requires 6 Research: Return any number of Incidents from your hand. You may teturn an Incident from your Discard Pile. Beam this card to a deployed Ship, if able.
+---
+Reaction - After sending an Away Team to a neutral Location, spend 1 Dilithium to gain 1 Research.",-,1.0
+"01-Person 01 19
+01-Person 02 16","Core Box
+To Boldly Go",Market,Person,Riva,"Communication
+Ambassador
+Telepath","Play - Free: Draw a card. You may log an Attack from your hand or Discard pile to gain 1 Glory.
+---
+Reaction - When you would be attacked, discard a card to ignore the negative effect. Gain 1 Glory for each trait the discarded card shares with Riva.",Influence,Influence
+"01-Person 01 20
+01-Person 02 17","Core Box
+To Boldly Go",Market,Person,Rom,"Engineer
+Ferengi","Play - Action: You may spend 1 Latinum to scan 2 of Cargo. You may spend 1 Latinum to free play a Cargo from your hand or Discard pile.
+---
+Reaction - After gaining Latinum, you may draw a card from your Draw deck and/or a card from your Discard pile.",-,1.0
+01-Person 01 21,Core Box,Market,Person,Sakonna,"Vulcan
+Maquis","Play - Action: You may spend 1 Latinum to gain 1 Influence and 1 Military. You may discard a Weapon to gain 1 Influence or Military. You may find a Ferengi.
+---
+Play - Action: If you have a Ship at the Badlands, scan for a Weapon and draw a card.
+---
+Resupply - Requires 4 Military: Reveal you hand. If you have a Weapon in your hand, gain 1 Latinum. If you have a Weapon in your hand and a Weapon in play, additionally gain an Action.",-,1.0
+"01-Person 01 22
+01-Person 02 20","Core Box
+To Boldly Go",Market,Person,Su'Kal,Kelpien,"THIS CARD CANNOT BE PLAYED.
+---
+Passive - Whenever you take or return an Incident, gain 1 Dilithium.
+---
+Special - Before scoring, find and return up to 2 Incident.",-,1.0
+"01-Person 01 23
+01-Person 02 21","Core Box
+To Boldly Go",Market,Person,Talok,"Romulan
+Vulcan
+Attack
+Spy","Play - Action, Attack: Remove one of your Away Teams from a Location to scan 1 of Person. Your Opponent takes an Incident. If you have 2 or more Imperial in play, gain 2 Glory.
+---
+Passive - Increase your hand size by 1.",-,Influence
+"01-Person 01 24
+01-Person 02 22","Core Box
+To Boldly Go",Market,Person,Tevrin Krit,"Tellarite
+Business","Play - Action: Spend 2 Dilithium to scan 3 of Person. You may immediately beam the gained card to a deployed Ship you have in play to gain 1 Latinum.
+---
+Resupply - Gain 1 Latinum for each Cargo you have in play.",-,1.0
+01-Person 01 25,Core Box,Market,Person,Zephram Cochrane,"Engineer
+Human
+Pilot","Play - Action: Draw 3 cards.
+---
+Activation - Action: Put a Ship in your Staging Area (without triggering its play operation) and spend 3 Dilithium to take the top Encounter and log this card.",-,1.0
+01-Person 02 02,To Boldly Go,Market,Person,Ambassador Gral,"Ambassador
+Tellarite
+Attack","Play - Free: Find a card with Influence Skill / Focus.
+---
+Play - Free, Attack: Dismiss an opponent Vulcan / Andorian (of your choice) to gain 1 Glory. You may promote a Person with Tellarite from your hand or Staging Area to Duty Officer (can be this card).
+---
+Reaction - Attack: When you would return an Incident, give it to your opponent instead.",-,1.0
+01-Person 02 03,To Boldly Go,Market,Person,Ash Tyler,"Starfleet
+Klingon
+Attack
+Human
+Spy","Play - Free, Requires Starfleet ≥ Klingon in play: Find a card with Military Skill / Focus.
+---
+Play - Free, Attack, Requires Klingon ≥ Starfleet in play: Dismiss an opponent Duty Officer to gain 2 Glory. You may promote this card to Duty Officer.
+---
+Passive - If you have 8+ Glory, increase your hand size by 2.",-,1.0
+01-Person 02 04,To Boldly Go,Market,Person,Commander Tysess,"Starfleet
+Andorian","Play - Free: Find a Person, excluding from your Reserve deck, and promote them. You may spend an Action to duplicate a play operation of the promoted card. You may spend 1 Dilithium to beam this card to a deployed Ship.
+---
+Reaction - After sending an Away Team to a controlled Location, spend 1 Dilithium to trigger that card's control operation.",-,1.0
+01-Person 02 05,To Boldly Go,Market,Person,Degra,"Scientist
+Xindi","Play - Action: Take an Incident to scan for either an Anomaly or a Xindi. You may spend 1 Dilithium to draw 2 cards.
+---
+Activation - Requires 5 Research: Dismiss a Weapon and spend 4 Dilithium to take the top Encounter. Log this card.",-,1.0
+01-Person 02 07,To Boldly Go,Market,Person,Hoshi Sato,"Communication
+Starfleet
+Human
+NX-01","Play - Free: Find a card with Research Skill / Focus.
+---
+Play - Action, Requires 5 Research: Discard a card with Research Skill / Focus to scan for Any Species of your choice. (Name the species before scanning.)
+---
+Activation - Action: Draw a card for each Alien you have in play (max 3 cards). You may find a card in your Reserve deck and put the found card in your Staging Area (without triggering its play operation).",-,1.0
+01-Person 02 08,To Boldly Go,Market,Person,Jackabog,"Pakled
+Shady","Play - Action: Spend 1 Dilithium and 1 Latinum to gain a Ship from the Junk. You may beam the gained card to a Ship.
+---
+Play - Action, Requires 5 Military: Dismiss a Ship with 2+ Ship beamed to it to take the top Encounter. Log this Card.
+---
+Resupply - Gain 1 Military. If Jackabog is wearing a Helmet, draw 2 cards.
+---
+Activation: Spend 1 Dilithium to beam a Helmet here.",-,1.0
+01-Person 02 09,To Boldly Go,Market,Person,Landru,"Synthetic
+Android","THIS CARD CANNOT BE PLAYED.
+---
+Activation - Beam a Person here.
+---
+Activation - Action, Requires 2 Influence: Log 2 Person beamed here to draw the top Location and take control of it. Junk a card from the Market and recall this card.",-,1.0
+01-Person 02 11,To Boldly Go,Market,Person,Malcom Reed,"Starfleet
+Security
+Human
+NX-01
+Ops","Play - Free: Gain 1 Military. Discard a card from your hand or the the top of your deck. For each different one of Augment / Xindi / Romulan you have in your Discard pile, gain 1 Military.
+---
+Resupply - If you have an Engineer in play, gain 2 Dilithium.
+---
+Reaction - After your opponent deploys a Ship, either find a Weapon OR send an Away Team to a Location where you have an Away Team.",-,1.0
+01-Person 02 12,To Boldly Go,Market,Person,Malik,"Augment
+Attack
+Weapon
+Human","Play - free, Attack: Discard a Weapon to steal 1 Glory.
+---
+Play - Action - Log a Human / Klingon from your hand or Discard pile to enlist a Development and log this card.
+---
+Passive - This card has 1 Military skill for each Augment you have in play (including this, max 3).
+---
+Reaction - After putting an Attack into play (including this), discard a card to gain an Action.","???
+???
+???",1.0
+01-Person 02 13,To Boldly Go,Market,Person,Petra Aberdeen,"Scientist
+Human","Play - Action: Put a card on the top of your deck to gain a card of the same suit from the Junk. Log the gained card and gain 1 Glory. If the gained card has Ancient, draw 2 cards.
+---
+Activation - Gain 1 Latinum. You may discard a Starfleet to gain 1 Latinum.
+---
+Reaction - After putting a Cargo / Alien / Ancient into play, spend 1 Latinum to gain 2 Research.",Research,1.0
+01-Person 02 15,To Boldly Go,Market,Person,President Rillak,"Ambassador
+Cardassian
+Bajoran
+Human","Play - Action: Return any number of beamed Incident. If you returned at least 2 Incident this way, gain 2 Glory.
+---
+Reaction - After playing Utilise or Inspire, gain an Action.
+---
+Passive - You may additionally have another Person with Ambassador on duty.",-,1.0
+01-Person 02 18,To Boldly Go,Market,Person,Sarina Douglas,"Augment
+Human","Play - Free: Discard a Doctor / Augment to either: free play a card with Research Skill / Focus OR look at the top card of a Market Deck.
+---
+Resupply - Discard an Incident OR take an Incident OR dismiss this card.
+---
+Activation - Free play an Incident from your Discard Pile.","Wild
+Wild",1.0
+01-Person 02 19,To Boldly Go,Market,Person,Soji Asha,"Synthetic
+Android","Play - Action: Spend 2 Dilithium to scan for a Borg.
+---
+Play - Free: Log a card from your Discard pile to gain 1 Dilithium.
+---
+Reaction - After putting a Synthetic into play (including this card), log a card from your hand to draw a card for every 5 cards in your Log (rounded down).",-,Research
+01-Person 02 23,To Boldly Go,Market,Person,Thelev,"Andorian
+Orion
+Spy","Play - Free: For each Ambassador you have in play, gain 1 Latinum. For each Ambassador your opponent has in play, draw a card. If you have 6+ Treachery, you may refresh a Duty Officer.
+---
+Passive - Requires 6 Influence: Increase your hand size by 2",-,Military
+01-Person 02 24,To Boldly Go,Market,Person,Travis Mayweather,"Starfleet
+Human
+Pilot
+NX-01","Play - Free: Select a Ship and warp it. You may Spend 2 Dilithium to send an Away Team to its Location. You may exhaust your Captain to send an Away Team to the same location.
+---
+Reaction - After deploying a Ship, take an Incident to gain an Action, and you may warp the deployed Ship.",-,1.0
+01-Person 02 25,To Boldly Go,Market,Person,Va'al Trask,"Starfleet
+Andorian
+Weapon
+Ops","Play - Action: You may discard a Starfleet to scan for a Weapon. You may Log a Person from your hand or Discard pile. If you do both, gain 1 Glory, and you may promote this card to Duty Officer.
+---
+Resupply - For each Away Team you or your opponent have on a neutral Location, either: discard the top card of your Draw deck OR spend 1 Dilithium to draw a card from your Discard pile.","Military
+Military",1.0
+01-Person 02 26,To Boldly Go,Market,Person,Vice Admiral Pasalk,"Starfleet
+Attack
+Vulcan","Play - Free, Attack: Refresh a Starfleet and force your opponent to discard a card. If your opponent has an Augment in play, repeat this and gain 1 Glory.
+---
+Resupply - You may discard a card to draw a card. Repeat this for each Ongoing you have in play.
+---
+Special - While this card is in play (excluding Beamed), your opponent cannot use Reaction operations on your turn.",-,1.0
+01-Person 03 01,Second Contact,Market,Person,Ambassador Spock,"Ambassador
+Crossover
+Telepath
+Vulcan
+Human","Play - Action: Log a card from your hand to gain 3 Dilithium. You may log a beamed card to scan for Research Focus.
+---
+Reaction - Requires 5 Research: After putting an Encounter into play, gain 1 Research / Influence / Military.
+---
+Passive - You may additonally have another Person with Vulcan / Romulan / Ambassador on duty.
+---
+Special - If not logged, this card scores -2.",-,?
+01-Person 03 02,Second Contact,Market,Person,Barry Waddle,"Crossover
+Business
+Klingon
+Attack
+Human","Play - Action, Attack: Steal 2 Dilithium. You may spend 2 Latinum to scan for Influence Focus.
+---
+Passive - Increase your hand size by 1.
+---
+Reaction - Requires 5 Influence: After spending Latinum, refresh another card that shares a train with this card.
+---
+Special - If not logged, this card scores -2.",-,?
+01-Person 03 03,Second Contact,Market,Person,Chancellor Gowron,"Crossover
+Imperial
+Klingon","Play - Action: Find a Klingon or a Ship. If the found card is a Ship with Klingon, gain 1 Glory. You may spend 3 Dilithium to scan for Military.
+---
+Reaction - Requires 5 Military: After taking control of a Location, choose 2 of the following: draw a card OR junk a card from the Market OR discard a card to gain 1 Glory.
+---
+Special - If not logged, this card scores -2.","Military
+Influence",?
+01-Person 03 04,Second Contact,Market,Person,Chef Riker,"Starfleet
+Crossover
+Human","Play - Action: Draw a card from your Discard pile for each different on of Beverage / Engineer / NX-01 you have in play. You may duplicate a play operation of a Person / Directive from your Log. You may promote this card to Duty Officer.
+---
+Activation - Free play a Ship with Starfleet.
+---
+Activation - Draw a Ship / Hologram / NX-01 from your Discard pile.
+---
+Special - If not logged, this card scores -2.",-,?
+01-Person 03 05,Second Contact,Market,Person,Ensign Boimler,"Lower Decker
+Starfleet
+Crossover
+Human","Play - Free: Discard 3 cards to gain an Action.
+---
+Support - After you junk or promote a Person duplicate a play operation of that card.
+---
+THIS CARD CANNOT BE PROMOTED.
+---
+Special - If not logged, this card scores -2.",-,?
+01-Person 03 06,Second Contact,Market,Person,Ensign Mariner,"Lower Decker
+Starfleet
+Crossover
+Human","Play - Free: Gain 1 Latinum. Up to twice: take an Incident to your Discard pile to find any card, except in your Reserve deck.
+---
+Support - After you exhaust a Duty Officer, refresh it and you may send an Away Team to a Location where you have a Ship.
+---
+THIS CARD CANNOT BE PROMOTED.
+---
+Special - If not logged, this card scores -2.",-,?
+01-Person 03 07,Second Contact,Market,Person,Lieutenant Dax,"Scientist
+Starfleet
+Crossover
+Trill","Play - Action: Gain 1 Research / Influence / Military. You may spend 1 Latinum to gain 1 Research / Influence / Military. If you have a Vulcan on duty, gain 1 Research / Influence / Military. You may promote this card to Duty Officer.
+---
+Reaction - When you would gain a card, scan 2 of the same suit instead, then draw a card.
+---
+Special - If not logged, this card scores -2.",Research,?
+01-Person 03 08,Second Contact,Market,Person,The Living Witness,"Starfleet
+Crossover
+Hologram
+Doctor","Play - Free: Draw a card. You may free play an Incident. If you have an Ancient in play, log this card and you may (additionally) find and return an Incident.
+---
+Endgame - Score 4.",-,Endgame
+01-Person 03 09,Second Contact,Market,Person,D'Erika Tendi,"Attack
+Orion
+Shady","Play - Action, Attack: Discard a card to choose 2 of the following: steal 1 Latinum OR gain a Ship from the Junk OR gain 1 Influence OR gain 1 Military. IF you have another Orion in play, you may exhaust a Ship to do up to all 4 instead.
+---
+Activation - Attack: Spend 2 Latinum to send an Away Team to a neutral Location. You may remove an opponent Away Team from the same Location to gain 1 Glory.",-,1.0
+01-Person 03 10,Second Contact,Market,Person,Jennifer Sh'reyan,"Lower Decker
+Starfleet
+Andorian
+Pilot","Play - Free: Beam this card to a deployed Ship to gain 2 Dilithium. You may recall another card beamed to that Ship. You may warp that Ship.
+---
+Support - After gaining a Person, draw a card and you my send an Away Team to a controlled Location.
+---
+Activation - Warp a Ship to draw 2 cards and discard one of them.",-,1.0
+01-Person 03 11,Second Contact,Market,Person,K'ranch,"Weapon
+Alien","Play - Action: Gain 1 Military. Draw a card. You may log the drawn card to gain 2 Glory. If you do, you may promote this card to Duty Officer.
+---
+Reaction - After gaining a card, log the gained card to gain 1 Dilithium and draw a card.",Military,1.0
+01-Person 03 12,Second Contact,Market,Person,Ma'ah,"Lower Decker
+Klingon","Play - Action: Dismiss a Duty Officer to gain 1 Influence, 1 Military, and 1 Glory.
+---
+Support - After putting a Klingon into play, gain a Ship. Then, either spend an Action and discard an Incident OR take an Incident.
+---
+Activation - Log a Klingon / Shady / Lower Decker from your hand or Discard pile to gain 1 Influence and draw 2 cards.",-,1.0
+01-Person 03 13,Second Contact,Market,Person,Parmen,"Telepath
+Augment
+Ancient
+Attack","Play - Free, Attack: Find any card in your Draw deck. Exhaust an opponent Duty Officer and their Captain.
+---
+Play - Free: Discard a card to gain 1 Latinum and 1 Influence.
+---
+Reaction - Requires 6 Influence: After gaining a Person, except during your Resupply Step, discard a card to free play the gained card.",-,1.0
+02-Cargo 01 01,Core Box,Market,Cargo,Biobed,Doctor,Play - Free: Junk a card from the Market. Free play an Incident OR find a Doctor.,Research,Research
+"02-Cargo 01 02
+02-Cargo 02 02","Core Box
+To Boldly Go",Market,Cargo,Borg Spatial Trajector,"Scientist
+Borg","Play - Action, Requires 4 Research: Select up to 3 Person from your hand or Discard pile. For each either: beam it to a Ship OR put it on the top of your deck to send an Away Team to a Location.
+---
+Play - Free, Requires 6 Borg Collective: Regenerate 1 Borg Drone and you may send a Borg Drone to any Location (controlled, neutral, or opponent).",-,2.0
+"02-Cargo 01 03
+02-Cargo 02 03","Core Box
+To Boldly Go",Market,Cargo,Cloaking Device,"Ongoing
+Cloak","Play - Action: Refresh up to 3 of your Ship. Draw 2 cards. Junk a card from the Market. Deploy this card.
+---
+Reaction - After deploying a Ship without Cloak, that Ship gains Cloak for the remainder of your turn, and you may discard a card to send an Away Team to a Location, ignoring any opponent Ship.",-,Military
+02-Cargo 01 04,Core Box,Market,Cargo,Ferengi Wine,"Beverage
+Ferengi","Play - Free, Requires 5 Influence: Gain 1 Latinum for each Ferengi and each Business you have in play (max 5). If you gained at least 3 Latinum this way, gain 1 Glory.
+---
+Play - Action: Spend 2 Latinum to scan 1 of Ally, including from the Junk. Junk a card from the Market.",-,2.0
+"02-Cargo 01 05
+02-Cargo 02 06","Core Box
+To Boldly Go",Market,Cargo,Forced Singularity,"Romulan
+Anomaly
+Ongoing","Play - Action: You may discard a card to find an Engineer/Ops. Junk a card from the Market. Spend 2 Dilithium to deploy this card.
+---
+Passive - Requires 3 Military: You may have an additional Person on duty.
+---
+Activation - Discard an Engineer to draw 2 cards and put one of them on the top of you deck.",-,Research
+"02-Cargo 01 06
+02-Cargo 02 07","Core Box
+To Boldly Go",Market,Cargo,Holosuite,"Hologram
+Business","Play - Action: Gain 2 Latinum. You may refresh your Duty Officer. Junk a card from the Market.
+---
+Play - Action: Spend 1/2/3 Latinum to scan 1/2/3 of either Person, Cargo, or Ally. If you paid 2 or more, draw a card.",-,2.0
+"02-Cargo 01 07
+02-Cargo 02 08","Core Box
+To Boldly Go",Market,Cargo,Horta,"Creature
+Ongoing
+Alien","Play - Action: Junk a card from the Market. You may log an Attack to enlist a Development. Deploy this card.
+---
+Reaction - Requires 4 Research: After gaining Dilithium, gain 2 additional Dilithium.",-,2.0
+"02-Cargo 01 08
+02-Cargo 02 11","Core Box
+To Boldly Go",Market,Cargo,Lirpa,"Vulcan
+Weapon
+Attack","Play - Free, Attack: Force your opponent to dismiss (one of) their Duty Officer(s). If they do, they may draw a card. You may put a card on the top of your deck to gain 1 Glory. Draw a card for each Vulcan you have in play (excluding this card, max 5).",-,2.0
+02-Cargo 01 09,Core Box,Market,Cargo,Mek'Leth,"Klingon
+Weapon
+Attack","Play - Free, Attack: Discard a card to gain 1 Military. Force your opponent to reveal their hand. You may discard an Attack from their hand to gain 1 Glory.",-,2.0
+"02-Cargo 01 10
+02-Cargo 02 13","Core Box
+To Boldly Go",Market,Cargo,Orb of Time,"Transcendent Time Travel
+Bajoran",Play - Free: You may take an Incident to duplicate a play operation of a Person/Cargo/Ally from your Log. You may recall another non-Time Travel card from your Staging Area.,-,Influence
+"02-Cargo 01 11
+02-Cargo 02 14","Core Box
+To Boldly Go",Market,Cargo,Phasers,"Starfleet
+Security
+Ongoing
+Weapon","Play - Free: Draw 2 cards. Junk a card from the Market. Deploy this Card.
+---
+Play - Free, Requires 4 Military: Spend 1 Dilithium to gain an Action. Junk a card from the Market. Deploy this card.
+---
+Reaction - When you would be forced by an attack to remove an Away Team, dismiss this card to ignore that effect.",-,2.0
+"02-Cargo 01 12
+02-Cargo 02 15","Core Box
+To Boldly Go",Market,Cargo,Plasma Manifold,Engineer,Play - Free: Spend 3 Dilithium to gain an Action.,-,Military
+02-Cargo 01 13,Core Box,Market,Cargo,Tachyon Detection Grid,"Communication
+Attack","Play - Free, Attack: You may dismiss a deployed Ship to gain 2 Research. Force your opponent to log a Cloak from play. If they do, you gain 1 Glory. If you have a Security in play, gain 1 Military.",-,Influence
+02-Cargo 01 14,Core Box,Market,Cargo,Tribbles,"Creature
+Attack","Play - Action, Attack: Gain 1 Influence. Gain 1 Latinum. Junk a card from the Market. Your opponent takes an Incident. Dismiss all of their Klingon Duty Officers. If an were dismissed, force them to discard a card.",-,2.0
+"02-Cargo 01 15
+02-Cargo 02 17","Core Box
+To Boldly Go",Market,Cargo,Type III Disruptor Pistols,"Weapon
+Attack","Play - Action, Attack. Gain 1 Military. Junk a card from the Market. You may discard a Klingon/Romulan/Breen to remove up to 2 opponent Away Team from the same Location. Gain 1 Glory for Each Away Team removed.",-,2.0
+02-Cargo 01 16,Core Box,Market,Cargo,Unstable Wormhole,Anomaly,"Play - Free: Look at the top 2 Locations or the top 2 Encounter, and put them on top and/or bottom of their deck in any order. Draw a card.
+---
+Play - Action, Requires 6 Influence. Spend 3 Dilithium to draw the top Location and take control of it. Junk a card from the Market. Destry this card.",-,2.0
+02-Cargo 02 01,To Boldly Go,Market,Cargo,Augmentation Plague,"Klingon
+Augment
+Ongoing","Play - Action: Spend 3 Dilithium and 1 Latinum to deploy this card. Gain 2 Military. If your Captain is Klingon take an Incident to draw 3 cards.
+---
+Reaction - Attack: After your opponent puts a Klingon into play force them to discard a card.
+---
+Reaction - After putting a Klingon into play, gain 1 Glory.",-,Research
+02-Cargo 02 04,To Boldly Go,Market,Cargo,Computer Virus,"Communication
+Engineer
+Ongoing
+Attack","Play - Free, Attack: Force your opponent to dismiss a card beamed to a Ship. If they cannot, they take an Incident. Deploy this card.
+---
+Reaction - Requires 4 Military: After your opponent warps a Ship, recall this card.
+---
+Passive - After your opponent puts a Security / Engineer into play, gain 1 Glory and log this card.",Military,2.0
+02-Cargo 02 05,To Boldly Go,Market,Cargo,EVA Suits,"Starfleet
+Ongoing
+Helmet","Play - Action: Deploy this card. You may beam a Person from your hand or Discard pile here.
+---
+Activation - Beam a Person from your hand or Discard pile here.
+---
+Reaction - After warping a Ship, send an Away Team to the Location you warped to for each Person beamed here. Dismiss this card.",-,2.0
+02-Cargo 02 09,To Boldly Go,Market,Cargo,Jago's Epigenetic Implant,"Business
+Augment
+Ongoing
+Doctor","Play - Action: Discard a card to deploy this card. If the discarded card is Doctor or Business, gain 2 Latinum and you may free play an Incident.
+---
+Resupply - For each Augment you have in play: draw a card, then discard a card. If you have no Person on duty, dismiss this card.",-,2.0
+02-Cargo 02 10,To Boldly Go,Market,Cargo,Kemocite,"Time Travel
+Xindi
+Shady","Play - Free: find and free play a Weapon. If the card was found in your Reserve deck, take an Incident.
+---
+Play - Free: Dismiss a Ship to recall a non-Time Travel card from your Staging Area and draw 2 cards.
+---
+Play - Action: Spend 1 Dilithium to scan for a Weapon.",-,2.0
+02-Cargo 02 12,To Boldly Go,Market,Cargo,Medical Diagnostic Hat,"Doctor
+Helmet",Play - Action: Draw one card for each Doctor / Alien you have in play (max 5 cards). You may draw a Person from your Discard pile. You may free play an Incident from your hand or Discard pile.,-,2.0
+02-Cargo 02 16,To Boldly Go,Market,Cargo,Saurian Brandy,"Beverage
+Alien","Play - Free, Requires 5 Influence: Gain 1 Latinum for each Starfleet you have in play (max 3). Refresh your Captain and (one of) your Duty Officers(s).
+---
+Play - Action: Spend 2 Latinum to scan 2 of Person, including from the Junk Junk a card from the Market.",-,2.0
+02-Cargo 02 18,To Boldly Go,Market,Cargo,Universal Translator,Communication,"Play - Action: Discard a Starfleet to scan for an Alien.
+---
+Play - Action: If you have 3 non-Encounter cards with Alien in play, take the top Encounter card and discard it. Dismiss every Ship with Alien and every beamed Alien. Log this card.",Research,2.0
+02-Cargo 03 01,Second Contact,Market,Cargo,Gift Box,"Betazoid
+Anomaly
+Ongoing","Play - Action: Deploy this card. You may discard a card to gain a Cargo.
+---
+Resupply - You may recall a card beamed here.
+---
+Activation - Beam a Cargo from your Discard pile here. You opponent may draw a card.
+---
+Reaction - After putting a Betazoid into play (including this card), gain 1 Latinum.",-,2.0
+02-Cargo 03 02,Second Contact,Market,Cargo,Moopsy,"Creature
+Ongoing
+Attack","Play - Action, Attack: Spend 1 Latinum to deploy this card. Force your opponent to log a Person from their hand, Discard pile, or in play.
+---
+Resupply - Refresh this card. You may log a Person from play. Refresh this card.
+---
+Reaction - After you or your opponent logs a Person, draw a card.",-,2.0
+02-Cargo 03 03,Second Contact,Market,Cargo,Protocol 12,"Starfleet
+Doctor
+Shady","Play - Action, Requires 5 Military: For each Doctor you have in play (excluding this card, max 3), send an Away Team to a Location. If you sent 3, gain 1 Glory.
+---
+Play - Free: Take an Incident and log a Person / Directive from your hand or in play to gain 1 Military.
+---
+Special - While this card is in your Staging Area, all of you Person with Doctor are additionally treated as Augment.",-,2.0
+02-Cargo 99 01,Promo 01,Market,Cargo,Sehlat,"Creature
+Vulcan
+Attack","Play - Free, Attack: Find a Vulcan. Force your opponent to discard a Person.
+---
+Play - Free: Free play a Person with Vulcan.
+---
+Play - Promote a Person with Vulcan from your hand or Staging Area to Duty Officer.",-,2.0
+02-Cargo 99 02,Promo 02,Market,Cargo,Frank Hollander,"Hologram
+Anomaly
+Android","Play - Free: Log a Cargo from your hand, Discard pile, or in play to gain 1 Glory. You may free play a Hologram / Incident.",-,2.0
+02-Cargo 99 03,Promo 02,Market,Cargo,Golden Statue of O'Brien,"Starfleet
+Ongoing","Play - Free: You my find an Engineer. Deploy this card.
+---
+Reaction - After logging an Engineer recalled a beamed card.
+---
+Endgame - Score 1 for each Engineer in your Log.",-,"Endgame
+2"
+03-Ship 01 01,Core Box,Market,Ship,Bird-of-Prey,"Imperial
+Romulan
+Attack
+Cloak","Play - Action: Deploy this ship. You may discard a card to send an Away Team to a Location, ignoring any opponent Ship. If the discarded card is Imperial, gain 1 Glory.
+---
+Activation - Action, Attack: Warp this ship. You may spend 1 Dilithium to force your opponent to recall a Ship.
+---
+Activation - Discard a card to beam a card here.",Influence,2.0
+"03-Ship 01 02
+03-Ship 02 01",Core Box,Market,Ship,Borg Probe,Borg,"Play - Free: Deploy and warp this ship. You may spend an Action and 1 Dilithium to gain a Person and log the gained card. If your Captain has Borg, assimilate it instead.
+---
+Activation - Warp this ship.
+---
+Activation - Beam a card here from your hand of Discard pile.",-,2.0
+"03-Ship 01 03
+03-Ship 02 03",Core Box,Market,Ship,D'kyr Cruiser,"Scientist
+Vulcan","Play - Action: Deploy and warp this ship. You may discard a card to gain 1 Research.
+---
+Play - Action, Requires 5 Military: Deploy and warp this ship. You may send an Away Team to this ship's Location.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.",-,2.0
+"03-Ship 01 04
+03-Ship 02 05",Core Box,Market,Ship,Holographic Drone Ship,"Hologram
+Romulan
+Weapon
+Aenar","Play - Free, Requires 7 Research: Draw a card. Duplicate a play operation of a non-Time Travel Ship from the Market of any player's Fleet Area.
+---
+Play - Discard a Telepath to deploy and warp this ship.
+---
+Activation - Warp this ship.
+---
+Activation - Dismiss this ship. Gain 2 Glory.",-,Influence
+03-Ship 01 05,Core Box,Market,Ship,K't'inga Battlecruiser,"Imperial
+Klingon","Play - Action: Deploy this ship. You may send an Away Team to a Location.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.",Military,Military
+"03-Ship 01 06
+03-Ship 02 06",Core Box,Market,Ship,Kazon Raider,"Attack
+Kazon
+Shady","Play - Action, Attack: Depoly this ship. Force your opponent to discard a card. You may discard a card to gain 1 Latinum.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Reaction - After gaining a card to the top of your deck, spend 1 Latinum to draw a card and refresh this card.",-,Influence
+"03-Ship 01 07
+03-Ship 02 08",Core Box,Market,Ship,Pakled Freighter,"Business
+Pakled","Play - Action: Deploy this ship. You may gain a Cargo from the Junk. If the gained card is a Weapon/Anomaly, gain 1 Military.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.",-,2.0
+03-Ship 01 08,Core Box,Market,Ship,Son'a Battlecruiser,"Dominion
+Attack
+Shady","Play - Action, Attack: Deploy this ship. Steal 1 Dilithium.
+---
+Play - Action, Attack, Requires 5 Military: Deploy this ship. Steal 2 Dilithium. Your Opponent discards a card.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.",-,2.0
+"03-Ship 01 09
+03-Ship 02 09",Core Box,Market,Ship,U.S.S. Enterprise-C,"Time Travel
+Ambassador
+Starfleet","Play - Action: Deploy this ship. Up to twice: beam a card here or warp this ship. Exhaust this ship.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Dismiss this ship and discard a card to gain 1 Glory, 1 Action, and recall a non-Time Travel card from your Staging Area.",-,Research
+"03-Ship 01 10
+03-Ship 02 10",Core Box,Market,Ship,U.S.S. Pasteur,"Communication
+Starfleet
+Doctor","Play - Action: Deploy this ship. You may free play a Communication/Doctor.
+---
+Play - Action: Spend 2 Dilithium to scan for either Communication, Doctor, Engineer, or Scientist.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.",-,Research
+03-Ship 01 11,Core Box,Market,Ship,U.S.S. Reliant,Starfleet,"Play - Action: Deploy and warp this ship.
+---
+Play - Free, Requires 5 Influence: If your opponent has at most 1 ship deployed, deploy this ship then choose 2 of the following: send an Away Team to a Location OR draw a card OR discard an Augment to gain 2 Glory.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.",-,2.0
+03-Ship 01 12,Core Box,Market,Ship,Voth Research Vessel,"Anomaly
+Alien","Play - Action: Discard a card to deploy and warp this ship.
+---
+Activation - Warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Action: Dismiss a Person with Human that is beamed here to take the top Encounter card. Log this card.",Research,2.0
+"03-Ship 01 13
+03-Ship 02 13",Core Box,Market,Ship,Xindi-Reptillian Battleship,Xindi,"Play - Action: Deploy this Ship. You may gain a Cargo. If the gained card is a Weapon, beam it here and gain 1 Glory.
+---
+Play - Action: Deploy this ship. Gain 1 Glory per Time Travel you have in play (max 3).
+---
+Resupply - Draw a card for every 2 Anomaly you have in play (max 4 cards).
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.",-,Military
+03-Ship 02 02,To Boldly Go,Market,Ship,D'Kora Marauder,"Business
+Ferengi
+Attack","Play - Action: Deploy this ship. Steal 1 Latinum.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Spend 1 Latinum to send an Away Team to this ship's Location.",Military,2.0
+03-Ship 02 04,To Boldly Go,Market,Ship,D'Var,"Scientist
+Orion","Play - Free: Deploy this ship.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Requires 4 Influence: Spend 1 Latinum to gain 1 Research for each Research Focus you have in play (excluding beamed cards). If you gained 3 or more, dismiss this card.",-,2.0
+03-Ship 02 07,To Boldly Go,Market,Ship,Medusan Vessel,"Communication
+Alien","Play - Action: Deploy this ship. You may discard a card to scan for a Telepath.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.",Research,2.0
+03-Ship 02 11,To Boldly Go,Market,Ship,Vor'cha Attack Cruiser,"Klingon
+Cloak","Play - Action: Deploy this ship. Warp this ship. You may discard a card to send an Away Team to this ship's Location, ignoring any opponent Ship.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Action: Send an Away Team to this ship's Location.",-,2.0
+03-Ship 02 12,To Boldly Go,Market,Ship,Xindi-Aquatic Cruiser,Xindi,"Play - Action: Deploy this ship. You may discard a card to beam a card here.
+---
+Activation - Spend 2 Dilithium to warp this ship. You may free play a card beamed here.
+---
+Activation - Discard a card to beam a card here.","Influence
+Influence",2.0
+03-Ship 03 01,Second Contact,Market,Ship,Fesarius,Ambassador,"Play - Free: Deploy and warp this ship.
+---
+Activation - Warp this ship.
+---
+Activation - Spend 1 Dilithium to beam a card here.
+---
+Activation - Log a Person with Starfleet that is beamed here, discard a Directive, and exhaust another Ship to take the top Encounter to your Discard pile. Log this card.",-,2.0
+03-Ship 03 02,Second Contact,Market,Ship,R.I.S. Talvath,"Scientist
+Romulan","Play - Action: Deploy this ship. You may warp this ship.
+---
+Reaction - After you or tour opponent puts an Anomaly / Communication / Time Travel into play, place 1 Dilithium on this card and you may warp this ship.
+---
+Passive - When this ship is dismissed during your Control Step, gain 1 Glory and gain all resources from this card.",Research,2.0
+03-Ship 99 01,Promo 01,Market,Ship,U.S.S. Enterprise-B,Starfleet,"Play - Action: Discard a card to deploy this ship and gain 1 Glory. If it is a Tuesday, you may send an Away Team to a Location.
+---
+Activation - Spent 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Log a Person from your hand or you Staging Area to draw a card and gain an Action.",-,2.0
+03-Ship 99 92,Promo 02,Market,Ship,U.S.S. Cabot,"Starfleet
+Scientist","Play - Action: Deploy this ship. You may take an Incident to scan for Creature.
+---
+Resupply - Draw a card for each Creature in play. If you drew 3 or more, gain 1 Glory and log this card.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Passive - After exhausting this card either: free play Tribbles OR draw Tribbles from your Discard pile.",Research,2.0
+"04-Ally 01 01
+04-Ally 02 01",Core Box,Market,Ally,Arin'sen,Klingon,"Play - Free, Requires 3 Military: For each Klingon you have in play (max 5 times): Gain 2 Dilithium OR gain 1 Latinum OR discard a card to gain 1 Glory. Log this card.",-,3.0
+"04-Ally 01 02
+04-Ally 02 02",Core Box,Market,Ally,Bolians,-,Play - Action: Gain 1 Influence. Draw a card. You may free play the drawn card.,-,3.0
+"04-Ally 01 03
+04-Ally 02 03",Core Box,Market,Ally,Bynars,"Engineer
+Alien","Play - Action: Gain a Cargo. Log this card.
+---
+Play - Action, Requires 3 Research: Scan 3 of Cargo. Log this card.",-,3.0
+"04-Ally 01 04
+04-Ally 02 04",Core Box,Market,Ally,Denobulans,-,"Play - Action: Gain a Person. Log this card.
+---
+Play - Action, Requires 3 Influence: Scan 3 of Person. Log this card.",-,3.0
+04-Ally 01 05,Core Box,Market,Ally,Edosians,Alien,"Play - Free: Draw 2 cards and discard one of them.
+---
+Play - Action, Requires 5 Influence. Put 3 cards on the top of your deck to look at the top two Encounter. Take of of them and return the other to the bottom of its deck. Log this card.",-,3.0
+04-Ally 01 06,Core Box,Market,Ally,Emerald Chain,"Andorian
+Attack
+Orion
+Shady","Play - Action, Attack: Gain 1 Military. Steal 1 Dilithium. You may free play a Business.",-,3.0
+04-Ally 01 07,Core Box,Market,Ally,Halkan Council,-,"Play - Free: Gain 3 Dilithium.
+---
+Clean-Up - If you have an Attack in play, log this card.",-,3.0
+04-Ally 01 08,Core Box,Market,Ally,Karemma,"Business
+Dominion","Play - Free: Gain 1 Latinum.
+---
+Play - Free, Requires 3 Military: Spend 2 Latinum to gain an Action.",-,3.0
+"04-Ally 01 09
+04-Ally 02 06",Core Box,Market,Ally,Kelpiens,Kelpien,Play - Action: Return up to 2 Incident from you hand or Discaard pile. Log this card.,-,Research
+"04-Ally 01 10
+04-Ally 02 07",Core Box,Market,Ally,Letheans,"Telepath
+Attack
+Shady","Play - Action, Attack: Dismiss (one of) your opponent's Duty Officers(s). You may scan for a Shady. You may draw a Cargo from your Discard pile. Log this card.",-,Military
+"04-Ally 01 11
+04-Ally 02 08",Core Box,Market,Ally,Organians,"Transcendent
+Anomaly","Play - Action, Requires 4 Research: Enlist a reserve.
+---
+Play - Action, Requires 6 Research: Enlist a Development and log this card.",-,3.0
+"04-Ally 01 12
+04-Ally 02 12",Core Box,Market,Ally,Suliban,"Time Travel
+Alien",Play - Action: You may discard a card to recall another non-Time Travel card from your Staging Area. You may duplicate a play Operation of an Ally from the Market.,-,Influence
+04-Ally 01 13,Core Box,Market,Ally,Tholians,Alien,Play - Action: You may draw a card. Gain 1 Latinum and 2 Dilithium for each controlled Location you have in play. Log this card.,-,3.0
+04-Ally 02 05,To Boldly Go,Market,Ally,Kaelon II Science Ministry,"Scientist
+Ongoing","Play - Action: Deploy this card. Place 3 Dilithium on this card and exhaust this card.
+---
+Clean-Up - If this card is exhausted, gain 1 Research. Otherwise, move 1 Dilithium from this card to a card in the Market. If there is no resources here, log this card.
+---
+Reaction - After logging a Person / Directive, you may gain 1 Dilithium from here and you may draw a card from your Discard pile.",-,3.0
+04-Ally 02 09,To Boldly Go,Market,Ally,Orion Syndicate,"Attack
+Orion
+Shady","Play - Free, Attack: If you have 3+ Ship deployed, gain 2 Latinum. If your opponent has 3+ Ship deployed, steam 2 Dilithium. If you have 8+ Treachery, find a Shady.
+---
+Play - Free: Discard a Shady to gain an Action. If you have another Orion in play, draw two cards. Log this card.",-,Influence
+04-Ally 02 10,To Boldly Go,Market,Ally,Red Squadron,"Starfleet
+Attack
+Pilot","Play - Free: Draw 2 cards and discard one of the drawn cards. You may beam a card from your Staging Area to a Ship. You may Warp a Ship.
+---
+Play - Free, Attack, Requires 3 Influence: Find a Starfleet / Dominion. Draw 2 cards. Force your opponent to dismiss a deployed Ship. Log this card.",-,3.0
+04-Ally 02 11,To Boldly Go,Market,Ally,Salt Vampires,"Creature
+Telepath","Play - Draw 2 cards.
+---
+Clean-Up - Log a card from your Staging Area (can be this card).",-,3.0
+04-Ally 02 13,To Boldly Go,Market,Ally,Tellarites,"Tellarite
+Attack","Play - Action, Attack: Give your opponent an Incident from your hand. If you have another Tellarite in play, gain an Action.",Influence,3.0
+04-Ally 02 14,To Boldly Go,Market,Ally,Unimatrix Zero,"Communication
+Borg","Play - Free: For each Borg you have in play (excluding this card), spend 1 Dilithium. Draw 2 cards, and 1 more for each XB you have in play (max 6 cards total). If you have no other Borg in play, log this card.",-,Research
+04-Ally 02 15,To Boldly Go,Market,Ally,Vadic's Splinter Group,"Changeling
+Augment","Play - Free: You may duplicate a play operation of a Person or Cargo you or your opponent has in play (excluding beamed cards). Then either: put a Person into your Staging Area (without triggering their play operation) OR take Incident.
+---
+Special - While this card is in your Staging Area and you have a Borg in play, this card is additionally treated as Wildcard.",-,Military
+04-Ally 02 16,To Boldly Go,Market,Ally,Vidiians,"Doctor
+Shady","Play - Action: Find and free play an Incident. Find a Person, except in your Reserve deck. Then, either: log the found person to gain 1 Glory OR free play the found Person and log this card.",Research,3.0
+04-Ally 03 01,Second Contact,Market,Ally,Betazed Intelligence,"Betazoid
+Telepath
+Spy","Play - Free: Find a Beverage / Ambassador / Telepath, except from your Reserve deck.
+---
+Clean-Up - Temporarily increase your hand size by 1 for each different on of Starfleet / Beverage / Ambassador you have in play. If this increased your hand size by 2 or 3, log this card.",-,3.0
+04-Ally 03 02,Second Contact,Market,Ally,Illyrians,Augment,"Play - Free: Promote a Person from your hand or the Staging Area to Duty Officer.
+---
+Play - Action: Discard a Starfleet to scan 2 of Person. Promote the gained card to Duty Officer.
+---
+Clean-Up - Gain 1 Research for each Duty Officer you have in play. If you ahve no other Augment in play, log this card.
+---
+Special - While this card is in your Staging Area, you may have up to two additional Person on duty.",-,3.0
+04-Ally 03 03,Second Contact,Market,Ally,Nova Fleet,Lower Decker,"Play - Action: Gain an Ally / Cargo from the Junk. Log this card.
+---
+Support - When you would junk a card from the Market, gain it to your hand instead. If your opponent has a Lower Decker in play, take an Incident.",-,3.0
+04-Ally 99 01,Promo 02,Market,Ally,Drones of Cube 90182,"Lower Decker
+Borg","Play - Free: Beam this card to a ship. Either: refresh that Ship OR draw a card OR spend 1 Dilithium to do both.
+---
+Support - After putting a Borg into play, spending 1 Dilithium to draw a card and gain 2 Research.
+---
+Support - Requires 5 Collective: After assimilating a card, gain 1 Collective and draw 2 cards.",-,3.0
+05-Encounter 01 01,Core Box,Market,Encounter,Ancient Gene Fragments,"Augment
+Anomaly","Play - Action: Draw a card for each controlled Location with 1+ Away Teams you have. If you have a Scientist in play, gain an Action.
+---
+Play - Action: Scan 2 of either Person, Cargo, Ship, or Ally. If you have a Scientist in play, draw a card.",-,Military
+05-Encounter 01 02,Core Box,Market,Encounter,Boltzmann Brain,"Telepath
+Communication",Play - Free: Draw a card. You may return 1 Incident.,-,6.0
+"05-Encounter 01 03
+05-Encounter 02 03","Core Box
+To Boldly Go",Market,Encounter,Guardian of Forever,"Transcendent
+Time Travel
+Ongoing
+Anomaly","Play - FreeL Gain 1 Influence and 1 Research. Deploy this card.
+---
+Passive - Increase your hand size by 1. Whenever scanning, include cards in the Junk too.
+---
+Activation - Recall a non-Time Travel card from you Staging Area. You may take an Incident to gain an Action. Log this card.",-,3.0
+05-Encounter 01 04,Core Box,Market,Encounter,Iconian Gateway,"Imperial
+Alien","Play - Action: Send up to 3 Away Teams to the same Location, ignoring any opponent Ship. For each Imperial you have in play (excluding this card) gain 1 Military.",-,Influence
+"05-Encounter 01 05
+05-Encounter 02 04","Core Box
+To Boldly Go",Market,Encounter,Koala,Wildcard,THIS CARD CANNOT BE PLAYED.,-,9.0
+05-Encounter 01 06,Core Box,Market,Encounter,Omega Particle,Scientist,"Play - Free: Gain 3 Dilithium and 3 Latinum. For each Borg you have in play gain 1 Glory. If you gained 5+ Glory this way, destroy this card.",-,Research
+05-Encounter 01 07,Core Box,Market,Encounter,Sha Ka Ree,"Transcendent
+Ongoing
+Attack
+Vulcan","Play - Action, Attack: Deploy this card. You may beam a Ship here. If you do, your opponent takes 2 Incident.
+---
+Special - This card is considered a Location for all purposes. Deploying this card counts as taking control of a Location.",-,7.0
+"05-Encounter 01 08
+05-Encounter 02 08","Core Box
+To Boldly Go",Market,Encounter,V'Ger,Synthetic,Play - Free: Log up to 2 cards from your hand or Discard pile.,-,9.0
+05-Encounter 02 01,To Boldly Go,Market,Encounter,Delphic Expanse Sphere,"Anomaly
+Alien","Play - Action: Scan 1 of either Person, Cargo, Ship, Ally, or Mission. Gain 2 Dilithium.
+---
+Play - Free: You may send an Away Team to a controlled Location. Gain 1 Dilithium / Latinum for each Xindi you have in play.
+---
+Special - While this card is in your Staging Area and you have an Anomaly in your Fleet Area, this card is additionally treated as Wildcard.",Military,4.0
+05-Encounter 02 02,To Boldly Go,Market,Encounter,Gomtuu,"Telepath
+Ongoing
+Ancient
+Attack
+Alien","Play - Free: Deploy this card. You may spend an Action to gain 1 Military for each Research Skill you have in play (excluding beamed cards).
+---
+Activation - Warp this ship.
+---
+Activation - Attack: You may beam a card here. You may warp an opponent Ship from this ship's Location to another neutral Location.
+---
+Special - The card is considered a Ship for all purposes.",Research,2.0
+05-Encounter 02 05,To Boldly Go,Market,Encounter,New Federation Applicants,"Ambassador
+Starfleet","Play - Free: Take an Incident to draw 2 cards. You may beam an Incident to a deployed Ship with Starfleet to gain 1 Glory.
+---
+Play - Free: Return a beamed Incident to refresh a Location.",-,Wild
+05-Encounter 02 06,To Boldly Go,Market,Encounter,Species 10-C,"Communication
+Creature","Play - Free: Gain 1 Research / Influence / Military.
+---
+Play - Free: Select a controlled Location. Foe each trait and Skill Icon the selected card hard, find any card, except from your Reserve deck. Then log the selected Location. If you have another Communication in play, gain 1 Glory.
+---
+Special - This card is considered an Ally for all purposes.",-,3.0
+05-Encounter 02 07,To Boldly Go,Market,Encounter,Stone of Gol,"Ancient
+Attack
+Vulcan
+Weapon","Play - Free, Attack: For each Duty Officer your opponent has in play, force them to either: dismiss it OR exhaust it and you gain 1 Glory.
+---
+Play - Action, Attack: You opponent takes an Incident. Gain an Attack, including from the Junk. If you do, and you have a Telepath in play, you may free play the gained card.",Influence,6.0
+05-Encounter 99 01,Promo 01,Market,Encounter,Wesley Crusher,"Transcendent
+Starfleet
+Human
+Pilot","Play - Action: Enlist a Reserve or a Development. Draw a card. Log this card.
+---
+Passive - You may use the Activations and Reactions of any Person in your Staging Area.
+---
+Special - This card is considered a Person for all purposes. This card can be promoted.","Wild
+Wild",6.0
+06-Incident 01 01,Core Box,Market,Incident,Energy Drain,-,"Play - Action: Spend 2 Dilithium to return this card. If you have an Engineer in play, gain an Action.",-,-2.0
+"06-Incident 01 02
+06-Incident 02 02","Core Box
+To Boldly Go",Market,Incident,Hostile Contact,-,"Play - Action: Discard a card to return this card. If the discarded card has Military gain, 2 Dilithium.
+---
+Play - Action: If you have a Communication in play, return this card and gain 2 Dilithium.",-,-2.0
+"06-Incident 01 03
+06-Incident 02 03","Core Box
+To Boldly Go",Market,Incident,Political Crisis,-,"Play - Action: Discard a card to return this card. If the discarded card has Influence, gain 1 Latinum.
+---
+Play - Action: If you have an Ambassador in play, return this card and gain 1 Latinum.",-,-2.0
+06-Incident 01 04,Core Box,Market,Incident,Red Alert,-,Play - Action: Put a card on the top of your deck to return this card. You may promote a Person from your Staging Area to Duty Officer.,-,-2.0
+"06-Incident 01 05
+06-Incident 02 05","Core Box
+To Boldly Go",Market,Incident,Subspace Phenomenon,-,"Play - Action: Discard a card to return this card. If the discarded card has Research draw 2 cards and discard one of them.
+---
+Play - Action: If you have a Time-Travel in play, return this card and draw 2 cards and discard one of them.",-,-2.0
+"06-Incident 01 06
+06-Incident 02 06","Core Box
+To Boldly Go",Market,Incident,Trade Embargo,-,Play - Action: Spend 1 Latium to return this card. You may refresh a Ship.,-,-2.0
+06-Incident 02 01,To Boldly Go,Market,Incident,Dilithium Shockwave,"Surprise
+Anomaly","Play - Action: Spend all your Dilithium. Your opponent gains 2 Dilithium. Return this card.
+---
+Play - Action: If you have a Kelpien in play, return this card, and you may spend 3 Dilithium to gain 1 Glory.
+---
+Special (Bot only) - Gain 1 Glory and discard the top card of the Bot deck. You gain 2 Dilithium. Return this card.",-,-2.0
+06-Incident 02 04,To Boldly Go,Market,Incident,Reed Alert,-,"Play - Action: Put a card on the top of your deck to return this card. You may promote a Person from your Staging Area to Duty Officer. If you have Malcolm Reed in play, gain 1 Glory.",-,-2.0
+06-Incident 99 01,Promo 01,Market,Incident,Flight Training Accident,Surprise,"Play - Action: Find and log a Ship to return this card. If you have 1+ Person on duty, gain an Action.
+---
+Play - Action: If you have a Pilot in play, return this card and gain 1 Glory.
+---
+Surprise (Bot only) - Gain 1 Glory, then resolve the top card of the bot deck. Return this card.
+---
+Special - During setup, replace a random Incident in the Incident deck with this card.",-,-2.0
+06-Incident 99 02,Promo 01,Market,Incident,Whale Probe Incursion,"Surprise
+Attack
+Alien","Play - Action, Attack: Recall a deployed Ship, if  able. Force your opponent to recall a deployed Ship. If you have a Creature in play, return this card.
+---
+Surprise (Bot only) - You must recall a Ship, if able. Return this card.
+---
+Special - During setup, replace a random Incident in the Incident deck with this card.",-,-2.0
+06-Incident 99 03,Promo 02,Market,Incident,Subspace Rhapsody,"Communication
+Anomaly","Play - Action: Put a Directive in your Staging Area (without triggering its play operation) to return this card. You may sing the text of its first play operation to refresh either a Duty Officer OR your Captain.
+---
+Special - During setup, replace a random Incident in the Incident deck with this card.",-,-2.0
+07-Location 01 01,Core Box,Market,Starting Location,Amargosa Observatory,"Scientist
+Starbase","Control - You may gain a Person. If it is a Scientist/Engineer gain 1 Glory.
+---
+Reaction - After putting an Encounter into play, gain 1 Glory and you may log a card from your hand or Discard pile.
+---
+Special - When you log this card, warp all your deployed Ship to one other Location, then draw two cards.",Research,3.0
+"07-Location 01 02
+07-Location 02 01","Core Box
+To Boldly Go",Market,Starting Location,Ancient Relay Station,"Communication
+Alien",Control - You may put a card on the top of your deck and spend an Action to enlist a Development.,Research,-
+"07-Location 01 03
+07-Location 02 02","Core Box
+To Boldly Go",Market,Starting Location,Archer IV,-,"Control - No effect.
+---
+Resupply - Draw a card, then discard a card.",Influence,3.0
+07-Location 01 04,Core Box,Market,Advanced Location,Ba'ku,Anomaly,"Control - You may beam any number of Person here from your hand or Discard pile.
+---
+Activation - Beam your Duty Officer here to gain an Action.
+---
+Activation - Spend 1 Dilithium to recall one Person beamed here.
+---
+Endgame - Score 1 for each Person beamed here.",-,Endgame
+07-Location 01 05,Core Box,Market,Starting Location,Betazed,Betazoid,Control - Gain 2 Latinum.,"Influence
+Influence
+Influence",3.0
+07-Location 01 06,Core Box,Market,Starting Location,Corvan II,"Starfleet
+Business
+Human","Control - No effect.
+---
+Resupply - Discard the top card of your deck. If the discarded card shares at least one trait with your Captain, gain 2 Dilithium. Otherwise, gain 1 Dilithium.",Military,3.0
+07-Location 01 07,Core Box,Market,Advanced Location,Deep Space K-7,Starbase,"Control - No effect.
+---
+Activation - Put a Directive or a Security on the top of your deck to gain an Action.",-,Influence
+"07-Location 01 08
+07-Location 02 05","Core Box
+To Boldly Go",Market,Starting Location,Delta Vega,-,"Control - No effect.
+---
+Resupply - Reveal your hand. For each Person in your hand, gain 1 Dilithium.",Military,2.0
+07-Location 01 09,Core Box,Market,Advanced Location,Derna,"Bajoran
+Romulan
+Doctor","Control - You may spend 2 Dilithium to scan for either a Weapon or Doctor. Draw a card.
+---
+Activation - Beam a Weapon here from your hand or Discard pile.
+---
+Activation - Discard a Weapon to gain 1 Dilithium and return an Incident.
+---
+Endgame - Score 2 for each Weapon beamed here.",-,"Endgame
+1"
+"07-Location 01 10
+07-Location 02 07","Core Box
+To Boldly Go",Market,Starting Location,Dozaria,Breen,Control - Gain 3 Dilithium.,"Military
+Military",3.0
+07-Location 01 11,Core Box,Market,Advanced Location,Freecloud,"Business
+Shady","Control - You may spend 1 Latinum to scan for Business.
+---
+Activation - Discard a card to gain 1 Latinum.
+---
+Activation - Spend 2 Latinum to find any card.",-,5.0
+"07-Location 01 12
+07-Location 02 08","Core Box
+To Boldly Go",Market,Starting Location,Indri VIII,Anomaly,Control - Gain an Action.,"Research
+Influence",5.0
+07-Location 01 13,Core Box,Market,Advanced Location,Kelvas Docks,"Cardassian
+Starbase
+Engineer
+Dominion","Control - No effect.
+---
+Activation - You may spend 3 Dilithium to free play a Ship. You may refresh a Ship",-,Military
+"07-Location 01 14
+07-Location 02 15","Core Box
+To Boldly Go",Market,Advanced Location,Memory Alpha,"Communication
+Starfleet","Control - You may log a card. You may duplicate a play operation of a Person/Cargo/Ally/Directive from your Log.
+---
+Reaction - After logging a card, gain 1 Glory.",-,5.0
+07-Location 01 15,Core Box,Market,Advanced Location,Regula I,"Starfleet
+Scientist
+Starbase","Control - You may find a Scientist OR you may spend 3 Dilithium to scan for a Scientist.
+---
+Reaction - After putting a Scientist into play, gain 1 Glory.
+---
+Endgame - Score 1 for each of your Anomaly cards.","Research
+Research","Endgame
+1"
+"07-Location 01 16
+07-Location 02 09","Core Box
+To Boldly Go",Market,Starting Location,Risa,Business,"Control - Find up to 3 Person, except in your Reserve deck, and beam them here.
+---
+Activation - Beam a Person here.
+---
+Activation - Recall a card beamed here to gain 1 Latinum.",Influence,4.0
+"07-Location 01 17
+07-Location 02 16","Core Box
+To Boldly Go",Market,Advanced Location,Solum,Vau N’akat,Control - Take an Incident and put it on the bottom of your Draw deck.,-,10.0
+"07-Location 01 18
+07-Location 02 17","Core Box
+To Boldly Go",Market,Starting Location,Tulgana IV,"Ambassador
+Starfleet
+Business
+Klingon","Control - You may junk up to 2 cards from the Market.
+---
+Activation - Spend 1 Latinum to send an Away Team to a Location where you have a ship.
+---
+Activation - Discard a Cargo to draw a card from your deck or discard pile.",-,1.0
+"07-Location 01 19
+07-Location 02 19","Core Box
+To Boldly Go",Market,Advanced Location,Verex III,"Shady
+Orion","Control - Gain 1 Glory.
+---
+Activation - Log a Person to gain 2 Latinum.
+---
+Endgame - Score 1 for each of your Shady cards.",Influence,Endgame
+"07-Location 01 20
+07-Location 02 20","Core Box
+To Boldly Go",Market,Advanced Location,Xahea,-,"Control - No effect.
+---
+Resupply - Gain 1 Dilithium.
+---
+Reaction - After playing Utilise you may put a Person on top of your Deck to duplicate Utilise's other play operation.",Military,Research
+07-Location 02 03,To Boldly Go,Market,Starting Location,Argus Arry,"Communication
+Starfleet","Control - No effect.
+---
+Resupply - You may discard a card to draw a card from your Discard pile.",Wild,-
+07-Location 02 04,To Boldly Go,Market,Starting Location,Cold Station 12,"Starbase
+Augment","Control - You may beam a card from your hand or discard pile here.
+---
+Resupply - you may spend 1 Dilithium to recall a card from here.
+---
+Reaction - After discarding a card during your Action Step, beam the discarded card here.
+---
+Endgame - Score 1 for each Augment beamed here.",Research,"Endgame
+1"
+07-Location 02 06,To Boldly Go,Market,Starting Location,Denaxi Depot,"Business
+Xindi
+Shady","Control - You may discard a card to send an Away Team here. If the discarded card has Business gain 2 Latinum.
+---
+Activation - Action: Remove an Away Team from here to gain a Ship
+---
+Activation - Spend 1 Latinum and discard a card to find a Ship, except in your Reserve deck.",-,1.0
+07-Location 02 10,To Boldly Go,Market,Starting Location,Tahal-Meeroj,Anomaly,"Control - You may enlist a Reserve. Draw 2 cards.
+---
+Special - When you log this card, gain 2 Research",-,3.0
+07-Location 02 11,To Boldly Go,Market,Advanced Location,Azati Prime,"Engineer
+Xindi","Control - You may put a card on the top of your deck to gain a Cargo / Ship. If the gained card has Weapon, gain 2 Glory.
+---
+Endgame - Score 1 for each of your Xindi cards.","Research
+Research
+Military","Endgame
+2"
+07-Location 02 12,To Boldly Go,Market,Advanced Location,Babel One,"Communication
+Ambassador","Control - No effect.
+---
+Resupply - Draw one card for each Communication you have in play (excluding this card, max 3).
+---
+Endgame - Requires 6 Influence: Score 1 for each Communication / Ambassador you have in play.",Influence,"Endgame
+2"
+07-Location 02 14,To Boldly Go,Market,Advanced Location,Khitomer,"Klingon
+Romulan
+Human","Control - You may free play a Starfleet.
+---
+Reaction - After your opponent puts an Attack into play, they take an Incident. This is not an Attack.
+---
+Reaction - After you log an Attack or a card with Military Skill / Focus, gain an Action.",-,Influence
+07-Location 02 17,To Boldly Go,Market,Advanced Location,Tanuga IV,"Scientist
+Starbase","Control - You may spend 3 Dilithium to scan for either Scientist or Weapon.
+---
+Clean-Up - Gain 1 Latinum for each Weapon you have in play (max 3) OR gain 1 Dilithium for each Scientist you have in play (max 4).","Military
+Research",5.0
+07-Location 02 18,To Boldly Go,Market,Advanced Location,Tellar Prime,"Starfleet
+Tellarite","Control - No Effect.
+---
+Activation - Discard a card to find an Incident
+---
+Activation - Put a card on the top of your deck to send an Away Team to a Location with Starfleet.
+---
+Endgame - Score 1 for each controlled Location with Starfleet / Starbase you have in play.","Influence
+Influence","Endgame
+2"
+07-Location 03 01,Second Contact,Market,Starting Location,Krulmuth-B,"Time Travel
+Anomaly","Control - You may take an Incident to scan for an Orion.
+---
+Activation - Remove an Away Team from there to look at 2 random Crossover from the Reward pile. Take one of them and destroy the other.
+---
+Reaction - After putting a Scientist or an Orion into play, send an Away Team here.",-,2.0
+07-Location 03 02,Second Contact,Market,Advanced Location,Orion,Orion,"Control - You may spend 1 Latinum to gain a Ship from the top of the deck, and free play it, if able.
+---
+Activation - Log a Ship from your hand or Discard pile to gain an Action and 1 Dilithium / Latinum.
+---
+Endgame - Score 1 for each of your Orion cards.","Influence
+Military","Endgame
+1"
+07-Location 99 01,Promo 02,Market,Location,Starbase 80,"Starfleet
+Starbase
+Ops","Control - Gain a Person / Cargo / Ship from the Junk.
+---
+Activation - Action: Beam a Person here to junk an Incident from your hand or Discard pile. You may junk a card from the Market.
+---
+Reaction - When gaining a card, log a card beamed here to include the Junk.
+---
+Passive - When taking an Incident, you may take it from the Junk.",-,3.0
+08-Directive 01 01,Core Box,Market,Directive,Conspiracy,"Starfleet
+Surprise
+Shady","Play - Free: Discard a Person from your hand to discard this card and draw a card.
+---
+Special - This card cannot be beamed of discarded by any effect except its own play operation.
+---
+Special - Before scoring if this card is owned by the bot or logged, destroy it.
+---
+Surprise (Bot only) - You must choose: take an Incident and put it and this card on the bottom of your deck OR the bot gains 2 Glory and discards the top card of its Supplement deck.",-,-4.0
+08-Directive 01 02,Core Box,Market,Directive,Reinforce,-,"Play - Free: Take a card from your Reinforcement pile.
+---
+Play - Free: If your Reinforcement pile is empty, draw a card, then log this card.",-,-
+c01-01 Picard 01,Core Box,Picard,Captain,Jean-Luc Picard,"Starfleet
+Human","Captain
+---
+Away Teams: 5
+---
+Reaction - After gaining an Ally, discard a card to gain 1 Glory and you may beam the gained card to a Ship.
+---
+Endgame - Score 1 for each of your Ally cards.",-,Endgame
+c01-01 Picard 02,Core Box,Picard,Ship,U.S.S. Enterprise-D,Starfleet,"Deployed
+---
+Play - Action: Deploy this ship. Warp this ship OR beam a card here.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Promote a Person from your hand to Duty Officer.",Any,-
+c01-01 Picard 03,Core Box,Picard,Directive,Make It So,-,"Development - Cost: 3 Dilithium.
+---
+Play - Free: Return an Incident from your hand or Discard pile.
+---
+Play - Free, Requires 4 Influence: Select a Secured neutral Location and take control of it. Log this card.",-,Research
+c01-01 Picard 04,Core Box,Picard,Ally,Tamarians,Alien,"Development - Cost: 2 Dilithium, and take an Incident.
+---
+Play - Action: Draw 3 cards. You may discard up to one of each of the following: Person, Cargo, Ship, Ally, Encounter, Incident. Gain 1 Glory for each card discarded this way. Log this card.",-,3.0
+c01-01 Picard 05,Core Box,Picard,Cargo,Phasing Cloak,"Starfleet
+Ongoing
+Weapon
+Cloak","Development - Cost: 2 Dilithium, and find a Person and log it.
+---
+Play - Action: Deploy this card. Junk a card from the Market.
+---
+Activation - Free play a Ship.
+---
+Passive - You ignore all opponent Ships when sending Away Teams to a Neutral Location.",-,Influence
+c01-01 Picard 06,Core Box,Picard,Location,Daystrom Institute,"Starfleet
+Android","Development - Cost: 3 Dilithium, 1 Latinum.
+---
+Play - Action: Take control of this location.
+---
+Control - You may scan for a Synthetic.
+---
+Activation - Find a Synthetic and gain 1 Glory.
+---
+Activation - Draw a card.
+---
+Endgame - Score 1 for each of your Synthetic cards.","Research
+Research","Endgame
+1"
+c01-01 Picard 07,Core Box,Picard,Location,Starbase 74,"Starfleet
+Starbase","Development - Cost: 2 Dilithium, 1 Latinum.
+---
+Play - Action: Take control of this location.
+---
+Control - Find a Person. You may discard a different card to free play the found card.
+---
+Passive - You may have an additional Person on duty.","Influence
+Influence",Influence
+c01-01 Picard 08,Core Box,Picard,Person,Deanna Troi,"Starfleet
+Betazoid
+Telepath
+Human","Development - Cost: 2 Dilithium.
+---
+Play - Free: Draw a card, then either keep it OR discard it to gain 1 Glory OR log it.
+---
+Passive - You may treat any Incident's play operation as ""Play - Free: Discard a card to return this card. If you do, draw 2 cards"".",Influence,2.0
+c01-01 Picard 09,Core Box,Picard,Person,Geordi La Forge,"Starfleet
+Engineer
+Human
+Pilot","Development - Cost: 2 Dilithium.
+---
+Play - Free: You may find a Ship. You may refresh a Ship.
+---
+Reaction - After gaining a Ship, gain 1 Glory and you may immediately free play it.",-,Research
+c01-01 Picard 10,Core Box,Picard,Ship,U.S.S. Bozeman,"Time Travel
+Starfleet
+Anomaly","Development - Cost: 5 Dilithium.
+---
+Play - Action: Deploy this ship. You may enlist a Development.
+---
+Play - Free, Requires 6 Research: Recall a non-Time Travel card from your Staging Area.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.",Military,2.0
+c01-01 Picard 11,Core Box,Picard,Directive,First Contact,-,"Reserve
+---
+Play - Action: Scan 2 of Ally. Log this card.",-,-
+c01-01 Picard 12,Core Box,Picard,Person,Data,"Starfleet
+Synthetic
+Android
+Ops","Reserve
+---
+Play - Action: Gain 1 Research/Influence/Military.
+---
+Activation - Log a card from your hand. If you do, gain 1 Research/Influence/Military for every 5 cards in your Log (rounded down).",-,-
+c01-01 Picard 13,Core Box,Picard,Person,Beverly Crusher,"Starfleet
+Doctor
+Human","Reserve
+---
+Play - Action: Gain 1 Research. You may return an Incident from your Discard pile.
+---
+Reaction - After taking an Incident, discard a different card to return the Incident and gain 1 Glory.",-,-
+c01-01 Picard 14,Core Box,Picard,Ship,Type 7 Shuttlecraft,Starfleet,"Reserve
+---
+Play - Action: Send an Away Team to a Location where you have a Ship. You may put this card on the top of your deck.
+---
+Play - Free: Gain 1 Dilithium. Then you may either: beam a card to a Ship OR recall a card beamed to a Ship.",-,-
+c01-01 Picard 15,Core Box,Picard,Directive,Analyse,-,"Available
+---
+Play - Action: Take an Incident to gain a Ship.
+---
+Play - Action - Discard 2 cards to gain a Cargo.
+---
+Play - Free: Gain 2 Dilithium.",-,-
+c01-01 Picard 16,Core Box,Picard,Directive,Deplomacy,-,"Available
+---
+Play - Free: Spend 1 Dilithium to draw 2 cards and discard one of them, and gain 1 Influence.
+---
+Play - Action: Gain an Ally and log this card.",-,-
+c01-01 Picard 17,Core Box,Picard,Directive,Recruit,-,"Available
+---
+Play - Action: Put a card on the top of your deck to gain a Person.
+---
+Play - Action: Take an Incident to gain an Ally.",-,-
+c01-01 Picard 18,Core Box,Picard,Directive,Strange New Worlds,-,"Available
+---
+Play - Action: Select a controlled Location. If there is 1+ Away Team and 1+ Ship there, look at the top 2 Encounter. Take one fo them and return the other to the bottom of the its deck. Log the selected Location to gain 1 Research.",-,-
+c01-01 Picard 19,Core Box,Picard,Directive,Utilise,-,"Available
+---
+Play - Action: Gain 1 Dilithium, and 2 Dilithium for each controlled Location you have in play.
+---
+Play - Action: Gain on one Specialty track for each matching Skill icon you have in play (excluding beamed cards).",-,-
+c01-01 Picard 20,Core Box,Picard,Incident,Red Alert,-,"Available
+---
+Play - Action: Put a card on the top of your deck to return this card. You may promote a Person from your Staging Area to Duty Officer.",-,-
+c01-01 Picard 21,Core Box,Picard,Location,Farpoint Station,"Business
+Anomaly","Available
+---
+Play - Action: Take control of this location.
+---
+Control - Gain 1 Research.
+---
+Activation - If you have an Away Team here, draw a card. IF you have 3+ total Away Teams on 1 or more controlled Location, draw a card.",Research,-
+c01-01 Picard 22,Core Box,Picard,Directive,Set a Course,-,"Available
+---
+Play - Action: Discard up to 3 Person to send the same number of Away Teams to the same Location.
+---
+Play - Free: Draw a card, then discard a card. Warp up to 2 of your Ship.",-,-
+c01-01 Picard 23,Core Box,Picard,Person,Worf,"Starfleet
+Security
+Klingon
+Attack","Available
+---
+Play - Action: Take an Incident and discard it. Discard the top card of your deck. Send 2 Away Teams to a neutral Location.
+---
+Activation - Attack: Discard a card to remove an opponent Away from a Location where you have an Away Team. If you do, gain 1 Glory.",-,-
+c01-01 Picard 24,Core Box,Picard,Person,Will Riker,"Starfleet
+Human","Available
+---
+Play - Action: Draw 2 cards from your Discard pile. You may spend 1 Dilithium to send an Away Team to a Location. If you targeted a controlled Location, trigger that card's control operation.
+---
+Resupply - Discard the top card of your deck and gain 1 Latinum.
+---
+Activation - Free play a Ship with Starfleet.
+---
+Activation - Draw a Ship from your Discard pile.",-,-
+c01-01 Picard 25,Core Box,Picard,Mission,Peace Negotiations,-,"Goal - Have 3 Ally on the same Ship, and at least two of Military/Influence/Research at 4+.
+---
+Reward - Gain 4 Dilithium and draw 4 cards. You may junk a card from the Market.",5.0,
+c01-01 Picard 26,Core Box,Picard,Mission,Arbiter of Succession,-,"Goal - Have 3 Klingon on the same Ship.
+---
+Reward - Gain 1 Glory, and 1 Influence/Military. Gain an Action. You may junk a card from the Market.",3.0,
+c01-01 Picard 27,Core Box,Picard,Mission,Seek Out New Life,-,"Goal - Have 6 Different Species (excluding cards with Human/Starfleet) in play. Each Alien and each Transcendent counts as a different one.
+---
+Reward - Take the top Encounter.",2.0,
+c01-02 Shran 01,Core Box,Shran,Captain,Thy'lek Shran,"Andorian
+Imperial","Captain
+---
+Away Teams: 5
+---
+Resupply - Gain 1 Dilithium per Cargo you have in play.
+---
+Activation - Action - Discard a Cargo to send an Away Team to a controlled Location.",-,Influence
+c01-02 Shran 02,Core Box,Shran,Ship,Kumari,Andorian,"Deployed
+---
+Play - Action: Deploy this ship. Warp this ship OR beam a card here.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Promote a Person from your hand to Duty Officer.",Any,-
+c01-02 Shran 03,Core Box,Shran,Ally,Aenar,"Telepath
+Aenar","Development - Cost: Find a Weapon and log it.
+---
+Play - Free: Draw 3 cards. You may log one of the drawn cards. You may discard one of the drawn cards to gain 1 Influence.",-,3.0
+c01-02 Shran 04,Core Box,Shran,Location,Coridan,Business,"Development - Cost: 2 Dilithium, 1 Latinum.
+---
+Play - Action: Take control of this location.
+---
+Control - You may discard 2 cards to gain 2 Dilithium and 2 Latinum.
+---
+Resupply - Gain 1 Dilithium. If you have 7+ Influence, gain an additional 1 Dilithium.
+---
+Endgame - Score 1 for every 4 Dilithium you have.",-,"Endgame
+3"
+c01-02 Shran 05,Core Box,Shran,Directive,Commando Unit,"Andorian
+Security","Development - Cost: 3 Dilithium.
+---
+Play - Free: Send an Away Team to a Location where you have a Ship. You may find a Weapon.
+---
+Play - Action: Scan for a Weapon and draw a card.",-,Military
+c01-02 Shran 06,Core Box,Shran,Cargo,Tenebian Amethyst,Business,"Development - Cost: 1 Dilithium, 1 Latinum.
+---
+Play - Free: Gain 2 Latinum. You may log a Person from your hand or Discard pile to log this card.
+---
+Special - When you log this card (via any effect), gain 3 Glory.",-,2.0
+c01-02 Shran 07,Core Box,Shran,Ship,Andorian Cruiser,Andorian,"Development - Cost: 5 Dilithium.
+---
+Play - Action: Deploy this ship. You may spend 1 Dilithium to warp this ship.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Action: Send an Away Team to this ship's Location.",Military,4.0
+c01-02 Shran 08,Core Box,Shran,Cargo,Andorian Ale,"Andorian
+Beverage","Development - Cost: 1 Dilithium, 1 Latinum.
+---
+Play - Action: Spend 2 Latinum to scan 1 of Ally, including from the Junk. Junk a card from the Market.",-,Influence
+c01-02 Shran 09,Core Box,Shran,Person,Ambassador Thoris,"Ambassador
+Andorian","Development - Cost: 2 Dilithium.
+---
+Play - Action: All players may return an Incident from their hard or Discard pile. For each Incident returned, gain 1 Glory.
+---
+Activation - Gain 1 Glory for each Ally you have in play.",-,Influence
+c01-02 Shran 10,Core Box,Shran,Person,Jhamel,"Communication
+Telepath
+Aenar","Reserve
+---
+Play - Free: Draw a card, then either keep it OR discard it to gain 1 Glory OR log it.
+---
+Passive - After taking an Incident, you may find a Person.",-,-
+c01-02 Shran 11,Core Box,Shran,Directive,You Owe Me One,Ongoing,"Reserve
+---
+Play - Free: Deploy this card. Gain 1 Glory.
+---
+Reaction - After you or your opponent plays Utilise, choose: draw a card and your opponent gains 2 Dilithium OR gain 2 Dilithium and your opponent may draw a card.",-,-
+c01-02 Shran 12,Core Box,Shran,Location,Weytahn,"Andorian
+Imperial
+Vulcan","Reserve
+---
+Play - Action: Take control of this location.
+---
+Control - You may free play a Cargo or a Ship.
+---
+Clean-Up - If there are no Away Teams here, dismiss this card.
+---
+Activation - Discard a card with at least one of Weapon / Military Skill / Military Focus to send an Away Team here and gain 1 Influence.
+---
+Endgame - Score 4 if 2 or more Away Teams are here.",-,Endgame
+c01-02 Shran 13,Core Box,Shran,Ally,United Earth,Human,"Reserve
+---
+Play - Action: Scan for a Human. Log this card.
+---
+Play - Action: Take an Incident to scan 2 of Ally. You may free play the gained card. If you do, log this card.",-,-
+c01-02 Shran 14,Core Box,Shran,Incident,Trade Embargo,-,"Reserve
+---
+Play - Action: Spend 1 Latinum to return this card. You may refresh a Ship.",-,-2.0
+c01-02 Shran 15,Core Box,Shran,Incident,Red Alert,-,"Available
+---
+Play - Action: Put a card on the top of your deck to return this card. You may promote a Person from your Staging Area to Duty Officer.",-,-2.0
+c01-02 Shran 16,Core Box,Shran,Directive,Imperial Pride,-,"Available
+---
+Play - Action: Remove an Away Team from 3 different controlled Location to look at the top 2 Encounter. Take one of them and return the other to the bottom of its deck.
+---
+Play - Action: Spend 10 Dilithium and log a controlled Location to take the top Encounter. If the logged card shares no traits with you Captain, gain 1 Influence.",-,-
+c01-02 Shran 17,Core Box,Shran,Directive,Confiscate,-,"Available
+---
+Play - Action: Spend 4 Dilithium to gain a Ship.
+---
+Play - Action: Spend 2 Dilithium to gain a Cargo.
+---
+Play - Free: Gain 1 Latinum.",-,-
+c01-02 Shran 18,Core Box,Shran,Directive,Recruit,-,"Available
+---
+Play - Action: Put a card on the top of your deck to gain a Person.
+---
+Play - Action: Take an Incident to gain an Ally.",-,-
+c01-02 Shran 19,Core Box,Shran,Cargo,Ushaan-tor,"Andorian
+Weapon
+Attack","Available
+---
+Play - Free, Attack: Discard an Andorian to gain 1 Glory and force your opponent to dismiss (one of) their Duty Officer(s).",-,-
+c01-02 Shran 20,Core Box,Shran,Person,Talas,"Andorian
+Attack
+Ops","Available
+---
+Play - Action, Attack: Send an Away Team to a Location. Dismiss an Opponent Vulcan/Tellarite/Romulan (of your choice).
+---
+Activation - Discard 2 cards to send an Away Team to a Location.",Influence,-
+c01-02 Shran 21,Core Box,Shran,Person,Tarah,"Andorian
+Security
+Attack","Available
+---
+Play - Action: Send an Away Team to a Location.
+---
+Play - Free, Attack: Gain 1 Glory and discard the top card of your opponent's Draw deck. If it is a Person, you both take an Incident.
+---
+Activation - Requires 5 Military: Discard a card to refresh a Ship and a Location. If the discard card is a Weapon, gain 2 Glory.",Military,-
+c01-02 Shran 22,Core Box,Shran,Directive,Utilise,-,"Available
+---
+Play - Action: Gain 1 Dilithium, and 2 Dilithium for each controlled Location you have in play.
+---
+Play - Action: Gain on one Specialty track for each matching Skill icon you have in play (excluding beamed cards).",-,-
+c01-02 Shran 23,Core Box,Shran,Location,Andoria,Andorian,"Available
+---
+Play - Action: Take control of this location.
+---
+Control - Gain 1 Military and 1 Influence.
+---
+Activation - If you have an Away Team here, draw a card. If you have 3+ total Away Teams on 1 or more controlled Location, draw a card.",-,-
+c01-02 Shran 24,Core Box,Shran,Cargo,Plasma Rilfes,"Andorian
+Ongoing
+Weapon
+Attack","Available
+---
+Play - Action: Spend 1 Dilithium to gain 1 Military. Junk a card from the Market. Deploy this Card.
+---
+Activation - Attack: Discard an Andorian to remove 1 opponent Away Team from a Location. If an Away Team was removed from this way from a Location controlled by your opponent, they take an Incident. Dismiss this card.",-,-
+c01-02 Shran 25,Core Box,Shran,Mission,Securing Andoria's Borders,-,"Goal - Have 3 controlled Location in play, and 4 Weapon in play.
+---
+Reward - Scan 1 of Ship, draw a card, gain an Action.",-,2.0
+c01-02 Shran 26,Core Box,Shran,Mission,Founding the Federation,-,"Goal - Have 1 Human and 3 different of Vulcan/Tellarite/Andorian/Alien/Ambassador/Communication on the same Ship.
+---
+Reward - Gain 2 Research, 2 Influence, and 2 Military. You may send an Away Team to a Location with Starbase.",-,4.0
+c01-02 Shran 27,Core Box,Shran,Mission,Andorian Mining Consortium,-,"Goal - Have 3 Business in play.
+---
+Reward - Scan 1 of Cargo, gain 2 Latinum, and 1 Glory. You may free play an Incident to gain 1 Glory.",-,3.0
+c01-03 Koloth 01,Core Box,Koloth,Captain,"Koloth, the Dahar Master","Klingon
+Weapon","Captain
+---
+Away Teams: 6
+---
+Activation - Put a card on the top of your deck to send an Away Team to a Location. Your opponent may draw a card.",-,Military
+c01-03 Koloth 02,Core Box,Koloth,Ship,I.K.S. Gr'oth,Klingon,"Deployed
+---
+Play - Free: Deploy this ship.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Action: Send an Away Team to this ship's Location.
+---
+Activation - Promote a Person from your hand to Duty Officer.",-,-
+c01-03 Koloth 03,Core Box,Koloth,Cargo,Protoype Cloak,"Ongoing
+Attack
+Cloak","Development - Cost: 3 Dilithium.
+---
+Play - Free, Attack: Deploy this card. Refresh a Ship. Junk a card from the Market. If the opponent has 2 or more Ship deployed, force them to either dismiss on OR take an Incident.
+---
+Reaction - After deploying a Ship without Cloak, that ship gains Cloak for the remainder of your turn. Then, you may discard a card to send an Away Team to a Location, ignoring any opponent Ship.",-,Military
+c01-03 Koloth 04,Core Box,Koloth,Cargo,Sword of Kahless,"Imperial
+Klingon
+Weapon","Development - Cost: 5 Dilithium, OR free if the I.K.S. Devisor is in play.
+---
+Play - Action, Requires 9 Military: Junk a card from the Market. Dismiss a Klingon Duty Officer to gain 4 Glory. Log this card.",-,6.0
+c01-03 Koloth 05,Core Box,Koloth,Location,Boreth,"Time Travel
+Klingon
+Anomaly","Development - Cost: 6 Dilithium, and have 10+ Glory.
+---
+Play - Action: Take control of this location.
+---
+Control - Find any card and free play it.
+---
+Activation - Spend 1 Dilithium to draw the bottom card of your deck.
+---
+Activation - Spend 1 Dilithium and discard a card to recall a non-Time Travel card from your Staging Area.
+---
+Endgame - Score 1 for each [Skill Icon] you have in play (excluding beamed cards).",Any,"Endgame
+1"
+c01-03 Koloth 06,Core Box,Koloth,Person,Curzon Dax,"Ambassador
+Trill","Development - Cost: 2 Dilithium, 2 Latinum.
+---
+Play - Free: Gain 1 Influence/Military, whichever is lower (you choose in a tie).
+---
+Play - Free: Return an Incident.
+---
+Activation - Action: Discard a card to scan 2 of Ally.",-,2.0
+c01-03 Koloth 07,Core Box,Koloth,Person,"Kang, the Dahar Master","Klingon
+Weapon","Development - Cost: 4 Dilithium, and have 8+ Glory.
+---
+Play - Action: Return an Incident from your hand of Discard pile and gain 1 Glory.
+---
+Play - Action: If you have at least 15 Glory, destroy this card to take the top Encounter and gain 3 Glory.
+---
+Reaction - After gaining a least 1 Influence, gain 1 Influence and 1 Glory.",-,3.0
+c01-03 Koloth 08,Core Box,Koloth,Person,"Kor, the Dahar Master","Klingon
+Weapon","Development - Cost: 2 Dilithium, 1 Latinum, and have 10+ Glory.
+---
+Play - Free: Send an Away Team to a neutral Location. If that Location is now secured, you may spend an Action to take control of it. If you do, log this card.
+---
+Reaction - After gaining at least 1 Influence, gain 1 Military and you may warp a Ship.",-,Military
+c01-03 Koloth 09,Core Box,Koloth,Ship,I.K.S. Devisor,Klingon,"Development - Cost: 5 Dilithium.
+---
+Play - Free: Deploy this ship, gain 1 Glory.
+---
+Activation - Spend 1 Glory to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Action: Send an Away Team to ship ship's Location.",-,Military
+c01-03 Koloth 10,Core Box,Koloth,Directive,Recruit,-,"Reserve
+---
+Play - Action: Put a card on the top of your deck to gain a Person.
+---
+Play - Action: Take an Incident to gain an Ally.",-,-
+c01-03 Koloth 11,Core Box,Koloth,Incident,Energy Drain,-,"Reserve
+---
+Play - Action: Spend 2 Dilithium to return this card. If you have an Engineer in play, gain an Action.",-,-2.0
+c01-03 Koloth 12,Core Box,Koloth,Incident,Hostile Contact,-,"Reserve
+---
+Play - Action: Discard a card to return this card. If the discarded card has Military gain, 2 Dilithium.
+---
+Play - Action: If you have a Communication in play, return this card and gain 2 Dilithium.",-,-2.0
+c01-03 Koloth 13,Core Box,Koloth,Location,Rura Penthe,-,"Reserve
+---
+Play - Action: Take control of this location.
+---
+Control - Gain 2 Dilithium.
+---
+Resupply - Gain 1 Dilithium for each Person beamed here.
+---
+Activation - Beam a Person here.",Influence,-
+c01-03 Koloth 14,Core Box,Koloth,Person,Mara,"Scientist
+Klingon","Reserve
+---
+Play - Action: Spend 3 Glory to gain 2 Science/Influence/Military. You may discard a Person without Klingon to gain 1 Glory.
+---
+Resupply - Gain 1 Science.",-,-
+c01-03 Koloth 15,Core Box,Koloth,Directive,Confiscate,-,"Available
+---
+Play - Action: Spend 4 Dilithium to gain a Ship.
+---
+Play - Action: Spend 2 Dilithium to gain a Cargo.
+---
+Play - Free: Gain 1 Latinum.",-,-
+c01-03 Koloth 16,Core Box,Koloth,Directive,Conquer,-,"Available
+---
+Play - Action: You may discard a Person and take an Incident to send 2 Away Teams to a Location where you have a Ship. You may dismiss a Ship to gain a Person/Ship/Ally.",Any,-
+c01-03 Koloth 17,Core Box,Koloth,Directive,Good Day to Die,-,"Available
+---
+Play - Action: You may log a Person beamed to a Ship to gain 1 Military. Log a deployed ship and dismiss another deployed Ship to look at the top 2 Encounter. Take one of them and return the other to the bottom of its deck.",-,-
+c01-03 Koloth 18,Core Box,Koloth,Directive,Utilise,-,"Available
+---
+Play - Action: Gain 1 Dilithium, and 2 Dilithium for each controlled Location you have in play.
+---
+Play - Action: Gain on one Specialty track for each matching Skill icon you have in play (excluding beamed cards).",-,-
+c01-03 Koloth 19,Core Box,Koloth,Cargo,Klingon Disruptors,"Weapon
+Attack","Available
+---
+Play - Action: Discard a Klingon. If you do, up to twice: remove an opponent Away Team from a neutral Location where you have an Away Team. Gain 1 Glory for each Away Team removed.
+---
+Play - Action: Gain 1 Military.",-,-
+c01-03 Koloth 20,Core Box,Koloth,Location,Qo'nos,"Imperial
+Klingon","Available
+---
+Play - Action: Take control of this location.
+---
+Control - Gain 1 Influence.
+---
+Activation - If you have an Away Team here, draw a card. If you have 3+ total Away Teams on 1 or more controlled Location, draw a card. You may pay 2 Dilithium and discard a card to draw a card.","Military
+Military",-
+c01-03 Koloth 21,Core Box,Koloth,Person,Arne Darvin,"Klingon
+Attack
+Human
+Spy","Available
+---
+Play - Action, Attack: Gain 1 Dilithium and steal 1 Dilithium.
+---
+Play - Action, Attack, Requires 4 Influence: Force your opponent to dismiss a Duty Officer. You take an Incident and gain 3 Glory and Log this card.
+---
+Passive - Increase your hand size by 1.",-,-
+c01-03 Koloth 22,Core Box,Koloth,Person,Korax,"Klingon
+Attack","Available
+---
+Play - Free, Attack: Gain 1 Glory and discard the top card of your opponent's Draw deck. IF it is a Person, you both take an Incident.
+---
+Clean-Up - For each unspent Action, temporarily increase your hand size by 1 and you may gain 1 Glory.
+---
+Activation: Refresh the I.K.S. Gr'oth. You may discard a card to refresh another Ship with Klingon.",-,-
+c01-03 Koloth 23,Core Box,Koloth,Person,Krell,Klingon,"Available
+---
+Play - Action: Spend 1 Dilithium to scan 2 of Cargo. If the gained card has Weapon, gain 1 Influence.
+---
+Resupply - If you have a Weapon in play (excluding your Captain), gain 1 Latinum, and 1 Dilithium. If you have 2+ Weapon in play (excluding your Captain), also gain 1 Glory.",-,-
+c01-03 Koloth 24,Core Box,Koloth,Ship,I.K.S. Klothos,Klingon,"Available
+---
+Play - Free: Deploy this ship.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Action: Send an Away Team to this ship's Location.",-,-
+c01-03 Koloth 25,Core Box,Koloth,Mission,Expanding the Empire,-,"Goal - Have a total of 6 deployed Ship / controlled Location in play, at least one of each.
+---
+Reward - Enlist two Reserves or Enlist a Development. Dismiss a deployed Ship.",-,3.0
+c01-03 Koloth 26,Core Box,Koloth,Mission,Romulan Weapons Trade Agreement,-,"Goal - Have 1 or more Romulan on a Ship that has Klingon.
+---
+Reward - Gain 1 Military for each Romulan in play. Enlist Prototype Cloak for free. You may Junk a card from the Market.",-,1.0
+c01-03 Koloth 27,Core Box,Koloth,Mission,Sabotage,-,"Goal - Have 2 Different Species (excluding cards with Klingon), 2 Weapon (excluding your Captain), and 1 Scientist in play.
+---
+Reward - Attack: Enlist a Reserve. You may force your opponent to take 2 Incident.",-,4.0
+c01-04 Sisko 01,Core Box,Sisko,Captain,Benjamin Sisko,"Transcendent
+Starfleet
+Human","Captain
+---
+Away Teams: 6
+---
+Reaction - After you take control of a Location, gain 2 Dilithium.
+---
+Activation - Action: Send an Away Team to a Location with Starfleet/Starbase.
+---
+Endgame - Score 1 for each controlled Location you have in play.",-,Endgame
+c01-04 Sisko 02,Core Box,Sisko,Location,Bajor,Bajoran,"Controlled Location
+---
+Activation - If you have an Away Team here, draw a card. If you have 3+ total Away Teams on 1 or more controlled Location, draw a card.",Influence,-
+c01-04 Sisko 03,Core Box,Sisko,Ship,Deep Space 9,"Cardassian
+Starbase","Deployed
+---
+Play - Deploy this card.
+---
+Activation - Discard a card to either: beam a card here OR recall a card beamed here.
+---
+Activation - Promote a Person from your have to Duty Offiver
+---
+Passive - This ship cannot be warped.",-,-
+c01-04 Sisko 04,Core Box,Sisko,Cargo,Orb of Prophecy and Change,"Transcendent
+Wildcard","Development - Cost: 3 Dilithium, 2 Latinum.
+---
+Play - Free: Refresh a Bajoran to draw a card.
+---
+Play - Free: Discard a card to find a Bajoran.
+---
+Play - Action: Discard a Person to enlist a Development, reducing the cost by 1 Dilithium and 1 Latinum. Log this card.",-,Research
+c01-04 Sisko 05,Core Box,Sisko,Encounter,Orb of the Emissary,"Transcendent
+Wildcard
+Anomaly","Development - Cost: 3 Dilithium, 3 Latinum.
+---
+THIS CARD CANNOT BE PLAYED.",-,7.0
+c01-04 Sisko 06,Core Box,Sisko,Cargo,Self-Replicating Mines,"Ongoing
+Attack","Development - Cost: 5 Dilithium.
+---
+Play - Free, Attack: Force your opponent to discard a card. Draw two cards and discard one of them. Deploy this card.
+---
+Resupply - Gain 1 Glory.
+---
+Reaction - After your opponent gains Influence/Military, recall this card.
+---
+Passive - When you would be attacked, ignore the negative effect and log this card.",Influence,Influence
+c01-04 Sisko 07,Core Box,Sisko,Location,Starbase 375,"Starfleet
+Starbase","Development - Cost: 4 Dilithium.
+---
+Play - Action: Take control of this location.
+---
+Control - You may find a Ship.
+---
+Reaction - After putting a Ship into play, free play a Person.",Military,Military
+c01-04 Sisko 08,Core Box,Sisko,Person,Julian Bashir,"Starfleet
+Augment
+Doctor
+Human","Development - Cost: 2 Dilithium.
+---
+Play - Free: Free play an Incident from your have or Discard pile. If you do, gain 1 Research.
+---
+Activation - Spend 1 Dilithium to choose 2 of the following: find a Person with Spy OR find a Person with Augment OR find Miles O'Brien OR return an Incident.",-,2.0
+c01-04 Sisko 09,Core Box,Sisko,Person,Garak,"Cardassian
+Attack
+Shady
+Spy","Development - Cost: 2 Latinum.
+---
+Play - Action, Attack: Choose 2 of the following: Dismiss (one of) your opponent's Duty Officer(s) and you draw a card OR gain 1 Influence OR spend 1 Latinum to scan 2 of Person.
+---
+Passive - Increase your hand size by 2.",-,2.0
+c01-04 Sisko 10,Core Box,Sisko,Person,"Worf, Son of Mogh","Starfleet
+Klingon
+Attack","Development - Cost: 2 Dilithium.
+---
+Play - Action: Discard 2 cards to send 2 Away Team to the same Location.
+---
+Reaction - When you would be attacked, dismiss this card to ignore the negative effect.
+---
+Activation - Attack: Remove an opponent Away Team from a neutral Location. Gain 1 Glory.",Military,2.0
+c01-04 Sisko 11,Core Box,Sisko,Directive,Strange New Worlds,-,"Reserve
+---
+Play - Action: Select a controlled Location. If there is 1+ Away Team and 1+ Ship there, look at the top 2 Encounter. Take one fo them and return the other to the bottom of the its deck. Log the selected Location to gain 1 Research.",-,-
+c01-04 Sisko 12,Core Box,Sisko,Ally,People of Bajor,Bajoran,"Reserve
+---
+Play - Free: Take an Incident to gain 1 Influence and draw a card.
+---
+Play - Free: Send an Away Team to a Location. You may pend 2 Latinum to send another Away Team to the same Location. Log this card.",-,-
+c01-04 Sisko 13,Core Box,Sisko,Person,Miles O'Brien,"Starfleet
+Engineer
+Human","Reserve
+---
+Play - Free: Draw 2 cards and discard 1 of them.
+---
+Play - Action, Requires 5 Military: Spend 1 Dilithium to draw a Ship from your Discard pile and free play it. Then, draw a card.
+---
+THIS CARD CANNOT BE PROMOTED.",-,-
+c01-04 Sisko 14,Core Box,Sisko,Person,Odo,"Changeling
+Security","Reserve
+---
+Play - Action: Duplicate a play operation of a Person or a Cargo from the Market.
+---
+Activation - Log a Person from your hand or Discard pile to draw a card. If the logged card is Shady, gain 1 Glory.",-,-
+c01-04 Sisko 15,Core Box,Sisko,Ship,U.S.S. Defiant,"Starfleet
+Romulan
+Attack
+Cloak","Reserve
+---
+Play - Action, Attack: Deploy and warp this ship. If the opponent has at least one Ship at the U.S.S. Defiant's Location, force them to discard 2 cards.
+---
+Play - Action, Requires 5 Influence: Deploy this ship. You may send an Away Team to a Location, ignoring any opponent Ship.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.",-,-
+c01-04 Sisko 16,Core Box,Sisko,Directive,Analyse,-,"Available
+---
+Play - Action: Take an Incident to gain a Ship.
+---
+Play - Action - Discard 2 cards to gain a Cargo.
+---
+Play - Free: Gain 2 Dilithium.",-,-
+c01-04 Sisko 17,Core Box,Sisko,Directive,Utilise,-,"Available
+---
+Play - Action: Gain 1 Dilithium, and 2 Dilithium for each controlled Location you have in play.
+---
+Play - Action: Gain on one Specialty track for each matching Skill icon you have in play (excluding beamed cards).",-,-
+c01-04 Sisko 18,Core Box,Sisko,Directive,Recruit,-,"Available
+---
+Play - Action: Put a card on the top of your deck to gain a Person.
+---
+Play - Action: Take an Incident to gain an Ally.",-,-
+c01-04 Sisko 19,Core Box,Sisko,Incident,Political Crisis,-,"Available
+---
+Play - Action: Discard a card to return this card. If the discarded card has Influence, gain 1 Latinum.
+---
+Play - Action: If you have an Ambassador in play, return this card and gain 1 Latinum.",-,-2.0
+c01-04 Sisko 20,Core Box,Sisko,Directive,Set a Course,-,"Available
+---
+Play - Action: Discard up to 3 Person to send the same number of Away Teams to the same Location.
+---
+Play - Free: Draw a card, then discard a card. Warp up to 2 of your Ship.",-,-
+c01-04 Sisko 21,Core Box,Sisko,Location,The Wormhole,Anomaly,"Available
+---
+Play - Action: Take control of this location. You may free play a Ship.
+---
+Control - Look at the top 3 Location and put them on the top and/or the bottom of the their deck in any order.
+---
+Activation - Discard a Person to warp a Ship.
+---
+Activation - Discard a card to find an Anomaly.","Research
+Influence",-
+c01-04 Sisko 22,Core Box,Sisko,Person,Jadzia Dax,"Starfleet
+Scientist
+Trill","Available
+---
+Play - Action: Gain 1 Research/Influence/Military, whichever is the lowest (you choose in a tie). You may spend 1 Dilithium to do this a second time.
+---
+Play - Action: Spend 1 Dilithium to return an Incident and gain 1 Glory.
+---
+Reaction - When you would gain a card, scan 2 of the same suit instead.",Research,-
+c01-04 Sisko 23,Core Box,Sisko,Person,Kira Nerys,"Bajoran
+Attack
+Ops","Available
+---
+Play - Action, Attack: Find People of Bajor and dismiss an opponent Cardassian/Dominion (of your choice). Promote this card to Duty Officer.
+---
+Play - Action: Gain 3 Military and 1 Glory. Your Opponent gains 1 Influence.
+---
+Reaction - After your opponent takes control of a Location, draw a card and gain 1 Dilithium.",-,-
+c01-04 Sisko 24,Core Box,Sisko,Person,Quark,"Business
+Ferengi
+Shady","Available
+---
+Play - Action: Spend 1 Latinum to scan 1 of Person. If the gained card is Business, draw a card. If the gained card is Shady, take an Incident.
+---
+Resupply - Gain 1 Dilithium . If you have 2+ Ferengi in play, gain 1 additional Latinum.
+---
+Reaction - After resolving an operation with a Latinum cost, gain 1 Glory.",-,-
+c01-04 Sisko 25,Core Box,Sisko,Ship,U.S.S. Rio Grande,Starfleet,"Available
+---
+Play - Action: Deploy this ship.
+---
+Play - Free: Gain 1 Dilithium. Then you may either: beam a card to a ship OR recall a card beamed to a ship.
+---
+Play - Action: Send an Away Team to a Location where you have a Ship.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.",-,-
+c01-04 Sisko 26,Core Box,Sisko,Mission,A Call to Arms,-,"Goal - Have 4 Ship deployed. Have Influence at 7+ OR Military at 7+.
+---
+Reward - Enlist a Development, reducing the cost by 1 Dilithium or 1 Latinum for each Starbase you have in play.",-,4.0
+c01-04 Sisko 27,Core Box,Sisko,Mission,Bajor's Application to the Federation.,-,"Goal - Have 2 Starfleet (excluding your Captain) and 3 Bajoran in play. Have a Ship at Bajor.
+---
+Reward - Trigger the control operation of one of your controlled Location. Refresh Bajor.",-,5.0
+c01-04 Sisko 28,Core Box,Sisko,Mission,Contacting the Dominion,-,"Goal - Have 3 Dominion/Changeling in play.
+---
+Reward - Gain 3 Influence, Scan 1 of either Person, Cargo, or Ship. Draw 2 cards.",-,3.0
+c01-05 Sela 01,Core Box,Sela,Captain,Sela,"Romulan
+Human
+Shady","Captain
+---
+Away Teams: 4
+---
+Reaction - After attacking your opponent, gain 1 Dilithium/Latinum.
+---
+Activation - Action: Discard either Infiltrate or Conquer and spend 3 Latinum to scan for either Klingon, Vulcan, or Starfleet.
+---
+Endgame - Score 1 for each of your Attack cards, excluding cards with Romulan/Reman.",-,Endgame
+c01-05 Sela 02,Core Box,Sela,Ship,I.R.W. Goraxus,"Romulan
+Cloak","Deployed
+---
+Play - Action: Deploy this ship. You may send an Away Team to a Location, ignoring any opponent Ship.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Promote a Person from your hand to Duty Officer.",Military,-
+c01-05 Sela 03,Core Box,Sela,Ship,I.R.W. Valdore,"Romulan
+Attack
+Cloak","Development - Cost: 5 Dilithium.
+---
+Play - Action: Deploy this ship. You may send an Away Team to a Location, ignoring any opponent Ship.
+---
+Activation - You may spend 1 Dilithium to warp this ship and you may beam a card here.
+---
+Activation - Attack: Spend 2 Dilithium to draw a card and force your opponent to dismiss a Ship.",Any,4.0
+c01-05 Sela 04,Core Box,Sela,Person,Donatra,Romulan,"Development - Cost: 2 Dilithium.
+---
+Play - Free: Draw 3 cards. For each: spend 1 Dilithium OR discard it. Refresh a Ship.
+---
+Activation - Discard a card to warp a Ship.
+---
+Activation - Dismiss a ship to draw 2 cards.",-,Military
+c01-05 Sela 05,Core Box,Sela,Person,Proconsul Neral,"Communication
+Imperial
+Romulan","Development - Cost: 2 Dilithium.
+---
+Play - Action: Find any card. You may free play an Incident. You may discard a Romulan to promote this card to Duty Officer.
+---
+Reaction - After you take control of a Location, discard a card to gain an Action.",Influence,Influence
+c01-05 Sela 06,Core Box,Sela,Person,Shizon,"Imperial
+Attack
+Reman
+Human","Development - Cost: 3 Dilithium.
+---
+Play - Action, Attack: Your opponent takes an Incident. You may spend 2 Latinum to scan for a Synthetic. You may free play the Scimitar (from your hand).
+---
+Resupply - Log a Romulan from your hand or Discard pile, if able. If you do, gain 1 Military.
+---
+Activation - Action, Attack: Gain 1 Military. Your opponent takes an Incident.",-,3.0
+c01-05 Sela 07,Core Box,Sela,Ship,Scimitar,"Attack
+Reman
+Cloak","Development - Cost: 5 Dilithium.
+---
+Play - Action: Find a Romulan and destroy the found card. Beam a card to Remus. If you do both, deploy this ship.
+---
+Activation - Warp this ship.
+---
+Activation - Attack, Requires 7 Military: Log an opponent Location. Gain 1 Glory for each Skill icon the logged card has. Dismiss this ship.
+---
+Activation - Requires 9 Military: Take control of this ship's (neutral) Location.",Military,4.0
+c01-05 Sela 08,Core Box,Sela,Cargo,Forced Singularity,"Romulan
+Anomaly
+Ongoing","Development - Cost: Dismiss 1 deployed Ship.
+---
+Play - Action: You may discard a card to find an Engineer/Ops. Junk a card from the Market. Spend 2 Dilithium to deploy this card.
+---
+Passive - Requires 3 Military: You may have an additional Person on duty.
+---
+Activation - Discard an Engineer to draw 2 cards and put one of them on the top of you deck.",-,Research
+c01-05 Sela 09,Core Box,Sela,Directive,Confiscate,-,"Reserve
+---
+Play - Action: Spend 4 Dilithium to gain a Ship.
+---
+Play - Action: Spend 2 Dilithium to gain a Cargo.
+---
+Play - Free: Gain 1 Latinum.",-,-
+c01-05 Sela 10,Core Box,Sela,Directive,Conquer,-,"Reserve
+---
+Play - Action: You may discard a Person and take an Incident to send 2 Away Teams to a Location where you have a Ship. You may dismiss a Ship to gain a Person/Ship/Ally.",Any,-
+c01-05 Sela 11,Core Box,Sela,Directive,Imperial Pride,-,"Reserve
+---
+Play - Action: Remove an Away Team from 3 different controlled Location to look at the top 2 Encounter. Take one of them and return the other to the bottom of its deck.
+---
+Play - Action: Spend 10 Dilithium and log a controlled Location to take the top Encounter. If the logged card shares no traits with you Captain, gain 1 Influence.",-,-
+c01-05 Sela 12,Core Box,Sela,Person,T'Pel,"Ambassador
+Romulan
+Vulcan
+Spy","Reserve
+---
+Play - Action, Requires 4 Influence: Spend 1 Latinum to trigger the control operation of one of your controlled Location. Draw a card.
+---
+Passive - Increase your hand size by 1.",-,-
+c01-05 Sela 13,Core Box,Sela,Incident,Energy Drain,,"Reserve
+---
+Play - Action: Spend 2 Dilithium to return this card. If you have an Engineer in play, gain an Action.",-,-2.0
+c01-05 Sela 14,Core Box,Sela,Person,Tomalak,"Romulan
+Attack","Reserve
+---
+Play - Action, Attack: Spend 2 Dilithium to gain a Ship. Dismiss all your opponent's Starfleet Duty Officers. If any were dismissed, force them to discard a card.
+---
+Activation - Spend 1 Dilithium to draw a Ship from your Discard pile.
+---
+Activation - Discard a card to draw an Attack from your Discard pile.",-,-
+c01-05 Sela 15,Core Box,Sela,Cargo,Disruptor Rifles,"Romulan
+Weapon
+Attack","Available
+---
+Play - Action, Attack: Discard a Romulan. If you do, up to twice: remove an opponent Away Team from a neutral Location where you have a Ship. Gain 1 Glory for each Away Team removed. You may junk a card from the Market.
+---
+Play - Action: Gain 1 Military. Junk a card from the Market.",-,-
+c01-05 Sela 16,Core Box,Sela,Person,Sub-Commander T'Rul,"Engineer
+Romulan","Available
+---
+Play - Free: Draw a card. You may discard a card to draw a Cloak from your Discard pile.
+---
+Reaction - After putting a Cloak into play, gain 1 Latinum.",-,-
+c01-05 Sela 17,Core Box,Sela,Ship,I.R.W. Khazara,"Romulan
+Cloan","Available
+---
+Play - Action: Deploy this ship. You may send an Away Team to a Location, ignoring any opponent Ship.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.",Influence,-
+c01-05 Sela 18,Core Box,Sela,Person,General Movar,"Romulan
+Ops","Available
+---
+Play - Action: Discard an Attack and spend 1 Dilithium to scan for a Shady.
+---
+Resupply - Draw a card for every 2 Shady you have in play (max 4 cards).
+---
+Activation - Take an Incident to gain 1 Dilithium. If you do, you may free play an Attack.",-,-
+c01-05 Sela 19,Core Box,Sela,Location,Remus,"Attack
+Reman","Available
+---
+Play - Action: Take control of this location.
+---
+Control - Attack: Force your opponent to discard a card.
+---
+Resupply - Gain 1 Dilithium. You may discard a Reman to gain an additional 2 Dilithium.",-,-
+c01-05 Sela 20,Core Box,Sela,Location,Romulus,"Imperial
+Romulan","Available
+---
+Play - Action: Take control of this location.
+---
+Control - You may free play a Ship.
+---
+Activation - If you have an Away Team here, draw a card. IF you have 3+ Total Away Team on 1 or more controlled Location, draw a card.","Military
+Influence",-
+c01-05 Sela 21,Core Box,Sela,Directive,Infiltrate,-,"Available
+---
+Play - Free: You may warp up to 3 of your Ship with Cloak.
+---
+Play - Action: Discard 2 cards and spend 1 Dilithium to gain a Person/Cargo/Ally.",-,-
+c01-05 Sela 22,Core Box,Sela,Directive,Utilise,-,"Discard
+---
+Play - Action: Gain 1 Dilithium, and 2 Dilithium for each controlled Location you have in play.
+---
+Play - Action: Gain on one Specialty track for each matching Skill icon you have in play (excluding beamed cards).",-,-
+c01-05 Sela 23,Core Box,Sela,Ship,I.R.W. Terix,"Romulan
+Cloak","Discard
+---
+Play - Action: Deploy this ship. You may send an Away Team to a Location, ignoring any opponent Ship.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.",Research,-
+c01-05 Sela 24,Core Box,Sela,Ally,Remans,"Telepath
+Security
+Reman","Discard
+---
+Play - Free: Put a card on the top of your deck to send an Away Team to a Location. Then either: log this card OR your opponent may draw a card.",-,-
+c01-05 Sela 25,Core Box,Sela,Mission,Romulan Might,-,"Goal - Have Influence at 6+ and Military at 6+.
+---
+Reward - Enlist a Development. Find an Attack.",-,4.0
+c01-05 Sela 26,Core Box,Sela,Mission,The Reunification Plot,-,"Goal - Have 4 Vulcan in play.
+---
+Reward - Gain 3 Influence. Draw a card for each Shady you have in play. You may free play an Incident. You may junk card from the Market.",-,4.0
+c01-05 Sela 27,Core Box,Sela,Mission,The Duraw Plot,-,"Goal - Have 1+ Klingon on the same Ship that has Cloak.
+---
+Reward - Gain 1 Military for each Cloak in play. Gain 2 Glory from the supply (not the Stardate card) for each Klingon in play. Dismiss one Cloak and all beamed Klingon.",-,1.0
+c01-06 Burnham 01,Core Box,Burnham,Captain,Michael Burnham,"Starfleet
+Scientist
+Human","Captain
+---
+Away Teams: 5
+---
+Passive - During your Clean-up step, remove 1 Glory from the Stardate card and place 2 Dilithium on a card in the Market instead.
+---
+Activation - Spend 3 Dilithium to gain an Ally and 1 Glory.",-,Research
+c01-06 Burnham 02,Core Box,Burnham,Status,Inert Dilithium,-,"Status
+---
+Passive - Increase your hand size by 1.
+---
+Passive - Any Dilithium you gain, except from the Market, must be place on this card, unavailable to be spend. If an effect allows you to recrystallise Dilithium, move it from here to your supply.
+---
+Passive - You cannot spend Glory as Dilithium.",-,-
+c01-06 Burnham 03,Core Box,Burnham,Ship,U.S.S. Discovery-A,"Starfleet
+Anomaly","Deployed
+---
+Play - Action: Deploy this ship. You may discard a card to free play a Person.
+---
+Activation - Warp this ship, the refresh this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Promote a Person from your hand to Duty Officer.
+---
+Passive - Your Dilithium cannot be stolen.","Research
+Influence",-
+c01-06 Burnham 04,Core Box,Burnham,Ship,U.S.S. Federation,"Starfleet
+Starbase","Development - Cost: 6 Dilithium, OR free if Admiral Vance is your Duty Officer.
+---
+Play - Action: Deploy this ship. You may spend 1 Dilithium to warp this ship.
+---
+Activation - Promote a Person from your hand to Duty Officer.
+---
+Endgame - Score 1 for each of your cards with Influence/Military (scoring).","Wild
+Wild","Endgame
+Research"
+c01-06 Burnham 05,Core Box,Burnham,Person,Admiral Vance,"Starfleet
+Human","Development - Cost: 2 Dilithium.
+---
+Play - Action: Gain an Ally. Draw a card.
+---
+Activation - If you have an Away Team on a controlled Location, draw a card. IF you have 3+ total Away Team on 1 or more controlled Location, draw a card. You may discard an Incident to gain an Action.","Influence
+Military",2.0
+c01-06 Burnham 06,Core Box,Burnham,Person,Adira Tal,"Starfleet
+Human
+Trill","Development - Cost: 2 Dilithium, and have 7+ Research.
+---
+Play - Free: Log a card from your hand or Discard pile to find any card.
+---
+Reaction - When you would gain a card, scan 2 of the same suit instead and gain 1 Glory.
+---
+Passive - You may have an additional Person with Scientist/Engineer on duty.",-,2.0
+c01-06 Burnham 07,Core Box,Burnham,Person,Jett Reno,"Starfleet
+Engineer
+Human","Development - Cost: Dismiss a deployed Ship.
+---
+Play - Free: Gain 3 Dilithium.
+---
+Play - Recrystallise 2 Dilithium.
+---
+Activation - Take an Incident to gain a Cargo or a Ship and discard the gained card.",-,3.0
+c01-06 Burnham 08,Core Box,Burnham,Person,Doctor Kovish,Human,"Development - Cost: Find an Encounter and log it.
+---
+Play - Action: Draw a card. For each Anomaly you have in play, gain 1 Research. For each Ambassador you have in play, gain 1 Influence. For each Alien you have in play, gain 1 Military.
+---
+Passive - Increase your hand size by 1 for each of Research / Influence / Military you have a4 5+.",Research,Research
+c01-06 Burnham 09,Core Box,Burnham,Location,Earth,Human,"Development - Cost: Have 8+ Research and 5+ Influence.
+---
+Play - Action: Take control of this location.
+---
+Control - You may gain a Person.
+---
+Activation - Gain 1 Influence and 1 Military.",-,5.0
+c01-06 Burnham 10,Core Box,Burnham,Location,Theta Zeta,Anomaly,"Development - Cost: Have 12+ Research.
+---
+Play - Action: Take control of this location.
+---
+Control - Recrystallise all Dilithium. Log Inert Dilithium (from play). Gain 4 Glory.
+---
+Passive - You cannot send Away Teams here.
+---
+Endgame - Score 1 for every 2 Dilithium you have.",-,Endgame
+c01-06 Burnham 11,Core Box,Burnham,Cargo,Trance Worm,"Creature
+Alien","Development - Cost: 3 Latinum.
+---
+Play - Action: Junk a card from the Market. Spend 1 Latinum to gain a Person or a Cargo and log it. IF the gained card has 3 or more traits, gain 1 Glory.",-,2.0
+c01-06 Burnham 12,Core Box,Burnham,Location,Ni'var,"Romulan
+Vulcan","Reserve
+---
+Play - Action: Take control of this location. Remove 1 Glory from the Stardate card.
+---
+Control - You may find Inspire OR scan for an Ambassador.
+---
+Passive - This card has 1 Research for each Vulcan, 1 Influence for each Ambassador, and 1 Military for each Romulan you have in play (including traits on this card).",???,-
+c01-06 Burnham 13,Core Box,Burnham,Person,Hugh Culber,"Starfleet
+Doctor
+Human","Reserve
+---
+Play - Action: You may find a Person/Incident. You may free play an Incident to gain 1 Glory.
+---
+Reaction - After taking an Incident, discard a Person/Directive to return it and gain 1 Research.",-,-
+c01-06 Burnham 14,Core Box,Burnham,Cargo,Grudge,Creature,"Reserve
+---
+Play - Free: You may free play Cleveland Booker or Book's Ship. You may beam this card and another card to Book's Ship. Junk a card from the Market.",-,-
+c01-06 Burnham 15,Core Box,Burnham,Ship,Book's Ship,Cloak,"Reserve
+---
+Play - Deploy this ship. You may send an Away Team to a Location, ignoring any opponent Ship.
+---
+Activation - Discard a card to warp this ship.
+---
+Activation - Discard a card to recall a card beamed here.
+---
+Reaction - When an attack would dismiss your Duty Officer, dismiss a card beamed here to ignore the effect.",-,-
+c01-06 Burnham 16,Core Box,Burnham,Directive,Inspire,-,"Available
+---
+Play - Action: Draw 2 cards and discard one of the drawn cards. Gain on one Specialty track for each matching Skill icon you have in play (excluding beamed cards).",-,-
+c01-06 Burnham 17,Core Box,Burnham,Directive,Recover,-,"Available
+---
+Play - Action: Take an Incident to gain a Ship from the Junk.
+---
+Play - Action: Spend 1 Latinum to gain a Cargo.",-,-
+c01-06 Burnham 18,Core Box,Burnham,Directive,Strange New Worlds,-,"Available
+---
+Play - Action: Select a controlled Location. If there is 1+ Away Team and 1+ Ship there, look at the top 2 Encounter. Take one fo them and return the other to the bottom of the its deck. Log the selected Location to gain 1 Research.",-,-
+c01-06 Burnham 19,Core Box,Burnham,Directive,Maximum Warp,-,"Available
+---
+Play - Free: Draw 2 cards and discard one of the drawn cards. You may Warp a Ship.",-,-
+c01-06 Burnham 20,Core Box,Burnham,Person,Keyla Detmer,"Synthetic
+Starfleet
+Human
+Pilot","Available
+---
+Play - Action: Discard the top card of your deck. You may send discard a card to warp a Ship and send an Away Team to the Location you warped to.
+---
+Passive - This card has 2 Any (skill icon).","???
+???",-
+c01-06 Burnham 21,Core Box,Burnham,Person,Joann Owosekun,"Starfleet
+Human
+Ops","Available
+---
+Play - Action: You may send an Away Team to the U.S.S. Discovery-A's Location. You may beam a card from your hand or Discard pile to the U.S.S. Discovery-A. If you do both, gain 1 Glory.
+---
+Resupply - Discard the top card of your deck and gain 1 Latinum.
+---
+Activation: Exhaust a Ship to refresh its Location.",-,-
+c01-06 Burnham 22,Core Box,Burnham,Person,Sylvia Tilly,"Scientist
+Starfleet
+Engineer
+Human","Available
+---
+Play - Action: For each Scientist you have in play (excluding your Captain), draw a card. For Engineer in play, refresh a Captain/Cargo/Ship.
+---
+Play - Free: Log a card from your hand or Discard pile to recrystallise 1 Dilithium.
+---
+Reaction - After gaining a Person, discard an Incident to send an Away Team to a Location.",-,-
+c01-06 Burnham 23,Core Box,Burnham,Person,Cleveland Booker,"Telepath
+Business","Available
+---
+Play - Free: Gain 1 Dilithium and 1 Latinum.
+---
+Play - Action: Spend 1 Dilithium to gain a Person or a Cargo.
+---
+Activation - For each Creature you have in play either: draw a card OR gain 1 Glory.",-,-
+c01-06 Burnham 24,Core Box,Burnham,Person,Paul Stamets,"Scientist
+Starfleet
+Human","Available
+---
+Play - Action: You may take an Incident to gain 2 Research. For each deployed Ship you have in play, recrystallise 1 Dilithium.
+---
+Activation - Action: Dismiss U.S.S. Discovery-A and this card and spend 3 Dilithium to take the top Encounter.",Research,-
+c01-06 Burnham 25,Core Box,Burnham,Person,Saru,"Starfleet
+Kelpien","Available
+---
+Play - Action: You may take an Incident to scan for a Kelpien. Find a Directive. You may free play the found card.
+---
+Resupply - Requires 2 Influence: Reveal your hand. If you have at least 2 Person in your hand, gain an Action.",-,-
+c01-06 Burnham 26,Core Box,Burnham,Incident,Subspace Phenomenon,-,"Incident Deck
+---
+Play - Action: Discard a card to return this card. If the discarded card has Research draw 2 cards and discard one of them.
+---
+Play - Action: If you have a Time-Travel in play, return this card and draw 2 cards and discard one of them.",-,-2.0
+c01-06 Burnham 27,Core Box,Burnham,Mission,Investigate the Burn,-,"Goal - Have 2 Incident, a Scientist, and a Kelpien on the same Ship, and Research at 5+.
+---
+Reward - Take the top Encounter and out it on the top of your deck. Recrystallise up to 2 Dilithium.",-,4.0
+c01-06 Burnham 28,Core Box,Burnham,Mission,Reunited the Federation,-,"Goal - Have an Anomaly logged. Have 3 Starfleet in play (excluding your Captain). Have 3 Different Species (excluding cards with Starfleet) on the same Ship.
+---
+Reward - Draw the top Location and take control of it.",-,3.0
+c01-06 Burnham 29,Core Box,Burnham,Mission,Dealing with the Emerald Chain,-,"Goal - Have 2 Business/Orion in play. Have 2 Shady logged.
+---
+Reward - You may free play an Incident to gain 2 Glory, 2 Dilithium, and 2 Latinum.",-,6.0
+c02-01 Georgiou 01,To Boldly Go,Georgiou,Captain,Philippa Georgiou,"Starfleet
+Human","Captain
+---
+Away Teams: 5
+---
+Activation - Remove an Away Team from a Location to return an Incident.
+---
+Endgame - Score 1 for every 3 cards you have in play.",-,Endgame
+c02-01 Georgiou 02,To Boldly Go,Georgiou,Ship,U.S.S. Shenzhou,Starfleet,"Play - Action: Deploy this ship. Warp this ship OR beam a card here.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Promote a Person from your hand to Duty Officer.",Military,-
+c02-01 Georgiou 03,To Boldly Go,Georgiou,Location,Kaminar,Kelpien,"Development - Cost: 3 Dilithium.
+---
+Play - Action: Take control of this location.
+---
+Control - Find a Kelpien. If the found card is a Person, you may promote them to Duty Officer.
+---
+Activation - You may spend 1 Dilithium to free play a Kelpien. If you have an Away Team here, draw a card.
+---
+Activation - Return an Incident.",-,Research
+c02-01 Georgiou 04,To Boldly Go,Georgiou,Person,Ambassador Sarek,"Ambassador
+Telepath
+Vulcan","Development - Cost: 1 Dilithium, 1 Latinum.
+---
+Play - Action: Gain 1 Influence for each Vulcan you have in play (including this card). You may promote Ambassador Sarek and optionally another Person from your Staging Area to Duty Officer(s).
+---
+Passive - You may have up to two additional Person on duty.",Influence,2.0
+c02-01 Georgiou 05,To Boldly Go,Georgiou,Encounter,Red Angel,"Time Travel
+Anomaly
+Ongoing","Development - Cost: 3 Dilithium, and take an Incident.
+---
+Play - Deploy this card.
+---
+Passive - Whenever scanning, include cards in the Junk too.
+---
+Activation - Take an Incident to gain an Action. You may recall a non-Time Travel, non-Encounter card from your Staging Area.
+---
+Endgame - Score 1 for each of your Anomaly cards.",Research,-
+c02-01 Georgiou 06,To Boldly Go,Georgiou,Location,Binary Stars Comms Relay,"Communication
+Starfleet
+Klingon","Development - Cost: 3 Dilithium, and dismiss a Duty Officer.
+---
+Play - Action: Take control of this location.
+---
+Control - Up to three times: log a Starfleet from your hand to scan for a Klingon.
+---
+Reaction - After deploying a Ship, gain 1 Glory.",-,Military
+c02-01 Georgiou 07,To Boldly Go,Georgiou,Cargo,An Old Telescope,"Scientist
+Ancient
+Ongoing","Development - Cost: 3 Latinum.
+---
+Play - Deploy this card.
+---
+Reaction - After gaining Research, gain 1 Glory.
+---
+Passive - After putting an Encounter into play, draw a card.",-,Research
+c02-01 Georgiou 08,To Boldly Go,Georgiou,Cargo,Thruster Pack,Ongoing,"Development - Cost: 2 Dilithium.
+---
+Play - Free: Deploy this card. You may find up to 3 Person and beam them here. If you beamed at least 2, gain an Action.
+---
+Activation - Recall a Person beamed here.
+---
+Activation - Spend 1 Dilithium to beam a Person here from your hand or Discard pile. You may spend 1 Dilithium to refresh this card.
+---
+Passive - If no cards are beamed here, dismiss this card.",-,3.0
+c02-01 Georgiou 09,To Boldly Go,Georgiou,Person,Admiral Anderson,"Starfleet
+Human","Development - Cost: 4 Dilithium.
+---
+Play - Action: Enlist a Development and draw a card.
+---
+Passive - After putting a Starfleet into play (including this card), you may draw a card.",-,Military
+c02-01 Georgiou 10,To Boldly Go,Georgiou,Directive,Set a Course,-,"Reserve
+---
+Play - Action: Discard up to 3 Person to send the same number of Away Teams to the same Location.
+---
+Play - Free: Draw a card, then discard a card. Warp up to 2 of your Ship.",-,-
+c02-01 Georgiou 11,To Boldly Go,Georgiou,Directive,First Contact,-,"Reserve
+---
+Play - Action: Scan 2 of Ally. Log this card.",-,-
+c02-01 Georgiou 12,To Boldly Go,Georgiou,Person,Lt. Saru,"Starfleet
+Kelpien","Reserve
+---
+Play - Action: You may take an Incident to scan for a Kelpien. Find a Directive. If the card was found in your Reserve deck, take an Incident. You may free play the found card.
+---
+Resupply - Requires 3 Research: Reveal your hand. If you have a least 2 Person in your hand, gain an Action.",-,-
+c02-01 Georgiou 13,To Boldly Go,Georgiou,Person,Cmdr. Burnham,"Starfleet
+Scientist
+Attack
+Human","Reserve
+---
+Play - Free, Attack, Requires Military > Research: Dismiss a Duty Officer. Force your opponent to either: log (one of) their Duty Officer(s) OR dismiss (one of) their Duty Officer(s) and you gain 3 Glory.
+---
+Play - Action, Requires Research > Military: Discard a non-Starfleet card to scan for Any Species matches the discarded card.
+---
+Resupply - Take an Incident. Draw a card. Gain 1 Research / Military.",Research,-
+c02-01 Georgiou 14,To Boldly Go,Georgiou,Ship,Class C Shuttlecraft,Starfleet,"Available
+---
+Play - Action: Send an Away Team to a Location where you have a Ship. You may put this card on the top of your deck.
+---
+Play - Free: Gain 1 Dilithium. Then you may either: beam a card to a Ship OR recall a card beamed to a Ship.",-,-
+c02-01 Georgiou 15,To Boldly Go,Georgiou,Directive,Analyse,-,"Available
+---
+Play - Action: Take an Incident to gain a Ship.
+---
+Play - Action - Discard 2 cards to gain a Cargo.
+---
+Play - Free: Gain 2 Dilithium.",-,-
+c02-01 Georgiou 16,To Boldly Go,Georgiou,Directive,Recruit,-,"Available
+---
+Play - Action: Put a card on the top of your deck to gain a Person.
+---
+Play - Action: Take an Incident to gain an Ally.",-,-
+c02-01 Georgiou 17,To Boldly Go,Georgiou,Directive,Strange New Worlds,-,"Available
+---
+Play - Action: Select a controlled Location. If there is 1+ Away Team and 1+ Ship there, look at the top 2 Encounter. Take one fo them and return the other to the bottom of the its deck. Log the selected Location to gain 1 Research.",-,-
+c02-01 Georgiou 18,To Boldly Go,Georgiou,Directive,Utilise,-,"Available
+---
+Play - Action: Gain 1 Dilithium, and 2 Dilithium for each controlled Location you have in play.
+---
+Play - Action: Gain on one Specialty track for each matching Skill icon you have in play (excluding beamed cards).",-,-
+c02-01 Georgiou 19,To Boldly Go,Georgiou,Location,Vulcan Science Academy,"Scientist
+Vulcan","Available
+---
+Play - Action: Take control of this location.
+---
+Control - You may gain a Person. If the gained card is Vulcan, gain 2 Dilithium. If the gain card is Scientist, gain 1 Glory. If they gained card has both traits, gain both rewards.
+---
+Activation - If you have an Away Team here, draw a card. If you have 3+ total Away Teams on 1 or more controlled Location, draw a card.",Research,-
+c02-01 Georgiou 20,To Boldly Go,Georgiou,Person,Danby Conner,"Starfleet
+Human
+Ops","Available
+---
+Play - Action: Gain 1 Military for each Person with Starfleet you have in play. If you gained 3 or more, log this card.
+---
+Activation - Log a card from your hand to either draw a card OR gain 2 Dilithium.",-,-
+c02-01 Georgiou 21,To Boldly Go,Georgiou,Person,Lt. Detmer,"Starfleet
+Human
+Pilot","Available
+---
+Play - Action: Discard the top card of your deck. You may discard a card to warp a Ship and send an Away Team to the Location you warped to.
+---
+Reaction - After warping a Ship, draw a card.
+---
+Passive - This card has 1 Wild skill.",???,-
+c02-01 Georgiou 22,To Boldly Go,Georgiou,Person,Kamran Gant,"Starfleet
+Security
+Attack
+Human","Available
+---
+Play - Action: Send an Away Team to a Location. If it is a controlled Location, gain 1 Dilithium.
+---
+Clean-Up - If there is a Spy in the Market, gain it to your hand, and log this card.
+---
+Activation - Attack: You may refresh a Ship. For each Directive you have in play: you may remove an opponent Away Team from a Location where you have a Ship.",Military,-
+c02-01 Georgiou 23,To Boldly Go,Georgiou,Incident,Hostile Contact,-,"Available
+---
+Play - Action: Discard a card to return this card. If the discarded card has Military gain, 2 Dilithium.
+---
+Play - Action: If you have a Communication in play, return this card and gain 2 Dilithium.",-,-2.0
+c02-01 Georgiou 24,To Boldly Go,Georgiou,Mission,Call in the Reinforcements,-,"Goal - Have Military at 6+, Have Cmdr. Burnham on duty, and an Incident beamed to the U.S.S. Shenchou.
+---
+Reward - Scan 1 of Ship and free play the gained card. Gain 3 Dilithium. If you have 1+ Klingon in play (excluding beamed cards), dismiss Cmdr. Burnham and gain 2 Glory.",-,3.0
+c02-01 Georgiou 25,To Boldly Go,Georgiou,Mission,Hardly a Negotiation,-,"Goal - Have 3 Person (excluding cards with Starfleet) on the same Ship, and have Research, Influence, and Military all at 1+.
+---
+Reward - You may enlist a Development. If you have 2+ Vulcan in play, either draw a card OR gain an Action.",-,3.0
+c02-01 Georgiou 26,To Boldly Go,Georgiou,Mission,Gazing at the Stars,-,"Goal - Have Research at 7+, and 2 Alien in play.
+---
+Reward - Enlist Kaminar for free. Draw a card for each Scientist you have in play.",-,3.0
+c02-02 Soval 01,To Boldly Go,Soval,Captain,Soval,"Ambassador
+Telepath
+Vulcan","Captain
+---
+Away Teams: 4
+---
+Activation - Dismiss a Human to draw 2 cards.
+---
+Endgame - Score 1 for each of your Person cards, excluding cards with Vulcan.",-,Endgame
+c02-02 Soval 02,To Boldly Go,Soval,Status,Vulcan Science Directorate,-,"Reaction - After putting an Anomaly or a Scientist into play, gain 2 Dilithium or 1 Glory.
+---
+Passive - After putting a Time Travel into play, log this card.",-,-
+c02-02 Soval 03,To Boldly Go,Soval,Location,Vulcan,Vulcan,"Controlled Location
+---
+Activation - If you have an Away Team here, draw a card. If you have 3+ total Away Teams on 1 or more controlled Location, draw a card.
+---
+Passive - You may have an additional Person with Vulcan on duty.","Research
+Influence",-
+c02-02 Soval 04,To Boldly Go,Soval,Location,Mount Seleya,"Transcendent
+Vulcan","Development - Cost: 2 Dilithium, and have 1+ Vulcan logged.
+---
+Play - Action: Take control of this location/
+---
+Control - Draw a card for each Vulcan in your Log.
+---
+Activation - Discard a Person to find any card.
+---
+Endgame - Score 1 for each Telepath you have in play (including your Captain).","Research
+Influence",Endgame
+c02-02 Soval 05,To Boldly Go,Soval,Directive,Vulcan Hello,"Communication
+Attack","Development - Cost: 4 Dilithium.
+---
+Play - Action, Attack: Dismiss an opponent Ship at a neutral Location and you may send an Away Team to the same Location. If your opponent has Klingon in play, gain 1 Glory.
+---
+Play - Free, Requires 9 Military: Select a neutral Location no secured by your opponent. Take control of it and log this card.","Military
+Military",2.0
+c02-02 Soval 06,To Boldly Go,Soval,Person,T'Pau,"Telepath
+Vulcan","Development - Cost: 2 Glory.
+---
+Play - Action: Draw a card. Both players my return an Incident from their hand or Discard pile. For each Incident returned, gain 1 Glory. You may promote a Person from your hand or Staging Area to Duty Officer (can be this card).
+---
+Passive - This card has 2 Wild Skill Icon.","???
+???",4.0
+c02-02 Soval 07,To Boldly Go,Soval,Person,Minister Kuvak,Vulcan,"Development - Cost: 2 Latinum.
+---
+Play - Free: Gain 1 Dilithium for each card you have beamed to a Ship / Location.
+---
+Passive - Increase your hand size by 1 for every non-Vulcan controlled Location you have in play (max 3).",-,Influence
+c02-02 Soval 08,To Boldly Go,Soval,Cargo,Kir'Shara,Path of Surak,"Development - Cost: 2 Dilithium, 1 Latinum, and dismiss a Duty Officer.
+---
+Play - Free: If you have 7+ Vulcan in play (excluding your Captain), take an Incident to take the top Encounter card. Log this card.",-,Research
+c02-02 Soval 09,To Boldly Go,Soval,Directive,Vulcan High Command,Vulcan,"Development - Cost: 3 Dilithium.
+---
+Play - Free: Send an Away Team to a Location where you have a Ship. you may find a Vulcan.
+---
+Play - Action: Scan for a Starfleet and draw 2 cards. Log this card.",-,Military
+c02-02 Soval 10,To Boldly Go,Soval,Ship,Seleya (D'Kye),Vulcan,"Reserve
+---
+Play - Action: Deploy and warp this ship. You may discard a card to gain 1 Research.
+---
+Play - Action, Requires 5 Military: Deploy and warp this ship. You may send an Away Team to this ship's Location.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Promote a Person from your hand to Duty Officer.",-,-
+c02-02 Soval 11,To Boldly Go,Soval,Location,Paan Mokar,"Andorian
+Vulcan","Reserve
+---
+Play - Action: Take control of this location.
+---
+Control - You may free play a Cargo or a Ship.
+---
+Clean-Up - If there are no Away Teams here, dismiss this card.
+---
+Activation - Discard a card with at least one of Weapon / Military Skill / Military Focus to send an Away Team here and gain 1 Influence.
+---
+Endgame - Score 4 if 2 or more Away Teams are here.",-,Endgame
+c02-02 Soval 12,To Boldly Go,Soval,Person,V'Lar,"Ambassador
+Vulcan","Reserve
+---
+Play - Action: Spend 1 Latinum to gain an Ally to your hand.
+---
+play - Free: Take an Incident to draw a card and send an Away Team to a Location where you have a Ship.
+---
+Reaction - After putting an Ally into play, draw a card, gain 1 Glory and 1 Latinum.",Influence,-
+c02-02 Soval 13,To Boldly Go,Soval,Cargo,Plomeek Tea,"Beverage
+Vulcan","Reserve
+---
+Play - Action: you may refresh you Captain and a Duty Officer. You may spend 1 Latinum to swap a card in the Junk with the card of the same suit in the Market.
+---
+Play - Gain 1 Latinum.",-,-
+c02-02 Soval 14,To Boldly Go,Soval,Incident,Energy Drain,-,"Reserve
+---
+Play - Action: Spend 2 Dilithium to return this card. If you have an Engineer in play, gain an Action.",-,-2.0
+c02-02 Soval 15,To Boldly Go,Soval,Person,Stel,"Security
+Vulcan
+Attack","Available
+---
+Play - Action: Send an Away Team to a controlled Location. You may beam a card to a deployed Ship.
+---
+Play - Free, Attack: Force your opponent to dismiss a Romulan / Andorian. If they do, gain 1 Glory. You may log a card from your hand or Discard pile.
+---
+Activation - You may exhaust a deployed Ship to recall a card beamed to it. You may free play an Incident.",-,-
+c02-02 Soval 16,To Boldly Go,Soval,Person,Muroc,Vulcan,"Available
+---
+Play - Action: Choose 2 of the following: gain 1 Influence OR gain 1 Military OR send an Away Team to a Location where you have a Ship. If you have 6+ Influence you may choose all 3 instead. If you do, log this card.
+---
+Activation - Free play a Ship with Vulcan
+---
+Activation - Draw a Ship from your Discard pile.",Military,-
+c02-02 Soval 17,To Boldly Go,Soval,Directive,Analyse,-,"Available
+---
+Play - Action: Take an Incident to gain a Ship.
+---
+Play - Action - Discard 2 cards to gain a Cargo.
+---
+Play - Free: Gain 2 Dilithium.",-,-
+c02-02 Soval 18,To Boldly Go,Soval,Directive,Recruit,-,"Available
+---
+Play - Action: Put a card on the top of your deck to gain a Person.
+---
+Play - Action: Take an Incident to gain an Ally.",-,-
+c02-02 Soval 19,To Boldly Go,Soval,Directive,Infinite Diversity in Infinite Combinations,Path of Surak,"Available
+---
+Play - Action: You may remove an Away Team from a controlled Location, log a non-Vulcan Person / Cargo / Ally from your Staging Area, and dismiss a deployed Ship. If you do all three, look at the top 2 Encounter. Take on of them and put it on the top of your deck, and return the other to the bottom of its deck.",-,-
+c02-02 Soval 20,To Boldly Go,Soval,Directive,Advidory,-,"Available
+---
+Play - Free: Spend 1 Dilithium to gain 1 Influence and draw a card. You may beam a Human to a deployed Ship.
+---
+Play - Action: Scan 2 of Person. Log this card.",-,-
+c02-02 Soval 21,To Boldly Go,Soval,Person,Sub-Commander T'Pol,"Starfleet
+Scientist
+Telepath
+Vulcan","Available
+---
+Play - Action: You may spend 2 Dilithium to scan for either Research Skill, Influence Skill, or Military Skill. You may draw a card. You may promote a Person from your hand or Staging Area to Duty Officer (can be this card).
+---
+Resupply - Gain 1 Dilithium OR spend 1 Dilithium to gain 1 Research.
+---
+Activation - Discard a Human / Engineer to draw a Cargo / Directive from your Discard pile.",Research,-
+c02-02 Soval 22,To Boldly Go,Soval,Ally,United Earth,Human,"Available
+---
+Play - Action: Scan for a Human. Log this card.
+---
+Play - Action: Take an Incident to scan 2 of Ally. You may free play the gained card. If you do, log this card.",-,-
+c02-02 Soval 23,To Boldly Go,Soval,Directive,Utilise,-,"Available
+---
+Play - Action: Gain 1 Dilithium, and 2 Dilithium for each controlled Location you have in play.
+---
+Play - Action: Gain on one Specialty track for each matching Skill icon you have in play (excluding beamed cards).",-,-
+c02-02 Soval 24,To Boldly Go,Soval,Ship,Ti'Mur,Vulcan,"Discard
+---
+Play - Action: Deploy this ship. You may discard a card to gain 1 Military.
+---
+Play - Action, Requires 5 Research: Deploy and warp this ship. You may send an Away Team to this ship's Location.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.",-,-
+c02-02 Soval 25,To Boldly Go,Soval,Mission,My Mind to Your Mind,-,"Goal - Have 5 cards with Research / Wild Skill Icon in play (excluding beamed cards).
+---
+Reward - For each Telepath you have in play, either: draw a card OR gain 1 Latinum and you may return an Incident.",-,2.0
+c02-02 Soval 26,To Boldly Go,Soval,Mission,Cooperation with Starfleet,-,"Goal - Have 3 Ship deployed, 3 Starfleet beamed, and 1 Encounter in play.
+---
+Reward - Scan for either Human or Starfleet. You may send 1 Away Team each to up to 3 different Location.",-,4.0
+c02-02 Soval 27,To Boldly Go,Soval,Mission,The Needs of the Many,-,"Goal - Have 5 Person and 2 Ally in play. Have Influence at 5+.
+---
+Reward - Gain an Action. You may recall up to 2 beamed cards. You may log a Duty Officer to enlist a Development.",-,3.0
+c02-03 Kirk 01,To Boldly Go,Kirk,Captain,James T. Kirk,"Starfleet
+Human","Captain
+---
+Away Teams: 5
+---
+Reaction - After putting a Klingon into play, discard a card to gain 1 Military.
+---
+Activation - Put a card on the top of your deck to draw a Directive from your Discard pile.
+---
+Endgame - Score 1 for every second step gained on Research / Influence / Military, whichever is the lowest.",-,Endgame
+c02-03 Kirk 02,To Boldly Go,Kirk,Ship,U.S.S. Enterprise (Refit),Starfleet,"Deployed
+---
+Play - Action: Deploy this ship. Warp this ship OR beam a card here.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Promote a Person from your hand to Duty Officer.",Wild,-
+c02-03 Kirk 03,To Boldly Go,Kirk,Location,Starfleet Headquarters,Starfleet,"Controlled Location
+---
+Special - When you log this card, up to X time, where X is the sequence number on the current Stardate card: send an Away Team to a Location.",Wild,-
+c02-03 Kirk 04,To Boldly Go,Kirk,Directive,What Have I Done,Attack,"Development - Cost: 3 Latinum.
+---
+Play - Action, Attack: Log a deployed Ship to send up to 3 Away Teams to the same Location. If that Location is neutral and now secured, take control of it. Your opponent takes an Incident. Force you opponent to dismiss (one of) their Duty Officer(s). Log this card.",4.0,-
+c02-03 Kirk 05,To Boldly Go,Kirk,Ship,U.S.S. Enterprise-A,Starfleet,"Development - Cost: 6 Dilithium, OR free if the U.S.S. Enterprise (Refit) is logged.
+---
+Play - Action: Deploy this ship. Warp this ship OR beam a card here. You may discard a card to beam a (different) card here.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Promote a Person from your hand to Duty Officer.","Wild
+Wild",4.0
+c02-03 Kirk 06,To Boldly Go,Kirk,Ship,U.S.S. Excelsior,"Starfleet
+Attack","Development - Cost: 6 Dilithium OR free if Hikaru Sulu if your Duty Officer.
+---
+Play - Action, Attack: Deploy this ship. IF the opponent has at least one Ship at a neutral Location, they take an Incident. You may find Set a Course.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Spend 1 Dilithium to recall this ship.","Wild
+Wild",Military
+c02-03 Kirk 07,To Boldly Go,Kirk,Person,Hikaru Sulu,"Starfleet
+Human
+Pilot","Development - Cost: 2 Dilithium.
+---
+Play - Action: Take an Incident to you Discard pile. Send 2 Away Teas to a Location where you have a Ship.
+---
+Reaction - When you would be attacked, exhaust a Ship to ignore the negative effect.",Military,2.0
+c02-03 Kirk 08,To Boldly Go,Kirk,Person,Sarek,"Ambassador
+Telepath
+Vulcan","Development - Cost: 1 Dilithium, 1 Latinum.
+---
+Play - Action: Gain 1 for each Vulcan you have in play (including this card). You may promote Sarek and optionally another Person from your Staging Area to Duty Officer(s).
+---
+Passive - You may have up to two additional Person on duty.",Influence,2.0
+c02-03 Kirk 09,To Boldly Go,Kirk,Location,Vulcan,Vulcan,"Development - Cost: 4 Dilithium.
+---
+Play - Action, Requires 4 Research: Take control of this location.
+---
+Control - You my find a Vulcan. You may draw Utilise from your Discard pile. You may free play an Incident.
+---
+Endgame - Score ? equal to your highest multiplier on your Specialty tracks.","Research
+Research","Endgame
+Influence"
+c02-03 Kirk 10,To Boldly Go,Kirk,Directive,Time Warp,"Time Travel
+Anomaly","Development - Cost: 2 Dilithium, and take an Incident.
+---
+Play - Free: Find any card.
+---
+Play - Free: Recall a non-Time Travel card from your Staging Area.",-,Research
+c02-03 Kirk 11,To Boldly Go,Kirk,Ship,H.M.S. Bounty,"Klingon
+Cloak","Reserve
+---
+Play - Free: Deploy this Ship.
+---
+Play - Free, Requires 5 Influence: Deploy this ship. You may discard an Incident to send an Away Team to a Location, ignoring any opponent Ship.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.",-,-
+c02-03 Kirk 12,To Boldly Go,Kirk,Person,"Montgomery ""Scotty"" Scott","Starfleet
+Engineer
+Human","Reserve
+---
+Play - Free: Find a Ship. If the card was found in your Reserve deck, take an Incident.
+---
+Play - Action: Dismiss a deployed Ship to trigger a controlled Location's control operation and draw a card.
+---
+Activation - Gain 2 Dilithium. Refresh a Ship / Cargo.",-,-
+c02-03 Kirk 13,To Boldly Go,Kirk,Person,Pavel Chekov,"Starfleet
+Attack
+Human
+Ops","Reserve
+---
+Play - Action, Attack: Discard the top card of your deck. Send an Away Team to a Location. If your opponent has at least one Away Team at the same Location, force them to discard a card.
+---
+Reaction - After warping a Ship to a Neutral Location, discard a Person to send an Away Team to the same location, and gain 1 Glory.",-,-
+c02-03 Kirk 14,To Boldly Go,Kirk,Directive,Analyse,-,"Reserve
+---
+Play - Action: Take an Incident to gain a Ship.
+---
+Play - Action - Discard 2 cards to gain a Cargo.
+---
+Play - Free: Gain 2 Dilithium.",-,-
+c02-03 Kirk 15,To Boldly Go,Kirk,Directive,Needs of the Many,-,"Reserve
+---
+Play - Free: Dismiss a deployed Ship or a Duty Officer, then log the dismissed card to enlist a Person from your Development pile. Log this card.",-,-
+c02-03 Kirk 16,To Boldly Go,Kirk,Incident,Subspace Phenomenon,-,"Available
+---
+Play - Action: Discard a card to return this card. If the discarded card has Research draw 2 cards and discard one of them.
+---
+Play - Action: If you have a Time-Travel in play, return this card and draw 2 cards and discard one of them.",-,-2.0
+c02-03 Kirk 17,To Boldly Go,Kirk,Cargo,Levitation Boots,Ongoing,"Available
+---
+Play - Free: Deploy this card. You may beam up to 3 Person from your hand or Discard pile here.
+---
+Activation - Recall a Person beamed here.
+---
+Activation - Spend 1 Dilithium to beam a Person here from your hand or Discard pile.
+---
+Passive - If no cards are beamed here, dismiss this card.",,
+c02-03 Kirk 18,To Boldly Go,Kirk,Directive,Recruit,-,"Available
+---
+Play - Action: Put a card on the top of your deck to gain a Person.
+---
+Play - Action: Take an Incident to gain an Ally.",-,-
+c02-03 Kirk 19,To Boldly Go,Kirk,Directive,Utilise,-,"Available
+---
+Play - Action: Gain 1 Dilithium, and 2 Dilithium for each controlled Location you have in play.
+---
+Play - Action: Gain on one Specialty track for each matching Skill icon you have in play (excluding beamed cards).",-,-
+c02-03 Kirk 20,To Boldly Go,Kirk,Directive,Set a Course,-,"Available
+---
+Play - Action: Discard up to 3 Person to send the same number of Away Teams to the same Location.
+---
+Play - Free: Draw a card, then discard a card. Warp up to 2 of your Ship.",-,-
+c02-03 Kirk 21,To Boldly Go,Kirk,Directive,Strange New Worlds,-,"Available
+---
+Play - Action: Select a controlled Location. If there is 1+ Away Team and 1+ Ship there, look at the top 2 Encounter. Take one fo them and return the other to the bottom of the its deck. Log the selected Location to gain 1 Research.",-,-
+c02-03 Kirk 22,To Boldly Go,Kirk,Person,Nyota Uhura,"Communication
+Starfleet
+Human","Available
+---
+Play - Action: Spend 2 Dilithium to gain a Person / Ally.
+---
+Play - Action, Requires 5 Influence: Spend 2 Dilithium to gain an Alien, including from the Junk.
+---
+Activation - For each Different Species you have in play, excluding cards with Starfleet (max 3 times) you may spend 1 Dilithium to gain 1 Glory.",Influence,-
+c02-03 Kirk 23,To Boldly Go,Kirk,Person,Leonard McCoy,"Starfleet
+Doctor
+Human","Available
+---
+Play - Action: Gain 1 Research. You may return an Incident.
+---
+Reaction - After discarding or logging a Person during your Action Step, free play an Incident from you hand or Discard pile.",-,-
+c02-03 Kirk 24,To Boldly Go,Kirk,Person,Captain Spock,"Starfleet
+Scientist
+Telepath
+Vulcan
+Human","Available
+---
+Play - Action: Log a card from your hand or Discard pile to gain 3 Dilithium. If the logged card has 1+ Research / Influence / Military (Skill or Focus), gain 1 on the matching Speciality track (choose one if multiple, or if it has Wild).
+---
+Reaction - After gaining a Person, Spend 1 Dilithium to send an Away Team to a Location where you have a Ship. If you do, gain 1 Glory.",Research,-
+c02-03 Kirk 25,To Boldly Go,Kirk,Directive,Maximum Warp,-,"Available
+---
+Play - Free: Draw 2 cards and discard one of the drawn cards. You may Warp a Ship.",-,-
+c02-03 Kirk 26,To Boldly Go,Kirk,Mission,Where No Man Has Gone Before,-,"Goal - Have 2 Encounter on the same Ship, and Research at 4+.
+---
+Reward - Take the top Encounter. Remove 2 Glory from the Stardate card.",-,4.0
+c02-03 Kirk 27,To Boldly Go,Kirk,Mission,The Undiscovered Country,-,"Goal - Have 3 of the same Any Species (excluding cards with Human / Starfleet) in play and Influence at 4+.
+---
+Reward - Enlist a Development for free.",-,1.0
+c02-03 Kirk 28,To Boldly Go,Kirk,Mission,Search for Spock,-,"Goal - Have Captain Spock logged, the H.M.S. Bounty in play, 5 Person in play, and Military at 4+.
+---
+Reward - Draw Captain Spock from your Log, and you may free play Captain Spock. You may find an Incident and return it. Gain an Action. Dismiss the H.M.S. Bounty.",-,4.0
+c03-01 Pike 01,Second Contact,Pike,Captain,Christopher Pike,"Time Travel
+Starfleet
+Human","Captain
+---
+Away Teams: 4+
+---
+Reaction - After putting a Time Travel into play, log an Incident (from your hand) to gain 1 Glory.
+---
+Passive - Operations that find, free play, or return Incident from your hand can also target cards from your Log.",-,Influence
+c03-01 Pike 02,Second Contact,Pike,Status,"Improbable, Unstoppable, Sensational",-,"Status
+---
+Clean-Up - If you have no Shady / Attack in play, gain 1 Influence; otherwise spend 1 Glory, if able.
+---
+Reaction - After you put a card with one of more Skill Icons into play (excluding beaming), gain 1 on that Specialty track matching one of those icons.",-,-
+c03-01 Pike 03,Second Contact,Pike,Location,Starbase One,"Starfleet
+Starbase","Controlled Location
+---
+Away Teams: 1
+---
+Control - Gain an Action.
+---
+Activation - For Every 2 Ship you have in play, draw a card (max 3 cards).
+---
+Activation - Promote a Person from your have to Duty Officer.",,
+c03-01 Pike 04,Second Contact,Pike,Person,Lt. Scott,"Starfleet
+Engineer
+Human","Development - Cost: 3 Dilithium, and have enlisted Pelia.
+---
+Play - Free: Dismiss a deployed Ship to trigger a controlled Location's control operation. You may exhaust a Ship to draw 2 cards and discard one of them.
+---
+Activation - Gain 2 Dilithium. Then, either find a Ship OR refresh a Ship.
+---
+Activation - Discard a card to refresh a Location.",Research,2.0
+c03-01 Pike 05,Second Contact,Pike,Ally,Talosians,Telepath,"Development - Cost: 3 Dilithium, 1 Latinum.
+---
+Play - Free: Select one of Person / Cargo / Ship / Ally. You may swap a card of the selected suit between the Market and the Junk. You may draw a card of the selected suit from your Discard pile.
+---
+Play - Free: Draw 2 cards for each Telepath you have in play (max 6 cards), then put 1 card on the top of your deck for each Telepath you have in play.",-,3.0
+c03-01 Pike 06,Second Contact,Pike,Ally,Kherkovians,"Anomaly
+Doctor
+Alien","Development - Cost: 3 Dilithium, and take an Incident.
+---
+Play - Free: Find a card with multiple Different Species.
+---
+Play - Action, Requires 9 Research: Scan 2 of either Person, Cargo, or Ally. Gain 1 Glory for each Different Species on the gained card. Gain 1 Glory if you have another Doctor in play. Log this card.",-,Research
+c03-01 Pike 07,Second Contact,Pike,Location,Rigel VII,-,"Development - Cost: 2 Dilithium, 2 Latinum.
+---
+Play - Action: Take control of this location.
+---
+Control - Draw a card. You may beam a card here from your hand or Discard pile.
+---
+Clean-Up - You may beam a card here from your hand or Staging Area. Gain 1 Dilithium for each card beamed here.
+---
+Activation - Action: Draw a card. Log all cards beamed here. For every 2 card logged this way, gain 1 Glory.",-,Influence
+c03-01 Pike 08,Second Contact,Pike,Person,Pelia,"Starfleet
+Engineer","Development - Cost: 3 Latinum OR free if Hemmer is logged.
+---
+Play - Free: You may find and free play a Cargo.
+---
+Activation - Action: Discard a card to gain a Cargo from the Junk. You may spend 1 Latinum to draw a card and gain 1 Glory.
+---
+Special - While this card is in play (excluding beamed) and you have another Engineer in play, this card is additionally treated as Wildcard.",-,3.0
+c03-01 Pike 09,Second Contact,Pike,Person,James Kirk (United Earth Fleet),"Time Travel
+Human","Development - Cost: 2 Dilithium, and have 2 Incident logged.
+---
+Play - Free: You may draw a Directive from your Discard pile. You may free play a Directive.
+---
+Play - Action: Take an Incident to scan 3 of Person and draw a card.
+---
+Activation - Action: Discard a Person to gain a Person / Ship. Draw a card. Dismiss this card.",Military,2.0
+c03-01 Pike 10,Second Contact,Pike,Person,Marie Batel,"Starfleet
+Human","Development - Cost: 3 Dilithium.
+---
+Play - Free: Free play a Starfleet.
+---
+Play - Free: Promote Marie Batel and a Person from your hand, Staging Area, or your Discard pile to Duty Officers.
+---
+Activation - Refresh Improbable, Unstoppable, Sensational.
+---
+Passive - You may have an additional Person on duty.",-,Influence
+c03-01 Pike 11,Second Contact,Pike,Person,Dak'Rah,"Ambassador
+Klingon","Reserve
+---
+Play - Action: Take an Incident to scan 1 of Ally.
+---
+Resupply - You may lose 1 Military to gain 3 Influence.
+---
+Clean-Up - If you have a Weapon in play, log this card and gain 1 Glory.",-,-
+c03-01 Pike 12,Second Contact,Pike,Person,Christine Chapel,"Doctor
+Human","Reserve
+---
+Play - Action: Free play an Incident. If you do, you may beam this card to a deployed ship to sand an Away Team to its Location.
+---
+Play - Action, Requires 6 Research: Scan for a Doctor. Draw a card.
+---
+THIS CARD CANNOT BE PROMOTED.",Research,-
+c03-01 Pike 13,Second Contact,Pike,Person,"Una ""Number One"" Chin-Riley","Starfleet
+Augment","Reserve
+---
+Play - Action: Discard a Starfleet to gain a Ship. You may discard a card to free play the gained card. Then, if you have no other Augment in play, take an Incident.
+---
+Resupply - If able, duplicate a resupply operation of a Person in your Discard pile.
+---
+Activation - Action: Discard a card to send an Away Team to a Location.",-,-
+c03-01 Pike 14,Second Contact,Pike,Incident,Political Crisis,-,"Reserve
+---
+Play - Action: Discard a card to return this card. If the discarded card has Influence, gain 1 Latinum.
+---
+Play - Action: If you have an Ambassador in play, return this card and gain 1 Latinum.",-,-2.0
+c03-01 Pike 15,Second Contact,Pike,Cargo,Time Crystal,Time Trave,"Reserve
+---
+Play - Free: Discard a card to recall a non-Time Travel card from you Staging Area. Log a Time Travel from play (can be this card).
+---
+Play - Free: Take an Incident to duplicate a play operation of a Person or Ally from your Development pile.",-,-
+c03-01 Pike 16,Second Contact,Pike,Directive,Hit It,-,"Available
+---
+Play - Free: Draw 2 cards and discard one of the drawn cards. You may warp a Ship.
+---
+Play - Free: If the U.S.S. Enterprise is at a controlled Location, take an Incident to trigger that card's control operation.",-,-
+c03-01 Pike 17,Second Contact,Pike,Directive,Knowledge of a Terrible Fate,"Time Travel
+Surprise
+Ongoing","Available
+---
+Play - Action: Deploy this card.
+---
+Resupply - Junk a Person / Ally from your Development pile.
+---
+Activation - Log an Encounter (from your hand) to destroy this card.
+---
+Reaction - After taking an Incident, draw 2 cards.
+---
+Surprise - (Bot Only): Gain 1 Glory. Discard the bottom card of the Supplement deck. Destroy this card.",-,-4.0
+c03-01 Pike 18,Second Contact,Pike,Directive,Strange New Worlds,-,"Available
+---
+Play - Action: Select a controlled Location. If there is 1+ Away Team and 1+ Ship there, look at the top 2 Encounter. Take one fo them and return the other to the bottom of the its deck. Log the selected Location to gain 1 Research.",-,-
+c03-01 Pike 19,Second Contact,Pike,Ship,U.S.S. Enterprise,Starfleet,"Available
+---
+Play - Action: Deploy this ship. Warp this ship OR beam a card here.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Promote a Person from your hand to Duty Officer to refresh Improbable, Unstoppable, Sensational.",Wild,-
+c03-01 Pike 20,Second Contact,Pike,Person,Hemmer,"Starfleet
+Telepath
+Engineer
+Aenar","Available
+---
+Play - Action: Spend 3 Dilithium to gain a Ship from the top of the deck, if it is Attack, take an Incident.
+---
+Resupply - Gain 1 Dilithium. You may recall a card beamed to a Ship.
+---
+Activation - Action: You may free play an Incident. Log this card to select a secured neutral Location and take control of it.",Research,-
+c03-01 Pike 21,Second Contact,Pike,Person,Lt. Spock,"Starfleet
+Scientist
+Telepath
+Vulcan
+Human","Available
+---
+Play - Action: Log a card from your hand to gain 3 Dilithium and gain 1 Research / Influence / Military. If the logged card has Military Skill / Focus gain 1 (additional) Influence.
+---
+Resupply - If you have more Research than Influence, exhaust this card to either: gain 1 Glory OR draw a card.
+---
+Activation - Discard a Research Skill / Focus to find any card, except in your Reserve deck.",Research,-
+c03-01 Pike 22,Second Contact,Pike,Person,La'an Noonien Singh,"Starfleet
+Security
+Human","Available
+---
+Play - Action: Take an Incident to scan 1 of Cargo. For each controlled Location where you have an Away Team, draw a card. If you have 2+ Away Teams on a neutral Location, gain 1 Military.
+---
+Activation - Beam a card to a Ship.
+---
+Passive - If you have an Weapon in play, all Military Skill on your cards are treaded as Wild Skill instead.",Military,-
+c03-01 Pike 23,Second Contact,Pike,Person,Joseph M'Benga,"Starfleet
+Doctor
+Weapon
+Human","Available
+---
+Play - Action: Gain 1 Research. You may return an Incident. Junk a Person from the Market, if able. If you do both, gain 1 Glory.
+---
+Resupply - Requires 5 Military: You may send an Away Team to a Location where you have a Ship.
+---
+Reaction - After discard a card with Military / Wild Skill during your action step, return an Incident from your hand or Discard pile.",Military,-
+c03-01 Pike 24,Second Contact,Pike,Person,Cadet Uhura,"Communication
+Starfleet
+Human","Available
+---
+Play - Action: Spend 2 Dilithium to gain a Person / Ally.
+---
+Play - Action, Requires 5 Influence: Spend 2 Dilithium to gain an Alien, including from the Junk.
+---
+Reaction - After exhausting Improbable, Unstoppable, Sensational, discard a card to draw a card from your Discard pile.",-,-
+c03-01 Pike 25,Second Contact,Pike,Directive,Negotiate,-,"Discard
+---
+Play - Free: Gain 1 Latinum or 2 Dilithium. You may discard up to 3 Cargo / Ship / Ally. Gain 1 Latinum and 1 Dilithium for each card discarded this way. You may find an Encounter.",-,-
+c03-01 Pike 26,Second Contact,Pike,Person,Erica Ortegas,"Starfleet
+Human
+Pilot","Discard
+---
+Play - Action: Select a Ship and warp it. You may spend 1 Dilithium to send an Away Team to its Location. You may take an Incident to send an Away Team to the same Location.
+---
+Resupply - You may warp a Ship to gain 1 Dilithium.
+---
+Reaction - After deploying a Ship, you may discard a card to gain 1 Glory, and you may discard a card to find Hit It.",Military,-
+c03-01 Pike 27,Second Contact,Pike,Mission,Weight of the Future,-,"Goal - Have 4 Time Travel in play (excluding your Captain) and deployed 2 Ongoing.
+---
+Reward - Up to twice, return an Incident from your hand, Discard pile, or Log. For each Incident returned this way, draw a card.",-,3.0
+c03-01 Pike 28,Second Contact,Pike,Mission,Boy Scout,-,"Goal - Have 7 Person in play and Influence at 7+.
+---
+Reward - Scan 2 of Ally. Refresh a card for each non-Starfleet Person you have in play.",-,4.0
+c03-01 Pike 29,Second Contact,Pike,Mission,To Explore,-,"Goal - Have 2 Encounter in play, and have 3 Starfleet and an Alien / Anomaly at the same neutral Location.
+---
+Reward - Take control of the Location used to fulfil the goal. Remove 1 Glory from the Stardate card.",-,2.0
+c03-02 Riker 01,Second Contact,Riker,Captain,William T. Riker,"Starfleet
+Human","Captain
+---
+Away Teams: 4
+---
+Activation - Put a card on the top of your deck to draw a card of teh same suit from your Discard pile.
+---
+Activation - Action: Take an Incident to send an Away Team to a Location. If you targeted a controlled Location, you may spend 1 Latinum to trigger that card's control operation.",-,Military
+c03-02 Riker 02,Second Contact,Riker,Ship,U.S.S. Titan,Starfleet,"Deployed
+---
+Play - Action: Deploy this ship. Warp this ship OR beam a card here.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Promote a Person from your hand to Duty Officer.","Military
+Wild",-
+c03-02 Riker 03,Second Contact,Riker,Location,Nepenthe,-,"Development - Cost: Log a deployed Ship.
+---
+Play - Exhaust your Captain to take control of this location.
+---
+Control - You may scan for a Synthetic.
+---
+Activation - Log a card from your hand or Discard pile. You may return an Incident from the same place. If the logged card is Android, gain 3 Glory.
+---
+Endgame - Requires 9 Research: Score 3.",-,Endgame
+c03-02 Riker 04,Second Contact,Riker,Directive,Solving Science Mysteries,Ongoing,"Development - Cost: 2 Dilithium for every Military level.
+---
+Play - Free: Take an Incident to deploy this card.
+---
+Play - Action: Spend 4 Dilithium to scan for a Scientist and draw a card. Deploy this card.
+---
+Passive - All of your Military Skill Icon are treated a Research Skill Icons instead. (They cannot be used as Military any more, Wild Skill Icon can still be either.)",Wild,Research
+c03-02 Riker 05,Second Contact,Riker,Person,"William Boimler, Lt. jg","Lower Decker
+Starfleet
+Anomaly
+Human
+Spy","Development - Cost: 1 Dilithium, 1 Latinum, find 3 Person and beam them to the same Ship.
+---
+Support - After exhausting your Captain, discard a card to scan 1 Cargo. If the gained card is Beverage, draw it.
+---
+Clean-Up - If Brad Boimler, Lt. jg is in play, temporarily increase your hand size by 1.
+---
+Passive - Increase your hand size by 1.",Wild,2.0
+c03-02 Riker 06,Second Contact,Riker,Ship,U.S.S. Zheng He,"Starfleet
+Attack","Development - Cost: 5 Dilithium.
+---
+Play - Action, Attack: Deploy this ship. If the opponent has at least one Ship at a neutral Location, they take an Incident. Refresh your Captain.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Spend 1 Dilithium to recall this ship.","Military
+Military",4.0
+c03-02 Riker 07,Second Contact,Riker,Directive,Proximity Blast,"Attack
+Weapon","Development - Cost: 3 Dilithium.
+---
+Play - Free, Attack: Dismiss an opponent Ship shrating a Location with one of your Ship. You may spend 2 Dilithium to draw 2 cards. If you do, your opponent takes an Incident.
+---
+Play - Free, Requires 5 Influence: Dismiss 3 Weapon beamed to the same Ship to take control of its neutral Location. Log this card.",-,Military
+c03-02 Riker 08,Second Contact,Riker,Directive,Utilise,-,"Development - Cost: 1 Dilithium, 1 Latinum, find / recall and log Swooping In.
+---
+Play - Action: Gain 1 Dilithium, and 2 Dilithium for each controlled Location you have in play.
+---
+Play - Action: Gain on one Specialty track for each matching Skill icon you have in play (excluding beamed cards).",-,2.0
+c03-02 Riker 09,Second Contact,Riker,Status,Gluonic Distortion,Anomaly,"Development - Cost: 3 Dilithium, have an Encounter in play.
+---
+Resupply - Exhaust this card and take an Incident.
+---
+Clean-Up - If this card is exhausted, shuffle your deck and log this card.
+---
+Passive - Your draw deck is face-up. When interacting with your deck you can choose and of its cards.
+---
+Special - When this card is enlisted, put it into play immediately.",-,4.0
+c03-02 Riker 10,Second Contact,Riker,Cargo,Chateau Picard,Beverage,"Reserve
+---
+Play - Action: Spend 1 Latinum and discard a Directive to gain an Ally, including from the Junk. Junk a card from the Market.
+---
+Play - Free: Discard a Starfleet to return an Incident from your hand or Discard pile.
+---
+Clean-Up - Gain 1 Glory from the supply for each Beverage you have in play (max 3, excluding this card). Then, your opponent does the same for each Beverage they have in play (max 5).",-,-
+c03-02 Riker 11,Second Contact,Riker,Cargo,Holodeck,"Starfleet
+Hologram","Reserve
+---
+Play - Free: You may recall a Duty Officer. You may draw a card. Put a card on the top of your deck and junk a card from the Market.
+---
+Play - Action: Spend 1 Dilithium to duplicate a play operation of a Person / Cargo / Ally from your hand or Discard pile. If you have an NX-01 in play, gain 1 Research / Influence / Military / Glory.",-,-
+c03-02 Riker 12,Second Contact,Riker,Person,Tactical Officer (U.S.S. Titan),"Starfleet
+Security
+Human","Reserve
+---
+Play - Action: Send an Away Team to a Location. You may beam a card from your hand to Staging Area to a deployed Ship. If you have another Starfleet in your Staging Area, you may promote this card to Duty Officer.
+---
+Passive - This card has 1 Military for each Person with Starfleet you have in play (max 3), excluding this card.","???
+???
+???",-
+c03-02 Riker 13,Second Contact,Riker,Person,Chief Engineer (U.S.S. Titan),"Starfleet
+Engineer
+Human","Reserve
+---
+Play - Free: Find a Ship and gain 1 Dilithium.
+---
+Play - Action: Discard a Ship to scan for a Weapon and draw a card.
+---
+Passive - While this card is exhausted, all your other Person with Starfleet are additionally treaded as Weapon.
+---
+Activation - Discard a card to discard the top cards of your draw deck and gain 1 Glory.",-,-
+c03-02 Riker 14,Second Contact,Riker,Person,"Brad Boimler, Lt. jg","Lower Decker
+Starfleet
+Human
+Ops","Reserve
+---
+Play - Free: Spend all your remaining Actions (possibly none). For Each Action spent this way, draw a card; then draw one additional card. Free play one of the drawn cards.
+---
+Support - After promoting a Person, duplicate a play operation of that card.
+---
+Activation - Action: Discard a card with Research Skill and take an Incident to enlist a Development.",Research,-
+c03-02 Riker 15,Second Contact,Riker,Person,Deanna Troi-Riker,"Starfleet
+Betazoid
+Telepath
+Human","Available
+---
+Play - Free: Look at the top card of your deck. You may return it to the top OR discard it OR log it.
+---
+Passive - You may treat any Incident's play operation as ""Play - Action: Discard a card to return this card. If you do, you may draw a card"".
+---
+Activation - Refresh your Captain.",Influence,-
+c03-02 Riker 16,Second Contact,Riker,Person,First Officer (U.S.S. Titan),"Starfleet
+Ops","Available
+---
+Play - Free: If you have a Scientist in play, you may spend 2 Dilithium to gain an Action. If you have a Weapon in play, gain 1 Military. You may exhaust your Captain to recall a card beamed to a Ship.
+---
+Activation - Action: Gain a Cargo.",Military,-
+c03-02 Riker 17,Second Contact,Riker,Directive,Strange New Worlds,-,"Available
+---
+Play - Action: Select a controlled Location. If there is 1+ Away Team and 1+ Ship there, look at the top 2 Encounter. Take one fo them and return the other to the bottom of the its deck. Log the selected Location to gain 1 Research.",-,-
+c03-02 Riker 18,Second Contact,Riker,Directive,Recruit,-,"Available
+---
+Play - Action: Put a card on the top of your deck to gain a Person.
+---
+Play - Action: Take an Incident to gain an Ally.",-,-
+c03-02 Riker 19,Second Contact,Riker,Directive,Analyse,-,"Available
+---
+Play - Action: Take an Incident to gain a Ship.
+---
+Play - Action - Discard 2 cards to gain a Cargo.
+---
+Play - Free: Gain 2 Dilithium.",-,-
+c03-02 Riker 20,Second Contact,Riker,Incident,Hostile Contact,-,"Available
+---
+Play - Action: Discard a card to return this card. If the discarded card has Military gain, 2 Dilithium.
+---
+Play - Action: If you have a Communication in play, return this card and gain 2 Dilithium.",-,-2.0
+c03-02 Riker 21,Second Contact,Riker,Directive,"Warp in the Factor of 5, 6, 7, 8!",-,"Available
+---
+Play - Free: Draw 2 cards and discard one of the drawn cards. You may warp up to 3 Ships with Starfleet.
+---
+Play - Action: For each deployed Ship with Starfleet you have, send an Away Team to its Location.",-,-
+c03-02 Riker 22,Second Contact,Riker,Location,Starbase 25,"Starfleet
+Starbase","Available
+---
+Play - Action: Take control of this location.
+---
+Control - You may exhaust the U.S.S. Titan to gain 1 Influence. You may spend 1 Dilithium to send an Away Team here.
+---
+Activation - If you have an Away Team here, draw a card. If you have 3+ total Away Team on 1 or more controlled Location, draw a card.",-,-
+c03-02 Riker 23,Second Contact,Riker,Directive,Swooping In,-,"Discard
+---
+Play - Action: Warp a Ship to a controlled Location, if able. Gain 1 Dilithium, and 1 Dilithium for each controlled Location you have in play. If you have more Research Skill Icon than Military Skill Icon in play (excluding beamed cards), gain 1 Research. Otherwise, gain 1 Military.",-,-
+c03-02 Riker 24,Second Contact,Riker,Incident,Red Alert,-,"Discard
+---
+Play - Action: Put a card on the top of your deck to return this card. You may promote a Person from your Staging Area to Duty Officer.",-,-2.0
+c03-02 Riker 25,Second Contact,Riker,Directive,The Riker Maneuver,-,"Discard
+---
+Play - Action: Dismiss a Duty Officer to send an Away Team to a Location. You may exhaust your Captain to promote this card to Duty Officer as if it is a PErson, then exhaust this card.
+---
+Activation - Choose up to 2 of the following: gain 2 Latinum OR free play a Directive / Person OR promote a Person from your hand to Duty Officer. Dismiss this card.",Wild,-
+c03-02 Riker 26,Second Contact,Riker,Mission,Battling the Pakled,-,"Goal - Meet 2 of the following 3 criteria: have a Pakled logged OR have Military at 8+ OR have Influence at 4+.
+---
+Reward - Gain 3 Dilithium / Latinum. Up to twice, send an Away Team to a Location. If you meet all 3 criteria, gain 2 Glory.",-,3.0
+c03-02 Riker 27,Second Contact,Riker,Mission,Spirit of Starfleet,-,"Goal - Have a Starfleet on duty, and have 5 cards with Research / Wild Skill in play (excluding beamed cards).
+---
+Reward - Gain an Action. Scan for Any Species of your choice (Name the species before scanning).",-,2.0
+c03-02 Riker 28,Second Contact,Riker,Mission,Messages from Old Friends,-,"Goal - Have 4 different of Kilingon / Pilot / Doctor / Scientist / Synthetic in play.
+---
+Reward - Refresh your Captain. Take the bottom Encounter.",-,2.0
+c03-03 Freeman 01,Second Contact,Freeman,Captain,Carol Freeman,"Starfleet
+Human","Captain
+---
+Away Teams: 5
+---
+Reaction - After Gaining Research / Influence / Military, discard a Person to send an Away Team to the location of the U.S.S. Cerritos.
+---
+Reaction - After returning an Incident, warp the U.S.S. Cerritos.
+---
+Endgame - Score 1 for every 2 cards in your Log.",-,Endgame
+c03-03 Freeman 02,Second Contact,Freeman,Ship,U.S.S. Cerritos,Starfleet,"Deployed
+---
+Play - Action: Deploy this ship. You may beam a card here from your hand or Discard pile. You may spend 1 Dilithium to gain 1 Research / Influence / Military, whichever is the lowest. Exhaust this ship.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Promote a Person from your hand to Duty Officer.",-,-
+c03-03 Freeman 03,Second Contact,Freeman,Ship,A Fleet of 30 California-Class Ships,Starfleet,"Development - Cost: 6 Dilithium.
+---
+Play - Action: Deploy and warp this ship. Refresh every deployed ship.
+---
+Passive - You may have an additional Person on duty.
+---
+Special - For the purposes of securing Location this ship counts as 2 tokens. This operation applies to the Bot as well.",Wild,3.0
+c03-03 Freeman 04,Second Contact,Freeman,Ally,Apergosians,Anomaly,"Development - Cost: 3 Latinum.
+---
+Play - Action: Find a Person / Cargo, Duplicate one of the found card's play operations up to two times, ignoring any effect that would log this card. Then log the found card. Gain 2 Glory. Log this card.",-,3.0
+c03-03 Freeman 05,Second Contact,Freeman,Person,T'Lyn,"Lower Decker
+Starfleet
+Scientist
+Vulcan","Development - Cost: 2 Dilithium.
+---
+Support - After logging a card, either gain 2 Dilithium OR draw a card from your Discard pile. Then, you may either free play a Lower Decker OR promote a Lower Decker to Duty Officer from your hand or the Staging Area (can be this card).
+---
+Reaction - After gaining a card, except during your Resupply Step, gain 1 Research and you may spend 1 Dilithium to free play the gained card.",Research,2.0
+c03-03 Freeman 06,Second Contact,Freeman,Directive,Strange New Worlds,-,"Development - Cost: Find 2 Starfleet and log both.
+---
+Play - Action: Select a controlled Location. If there is 1+ Away Team and 1+ Ship there, look at the top 2 Encounter. Take one fo them and return the other to the bottom of the its deck. Log the selected Location to gain 1 Research.",Research,2.0
+c03-03 Freeman 07,Second Contact,Freeman,Cargo,T88 Diagnostic Tool,"Engineer
+Ongoing","Development - Cost: 2 Dilithium.
+---
+Play - Free: You may refresh a Ship. Deploy this card.
+---
+Reaction - When you would gain a card, scan 2 of the same suit instead.",-,Research
+c03-03 Freeman 08,Second Contact,Freeman,Location,The Farm,Doctor,"Development - Cost: 2 Latinum, 2 Dilithium.
+---
+Play - Action: Take control of this location.
+---
+Control - You may free play an Incident.
+---
+Activation - Beam a card here.
+---
+Activation - Requires 5 Research: Log all cards beamed here. If at least 2 of the logged cards have Anomaly, take the top Encounter and log this card.",Wild,1.0
+c03-03 Freeman 09,Second Contact,Freeman,Person,Kayshon,"Starfleet
+Security
+Alien","Development - Cost: 2 Dilithium.
+---
+Play - Action: Draw a card. You may discard up to one of each of the following: Person, Cargo, Ship, Ally, Encounter, Incident. Gain 1 Glory for each card discarded this way. Promote this card to Duty Officer.
+---
+Activation - Requires 5 Military: Send an Away Team to a Location. Repeat this for each Spy your opponent has in play.",Military,2.0
+c03-03 Freeman 10,Second Contact,Freeman,Person,Shaxs,"Starfleet
+Security
+Bajoran
+Attack","Development - Cost: 2 Dilithium.
+---
+Play - Free: Log a Ship from your hand. Gain 2 Glory. You may return up to 2 Incident.
+---
+Activation - Attack: Remove an opponent Away Team from a neutral Location. Gain 1 Glory.
+---
+Special - After you log this card, draw it from your Log.","Military
+Military",-
+c03-03 Freeman 11,Second Contact,Freeman,Ship,U.S.S. Calsbad,Starfleet,"Reserve
+---
+Play - Action: Deploy this ship. You may beam a card here from your hand or Discard pile. You may spend 1 Dilithium to gain 1 Research / Influence / Military, whichever is the lowest. Exhaust this ship.
+---
+Activation - Spend 1 Dilithium to warp this ship.
+---
+Activation - Discard a card to beam a card here.
+---
+Activation - Promote a Person from your hand to Duty Officer.",-,-
+c03-03 Freeman 12,Second Contact,Freeman,Person,T'Ana,"Starfleet
+Doctor","Reserve
+---
+Play - Free: Gain 1 Research. You may return an Incident from your Discard pile.
+---
+Reaction - After taking an Incident, return it, then put this card on the bottom of your deck and gain an Action
+Passive - This card has 1 Research Skill.",???,-
+c03-03 Freeman 13,Second Contact,Freeman,Person,Samanthan Rutherford,"Lower Decker
+Starfleet
+Synthetic
+Engineer
+Human","Reserve
+---
+Play - Action: Take an Incident to enlist a Development.
+---
+Support - After exhausting a Ship, refresh it and you may beam this card to it. If you have another Synthetic in play, gain 1 Glory.
+---
+Activation - Action: Gain 1 Dilithium, and 2 Dilithium for each controlled Location you have in play. If you have another Engineer in play, you may discard a card to gain an Action.",-,-
+c03-03 Freeman 14,Second Contact,Freeman,Person,D'Vana Tendi,"Lower Decker
+Starfleet
+Scientist
+Weapon
+Orion","Reserve
+---
+Play - Action, Requires 5 Influence: Spend 1 Latinum to scan for Orion and free play the gained card.
+---
+Support - After promoting a Lower Deck, gain 2 Research / Influence / Military and you may promote this card to Duty Officer.
+---
+Passive - You may spend Latinum as if it was Dilithium and vice versa. You may additionally have another person with Starfleet on duty.","Influence
+Research",-
+c03-03 Freeman 15,Second Contact,Freeman,Incident,Subspace Phenomenon,-,"Reserve
+---
+Play - Action: Discard a card to return this card. If the discarded card has Research draw 2 cards and discard one of them.
+---
+Play - Action: If you have a Time-Travel in play, return this card and draw 2 cards and discard one of them.",-,-2.0
+c03-03 Freeman 16,Second Contact,Freeman,Directive,Second Contact,-,"Available
+---
+Play - Action: Draw a card. You may gain an Ally from the Junk. If your Reserve deck is empty, log this card; otherwise shuffle the gained card into your deck.",-,-
+c03-03 Freeman 17,Second Contact,Freeman,Directive,Set a Course,-,"Available
+---
+Play - Action: Discard up to 3 Person to send the same number of Away Teams to the same Location.
+---
+Play - Free: Draw a card, then discard a card. Warp up to 2 of your Ship.",-,-
+c03-03 Freeman 18,Second Contact,Freeman,Ship,Type 6A Shuttlecraft,Starfleet,"Available
+---
+Play - Action: Send an Away Team to a Location where you have a Ship. You may put this card on the top of your deck.
+---
+Play - Free: Gain 1 Dilithium. Then you may either: beam a card to a Ship OR recall a card beamed to a Ship.",-,-
+c03-03 Freeman 19,Second Contact,Freeman,Location,Douglas Station,"Starfleet
+Starbase","Available
+---
+Play - Action: Take control of this location.
+---
+Control - You may gain a Person. You may log a card from your hand or Discard pile.
+---
+Activation - If you have an Away Team here, draw a card. If you have 4+ Lower Decker in play, draw a card and gain 1 Dilithium.",-,-
+c03-03 Freeman 20,Second Contact,Freeman,Ally,Dooplers,-,"Available
+---
+Play - Action: Take an Incident to your Discard pile. Gain an Ally. Gain 1 Influence. Then either: spend 1 Latinum OR shuffle this card into your deck.",-,-
+c03-03 Freeman 21,Second Contact,Freeman,Directive,Anomaly Consolidation Day,Anomaly,"Available
+---
+Play - Action: Junk a card from the Market. You may take an Incident. You may discard an Incident to gain a Cargo.
+---
+Special - While this card is in your Staging Area, after resolving a support operation you may either: gain 2 Dilithium OR draw a card and discard a card.",-,-
+c03-03 Freeman 22,Second Contact,Freeman,Person,Jack Ransom,"Starfleet
+Human","Available
+---
+Play - Action: You may draw a non-Lower Decker card fro your Discard pile. Spend 1 Dilithium to send an Away Team to a controlled Location. You may discard a Lower Decker to trigger that card's control operation.
+---
+Activation - Put a card on top of your deck to gain a Person to your Discard pile.",-,-
+c03-03 Freeman 23,Second Contact,Freeman,Person,Bradward Boimler,"Lower Decker
+Starfleet
+Human","Available
+---
+Play - Free: Spend all your remaining Actions (possibly none). For each Action spend this way, draw a card; then draw one additional card. Free play one of the draw cards.
+---
+Support - After promoting a Person, duplicate a play operation of that card.
+---
+Activation - Action: Dismiss 4 Lower Decker (one of them can be this card) and take an Incident to take the top Encounter.",-,-
+c03-03 Freeman 24,Second Contact,Freeman,Person,Beckett Mariner,"Lower Decker
+Starfleet
+Human","Available
+---
+Play - Action: Take 2 Incident to gain a Ship and free play the gained card.
+---
+Support - After putting an Ally into play, gain 1 Latinum and send an Away Team to a Location where you have a Ship.
+---
+Activation - Action: Gain on one Specialty track for each matching Skill Icon you have in play (excluding beamed cards). If you gained 3+ Research / Influence / Military, dismiss this card.",-,-
+c03-03 Freeman 25,Second Contact,Freeman,Incident,Red Alert,-,"Incident Deck
+---
+Play - Action: Put a card on the top of your deck to return this card. You may promote a Person from your Staging Area to Duty Officer.",-,-2.0
+c03-03 Freeman 26,Second Contact,Freeman,Mission,Project Swing By,-,"Goal - Have 4 Ally on the same Ship, and at least two of Military / Influence / Research at 4+.
+---
+Reward - Gain 4 Dilithium and draw 4 cards. You may junk a card from the Market.",-,4.0
+c03-03 Freeman 27,Second Contact,Freeman,Mission,Beta Shift,-,"Goat - Have 4 Person including at least 2 Lower Decker on the same Ship.
+---
+You may scan for an Anomaly. You may send an Away Team to a Location. Gain 2 Glory.",-,1.0
+c03-03 Freeman 28,Second Contact,Freeman,Mission,Calling All Your Friends,-,"Goal - Have 5 Ship (deployed and/or beamed) at the same neutral Location.
+---
+Reward - Two times: Gain 1 Research / Influence / Military, which ever is lowest. Scan for either Research / Influence / Military Focus.",-,1.0

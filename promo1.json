@@ -1,107 +1,219 @@
 [
-  {
-    "id": "sehlat",
-    "name": "Sehlat",
-    "suit": "Cargo",
-    "source": "Promo",
-    "game_box": "Promo Pack 1",
-    "card_number": "0CAR01/?",
-    "glory": 2,
-    "position_indicator": null,
-    "species_traits": [
-      "Vulcan"
-    ],
-    "regular_traits": [
-      "Creature"
-    ],
-    "other_traits": [
-      "Attack"
-    ],
-    "filename": "sehlat.jpg",
-    "icons": []
-  },
-  {
-    "id": "uss-enterprise-b",
-    "name": "U.S.S. Enterprise-B",
-    "suit": "Ship",
-    "source": "Promo",
-    "game_box": "Promo Pack 1",
-    "card_number": "0SHI01/?",
-    "glory": 2,
-    "position_indicator": null,
-    "species_traits": [],
-    "regular_traits": [
-      "Starfleet"
-    ],
-    "other_traits": [],
-    "filename": "uss-enterprise-b.jpg",
-    "icons": []
-  },
-  {
-    "id": "wesley-crusher",
-    "name": "Wesley Crusher",
-    "suit": "Encounter",
-    "source": "Promo",
-    "game_box": "Promo Pack 1",
-    "card_number": "0ENC01/?",
-    "glory": 6,
-    "position_indicator": null,
-    "species_traits": [
-      "Human",
-      "Transcendent"
-    ],
-    "regular_traits": [
-      "Pilot",
-      "Starfleet"
-    ],
-    "other_traits": [],
-    "filename": "wesley-crusher.jpg",
-    "icons": [
-      {
-        "type": "Skill",
-        "specialty": "Any"
-      },
-      {
-        "type": "Skill",
-        "specialty": "Any"
-      }
-    ]
-  },
-  {
-    "id": "flight-training-accident",
-    "name": "Flight Training Accident",
-    "suit": "Incident",
-    "source": "Promo",
-    "game_box": "Promo Pack 1",
-    "card_number": "0INC01/?",
-    "glory": -2,
-    "position_indicator": null,
-    "species_traits": [],
-    "regular_traits": [],
-    "other_traits": [
-      "Surprise"
-    ],
-    "filename": "flight-training-accident.jpg",
-    "icons": []
-  },
-  {
-    "id": "whale-probe-incursion",
-    "name": "Whale Probe Incursion",
-    "suit": "Incident",
-    "source": "Promo",
-    "game_box": "Promo Pack 1",
-    "card_number": "0INC02/?",
-    "glory": -2,
-    "position_indicator": null,
-    "species_traits": [
-      "Alien"
-    ],
-    "regular_traits": [],
-    "other_traits": [
-      "Attack",
-      "Surprise"
-    ],
-    "filename": "whale-probe-incursion.jpg",
-    "icons": []
-  }
+ {
+  "id": "sehlat",
+  "name": "Sehlat",
+  "suit": "Cargo",
+  "source": "Promo",
+  "game_box": "Promo Pack 1",
+  "card_number": "0CAR01/?",
+  "glory": 2,
+  "position_indicator": null,
+  "species_traits": [
+   "Vulcan"
+  ],
+  "regular_traits": [
+   "Creature"
+  ],
+  "other_traits": [
+   "Attack"
+  ],
+  "filename": "sehlat.jpg",
+  "icons": [],
+  "strips": [
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free, Attack",
+    "text": "Find a Vulcan. Force your opponent to discard a Person."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Free play a Person with Vulcan."
+   },
+   {
+    "kind": "play",
+    "action": null,
+    "qual": null,
+    "text": "Promote a Person with Vulcan from your hand or Staging Area to Duty Officer."
+   }
+  ]
+ },
+ {
+  "id": "uss-enterprise-b",
+  "name": "U.S.S. Enterprise-B",
+  "suit": "Ship",
+  "source": "Promo",
+  "game_box": "Promo Pack 1",
+  "card_number": "0SHI01/?",
+  "glory": 2,
+  "position_indicator": null,
+  "species_traits": [],
+  "regular_traits": [
+   "Starfleet"
+  ],
+  "other_traits": [],
+  "filename": "uss-enterprise-b.jpg",
+  "icons": [],
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Discard a card to deploy this ship and gain 1 Glory. If it is a Tuesday, you may send an Away Team to a Location."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Spent 1 Dilithium to warp this ship."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Discard a card to beam a card here."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Log a Person from your hand or you Staging Area to draw a card and gain an Action."
+   }
+  ]
+ },
+ {
+  "id": "wesley-crusher",
+  "name": "Wesley Crusher",
+  "suit": "Encounter",
+  "source": "Promo",
+  "game_box": "Promo Pack 1",
+  "card_number": "0ENC01/?",
+  "glory": 6,
+  "position_indicator": null,
+  "species_traits": [
+   "Human",
+   "Transcendent"
+  ],
+  "regular_traits": [
+   "Pilot",
+   "Starfleet"
+  ],
+  "other_traits": [],
+  "filename": "wesley-crusher.jpg",
+  "icons": [
+   {
+    "type": "Skill",
+    "specialty": "Any"
+   },
+   {
+    "type": "Skill",
+    "specialty": "Any"
+   }
+  ],
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Enlist a Reserve or a Development. Draw a card. Log this card."
+   },
+   {
+    "kind": "passive",
+    "action": null,
+    "qual": null,
+    "text": "You may use the Activations and Reactions of any Person in your Staging Area."
+   },
+   {
+    "kind": "special",
+    "action": null,
+    "qual": null,
+    "text": "This card is considered a Person for all purposes. This card can be promoted."
+   }
+  ]
+ },
+ {
+  "id": "flight-training-accident",
+  "name": "Flight Training Accident",
+  "suit": "Incident",
+  "source": "Promo",
+  "game_box": "Promo Pack 1",
+  "card_number": "0INC01/?",
+  "glory": -2,
+  "position_indicator": null,
+  "species_traits": [],
+  "regular_traits": [],
+  "other_traits": [
+   "Surprise"
+  ],
+  "filename": "flight-training-accident.jpg",
+  "icons": [],
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Find and log a Ship to return this card. If you have 1+ Person on duty, gain an Action."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "If you have a Pilot in play, return this card and gain 1 Glory."
+   },
+   {
+    "kind": "surprise",
+    "action": null,
+    "qual": "Bot only",
+    "text": "Gain 1 Glory, then resolve the top card of the bot deck. Return this card."
+   },
+   {
+    "kind": "special",
+    "action": null,
+    "qual": null,
+    "text": "During setup, replace a random Incident in the Incident deck with this card."
+   }
+  ]
+ },
+ {
+  "id": "whale-probe-incursion",
+  "name": "Whale Probe Incursion",
+  "suit": "Incident",
+  "source": "Promo",
+  "game_box": "Promo Pack 1",
+  "card_number": "0INC02/?",
+  "glory": -2,
+  "position_indicator": null,
+  "species_traits": [
+   "Alien"
+  ],
+  "regular_traits": [],
+  "other_traits": [
+   "Attack",
+   "Surprise"
+  ],
+  "filename": "whale-probe-incursion.jpg",
+  "icons": [],
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action, Attack",
+    "text": "Recall a deployed Ship, if  able. Force your opponent to recall a deployed Ship. If you have a Creature in play, return this card."
+   },
+   {
+    "kind": "surprise",
+    "action": null,
+    "qual": "Bot only",
+    "text": "You must recall a Ship, if able. Return this card."
+   },
+   {
+    "kind": "special",
+    "action": null,
+    "qual": null,
+    "text": "During setup, replace a random Incident in the Incident deck with this card."
+   }
+  ]
+ }
 ]
