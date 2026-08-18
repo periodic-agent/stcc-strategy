@@ -515,6 +515,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>position:reserve</code> · <code>position:incident-deck</code><span>starting position; hyphens for spaces</span></div>
     <div class="qh-row"><code>strip:reaction</code> &middot; <code>strip:any</code><span>cards carrying that operation strip</span></div>
     <div class="qh-row"><code>text:cloak</code> &middot; <code>text:"gain 2"</code><span>search the rules text of every strip</span></div>
+    <div class="qh-row"><code>reaction:"putting a shady"</code> &middot; <code>activation:draw</code><span>text inside one kind of strip; every strip name is a key</span></div>
     <div class="qh-row"><code>variant:update</code> · <code>variant:duplicate</code><span>cards wearing that badge in the current boxes</span></div>
     <div class="qh-note">Clicking any pill writes its token here — the pills are shortcuts for this language.</div>
     <div class="qh-note">Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>
@@ -939,7 +940,7 @@ function parseQuery(text, vocab){
   const res={boxes:[],decks:[],suits:[],tags:[],skills:[],names:[],
              negBoxes:[],negDecks:[],negSuits:[],negTags:[],negSkills:[],negNames:[],
              glory:[],negGlory:[],positions:[],negPositions:[],variants:[],negVariants:[],
-             strips:[],negStrips:[],text:[],negText:[]};
+             strips:[],negStrips:[],text:[],negText:[],kindText:[],negKindText:[]};
   // A key may be followed by ':' or by a comparison operator, so both glory>4 and
   // glory:>4 parse. The operator is captured separately from the value.
   const tokRe=/(-)?(?:([A-Za-z]+)\s*(:|>=|<=|>|<))?("([^"]*)"|[^\s"]+)/g;
@@ -987,6 +988,9 @@ function parseQuery(text, vocab){
       const v = (lv==='updated'||lv==='update') ? 'update'
               : (lv==='duplicate'||lv==='reprint'||lv==='dupe') ? 'duplicate' : lv;
       put(res.variants,res.negVariants,v);
+    } else if(vocab.stripKinds && vocab.stripKinds[key]){
+      // A strip kind used as a key searches only strips of that kind: reaction:"after putting".
+      put(res.kindText,res.negKindText,{kind:key,term:lv});
     } else {
       put(res.names,res.negNames,(key?key+':':'')+lv);
     }
@@ -999,6 +1003,7 @@ const STRIP_PALETTE={"resupply": {"label": "RESUPPLY", "card": "archer-jonathan-
 const STRIP_KINDS=[["play", "Play"], ["support", "Support"], ["resupply", "Resupply"], ["cleanup", "Clean-Up"], ["control", "Control"], ["activation", "Activation"], ["reaction", "Reaction"], ["passive", "Passive"], ["special", "Special"], ["surprise", "Surprise"], ["endgame", "Endgame"], ["cost", "Dev. Cost"], ["banner", "No Play"]];
 const STRIP_FAMILY={"play": "play", "support": "play", "control": "resupply", "resupply": "resupply", "cleanup": "cleanup", "activation": "activation", "reaction": "activation", "passive": "activation", "special": "special", "surprise": "surprise", "endgame": "endgame", "cost": "cost", "banner": "banner"};
 let activeStrips=new Set(), negStrips=new Set(), textTerms=[], negText=[];
+let kindText=[], negKindText=[];   // [{kind,term}] from reaction:"..." and friends
 
 let QUERY_VOCAB=null;
 function buildQueryVocab(){
@@ -1020,7 +1025,10 @@ function buildQueryVocab(){
   // have cards but no pill, and used to be unmatchable in lowercase.
   const suits=map(SUITS_DISPLAY);
   FULL_POOL.forEach(c=>{ if(c.suit) suits[String(c.suit).toLowerCase()]=c.suit; });
-  QUERY_VOCAB={allBoxes:ALL_BOXES,decks,suits,positions,
+  // Every strip kind is also a query key; generated, so new kinds need no parser change.
+  const stripKinds={};
+  STRIP_KINDS.forEach(([k])=>{ stripKinds[k]=true; });
+  QUERY_VOCAB={allBoxes:ALL_BOXES,decks,suits,positions,stripKinds,
                tags:map([...allSpecies,...allRegular,...allOther]),skills:map(allSkills),
                skillShort,focusShort};
 }
@@ -1047,6 +1055,7 @@ function applyQuery(text){
   activeVariants=new Set(q.variants);   negVariants=new Set(q.negVariants);
   activeStrips=new Set(q.strips); negStrips=new Set(q.negStrips);
   textTerms=q.text; negText=q.negText;
+  kindText=q.kindText; negKindText=q.negKindText;
 }
 
 function currentQuery(){ return document.getElementById('searchInput').value; }
@@ -1158,6 +1167,14 @@ function cardMatches(c){
     const blob=(c.strips||[]).map(x=>x.text||'').join(' ').toLowerCase();
     if(textTerms.length && !textTerms.every(t=>blob.includes(t))) return false;
     if(negText.some(t=>blob.includes(t))) return false;
+  }
+  if(kindText.length||negKindText.length){
+    // Qualifier rides with the body: "Action, Requires 3 Military" is searchable text too.
+    const inKind=(kind,term)=>(c.strips||[]).some(x=>
+      String(x.kind||'').toLowerCase()===kind &&
+      ((x.text||'')+' '+(x.qual||'')).toLowerCase().includes(term));
+    if(kindText.length && !kindText.every(t=>inKind(t.kind,t.term))) return false;
+    if(negKindText.some(t=>inKind(t.kind,t.term))) return false;
   }
   const pos=c.position_indicator;
   if(activePositions.size && !(pos && activePositions.has(pos))) return false;

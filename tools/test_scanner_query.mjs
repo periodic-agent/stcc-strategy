@@ -20,6 +20,7 @@ const vocab = {
   skillShort: { military: "Military Skill", variable: "Variable Skill", any: "Any Skill" },
   focusShort: { military: "Military Focus", influence: "Influence Focus", any: "Any Focus" },
   positions: { reserve: "Reserve", "incident deck": "Incident Deck", rewards: "Rewards" },
+  stripKinds: { play: true, activation: true, reaction: true, passive: true, cost: true },
 };
 
 let failures = 0;
@@ -29,7 +30,8 @@ function t(name, query, want) {
   const bad = Object.keys(want).filter(k => !eq(got[k], want[k]));
   const extra = ["boxes","decks","suits","tags","skills","names",
                  "negBoxes","negDecks","negSuits","negTags","negSkills","negNames",
-                 "glory","negGlory","positions","negPositions","variants","negVariants"]
+                 "glory","negGlory","positions","negPositions","variants","negVariants",
+                 "strips","negStrips","text","negText","kindText","negKindText"]
     .filter(k => !(k in want) && got[k].length);
   if (bad.length || extra.length) {
     failures++;
@@ -91,6 +93,15 @@ t("variant updated is the same", "variant:updated", { variants: ["update"] });
 t("variant duplicate", "variant:duplicate", { variants: ["duplicate"] });
 t("variant reprint is the same", "variant:reprint", { variants: ["duplicate"] });
 t("variant negated", "-variant:duplicate", { negVariants: ["duplicate"] });
+
+// strip kinds as text keys
+t("kind-scoped phrase", 'reaction:"putting a shady"',
+  { kindText: [{ kind: "reaction", term: "putting a shady" }] });
+t("kind-scoped single word", "activation:draw",
+  { kindText: [{ kind: "activation", term: "draw" }] });
+t("kind-scoped negated", "-passive:cloak",
+  { negKindText: [{ kind: "passive", term: "cloak" }] });
+t("unknown kind is not a key", "sneeze:cloak", { names: ["sneeze:cloak"] });
 
 if (failures) { console.log(failures + " failure(s)"); process.exit(1); }
 console.log("all tests pass");

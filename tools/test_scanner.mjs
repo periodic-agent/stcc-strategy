@@ -282,6 +282,24 @@ assert(/CARDFACE\.suit\[/.test(html) || dirPill.innerHTML.includes('<img'),
 assert(runQuery('box:all suit:directive').length > 0,
   'the Directive chip has cards behind it');
 
+// text inside one strip kind
+const reactShady = runQuery('box:all reaction:"putting a shady"');
+assert(reactShady.length > 0 && reactShady.every(c=>(c.strips||[]).some(x=>
+        String(x.kind).toLowerCase()==='reaction' && /putting a shady/i.test(x.text||''))),
+  'a strip kind used as a key searches only strips of that kind');
+assert(runQuery('box:all play:"putting a shady"').length === 0,
+  'the same phrase under the wrong kind returns nothing');
+assert(runQuery('box:all text:"putting a shady"').length >= reactShady.length,
+  'text: stays card-wide and is a superset of the kind-scoped search');
+const negKind = runQuery('box:all -reaction:"putting a shady"');
+assert(!negKind.some(c=>reactShady.includes(c)),
+  'negating a kind-scoped phrase drops exactly those cards');
+assert(runQuery('box:all activation:draw').every(c=>(c.strips||[]).some(x=>
+        String(x.kind).toLowerCase()==='activation' && /draw/i.test((x.text||'')+' '+(x.qual||'')))),
+  'the qualifier line is searched along with the strip body');
+assert(/reaction:&quot;putting a shady&quot;|reaction:"putting a shady"/.test(html),
+  'the help bubble documents kind-scoped text search with an example');
+
 // hidden query
 const egg = runQuery('picard combo');
 assert(egg.length === 4 && ['picard-daystrom-institute','moriarty','picard-uss-bozeman','holographic-drone-ship']
