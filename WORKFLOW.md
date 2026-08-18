@@ -501,6 +501,38 @@ copy of the pre-card-face scanner and emits `cardface-assets.js`).
   Empty renders nothing, which is correct for Wrathful Khan (the printed card
   has no marker) and for every non-captain. The resolver coalesces it across
   printings like `glory` and `position_indicator`.
+- **Operation strips** (`tools/patch_strips.py`, 1 Aug 2026): a STRIP filter
+  category under Focus with one chip per kind (13), coloured by family but
+  filterable individually, since ACTIVATION / PASSIVE / REACTION are different
+  rules despite sharing the blue box. Query tokens `strip:<kind>`, `strip:any`,
+  and `text:` / `rules:` searching the concatenated strip text. Strips render on
+  the card face, consecutive same-family kinds merged into one box the way the
+  cards print them (PLAY with SUPPORT, REACTION with PASSIVE). DEV. COST is the
+  one strip whose keyword sits inside the dark block, which sizes to the text.
+  Card height is dynamic; a card with three strips reaches ~380px against a
+  194px median.
+- **Strip data contract**: `strips` is a flat array in printed order,
+  `{kind, action, qual, text}`. `kind` from play, support, resupply, cleanup,
+  control, activation, reaction, passive, special, surprise, endgame, cost,
+  banner. `action` true when the strip prints the action cost ahead of its
+  keyword, false for Free, null when it prints neither. `text` is verbatim crowd
+  transcription with NO token markup, so icons are matched from the words at
+  render time: suits and traits keep their word (the card prints a chip carrying
+  both), resources and the action token replace it (the card prints art alone).
+  `strips: []` means not yet transcribed and renders nothing. Chip counts
+  therefore under-report until transcription completes, which the filter row
+  says out loud.
+- **Strip palette**: `data/strip-palette.json`, sampled from card scans and
+  white-point corrected per card by `tools/extract_strip_colors.py`; the
+  correction target is solved so ENDGAME reproduces the values already shipped
+  on archer-scoring.html.
+- **Rulebook icons**: `tools/extract_rulebook_icons.py` transcribes the back
+  cover's drawn token art (action, away team, dilithium, latinum, glory token,
+  VP, any skill, best focus, treachery, both Borg marks). The suit marks there
+  are NOT drawn: they are set in an embedded symbol font, so
+  `tools/extract_suit_font.py` pulls the CFF out of the PDF and walks its
+  charstrings instead, which also yields Mission. Both land in
+  `cardface-assets.js` under `token` and `suitFont`.
 - **`position_indicator`**: present on every record in all five JSONs, string or
   null; 415 of 610 non-null. Values seen: Available, Development, Reserve,
   Starting, Advanced, Captain, Discard, Deployed, Rewards, Controlled Location,

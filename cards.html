@@ -436,6 +436,35 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 /* Away-team marker: the printed group-of-people glyph has no vector source, so
    the bubble carries the value itself. Values are strings ("5", "2+"). */
 .awayteam{display:block;width:31px;height:28px;margin:.15rem 0 .4rem -0.15rem;}
+
+/* ===== operation strips =====
+   Colours are sampled from the card scans and white-point corrected per card;
+   the correction target is solved so ENDGAME reproduces the values already
+   shipped on archer-scoring.html. See tools/extract_strip_colors.py. */
+.ce-strips{margin:.45rem -0.7rem .1rem;display:flex;flex-direction:column;gap:2px;}
+.opstrip{display:flex;border-radius:0 4px 4px 0;overflow:hidden;}
+.opstrip .bar{flex:none;width:3px;}
+.opstrip .body{padding:.2rem .45rem .22rem .4rem;font-family:'Barlow Condensed',sans-serif;
+  font-weight:500;font-size:.8rem;line-height:1.24;}
+.opstrip .kw{font-family:'Antonio',sans-serif;font-weight:600;letter-spacing:.02em;
+  font-size:.76rem;text-shadow:0 0 2px #fff,0 0 5px rgba(255,255,255,.85);}
+.opstrip.on-dark .kw{text-shadow:0 0 2px rgba(10,20,40,.9);}
+.opstrip .line + .line{margin-top:.1rem;}
+/* DEV. COST is the one strip whose keyword sits inside the dark block, which
+   sizes itself to the text rather than being a fixed bar. */
+.opstrip.inbar .kwblock{flex:none;display:flex;align-items:center;padding:.2rem .4rem .22rem;
+  font-family:'Antonio',sans-serif;font-weight:600;font-size:.76rem;letter-spacing:.02em;}
+.stripimg{height:1.35em;width:auto;vertical-align:-.32em;margin:0 .08em;}
+.stripimg.cost{margin:0 .22em 0 0;}
+.stripchip{display:inline-flex;align-items:center;gap:.18em;height:1.2em;padding:0 .38em 0 .1em;
+  border-radius:999px;font-family:'Antonio',sans-serif;font-weight:600;font-size:.85em;
+  letter-spacing:.03em;text-transform:uppercase;color:#fff;vertical-align:-.2em;}
+.stripchip img{height:1em;width:auto;}
+.stripchip.plain{padding-left:.38em;}
+.strip-pill{padding-left:.5rem;}
+.strip-pill.zero{opacity:.45;}
+.strip-note{font-family:'Exo 2',sans-serif;font-size:.62rem;color:var(--muted);
+  margin:.35rem 0 0;opacity:.85;}
 </style>
 <meta name="description" content="Searchable card database for Star Trek: Captain's Chair. Filter every card by box, deck, suit, traits, skills and name — built for mid-game lookups.">
 <link rel="canonical" href="https://periodic-agent.github.io/stcc-strategy/cards.html">
@@ -445,7 +474,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 <meta property="og:url" content="https://periodic-agent.github.io/stcc-strategy/cards.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<script src="cardface-assets.js?v=2b7ff593"></script>
+<script src="cardface-assets.js?v=c07331a3"></script>
 </head>
 <body>
 
@@ -484,6 +513,8 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>box:promo1</code> · <code>box:all</code><span>promos in; empty bar = the three main boxes</span></div>
     <div class="qh-row"><code>glory:4</code> · <code>glory&gt;=3</code><span>glory value; cards without glory never match</span></div>
     <div class="qh-row"><code>position:reserve</code> · <code>position:incident-deck</code><span>starting position; hyphens for spaces</span></div>
+    <div class="qh-row"><code>strip:reaction</code> &middot; <code>strip:any</code><span>cards carrying that operation strip</span></div>
+    <div class="qh-row"><code>text:cloak</code> &middot; <code>text:"gain 2"</code><span>search the rules text of every strip</span></div>
     <div class="qh-row"><code>variant:update</code> · <code>variant:duplicate</code><span>cards wearing that badge in the current boxes</span></div>
     <div class="qh-note">Clicking any pill writes its token here — the pills are shortcuts for this language.</div>
     <div class="qh-note">Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>
@@ -566,6 +597,20 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     </div>
     <div class="collapsible-body open" id="focusBody">
       <div class="pill-row" id="focusFilters"></div>
+    </div>
+  </div>
+
+  <div class="filter-group">
+    <div class="collapsible-header open" onclick="toggleSection(this,'stripBody','stripSummary')">
+      <div style="display:flex;align-items:center;gap:0.4rem;">
+        <div class="filter-label">Strip</div>
+        <span class="active-summary skill" id="stripSummary"></span>
+      </div>
+      <span class="collapsible-arrow">&#9660;</span>
+    </div>
+    <div class="collapsible-body open" id="stripBody">
+      <div class="pill-row" id="stripFilters"></div>
+      <div class="strip-note">Counts reflect transcribed cards only; text is still being added.</div>
     </div>
   </div>
 
@@ -724,6 +769,7 @@ function resolveCards(rawPool){
       glory: (() => { for (const pr of group) { if (pr.glory !== undefined && pr.glory !== null) return pr.glory; } return null; })(),
       position_indicator: (() => { for (const pr of group) { if (pr.position_indicator !== undefined && pr.position_indicator !== null && pr.position_indicator !== '') return pr.position_indicator; } return null; })(),
       away_team: (() => { for (const pr of group) { if (pr.away_team) return String(pr.away_team); } return ''; })(),
+      strips: (() => { for (const pr of group) { if (Array.isArray(pr.strips) && pr.strips.length) return pr.strips; } return []; })(),
       badgeKind
     });
   });
@@ -892,7 +938,8 @@ function makePill(text,cls,kind){
 function parseQuery(text, vocab){
   const res={boxes:[],decks:[],suits:[],tags:[],skills:[],names:[],
              negBoxes:[],negDecks:[],negSuits:[],negTags:[],negSkills:[],negNames:[],
-             glory:[],negGlory:[],positions:[],negPositions:[],variants:[],negVariants:[]};
+             glory:[],negGlory:[],positions:[],negPositions:[],variants:[],negVariants:[],
+             strips:[],negStrips:[],text:[],negText:[]};
   // A key may be followed by ':' or by a comparison operator, so both glory>4 and
   // glory:>4 parse. The operator is captured separately from the value.
   const tokRe=/(-)?(?:([A-Za-z]+)\s*(:|>=|<=|>|<))?("([^"]*)"|[^\s"]+)/g;
@@ -929,6 +976,13 @@ function parseQuery(text, vocab){
       // Hyphens stand in for spaces: position:incident-deck === position:"incident deck".
       const norm=lv.replace(/-/g,' ').replace(/\s+/g,' ');
       put(res.positions,res.negPositions,(vocab.positions&&vocab.positions[norm])||val);
+    } else if(key==='strip'){
+      // strip:reaction, and strip:any for "has any strip at all"
+      put(res.strips,res.negStrips,lv.replace(/[\s-]/g,''));
+    } else if(key==='text'||key==='rules'){
+      // free text across every strip on the card: this is what makes the rules
+      // searchable rather than merely filterable
+      put(res.text,res.negText,lv);
     } else if(key==='variant'){
       const v = (lv==='updated'||lv==='update') ? 'update'
               : (lv==='duplicate'||lv==='reprint'||lv==='dupe') ? 'duplicate' : lv;
@@ -940,6 +994,11 @@ function parseQuery(text, vocab){
   return res;
 }
 /* QUERY_PARSER_END */
+
+const STRIP_PALETTE={"resupply": {"label": "RESUPPLY", "card": "archer-jonathan-archer", "y": [1081, 1324], "bar": "#62db5a", "body": "#e9e8e2", "bar_px": 34, "bar_pct": 2.91, "keyword": "#2bbe65", "text": "dark", "raw": {"bar": [81, 184, 73], "body": [193, 195, 183]}}, "endgame": {"label": "ENDGAME", "card": "archer-jonathan-archer", "y": [1341, 1506], "bar": "#e03511", "body": "#eecac7", "bar_px": 35, "bar_pct": 2.99, "keyword": "#e03511", "text": "dark", "raw": {"bar": [188, 42, 7], "body": [197, 170, 161]}}, "cleanup": {"label": "CLEAN-UP", "card": "archer-earth", "y": [766, 1082], "bar": "#77dc6b", "body": "#e9e8e2", "bar_px": 36, "bar_pct": 3.08, "keyword": "#43c271", "text": "dark", "raw": {"bar": [93, 181, 90], "body": [182, 191, 190]}}, "table": {"label": "REACTION + PASSIVE", "card": "archer-earth", "y": [1094, 1508], "bar": "#237ccf", "body": "#8aacd9", "bar_px": 38, "bar_pct": 3.25, "keyword": "#ffffff", "text": "light", "raw": {"bar": [27, 102, 174], "body": [108, 142, 182]}}, "banner": {"label": "no keyword", "card": "sukal", "y": [1028, 1142], "bar": "#bdbcb5", "body": "#e9e8e2", "bar_px": 43, "bar_pct": 3.68, "keyword": "#c24b36", "text": "dark", "raw": {"bar": [172, 168, 165], "body": [212, 207, 206]}}, "passive": {"label": "PASSIVE", "card": "sukal", "y": [1148, 1321], "bar": "#146aaa", "body": "#7693b0", "bar_px": 45, "bar_pct": 3.85, "keyword": "#ffffff", "text": "light", "raw": {"bar": [18, 95, 155], "body": [107, 131, 160]}}, "special": {"label": "SPECIAL", "card": "sukal", "y": [1331, 1504], "bar": "#bea7b5", "body": "#c0b2b7", "bar_px": 2, "bar_pct": 0.17, "keyword": "#91388a", "text": "dark", "raw": {"bar": [172, 149, 165], "body": [175, 159, 167]}}, "play": {"label": "PLAY + SUPPORT", "card": "riker-brad-boimler-lt-jg", "y": [825, 1312], "bar": "#d6d6d5", "body": "#e9e8e2", "bar_px": 16, "bar_pct": 1.37, "keyword": "#14161c", "text": "dark", "raw": {"bar": [164, 165, 167], "body": [179, 179, 177]}}, "activation": {"label": "ACTIVATION", "card": "riker-brad-boimler-lt-jg", "y": [1327, 1497], "bar": "#096abd", "body": "#7ea3cc", "bar_px": 37, "bar_pct": 3.16, "keyword": "#ffffff", "text": "light", "raw": {"bar": [7, 82, 148], "body": [97, 126, 160]}}, "cost": {"label": "DEV. COST", "card": "picard-tamarians", "y": [1400, 1500], "bar": "#202128", "body": "#44454d", "bar_px": 348, "bar_pct": 29.7, "keyword": "#ffffff", "text": "light", "mode": "inbar", "raw": {"bar": [27, 27, 33], "body": [57, 57, 63]}}, "surprise": {"label": "SURPRISE", "card": "dilithium-shockwave", "y": [1342, 1505], "bar": "#e9cbe2", "body": "#e9d9db", "bar_px": 2, "bar_pct": 0.17, "keyword": "#a355af", "text": "dark", "raw": {"bar": [183, 171, 195], "body": [183, 183, 189]}}};
+const STRIP_KINDS=[["play", "Play"], ["support", "Support"], ["resupply", "Resupply"], ["cleanup", "Clean-Up"], ["control", "Control"], ["activation", "Activation"], ["reaction", "Reaction"], ["passive", "Passive"], ["special", "Special"], ["surprise", "Surprise"], ["endgame", "Endgame"], ["cost", "Dev. Cost"], ["banner", "No Play"]];
+const STRIP_FAMILY={"play": "play", "support": "play", "control": "resupply", "resupply": "resupply", "cleanup": "cleanup", "activation": "activation", "reaction": "activation", "passive": "activation", "special": "special", "surprise": "surprise", "endgame": "endgame", "cost": "cost", "banner": "banner"};
+let activeStrips=new Set(), negStrips=new Set(), textTerms=[], negText=[];
 
 let QUERY_VOCAB=null;
 function buildQueryVocab(){
@@ -986,6 +1045,8 @@ function applyQuery(text){
   gloryTests=q.glory; negGlory=q.negGlory;
   activePositions=new Set(q.positions); negPositions=new Set(q.negPositions);
   activeVariants=new Set(q.variants);   negVariants=new Set(q.negVariants);
+  activeStrips=new Set(q.strips); negStrips=new Set(q.negStrips);
+  textTerms=q.text; negText=q.negText;
 }
 
 function currentQuery(){ return document.getElementById('searchInput').value; }
@@ -1089,6 +1150,15 @@ function cardMatches(c){
   // Glory: a card with no glory value never matches a glory test, in either direction.
   if(gloryTests.length && !gloryTests.every(t=>gloryMatches(c.glory,t))) return false;
   if(negGlory.some(t=>gloryMatches(c.glory,t))) return false;
+  // Strips: kind filter, then free text over the concatenated strip text.
+  const kinds=(c.strips||[]).map(x=>String(x.kind||'').toLowerCase());
+  if(activeStrips.size && ![...activeStrips].every(k=>k==='any'?kinds.length:kinds.includes(k))) return false;
+  if([...negStrips].some(k=>k==='any'?kinds.length:kinds.includes(k))) return false;
+  if(textTerms.length||negText.length){
+    const blob=(c.strips||[]).map(x=>x.text||'').join(' ').toLowerCase();
+    if(textTerms.length && !textTerms.every(t=>blob.includes(t))) return false;
+    if(negText.some(t=>blob.includes(t))) return false;
+  }
   const pos=c.position_indicator;
   if(activePositions.size && !(pos && activePositions.has(pos))) return false;
   if(pos && negPositions.has(pos)) return false;
@@ -1161,6 +1231,17 @@ function updateBadges(){
   updatePillCounts('otherFilters',allOther,false);
   updatePillCounts('skillFilters',allSkills.filter(v=>!/Focus$/.test(v)),true);
   updatePillCounts('focusFilters',allSkills.filter(v=>/Focus$/.test(v)),true);
+  // Strip chips count per kind against the cards currently matching everything else.
+  document.querySelectorAll('#stripFilters > span').forEach(p=>{
+    const kind=p.dataset.strip;
+    let n=0;
+    ALL_CARDS.forEach(c=>{ if((c.strips||[]).some(x=>String(x.kind||'').toLowerCase()===kind)) n++; });
+    const cnt=p.querySelector('.cnt');
+    cnt.textContent='('+n+')';
+    if(!cnt.style.minWidth) cnt.style.minWidth=Math.ceil(cnt.getBoundingClientRect().width)+'px';
+    p.classList.toggle('active', activeStrips.has(kind));
+    p.classList.toggle('zero', n===0);
+  });
 }
 
 // Display labels: filters/chips never repeat "Skill"/"Focus"; Wildcard shows as Variable.
@@ -1173,6 +1254,123 @@ function badgeInfo(c){
   if(c.badgeKind==='duplicate') return {cls:'duplicate', text:'Duplicate'};
   return null;
 }
+
+// ===== operation strips on the card face =====
+// The transcription is plain text: nobody recorded which words were printed as
+// chips or icons, so they are matched here. Suits and traits keep their word,
+// because the card prints a chip carrying both the mark and the word; resources
+// and the action token replace it, because the card prints art alone.
+const STRIP_SUIT_COL={Person:'#c9ab35',Ally:'#9b6ecf',Ship:'#7a8aaa',Cargo:'#3a6aaa',
+  Location:'#4ac48a',Encounter:'#d4699f',Incident:'#e05a5a',Captain:'#c8a84b',
+  Directive:'#8494ad',Status:'#88aacc',Mission:'#2b3040'};
+const STRIP_RES={dilithium:'dilithium',latinum:'latinum',glory:'glory-token',
+                 action:'action',actions:'action'};
+const STRIP_SPEC=['Research','Influence','Military','Any','Variable'];
+
+function stripIcon(key){
+  // CARDFACE is a top-level const, so it is not a property of window: guard
+  // with typeof, not window.CARDFACE, which is always undefined here.
+  return (typeof CARDFACE!=='undefined' && CARDFACE.token && CARDFACE.token[key])||'';
+}
+function titleCase(w){ return w.charAt(0).toUpperCase()+w.slice(1); }
+
+function stripToken(t){
+  let m;
+  if((m=t.match(/^suit:(.+)$/))){
+    const s=m[1], col=STRIP_SUIT_COL[s]||'#8494ad';
+    const gi=(CARDFACE.suitFont&&CARDFACE.suitFont[s.toLowerCase()])||CARDFACE.suit[s.toLowerCase()];
+    return '<span class="stripchip'+(gi?'':' plain')+'" style="background:'+col+'">'
+      +(gi?'<img src="'+gi+'" alt="">':'')+s.toUpperCase()+'</span>';
+  }
+  if((m=t.match(/^trait:(.+)$/))){
+    const k=m[1].toLowerCase().replace(/['\u2019]/g,'').replace(/\s+/g,'-');
+    const ic=CARDFACE.traitChip[k];
+    return '<span class="stripchip'+(ic?'':' plain')+'" style="background:#556">'
+      +(ic?'<img src="'+ic+'" alt="">':'')+m[1].toUpperCase()+'</span>';
+  }
+  if((m=t.match(/^(skill|focus):(.+)$/))){
+    const bank=m[1]==='focus'?CARDFACE.focus:CARDFACE.skillChip;
+    const src=bank&&bank[m[2].toLowerCase()];
+    return src?'<img class="stripimg" src="'+src+'" alt="'+m[2]+'">':m[2]+' '+m[1];
+  }
+  if((m=t.match(/^res:(.+)$/))){
+    const src=stripIcon(STRIP_RES[m[1].toLowerCase()]);
+    return src?'<img class="stripimg" src="'+src+'" alt="'+m[1]+'">':titleCase(m[1]);
+  }
+  if(t==='action'){
+    const src=stripIcon('action');
+    return src?'<img class="stripimg" src="'+src+'" alt="action">':'action';
+  }
+  return t;
+}
+
+function stripAutoTokens(text){
+  let t=text;
+  STRIP_SPEC.forEach(sp=>{
+    t=t.replace(new RegExp('\\b'+sp+' (Skill|Focus)\\b','g'),
+      (_,k)=>'{'+(k==='Focus'?'focus':'skill')+':'+sp+'}');
+  });
+  Object.keys(STRIP_SUIT_COL).forEach(w=>{
+    t=t.replace(new RegExp('\\b'+w+'s?\\b','g'),()=>'{suit:'+w+'}');
+  });
+  Object.keys(STRIP_RES).forEach(w=>{
+    t=t.replace(new RegExp('\\b'+w+'\\b','gi'),
+      m=>/^(dilithium|latinum|glory)$/i.test(m)?'{res:'+m.toLowerCase()+'}':'{action}');
+  });
+  // Traits only where a medallion exists and only capitalised, so an ordinary
+  // "attack" in a sentence stays text while the ATTACK trait becomes a chip.
+  Object.keys(CARDFACE.traitChip).forEach(k=>{
+    t=t.replace(new RegExp('\\b'+k.replace(/-/g,' ')+'\\b','gi'),
+      m=>(m[0]===m[0].toUpperCase()?'{trait:'+m+'}':m));
+  });
+  return t;
+}
+
+function stripBody(text){
+  return stripAutoTokens(String(text||''))
+    .replace(/\{([^}]+)\}/g,(_,t)=>stripToken(t))
+    .replace(/_([^_]+)_/g,'<em>$1</em>');
+}
+
+function stripLabel(kind){
+  return ({cleanup:'CLEAN-UP',cost:'DEV. COST'}[kind])||kind.toUpperCase();
+}
+
+// Consecutive strips of the same colour family share one box, which is how the
+// cards print them (PLAY with SUPPORT, REACTION with PASSIVE).
+function buildStrips(c){
+  const list=c.strips||[];
+  if(!list.length) return '';
+  const boxes=[];
+  list.forEach(st=>{
+    const fam=STRIP_FAMILY[String(st.kind||'').toLowerCase()]||'play';
+    const last=boxes[boxes.length-1];
+    if(last && last.fam===fam) last.items.push(st); else boxes.push({fam:fam,items:[st]});
+  });
+  return '<div class="ce-strips">'+boxes.map(b=>{
+    const p=STRIP_PALETTE[b.fam]; if(!p) return '';
+    const ink=p.text==='light'?'#f2f6ff':'#14161c';
+    const dark=p.text==='light'?' on-dark':'';
+    if(p.mode==='inbar'){
+      return '<div class="opstrip inbar'+dark+'">'+b.items.map(st=>
+          '<div class="kwblock" style="background:'+p.bar+';color:'+(p.keyword||'#fff')+'">'
+          +stripLabel(String(st.kind).toLowerCase())+':</div>'
+        + '<div class="body" style="background:'+p.body+';color:'+ink+'">'
+          +stripBody(st.text)+'</div>').join('')+'</div>';
+    }
+    return '<div class="opstrip'+dark+'"><div class="bar" style="background:'+p.bar+'"></div>'
+      +'<div class="body" style="background:'+p.body+';color:'+ink+'">'
+      + b.items.map(st=>{
+          const cost=st.action===true?('<img class="stripimg cost" src="'+stripIcon('action')+'" alt="action cost">'):'';
+          const kind=String(st.kind||'').toLowerCase();
+          return '<div class="line">'+cost
+            +(kind==='banner'?'':'<span class="kw" style="color:'+(p.keyword||ink)+'">'+stripLabel(kind)+':</span> ')
+            +stripBody(st.text)+'</div>';
+        }).join('')
+      +'</div></div>';
+  }).join('')+'</div>';
+}
+
 
 function buildPillCard(c){
   const SUIT_COL={'Person':'#c9ab35','Ally':'#9b6ecf','Ship':'#7a8aaa','Cargo':'#3a6aaa','Location':'#4ac48a','Encounter':'#d4699f','Incident':'#e05a5a','Captain':'#d7dce6','Directive':'#8494ad','Status':'#88aacc'};
@@ -1212,6 +1410,7 @@ function buildPillCard(c){
   }
   const away=(c.away_team||'').trim();
   const awayHTML=away?('<svg class="awayteam" viewBox="0 0 30 27" role="img" aria-label="Away team '+away+'"><title>Away team '+away+'</title><path d="M4.2 1.1h21.6a3.1 3.1 0 0 1 3.1 3.1v14.6a3.1 3.1 0 0 1-3.1 3.1h-8.2l-2.6 4.6-2.6-4.6H4.2a3.1 3.1 0 0 1-3.1-3.1V4.2a3.1 3.1 0 0 1 3.1-3.1z" fill="#1b2f4d" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><text x="15" y="16.6" text-anchor="middle" font-family="Antonio,sans-serif" font-weight="700" font-size="12" fill="#fff">'+away+'</text></svg>'):'';
+  const stripHTML=buildStrips(c);
   const badge=badgeInfo(c);
   const strat=hasStrategy(c);
   if(strat) el.classList.add('has-strategy');
@@ -1238,7 +1437,7 @@ function buildPillCard(c){
     +(skillsHTML?'<div class="skcol">'+skillsHTML+'</div>':'')
     +stratHTML
     +'</div><div class="ce-traits2">'+vt+'</div></div>'
-    +numline+corner;
+    +stripHTML+numline+corner;
   return el;
 }
 
@@ -1405,6 +1604,17 @@ SUITS_DISPLAY.forEach(s=>{
   p.innerHTML=(gi?'<img src="'+gi+'" alt="">':'')+'<span class="lbl">'+s+'</span>';
   p.onclick=()=>toggleToken(tokenOf('suit',s));
   suitContainer.appendChild(p);
+});
+
+const stripContainer=document.getElementById('stripFilters');
+STRIP_KINDS.forEach(([kind,label])=>{
+  const pal=STRIP_PALETTE[STRIP_FAMILY[kind]]||{};
+  const p=document.createElement('span');
+  p.className='strip-pill cardpill'; p.dataset.strip=kind;
+  p.style.setProperty('--cc', pal.bar||'#8494ad');
+  p.innerHTML='<span class="lbl">'+label+'</span><span class="cnt"></span>';
+  p.onclick=()=>toggleToken(tokenOf('strip',kind));
+  stripContainer.appendChild(p);
 });
 
 document.getElementById('speciesFilters').append(...allSpecies.map(t=>makePill(t,'species-pill','trait')));

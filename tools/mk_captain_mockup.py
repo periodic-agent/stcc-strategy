@@ -5,10 +5,11 @@ Renders a handful of captain cards using the LIVE cards.html CSS and the live
 asset bundle, with the proposed changes applied in memory only:
   - name + suit banners light gray (#d7dce6) with black text, black chair glyph
   - card left border light gray instead of gold
-  - away-team marker (speech bubble carrying the number) under the suit banner
+  - away-team marker under the suit banner: the real glyph from the rulebook
+    back cover, with the count on a tab beneath it
 Nothing here writes or pushes cards.html; it exists to look at the design.
 """
-import re, json, base64, sys
+import re, json, base64, sys, os
 
 GRAY, INK = '#d7dce6', '#10161f'
 
@@ -32,25 +33,21 @@ def main(live_dir='live_sync', out='mockups_captain_preview.html'):
              'Christopher Pike', 'Sela', 'Wrathful Khan']
     picked = [c for n in order for c in caps if c['name'] == n]
 
-    def away_svg(v):
-        """Speech bubble carrying the away-team value.
+    away_icon = ('data:image/svg+xml;base64,'
+                 + base64.b64encode(open('icons_rb/away-team.svg', 'rb').read()).decode())
 
-        The printed marker's group-of-people glyph has no vector source, so the
-        bubble holds the number itself rather than sitting empty above a tab.
-        Values are strings and can be two characters ("2+", "4+"); one size is
-        used for every value so a lone digit does not read larger than a "2+".
+    def away_svg(v):
+        """The away-team mark with its count.
+
+        The glyph is the printed one, transcribed from the rulebook back cover,
+        so the drawn speech bubble that stood in for it is gone. The count sits
+        on a tab beneath, as on the card; values are strings and may be two
+        characters ("2+", "4+"), so one size serves them all.
         """
         if not v:
             return ''
-        fs = 12
-        return (
-            '<svg class="awayteam" viewBox="0 0 30 27" role="img" aria-label="Away team ' + v + '">'
-            '<title>Away team ' + v + '</title>'
-            '<path d="M4.2 1.1h21.6a3.1 3.1 0 0 1 3.1 3.1v14.6a3.1 3.1 0 0 1-3.1 3.1'
-            'h-8.2l-2.6 4.6-2.6-4.6H4.2a3.1 3.1 0 0 1-3.1-3.1V4.2a3.1 3.1 0 0 1 3.1-3.1z" '
-            'fill="#1b2f4d" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>'
-            '<text x="15" y="16.6" text-anchor="middle" font-family="Antonio,sans-serif" '
-            'font-weight="700" font-size="' + str(fs) + '" fill="#fff">' + v + '</text></svg>')
+        return ('<span class="awayteam"><img src="' + away_icon + '" alt="Away team">'
+                '<span class="atn">' + v + '</span></span>')
 
     def card(c):
         traits = sorted(c['species_traits'] + c['regular_traits'] + c['other_traits'],
@@ -93,7 +90,12 @@ def main(live_dir='live_sync', out='mockups_captain_preview.html'):
 /* ---- proposed Captain treatment (mockup only) ---- */
 .card-entry.cap{border-left:2px solid %s;}
 .card-entry.cap .nb,.card-entry.cap .sb{color:%s;}
-.awayteam{display:block;width:31px;height:28px;margin:.15rem 0 .4rem -0.15rem;}
+.awayteam{display:flex;flex-direction:column;align-items:center;width:fit-content;
+  margin:.15rem 0 .4rem -0.1rem;}
+.awayteam img{width:27px;height:auto;display:block;}
+.awayteam .atn{margin-top:-5px;min-width:19px;padding:0 .18rem;border-radius:3px;
+  background:#2f5f96;border:1.5px solid #fff;color:#fff;font-family:'Antonio',sans-serif;
+  font-weight:700;font-size:.72rem;line-height:1.25;text-align:center;}
 """ % (GRAY, INK)
 
     html = ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">'
