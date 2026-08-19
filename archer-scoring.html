@@ -159,7 +159,6 @@ function buildChips(){
     TRAITS.filter(t => t.group === g).sort((a,b) => a.name.localeCompare(b.name)).forEach(t => {
       const p = document.createElement("span");
       let cc = g === "species" ? "cp-species" : g === "other" ? "cp-other" : "cp-regular";
-      if (t.name === "Wildcard") cc = "cp-wild";
       p.className = "cardpill " + cc;
       p.dataset.name = t.name;
       const ic = ICONS[slug(t.name)];
