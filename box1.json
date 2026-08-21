@@ -315,7 +315,7 @@
     "kind": "play",
     "action": true,
     "qual": "Action, Attack, Requires 3 Influence",
-    "text": "Force you opponent to log a Person from their hand or Discard pile. If they do, they may draw a card. If they cannot, they take an Incident. You may promote this card to Duty Officer."
+    "text": "Force your opponent to log a Person from their hand or Discard pile. If they do, they may draw a card. If they cannot, they take an Incident. You may promote this card to Duty Officer."
    },
    {
     "kind": "activation",

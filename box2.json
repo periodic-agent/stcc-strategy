@@ -4205,7 +4205,32 @@
   "other_traits": [],
   "filename": "rebner-rebner.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "passive",
+    "action": null,
+    "qual": null,
+    "text": "Your hand size is 3."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "If your hand size is empty, draw 2 cards."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Spend 1 Latinum to draw 2 cards."
+   },
+   {
+    "kind": "endgame",
+    "action": null,
+    "qual": null,
+    "text": "Score 1 VP for every 2 of your Cargo cards, excluding cards with Helmet."
+   }
+  ]
  },
  {
   "id": "rebner-mondor",
@@ -4226,7 +4251,32 @@
   "other_traits": [],
   "filename": "rebner-mondor.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Deploy this ship. You may gain a Cargo from the Junk. If the gained card is Weapon / Anomaly, gain 1 Military."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Spend 1 Dilithium to warp this ship."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Discard a card to beam a card here."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Promote a Person from your hand to Duty Officer."
+   }
+  ]
  },
  {
   "id": "rebner-big-enough-helmet",
@@ -4245,7 +4295,20 @@
   "other_traits": [],
   "filename": "rebner-big-enough-helmet.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "Your opponent may draw 2 cards."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Gain 1 Latinum, 1 Dilithium, and 1 Glory. You may refresh your Captain."
+   }
+  ]
  },
  {
   "id": "rebner-karzill-vi",
@@ -4264,7 +4327,38 @@
   "other_traits": [],
   "filename": "rebner-karzill-vi.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "2 Latinum, have 5+ Military"
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Take control of this location."
+   },
+   {
+    "kind": "control",
+    "action": null,
+    "qual": null,
+    "text": "You may free play a Ship."
+   },
+   {
+    "kind": "cleanup",
+    "action": null,
+    "qual": null,
+    "text": "For each unspent Action, gain 1 Dilithium and 1 Glory."
+   },
+   {
+    "kind": "endgame",
+    "action": null,
+    "qual": null,
+    "text": "Score 1 for every 4 Glory you have."
+   }
+  ]
  },
  {
   "id": "rebner-varuvian-bomb",
@@ -4290,7 +4384,20 @@
     "specialty": "Military"
    }
   ],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "5 Dilithium, or free if you have 1+ Away Team on Karzill VI."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action, Attack",
+    "text": "Your opponent takes an Incident. Log a controlled Location you have in play. Gain 1 Military, and 2 Military for each Research Skill / Influence Skill / Military Skill / Any Skill the logged card has. Then, either: discard a Shady or log this card."
+   }
+  ]
  },
  {
   "id": "rebner-jackabogs-clumpship",
@@ -4316,7 +4423,32 @@
     "specialty": "Military"
    }
   ],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "3 Dilithium, 1 Latinum"
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action, Attack",
+    "text": "Deploy this ship. For each Ship your opponent has in play, draw and reveal a card. You may log a drawn card with Weapon to force your opponent to log a Ship from their hand, Discard pile, or in play."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Spend 1 Dilithium to warp this ship."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Discard a card to beam a card here."
+   }
+  ]
  },
  {
   "id": "rebner-harpy",
@@ -4340,7 +4472,32 @@
     "specialty": "Military"
    }
   ],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "2 Latinum"
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Deploy this ship. Gain 1 Military for each Military Skill you have in play (excluding beamed cards)."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Spend 1 Dilithium to warp this ship."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Discard a Helmet to dismiss this ship, then put this card on the top of your deck."
+   }
+  ]
  },
  {
   "id": "rebner-the-pakled-emperor",
@@ -4366,7 +4523,26 @@
     "specialty": "Military"
    }
   ],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "2 Latinum"
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Find any card. You may free play an Incident."
+   },
+   {
+    "kind": "activation",
+    "action": true,
+    "qual": "Action",
+    "text": "If The Pakled Emperor is wearing the Big Enough Helmet, spend 4 Dilithium to take the top Encounter. Log this card (along with the Helmet)."
+   }
+  ]
  },
  {
   "id": "rebner-rumdar",
@@ -4389,7 +4565,20 @@
   ],
   "filename": "rebner-rumdar.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action, Attack",
+    "text": "Send an Away Team to a neutral Location. Force your opponent to discard a card. You may dismiss an opponent Spy to gain 1 Glory."
+   },
+   {
+    "kind": "reaction",
+    "action": null,
+    "qual": null,
+    "text": "After drawing due to Rebner's operations, draw 2 cards. If Rumdar is wearing a Helmet, you may take an Incident to enlist a Development."
+   }
+  ]
  },
  {
   "id": "rebner-ambassador-grubdin",
@@ -4410,7 +4599,20 @@
   "other_traits": [],
   "filename": "rebner-ambassador-grubdin.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Send an Away Team to a Location. You may discard a Business / Shady to send an (additional) Away Team to a Location."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "You may spend an Action to gain 1 Military for each Helmet you have in play. If Ambassador Grubdin is wearing a Helmet, gain 1 Latinum and 1 Glory."
+   }
+  ]
  },
  {
   "id": "rebner-the-clumpship-pakled",
@@ -4436,7 +4638,26 @@
     "specialty": "Military"
    }
   ],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action, Attack",
+    "text": "Deploy this ship. For each Ship your opponent has in play, draw and reveal a card. You may log a drawn card with Weapon to force your opponent to log a Ship from their hand, Discard pile, or in play."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Spend 1 Dilithium to warp this ship."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Discard a card to beam a card here."
+   }
+  ]
  },
  {
   "id": "rebner-even-bigger-helmet",
@@ -4455,7 +4676,20 @@
   "other_traits": [],
   "filename": "rebner-even-bigger-helmet.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Gain 1 Latinum and 1 Dilithium. Promote a Person from your hand or Staging Area to Duty Officer."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Take an Incident to enlist Big Enough Helmet."
+   }
+  ]
  },
  {
   "id": "rebner-reginod",
@@ -4476,7 +4710,26 @@
   "other_traits": [],
   "filename": "rebner-reginod.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "You may draw a Pakled from your Discard pile. You may discard a Cargo to gain 4 Dilithium. If the discarded card is Weapon, gain 1 Military."
+   },
+   {
+    "kind": "resupply",
+    "action": null,
+    "qual": null,
+    "text": "Gain 1 Dilithium."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "If Reginod is wearing a Helmet, you may draw a Person from your Discard pile. Regardless: You may warp a Ship and you may beam a card to a Ship."
+   }
+  ]
  },
  {
   "id": "rebner-red-alarm",
@@ -4493,7 +4746,14 @@
   "other_traits": [],
   "filename": "rebner-red-alarm.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Recall a Duty Officer to return this card. You may spend 1 Dilithium to either: refresh a Ship or draw a Helmet from your Discard pile."
+   }
+  ]
  },
  {
   "id": "rebner-rebelution",
@@ -4515,7 +4775,26 @@
     "specialty": "Military"
    }
   ],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Gain 1 Dilithium. Dismiss every Helmet."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free, Requires 5 Military",
+    "text": "Dismiss every Helmet and exhaust every unexhausted Ongoing / Location you have in play. If you dismissed at least 2 Helmet, send an Away team to a Location."
+   },
+   {
+    "kind": "special",
+    "action": null,
+    "qual": null,
+    "text": "This card cannot be logged."
+   }
+  ]
  },
  {
   "id": "rebner-pakled-decree",
@@ -4534,7 +4813,26 @@
   ],
   "filename": "rebner-pakled-decree.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Deploy this card."
+   },
+   {
+    "kind": "activation",
+    "action": true,
+    "qual": "Action",
+    "text": "Beam a Helmet here to gain a Cargo."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "If you have 15 Military, log a Weapon from your hand or Discard pile to draw 3 cards and discard one of them."
+   }
+  ]
  },
  {
   "id": "rebner-salvage",
@@ -4551,7 +4849,20 @@
   "other_traits": [],
   "filename": "rebner-salvage.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Junk a card from the Market to draw a card."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Spend 1 Latinum to gain Person / Cargo / Ship / Ally from the Junk to your Discard pile."
+   }
+  ]
  },
  {
   "id": "rebner-samaritan-snare",
@@ -4570,7 +4881,26 @@
   ],
   "filename": "rebner-samaritan-snare.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Deploy this card."
+   },
+   {
+    "kind": "activation",
+    "action": true,
+    "qual": "Action",
+    "text": "Beam a Helmet here, and take an Incident to gain a Ship / Ally."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Discard an Incident to gain 1 Military."
+   }
+  ]
  },
  {
   "id": "rebner-grebnedlog",
@@ -4589,7 +4919,32 @@
   "other_traits": [],
   "filename": "rebner-grebnedlog.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Gain a Person."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action, Requires 3 Military",
+    "text": "Spend 1 Dilithium to scan for an Engineer."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action, Requires 6 Military",
+    "text": "Spend 1 Latinum to scan for either a Shady or a Scientist."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "You may discard a Person to gain 3 Dilithium. If the discarded card is Engineer, gain 1 Glory. If Grebnedlog is wearing a Helmet, gain 1 Military."
+   }
+  ]
  },
  {
   "id": "rebner-pakled-planet",
@@ -4608,7 +4963,32 @@
   "other_traits": [],
   "filename": "rebner-pakled-planet.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Take control of this location."
+   },
+   {
+    "kind": "control",
+    "action": null,
+    "qual": null,
+    "text": "Find a Helmet, except in your Reserve deck."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Beam a Helmet here to send an Away Team to a Location. If you have a Ship at that Location, gain 1 Glory."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Beam a Helmet to your Duty Officer."
+   }
+  ]
  },
  {
   "id": "rebner-big-helmet",
@@ -4627,7 +5007,26 @@
   "other_traits": [],
   "filename": "rebner-big-helmet.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Gain 1 Latinum."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Draw 2 cards and discard 1 of them."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Promote a Person from your hand to Duty Officer."
+   }
+  ]
  },
  {
   "id": "rebner-big-helmet-2",
@@ -4646,7 +5045,26 @@
   "other_traits": [],
   "filename": "rebner-big-helmet-2.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Gain 1 Latinum."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Draw 2 cards and discard 1 of them."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Promote a Person from your hand to Duty Officer."
+   }
+  ]
  },
  {
   "id": "georgiou-captain-georgiou",
@@ -5495,7 +5913,7 @@
     "kind": "passive",
     "action": null,
     "qual": null,
-    "text": "This card has 1 Wild skill."
+    "text": "This card has 1 Any Skill."
    }
   ]
  },
@@ -5599,7 +6017,20 @@
   "other_traits": [],
   "filename": "archer-jonathan-archer.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "resupply",
+    "action": null,
+    "qual": null,
+    "text": "If you have a deployed Ship and 3+ resources at Earth,  you may exhaust this card to gain 3 resources from Earth."
+   },
+   {
+    "kind": "endgame",
+    "action": null,
+    "qual": null,
+    "text": "Score 1 for every 3 unique traits you have in play."
+   }
+  ]
  },
  {
   "id": "archer-earth",
@@ -5616,7 +6047,26 @@
   "other_traits": [],
   "filename": "archer-earth.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cleanup",
+    "action": null,
+    "qual": null,
+    "text": "You may beam a non-Directive card here from your hand or Staging Area. If it shares no traits with your Captain, gain 1 Influence and place 1 Glory here."
+   },
+   {
+    "kind": "reaction",
+    "action": null,
+    "qual": null,
+    "text": "After discarding a Directive during y our Action Step, place 1 Dilithium / Latinum here."
+   },
+   {
+    "kind": "passive",
+    "action": null,
+    "qual": null,
+    "text": "Ship can warp here. Cards beamed here cannot be recalled or dismissed, not even when contributing to a Mission."
+   }
+  ]
  },
  {
   "id": "archer-nx-01-enterprise",
@@ -5638,7 +6088,32 @@
   "other_traits": [],
   "filename": "archer-nx-01-enterprise.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Deploy this ship. You may exhaust a Duty Officer to warp this ship."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Spend 1 Dilithium to warp this ship."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Spend 1 Dilithium to beam a card here."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Promote a Person from your hand to Duty Officer."
+   }
+  ]
  },
  {
   "id": "archer-founding-the-federation",
@@ -5664,7 +6139,20 @@
     "specialty": "Any"
    }
   ],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "1 Dilithium, 1 Latnium, have 5+ Difference Species logged."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Enlist your entire Reserve deck. Gain all resources from Earth. You may beam up to 3 Ally from your Log to Earth. For each card beamed this way you may find and return an Incident. Log this card."
+   }
+  ]
  },
  {
   "id": "archer-agent-daniels",
@@ -5694,7 +6182,32 @@
     "specialty": "Military"
    }
   ],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "3 Dilithium, have 2+ Xindi in play."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Draw a card from your deck or Discard pile. For each Anomaly you have in play, gain 1 Research. For each Ambassador you have in play, gain 1 Influence. For each Alien / Xindi you have in play, gain 1 Military."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Discard a card to recall a non-Time Travel card from your Staging Area."
+   },
+   {
+    "kind": "passive",
+    "action": null,
+    "qual": null,
+    "text": "Increase your hand size by 1 for each of Research / Influence / Military you have at 6+."
+   }
+  ]
  },
  {
   "id": "archer-commander-shran",
@@ -5724,7 +6237,32 @@
     "specialty": "Influence"
    }
   ],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "2 Dilithium, 2 Latinum"
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Scan for either an Andorian or a Weapon. Draw a card."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Discard a card to send an Away Team to a Location. If the discarded card is a Directive / Cargo, gain 2 Dilithium."
+   },
+   {
+    "kind": "special",
+    "action": null,
+    "qual": null,
+    "text": "When enlisting this card, add 2 Away Team from the supply to your Captain."
+   }
+  ]
  },
  {
   "id": "archer-ambassador-soval",
@@ -5755,7 +6293,32 @@
     "specialty": "Research"
    }
   ],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "3 Dilithium, exhaust your Captain"
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Scan for either a Vulcan or a Scientist. Draw a card."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Discard a Human to draw 2 cards and gain 1 Research / Influence / Military."
+   },
+   {
+    "kind": "special",
+    "action": null,
+    "qual": null,
+    "text": "When enlisting this card, add 2 Away Team from the supply to your Captain."
+   }
+  ]
  },
  {
   "id": "archer-admiral-forrest",
@@ -5776,7 +6339,32 @@
   "other_traits": [],
   "filename": "archer-admiral-forrest.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "Have 4+ cards beamed to Earth."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "You may free play an Incident or a Directive. You may promote Admiral Forrest and up to 2 other Person from your hand, Discard pile, or Staging Area to Duty Officer(s)."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Discard a card to place 1 Glory on Earth."
+   },
+   {
+    "kind": "passive",
+    "action": null,
+    "qual": null,
+    "text": "You may have up to two additional Person on duty."
+   }
+  ]
  },
  {
   "id": "archer-xindi-council",
@@ -5797,7 +6385,26 @@
   ],
   "filename": "archer-xindi-council.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "Have an Incident and an Encounter in play."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Gain 2 Influence. Scan for Xindi, including from the Junk."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free, Attack, Requires 6 Influence",
+    "text": "If your opponent has Xindi in play, you both take an Incident. Exhaust an opponent controlled Location (of your choice). Take the top Encounter. Log this card."
+   }
+  ]
  },
  {
   "id": "archer-automated-repair-station",
@@ -5817,7 +6424,38 @@
   "other_traits": [],
   "filename": "archer-automated-repair-station.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "(no cost)"
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Take control of this location."
+   },
+   {
+    "kind": "control",
+    "action": null,
+    "qual": null,
+    "text": "You may beam a Person here to scan 1 of Ship."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "If you have a Ship here, draw a card."
+   },
+   {
+    "kind": "reaction",
+    "action": null,
+    "qual": null,
+    "text": "After deploying or warping a Ship, log a Person from your hand or Discard pile to draw a card, gain 1 Dilithium, and refresh this card."
+   }
+  ]
  },
  {
   "id": "archer-major-hayes-maco",
@@ -5845,7 +6483,26 @@
     "specialty": "Military"
    }
   ],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Send an Away Team to a Location."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "You may log a card from your hand or Discard pile to gain all resources from a card in the Market. Junk a card from the Market."
+   },
+   {
+    "kind": "activation",
+    "action": true,
+    "qual": "Action, Attack, Requires 3 Military",
+    "text": "Remove all opponent Away Team from a Location where you have a Ship. Gain 1 Glory for each Away Team removed. If you have a Security in play, you may send an Away Team to the same Location. Log this card."
+   }
+  ]
  },
  {
   "id": "archer-tpol",
@@ -5874,7 +6531,26 @@
     "specialty": "Research"
    }
   ],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "You may spend 1 Dilithium to scan for either Research Skill, or Influence Skill, or Military Skill. You may draw a card. You may promote a Person from your hand or Staging Area to Duty Officer (can be this card)."
+   },
+   {
+    "kind": "resupply",
+    "action": null,
+    "qual": null,
+    "text": "Gain 1 Dilithium or spend 1 Dilithium to gain 1 Research."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Discard a Human / Engineer to draw a Cargo/Directive from your Discard pile."
+   }
+  ]
  },
  {
   "id": "archer-strange-new-worlds",
@@ -5891,7 +6567,14 @@
   "other_traits": [],
   "filename": "archer-strange-new-worlds.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Select a controlled Location. If there is 1+ Aaway Team and 1+ Ship there, look at the top 2 Encounter. Take one of them and return the other to the bottom of its deck. Log the selected Location to gain 1 Research."
+   }
+  ]
  },
  {
   "id": "archer-first-contact",
@@ -5908,7 +6591,14 @@
   "other_traits": [],
   "filename": "archer-first-contact.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Scan 2 of Ally. Log this card."
+   }
+  ]
  },
  {
   "id": "archer-inspire",
@@ -5925,7 +6615,14 @@
   "other_traits": [],
   "filename": "archer-inspire.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Draw 2 cards and discard one of the drawn cards. Gain on one Specialty track (Research / Influence / Military) for each matching Skill icon you have in play (excluding beamed cards)."
+   }
+  ]
  },
  {
   "id": "archer-reach-any-star",
@@ -5947,7 +6644,20 @@
     "specialty": "Influence"
    }
   ],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Draw a card or warp a Ship or exhaust  your Captain to do both. You may spend 1 Dilithium to send an Away Team to a Location where you have a Ship."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Take an Incident to draw the top Location and take control of it. Log this card."
+   }
+  ]
  },
  {
   "id": "archer-porthos",
@@ -5967,7 +6677,14 @@
   "other_traits": [],
   "filename": "archer-porthos.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Find a Person. If the card was found in your Reserve deck, discard it. You may refresh your Captain. If you have an Alien in play, you gain 1 Glory and both players take an Incident. This is not an Attack."
+   }
+  ]
  },
  {
   "id": "archer-shuttlepod-1",
@@ -5987,7 +6704,14 @@
   "other_traits": [],
   "filename": "archer-shuttlepod-1.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Send an Away Team to a Location where you have a Ship. You may either: beam a card to a Ship or recall a card beamed to a Ship."
+   }
+  ]
  },
  {
   "id": "archer-trip-tucker-iii",
@@ -6010,7 +6734,26 @@
   "other_traits": [],
   "filename": "archer-trip-tucker-iii.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Gain a Cargo from the top of the deck and either: log it and gain 1 Dilithium or put it on top of your Reserve deck and place 1 Dilithium on Earth."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Refresh a Ship / Cargo."
+   },
+   {
+    "kind": "reaction",
+    "action": null,
+    "qual": null,
+    "text": "After dismissing a Ship, discard a Directive to draw it from your Discard pile."
+   }
+  ]
  },
  {
   "id": "archer-recruit",
@@ -6027,7 +6770,20 @@
   "other_traits": [],
   "filename": "archer-recruit.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Put a card on the top of your deck to gain a Person."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Take an Incident to gain an Ally."
+   }
+  ]
  },
  {
   "id": "archer-analyze",
@@ -6044,7 +6800,26 @@
   "other_traits": [],
   "filename": "archer-analyze.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Take an Incident to gain a Ship."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Discard 2 cards to gain a Cargo."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Gain 2 Dilithium."
+   }
+  ]
  },
  {
   "id": "archer-strength-of-the-soul",
@@ -6061,7 +6836,20 @@
   "other_traits": [],
   "filename": "archer-strength-of-the-soul.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Draw a Directive / Encounter from your discard pile."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "You may enlist a Reserve or a Development. You may take an Incident and exhaust your Captain to draw a card for every 2 controlled Location you have in play."
+   }
+  ]
  },
  {
   "id": "archer-faith-of-the-heart",
@@ -6078,7 +6866,20 @@
   "other_traits": [],
   "filename": "archer-faith-of-the-heart.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Exhaust your Captain to scan for NX-01. Put the gained card on top of your Reserve deck."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Look at the top 2 cards of your Reserve deck. Put them on the top and/or bottom in any order. You may promote a Person with Starfleet from your hand or Staging Area to Duty Officer."
+   }
+  ]
  },
  {
   "id": "soval-soval",
@@ -6225,7 +7026,7 @@
     "kind": "play",
     "action": true,
     "qual": "Action",
-    "text": "Take control of this location/"
+    "text": "Take control of this location"
    },
    {
     "kind": "control",
@@ -6341,7 +7142,7 @@
     "kind": "passive",
     "action": null,
     "qual": null,
-    "text": "This card has 2 Wild Skill Icon."
+    "text": "This card has 2 Any Skill Icon."
    }
   ]
  },
@@ -7987,7 +8788,7 @@
     "kind": "play",
     "action": true,
     "qual": "Action",
-    "text": "Log a card from your hand or Discard pile to gain 3 Dilithium. If the logged card has 1+ Research / Influence / Military (Skill or Focus), gain 1 on the matching Speciality track (choose one if multiple, or if it has Wild)."
+    "text": "Log a card from your hand or Discard pile to gain 3 Dilithium. If the logged card has 1+ Research / Influence / Military (Skill or Focus), gain 1 on the matching Speciality track (choose one if multiple, or if it has Any Skill)."
    },
    {
     "kind": "reaction",

@@ -88,7 +88,7 @@
     "kind": "reaction",
     "action": null,
     "qual": "Requires 5 Influence",
-    "text": "After spending Latinum, refresh another card that shares a train with this card."
+    "text": "After spending Latinum, refresh another card that shares a trait with this card."
    },
    {
     "kind": "special",
@@ -132,7 +132,7 @@
     "kind": "play",
     "action": true,
     "qual": "Action",
-    "text": "Find a Klingon or a Ship. If the found card is a Ship with Klingon, gain 1 Glory. You may spend 3 Dilithium to scan for Military."
+    "text": "Find a Klingon or a Ship. If the found card is a Ship with Klingon, gain 1 Glory. You may spend 3 Dilithium to scan for Military Focus."
    },
    {
     "kind": "reaction",
@@ -173,7 +173,7 @@
     "kind": "play",
     "action": true,
     "qual": "Action",
-    "text": "Draw a card from your Discard pile for each different on of Beverage / Engineer / NX-01 you have in play. You may duplicate a play operation of a Person / Directive from your Log. You may promote this card to Duty Officer."
+    "text": "Draw a card from your Discard pile for each different one of Beverage / Engineer / NX-01 you have in play. You may duplicate a play operation of a Person / Directive from your Log. You may promote this card to Duty Officer."
    },
    {
     "kind": "activation",
@@ -191,7 +191,7 @@
     "kind": "special",
     "action": null,
     "qual": null,
-    "text": "If not logged, this card scores -2."
+    "text": "If not logged, this card scores -1."
    }
   ]
  },
@@ -228,7 +228,7 @@
     "kind": "support",
     "action": null,
     "qual": null,
-    "text": "After you junk or promote a Person duplicate a play operation of that card."
+    "text": "After you junk or promote a Person, duplicate a play operation of that card."
    },
    {
     "kind": "banner",
@@ -289,7 +289,7 @@
     "kind": "special",
     "action": null,
     "qual": null,
-    "text": "If not logged, this card scores -2."
+    "text": "If not logged, this card scores -1."
    }
   ]
  },
@@ -336,7 +336,7 @@
     "kind": "special",
     "action": null,
     "qual": null,
-    "text": "If not logged, this card scores -2."
+    "text": "If not logged, this card scores -1."
    }
   ]
  },
@@ -401,7 +401,7 @@
     "kind": "play",
     "action": true,
     "qual": "Action, Attack",
-    "text": "Discard a card to choose 2 of the following: steal 1 Latinum OR gain a Ship from the Junk OR gain 1 Influence OR gain 1 Military. IF you have another Orion in play, you may exhaust a Ship to do up to all 4 instead."
+    "text": "Discard a card to choose 2 of the following: steal 1 Latinum OR gain a Ship from the Junk OR gain 1 Influence OR gain 1 Military. If you have another Orion in play, you may exhaust a Ship to do up to all 4 instead."
    },
    {
     "kind": "activation",
@@ -600,13 +600,13 @@
     "kind": "play",
     "action": false,
     "qual": "Free",
-    "text": "Find a Beverage / Ambassador / Telepath, except from your Reserve deck."
+    "text": "Find a Beverage / Ambassador / Telepath, except in your Reserve deck."
    },
    {
     "kind": "cleanup",
     "action": null,
     "qual": null,
-    "text": "Temporarily increase your hand size by 1 for each different on of Starfleet / Beverage / Ambassador you have in play. If this increased your hand size by 2 or 3, log this card."
+    "text": "Temporarily increase your hand size by 1 for each different one of Starfleet / Beverage / Ambassador you have in play. If this increased your hand size by 2 or 3, log this card."
    }
   ]
  },
@@ -644,7 +644,7 @@
     "kind": "cleanup",
     "action": null,
     "qual": null,
-    "text": "Gain 1 Research for each Duty Officer you have in play. If you ahve no other Augment in play, log this card."
+    "text": "Gain 1 Research for each Duty Officer you have in play. If you have no other Augment in play, log this card."
    },
    {
     "kind": "special",
@@ -811,7 +811,7 @@
     "kind": "special",
     "action": null,
     "qual": null,
-    "text": "While this card is in your Staging Area, all of you Person with Doctor are additionally treated as Augment."
+    "text": "While this card is in your Staging Area, all of your Person with Doctor are additionally treated as Augment."
    }
   ]
  },
@@ -894,7 +894,7 @@
     "kind": "reaction",
     "action": null,
     "qual": null,
-    "text": "After you or tour opponent puts an Anomaly / Communication / Time Travel into play, place 1 Dilithium on this card and you may warp this ship."
+    "text": "After you or your opponent puts an Anomaly / Communication / Time Travel into play, place 1 Dilithium on this card and you may warp this ship."
    },
    {
     "kind": "passive",
@@ -933,7 +933,7 @@
     "kind": "activation",
     "action": null,
     "qual": null,
-    "text": "Remove an Away Team from there to look at 2 random Crossover from the Reward pile. Take one of them and destroy the other."
+    "text": "Remove an Away Team from here to look at 2 random Crossover from the Reward pile. Take one of them and destroy the other."
    },
    {
     "kind": "reaction",
@@ -1152,7 +1152,7 @@
     "kind": "play",
     "action": true,
     "qual": "Action",
-    "text": "Find a Person / Cargo, Duplicate one of the found card's play operations up to two times, ignoring any effect that would log this card. Then log the found card. Gain 2 Glory. Log this card."
+    "text": "Find a Person / Cargo. Duplicate one of the found card's play operations up to two times, ignoring any effect that would log this card. Then, log the found card. Gain 2 Glory. Log this card."
    }
   ]
  },
@@ -1235,7 +1235,7 @@
     "kind": "play",
     "action": true,
     "qual": "Action",
-    "text": "Select a controlled Location. If there is 1+ Away Team and 1+ Ship there, look at the top 2 Encounter. Take one fo them and return the other to the bottom of the its deck. Log the selected Location to gain 1 Research."
+    "text": "Select a controlled Location. If there is 1+ Away Team and 1+ Ship there, look at the top 2 Encounter. Take one of them and return the other to the bottom of its deck. Log the selected Location to gain 1 Research."
    }
   ]
  },
@@ -1612,7 +1612,7 @@
     "kind": "support",
     "action": null,
     "qual": null,
-    "text": "After promoting a Lower Deck, gain 2 Research / Influence / Military and you may promote this card to Duty Officer."
+    "text": "After promoting a Lower Decker, gain 2 Research / Influence / Military and you may promote this card to Duty Officer."
    },
    {
     "kind": "passive",

@@ -147,13 +147,20 @@ def main():
         for c in cards:
             by_code.setdefault(c.get('card_number'), []).append(c)
         seen_codes = set()
-        ws = wb[tab]
+        # Sheets/contributors may drop or curl the apostrophe in tab names
+        # ("Captains Chair (Box 1)"); match ignoring apostrophes.
+        norm = lambda s: re.sub(r"['’]", '', s)
+        try:
+            ws = wb[next(n for n in wb.sheetnames if norm(n) == norm(tab))]
+        except StopIteration:
+            sys.exit('tab %r not found in sheet; have %s' % (tab, wb.sheetnames))
         hdr = [c.value for c in next(ws.iter_rows(min_row=1, max_row=1))]
         text_col = hdr.index('Card text (--- separates abilities)')
         for i, row in enumerate(ws.iter_rows(min_row=2, values_only=True), 2):
-            code, name = row[0], row[1]
-            if not name:
+            # Drive's xlsx export pads tabs to 1000 rows, some as empty tuples
+            if len(row) <= text_col or not row[1]:
                 continue
+            code, name = row[0], row[1]
             if not code:  # Mission rows: no JSON record yet
                 stats['missions_skipped'] += 1
                 continue
