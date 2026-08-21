@@ -30,7 +30,7 @@ function t(name, query, want) {
   const bad = Object.keys(want).filter(k => !eq(got[k], want[k]));
   const extra = ["boxes","decks","suits","tags","skills","names",
                  "negBoxes","negDecks","negSuits","negTags","negSkills","negNames",
-                 "glory","negGlory","positions","negPositions","variants","negVariants",
+                 "vp","negVp","positions","negPositions","variants","negVariants",
                  "strips","negStrips","text","negText","kindText","negKindText"]
     .filter(k => !(k in want) && got[k].length);
   if (bad.length || extra.length) {
@@ -70,15 +70,17 @@ t("kitchen sink", 'box:tbg deck:georgiou -trait:starfleet skill:"any focus" ente
   { boxes: ["tbg"], decks: ["Georgiou"], negTags: ["Starfleet"],
     skills: ["Any Focus"], names: ["enterprise"] });
 
-// glory
-t("glory equals", "glory:4", { glory: [{ op: "=", n: 4 }] });
-t("glory greater, bare operator", "glory>4", { glory: [{ op: ">", n: 4 }] });
-t("glory operator after colon", "glory:>=3", { glory: [{ op: ">=", n: 3 }] });
-t("glory less or equal", "glory<=2", { glory: [{ op: "<=", n: 2 }] });
-t("glory negated", "-glory:1", { negGlory: [{ op: "=", n: 1 }] });
-t("glory non-numeric ignored", "glory:high", {});
-t("glory alongside other keys", "glory:4 suit:ship kirk",
-  { glory: [{ op: "=", n: 4 }], suits: ["Ship"], names: ["kirk"] });
+// victory points
+t("vp equals", "vp:4", { vp: [{ op: "=", n: 4 }] });
+t("vp greater, bare operator", "vp>4", { vp: [{ op: ">", n: 4 }] });
+t("vp operator after colon", "vp:>=3", { vp: [{ op: ">=", n: 3 }] });
+t("vp less or equal", "vp<=2", { vp: [{ op: "<=", n: 2 }] });
+t("vp negated", "-vp:1", { negVp: [{ op: "=", n: 1 }] });
+t("vp non-numeric ignored", "vp:high", {});
+t("victory-points long form", "victory-points:4", { vp: [{ op: "=", n: 4 }] });
+t("glory is no longer a key", "glory:4", { names: ["glory:4"] });
+t("vp alongside other keys", "vp:4 suit:ship kirk",
+  { vp: [{ op: "=", n: 4 }], suits: ["Ship"], names: ["kirk"] });
 
 // position
 t("position single word", "position:reserve", { positions: ["Reserve"] });

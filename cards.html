@@ -515,13 +515,12 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>deck:common</code><span>commons of every visible box</span></div>
     <div class="qh-row"><code>skill:military</code> · <code>focus:influence</code><span>icon search; also skill:any, skill:variable</span></div>
     <div class="qh-row"><code>box:promo1</code> · <code>box:all</code><span>promos in; empty bar = the three main boxes</span></div>
-    <div class="qh-row"><code>glory:4</code> · <code>glory&gt;=3</code><span>glory value; cards without glory never match</span></div>
+    <div class="qh-row"><code>vp:4</code> · <code>vp&gt;=3</code><span>victory points, the number bottom-right; cards without a value never match</span></div>
     <div class="qh-row"><code>position:reserve</code> · <code>position:incident-deck</code><span>starting position; hyphens for spaces</span></div>
     <div class="qh-row"><code>strip:reaction</code> &middot; <code>strip:any</code><span>cards carrying that operation strip</span></div>
     <div class="qh-row"><code>text:cloak</code> &middot; <code>text:"gain 2"</code><span>search the rules text of every strip</span></div>
     <div class="qh-row"><code>reaction:"putting a shady"</code> &middot; <code>activation:draw</code><span>text inside one kind of strip; every strip name is a key</span></div>
     <div class="qh-row"><code>variant:update</code> · <code>variant:duplicate</code><span>cards wearing that badge in the current boxes</span></div>
-    <div class="qh-note">Clicking any pill writes its token here — the pills are shortcuts for this language.</div>
     <div class="qh-note">Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>
   </div>
 
@@ -648,12 +647,12 @@ const EASTER_EGGS = [
   { words:['combo','picard'],
     ids:['picard-daystrom-institute','moriarty','picard-uss-bozeman','holographic-drone-ship'] }
 ];
-let gloryTests   = [];          // [{op,n}] from glory:N / glory>N
+let vpTests      = [];          // [{op,n}] from vp:N / vp>N
 let activePositions = new Set();
 let activeVariants  = new Set();
 // Negated counterparts, from "-key:value" / "-word" tokens (query language)
 let negDecks=new Set(), negSuits=new Set(), negTags=new Set(), negSkills=new Set(), negNames=[];
-let negGlory=[], negPositions=new Set(), negVariants=new Set();
+let negVp=[], negPositions=new Set(), negVariants=new Set();
 let viewMode     = "pill";
 // --- strategy index -------------------------------------------------------
 // STRATEGY_COUNTS is card_id -> mention count, from the 8 KB companion file.
@@ -771,7 +770,9 @@ function resolveCards(rawPool){
       copies: group.length,               // physical printings across loaded boxes
       variant: chosen.variant || 'original',
       card_number: chosen.card_number || '',
-      glory: (() => { for (const pr of group) { if (pr.glory !== undefined && pr.glory !== null) return pr.glory; } return null; })(),
+      // `vp` is the rulebook name; `glory` is the old field, still in the JSONs until the
+      // data side renames it. Read either, expose one.
+      vp: (() => { for (const pr of group) { const v = (pr.vp !== undefined && pr.vp !== null) ? pr.vp : pr.glory; if (v !== undefined && v !== null) return v; } return null; })(),
       position_indicator: (() => { for (const pr of group) { if (pr.position_indicator !== undefined && pr.position_indicator !== null && pr.position_indicator !== '') return pr.position_indicator; } return null; })(),
       away_team: (() => { for (const pr of group) { if (pr.away_team) return String(pr.away_team); } return ''; })(),
       strips: (() => { for (const pr of group) { if (Array.isArray(pr.strips) && pr.strips.length) return pr.strips; } return []; })(),
@@ -943,11 +944,11 @@ function makePill(text,cls,kind){
 function parseQuery(text, vocab){
   const res={boxes:[],decks:[],suits:[],tags:[],skills:[],names:[],
              negBoxes:[],negDecks:[],negSuits:[],negTags:[],negSkills:[],negNames:[],
-             glory:[],negGlory:[],positions:[],negPositions:[],variants:[],negVariants:[],
+             vp:[],negVp:[],positions:[],negPositions:[],variants:[],negVariants:[],
              strips:[],negStrips:[],text:[],negText:[],kindText:[],negKindText:[]};
-  // A key may be followed by ':' or by a comparison operator, so both glory>4 and
-  // glory:>4 parse. The operator is captured separately from the value.
-  const tokRe=/(-)?(?:([A-Za-z]+)\s*(:|>=|<=|>|<))?("([^"]*)"|[^\s"]+)/g;
+  // A key may be followed by ':' or by a comparison operator, so both vp>4 and
+  // vp:>4 parse. The operator is captured separately from the value.
+  const tokRe=/(-)?(?:([A-Za-z][A-Za-z-]*)\s*(:|>=|<=|>|<))?("([^"]*)"|[^\s"]+)/g;
   let m;
   while((m=tokRe.exec(text))){
     const neg=!!m[1];
@@ -955,7 +956,7 @@ function parseQuery(text, vocab){
     let op=(m[3]||'');
     let val=(m[5]!==undefined?m[5]:m[4]).trim();
     if(!val) continue;
-    // glory:>=4 puts the operator in the value; move it onto op.
+    // vp:>=4 puts the operator in the value; move it onto op.
     const opInVal=val.match(/^(>=|<=|>|<|=)\s*(.*)$/);
     if(opInVal && key){ op=opInVal[1]==='='?':':opInVal[1]; val=opInVal[2].trim(); }
     if(!val) continue;
@@ -974,9 +975,9 @@ function parseQuery(text, vocab){
       put(res.skills,res.negSkills,(vocab.skillShort&&vocab.skillShort[lv])||vocab.skills[lv]||val);
     } else if(key==='focus'){
       put(res.skills,res.negSkills,(vocab.focusShort&&vocab.focusShort[lv])||val);
-    } else if(key==='glory'){
+    } else if(key==='vp'||key==='victory-points'||key==='victorypoints'){
       const n=Number(lv);
-      if(Number.isFinite(n)) put(res.glory,res.negGlory,{op:(op===':'?'=':op)||'=',n:n});
+      if(Number.isFinite(n)) put(res.vp,res.negVp,{op:(op===':'?'=':op)||'=',n:n});
     } else if(key==='position'){
       // Hyphens stand in for spaces: position:incident-deck === position:"incident deck".
       const norm=lv.replace(/-/g,' ').replace(/\s+/g,' ');
@@ -1054,7 +1055,7 @@ function applyQuery(text){
   const bare=[...nameTerms].sort().join(' ');
   const egg=EASTER_EGGS.find(e=>e.words.join(' ')===bare);
   comboIds = egg ? new Set(egg.ids) : null;
-  gloryTests=q.glory; negGlory=q.negGlory;
+  vpTests=q.vp; negVp=q.negVp;
   activePositions=new Set(q.positions); negPositions=new Set(q.negPositions);
   activeVariants=new Set(q.variants);   negVariants=new Set(q.negVariants);
   activeStrips=new Set(q.strips); negStrips=new Set(q.negStrips);
@@ -1160,9 +1161,9 @@ function cardMatches(c){
   if([...negTags].some(t=>allTags.includes(t))) return false;
   if(activeSkills.size && ![...activeSkills].every(s=>c.skills.includes(s))) return false;
   if([...negSkills].some(s=>c.skills.includes(s))) return false;
-  // Glory: a card with no glory value never matches a glory test, in either direction.
-  if(gloryTests.length && !gloryTests.every(t=>gloryMatches(c.glory,t))) return false;
-  if(negGlory.some(t=>gloryMatches(c.glory,t))) return false;
+  // VP: a card with no victory-point value never matches a vp test, in either direction.
+  if(vpTests.length && !vpTests.every(t=>vpMatches(c.vp,t))) return false;
+  if(negVp.some(t=>vpMatches(c.vp,t))) return false;
   // Strips: kind filter, then free text over the concatenated strip text.
   const kinds=(c.strips||[]).map(x=>String(x.kind||'').toLowerCase());
   if(activeStrips.size && ![...activeStrips].every(k=>k==='any'?kinds.length:kinds.includes(k))) return false;
@@ -1189,7 +1190,7 @@ function cardMatches(c){
   return true;
 }
 
-function gloryMatches(g,t){
+function vpMatches(g,t){
   if(g===null||g===undefined) return false;
   const n=Number(g);
   if(!Number.isFinite(n)) return false;
@@ -1469,14 +1470,14 @@ function buildPillCard(c){
   }).join('');
   const foci=c.skills.filter(s=>/Focus$/.test(s));
   let corner='';
-  if(!foci.length && c.glory!==null && c.glory!==undefined){
+  if(!foci.length && c.vp!==null && c.vp!==undefined){
     el.classList.add('has-focus');
-    // negative glory prints warm on the card; tint the delta, nothing else
-    const gloryFill=(c.glory<0)?'"#f0a893"':'"#c3cfdd"';
-    corner='<svg class="glorybadge" viewBox="0 0 32 29" title="Glory '+c.glory+'">'
+    // a negative value prints warm on the card; tint the delta, nothing else
+    const gloryFill=(c.vp<0)?'"#f0a893"':'"#c3cfdd"';
+    corner='<svg class="glorybadge" viewBox="0 0 32 29" title="Victory Points '+c.vp+'">'
       +'<ellipse cx="16" cy="14.5" rx="15.5" ry="11" fill="#fff"/>'
       +'<path transform="translate(16 14.5) scale(1.7) translate(-13 -11.65)" d="M13 3.6c2.3 4 5.2 10.2 7.5 16.1-2.7-2-5.1-2.9-7.5-2.9s-4.8.9-7.5 2.9C7.8 13.8 10.7 7.6 13 3.6z" fill='+gloryFill+'/>'
-      +'<text x="16" y="21.7" text-anchor="middle" font-size="20" font-weight="700" fill="#10161f" font-family="Antonio,sans-serif">'+c.glory+'</text></svg>';
+      +'<text x="16" y="21.7" text-anchor="middle" font-size="20" font-weight="700" fill="#10161f" font-family="Antonio,sans-serif">'+c.vp+'</text></svg>';
   }
   if(foci.length){
     const spec=foci[0].split(' ')[0].toLowerCase();

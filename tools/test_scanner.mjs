@@ -218,23 +218,29 @@ if(fs.existsSync(repo + '/img/box1')){
 assert(typeof api.setView === 'function' && typeof api.clearAll === 'function',
   'inline-handler functions are reachable at global scope');
 
-// --- query keys: glory, position, variant -----------------------------------
+// --- query keys: vp, position, variant --------------------------------------
 function runQuery(q){
   api.applyQuery(q); api.render();
   return api.ALL_CARDS.filter(c=>api.cardMatches(c));
 }
-const g4 = runQuery('glory:4');
-assert(g4.length > 0 && g4.every(c=>Number(c.glory) === 4),
-  'glory:4 returns only cards whose glory is 4');
-const gGe = runQuery('glory>=4');
-assert(gGe.length >= g4.length && gGe.every(c=>Number(c.glory) >= 4),
-  'glory>=4 respects the comparison and is a superset of glory:4');
-assert(runQuery('glory>0').every(c=>c.glory !== null && c.glory !== undefined),
-  'no card without a glory value is ever returned by a glory query');
+const v4 = runQuery('vp:4');
+assert(v4.length > 0 && v4.every(c=>Number(c.vp) === 4),
+  'vp:4 returns only cards whose victory points are 4');
+const vGe = runQuery('vp>=4');
+assert(vGe.length >= v4.length && vGe.every(c=>Number(c.vp) >= 4),
+  'vp>=4 respects the comparison and is a superset of vp:4');
+assert(runQuery('victory-points:4').length === v4.length,
+  'victory-points: is accepted as the long form');
+assert(runQuery('vp>0').every(c=>c.vp !== null && c.vp !== undefined),
+  'no card without a victory-point value is ever returned by a vp query');
 const allDefault = runQuery('');
-const gloryless = allDefault.filter(c=>c.glory === null || c.glory === undefined);
-assert(gloryless.length > 0 && runQuery('glory<99').length === allDefault.length - gloryless.length,
-  'glory-less cards are excluded from an open-ended range, not swept in');
+const vpless = allDefault.filter(c=>c.vp === null || c.vp === undefined);
+assert(vpless.length > 0 && runQuery('vp<99').length === allDefault.length - vpless.length,
+  'value-less cards are excluded from an open-ended range, not swept in');
+assert(runQuery('box:all glory:4').length === 0 && runQuery('box:all glory:4').length !== v4.length,
+  'glory: is gone as a key; it names the wrong rule');
+assert(runQuery('box:all text:glory').length > 0,
+  'text:glory still finds the blue token in rules text');
 
 const reserve = runQuery('position:reserve');
 assert(reserve.length > 0 && reserve.every(c=>c.position_indicator === 'Reserve'),

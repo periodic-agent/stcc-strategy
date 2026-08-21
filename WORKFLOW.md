@@ -565,11 +565,24 @@ copy of the pre-card-face scanner and emits `cardface-assets.js`).
 - **Shareable URLs**: the search-bar state mirrors to `location.hash`
   (`#q=...`) via `history.replaceState`; restored on load, back/forward handled
   by `hashchange`. Documented in the help popover.
-- **Glory data**: `glory` key on every record in box1/2/3 (and present in the
-  promo files), integer or `null` (uniform shape; focus cards are always `null`
-  because they print "?"). Values can be negative. The resolver coalesces glory
-  across printings, first non-null wins, so Box 1 reprints inherit a Box 2/3
-  annotation.
+- **Victory Points (was "glory")**: the number in the bottom-right corner of a
+  card is **Victory Points (VP)** in the rulebook. *Glory* is something else
+  entirely: the blue token card text refers to. The two were conflated; as of
+  21 Aug 2026 the scanner uses VP for the corner number.
+  - Query key is `vp:` (long form `victory-points:`), with the usual
+    comparisons: `vp:4`, `vp>=3`, `-vp:1`. **`glory:` was removed, not
+    aliased**, because it named the wrong rule. `text:glory` is unaffected and
+    still searches rules text for the token.
+  - The badge tooltip reads "Victory Points N". The CSS class is still
+    `.glorybadge`; renaming it is cosmetic and was left alone.
+  - Data: the JSON key is still `glory` on every record in box1/2/3 (and the
+    promo files), integer or `null` (uniform shape; focus cards are always
+    `null` because they print "?"). Values can be negative. **The JSON side
+    renames to `vp` separately**; the resolver already reads `vp` first and
+    falls back to `glory`, so either push can land first without breaking the
+    other. Once the data is renamed, the fallback can go.
+  - The resolver coalesces the value across printings, first non-null wins, so
+    Box 1 reprints inherit a Box 2/3 annotation.
 - `tools/test_scanner.mjs` runs the harness against `cards.html` including
   local external scripts (`cardface-assets.js`); run it plus
   `tools/test_scanner_query.mjs` before any scanner push.
