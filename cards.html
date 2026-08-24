@@ -43,11 +43,11 @@ a{color:var(--blue);text-decoration:none;}
 .search-box:focus{border-color:var(--blue);}
 .pill-sublabel{font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin:0.35rem 0 0.3rem;}
 .search-count-row{display:flex;flex-wrap:wrap;align-items:center;gap:0.6rem;margin:0 0 1.1rem;padding:0 0.2rem;}
-.search-count-row .view-toggle{margin-left:auto;}
+.search-count-row .search-count{margin-left:auto;}
 @media (max-width:560px){
   .vtoggle,.clear-btn{padding:0.3rem 0.5rem;letter-spacing:0.06em;}
   .search-count-row{gap:0.4rem;}
-  .search-count-row .view-toggle{margin-left:0;}
+  .search-count-row .search-count{margin-left:0;}
 }
 .search-count{color:var(--muted);font-size:0.8rem;font-family:'Exo 2',sans-serif;}
 .search-count b{color:var(--blue2);font-weight:600;}
@@ -498,12 +498,12 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   </div>
 
   <div class="search-count-row">
-    <span class="search-count" id="searchCount"></span>
     <div class="view-toggle">
-      <button class="vtoggle" id="btnPill" onclick="setView('pill')">Text</button>
       <button class="vtoggle active" id="btnImg" onclick="setView('image')">Images</button>
+      <button class="vtoggle" id="btnPill" onclick="setView('pill')">Text</button>
     </div>
     <button class="clear-btn" onclick="clearAll()">Reset</button>
+    <span class="search-count" id="searchCount"></span>
   </div>
 
   <div id="queryHelp" class="query-help">

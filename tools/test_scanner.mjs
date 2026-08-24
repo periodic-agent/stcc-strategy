@@ -238,6 +238,12 @@ assert(/Select a box, or start typing, to see cards/.test(ARRIVAL.grid),
 assert(ARRIVAL.view === 'image', 'the scanner opens in Images view');
 assert(/id="btnImg"[^>]*>Images</.test(html) && /id="btnPill"[^>]*>Text</.test(html),
   'the toggle reads Images and Text');
+assert(html.indexOf('id="btnImg"') < html.indexOf('id="btnPill"'),
+  'Images sits before Text in the toggle');
+assert(html.indexOf('class="clear-btn"') < html.indexOf('id="searchCount"'),
+  'the controls lead the row and the count trails on the right');
+assert(/\.search-count-row \.search-count\{margin-left:auto;\}/.test(html),
+  'the count is the element pushed right, not the toggle');
 assert(/<button class="vtoggle active" id="btnImg"/.test(html),
   'Images is the button marked active in the markup');
 api.applyQuery(''); api.render();
