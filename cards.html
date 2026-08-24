@@ -500,8 +500,8 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   <div class="search-count-row">
     <span class="search-count" id="searchCount"></span>
     <div class="view-toggle">
-      <button class="vtoggle active" id="btnPill" onclick="setView('pill')">Cards</button>
-      <button class="vtoggle" id="btnImg" onclick="setView('image')">Images</button>
+      <button class="vtoggle" id="btnPill" onclick="setView('pill')">Text</button>
+      <button class="vtoggle active" id="btnImg" onclick="setView('image')">Images</button>
     </div>
     <button class="clear-btn" onclick="clearAll()">Reset</button>
   </div>
@@ -515,7 +515,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>deck:sisko suit:ship</code><span>ships in Sisko's deck</span></div>
     <div class="qh-row"><code>deck:common</code><span>commons of every visible box</span></div>
     <div class="qh-row"><code>skill:military</code> · <code>focus:influence</code><span>icon search; also skill:any, skill:variable</span></div>
-    <div class="qh-row"><code>box:promo1</code> · <code>box:all</code><span>promos in; empty bar = the three main boxes</span></div>
+    <div class="qh-row"><code>box:promo1</code> · <code>box:all</code><span>promos in; empty bar = empty page</span></div>
     <div class="qh-row"><code>vp:4</code> · <code>vp&gt;=3</code><span>victory points, the number bottom-right; cards without a value never match</span></div>
     <div class="qh-row"><code>position:reserve</code> · <code>position:incident-deck</code><span>starting position; hyphens for spaces</span></div>
     <div class="qh-row"><code>strip:reaction</code> &middot; <code>strip:any</code><span>cards carrying that operation strip</span></div>
@@ -654,7 +654,7 @@ let activeVariants  = new Set();
 // Negated counterparts, from "-key:value" / "-word" tokens (query language)
 let negDecks=new Set(), negSuits=new Set(), negTags=new Set(), negSkills=new Set(), negNames=[];
 let negVp=[], negPositions=new Set(), negVariants=new Set();
-let viewMode     = "pill";
+let viewMode     = "image";   // scans first; the rendered text is the second read
 // --- strategy index -------------------------------------------------------
 // STRATEGY_COUNTS is card_id -> mention count, from the 8 KB companion file.
 // The 550 KB index with the actual passages is fetched only once a drawer is
@@ -1041,7 +1041,10 @@ function buildQueryVocab(){
 
 function applyQuery(text){
   const q=parseQuery(text,QUERY_VOCAB);
-  activeBoxes=new Set(q.boxes.length?q.boxes.filter(b=>ALL_BOXES.includes(b)):DEFAULT_BOXES);
+  // Empty bar = empty page. Anything in the bar without an explicit box: token falls back to
+  // the three main boxes, so a deck chip or a typed name shows results straight away.
+  const asked=String(text||'').trim().length>0;
+  activeBoxes=new Set(q.boxes.length?q.boxes.filter(b=>ALL_BOXES.includes(b)):(asked?DEFAULT_BOXES:[]));
   q.negBoxes.forEach(b=>activeBoxes.delete(b));
   const expand=list=>{ const out=new Set();
     list.forEach(d=>{ if(d==='::common') [...activeBoxes].forEach(b=>{ if(b==='core'||b==='tbg'||b==='2nd') out.add('Common:'+b); });
@@ -1103,11 +1106,12 @@ function withBoxAdded(text,b){
 // Box pills rewrite the box: tokens wholesale (default = no tokens, all = box:all).
 function setBoxTokens(target){
   let toks=tokenList(currentQuery()).filter(t=>!/^-?box:/i.test(t));
-  const isDefault=target.length===DEFAULT_BOXES.length&&DEFAULT_BOXES.every(b=>target.includes(b));
   const isAll=ALL_BOXES.every(b=>target.includes(b));
+  // An empty bar now means an empty page, so the three main boxes are written out rather
+  // than implied by the absence of tokens.
   if(isAll) toks.push('box:all');
   else if(!target.length) toks.push('box:none');   // deselecting every box means: show nothing
-  else if(!isDefault) target.forEach(b=>toks.push('box:'+b));
+  else target.forEach(b=>toks.push('box:'+b));
   setQuery(toks.join(' '));
 }
 function syncFilterPills(){
@@ -1128,7 +1132,7 @@ function syncBoxPills(){
 }
 
 function clearAll(){
-  // Full reset: empty bar = the default view (three main boxes, no filters).
+  // Full reset: an empty bar is the arrival state, no box selected and no filters.
   setQuery('');
 }
 
@@ -1607,7 +1611,12 @@ function render(){
   extra.textContent = (copies!==total) ? ('  ·  '+copies+' copies') : '';
   updateBadges();
   placePosPills();
-  if(!total) groups.innerHTML='<div class="no-results">No cards match the current filters.</div>';
+  if(!total){
+    const untouched=!activeBoxes.size && !currentQuery().trim();
+    groups.innerHTML='<div class="no-results">'
+      +(untouched?'Select a box, or start typing, to see cards'
+                 :'No cards match the current filters.')+'</div>';
+  }
 }
 
 async function init(){

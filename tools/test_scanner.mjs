@@ -218,6 +218,26 @@ if(fs.existsSync(repo + '/img/box1')){
 assert(typeof api.setView === 'function' && typeof api.clearAll === 'function',
   'inline-handler functions are reachable at global scope');
 
+// --- landing state ----------------------------------------------------------
+assert(api.viewMode === 'image', 'the scanner opens in Images view');
+assert(/id="btnImg"[^>]*>Images</.test(html) && /id="btnPill"[^>]*>Text</.test(html),
+  'the toggle reads Images and Text');
+assert(/<button class="vtoggle active" id="btnImg"/.test(html),
+  'Images is the button marked active in the markup');
+api.applyQuery(''); api.render();
+assert(api.activeBoxes.size === 0,
+  'an empty search bar selects no box, so the page opens empty');
+assert(api.ALL_CARDS.filter(c=>api.cardMatches(c)).length === 0, 'nothing renders on arrival');
+assert(/Select a box, or start typing, to see cards/.test(env.document.getElementById('deckGroups').innerHTML),
+  'the empty page says what to do next');
+api.applyQuery('kirk'); api.render();
+assert(api.activeBoxes.size === 3 && api.ALL_CARDS.filter(c=>api.cardMatches(c)).length > 0,
+  'typing anything falls back to the three main boxes, so results appear');
+api.applyQuery('box:core zzzznope'); api.render();
+assert(/No cards match the current filters/.test(env.document.getElementById('deckGroups').innerHTML),
+  'a query that matches nothing still says so, rather than the arrival hint');
+api.applyQuery(''); api.render();
+
 // --- query keys: vp, position, variant --------------------------------------
 function runQuery(q){
   api.applyQuery(q); api.render();
@@ -233,7 +253,7 @@ assert(runQuery('victory-points:4').length === v4.length,
   'victory-points: is accepted as the long form');
 assert(runQuery('vp>0').every(c=>c.vp !== null && c.vp !== undefined),
   'no card without a victory-point value is ever returned by a vp query');
-const allDefault = runQuery('');
+const allDefault = runQuery('box:core box:tbg box:2nd');
 const vpless = allDefault.filter(c=>c.vp === null || c.vp === undefined);
 assert(vpless.length > 0 && runQuery('vp<99').length === allDefault.length - vpless.length,
   'value-less cards are excluded from an open-ended range, not swept in');
@@ -415,7 +435,7 @@ assert([...api.activeBoxes].sort().join(',') === '2nd,core,promo1,promo2,tbg',
 assert(allPill.classList.contains('active'), 'All pill lights up once everything is selected');
 allPill.click();
 assert([...api.activeBoxes].sort().join(',') === '2nd,core,tbg',
-  'a second All click returns to the three-box default');
+  'a second All click returns to the three main boxes');
 assert(!allPill.classList.contains('active'), 'All pill dims again on the way back');
 allPill.click();
 env.document.querySelector('.box-pill[data-box="promo2"]').click();
