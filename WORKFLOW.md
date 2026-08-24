@@ -507,7 +507,7 @@ copy of the pre-card-face scanner and emits `cardface-assets.js`).
   rules despite sharing the blue box. Query tokens `strip:<kind>`, `strip:any`,
   and `text:` / `rules:` searching the concatenated strip text. Strips render on
   the card face, consecutive same-family kinds merged into one box the way the
-  cards print them (PLAY with SUPPORT, REACTION with PASSIVE). DEV. COST is the
+  cards print them (PLAY with SUPPORT and CONTROL, REACTION with PASSIVE). DEV. COST is the
   one strip whose keyword sits inside the dark block, which sizes to the text.
   Card height is dynamic; a card with three strips reaches ~380px against a
   194px median.
@@ -519,6 +519,12 @@ copy of the pre-card-face scanner and emits `cardface-assets.js`).
   transcription with NO token markup, so icons are matched from the words at
   render time: suits and traits keep their word (the card prints a chip carrying
   both), resources and the action token replace it (the card prints art alone).
+  "Away Team" / "Away Teams" also replaces (`{awayteam}`), drawn from
+  `CARDFACE.token['away-team']` with a 1px white outline baked in for the strip
+  copy (`AWAY_TOKEN_STRIP`, built by `tools/patch_strips_awayteam_control.py`,
+  22 Aug 2026); the captain-card marker keeps the plain bubble. Same patch moved
+  CONTROL from the green Resupply family to the gray Play family: the printed
+  card boxes it with PLAY, not with RESUPPLY.
   `strips: []` means not yet transcribed and renders nothing. Chip counts
   therefore under-report until transcription completes, which the filter row
   says out loud.

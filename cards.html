@@ -455,6 +455,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .opstrip.inbar .kwblock{flex:none;display:flex;align-items:center;padding:.2rem .4rem .22rem;
   font-family:'Antonio',sans-serif;font-weight:600;font-size:.76rem;letter-spacing:.02em;}
 .stripimg{height:1.35em;width:auto;vertical-align:-.32em;margin:0 .08em;}
+.stripimg.awayteam-tok{height:1.45em;vertical-align:-.38em;}
 /* The specialty art is a pennant; the pill fills its notch and rounds its square end. */
 .specpill{display:inline-flex;align-items:center;height:1.35em;border-radius:999px;
   overflow:hidden;vertical-align:-.32em;margin:0 .08em;}
@@ -1006,7 +1007,7 @@ function parseQuery(text, vocab){
 
 const STRIP_PALETTE={"resupply": {"label": "RESUPPLY", "card": "archer-jonathan-archer", "y": [1081, 1324], "bar": "#62db5a", "body": "#dff0da", "bar_px": 34, "bar_pct": 2.91, "keyword": "#2bbe65", "text": "dark", "raw": {"bar": [81, 184, 73], "body": [193, 195, 183]}}, "endgame": {"label": "ENDGAME", "card": "archer-jonathan-archer", "y": [1341, 1506], "bar": "#e03511", "body": "#eecac7", "bar_px": 35, "bar_pct": 2.99, "keyword": "#e03511", "text": "dark", "raw": {"bar": [188, 42, 7], "body": [197, 170, 161]}}, "cleanup": {"label": "CLEAN-UP", "card": "archer-earth", "y": [766, 1082], "bar": "#77dc6b", "body": "#e9e8e2", "bar_px": 36, "bar_pct": 3.08, "keyword": "#43c271", "text": "dark", "raw": {"bar": [93, 181, 90], "body": [182, 191, 190]}}, "table": {"label": "REACTION + PASSIVE", "card": "archer-earth", "y": [1094, 1508], "bar": "#237ccf", "body": "#8aacd9", "bar_px": 38, "bar_pct": 3.25, "keyword": "#ffffff", "text": "light", "raw": {"bar": [27, 102, 174], "body": [108, 142, 182]}}, "banner": {"label": "no keyword", "card": "sukal", "y": [1028, 1142], "bar": "#bdbcb5", "body": "#e9e8e2", "bar_px": 43, "bar_pct": 3.68, "keyword": "#c24b36", "text": "dark", "raw": {"bar": [172, 168, 165], "body": [212, 207, 206]}}, "passive": {"label": "PASSIVE", "card": "sukal", "y": [1148, 1321], "bar": "#146aaa", "body": "#7693b0", "bar_px": 45, "bar_pct": 3.85, "keyword": "#ffffff", "text": "light", "raw": {"bar": [18, 95, 155], "body": [107, 131, 160]}}, "special": {"label": "SPECIAL", "card": "sukal", "y": [1331, 1504], "bar": "#bea7b5", "body": "#c0b2b7", "bar_px": 2, "bar_pct": 0.17, "keyword": "#91388a", "text": "dark", "raw": {"bar": [172, 149, 165], "body": [175, 159, 167]}}, "play": {"label": "PLAY + SUPPORT", "card": "riker-brad-boimler-lt-jg", "y": [825, 1312], "bar": "#d6d6d5", "body": "#e9e8e2", "bar_px": 16, "bar_pct": 1.37, "keyword": "#14161c", "text": "dark", "raw": {"bar": [164, 165, 167], "body": [179, 179, 177]}}, "activation": {"label": "ACTIVATION", "card": "riker-brad-boimler-lt-jg", "y": [1327, 1497], "bar": "#096abd", "body": "#7ea3cc", "bar_px": 37, "bar_pct": 3.16, "keyword": "#ffffff", "text": "light", "raw": {"bar": [7, 82, 148], "body": [97, 126, 160]}}, "cost": {"label": "DEV. COST", "card": "picard-tamarians", "y": [1400, 1500], "bar": "#202128", "body": "#44454d", "bar_px": 348, "bar_pct": 29.7, "keyword": "#ffffff", "text": "light", "mode": "inbar", "raw": {"bar": [27, 27, 33], "body": [57, 57, 63]}}, "surprise": {"label": "SURPRISE", "card": "dilithium-shockwave", "y": [1342, 1505], "bar": "#e9cbe2", "body": "#e9d9db", "bar_px": 2, "bar_pct": 0.17, "keyword": "#a355af", "text": "dark", "raw": {"bar": [183, 171, 195], "body": [183, 183, 189]}}};
 const STRIP_KINDS=[["play", "Play"], ["support", "Support"], ["resupply", "Resupply"], ["cleanup", "Clean-Up"], ["control", "Control"], ["activation", "Activation"], ["reaction", "Reaction"], ["passive", "Passive"], ["special", "Special"], ["surprise", "Surprise"], ["endgame", "Endgame"], ["cost", "Dev. Cost"], ["banner", "No Play"]];
-const STRIP_FAMILY={"play": "play", "support": "play", "control": "resupply", "resupply": "resupply", "cleanup": "cleanup", "activation": "activation", "reaction": "activation", "passive": "activation", "special": "special", "surprise": "surprise", "endgame": "endgame", "cost": "cost", "banner": "banner"};
+const STRIP_FAMILY={"play": "play", "support": "play", "control": "play", "resupply": "resupply", "cleanup": "cleanup", "activation": "activation", "reaction": "activation", "passive": "activation", "special": "special", "surprise": "surprise", "endgame": "endgame", "cost": "cost", "banner": "banner"};
 let activeStrips=new Set(), negStrips=new Set(), textTerms=[], negText=[];
 let kindText=[], negKindText=[];   // [{kind,term}] from reaction:"..." and friends
 
@@ -1312,6 +1313,7 @@ function traitFamily(name){
   return 'regular';
 }
 
+const AWAY_TOKEN_STRIP='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0wLjYgLTAuNiAyNC4wMDMgMjYuMTg5IiB3aWR0aD0iMjIuODAzIiBoZWlnaHQ9IjI0Ljk4OSI+PHBhdGggc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0yMi40MDMgMi40NTFDMjEuNjAzIDEuNjUxIDIxLjE1MiAxLjIgMjAuMzUyIDAuNEwyLjQzNyAwLjRDMS42NSAxLjIgMS4yIDEuNjUxIDAuNCAyLjQ1MUwwLjQgMTcuNTU0QzEuMiAxOC4zNCAxLjY1IDE4Ljc5MSAyLjQzNyAxOS41OTFMNi4zNjQgMTkuNTkxTDExLjM2MiAyNC41ODlMMTYuMzYxIDE5LjU5MUwyMC4zNTIgMTkuNTkxQzIxLjE1MiAxOC43OTEgMjEuNjAzIDE4LjM0IDIyLjQwMyAxNy41NTRaIiBmaWxsPSJyZ2IoNCwzOCw2MykiLz48cGF0aCBkPSJNMTkuODE1IDEuNjk2TDIxLjEwNyAyLjk4OEwyMS4xMDcgMTcuMDExQzIwLjY0NCAxNy40NjcgMjAuMjgxIDE3LjgzIDE5LjgxNSAxOC4yOTVMMTUuODI0IDE4LjI5NUwxMS4zNjEgMjIuNzU4TDYuODk4IDE4LjI5NUwyLjk3OSAxOC4yOTVDMi41MjIgMTcuODMyIDIuMTU5IDE3LjQ2OSAxLjY5NiAxNy4wMTFMMS42OTYgMi45ODhDMi4xNiAyLjUyNCAyLjUyMiAyLjE2MSAyLjk3OSAxLjY5NkwxOS44MTUgMS42OTZNMjAuMzUyIDAuNEwyLjQzNyAwLjRDMS42NTEgMS4yIDEuMiAxLjY1MSAwLjQgMi40NTFMMC40IDE3LjU1NEMxLjIgMTguMzQgMS42NTEgMTguNzkxIDIuNDM3IDE5LjU5MUw2LjM2NCAxOS41OTFMMTEuMzYzIDI0LjU4OUwxNi4zNjEgMTkuNTkxTDIwLjM1MiAxOS41OTFDMjEuMTUyIDE4Ljc5MSAyMS42MDMgMTguMzQgMjIuNDAzIDE3LjU1NEwyMi40MDMgMi40NTFDMjEuNjAzIDEuNjUxIDIxLjE1MiAxLjIgMjAuMzUyIDAuNFoiIGZpbGw9InJnYigyNTUsMjU1LDI1NSkiLz48cGF0aCBkPSJNMTcuMTk3IDUuOTI2QzE4LjA5MiA1LjkyNiAxOC44MDkgNi42NDUgMTguODA5IDcuNTM4QzE4LjgwOSA4LjQ0NSAxOC4wOSA5LjE2NCAxNy4xOTcgOS4xNjRDMTYuMjkgOS4xNjQgMTUuNTcxIDguNDQ1IDE1LjU3MSA3LjUzOEMxNS41NzEgNi42NDMgMTYuMjkgNS45MjYgMTcuMTk3IDUuOTI2TTExLjMxNiAzLjYyM0MxMi44MDcgMy42MjMgMTQuMDEzIDQuODI5IDE0LjAxMyA2LjMyQzE0LjAxMyA3LjgxMSAxMi44MDcgOS4wMTcgMTEuMzE2IDkuMDE3QzkuODM4IDkuMDE3IDguNjMyIDcuODExIDguNjMyIDYuMzJDOC42MzIgNC44MjkgOS44MzggMy42MjMgMTEuMzE2IDMuNjIzTTUuMTkxIDYuMzJDNi4wOTggNi4zMiA2LjgxNiA3LjA1MSA2LjgxNiA3Ljk0NkM2LjgxNiA4Ljg0MSA2LjA5OCA5LjU3MiA1LjE5MSA5LjU3MkM0LjI5NiA5LjU3MiAzLjU3OSA4LjgzOSAzLjU3OSA3Ljk0NkMzLjU3OSA3LjA1MiA0LjI5NyA2LjMyIDUuMTkxIDYuMzJNNi4zMDIgMTEuNzRMNi4zMDIgMTMuOTQzTDUuNTk3IDEyLjk2N0wyLjU3NSAxNC4xNDVMMi41NzUgMTEuMDc1QzIuNTc1IDEwLjQ2NSAzLjA3NiA5Ljk2NCAzLjY4NiA5Ljk2NEw2LjkyNCA5Ljk2NEw3LjA1OCA5Ljk5MUM2LjU5NyAxMC40MjUgNi4zIDExLjA0OSA2LjMgMTEuNzRMNi4zMDIgMTEuNzRNMTUuNzQ2IDE2LjUwNUwxMy42MzMgMTQuNjg5TDcuMzE4IDE3LjAzNEM3LjMwNCAxNi45MzkgNy4yNjQgMTUuMTI4IDcuMjY0IDE1LjAzM0w3LjI2NCAxMS43NEM3LjI2NCAxMC45NCA3LjkxNCAxMC4yOSA4LjcxNCAxMC4yOUwxNC4yOTYgMTAuMjlDMTUuMDk2IDEwLjI5IDE1Ljc0NiAxMC45NCAxNS43NDYgMTEuNzRMMTUuNzQ2IDE2LjUwNU0yMC4wMjcgMTMuODg5TDE5LjAyNSAxMi45NjhMMTYuNzA4IDEzLjgyMkwxNi43MDggMTEuNzRDMTYuNzA4IDEwLjgxOSAxNi4xNzkgMTAuMDE5IDE1LjQyMSA5LjYxM0MxNS41MDIgOS41OTkgMTUuNTgzIDkuNTYgMTUuNjc4IDkuNTZMMTguOTE2IDkuNTZDMTkuNTI2IDkuNTYgMjAuMDI3IDEwLjA2MSAyMC4wMjcgMTAuNjg0TDIwLjAyNyAxMy44OTFaIiBmaWxsPSJyZ2IoMjU1LDI1NSwyNTUpIi8+PC9zdmc+';
 function stripIcon(key){
   // CARDFACE is a top-level const, so it is not a property of window: guard
   // with typeof, not window.CARDFACE, which is always undefined here.
@@ -1353,6 +1355,10 @@ function stripToken(t){
     const src=stripIcon(STRIP_RES[m[1].toLowerCase()]);
     return src?'<img class="stripimg" src="'+src+'" alt="'+m[1]+'">':titleCase(m[1]);
   }
+  if(t==='awayteam'){
+    const src=AWAY_TOKEN_STRIP||stripIcon('away-team');
+    return src?'<img class="stripimg awayteam-tok" src="'+src+'" alt="Away Team">':'Away Team';
+  }
   if(t==='action'){
     const src=stripIcon('action');
     return src?'<img class="stripimg" src="'+src+'" alt="action">':'action';
@@ -1380,6 +1386,8 @@ function stripAutoTokens(text){
     if(sp==='Any'||sp==='Variable') return;
     t=outsideTokens(t,seg=>seg.replace(new RegExp('\\b'+sp+'\\b','g'),'{spec:'+sp+'}'));
   });
+  // Away Team prints as the token, singular or plural; the count stays in the text.
+  t=outsideTokens(t,seg=>seg.replace(/\bAway Teams?\b/g,'{awayteam}'));
   Object.keys(STRIP_SUIT_COL).forEach(w=>{
     t=t.replace(new RegExp('\\b'+w+'s?\\b','g'),()=>'{suit:'+w+'}');
   });
@@ -1390,7 +1398,7 @@ function stripAutoTokens(text){
   // Traits only where a medallion exists and only capitalised, so an ordinary
   // "attack" in a sentence stays text while the ATTACK trait becomes a chip.
   Object.keys(CARDFACE.traitChip).forEach(k=>{
-    t=t.replace(new RegExp('\\b'+k.replace(/-/g,' ')+'\\b','gi'),
+    t=t.replace(new RegExp('\\b'+k.replace(/-/g,'[- ]')+'\\b','gi'),
       m=>(m[0]===m[0].toUpperCase()?'{trait:'+m+'}':m));
   });
   return t;
