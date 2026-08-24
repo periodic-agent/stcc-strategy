@@ -37,7 +37,9 @@
   "shran.html": "shran",
   "burnham.html": "burnham",
   "georgiou.html": "georgiou",
-  "soval.html": "soval"
+  "soval.html": "soval",
+  "kirk.html": "kirk",
+  "archer.html": "archer"
  },
  "_deck_note": "Captain guides. When several cards share a name (Utilize, Recruit, Analyze), a mention inside these guides is attributed to that captain's own printing.",
  "exclude_files": [

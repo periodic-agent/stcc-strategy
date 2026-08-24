@@ -130,6 +130,12 @@ def extract_images(post, cfg, out_img, report):
             report.append("WARNING: no base64 for '%s'; CDN fallback: %s" % (alt, cdn.group(1) if cdn else "none"))
             continue
         base = names.get(alt, slugify(alt))
+        if base.startswith("img/"):
+            # explicit repo path: reuse an image already in the repo (no
+            # decode, nothing written to out/img); verify with --img-root .
+            manifest[alt] = base
+            report.append("image  %-30s -> %s  (repo, reused)" % (alt, base))
+            continue
         if alt in board_alts:
             side = "advanced" if re.search(r"advanced", alt, re.I) else "basic"
             rel = "img/guides/%s/%s-board-%s.jpg" % (slug, slug, side)

@@ -1,12 +1,16 @@
 {
- "generated": "2026-08-11T16:04:12Z",
+ "generated": "2026-08-24T15:54:36Z",
  "generator": "tools/build_strategy_index.py",
- "guide_count": 28,
- "card_count": 359,
+ "guide_count": 29,
+ "card_count": 379,
  "guides": {
   "allies.html": {
    "title": "Ally Deck Strategy Guide",
    "label": "Captain's Chair"
+  },
+  "archer.html": {
+   "title": "Jonathan Archer",
+   "label": "To Boldly Go"
   },
   "burnham.html": {
    "title": "Michael Burnham",
@@ -134,6 +138,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "I would suggest some caution in grabbing Admiral Jarok only because you already have a good method of enlisting Developments, and you don’t want to be prohibited from playing Attack cards when he’s on duty.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -192,6 +210,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Admiral Necheyev is my go-to card for repeated use of Directives, which means for Archer she’ll be copying Strange New Worlds and Inspire most of the time, though he has so many Directives that occasionally you might have use for all of them (Reach Any Star, likely).",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "koloth.html",
     "count": 1,
     "hits": [
@@ -217,6 +249,20 @@
       "snippet": "Admiral Terry Quinn himself graces ST:CC with a wonderfully thematic card. His free Play action allows an attack to get free played, saving you an action token. He also can promote a duty officer from hand or discard pile if you don't have one already. His resupply action supports a strong security force, and his activation allows you to dismiss a card with cloak in play to gain 3 glory and log him, just like Picard",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Admiral Pressman is a solid card despite the fact that you probably use him primarily to free play Attack cards, and not for his table operations.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -348,6 +394,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Ambassador Kamarag is only going to benefit you if you’ve found a way to reliably get your Dilithium, in which case he’s a good option for card gain. I don’t think Archer needs him as Duty Officer because you have plenty of Incident management.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "burnham.html",
     "count": 1,
     "hits": [
@@ -411,6 +471,20 @@
       "snippet": "Anyway, this card has the very rare (for this box) Augment trait as well as Anomaly. There's two action token play actions here. The first allows you to draw a card for each controlled location with at least one away team you have, and you gain an action if you have a Scientist trait in play. I think this is easily the better of the two actions, provided you've got the away teams and Scientist trait to support it.",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Ancient Gene Fragments is less helpful for Archer because he has less Away Teams and won’t be sending them to his Controlled Locations often, though you might be able to benefit from the second Play Action.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -626,7 +700,101 @@
     ]
    }
   ],
+  "archer-admiral-forrest": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "archer-admiral-forrest",
+      "heading": "Admiral Forrest (Person) (Dev Cost Have 4+ Cards beamed to Earth)",
+      "snippet": "I dare you to find a more upstanding Starfleet Admiral in the history of the Federation. Forrest supervised Archer and the NX-01’s journey, from the Broken Bow incident to the Xindi attack on Earth. He urged caution where necessary, and let Archer cook the rest of the time. Sure, he’s got a mirror universe counterpart out there somewhere, but in this universe? He’s the furthest thing from a “badmiral”.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "archer-admiral-forrest",
+      "heading": "Admiral Forrest (Person) (Dev Cost Have 4+ Cards beamed to Earth)",
+      "snippet": "Starting with the obvious, it’s going to take at least four turns (or a very weird Founding the Federation play) to Enlist Admiral Forrest. You can only beam one card to Earth a turn, and that means the soonest you could Enlist is the end of turn four, most likely turn five. And in my gameplay with Archer, I don’t always beam a card to Earth, so Forrest is often one of my last developed cards. He’s pretty powerful,",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "archer-agent-daniels": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "archer-agent-daniels",
+      "heading": "Agent Daniels (Person) (Dev Cost 3 Dilithium and have 2+ Xindi in play)",
+      "snippet": "Where is Crewman Daniels when you need him? Originally introduced as crewman Daniels, he brought Archer his scrambled eggs soft every morning, until one morning he revealed himself to be a future agent of the Federation engaged in a temporal cold war. He died at least three times, and just kept coming back to annoy Archer (and eventually Michael Burnham).",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "archer-agent-daniels",
+      "heading": "Agent Daniels (Person) (Dev Cost 3 Dilithium and have 2+ Xindi in play)",
+      "snippet": "Agent Daniels has the Human (though he states he’s only “more or less” human) and Time Travel traits, along with a wild skill. His main play action is very similar to Dr. Kovich ( link for comparison), only Daniels lets you draw a card from your deck or discard pile. Then you gain Research, Influence, and Military for specific traits you have in play. I like how you now score military for Xindi traits as well, since",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "archer-ambassador-soval": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "archer-ambassador-soval",
+      "heading": "Ambassador Soval (Person) (Dev Cost 3 Dilithium and exhaust your Captain",
+      "snippet": "Soval and Archer aren’t exactly friends. In fact you could say he’s one of Archer’s greatest antagonists, acting as the mouthpiece for Vulcan oversight over human space exploration. He constantly argues that Humans are pushing themselves too far, that they’re as erratic as Andorians and as quarrelsome as Tellarites. But maybe Soval just hasn’t figured Humans out yet. After all, they’re the ones who proved the Vulcan",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "archer-ambassador-soval",
+      "heading": "Ambassador Soval (Person) (Dev Cost 3 Dilithium and exhaust your Captain",
+      "snippet": "Ambassador Soval has an Influence skill with the Vulcan, Telepath, and Ambassador traits (just like the captain of the same name). His play action lets you scan for a Vulcan or Scientist card, then draw a card, which I usually use to gain a Vulcan ship (if I know it’s still in the market) or sometimes, if I’m feeling risky, I try to get Degra with that Scientist trait scan in the common market (there’s only two in",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "archer-analyze": [
+   {
+    "guide": "archer.html",
+    "count": 4,
+    "hits": [
+     {
+      "anchor": "archer-s-available-discarded-cards",
+      "heading": "Archer’s Available/Discarded Cards",
+      "snippet": "Archer only has 5 Available cards: one Person card, one Ship, and three Directives. You also have a Directive in the discard pile (Analyze). The only familiar Directive in the Available cards is Recruit. Archer gets a lot of custom directives.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "archer-strength-of-the-soul",
+      "heading": "Strength of the Soul (Directive)",
+      "snippet": "Strength of the Soul has two very different Play operations. The first is a free-Play Action that lets you draw a Directive or Encounter from your discard pile. Practically speaking, this could be Analyze (which starts in your discard pile) on turn one, but as the game goes on it has a lot of flexibility in how you might use it to grab Reach Any Star, Faith of the Heart, Founding the Federation, or your standard",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "picard.html",
     "count": 4,
@@ -644,28 +812,6 @@
       "heading": "Starting Hand Strategies",
       "snippet": "I also don't think you necessarily want to build your starting strategy around Utilize. To be sure, you could use it to gain some Dilithium early if you have Farpoint Station out. You could also use Farpoint and the Enterprise-D to gain two spaces on the Research track. But a little patience might make it worth it to wait. You can get two Dilithium, without spending an action if you use Analyze, and that's enough",
       "truncated": true,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   },
-   {
-    "guide": "kirk.html",
-    "count": 3,
-    "hits": [
-     {
-      "anchor": "kirk-s-starting-hand-strategies",
-      "heading": "Kirk’s Starting Hand Strategies",
-      "snippet": "Let’s go the opposite direction. What if you don’t have any cards in your starting hand that give you the ability to draw more cards? All is not actually lost, as you can set up for a nearly equally dynamic second turn by making sure you end the round with all three of your Person cards in the discard pile (and you’ll be able to just beam them to Levitation boots in round two from your discard). Alternatively, you",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     },
-     {
-      "anchor": "kirk-s-reserve-cards",
-      "heading": "Kirk’s Reserve Cards",
-      "snippet": "Kirk has five Reserve Cards consisting of two Directives, two Person Cards, and a Ship. One of the Directives is Analyze, which we’ve seen before and is the basic Directive for gaining Ships, Cargo or some free Dilithium. The other Reserve cards are new:",
-      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -722,7 +868,77 @@
     ]
    }
   ],
+  "archer-automated-repair-station": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "archer-automated-repair-station",
+      "heading": "Automated Repair Station (Location) (No Dev Cost",
+      "snippet": "After the NX-01 Enterprise was badly damaged by a Romulan mine, they were told about an Automated Repair Station by a Tellarite Captain. Limping to the Station, they were able to trade materials for repairs to the Ship, its systems, even Malcolm Reed’s leg, all in record time. The only problem was that the Station wanted to enact a far higher cost: Travis Mayweather. Creating a clone of Mayweather, it tried to trick",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "archer-automated-repair-station",
+      "heading": "Automated Repair Station (Location) (No Dev Cost",
+      "snippet": "The Automated Repair Station has the Starbase and Engineer traits, and costs an Action token to Control. Upon doing so, you can trade (beam) a lowly crewmember (Person card) to scan one of the Ship deck. Seems like a reasonable trade for purposes of the game (not in real life of course, that would be psycho). The Activation lets you draw a card if you have a Ship at this Location. The Reaction triggers after you",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "archer-commander-shran": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "archer-commander-shran",
+      "heading": "Commander Shran (Person) (Dev Cost 2 Dilithium and 2 Latinum)",
+      "snippet": "Archer first encountered Shran at the Vulcan Sanctuary on P’Jem, where he had taken a group of Vulcan monks hostage, presuming that there was a spy station on the planet. Turns out, he was right, and the Vulcans were spying on the Andorians. Archer’s willingness to not automatically take the Vulcan’s side earned him respect from Shran, who came to Archer’s aid (and backstabbed him a bit) while searching for the",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "archer-commander-shran",
+      "heading": "Commander Shran (Person) (Dev Cost 2 Dilithium and 2 Latinum)",
+      "snippet": "Commander Shran has a Military skill along with the Andorian and Imperial traits. He provides two more Away Teams when you enlist him, just like Ambassador Soval. Shran’s Play Action lets you scan for an Andorian or a Weapon and draw a card. This is really more about what you think you might benefit from in terms of traits or play text, but there are three Andorian Person cards between To Boldly Go and Second",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "archer-faith-of-the-heart": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "archer-faith-of-the-heart",
+      "heading": "Faith of the Heart (Directive)",
+      "snippet": "Just go listen to the theme song for Enterprise. It really grows on you… until season three, when it changes for the worse, and you kind of hate it again. And then it becomes somewhat endearing. Anyway, Archer’s got Faith of the Heart.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "archer-faith-of-the-heart",
+      "heading": "Faith of the Heart (Directive)",
+      "snippet": "Two free-Play Actions on this card, the first of which allows you to exhaust Archer to scan for an NX-01 trait card, which for now is limited to the Person deck (I have no information on future NX-01 cards, if any). This is your main way to access Phlox, Hoshi, Mayweather, and Reed. When you gain them, you’ll put them on top of your Reserve deck (reforming a new Reserve deck if you don’t have one anymore).",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "kirk.html",
     "count": 1,
@@ -740,6 +956,28 @@
   ],
   "archer-first-contact": [
    {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "archer-s-reserve-cards",
+      "heading": "Archer’s Reserve Cards",
+      "snippet": "Archer has seven Reserve Cards consisting of four Directives, two Person Cards, and one (very good) Cargo (boy). Among the Directives are First Contact, Inspire, and Strange New Worlds, all of which we’ve seen in previous decks. Inspire is Archer’s primary method of advancing on his skill tracks, but doesn’t give him a Dilithium the way that Utilize does for most captains. First Contact is a one-off Directive",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "archer-s-reserve-deck-strategy",
+      "heading": "Archer’s Reserve Deck Strategy",
+      "snippet": "After that the order is completely random, as always, but I have some things I’m at least hoping for (and can try to manipulate thanks to the second free Play Action on Faith of the Heart). I think any Archer game where Inspire comes out first is a good sign. Not only do you get some card draw, but so many of your Reserve crew have specialty restrictions, and it’s good to be able to capitalize on your skills gained",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-allies.html",
     "count": 1,
     "hits": [
@@ -756,6 +994,28 @@
   ],
   "archer-founding-the-federation": [
    {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "archer-founding-the-federation",
+      "heading": "Founding the Federation (Directive) (Dev Cost 1 Dilithium, 1 Latinum, and have 5 Different Species logged)",
+      "snippet": "Archer gets to see the moment he acts as the Founder of the Federation twice. The first was years prior, when Agent Daniels teleports him to that moment in time in order to try to convince him not to sacrifice himself trying to destroy the Xindi weapon. Archer has trouble believing in this future, but he does survive to that moment, which will be recorded and celebrated in holodeck recreations for centuries.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "archer-founding-the-federation",
+      "heading": "Founding the Federation (Directive) (Dev Cost 1 Dilithium, 1 Latinum, and have 5 Different Species logged)",
+      "snippet": "Founding the Federation has the Wildcard and Ambassador traits. If you develop it simply for that reason, you’ll get some benefits out of it, especially when trying to complete your second and third missions. Beyond that, the Play Action allows you to enlist your entire Reserve deck, gain all resources from Earth, and beam up to three Ally cards from your log to Earth (to benefit from their traits at endgame), and",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "shran.html",
     "count": 1,
     "hits": [
@@ -771,6 +1031,28 @@
    }
   ],
   "archer-inspire": [
+   {
+    "guide": "archer.html",
+    "count": 9,
+    "hits": [
+     {
+      "anchor": "missions",
+      "heading": "Missions",
+      "snippet": "Archer’s player board’s basic side track multipliers max out at 6x for Research, 7x for Influence, and 5x for Military. As always the advanced side’s thresholds are one less. His basic mission is History With Every Light-Year, which is how Admiral Forrest impresses upon Archer that the NX-01 crew will be making history with everything they do. You’ll need the NX-01 Enterprise and an Away Team at a secured neutral",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "archer-s-reserve-cards",
+      "heading": "Archer’s Reserve Cards",
+      "snippet": "Archer has seven Reserve Cards consisting of four Directives, two Person Cards, and one (very good) Cargo (boy). Among the Directives are First Contact, Inspire, and Strange New Worlds, all of which we’ve seen in previous decks. Inspire is Archer’s primary method of advancing on his skill tracks, but doesn’t give him a Dilithium the way that Utilize does for most captains. First Contact is a one-off Directive",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "tbg-persons.html",
     "count": 1,
@@ -830,7 +1112,77 @@
     ]
    }
   ],
+  "archer-jonathan-archer": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": null,
+      "heading": "Introduction",
+      "snippet": "It’s time for my Strategy guide for Jonathan Archer. I made a point of watching the entirety of Enterprise last year once we learned that Archer was going to be the third Starfleet captain in To Boldly Go. I was not disappointed. The series starts with a dynamic opening two-parter where Archer has to assemble the crew of the first warp-5 Starfleet vessel for a mission to return a Klingon to Qo'noS and prevent the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "notable-market-cards",
+      "heading": "Notable Market Cards",
+      "snippet": "Welcome to a purely hypothetical discussion of Jonathan Archer and the common market. As always, I appreciate everyone sharing any really interesting combos you’ve found in the market in the comments on BGG or the Discord (in the Archer conversation). Cards found in both the core box and To Boldly Go are discussed in the section for To Boldly Go. As an overall reminder, T’Pol can scan for Skills, so if you have a",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "archer-major-hayes-maco": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "archer-major-hayes-maco",
+      "heading": "Major Hayes, MACO (Person)",
+      "snippet": "Introduced in the Season three premiere of Enterprise (The Xindi), he is the leader of the Military Assault Command Operations unit assigned to the NX-01 Enterprise during their search for the Xindi weapon in the Delphic Expanse. He butts heads with Malcolm Reed repeatedly, as Reed feels his position as Chief of Security is being undermined by Hayes tactical background. Although you might expect more conflict",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "archer-major-hayes-maco",
+      "heading": "Major Hayes, MACO (Person)",
+      "snippet": "Major Hayes has a thematic Military skill, as well as the Human, Attack, and Weapon traits. He has the consistent benefit of allowing you to send an Away Team to a Location as a Play Action, but also has a free Play Action that lets you log a card (hand or discard) to gain all resources from a market card, then junk a card in the market. Playing against captains like Burnham, you can see how this can be an advantage",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "archer-nx-01-enterprise": [
+   {
+    "guide": "archer.html",
+    "count": 6,
+    "hits": [
+     {
+      "anchor": "missions",
+      "heading": "Missions",
+      "snippet": "Archer’s player board’s basic side track multipliers max out at 6x for Research, 7x for Influence, and 5x for Military. As always the advanced side’s thresholds are one less. His basic mission is History With Every Light-Year, which is how Admiral Forrest impresses upon Archer that the NX-01 crew will be making history with everything they do. You’ll need the NX-01 Enterprise and an Away Team at a secured neutral",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Archer starts with the NX-01 Enterprise deployed, and it’s objectively a little worse than most starting ships (very thematic). It only has a Research skill, which is fitting because the ship leaves spacedock without much in terms of weapon systems. It has the NX-01, Human, and Starfleet traits. It also doesn’t have much of a transporter system (it’s fine for Cargo, right?) and everyone using it is a little unsure",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "soval.html",
     "count": 1,
@@ -860,23 +1212,71 @@
     ]
    }
   ],
-  "archer-recruit": [
+  "archer-porthos": [
    {
-    "guide": "kirk.html",
-    "count": 4,
+    "guide": "archer.html",
+    "count": 2,
     "hits": [
      {
-      "anchor": "kirk-s-available-cards",
-      "heading": "Kirk’s Available Cards",
-      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
+      "anchor": "archer-porthos",
+      "heading": "Porthos (Cargo)",
+      "snippet": "Archer’s very good boy, he’ll boldly go where no dog has gone before. He’ll warn off alien invaders, from the Suliban to the Ferengi, and he’ll survive foreign diseases to make it all the way to the end of the NX-01’s journey. Just follow Phlox’s instructions and stop giving him cheese.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "archer-porthos",
+      "heading": "Porthos (Cargo)",
+      "snippet": "Porthos has a Free play action that lets you find a Person card, including in your Reserve deck if you discard the found card. Porthos lets you refresh Captain Archer, which is great because you’ll be exhausting Archer quite a bit. If you have an Alien in play, you gain a Glory and both players take an Incident card, but this isn’t an Attack. While you have to be a little careful of taking too many Incidents with",
       "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "archer-reach-any-star": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "archer-reach-any-star",
+      "heading": "Reach Any Star (Directive)",
+      "snippet": "The third and final custom Directive based on lyrics to “Faith of the Heart,” it has an Influence skill which is applicable when it’s in the Staging Area after being played for its first free-Play Action. That action gives you the choice between drawing a card, warping a Ship, or exhausting your captain to do both (told you you’re going to be exhausting Archer a lot). You may also spend a Dilithium to send an Away",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     },
+     {
+      "anchor": "archer-reach-any-star",
+      "heading": "Reach Any Star (Directive)",
+      "snippet": "…Except that the second Play Action lets you take an Incident to draw the top Location and take control of it, followed by logging Reach Any Star. Which is also pretty enticing, especially when you need a planet for Strange New Worlds or simply want to risk some additional tableau benefits sight unseen (Unstable Wormhole can help here too). Reach Any Star is super versatile.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "archer-recruit": [
+   {
+    "guide": "archer.html",
+    "count": 7,
+    "hits": [
+     {
+      "anchor": "archer-s-available-discarded-cards",
+      "heading": "Archer’s Available/Discarded Cards",
+      "snippet": "Archer only has 5 Available cards: one Person card, one Ship, and three Directives. You also have a Directive in the discard pile (Analyze). The only familiar Directive in the Available cards is Recruit. Archer gets a lot of custom directives.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      },
      {
-      "anchor": "kirk-s-starting-hand-strategies",
-      "heading": "Kirk’s Starting Hand Strategies",
-      "snippet": "You have Spock, Maximum warp, Set a Course, Subspace Phenomenon, and one other card in your starting hand. You play Subspace Phenomenon, discarding Spock, and draw two cards and discard one of them. You NEED to keep Levitation Boot if possible, and you hope that you've discarded Uhura or Bones as the discarded card. Your hand is now Maximum Warp, Set a Course, Levitation Boots (for this to work), and one other card.",
+      "anchor": "archer-s-starting-hand-strategies",
+      "heading": "Archer’s Starting Hand Strategies",
+      "snippet": "If you do grab Ambassador Soval, then you can use the remaining two Action tokens on Trip Tucker first, to gain a Cargo. If you log the cargo, you’ll have another Dilithium and could potentially warp the NX-01 Enterprise and use Shuttlepod 1, but if you don’t log the Cargo you’ll have to use Recruit as your final action (which you can still do even if you log the Cargo). From there, you have Faith of the Heart and",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -970,24 +1370,48 @@
     ]
    }
   ],
-  "archer-strange-new-worlds": [
+  "archer-shuttlepod-1": [
    {
-    "guide": "kirk.html",
-    "count": 17,
+    "guide": "archer.html",
+    "count": 2,
     "hits": [
      {
-      "anchor": "captain-card-starting-components",
-      "heading": "Captain Card & Starting Components",
-      "snippet": "Kirk has five away teams along with the Human and Starfleet traits. His Reaction allows you to gain a Military after putting a card with the Klingon trait in play, because he’s never trusted Klingons, and he never will. Alternatively, you can use his Activation to put a card on top of your deck to draw a Directive from your Discard pile, which allows for some decent flexibility in, say, gaining Utilize or Strange",
+      "anchor": "archer-shuttlepod-1",
+      "heading": "Shuttlepod 1 (Ship)",
+      "snippet": "When you’re on the cutting edge of space exploration, and you’re only really comfortable with using your teleporter to transport cargo, then you use your Shuttlepods. A lot. And the crew of the NX-01 tended to use their shuttlepods for almost everything, meaning that they appeared in quite a few episodes. But the most memorable episode is when Reed and Trip were stuck alone in Shuttlepod 1 with limited air and",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "archer-shuttlepod-1",
+      "heading": "Shuttlepod 1 (Ship)",
+      "snippet": "Shuttlepod 1 is Archer’s undeployable beaming Ship. While it only has one play action, you’ll get to send an Away Team where you have a ship and either beam or recall a card beamed to a Ship. I have found that even with Archer’s limited Away Teams, it’s really necessary to be able to beam and recall cards to help keep Archer’s deck trim as more and more Reserve cards enter the game.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "archer-strange-new-worlds": [
+   {
+    "guide": "archer.html",
+    "count": 10,
+    "hits": [
+     {
+      "anchor": "archer-s-reserve-cards",
+      "heading": "Archer’s Reserve Cards",
+      "snippet": "Archer has seven Reserve Cards consisting of four Directives, two Person Cards, and one (very good) Cargo (boy). Among the Directives are First Contact, Inspire, and Strange New Worlds, all of which we’ve seen in previous decks. Inspire is Archer’s primary method of advancing on his skill tracks, but doesn’t give him a Dilithium the way that Utilize does for most captains. First Contact is a one-off Directive",
       "truncated": true,
       "mode": "text",
       "lore": false
      },
      {
-      "anchor": "kirk-s-available-cards",
-      "heading": "Kirk’s Available Cards",
-      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
-      "truncated": true,
+      "anchor": "archer-reach-any-star",
+      "heading": "Reach Any Star (Directive)",
+      "snippet": "…Except that the second Play Action lets you take an Incident to draw the top Location and take control of it, followed by logging Reach Any Star. Which is also pretty enticing, especially when you need a planet for Strange New Worlds or simply want to risk some additional tableau benefits sight unseen (Unstable Wormhole can help here too). Reach Any Star is super versatile.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -1160,7 +1584,53 @@
     ]
    }
   ],
+  "archer-strength-of-the-soul": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "archer-strength-of-the-soul",
+      "heading": "Strength of the Soul (Directive)",
+      "snippet": "One of three custom Directives for Archer based on the Diane Warren theme song, Strength of the Soul pictures Archer in a mind-meld with T’Pau while he is the vessel for the Katra of Surak. Apparently, humans shouldn’t be able to handle that, so it’s a great example of his Strength of the Soul.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "archer-strength-of-the-soul",
+      "heading": "Strength of the Soul (Directive)",
+      "snippet": "Strength of the Soul has two very different Play operations. The first is a free-Play Action that lets you draw a Directive or Encounter from your discard pile. Practically speaking, this could be Analyze (which starts in your discard pile) on turn one, but as the game goes on it has a lot of flexibility in how you might use it to grab Reach Any Star, Faith of the Heart, Founding the Federation, or your standard",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "archer-tpol": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "archer-tpol",
+      "heading": "T’Pol (Person)",
+      "snippet": "T’Pol really was the punching bag of Enterprise. Forced to share a ship with stinky Humans, she underwent forced mind-melds, Trellium-D addiction, an inexplicable attraction to Trip Tucker, meeting her future self and child, a Vulcan unrest amid continued conflict with the Andorians, an arranged marriage, a cloned half-human child, and through it all, these pesky Humans won’t stop getting themselves into trouble by",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "archer-tpol",
+      "heading": "T’Pol (Person)",
+      "snippet": "If you’ve read my Soval guide, this card is going to be very familiar. Nearly identical even. T’Pol has a Research skill, and identical traits to Sub-Commander T’Pol (Vulcan, Telepath, Scientist, and Starfleet) while also gaining the NX-01 trait. She has an identical Resupply (gain a Dilithium or spend one to gain a Research), and an identical Activation (Discard a Human/Engineer to draw a Cargo/Directive from your",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "soval.html",
     "count": 13,
@@ -1179,6 +1649,54 @@
       "snippet": "Muroc has a Military skill and the Vulcan trait. Muroc has a play action that allows you to choose two: gain an Influence, a Military, or send an away team to a location with a ship. If you have more than six Influence you can do all three and then log Muroc. His Activations make him the Vulcan Riker, as he can draw a Ship from your discard pile or free play a Ship with Vulcan. I often use T’Pol to promote him to",
       "truncated": true,
       "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "archer-trip-tucker-iii": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "archer-trip-tucker-iii",
+      "heading": "”Trip” Tucker III (Person)",
+      "snippet": "The Commander of the NX-01 Enterprise and Chief Engineer, he works tirelessly to keep the ship together through impossible circumstances. His charm and Floridian accent aside, he’s more than ready to go explore Strange New Worlds, but more often than not he’s needed to fix things on board the NX-01 Enterprise. He’ll keep the NX-01 together through Xindi attacks, work to develop weapons, nearly die many times, and",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "archer-trip-tucker-iii",
+      "heading": "”Trip” Tucker III (Person)",
+      "snippet": "Trip has the NX-01, Human, Engineer, and Starfleet traits. His Play action allows him to gain a Cargo from the top of the Cargo deck and either log it and gain a Dilithium, or put it on top of Archer’s Reserve deck and place a Dilithium on Earth. The downside to placing it on Earth is that you’ll need a Ship there to get those resources, but if you want to actually use the Cargo, you’ll need to take that option. Why",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "archer-xindi-council": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "archer-xindi-council",
+      "heading": "Xindi Council (Ally) (Dev Cost: Have an Incident and an Encounter in play)",
+      "snippet": "If you haven’t seen Enterprise and you’ve just been reading my thematic entries on each card, you might be a bit surprised at this one. After all, wasn’t Archer fighting against the Xindi in Enterprise Season 3? Yes, but it’s a bit more complicated than that, and I love how Archer was able to convince most of the council to become an Ally of the Federation instead of an enemy. Turns out, they were being manipulated",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "archer-xindi-council",
+      "heading": "Xindi Council (Ally) (Dev Cost: Have an Incident and an Encounter in play)",
+      "snippet": "The Xindi Council has a Play Action that gives you two Influence and allows you to Scan for a card with the Xindi trait, including from the Junk. This is super helpful for getting the cards you need to Enlist Agent Daniels. The second action is a free Play Action and requires six Influence. If your opponent has a Xindi in play, you both take an Incident, thematically representing the discord among the council. You",
+      "truncated": true,
+      "mode": "anchor",
       "lore": false
      }
     ]
@@ -1210,6 +1728,20 @@
       "heading": "Arin'Sen",
       "snippet": "If you wondered why the Arin'Sen had a Klingon trait, you aren't alone. Their homeworld was annexed by the Klingons, pillaged, then abandoned in Enterprise. They have a free play action that requires three military. For every Klingon you have in play (up to five), you can gain two Dilithium, one Latinum, or discard a card to gain a glory. Then the Arin'Sen self-log. Obviously this is great for Koloth, but with a",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Arin’sen aren’t necessarily helpful for Archer at all since he doesn’t start or search out any Klingon card.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -1305,6 +1837,20 @@
       "snippet": "Ash (Voq) Tyler has a vast array of traits representing his duality as Klingon, Human, Starfleet, Spy, and lethal weapon (Attack). His free play actions represent this well, as you can only use them conditionally depending on whether he's surrounded by more Klingons or Starfleet. With more Starfleet, he finds a Military Skill/Focus card. He's a bit more dynamic around Klingons, as he can dismiss an opponent Duty",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Ash Tyler can be helpful because Archer will have quite a bit of Glory if used correctly, but you’ll never have more Klingon than Starfleet traits in play with Archer.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -1423,6 +1969,20 @@
       "snippet": "The location of the underwater construction yard for the Xindi weapon, the vast number of skills make thematic sense from a Research and Military perspective, but it also makes this location very valuable. Gaining Cargo or a Ship upon control is also quite powerful and thematic, and Endgame scoring for Xindi cards is likewise on-point. I'm looking forward to trying this one out with a Xindi-heavy (Archer) or a",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "archer-s-development-strategy",
+      "heading": "Archer’s Development Strategy",
+      "snippet": "Admiral Forrest has the issue of being limited to at least turn four before you can enlist him (and realistically turn five), and Daniels needs some Xindi hanging around. There are those two Xindi Locations (Denali Depot and Azati Prime) that are both good for Archer in multiple ways, so if those come up I think they’re worth fighting for (especially Azati Prime). Otherwise, maybe use Founding the Federation with",
+      "truncated": true,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -1552,6 +2112,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Betazed Intelligence helps you find Soval and T’Pol, and you’ll probably get at least a two-card hand size increase before it logs, and it makes a great Ally card for later beaming to Earth.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -1596,6 +2170,20 @@
   ],
   "betazed-intelligence": [
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Betazed Intelligence helps you find Soval and T’Pol, and you’ll probably get at least a two-card hand size increase before it logs, and it makes a great Ally card for later beaming to Earth.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -1635,6 +2223,20 @@
       "snippet": "This is the only base-game cargo with a skill (one Research skill). Biobed has to be in your staging area to get the Research skill counted — it can't be beamed for it to count, per the rules for beamed cards. Biobed allows you the very common junk a market card action. You also get to free play an incident or find a Doctor card, all without action card costs. Finding a doctor usually allows you to deal with an",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Biobed is the rare helpful Doctor card for Archer that lets him find Phlox and use him to greater effect.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -1693,6 +2295,20 @@
       "snippet": "The original series version of the Romulan Bird-of-Prey comes with Imperial, Romulan, Attack, and Cloak tags. There's also an Influence skill, which makes it a great choice for Sisko and Picard, who can use the extra Influence skill. The table operations here are a little different. Yes, there's the standard \"discard a card to beam a card\" activation. The deploy play action costs an Action token and lets you discard",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Bird of Prey is fine for Archer but is better for beaming than for the expensive Play Actions and table operation.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -1784,6 +2400,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Bolians, Bynars, Denobulans, Kelpiens, and Organians are all generally useful depending on the situation.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -1842,6 +2472,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Boltzmann Brain is great for everybody, and gives you some flexibility if you’ve been hoarding too many Incidents preparing for Founding the Federation.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -1881,6 +2525,20 @@
       "snippet": "This ship has the Borg tag, naturally. It has a free play action to deploy and warp the ship, but you can optionally spend an action token and one Dilithium to gain a person and log that card. That seems kind of silly (it's just a point, unless the card has a focus or market glory on it), except that if you have a Borg captain you can assimilate that card instead. What does that mean? What does that do? I don't know",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Borg Probe is almost always great for everyone",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -1959,6 +2617,20 @@
       "anchor": "core-box",
       "heading": "Core Box",
       "snippet": "Picard: Depriving Picard of synthetics can work, especially if you decide to scan for and obtain Bruce Maddox before he does. You’re both going after different decks (Person versus Ally) but it can’t hurt to deprive him of some specific Alien traits when you see them. Klingons don’t do you any favors so Junk them before Picard can benefit. And watch out for a very fast playing Picard, and adjust accordingly.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Bruce Maddox is really only beneficial if you’ve gotten other Synthetics or Androids, which Archer doesn’t otherwise have.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -2257,28 +2929,6 @@
    }
   ],
   "burnham-maximum-warp": [
-   {
-    "guide": "kirk.html",
-    "count": 4,
-    "hits": [
-     {
-      "anchor": "kirk-s-available-cards",
-      "heading": "Kirk’s Available Cards",
-      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     },
-     {
-      "anchor": "kirk-s-starting-hand-strategies",
-      "heading": "Kirk’s Starting Hand Strategies",
-      "snippet": "Kirk starts out with some of the best card-draw options in the game. Between Set a Course and Maximum Warp, you can potentially see a total of 3 additional cards in your deck. You also have the potential to use Subspace Phenomenon to discard Spock and then draw two cards and discard one, which if you’re keeping track, is your whole starting deck. Let’s game that out for a second, and I'll note that the first time I",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   },
    {
     "guide": "burnham.html",
     "count": 3,
@@ -2626,6 +3276,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Bolians, Bynars, Denobulans, Kelpiens, and Organians are all generally useful depending on the situation.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "burnham.html",
     "count": 1,
     "hits": [
@@ -2726,6 +3390,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Captain Dorg is completely circumstantial, except for the Reaction that gives you more Actions, which everyone can benefit from.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -2817,6 +3495,20 @@
       "snippet": "In addition to our standard junk action, refreshing up to three ships and drawing two cards is a good play action, even with the action token cost. But the reaction is really interesting. It stays out as an Ongoing card, and anytime you deploy a ship without cloak (once per round, because it's a reaction), that ship gets the Cloak tag and you can discard a card to send an away team to any location, ignoring your",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Cloaking Device is also helpful unless you have limited Away Teams because you didn’t enlist Shran or Soval.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -2984,6 +3676,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "I like Computer Virus for everybody, with no special benefit for Archer.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -3106,6 +3812,28 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "archer-ambassador-soval",
+      "heading": "Ambassador Soval (Person) (Dev Cost 3 Dilithium and exhaust your Captain",
+      "snippet": "Ambassador Soval has an Influence skill with the Vulcan, Telepath, and Ambassador traits (just like the captain of the same name). His play action lets you scan for a Vulcan or Scientist card, then draw a card, which I usually use to gain a Vulcan ship (if I know it’s still in the market) or sometimes, if I’m feeling risky, I try to get Degra with that Scientist trait scan in the common market (there’s only two in",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Degra is not only thematic, provides a Xindi trait, but helps you find other Xindi cards like Kemocite, and should be able to get you an Encounter before the game ends.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -3121,6 +3849,20 @@
    }
   ],
   "delphic-expanse-sphere": [
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Delphic Expanse Sphere thematically ties in to Archer, which is why you can gain resources for Xindi in play with the second play action. If Archer gets it, he’ll benefit a bit more than most captains, on average.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "georgiou.html",
     "count": 1,
@@ -3226,6 +3968,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Bolians, Bynars, Denobulans, Kelpiens, and Organians are all generally useful depending on the situation.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -3269,6 +4025,20 @@
    }
   ],
   "derika-tendi": [
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "D’Erika Tendi, and most Orion cards, just care about other Orions, so Archer doesn’t have an inherent advantage there. Just note that her reaction is more helpful if you get more Away Teams.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "georgiou.html",
     "count": 1,
@@ -3370,6 +4140,20 @@
       "heading": "Core Box",
       "snippet": "Sisko: He’s going to get more ships than you, most likely, but you can still focus on grabbing the best ones for your game early on. Scanning Military Skills for the K’T’Inga will take away valuable skills and focus scoring, though you risk getting the D’Kora Marauder instead. Don’t worry too much about the location fights with Sisko, but look for opportunities to speed the game up when you can. A smart Sisko player",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "D’Kora Marauder will really only benefit Archer if he’s got enough Latinum and Away teams to take advantage of the table operations.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -3496,6 +4280,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "D’Var is generally good as a free-play Ship, but Archer can usually benefit from Research skills making the unique Activation very useful.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -3549,6 +4347,20 @@
       "snippet": "A species we have yet to see in live-action Trek (probably because of the whole three-arms thing), Edosians get an Alien trait and two play actions. The first is a free action which provides card draw of two, but you have to discard one of them. The second costs an action token and requires you to have five Influence. You then put three cards on the top of your deck and you get to choose between the top two",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Edosians should be very usable for Archer, both from a Specialty perspective and for their Alien trait.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -3655,6 +4467,20 @@
       "anchor": "missions",
       "heading": "Missions",
       "snippet": "I find that I usually get two out of three missions accomplished per game, with the Emerald Chain mission getting accomplished a little less than half the time.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Emerald Chain is really more about its traits than the play action, and because it doesn’t self-log you’re likely not using it for Founding the Federation. Still, you might consider playing it once and then beaming it to Earth directly.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -3830,6 +4656,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Archer has the Person cards to use EVA Suits optimally, but he may lack the Away Teams early in the game.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -3883,6 +4723,20 @@
       "snippet": "This cargo screams \"Quark\", where he benefits from other Ferengi in play, and Ferengi Wine also benefits from the Ferengi and Business tags that Quark has. The second action costs an action token, costs two Latinum to scan one Ally including the junk (which does include the entire junk pile), followed by an optional market junk. Alternatively, if you have five Influence Skills, you gain a Latinum for each Ferengi",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Ferengi Wine isn’t anything special for Archer. There’s not enough Ferengi and business cards that are accessible to him consistently, but he can use it for two unique traits.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -3949,6 +4803,20 @@
       "snippet": "The giant sphere piloted by baby Clint Howard, this ship gets played and warped as a free action. It flips the normal Activation costs, and can warp for free but costs a Dilithium to beam aboard. It also has another activation that requires you to log a Person with Starfleet beamed to Fesarius , discard a directive, and exhaust another ship to take the top encounter to your discard pile, then log Fesarius . It's",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Fesarius is good for the free play and free warp operations, and you shouldn’t have a problem finding a Person to sacrifice for an Encounter.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -4050,6 +4918,20 @@
       "heading": "Putting It All Together",
       "snippet": "Looking at the market, I would suggest that anything with Klingon, Romulan, or Vulcan tags are beneficial for Sela generally. You can also make good use of Talok (benefits from Imperial tags in play), Lursa (Activation benefits from Romulans and action gains ships and sends away teams), Admiral Pressman (gains three glory from dismissing a Cloak in play), and Dorg (attack and Shady, ship gain, and reactions from",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Forced Singularity might help you fish Reed out of your Reserves or find Trip Tucker, and it really doesn’t hurt to have the extra Duty Officer and some card draw.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -4201,6 +5083,28 @@
    }
   ],
   "freeman-second-contact": [
+   {
+    "guide": "archer.html",
+    "count": 6,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Let’s talk about the NX-01 trait. Many cards in the deck have this trait, and while it’s going to come up again when we talk about the custom Directive Faith of the Heart, I wanted to give a quick overview here. NX-01 is a new trait that can be scanned for (if you had an ability to scan for “any trait”) and many of Archer’s cards in his deck have this trait. Additionally, four market Person cards (and one Rewards",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "archer-commander-shran",
+      "heading": "Commander Shran (Person) (Dev Cost 2 Dilithium and 2 Latinum)",
+      "snippet": "Commander Shran has a Military skill along with the Andorian and Imperial traits. He provides two more Away Teams when you enlist him, just like Ambassador Soval. Shran’s Play Action lets you scan for an Andorian or a Weapon and draw a card. This is really more about what you think you might benefit from in terms of traits or play text, but there are three Andorian Person cards between To Boldly Go and Second",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "georgiou.html",
     "count": 5,
@@ -4355,28 +5259,6 @@
    }
   ],
   "freeman-set-a-course": [
-   {
-    "guide": "kirk.html",
-    "count": 6,
-    "hits": [
-     {
-      "anchor": "kirk-s-available-cards",
-      "heading": "Kirk’s Available Cards",
-      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     },
-     {
-      "anchor": "kirk-s-starting-hand-strategies",
-      "heading": "Kirk’s Starting Hand Strategies",
-      "snippet": "Kirk starts out with some of the best card-draw options in the game. Between Set a Course and Maximum Warp, you can potentially see a total of 3 additional cards in your deck. You also have the potential to use Subspace Phenomenon to discard Spock and then draw two cards and discard one, which if you’re keeping track, is your whole starting deck. Let’s game that out for a second, and I'll note that the first time I",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   },
    {
     "guide": "picard.html",
     "count": 3,
@@ -4854,28 +5736,6 @@
   ],
   "georgiou-utilize": [
    {
-    "guide": "kirk.html",
-    "count": 9,
-    "hits": [
-     {
-      "anchor": "captain-card-starting-components",
-      "heading": "Captain Card & Starting Components",
-      "snippet": "Kirk has five away teams along with the Human and Starfleet traits. His Reaction allows you to gain a Military after putting a card with the Klingon trait in play, because he’s never trusted Klingons, and he never will. Alternatively, you can use his Activation to put a card on top of your deck to draw a Directive from your Discard pile, which allows for some decent flexibility in, say, gaining Utilize or Strange",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     },
-     {
-      "anchor": "kirk-s-available-cards",
-      "heading": "Kirk’s Available Cards",
-      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   },
-   {
     "guide": "shran.html",
     "count": 6,
     "hits": [
@@ -5001,6 +5861,28 @@
       "anchor": "sela-s-reserve-cards",
       "heading": "Imperial Pride (Directive)",
       "snippet": "Imperial Pride also shows up in Shran's available cards, but I kind of like it in the Reserves more. You're not going to use it immediately in most cases, and it gives you time to grab an extra ship or two before committing away teams to controlled planets. Getting three away teams on controlled planets on the same turn you get Imperial Pride is ideal, both for the two card-draw from Romulus and then so you can be",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 3,
+    "hits": [
+     {
+      "anchor": "archer-s-reserve-cards",
+      "heading": "Archer’s Reserve Cards",
+      "snippet": "Archer has seven Reserve Cards consisting of four Directives, two Person Cards, and one (very good) Cargo (boy). Among the Directives are First Contact, Inspire, and Strange New Worlds, all of which we’ve seen in previous decks. Inspire is Archer’s primary method of advancing on his skill tracks, but doesn’t give him a Dilithium the way that Utilize does for most captains. First Contact is a one-off Directive",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "second-contact",
+      "heading": "Second Contact",
+      "snippet": "Pike: Pike has very limited Away Team usage despite having more Away Teams he can use, so he’s not a huge Neutral Zone threat. That being said, I would still build up your fleet early to really box him out and force him to use Una repeatedly as his method of gaining Ships. You have the advantage when it comes to T’Pol, because you can gain cards face-up in the market with Skill icons, thus preventing Pike from",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -5170,6 +6052,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Gift Box isn’t anything special, but it does stay in play with an Anomaly and the rare Betazoid trait so that can be helpful for endgame scoring.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -5252,6 +6148,20 @@
       "heading": "Encounters",
       "snippet": "To Boldly Go: Delphic Expanse Sphere is good for sending away teams to controlled locations to set up Strange New Worlds. Gomtuu is amazing for Kirk because it counts as an Encounter on a Ship by itself, meaning you only need to beam one more Encounter here to complete Kirk’s mission. New Federation Applicants is fine for Incident management and card draw, and the wild focus offers some good flexibility for scoring.",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Gomtuu is great for Archer specifically because it’ll give him a Military boost with his multitude of Research skills.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -5354,6 +6264,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "V’Ger, Koala and the Guardian of Forever nearly always have general applicability.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "burnham.html",
     "count": 1,
     "hits": [
@@ -5407,6 +6331,20 @@
       "snippet": "From the TOS episode \"Mirror, Mirror\", the Halkan Council of both the prime and mirror universes denied the Enterprise access to their Dilithium for fear that it would be used offensively. Thus, the thematic benefit of a free-play action of gaining three Dilithium, a benefit that can be repeated over multiple turns. The downside is that all it takes is one in-play card with an attack trait and it's getting logged.",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Halkan Council is a great Dilithium engine, it’s just a question of how many Attack cards you’ve built up by the time you play them. Still, the self-log doesn't hurt you.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -5522,6 +6460,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Holographic Drone Ship should be playable with a Telepath (Soval or T’Pol), but you should also be able to get to that seven Research specialty requirement relatively quickly.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "burnham.html",
     "count": 1,
     "hits": [
@@ -5617,6 +6569,20 @@
       "snippet": "DS9's Holosuites start us off with the rare Hologram tag right along with Business. Two action choices here, that sort of play off each other. You can gain two Latinum, refresh your Duty Officer after a tough shift of patrolling the Promenade, and junk a market card. All three in one card offer a lot of flexibility. The other play action allows you to scan for a Person, Cargo, or Ally — the number of which depends",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Holosuite can be helpful if Archer can’t find Latinum any other way.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -5730,6 +6696,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Horta can be very useful for Archer since he’s only going to be gaining a single Dilithium quite a bit during the game (combo with Automated Repair Station to really make logging crew worth it).",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "burnham.html",
     "count": 1,
     "hits": [
@@ -5787,6 +6767,28 @@
    }
   ],
   "hoshi-sato": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "hoshi-sato",
+      "heading": "Hoshi Sato",
+      "snippet": "Hoshi Sato was a University Professor in Brazil when Captain Archer recruited her to join the NX-01 Enterprise as communications officer. Hoshi’s ability to translate alien languages is nothing short of magic, though the universal translator is similarly magical.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "hoshi-sato",
+      "heading": "Hoshi Sato",
+      "snippet": "Hoshi has a free play action that lets her find a card with Research skill/focus. I’ve used that in conjunction with T’Pol in Archer’s deck, sometimes getting to fish T’Pol out of the Reserves. Her second action requires five Research and lets you pick a species to scan for when you discard a card with Research skill/focus. For Archer, the obvious use for this would be to grab an Andorian, Vulcan, or (most likely)",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "tbg-persons.html",
     "count": 2,
@@ -5940,6 +6942,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Iconian Gateway is nice, but only if you have enough Away Teams to make use of it.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -6016,6 +7032,20 @@
       "truncated": true,
       "mode": "anchor",
       "lore": true
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Illyrians are fine for a one-turn Research gain, but they only have the Augment trait making them less than ideal for Earth.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
      }
     ]
    },
@@ -6154,6 +7184,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "I don’t think Jago’s Epigenetic Implant helps Archer much.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -6183,6 +7227,28 @@
    }
   ],
   "jennifer-shreyan": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Jennifer Sh’reyan is another Andorian, and considering how the NX-01 is bad at beaming and warping, she’s a helpful addition to the crew.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "putting-it-all-together",
+      "heading": "Putting It All Together",
+      "snippet": "No, Earth is far more about generating resources for a resource-strapped Archer. Yes, there are market cards that can help him significantly (we went over a few in market considerations), but Archer’s going to be fighting for every Dilithium he gets. That means being able to reclaim those resources (Glory included) from Earth will be very important. Coincidentally, it also means having a Ship at Earth is important,",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "combining-markets.html",
     "count": 1,
@@ -6228,6 +7294,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Joret Dal provides a nice hand size boost, but so does Daniels. He’s really more helpful for keeping your deck trim and gaining a Glory, so I’d say he’s solidly situational. Spy and Cardassian aren’t the most common traits so that’s another reason to grab him.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -6257,6 +7337,20 @@
    }
   ],
   "kaelon-ii-science-ministry": [
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "The Kaelon II Science Ministry works really well in conjunction with Automated Repair Station, giving you extra Dilithium and more control over your card draw, making it excellent for Archer.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "georgiou.html",
     "count": 1,
@@ -6311,6 +7405,20 @@
       "snippet": "Lots of business opportunities in the Gamma quadrant. The Karemma have the Dominion and Business traits, as they were allied with the Founders in the Dominion war but value commerce enough to continue relations with the Federation after the war (see Lower Decks). They have a free play action to gain one Latinum. Their other free play action requires three military, and you can spend two Latinum for another action",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Karemma is always good for an extra action, but I think they’re more helpful for Latinum generation for Archer.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -6414,6 +7522,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Kazon Raider Might be good if it’s what’s available but I worry about Archer’s Latinium production.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "kelpiens": [
@@ -6470,6 +7592,20 @@
       "heading": "Ally Deck",
       "snippet": "To Boldly Go: While Georgiou can make use of most of these Ally cards, there are very few that I consider to be truly vital to her. As always, you’re hoping to get the Kelpiens from Saru, but let this be a second reminder that if you’re playing Burnham as she’ll scan for them too. If you’re looking for resources, grab Arin’sen, Kaelon II Science Ministry, or the Orion Syndicate. She’s also likely to get some benefit",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Bolians, Bynars, Denobulans, Kelpiens, and Organians are all generally useful depending on the situation.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -6600,6 +7736,28 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 4,
+    "hits": [
+     {
+      "anchor": "archer-s-development-strategy",
+      "heading": "Archer’s Development Strategy",
+      "snippet": "It’s going to be tough to get the Xindi Council unless you get lucky and fish Strange New Worlds out of your Reserve deck early in the game. If you do happen to have that opportunity, I like getting them early and using them to grab both Xindi ships (if you can) from the Ship deck, then going back and getting Kemocite from the Cargo. I know that Encounter is tempting, but those three cards really help with the rest",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Degra is not only thematic, provides a Xindi trait, but helps you find other Xindi cards like Kemocite, and should be able to get you an Encounter before the game ends.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -6671,6 +7829,30 @@
       "snippet": "Khitomer is the location of both a Federation-Klingon peace treaty, and also a Romulan attack, which logically lends to the three species traits. I like the benefit of a Starfleet free-play, but the reaction is where this really shines. You can either defensively use this to give your opponent Incidents when they attack, or gain extra actions via logging attacks or Military skill/focus cards. Really looking forward",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "kirk-analyze": [
+   {
+    "guide": "kirk.html",
+    "count": 3,
+    "hits": [
+     {
+      "anchor": "kirk-s-starting-hand-strategies",
+      "heading": "Kirk’s Starting Hand Strategies",
+      "snippet": "Let’s go the opposite direction. What if you don’t have any cards in your starting hand that give you the ability to draw more cards? All is not actually lost, as you can set up for a nearly equally dynamic second turn by making sure you end the round with all three of your Person cards in the discard pile (and you’ll be able to just beam them to Levitation boots in round two from your discard). Alternatively, you",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-reserve-cards",
+      "heading": "Kirk’s Reserve Cards",
+      "snippet": "Kirk has five Reserve Cards consisting of two Directives, two Person Cards, and a Ship. One of the Directives is Analyze, which we’ve seen before and is the basic Directive for gaining Ships, Cargo or some free Dilithium. The other Reserve cards are new:",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -6840,6 +8022,30 @@
     ]
    }
   ],
+  "kirk-maximum-warp": [
+   {
+    "guide": "kirk.html",
+    "count": 4,
+    "hits": [
+     {
+      "anchor": "kirk-s-available-cards",
+      "heading": "Kirk’s Available Cards",
+      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-starting-hand-strategies",
+      "heading": "Kirk’s Starting Hand Strategies",
+      "snippet": "Kirk starts out with some of the best card-draw options in the game. Between Set a Course and Maximum Warp, you can potentially see a total of 3 additional cards in your deck. You also have the potential to use Subspace Phenomenon to discard Spock and then draw two cards and discard one, which if you’re keeping track, is your whole starting deck. Let’s game that out for a second, and I'll note that the first time I",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "kirk-montgomery-scotty-scott": [
    {
     "guide": "kirk.html",
@@ -6950,6 +8156,30 @@
     ]
    }
   ],
+  "kirk-recruit": [
+   {
+    "guide": "kirk.html",
+    "count": 4,
+    "hits": [
+     {
+      "anchor": "kirk-s-available-cards",
+      "heading": "Kirk’s Available Cards",
+      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-starting-hand-strategies",
+      "heading": "Kirk’s Starting Hand Strategies",
+      "snippet": "You have Spock, Maximum warp, Set a Course, Subspace Phenomenon, and one other card in your starting hand. You play Subspace Phenomenon, discarding Spock, and draw two cards and discard one of them. You NEED to keep Levitation Boot if possible, and you hope that you've discarded Uhura or Bones as the discarded card. Your hand is now Maximum Warp, Set a Course, Levitation Boots (for this to work), and one other card.",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "kirk-sarek": [
    {
     "guide": "kirk.html",
@@ -6996,6 +8226,30 @@
     ]
    }
   ],
+  "kirk-set-a-course": [
+   {
+    "guide": "kirk.html",
+    "count": 6,
+    "hits": [
+     {
+      "anchor": "kirk-s-available-cards",
+      "heading": "Kirk’s Available Cards",
+      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-starting-hand-strategies",
+      "heading": "Kirk’s Starting Hand Strategies",
+      "snippet": "Kirk starts out with some of the best card-draw options in the game. Between Set a Course and Maximum Warp, you can potentially see a total of 3 additional cards in your deck. You also have the potential to use Subspace Phenomenon to discard Spock and then draw two cards and discard one, which if you’re keeping track, is your whole starting deck. Let’s game that out for a second, and I'll note that the first time I",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "kirk-starfleet-headquarters": [
    {
     "guide": "kirk.html",
@@ -7013,6 +8267,54 @@
       "anchor": "kirk-s-starting-hand-strategies",
       "heading": "Kirk’s Starting Hand Strategies",
       "snippet": "You have Spock, Maximum warp, Set a Course, Subspace Phenomenon, and one other card in your starting hand. You play Subspace Phenomenon, discarding Spock, and draw two cards and discard one of them. You NEED to keep Levitation Boot if possible, and you hope that you've discarded Uhura or Bones as the discarded card. Your hand is now Maximum Warp, Set a Course, Levitation Boots (for this to work), and one other card.",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "kirk-strange-new-worlds": [
+   {
+    "guide": "kirk.html",
+    "count": 17,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Kirk has five away teams along with the Human and Starfleet traits. His Reaction allows you to gain a Military after putting a card with the Klingon trait in play, because he’s never trusted Klingons, and he never will. Alternatively, you can use his Activation to put a card on top of your deck to draw a Directive from your Discard pile, which allows for some decent flexibility in, say, gaining Utilize or Strange",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-available-cards",
+      "heading": "Kirk’s Available Cards",
+      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "kirk-subspace-phenomenon": [
+   {
+    "guide": "kirk.html",
+    "count": 5,
+    "hits": [
+     {
+      "anchor": "kirk-s-available-cards",
+      "heading": "Kirk’s Available Cards",
+      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-starting-hand-strategies",
+      "heading": "Kirk’s Starting Hand Strategies",
+      "snippet": "Kirk starts out with some of the best card-draw options in the game. Between Set a Course and Maximum Warp, you can potentially see a total of 3 additional cards in your deck. You also have the potential to use Subspace Phenomenon to discard Spock and then draw two cards and discard one, which if you’re keeping track, is your whole starting deck. Let’s game that out for a second, and I'll note that the first time I",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -7122,6 +8424,30 @@
     ]
    }
   ],
+  "kirk-utilize": [
+   {
+    "guide": "kirk.html",
+    "count": 9,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Kirk has five away teams along with the Human and Starfleet traits. His Reaction allows you to gain a Military after putting a card with the Klingon trait in play, because he’s never trusted Klingons, and he never will. Alternatively, you can use his Activation to put a card on top of your deck to draw a Directive from your Discard pile, which allows for some decent flexibility in, say, gaining Utilize or Strange",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "kirk-s-available-cards",
+      "heading": "Kirk’s Available Cards",
+      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "kirk-vulcan": [
    {
     "guide": "kirk.html",
@@ -7194,6 +8520,20 @@
       "heading": "Burnham's Development Cards",
       "snippet": "There's the temptation to focus on Admiral Vance and the U.S.S. Federation. I like this combo, but you have to either have an extremely thin deck or the confidence to know that you're going to get back around to playing Theta Zeta. If you've had trouble boosting your tracks, then this can work in order to use the skills on the Federation to Inspire and raise up Research or Influence. Doctor Kovich and the Trance",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "V’Ger, Koala and the Guardian of Forever nearly always have general applicability.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -7387,6 +8727,20 @@
       "anchor": "koloth-s-available-cards",
       "heading": "Good Day To Die (Directive)",
       "snippet": "Perhaps today is a good day to die! For a Play Action, you may log a Person beamed to a ship to gain one military. Then you must log a deployed Ship and dismiss another deployed ship to look at the top two Encounters, take one, and return the other to the bottom of the Encounter deck. This is a relatively high-risk high-reward card that can often be played as early as turn one. I'll have a lot to say about whether",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Koloth: A good Koloth player will end the game quickly. Therefore, I suggest going with a “log everything” strategy for Archer. Don’t worry too much about trying to get to Founding the Federation in terms of enlisting your Reserves. You’re also going to have a tough time in the Neutral Zone, unless Koloth focuses on playing Good Day to Die repeatedly. If you avoid scanning for NX-01 traits, you’ll be able to be",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -7616,6 +8970,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": null,
+      "heading": "Introduction",
+      "snippet": "It’s time for my Strategy guide for Jonathan Archer. I made a point of watching the entirety of Enterprise last year once we learned that Archer was going to be the third Starfleet captain in To Boldly Go. I was not disappointed. The series starts with a dynamic opening two-parter where Archer has to assemble the crew of the first warp-5 Starfleet vessel for a mission to return a Klingon to Qo'noS and prevent the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "sela.html",
     "count": 1,
     "hits": [
@@ -7702,6 +9070,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "K’Ranch is only really useful if you’re rushing to get Founding the Federation completed, otherwise you’re thinning your deck for minimal purpose and rushing the endgame via his Glory gain.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -7754,6 +9136,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Let’s talk about the NX-01 trait. Many cards in the deck have this trait, and while it’s going to come up again when we talk about the custom Directive Faith of the Heart, I wanted to give a quick overview here. NX-01 is a new trait that can be scanned for (if you had an ability to scan for “any trait”) and many of Archer’s cards in his deck have this trait. Additionally, four market Person cards (and one Rewards",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -7769,6 +9165,20 @@
    }
   ],
   "ktinga-battlecruiser": [
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "K’T’Inga Battlecruiser is fine if you have the Away Teams to benefit from playing it.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "georgiou.html",
     "count": 1,
@@ -7892,6 +9302,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Laas is a card I really like on duty, but I find myself not necessarily using him a ton for his play action because duplicating market cards can sometimes have weirdly underwhelming results. That said, I’d never avoid him for Archer, or anybody.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -7939,6 +9363,20 @@
       "snippet": "It's kind of funny that Landru's a Person card since he's a lot older than anyone in the Starfleet era. But since the projection of Landru is just that, a projection, he can't be played. He can be your Duty Officer, and you can beam person cards to him (become one with Landru!). Once you have two person cards there, you can log them for an action (as long as you have at least two Influence) to draw the top Location",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Archer has the Person cards to benefit from Landru, so he’s worth considering if you have time to gain the Location. I like Lursa for Archer because he needs Ships, and she’s good at getting ships and sending Away Teams.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -8000,6 +9438,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Laris is another card that needs an Android around to be of full benefit for her play action, but her Activation is amazing for Archer as long as he has the resources to be refreshing what he needs.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "lenara-kahn": [
@@ -8013,6 +9465,20 @@
       "snippet": "I get the feeling that when this game is done, there's going to be ever so slightly more DS9 characters than other series, because there's always more people coming in and out on a station and less standalone episodes with characters of the week. Kahn had a few appearances and is a solid way to gain on the research track, which synergizes with her research focus scoring. She allows for scanning for an Anomaly, which",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Lenara Kahn is a decent Archer card, both because she’ll score well, provide a Trill trait potentially for endgame scoring, and she provides a relatively inexpensive way to move up Research while also gaining Anomaly cards (likely from the Cargo deck).",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -8130,6 +9596,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Lirpa is fine, especially if you have Soval and have been scanning for Vulcan cards.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "five-year-mission.html",
     "count": 1,
     "hits": [
@@ -8211,6 +9691,20 @@
       "snippet": "My biggest surprise at seeing Lursa in the person deck is the realization that she cannot be a captain with her sister B'Etor in the weirdest duel-captain deck that could theoretically exist in the future. As for this card itself, Lursa has the typical Klingon and Shady tags you'd expect from a Klingon adversary, and a military focus that makes her more valuable to captains favoring that skill track. Her activation",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Archer has the Person cards to benefit from Landru, so he’s worth considering if you have time to gain the Location. I like Lursa for Archer because he needs Ships, and she’s good at getting ships and sending Away Teams.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -8302,6 +9796,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Lwaxana Troi is great for Archer because you need to be refreshing him after exhausting him during your Resupply.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "burnham.html",
     "count": 1,
     "hits": [
@@ -8382,6 +9890,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Ma’ah isn’t terrible for Archer but he’s far more useful when he’s around other Klingons and Archer won’t be seeking them out.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -8411,6 +9933,28 @@
    }
   ],
   "malcolm-reed": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "malcolm-reed",
+      "heading": "Malcolm Reed",
+      "snippet": "Malcolm Reed takes his job seriously (too seriously, sometimes). When he's not writing letters to all his ex-girlfriends, he’s constantly worried about the weapons capabilities of the first warp-5 Starfleet ship, and he’s working to improve combat readiness. Who knows, maybe they’ll end up naming the alert system after him (Reed Alert?).",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "malcolm-reed",
+      "heading": "Malcolm Reed",
+      "snippet": "Malcolm Reed has the Security and Ops traits, along with the obligatory Human, Starfleet, and NX-01. I love the resupply if you have Tucker in play, because it’s very thematic. The Reaction will be useful most of the game as ships are constantly coming and going, and the flexibility to send more Away Teams or find a Weapon is great. His Play Action is weaker for Archer. It gives you Military advancement of one plus",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "tbg-persons.html",
     "count": 2,
@@ -8472,6 +10016,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Malik can be interesting for Archer, but I mostly like him for his Reaction that lets you gain Action tokens, not necessarily for gaining a Development.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -8510,6 +10068,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Medical Diagnostic Hat can be beneficial if you’ve found some Alien cards.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -8540,6 +10112,20 @@
   ],
   "medusan-vessel": [
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Medusan Vessel is best for Archer if you decide to rely on the Alien/Hoshi/Universal Translator strategy. If not, it has the general benefit of the Telepath scan.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -8569,6 +10155,20 @@
    }
   ],
   "mekleth": [
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Mek’leth is really a multiplayer game card more than a solo game card, but either way there’s limited benefit for Archer.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "five-year-mission.html",
     "count": 1,
@@ -8672,6 +10272,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Mirok won’t work unless you have a card with cloak. And you’re not so cargo focused that the Reaction makes sense. However, he scores well for Research focus.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-allies.html",
     "count": 1,
     "hits": [
@@ -8706,6 +10320,20 @@
       "truncated": false,
       "mode": "anchor",
       "lore": true
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "I feel like, if anybody can handle the Moopsy, it’s Archer with just how many Person cards he has, but be careful because there’s way too many ways to log Person cards with Archer’s kit.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
      }
     ]
    },
@@ -8796,6 +10424,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Moriarty is most useful to Archer in a multiplayer game, and is otherwise not amazing but can be situationally great if you’ve managed to get a lot of Synthetic cards. Scanning for Hologram or Engineer isn’t a bad option for Archer either.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "picard.html",
     "count": 1,
     "hits": [
@@ -8839,6 +10481,20 @@
    }
   ],
   "new-federation-applicants": [
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "New Federation Applicants is fine for Archer, and he can gain a Glory when beaming the Incident, but it’s not particularly more interesting for him than anybody else.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "georgiou.html",
     "count": 1,
@@ -8906,6 +10562,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Nova Fleet is a great card, but the benefits don’t help Archer more than anyone else. Be sure to use it to gain an Ally card or junk an Ally for that Support operation.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "combining-markets.html",
     "count": 1,
     "hits": [
@@ -8964,6 +10634,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Omega Particle for resource generation is always a good one for Archer.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -9017,6 +10701,20 @@
       "snippet": "The impetus for the DS9 episode Trials and Tribble-ations, this time traveling Bajoran artifact is used by an elder Arne Darvin to try to stop Kirk from exposing him as a Klingon spy. The Orb has an Influence focus for points, as well as the Bajoran tag, both of which make it ideal for Sisko's deck. The play action doesn't cost an action token, and at the cost of taking an incident (time travel is perilous) you get",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Orb of Time can combine very well with a logging-heavy Archer strategy.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -9103,6 +10801,20 @@
       "snippet": "Most well-remembered for brokering the Treaty of Organia between the Klingons and the Federation, the Organians were a non-corporeal species that had evolved past the need for bodies. Hence, their Anomaly and Transcendent trait in the game. If your research level is four or higher, you can enlist a Reserve card for an action token. If it is six or higher, you can enlist a Development and then log the Organians. If",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Bolians, Bynars, Denobulans, Kelpiens, and Organians are all generally useful depending on the situation.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -9240,6 +10952,20 @@
   ],
   "orion-syndicate": [
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Orion Syndicate is nice for scoring, but I don’t know if Archer is going to consistently be able to make use of it since Ships can sometimes be limited.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -9326,6 +11052,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Pakled Freighter is helpful for Archer simply because it allows him guided access to junked cargo with traits he doesn’t have yet.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "five-year-mission.html",
     "count": 1,
     "hits": [
@@ -9392,6 +11132,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Parmen is always great and gives Archer a consistent way to gain some Latinum, and his Reaction is great for free playing cards.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -9431,6 +11185,20 @@
       "snippet": "My wife absolutely hates the Peanut Hamper episodes of Lower Decks, but I appreciate how it subverts the narrative of every Starfleet officer being dedicated to the ideals of self-sacrifice and heroism. I've been using this card a lot lately for the Dilithium gain play action, which also allows for a duty officer promotion. With Shran in particular it helps to be able to scan Cargo, and that Resupply action speeds",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Peanut Hamper is a great card for Archer because you need Dilithium badly.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -9530,6 +11298,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Petra Aberdeen isn’t anything special for Archer unless he really needs something in the junk.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -9561,6 +11343,28 @@
    }
   ],
   "phlox": [
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "phlox",
+      "heading": "Phlox",
+      "snippet": "One of only two non-human crewmembers of the NX-01 Enterprise, Dr. Phlox is the smiley Denobulan physician Captain Archer retains to help return an injured Klingon and prevent a potential war. While his medicine is not quite as advanced as simple hyposprays, he has a zoo full of animals in his sickbay that he can utilize for a variety of medical remedies. He notably has three wives (one of whom is quite smitten with",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "phlox",
+      "heading": "Phlox",
+      "snippet": "Dr. Phlox has two Play Actions, the first of which simply returns an Incident from your hand. The second requires six Research and allows you to return ANY number of Incidents from your hand and an additional Incident from your discard pile, and then you must beam Phlox to a deployed Ship, if able. That “if able” means that you can still play this if you have no Ships deployed. Between Phlox and Hoshi, there’s good",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "persons.html",
     "count": 1,
@@ -10198,6 +12002,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Picard: Archer’s kit is quite a bit more complex than Picard’s, but you can do a little bit to slow him down. He has the same number of starting Ships as you, so make sure you keep pace or stay ahead of him. Worf is all about taking out Away Teams so you’ll need to be willing to control Locations with Ships. You probably don’t want to worry too much about messing with Picard’s game, rather, you need to keep your",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -10349,6 +12167,20 @@
       "snippet": "One of the most straightforward cargo cards is also one of the best, in my opinion. With the useful Engineer tag, you can free play and spend three Dilithium to gain an action token. Tremendous utility, considering how late game Dilithium can often be plentiful. You also get a Military Focus for endgame scoring.",
       "truncated": false,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Plasma Manifold is probably too expensive for Archer in most circumstances, as three Dilithium is a steep cost for an action considering his economy.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -10510,6 +12342,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Protocol 12 is pretty edge case for Archer, because he won’t have more than Phlox in play at any given time, so the Play Action isn’t that great and you don’t really need to take an Incident and log a card just to gain one military.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -10569,6 +12415,20 @@
    }
   ],
   "rebner-rebner": [
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "to-boldly-go",
+      "heading": "To Boldly Go",
+      "snippet": "Rebner: I would use T’Pol almost exclusively to Scan for Military skills. It won’t stop Rebner from getting up his track eventually, but it might slow him down. His ships can be nasty so build a fleet to keep up. Try not to junk Ships or Cargo when you can since he can get those out of the junk. And when you see a Military focus scoring, get it. Everyone should do this, but Archer might be able to benefit more than",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "combining-markets.html",
     "count": 1,
@@ -10800,6 +12660,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Red Squadron Is a pretty great card for Archer since there’s so much flexibility with finding Starfleet cards in your Reserve.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -10848,6 +12722,28 @@
       "truncated": false,
       "mode": "anchor",
       "lore": true
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "malcolm-reed",
+      "heading": "Malcolm Reed",
+      "snippet": "Malcolm Reed has the Security and Ops traits, along with the obligatory Human, Starfleet, and NX-01. I love the resupply if you have Tucker in play, because it’s very thematic. The Reaction will be useful most of the game as ships are constantly coming and going, and the flexibility to send more Away Teams or find a Weapon is great. His Play Action is weaker for Archer. It gives you Military advancement of one plus",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "archer-s-reserve-deck-strategy",
+      "heading": "Archer’s Reserve Deck Strategy",
+      "snippet": "The other big issue is how often to send cards from your Available and Reserve decks to Earth. My general position is that you should be trying to send cards to Earth every turn. It’s the functional equivalent of logging them, and you can’t enlist Admiral Forrest without four cards there. We will talk more about your strategy with Earth at the end of the guide, but while you’re working through the Reserves, you’re",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
      }
     ]
    },
@@ -10940,6 +12836,20 @@
   ],
   "riker-proximity-blast": [
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "second-contact",
+      "heading": "Second Contact",
+      "snippet": "Riker: Riker’s is another deck that can be dangerous if you let it play for too long. The U.S.S. Zheng He and Proximity Blast will mess with you. But Riker takes awhile to get up and running, which is your best advantage. Play a relatively head-down game to start and you won’t have too much trouble. Just make sure to scan for Research and Military skills early on to mess with his momentum.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -10956,6 +12866,20 @@
   ],
   "riker-uss-zheng-he": [
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "second-contact",
+      "heading": "Second Contact",
+      "snippet": "Riker: Riker’s is another deck that can be dangerous if you let it play for too long. The U.S.S. Zheng He and Proximity Blast will mess with you. But Riker takes awhile to get up and running, which is your best advantage. Play a relatively head-down game to start and you won’t have too much trouble. Just make sure to scan for Research and Military skills early on to mess with his momentum.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -10971,6 +12895,20 @@
    }
   ],
   "ris-talvath": [
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The R.I.S. Talvath gives Archer another source for Dilithium gain, and Reed can benefit from the Romulan trait (and you can maybe scan using Soval and the Scientist trait).",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "georgiou.html",
     "count": 1,
@@ -11060,6 +12998,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "I really like Rillak for her traits more than her Incident management (you have ways of dealing with that already), but her Reaction combined with Inspire is great. Riva is fine, but mostly just for scoring and deck management.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "burnham.html",
     "count": 1,
     "hits": [
@@ -11120,6 +13072,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Sakonna actually can work well for Archer, especially if you’ve gotten the Xindi-Reptilian Battleship and you have a lot of weapons out and about.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -11154,6 +13120,28 @@
       "truncated": false,
       "mode": "anchor",
       "lore": true
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Salt Vampires would normally be a good choice, but it feels to me like you will be artificially reducing your cards in your Staging Area which will reduce your options for beaming to Earth.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "promos",
+      "heading": "Promos",
+      "snippet": "U.S.S. Cabot is a fine ship, and grabbing some Creature cards from the Cargo deck makes this a great way to increase your hand with Porthos and at least one other Creature. You can scan for Salt Vampires too.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
      }
     ]
    },
@@ -11232,6 +13220,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Sarina Douglas is great for everyone for her skills alone, and Archer is no exception.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -11279,6 +13281,20 @@
       "snippet": "An Alien Beverage, it naturally allows you can spend an action token and two Latinum to scan two from the Person deck, including from the junk, then junk a card. As a reminder, scanning from the junk for suits means you look at the scanned cards, the face-up market card, and the entirety of the junk, then make your choice. Saurian Brandy also has a free play action at five influence that lets you gain a Latinum for",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Saurian Brandy is Archer’s best option for Latinum generation, and can help him grab some more Person cards.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -11572,6 +13588,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Sela: Forget the Neutral Zone, it’s not going to happen for you. You may want to approach this deck the same way you approach Koloth: speed through your Developments via major logging strategies. Use Automated Repair Station and anything else you can get your hands on to log your deck. That being said, you can still make sure to get some Attack and Weapon cards and try to at least make Sela’s life a little",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "encounters-incidents.html",
     "count": 1,
     "hits": [
@@ -11784,6 +13814,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Sela: Forget the Neutral Zone, it’s not going to happen for you. You may want to approach this deck the same way you approach Koloth: speed through your Developments via major logging strategies. Use Automated Repair Station and anything else you can get your hands on to log your deck. That being said, you can still make sure to get some Attack and Weapon cards and try to at least make Sela’s life a little",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -11965,6 +14009,20 @@
       "snippet": "EDIT: it was pointed out to me that you can use Strange New Worlds on this card and the beamed ship counts as the necessary ship. That means you're not only using this encounter to get another encounter, but it's much easier to do so and you don't have to bother dismissing a ship because you beamed one there in the first place. Super convenient.",
       "truncated": false,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Sha Ka Ree has some good traits and scoring, and is a good Strange New Worlds candidate for Archer if you already have those traits in play.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -12982,6 +15040,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "If you’ve been logging a lot of cards to keep the deck thin, Soji Asha can be a great duty officer for card draw purposes and Archer’s a decent captain to take advantage of that.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "solum": [
@@ -13015,6 +15087,20 @@
    }
   ],
   "sona-battlecruiser": [
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The Son’a Battlecruiser has a six Military requirement and Archer should also be able to obtain it during the game, though possibly not early enough to make good use of Dilithium stealing.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "georgiou.html",
     "count": 1,
@@ -13352,6 +15438,28 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 19,
+    "hits": [
+     {
+      "anchor": "missions",
+      "heading": "Missions",
+      "snippet": "Archer’s Advanced side gives you four points for History With Every Light-Year in addition to the Reward. His second mission is Coalition of Planets, referencing his founding of the United Federation of Planets that we just barely get to see at the end of the series. It requires having an Andorian, Vulcan, and Tellarite at the same controlled Location and a Communication trait in play. You have an Andorian",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Archer has two plus (2+) away teams along with the NX-01, Pilot, Human, and Starfleet traits. The “+” there is due to both Commander Shran and Ambassador Soval, who give you more Away Teams when you enlist them from your developments (because you get access to the assistance of your allies). Archer scores at Endgame one point for every three unique traits you have in play, which means you start with points for the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 3,
     "hits": [
@@ -13467,6 +15575,20 @@
       "snippet": "T'Pol gets a Research skill (two down, three to go for your first mission) and the Vulcan, Starfleet, Scientist, and Telepath traits. Thematically, I find the Telepath trait interesting as it’s unclear to me if she’s naturally telepathic (as many if not most Vulcans are, per the Voyager episode Counterpoint VOY: 5x10, where the Devore hunt the telepaths in their space, including Voyager’s Vulcans). Anyway, she has a",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "archer-tpol",
+      "heading": "T’Pol (Person)",
+      "snippet": "If you’ve read my Soval guide, this card is going to be very familiar. Nearly identical even. T’Pol has a Research skill, and identical traits to Sub-Commander T’Pol (Vulcan, Telepath, Scientist, and Starfleet) while also gaining the NX-01 trait. She has an identical Resupply (gain a Dilithium or spend one to gain a Research), and an identical Activation (Discard a Human/Engineer to draw a Cargo/Directive from your",
+      "truncated": true,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -13666,6 +15788,20 @@
   ],
   "species-10-c": [
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Species 10-C could possibly be used with Hoshi/Universal Translator, and finding cards is great (even though it excludes his Reserve), but I don’t know that it’s as powerful as it could be. It does count as an Ally if you have it logged before playing Founding the Federation.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -13732,6 +15868,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Stone of Gol works well with your Telepaths, making it a little easier to benefit from the second play action.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -13784,28 +15934,6 @@
     ]
    },
    {
-    "guide": "kirk.html",
-    "count": 5,
-    "hits": [
-     {
-      "anchor": "kirk-s-available-cards",
-      "heading": "Kirk’s Available Cards",
-      "snippet": "Kirk has 10 Available cards: three Person cards, five Directives, one Cargo, and one Incident. All five Directives are familiar, including Utilize, Set a Course, Maximum Warp, Recruit, and Strange New Worlds. It’s great that Kirk has early access to Strange New Worlds to attempt an early Encounter, and he gets quite a bit of free warp capabilities and card draw from Maximum Warp and Set a Course. You also have",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     },
-     {
-      "anchor": "kirk-s-starting-hand-strategies",
-      "heading": "Kirk’s Starting Hand Strategies",
-      "snippet": "Kirk starts out with some of the best card-draw options in the game. Between Set a Course and Maximum Warp, you can potentially see a total of 3 additional cards in your deck. You also have the potential to use Subspace Phenomenon to discard Spock and then draw two cards and discard one, which if you’re keeping track, is your whole starting deck. Let’s game that out for a second, and I'll note that the first time I",
-      "truncated": true,
-      "mode": "text",
-      "lore": false
-     }
-    ]
-   },
-   {
     "guide": "burnham.html",
     "count": 1,
     "hits": [
@@ -13838,6 +15966,20 @@
       "heading": "Starting Hand Strategies",
       "snippet": "Alternative Duty Officer recommendations are limited. As indicated, Booker, Stamets and Owosekun aren't great early options for Duty Officer. Saru is far more useful for his Play action and you don't really have a way to get to two Influence without Detmer as Duty Officer, which means you can't use Saru. Tilly is an option, specifically if you plan to use Booker's action to gain a Person or Saru's action to gain",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Sukal and Talok are nothing special for Archer, but remain good cards to have.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -13930,6 +16072,28 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 3,
+    "hits": [
+     {
+      "anchor": null,
+      "heading": "Introduction",
+      "snippet": "It’s time for my Strategy guide for Jonathan Archer. I made a point of watching the entirety of Enterprise last year once we learned that Archer was going to be the third Starfleet captain in To Boldly Go. I was not disappointed. The series starts with a dynamic opening two-parter where Archer has to assemble the crew of the first warp-5 Starfleet vessel for a mission to return a Klingon to Qo'noS and prevent the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "missions",
+      "heading": "Missions",
+      "snippet": "Archer’s third mission is called Temporal Cold War, driven by Agent Daniels (Kovich?) and his fight against the Suliban or the Sphere Builders, depending on the episode. It requires five different Species traits (excluding Human, though cards with Human and another Species will still count for the other species), two Time Travel traits, and an Incident in play. Your reward is two points, gaining an Action Token, and",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "five-year-mission.html",
     "count": 1,
     "hits": [
@@ -14005,6 +16169,20 @@
       "snippet": "Sehlat is a Vulcan native creature — a kind of Vulcan sabre-tooth bear — that also appears in Enterprise. I like the Creature tag and the fact that this card has no action costs. There are three different actions here, the first being finding a Vulcan and forcing your opponent to discard a Person card. Pretty useful. The second is a Vulcan free-play, which is also useful if you have one. Finally, you can promote a",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Tachyon Detection Grid Is fine for Archer, but is really more about the Captain he’s facing.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -14156,6 +16334,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Sukal and Talok are nothing special for Archer, but remain good cards to have.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "sela.html",
     "count": 1,
     "hits": [
@@ -14268,6 +16460,28 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 3,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Tellarites are great, and since Archer’s already looking for one, he should look for as many of them as possible.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "to-boldly-go",
+      "heading": "To Boldly Go",
+      "snippet": "Georgiou: Georgiou might present trouble for you early on in the Neutral Zone, which is where building a fleet of Ships can come in handy. You don’t want to get into a competition for every location, try to let her have one and you work on controlling one yourself. When your fleet is big enough, shift to preventing her from getting the Advanced Locations. It’s usually a pretty quick game against an experienced",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 2,
     "hits": [
@@ -14348,6 +16562,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Tevrin Krit is fine but has the Tellarite traits, which comes in handy.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "five-year-mission.html",
     "count": 1,
     "hits": [
@@ -14414,6 +16642,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "You can scan for Tysess, Thelev, and Va’al Trask using Shran, and Archer can use all of them with varying degrees of effectiveness.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "tholians": [
@@ -14427,6 +16669,20 @@
       "snippet": "An insectoid-like species from the TOS episode The Tholian Web, they're mostly framed as adversaries who are also key players in the Mirror universe episode of Enterprise (\"In a Mirror, Darkly\"). In addition to an Alien trait, they have a play action costing an action token. You may draw a card, then gain a Latinum and two Dilithium for each controlled location you have in play. This can be fantastic, especially if",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Tholians is good for pretty much anybody, so the question is how many Locations Archer can secure before using it, keeping in mind the need to use Strange New Worlds. I would say if you can trigger it with three Locations in your tableau, you’re doing pretty good and you have most of what you need for enlisting.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -14534,6 +16790,28 @@
   ],
   "travis-mayweather": [
    {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "travis-mayweather",
+      "heading": "Travis Mayweather",
+      "snippet": "Bright-eyed ensign and helmsman of the NX-01 Enterprise, Mayweather grew up on the Horizon, a long-haul transport in the early days of human space exploration. He was the helmsman of the NX-01 Enterprise and piloted Shuttlecrafts on many, many away team missions (and he was constantly hurting himself during athletic recreation on alien planets).",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "travis-mayweather",
+      "heading": "Travis Mayweather",
+      "snippet": "Mayweather’s free play action requires you to select a Ship and warp it, then you may spend two Dilithium to send an Away Team to a Location, then you may exhaust Archer to send an Away Team to the same location. While this is generally useful for all captains, it’s slightly worse for Captain Archer because you often have to make the decision to exhaust Captain Archer during his resupply in order to gain resources",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-persons.html",
     "count": 2,
     "hits": [
@@ -14602,6 +16880,20 @@
       "heading": "Arne Darvin (Person)",
       "snippet": "Is that Barry Waddle? Nope, it's Klingon Intelligence agent Darvin from the Trouble with Tribbles (TOS). He has a variety of traits, including Human and Klingon species traits, the Attack trait, and Spy trait. He has two Play Actions, the first of which gives him a Dilithium and steals a Dilithium. The Second requires four Influence and forces your opponent to dismiss a duty officer. You then take an Incident, gain",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Same for Tribbles, which are desirable if you’re attacking your opponent with Klingon Duty Officers.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -14746,6 +17038,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Type III Disruptor Pistols is very circumstantial, and is probably not worth it for Archer as he won’t necessarily have consistent use for having Klingon, Romulan, or Breen cards in his deck.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "koloth.html",
     "count": 1,
     "hits": [
@@ -14761,6 +17067,20 @@
    }
   ],
   "unimatrix-zero": [
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Unimatrix Zero is probably best due to the scoring, but there aren’t any Borg in the 22nd Century (or are there?).",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "georgiou.html",
     "count": 1,
@@ -14828,6 +17148,28 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 4,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Universal Translator is great in coordination with Hoshi, and can be found by Hoshi. You might be able to get the Encounter too (I haven’t had it happen in a game yet, but it’s quite feasible with Hoshi).",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Medusan Vessel is best for Archer if you decide to rely on the Alien/Hoshi/Universal Translator strategy. If not, it has the general benefit of the Telepath scan.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 2,
     "hits": [
@@ -14889,6 +17231,28 @@
       "snippet": "There are too many examples of unstable wormholes to know for sure which one this is, but one thing's for sure: how is this cargo? How does one transport an unstable wormhole? I guess it could be small and isolated. Anyway, Unstable Wormhole has two actions. The free one allows you to look at the top two location or encounter cards and put them on the top or bottom of the deck, then draw a card. I like this for",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "archer-reach-any-star",
+      "heading": "Reach Any Star (Directive)",
+      "snippet": "…Except that the second Play Action lets you take an Incident to draw the top Location and take control of it, followed by logging Reach Any Star. Which is also pretty enticing, especially when you need a planet for Strange New Worlds or simply want to risk some additional tableau benefits sight unseen (Unstable Wormhole can help here too). Reach Any Star is super versatile.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Unstable Wormhole is great for everybody, and Archer should be able to get to six Influence even if that’s not your best track in the game.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -15004,6 +17368,20 @@
       "heading": "Notable Market Cards",
       "snippet": "There really aren't that many bad ships with Koloth. While you might not score high for the Enterprise C or the Pasteur, their abilities benefit you significantly like most other captains. The Son'a Battlecruiser and D'Kty Cruiser and Xindi-Reptilian Battleship all have synergies with Koloth and the Military track or scoring. Even getting Holographic Drone Ship just to beam it and use it for your second mission",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Enterprise-C is the archetype Time Travel - Recall Ship so it’s great for everyone, and beaming two cards in one turn is pretty awesome.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -15138,6 +17516,20 @@
   ],
   "vaal-trask": [
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "You can scan for Tysess, Thelev, and Va’al Trask using Shran, and Archer can use all of them with varying degrees of effectiveness.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -15153,6 +17545,20 @@
    }
   ],
   "vadics-splinter-group": [
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Vadic’s Splinter Group is so situationally specific it’s hard to speculate, but you’ll likely have a Person available so you won’t have to take an Incident (unless you’re not worried about that).",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "georgiou.html",
     "count": 1,
@@ -15227,6 +17633,20 @@
    }
   ],
   "vger": [
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "V’Ger, Koala and the Guardian of Forever nearly always have general applicability.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "encounters-incidents.html",
     "count": 1,
@@ -15336,6 +17756,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Finally, Vice Admiral Pasalk is a fine card for any Starfleet Captain, even if there’s not that much unique benefit for Archer.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -15388,6 +17822,20 @@
     ]
    },
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Vidiians can be super useful especially if you’re willing to part with Persons in your Reserve.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -15417,6 +17865,20 @@
    }
   ],
   "vorcha-attack-cruiser": [
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Vor’Cha Attack Cruiser will provide Archer more Away Team placement, but again, he needs to have enlisted Soval or Shran to take full advantage.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "georgiou.html",
     "count": 1,
@@ -15492,6 +17954,20 @@
       "heading": "Sisko",
       "snippet": "Sisko is pretty general in what you can reinforce. On a win you can reinforce any Anomaly or Scientist card you've nabbed, which has some great options (Forced Singularity, Unstable Wormhole, Voth Research Vessel, and D'kyr Cruiser, for example). On a loss, you have a ton of market flexibility, and can reinforce anything but Ships. His alternative boosts are also straightforward, with the choice of Influence (win",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Voth Research Vessel is solid for Archer and you should be able to get the Encounter.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -15586,6 +18062,20 @@
   ],
   "xindi-aquatic-cruiser": [
    {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Xindi-Aquatic Cruiser is a must get for the trait, and Archer really benefits from the skills and ability to free play beamed cards.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -15641,6 +18131,20 @@
       "snippet": "I absolutely love finding and getting the father of warp travel. Cochrane is a consistent 3 card draw at the cost of an action token. Making sure you have one or two cards in your deck that give more action tokens makes this a no-brainer, as you'll have extra cards for beaming to ships, extra opportunities for combos, and you'll move through your deck quicker. His activation is also great, as it just requires you to",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Zephram (Zefram) Cochrane is always great for card draw, and Archer’s deck is so small to start that an early Cochrane can be really good for your cycle-game. His Encounter is achievable but Dilithium is scarce.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]

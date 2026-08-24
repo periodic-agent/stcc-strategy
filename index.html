@@ -276,10 +276,8 @@
   .scanner-entry .entry-sub { color: var(--muted); }
   .gray-box:hover:not(.soon) { border-color: var(--muted); }
 
-  /* ── Archer tile: guide pending, tool live ── */
-  .entry.pending { cursor: default; }
-  .entry.pending .entry-name,
-  .entry.pending .entry-sub { opacity: 0.4; }
+  /* ── Archer tile: guide + endgame scoring tool (two links, no nesting) ── */
+  .tile-link { display: block; text-decoration: none; color: inherit; }
   .eg-full {
     display: flex;
     align-items: center;
@@ -346,7 +344,7 @@
   <h1 class="hero-title">Star Trek: Captain's Chair<br><span>Compendium</span></h1>
 
   <div class="hero-note">Guides by Matthew McCue (mdmccu2) · Website by Periodic_agent</div>
-  <div class="hero-date">Last updated 10 Aug 2026</div>
+  <div class="hero-date">Last updated 24 Aug 2026</div>
 </header>
 
 <main class="toc">
@@ -479,9 +477,12 @@
       <div class="entry-sub">Starfleet · Complexity 4/10</div>
     </a>
 
-    <div class="entry red-box pending" data-faction="starfleet">
-      <div class="entry-name">Archer</div>
-      <div class="entry-sub">Starfleet · Complexity 6/10</div>
+    <div class="entry red-box has-video" data-faction="starfleet">
+      <a href="archer.html" class="tile-link">
+        <span class="entry-badge badge-video">▶</span>
+        <div class="entry-name">Archer</div>
+        <div class="entry-sub">Starfleet · Complexity 6/10</div>
+      </a>
       <a class="eg-full" href="archer-scoring.html"><span class="kw">ENDGAME:</span><span class="rest">scoring tool</span><span class="arr">&#8594;</span></a>
     </div>
 

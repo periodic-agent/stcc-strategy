@@ -1,0 +1,117 @@
+{
+  "slug": "archer",
+  "box": "tbg",
+  "page_title": "Archer",
+  "title_html": "Jonathan <span>Archer</span>",
+  "description": "Jonathan Archer strategy guide for Star Trek: Captain's Chair — To Boldly Go: captain board, missions, available cards, reserve and development decks, market picks and captain match-ups. By Matthew McCue.",
+  "posted": "24 Aug 2026",
+  "tags": [
+    "Starfleet",
+    "Human",
+    "Complexity 6/10"
+  ],
+  "og_image": "img/box2/archer-jonathan-archer.jpg",
+  "image_names": {
+    "Archer Captain Card": "img/box2/archer-jonathan-archer.jpg",
+    "Earth Status": "img/box2/archer-earth.jpg",
+    "NX-01 Enterprise": "img/box2/archer-nx-01-enterprise.jpg",
+    "Analyze": "img/box2/archer-analyze.jpg",
+    "Recruit": "img/box2/archer-recruit.jpg",
+    "Trip Tucker III": "img/box2/archer-trip-tucker-iii.jpg",
+    "Shuttlepod 1": "img/box2/archer-shuttlepod-1.jpg",
+    "Strength of the Soul": "img/box2/archer-strength-of-the-soul.jpg",
+    "Faith of the Heart": "img/box2/archer-faith-of-the-heart.jpg",
+    "First Contact": "img/box2/archer-first-contact.jpg",
+    "Inspire": "img/box2/archer-inspire.jpg",
+    "Strange New Worlds": "img/box2/archer-strange-new-worlds.jpg",
+    "Reach Any Star": "img/box2/archer-reach-any-star.jpg",
+    "T'Pol": "img/box2/archer-tpol.jpg",
+    "Major Hayes": "img/box2/archer-major-hayes-maco.jpg",
+    "Porthos": "img/box2/archer-porthos.jpg",
+    "Hoshi Sato (Archer Guide)": "img/box2/hoshi-sato.jpg",
+    "Malcolm Reed (Archer Guide)": "img/box2/malcolm-reed.jpg",
+    "Travis Mayweather (Archer Guide)": "img/box2/travis-mayweather.jpg",
+    "Phlox": "img/box2/phlox.jpg",
+    "Admiral F": "img/box2/archer-admiral-forrest.jpg",
+    "Agent Daniels": "img/box2/archer-agent-daniels.jpg",
+    "Ambassador Soval": "img/box2/archer-ambassador-soval.jpg",
+    "Commander Shran": "img/box2/archer-commander-shran.jpg",
+    "Founding the Federation": "img/box2/archer-founding-the-federation.jpg",
+    "Xindi Council": "img/box2/archer-xindi-council.jpg",
+    "Automated Repair Station": "img/box2/archer-automated-repair-station.jpg"
+  },
+  "board_alts": [
+    "Archer Basic Board",
+    "Archer Advanced Board"
+  ],
+  "insert_h2": [
+    {
+      "title": "Missions",
+      "before": "Archer’s player board’s basic side track multipliers"
+    },
+    {
+      "title": "Captain Card & Starting Components",
+      "before": "Archer has two plus (2+) away teams"
+    }
+  ],
+  "cut": [
+    "It’s been a long road… for preorders",
+    "It’s been a long time… but they’re shipped",
+    "And To Boldly Go hits the table at last",
+    "I will sleeve each guy",
+    "And I’m not gonna play other games no more",
+    "No, they're just not on my mind",
+    "'Cause I got this game on my shelf",
+    "I'm goin' where my box will lead me",
+    "I've got faith to believe",
+    "Future waves are happening",
+    "I've got strength of the sleeves",
+    "And no one's going to bend while shufflin",
+    "I can reach Paan Mokar",
+    "I've got games (If you don’t have games",
+    "Click add in your cart",
+    "For those of you who actually read that intro",
+    "I hope you enjoyed this strategy guide for Captain Jonathan Archer"
+  ],
+  "lore": [],
+  "no_lore": [],
+  "toc_labels": {
+    "Archer’s Available/Discarded Cards": "Available/Discarded Cards",
+    "Archer’s Starting Hand Strategies": "Starting Hand Strategies",
+    "Archer’s Reserve Cards": "Reserve Cards",
+    "Archer’s Reserve Deck Strategy": "Reserve Deck Strategy",
+    "Archer’s Development Cards": "Development Cards",
+    "Archer’s Development Strategy": "Development Strategy"
+  },
+  "videos": [
+    {
+      "url": "https://youtu.be/BAHNWO2Yuuw",
+      "label": "Archer vs Soval",
+      "sub": "Two-player · Gaming Rules!"
+    }
+  ],
+  "video_intro": "Playthrough by Paul Grogan (Gaming Rules!) featuring Archer:",
+  "replace": [],
+  "h3_ids": {
+    "”Trip” Tucker III (Person)": "archer-trip-tucker-iii",
+    "Shuttlepod 1 (Ship)": "archer-shuttlepod-1",
+    "Strength of the Soul (Directive)": "archer-strength-of-the-soul",
+    "Faith of the Heart (Directive)": "archer-faith-of-the-heart",
+    "Reach Any Star (Directive)": "archer-reach-any-star",
+    "T’Pol (Person)": "archer-tpol",
+    "Major Hayes, MACO (Person)": "archer-major-hayes-maco",
+    "Porthos (Cargo)": "archer-porthos",
+    "Hoshi Sato": "hoshi-sato",
+    "Malcolm Reed": "malcolm-reed",
+    "Travis Mayweather": "travis-mayweather",
+    "Phlox": "phlox",
+    "Admiral Forrest (Person) (Dev Cost Have 4+ Cards beamed to Earth)": "archer-admiral-forrest",
+    "Agent Daniels (Person) (Dev Cost 3 Dilithium and have 2+ Xindi in play)": "archer-agent-daniels",
+    "Ambassador Soval (Person) (Dev Cost 3 Dilithium and exhaust your Captain": "archer-ambassador-soval",
+    "Commander Shran (Person) (Dev Cost 2 Dilithium and 2 Latinum)": "archer-commander-shran",
+    "Founding the Federation (Directive) (Dev Cost 1 Dilithium, 1 Latinum, and have 5 Different Species logged)": "archer-founding-the-federation",
+    "Xindi Council (Ally) (Dev Cost: Have an Incident and an Encounter in play)": "archer-xindi-council",
+    "Automated Repair Station (Location) (No Dev Cost": "archer-automated-repair-station"
+  },
+  "_note": "Import of 24 Aug 2026. Card images are NOT decoded from the capture: every card alt maps to an image already in img/box2 (explicit img/ path = reuse, see build_guide.py extract_images); only the two boards are decoded to img/guides/archer/. Corrections were sent to McCue before publication (first-pass list) and applied by him on BGG, so replace is empty. After shipping, archer.html is the source of truth (WORKFLOW Rule 1c)."
+}
