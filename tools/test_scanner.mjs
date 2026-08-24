@@ -127,6 +127,15 @@ vm.runInContext(body + '\n' + epilogue, sandbox, {filename:'scanner'});
 await new Promise(r=>setTimeout(r,300));
 const api = sandbox.__api;
 
+// Snapshot of what init() left on screen, taken before this file touches any state.
+// A previous version of these tests applied an empty query first and so failed to notice
+// that the page still rendered three boxes on arrival.
+const ARRIVAL = {
+  boxes: [...api.activeBoxes],
+  view: api.viewMode,
+  grid: env.document.getElementById('deckGroups').innerHTML
+};
+
 function report(label){
   const shown = api.ALL_CARDS.filter(c=>api.cardMatches(c));
   const noimg = shown.filter(c=>!(c.imgBox && c.filename));
@@ -219,7 +228,14 @@ assert(typeof api.setView === 'function' && typeof api.clearAll === 'function',
   'inline-handler functions are reachable at global scope');
 
 // --- landing state ----------------------------------------------------------
-assert(api.viewMode === 'image', 'the scanner opens in Images view');
+// Checked BEFORE any applyQuery call in this file, so it reflects what init() left on screen:
+// the earlier version of this suite applied an empty query first and so missed a page that
+// still rendered all three boxes on arrival.
+assert(ARRIVAL.boxes.length === 0,
+  'init() leaves no box selected: the page really opens empty');
+assert(/Select a box, or start typing, to see cards/.test(ARRIVAL.grid),
+  'and the arrival hint is what init() rendered');
+assert(ARRIVAL.view === 'image', 'the scanner opens in Images view');
 assert(/id="btnImg"[^>]*>Images</.test(html) && /id="btnPill"[^>]*>Text</.test(html),
   'the toggle reads Images and Text');
 assert(/<button class="vtoggle active" id="btnImg"/.test(html),

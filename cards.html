@@ -636,7 +636,7 @@ let ALL_CARDS = [];   // resolved, deduplicated card list (filled by loadBoxes)
 // The "All" pill toggles between ALL_BOXES and DEFAULT_BOXES.
 const DEFAULT_BOXES = ['core','tbg','2nd'];
 const ALL_BOXES     = ['core','tbg','2nd','promo1','promo2'];
-let activeBoxes  = new Set(DEFAULT_BOXES);
+let activeBoxes  = new Set();   // empty bar, empty page; DEFAULT_BOXES is the fallback in applyQuery
 let activeDecks  = new Set();
 let activeSuits  = new Set();
 let activeTags   = new Set();
@@ -1067,7 +1067,7 @@ function applyQuery(text){
   kindText=q.kindText; negKindText=q.negKindText;
 }
 
-function currentQuery(){ return document.getElementById('searchInput').value; }
+function currentQuery(){ return document.getElementById('searchInput').value||''; }
 function tokenList(text){ return text.match(/-?(?:[A-Za-z]+:)?"[^"]*"|[^\s"]+/g)||[]; }
 function quoteVal(v){ return /\s/.test(v)?'"'+v+'"':v; }
 function tokenOf(kind,v){ return kind+':'+quoteVal(v); }
@@ -1736,11 +1736,12 @@ buildQueryVocab();
 document.getElementById('searchInput').addEventListener('input',e=>refreshFromQuery(e.target.value));
 const helpBtn=document.getElementById('queryHelpBtn');
 if(helpBtn) helpBtn.onclick=()=>document.getElementById('queryHelp').classList.toggle('open');
-// restore a shared/bookmarked query from the URL hash
+// Restore a shared/bookmarked query from the URL hash, otherwise apply the empty bar so the
+// rendered state always comes from the query, never from the initial variables.
 {const m=location.hash.match(/^#q=(.+)$/);
- if(m){const q=decodeURIComponent(m[1]);
-   document.getElementById('searchInput').value=q;
-   applyQuery(q); syncBoxPills(); syncFilterPills();}}
+ const q=m?decodeURIComponent(m[1]):'';
+ if(m) document.getElementById('searchInput').value=q;
+ applyQuery(q); syncBoxPills(); syncFilterPills();}
 
 
   render();
