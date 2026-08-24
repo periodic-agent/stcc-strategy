@@ -6058,7 +6058,7 @@
     "kind": "reaction",
     "action": null,
     "qual": null,
-    "text": "After discarding a Directive during y our Action Step, place 1 Dilithium / Latinum here."
+    "text": "After discarding a Directive during your Action Step, place 1 Dilithium / Latinum here."
    },
    {
     "kind": "passive",
@@ -6144,7 +6144,7 @@
     "kind": "cost",
     "action": null,
     "qual": "Cost",
-    "text": "1 Dilithium, 1 Latnium, have 5+ Difference Species logged."
+    "text": "1 Dilithium, 1 Latinum, have 5+ Different Species logged."
    },
    {
     "kind": "play",
@@ -8842,7 +8842,26 @@
   "other_traits": [],
   "filename": "khan-khan-noonien-singh.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Discard an Incident to draw 2 cards and discard one of them."
+   },
+   {
+    "kind": "passive",
+    "action": null,
+    "qual": null,
+    "text": "After your opponent returns an Incident discard a card to gain 1 Dilithium / Latinum."
+   },
+   {
+    "kind": "passive",
+    "action": null,
+    "qual": null,
+    "text": "You do not enlist when you cycle your deck."
+   }
+  ]
  },
  {
   "id": "khan-wrathful-khan",
@@ -8864,7 +8883,32 @@
   "other_traits": [],
   "filename": "khan-wrathful-khan.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "reaction",
+    "action": null,
+    "qual": null,
+    "text": "After your opponent returns an Incident, discard a card to gain 1 Dilithium / Latinum."
+   },
+   {
+    "kind": "passive",
+    "action": null,
+    "qual": null,
+    "text": "You do not enlist when you cycle your deck."
+   },
+   {
+    "kind": "passive",
+    "action": null,
+    "qual": null,
+    "text": "Ignore all Research Required / Influence Required / Military Required requirements."
+   },
+   {
+    "kind": "endgame",
+    "action": null,
+    "qual": null,
+    "text": "Score 1 for each of your Research Focus / Influence Focus / Military Focus. If you have all 12 traits marked, score 3 for each instead."
+   }
+  ]
  },
  {
   "id": "khan-ceti-alpha-v",
@@ -8881,7 +8925,14 @@
   "other_traits": [],
   "filename": "khan-ceti-alpha-v.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "passive",
+    "action": null,
+    "qual": null,
+    "text": "Increase your hand size by 1."
+   }
+  ]
  },
  {
   "id": "khan-devastated-ceti-alpha-v",
@@ -8902,7 +8953,32 @@
   ],
   "filename": "khan-devastated-ceti-alpha-v.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "control",
+    "action": null,
+    "qual": "Attack",
+    "text": "Your opponent takes an Incident. Send all of your Away Team here."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "If you have no Away Team here, draw a card."
+   },
+   {
+    "kind": "reaction",
+    "action": null,
+    "qual": null,
+    "text": "After putting an Augment into play, draw a card and you may enlist a Development."
+   },
+   {
+    "kind": "passive",
+    "action": null,
+    "qual": null,
+    "text": "After returning an Incident, refresh this card."
+   }
+  ]
  },
  {
   "id": "khan-ceti-alpha-vi",
@@ -8919,7 +8995,32 @@
   "other_traits": [],
   "filename": "khan-ceti-alpha-vi.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "resupply",
+    "action": null,
+    "qual": null,
+    "text": "If there are 4+ Dilithium here, gain all Dilithium here, flip Ceti Alpha V, and trigger Devastated Ceti Alpha V's control operation, then log this card."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Gain 1 Latinum."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Spend 1 Dilithium from this card, spend 1 Latinum, and take an Incident to take control of a secured Location."
+   },
+   {
+    "kind": "passive",
+    "action": null,
+    "qual": null,
+    "text": "After you cycle your deck, place 2 Dilithium here."
+   }
+  ]
  },
  {
   "id": "khan-hijacked-uss-reliant",
@@ -8939,7 +9040,38 @@
   "other_traits": [],
   "filename": "khan-hijacked-uss-reliant.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "3 Dilithium, have a Person with Mind Control in play."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Deploy this ship. If your opponent has at most 1 Ship deployed: send an Away Team to a Location and draw a card."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Spend 1 Dilithium to warp this ship."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Discard a card to beam a card here."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Promote a Person from your hand to Duty Officer."
+   }
+  ]
  },
  {
   "id": "khan-surprise-attack",
@@ -8958,7 +9090,26 @@
   ],
   "filename": "khan-surprise-attack.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "2 Dilithium, take an Incident."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free, Attack",
+    "text": "Spend 1 Dilithium to give your opponent an incident (from your hand)."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Spend 1 Dilithium to scan for either a Cloak or a Spy, then draw a card. Destroy this card."
+   }
+  ]
  },
  {
   "id": "khan-cpt-terrell",
@@ -8980,7 +9131,38 @@
   "other_traits": [],
   "filename": "khan-cpt-terrell.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "Take an Incident."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Draw 2 cards and discard 1 of them."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Enlist a Development, at no Dilithium / Latinum / Incident cost. Log this card."
+   },
+   {
+    "kind": "resupply",
+    "action": null,
+    "qual": null,
+    "text": "Gain 1 Dilithium."
+   },
+   {
+    "kind": "reaction",
+    "action": null,
+    "qual": null,
+    "text": "After taking an Incident, spend 1 Dilithium to send an Away Team to a Location where you have a Ship."
+   }
+  ]
  },
  {
   "id": "khan-cmdr-chekov",
@@ -9005,7 +9187,26 @@
   ],
   "filename": "khan-cmdr-chekov.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "Take an Incident."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action, Attack",
+    "text": "Discard the top card of your deck. Send an Away Team to a Location. If your opponent has at least one Away Team at the same Location, force them to discard a card."
+   },
+   {
+    "kind": "reaction",
+    "action": null,
+    "qual": null,
+    "text": "After warping a Ship to a neutral Location, discard a Person to send an Away Team to the same Location and gain 1 Glory."
+   }
+  ]
  },
  {
   "id": "khan-ceti-eel",
@@ -9027,7 +9228,26 @@
   ],
   "filename": "khan-ceti-eel.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "1 Dilithium, 1 Latinum"
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free, Attack",
+    "text": "Dismiss an opponent Duty Officer to send 2 Away Team to a neutral Location where either of you have a token, ignoring any opponent Ship. Put this card back in your Development pile. Your opponent may draw 2 cards."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Find any card and log the found card. You may return an Incident. Log this card."
+   }
+  ]
  },
  {
   "id": "khan-infiltrate",
@@ -9044,7 +9264,26 @@
   "other_traits": [],
   "filename": "khan-infiltrate.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "2 Latinum"
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "You may warp up to 3 of your Ship with Cloak."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Discard 2 cards and spend 1 Dilithium to gain a Person / Cargo / Ally."
+   }
+  ]
  },
  {
   "id": "khan-revenge-is-a-dish-best-served-cold",
@@ -9063,7 +9302,32 @@
   ],
   "filename": "khan-revenge-is-a-dish-best-served-cold.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "1 Latinum, have Marla McGivers logged."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action, Attack",
+    "text": "Gain 1 Glory. Force your opponent to find any card, and log it. You may select a card in their Discard pile and mark one trait of it."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free, Attack",
+    "text": "Discard an Augment to give this card and optionally an Incident to your opponent, and force them to log the card(s) given."
+   },
+   {
+    "kind": "special",
+    "action": null,
+    "qual": null,
+    "text": "During scoring, each of your Incident scores an additional -1."
+   }
+  ]
  },
  {
   "id": "khan-genesis-device",
@@ -9083,7 +9347,26 @@
   ],
   "filename": "khan-genesis-device.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "cost",
+    "action": null,
+    "qual": "Cost",
+    "text": "2 Dilithium, 1 Latinum, have no other cards in your Development pile."
+   },
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free, Attack",
+    "text": "Mark any one trait. Destroy a neutral Location. (No Glory compensation is given for removed tokens.) Deploy this card."
+   },
+   {
+    "kind": "endgame",
+    "action": null,
+    "qual": null,
+    "text": "Score the ? for all your completed Mission an additional time."
+   }
+  ]
  },
  {
   "id": "khan-vacated-regula-i",
@@ -9103,7 +9386,32 @@
   "other_traits": [],
   "filename": "khan-vacated-regula-i.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "If you have a Ship at a neutral Location, take control of this location."
+   },
+   {
+    "kind": "control",
+    "action": null,
+    "qual": null,
+    "text": "You may take an Incident to mark one trait of a card in the Junk pile."
+   },
+   {
+    "kind": "reaction",
+    "action": null,
+    "qual": null,
+    "text": "After putting a Scientist into play, return an Incident from your hand or Discard pile."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Take an Incident and destroy a card from your Development pile to gain 1 Glory."
+   }
+  ]
  },
  {
   "id": "khan-marla-mcgivers",
@@ -9124,7 +9432,26 @@
   "other_traits": [],
   "filename": "khan-marla-mcgivers.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Gain 1 Dilithium for each Starfleet you have in play. Gain 1 Dilithium for each controlled Location you have in play. You may put 2 cards on top of your deck to gain 1 Glory and promote this card to Duty Officer."
+   },
+   {
+    "kind": "cleanup",
+    "action": null,
+    "qual": null,
+    "text": "If Devastated Ceti Alpha V is exhausted, enlist Ceti Eel for free then log this card."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Refresh your Captain. You may discard a card to find an Augment."
+   }
+  ]
  },
  {
   "id": "khan-mutara-nebula",
@@ -9143,7 +9470,26 @@
   "other_traits": [],
   "filename": "khan-mutara-nebula.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Junk a card from the Market. If you have 7+ traits marked, gain a Ship from the Junk, otherwise discard 2 cards. Take control of this location."
+   },
+   {
+    "kind": "control",
+    "action": null,
+    "qual": null,
+    "text": "No effect."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Spend 1 Dilithium to warp a Ship from here, then send an Away Team to the Location you warped to."
+   }
+  ]
  },
  {
   "id": "khan-salvage",
@@ -9160,7 +9506,20 @@
   "other_traits": [],
   "filename": "khan-salvage.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Junk a card from the Market to draw a card."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Spend 1 Latinum to gain Person / Cargo / Ship / Ally from the Junk to your Discard pile."
+   }
+  ]
  },
  {
   "id": "khan-ss-botany-bay",
@@ -9179,7 +9538,32 @@
   "other_traits": [],
   "filename": "khan-ss-botany-bay.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Take an Incident to deploy this ship. You may promote a Person from your hand or Discard pile to Duty Officer. You may beam a Person here."
+   },
+   {
+    "kind": "passive",
+    "action": null,
+    "qual": null,
+    "text": "This ship cannot be warped."
+   },
+   {
+    "kind": "activation",
+    "action": null,
+    "qual": null,
+    "text": "Beam a Person here."
+   },
+   {
+    "kind": "activation",
+    "action": true,
+    "qual": "Action",
+    "text": "If there are 3+ Person beamed here, dismiss all of them to look at the top 2 Location, take control of one of them and return the other to the bottom of its deck. Log this card."
+   }
+  ]
  },
  {
   "id": "khan-wajahut",
@@ -9201,7 +9585,26 @@
   "other_traits": [],
   "filename": "khan-wajahut.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": false,
+    "qual": "Free",
+    "text": "Discard a card to draw a card from your Discard pile."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Send an Away Team to a neutral Location. If you have Ceti Alpha VI and Joachim in play, gain an Action. If you have a Communication in play, up to twice draw a card from your deck or Discard pile."
+   },
+   {
+    "kind": "reaction",
+    "action": null,
+    "qual": null,
+    "text": "After you take control of a Location, discard a card to either: gain an Action or spend an Action to enlist a Development and dismiss this card."
+   }
+  ]
  },
  {
   "id": "khan-joachim",
@@ -9223,7 +9626,26 @@
   "other_traits": [],
   "filename": "khan-joachim.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Take an Incident to gain a Person from the top of the deck."
+   },
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Send an Away Team to a neutral Location. If you have Ceti Alpha VI and Wajahut in play, gain an Action. If you have a Weapon or Security in play, up to twice draw a card from your deck or Discard pile."
+   },
+   {
+    "kind": "reaction",
+    "action": null,
+    "qual": null,
+    "text": "After deploying a Ship, discard a card to send an Away Team to a neutral Location."
+   }
+  ]
  },
  {
   "id": "khan-to-the-last-i-will-grapple-with-thee",
@@ -9243,7 +9665,20 @@
   ],
   "filename": "khan-to-the-last-i-will-grapple-with-thee.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action, Attack",
+    "text": "Reveal a card and put it on the top of your deck to put this card in your opponent's Discard pile. If the revealed card shares a non-Human trait with your opponent's Captain, gain 1 Glory and they may draw a card."
+   },
+   {
+    "kind": "surprise",
+    "action": null,
+    "qual": "Bot only",
+    "text": "Discard the top card of the Bot deck. Put this card in your Discard pile. Draw a card."
+   }
+  ]
  },
  {
   "id": "khan-from-hells-heart-i-stab-at-thee",
@@ -9263,7 +9698,20 @@
   ],
   "filename": "khan-from-hells-heart-i-stab-at-thee.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action, Attack",
+    "text": "Reveal a card and put it on the top of your deck to put this card in your opponent's Discard pile. If the revealed card shares a non-Human trait with your opponent's Captain, gain 1 Glory and they may draw a card."
+   },
+   {
+    "kind": "surprise",
+    "action": null,
+    "qual": "Bot only",
+    "text": "Discard the top card of the Bot deck. Put this card in your Discard pile. Draw a card."
+   }
+  ]
  },
  {
   "id": "khan-i-spit-my-last-breath-at-thee",
@@ -9283,7 +9731,20 @@
   ],
   "filename": "khan-i-spit-my-last-breath-at-thee.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action, Attack",
+    "text": "Reveal a card and put it on the top of your deck to put this card in your opponent's Discard pile. If the revealed card shares a non-Human trait with your opponent's Captain, gain 1 Glory and they may draw a card."
+   },
+   {
+    "kind": "surprise",
+    "action": null,
+    "qual": "Bot only",
+    "text": "Discard the top card of the Bot deck. Put this card in your Discard pile. Draw a card."
+   }
+  ]
  },
  {
   "id": "khan-two-dimensional-thinking",
@@ -9302,7 +9763,20 @@
   ],
   "filename": "khan-two-dimensional-thinking.jpg",
   "icons": [],
-  "strips": []
+  "strips": [
+   {
+    "kind": "play",
+    "action": true,
+    "qual": "Action",
+    "text": "Draw a card from your Discard pile. Your opponent may warp a Ship. If you have no Augment in play, you may free play an Incident. Return this card."
+   },
+   {
+    "kind": "surprise",
+    "action": null,
+    "qual": "Bot only",
+    "text": "You may warp a Ship. If Bot has Augment in play, return this card; otherwise continue resolution."
+   }
+  ]
  },
  {
   "id": "reinforce",

@@ -1642,13 +1642,13 @@
     "kind": "play",
     "action": true,
     "qual": "Action",
-    "text": "Discard a card to return this card. If the discarded card has Research draw 2 cards and discard one of them."
+    "text": "Discard a card to return this card. If the discarded card has Research Skill/ Research Focus draw 2 cards and discard one of them."
    },
    {
     "kind": "play",
     "action": true,
     "qual": "Action",
-    "text": "If you have a Time-Travel in play, return this card and draw 2 cards and discard one of them."
+    "text": "If you have a Time Travel in play, return this card and draw 2 cards and discard one of them."
    }
   ]
  },
@@ -1857,7 +1857,7 @@
     "kind": "play",
     "action": true,
     "qual": "Action",
-    "text": "You may draw a non-Lower Decker card fro your Discard pile. Spend 1 Dilithium to send an Away Team to a controlled Location. You may discard a Lower Decker to trigger that card's control operation."
+    "text": "You may draw a non-Lower Decker card from your Discard pile. Spend 1 Dilithium to send an Away Team to a controlled Location. You may discard a Lower Decker to trigger that card's control operation."
    },
    {
     "kind": "activation",
@@ -1893,7 +1893,7 @@
     "kind": "play",
     "action": false,
     "qual": "Free",
-    "text": "Spend all your remaining Actions (possibly none). For each Action spend this way, draw a card; then draw one additional card. Free play one of the draw cards."
+    "text": "Spend all your remaining Actions (possibly none). For each Action spent this way, draw a card; then draw one additional card. Free play one of the drawn cards."
    },
    {
     "kind": "support",
@@ -1947,7 +1947,7 @@
     "kind": "activation",
     "action": true,
     "qual": "Action",
-    "text": "Gain on one Specialty track for each matching Skill Icon you have in play (excluding beamed cards). If you gained 3+ Research / Influence / Military, dismiss this card."
+    "text": "Gain on one Specialty track (Research / Influence / Military) for each matching Skill Icon you have in play (excluding beamed cards). If you gained 3+ Research / Influence / Military, dismiss this card."
    }
   ]
  },
@@ -2042,7 +2042,7 @@
     "kind": "reaction",
     "action": null,
     "qual": null,
-    "text": "After you put a card with one of more Skill Icons into play (excluding beaming), gain 1 on that Specialty track matching one of those icons."
+    "text": "After you put a card with one or more Skill Icons into play (excluding beaming), gain 1 on the Specialty track matching one of those icons."
    }
   ]
  },
@@ -2076,13 +2076,13 @@
     "kind": "activation",
     "action": null,
     "qual": null,
-    "text": "For Every 2 Ship you have in play, draw a card (max 3 cards)."
+    "text": "For every 2 Ship you have in play, draw a card (max 3 cards)."
    },
    {
     "kind": "activation",
     "action": null,
     "qual": null,
-    "text": "Promote a Person from your have to Duty Officer."
+    "text": "Promote a Person from your hand to Duty Officer."
    }
   ]
  },
@@ -2497,7 +2497,7 @@
     "kind": "play",
     "action": true,
     "qual": "Action",
-    "text": "Free play an Incident. If you do, you may beam this card to a deployed ship to sand an Away Team to its Location."
+    "text": "Free play an Incident. If you do, you may beam this card to a deployed ship to send an Away Team to its Location."
    },
    {
     "kind": "play",
@@ -2572,7 +2572,7 @@
     "kind": "play",
     "action": true,
     "qual": "Action",
-    "text": "Discard a card to return this card. If the discarded card has Influence, gain 1 Latinum."
+    "text": "Discard a card to return this card. If the discarded card has Influence Skill/ Influence Focus, gain 1 Latinum."
    },
    {
     "kind": "play",
@@ -2604,7 +2604,7 @@
     "kind": "play",
     "action": false,
     "qual": "Free",
-    "text": "Discard a card to recall a non-Time Travel card from you Staging Area. Log a Time Travel from play (can be this card)."
+    "text": "Discard a card to recall a non-Time Travel card from you Staging Area. Log a Time Travel from in play (can be this card)."
    },
    {
     "kind": "play",
@@ -2717,7 +2717,7 @@
     "kind": "play",
     "action": true,
     "qual": "Action",
-    "text": "Select a controlled Location. If there is 1+ Away Team and 1+ Ship there, look at the top 2 Encounter. Take one fo them and return the other to the bottom of the its deck. Log the selected Location to gain 1 Research."
+    "text": "Select a controlled Location. If there is 1+ Away Team and 1+ Ship there, look at the top 2 Encounter. Take one of them and return the other to the bottom of its deck. Log the selected Location to gain 1 Research."
    }
   ]
  },
@@ -2849,7 +2849,7 @@
     "kind": "play",
     "action": true,
     "qual": "Action",
-    "text": "Log a card from your hand to gain 3 Dilithium and gain 1 Research / Influence / Military. If the logged card has Military Skill / Focus gain 1 (additional) Influence."
+    "text": "Log a card from your hand to gain 3 Dilithium and gain 1 Research / Influence / Military. If the logged card has Military Skill / Military Focus gain 1 (additional) Influence."
    },
    {
     "kind": "resupply",
@@ -2861,7 +2861,7 @@
     "kind": "activation",
     "action": null,
     "qual": null,
-    "text": "Discard a Research Skill / Focus to find any card, except in your Reserve deck."
+    "text": "Discard a Research Skill / Research Focus to find any card, except in your Reserve deck."
    }
   ]
  },
@@ -2954,7 +2954,7 @@
     "kind": "reaction",
     "action": null,
     "qual": null,
-    "text": "After discard a card with Military / Wild Skill during your action step, return an Incident from your hand or Discard pile."
+    "text": "After discard a card with Military Skill / Wild Skill during your Action step, return an Incident from your hand or Discard pile."
    }
   ]
  },
@@ -3829,7 +3829,7 @@
     "kind": "play",
     "action": true,
     "qual": "Action",
-    "text": "Select a controlled Location. If there is 1+ Away Team and 1+ Ship there, look at the top 2 Encounter. Take one fo them and return the other to the bottom of the its deck. Log the selected Location to gain 1 Research."
+    "text": "Select a controlled Location. If there is 1+ Away Team and 1+ Ship there, look at the top 2 Encounter. Take one of them and return the other to the bottom of its deck. Log the selected Location to gain 1 Research."
    }
   ]
  },

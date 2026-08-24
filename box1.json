@@ -273,7 +273,7 @@
     "kind": "play",
     "action": true,
     "qual": "Action",
-    "text": "Discard a card. If the Discarded card is a Weapon, gain a Ship. If it has Influence Skill, Points, Military Skill, Points, gain 2 Glory."
+    "text": "Discard a card. If the Discarded card is a Weapon, gain a Ship. If it has Influence Skill/Influence Focus/Military Skill/Military Focus, gain 2 Glory."
    },
    {
     "kind": "reaction",
