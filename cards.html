@@ -468,6 +468,12 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .stripchip.plain{padding-left:.38em;}
 .strip-pill{padding-left:.5rem;}
 .strip-pill.zero{opacity:.45;}
+.dupes-toggle{display:inline-flex;align-items:center;gap:.35rem;white-space:nowrap;
+  font-family:'Exo 2',sans-serif;font-size:.72rem;color:var(--muted);cursor:pointer;user-select:none;}
+.dupes-toggle input{accent-color:var(--blue);cursor:pointer;}
+.alsoin{font-family:'Exo 2',sans-serif;font-size:.6rem;color:var(--muted);line-height:1.3;}
+.card-entry .alsoin{margin:.25rem 0 0;}
+.card-img-entry .alsoin{padding:0 .4rem .3rem;}
 .strip-note{font-family:'Exo 2',sans-serif;font-size:.62rem;color:var(--muted);
   margin:.35rem 0 0;opacity:.85;}
 </style>
@@ -503,6 +509,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
       <button class="vtoggle" id="btnPill" onclick="setView('pill')">Text</button>
     </div>
     <button class="clear-btn" onclick="clearAll()">Reset</button>
+    <label class="dupes-toggle"><input type="checkbox" id="showDupes" checked onchange="setDupes(this.checked)"> Show duplicates</label>
     <span class="search-count" id="searchCount"></span>
   </div>
 
@@ -516,6 +523,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>deck:common</code><span>commons of every visible box</span></div>
     <div class="qh-row"><code>skill:military</code> · <code>focus:influence</code><span>icon search; also skill:any, skill:variable</span></div>
     <div class="qh-row"><code>box:promo1</code> · <code>box:all</code><span>promos in; empty bar = empty page</span></div>
+    <div class="qh-row"><code>dupes:off</code><span>one tile per card instead of one per printing</span></div>
     <div class="qh-row"><code>vp:4</code> · <code>vp&gt;=3</code><span>victory points, the number bottom-right; cards without a value never match</span></div>
     <div class="qh-row"><code>position:reserve</code> · <code>position:incident-deck</code><span>starting position; hyphens for spaces</span></div>
     <div class="qh-row"><code>strip:reaction</code> &middot; <code>strip:any</code><span>cards carrying that operation strip</span></div>
@@ -655,6 +663,9 @@ let activeVariants  = new Set();
 let negDecks=new Set(), negSuits=new Set(), negTags=new Set(), negSkills=new Set(), negNames=[];
 let negVp=[], negPositions=new Set(), negVariants=new Set();
 let viewMode     = "image";   // scans first; the rendered text is the second read
+// Duplicates across boxes are shown by default: one tile per printing, filed under the deck
+// group of the box it was printed in. `dupes:off` collapses each card to a single tile.
+let showDupes    = true;
 // --- strategy index -------------------------------------------------------
 // STRATEGY_COUNTS is card_id -> mention count, from the 8 KB companion file.
 // The 550 KB index with the actual passages is fetched only once a drawer is
@@ -710,7 +721,7 @@ function boxLabelFromKey(k){
 // ---- Resolution layer -------------------------------------------------------
 // Given the full pool of raw cards (all loaded boxes), produce ONE record per id,
 // carrying variant provenance, the boxes it appears in, copy count, and the chosen image.
-function resolveCards(rawPool){
+function resolveCards(rawPool, expand){
   // group by id
   const byId = {};
   rawPool.forEach(c=>{ (byId[c.id]=byId[c.id]||[]).push(c); });
@@ -719,33 +730,11 @@ function resolveCards(rawPool){
   Object.values(byId).forEach(group=>{
     // Choose the resolved text version:
     // if any printing is 'updated', take that; else take the earliest-box printing.
-    let chosen = group.find(c=>c.variant==='updated');
-    if(!chosen){
-      chosen = group.slice().sort((a,b)=>BOX_ORDER.indexOf(rawBoxKey(a))-BOX_ORDER.indexOf(rawBoxKey(b)))[0];
+    let resolved = group.find(c=>c.variant==='updated');
+    if(!resolved){
+      resolved = group.slice().sort((a,b)=>BOX_ORDER.indexOf(rawBoxKey(a))-BOX_ORDER.indexOf(rawBoxKey(b)))[0];
     }
     const boxes = [...new Set(group.map(rawBoxKey))];
-
-    // Image: only a printing whose TEXT matches the resolved version qualifies.
-    // - reprint/original: all printings share text -> any qualifies.
-    // - updated: only the printing(s) equal to `chosen` qualify.
-    // Rule (Jul 2026): every printing prefers its OWN scan. Printings in the
-    // currently selected boxes rank first (newest printing wins among them);
-    // printings outside the selection are fallback only, so browsing TBG shows
-    // the TBG scan of a reprint, not the Box 1 art. The old "Box 1 art wins"
-    // rule predates full reprint scan coverage and is retired.
-    const imgPool = FULL_BY_ID[chosen.id] || group;
-    let imgCandidates = (chosen.variant==='updated')
-      ? imgPool.filter(c=>c.variant==='updated')     // updated text: only updated printings qualify
-      : imgPool.filter(c=>c.variant!=='updated');    // base text: originals and reprints share it
-    const inGroup = new Set(group);
-    imgCandidates = imgCandidates.slice().sort((a,b)=>{
-      const ga = inGroup.has(a) ? 0 : 1, gb = inGroup.has(b) ? 0 : 1;
-      if(ga !== gb) return ga - gb;                                  // selected boxes first
-      return boxRank(rawBoxKey(b)) - boxRank(rawBoxKey(a));          // then newest printing
-    });
-    let chosenImg = imgCandidates.find(c=>c.filename && c.filename.trim());
-    const imgBox = chosenImg ? rawBoxKey(chosenImg) : null;
-    const imgFile = chosenImg ? chosenImg.filename : '';
 
     // Badge: does the group (across selected boxes) contain a duplicate or update printing?
     // 'update' takes precedence over 'duplicate'. Reads only the group's own variants --
@@ -754,38 +743,96 @@ function resolveCards(rawPool){
     if(group.some(c=>c.variant==='updated'))      badgeKind = 'update';
     else if(group.some(c=>c.variant==='reprint')) badgeKind = 'duplicate';
 
-    out.push({
-      id: chosen.id,
-      name: chosen.name,
-      suit: chosen.suit,
-      deck: chosen.source,                 // Common / captain / Promo
-      box: rawBoxKey(chosen),              // resolved primary box key
-      species: chosen.species_traits||[],
-      regular: chosen.regular_traits||[],
-      other: chosen.other_traits||[],
-      skills: normIcons(chosen.icons),
-      filename: imgFile,
-      imgBox: imgBox,
-      card_number: chosen.card_number || '',                      // which box folder the image lives in
-      boxes: boxes,                        // all boxes this id appears in
-      copies: group.length,               // physical printings across loaded boxes
-      variant: chosen.variant || 'original',
-      card_number: chosen.card_number || '',
-      // `vp` is the rulebook name; `glory` is the old field, still in the JSONs until the
-      // data side renames it. Read either, expose one.
-      vp: (() => { for (const pr of group) { const v = (pr.vp !== undefined && pr.vp !== null) ? pr.vp : pr.glory; if (v !== undefined && v !== null) return v; } return null; })(),
-      position_indicator: (() => { for (const pr of group) { if (pr.position_indicator !== undefined && pr.position_indicator !== null && pr.position_indicator !== '') return pr.position_indicator; } return null; })(),
-      away_team: (() => { for (const pr of group) { if (pr.away_team) return String(pr.away_team); } return ''; })(),
-      strips: (() => { for (const pr of group) { if (Array.isArray(pr.strips) && pr.strips.length) return pr.strips; } return []; })(),
-      badgeKind
-    });
+    // One record from one printing. Collapsed mode calls this once with the resolved
+    // printing; expanded mode calls it once per printing, so a reprint gets a tile in
+    // each box it was printed in, filed under that box's deck group.
+    const mk = (chosen, preferOwn) => {
+      // Image: only a printing whose TEXT matches the resolved version qualifies.
+      // - reprint/original: all printings share text -> any qualifies.
+      // - updated: only the printing(s) equal to `chosen` qualify.
+      // Rule (Jul 2026): every printing prefers its OWN scan. Printings in the
+      // currently selected boxes rank first (newest printing wins among them);
+      // printings outside the selection are fallback only, so browsing TBG shows
+      // the TBG scan of a reprint, not the Box 1 art.
+      const imgPool = FULL_BY_ID[chosen.id] || group;
+      let imgCandidates = (chosen.variant==='updated')
+        ? imgPool.filter(c=>c.variant==='updated')     // updated text: only updated printings qualify
+        : imgPool.filter(c=>c.variant!=='updated');    // base text: originals and reprints share it
+      const inGroup = new Set(group);
+      imgCandidates = imgCandidates.slice().sort((a,b)=>{
+        // Expanded mode only: a tile shows the scan of the printing it represents.
+        // Collapsed mode keeps the older rule, where the newest printing in the
+        // selection supplies the art for the single tile.
+        if(preferOwn && a===chosen) return -1;
+        if(preferOwn && b===chosen) return 1;
+        const ga = inGroup.has(a) ? 0 : 1, gb = inGroup.has(b) ? 0 : 1;
+        if(ga !== gb) return ga - gb;                                  // selected boxes first
+        return boxRank(rawBoxKey(b)) - boxRank(rawBoxKey(a));          // then newest printing
+      });
+      const chosenImg = imgCandidates.find(c=>c.filename && c.filename.trim());
+      const pick = (field) => {
+        const own = chosen[field];
+        if(own !== undefined && own !== null && own !== '') return own;
+        for (const pr of group) { const v = pr[field]; if (v !== undefined && v !== null && v !== '') return v; }
+        return null;
+      };
+      return {
+        id: chosen.id,
+        name: chosen.name,
+        suit: chosen.suit,
+        deck: chosen.source,                 // Common / captain / Promo
+        box: rawBoxKey(chosen),              // THIS printing's box
+        species: chosen.species_traits||[],
+        regular: chosen.regular_traits||[],
+        other: chosen.other_traits||[],
+        skills: normIcons(chosen.icons),
+        filename: chosenImg ? chosenImg.filename : '',
+        imgBox: chosenImg ? rawBoxKey(chosenImg) : null,
+        boxes: boxes,                        // every box this id appears in (of those selected)
+        copies: group.length,                // printings across the selected boxes
+        variant: chosen.variant || 'original',
+        card_number: chosen.card_number || '',
+        // `vp` is the rulebook name; `glory` is the old field, still in the JSONs until the
+        // data side renames it. Read either, expose one.
+        vp: (() => { const v = (chosen.vp !== undefined && chosen.vp !== null) ? chosen.vp : chosen.glory;
+                     if (v !== undefined && v !== null) return v;
+                     for (const pr of group) { const w = (pr.vp !== undefined && pr.vp !== null) ? pr.vp : pr.glory; if (w !== undefined && w !== null) return w; }
+                     return null; })(),
+        position_indicator: pick('position_indicator'),
+        away_team: (() => { const a = pick('away_team'); return a ? String(a) : ''; })(),
+        strips: (() => { if (Array.isArray(chosen.strips) && chosen.strips.length) return chosen.strips;
+                         for (const pr of group) { if (Array.isArray(pr.strips) && pr.strips.length) return pr.strips; }
+                         return []; })(),
+        badgeKind
+      };
+    };
+
+    if(expand) group.forEach(pr=>out.push(mk(pr, true)));
+    else out.push(mk(resolved, false));
   });
   return out;
 }
 
-// Full raw pool across all loaded boxes (kept once).
-let FULL_POOL = [];
-let FULL_BY_ID = {};   // every loaded printing of an id, regardless of box selection
+// The line under a tile naming the card's other printings. Read from FULL_BY_ID, so it
+// reports every box the card was printed in regardless of what is currently selected.
+function otherPrintingsLine(c){
+  const all = FULL_BY_ID[c.id] || [];
+  if(all.length < 2) return '';
+  const others = all.filter(pr=>rawBoxKey(pr) !== c.box);
+  if(!others.length) return '';
+  const names = list => [...new Set(list.map(pr=>boxLabelFromKey(rawBoxKey(pr))))].join(', ');
+  if(c.variant === 'updated'){
+    const superseded = others.filter(pr=>pr.variant !== 'updated');
+    return superseded.length ? 'Updates: '+names(superseded) : '';
+  }
+  const parts = [];
+  const same = others.filter(pr=>pr.variant !== 'updated');
+  const upd  = others.filter(pr=>pr.variant === 'updated');
+  if(same.length) parts.push('Also in: '+names(same));
+  if(upd.length)  parts.push('Updated in: '+names(upd));
+  return parts.join(' · ');
+}
+
 function buildFullPool(){
   FULL_POOL = [];
   Object.values(RAW_BOXES).forEach(arr=>FULL_POOL.push(...arr));
@@ -796,7 +843,7 @@ function buildFullPool(){
 // Resolve over the CURRENTLY SELECTED boxes only.
 function resolveSelected(){
   const selected = FULL_POOL.filter(c=>activeBoxes.has(rawBoxKey(c)));
-  ALL_CARDS = resolveCards(selected);
+  ALL_CARDS = resolveCards(selected, showDupes);
 }
 
 
@@ -945,7 +992,7 @@ function makePill(text,cls,kind){
 function parseQuery(text, vocab){
   const res={boxes:[],decks:[],suits:[],tags:[],skills:[],names:[],
              negBoxes:[],negDecks:[],negSuits:[],negTags:[],negSkills:[],negNames:[],
-             vp:[],negVp:[],positions:[],negPositions:[],variants:[],negVariants:[],
+             vp:[],negVp:[],positions:[],negPositions:[],variants:[],negVariants:[],dupes:true,
              strips:[],negStrips:[],text:[],negText:[],kindText:[],negKindText:[]};
   // A key may be followed by ':' or by a comparison operator, so both vp>4 and
   // vp:>4 parse. The operator is captured separately from the value.
@@ -990,6 +1037,8 @@ function parseQuery(text, vocab){
       // free text across every strip on the card: this is what makes the rules
       // searchable rather than merely filterable
       put(res.text,res.negText,lv);
+    } else if(key==='dupes'){
+      res.dupes = !(lv==='off'||lv==='no'||lv==='0'||lv==='hide');
     } else if(key==='variant'){
       const v = (lv==='updated'||lv==='update') ? 'update'
               : (lv==='duplicate'||lv==='reprint'||lv==='dupe') ? 'duplicate' : lv;
@@ -1059,6 +1108,7 @@ function applyQuery(text){
   const bare=[...nameTerms].sort().join(' ');
   const egg=EASTER_EGGS.find(e=>e.words.join(' ')===bare);
   comboIds = egg ? new Set(egg.ids) : null;
+  showDupes = q.dupes !== false;
   vpTests=q.vp; negVp=q.negVp;
   activePositions=new Set(q.positions); negPositions=new Set(q.negPositions);
   activeVariants=new Set(q.variants);   negVariants=new Set(q.negVariants);
@@ -1068,6 +1118,12 @@ function applyQuery(text){
 }
 
 function currentQuery(){ return document.getElementById('searchInput').value||''; }
+// The checkbox edits the query like every other control: on = no token, off = dupes:off.
+function setDupes(on){
+  const toks=tokenList(currentQuery()).filter(t=>!/^-?dupes:/i.test(t));
+  if(!on) toks.push('dupes:off');
+  setQuery(toks.join(' '));
+}
 function tokenList(text){ return text.match(/-?(?:[A-Za-z]+:)?"[^"]*"|[^\s"]+/g)||[]; }
 function quoteVal(v){ return /\s/.test(v)?'"'+v+'"':v; }
 function tokenOf(kind,v){ return kind+':'+quoteVal(v); }
@@ -1115,6 +1171,9 @@ function setBoxTokens(target){
   setQuery(toks.join(' '));
 }
 function syncFilterPills(){
+  // the checkbox follows the query, so a shared dupes:off link arrives with it unticked
+  const dup=document.getElementById('showDupes');
+  if(dup) dup.checked=showDupes;
   document.querySelectorAll('.suit-pill').forEach(p=>p.classList.toggle('active',activeSuits.has(p.dataset.suit)));
   document.querySelectorAll('.species-pill,.regular-pill,.other-pill').forEach(p=>p.classList.toggle('active',activeTags.has(p.dataset.value)));
   document.querySelectorAll('.skill-pill').forEach(p=>p.classList.toggle('active',activeSkills.has(p.dataset.value)));
@@ -1517,6 +1576,8 @@ function buildPillCard(c){
       +(badge?(c.card_number?' ':'')+'<span class="meta">'+badgeMark+'</span>':'')+'</span>'
       +(posin?'<span class="posin">'+posin+'</span>':'')+'</div></div>';
   }
+  const also=otherPrintingsLine(c);
+  const alsoHTML=also?'<div class="alsoin">'+also+'</div>':'';
   el.innerHTML='<div class="ce-row"><div class="ce-main">'
     +'<div class="nb" style="background:'+col+'">'+c.name+'</div>'
     +'<div class="sb" style="background:'+col+'">'+sIcon+c.suit+'</div>'
@@ -1524,7 +1585,7 @@ function buildPillCard(c){
     +(skillsHTML?'<div class="skcol">'+skillsHTML+'</div>':'')
     +stratHTML
     +'</div><div class="ce-traits2">'+vt+'</div></div>'
-    +stripHTML+numline+corner;
+    +stripHTML+alsoHTML+numline+corner;
   return el;
 }
 
@@ -1538,14 +1599,16 @@ function buildImgCard(c){
   const awayHTML=away?('<svg class="awayteam" viewBox="0 0 30 27" role="img" aria-label="Away team '+away+'"><title>Away team '+away+'</title><path d="M4.2 1.1h21.6a3.1 3.1 0 0 1 3.1 3.1v14.6a3.1 3.1 0 0 1-3.1 3.1h-8.2l-2.6 4.6-2.6-4.6H4.2a3.1 3.1 0 0 1-3.1-3.1V4.2a3.1 3.1 0 0 1 3.1-3.1z" fill="#1b2f4d" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><text x="15" y="16.6" text-anchor="middle" font-family="Antonio,sans-serif" font-weight="700" font-size="12" fill="#fff">'+away+'</text></svg>'):'';
   const badge=badgeInfo(c);
   const badgeOv = badge ? '<div class="card-img-badge '+badge.cls+'">'+(badge.cls==='update'?'\u2020':'\u2022')+'</div>' : '';
+  const alsoTxt=otherPrintingsLine(c);
+  const alsoHTML=alsoTxt?'<div class="alsoin">'+alsoTxt+'</div>':'';
   if(src){
     el.innerHTML=badgeOv+'<img loading="lazy" src="'+src+'" alt="'+c.name+'" '
       +'onclick="openLightbox(this.src)" '
       +'onload="IMG_OK.add(this.src.split(\'/\').slice(-3).join(\'/\'));" '
       +'onerror="this.onerror=null;IMG_FAILED.add(this.getAttribute(&quot;src&quot;));this.outerHTML=\'<div class=&quot;img-placeholder&quot;>NO IMAGE</div>\';">'
-      +'<div class="card-img-name">'+c.name+'</div>';
+      +'<div class="card-img-name">'+c.name+'</div>'+alsoHTML;
   } else {
-    el.innerHTML=badgeOv+'<div class="img-placeholder">NO IMAGE</div><div class="card-img-name">'+c.name+'</div>';
+    el.innerHTML=badgeOv+'<div class="img-placeholder">NO IMAGE</div><div class="card-img-name">'+c.name+'</div>'+alsoHTML;
   }
   return el;
 }
@@ -1584,7 +1647,10 @@ function render(){
     const section=document.createElement('div'); section.className='deck-group';
     const hdr=document.createElement('div'); hdr.className='deck-group-header';
     const hdrLabel = deck.startsWith('Common:') ? 'Common ('+({core:"Captain\'s Chair",tbg:"To Boldly Go","2nd":"Second Contact"}[DECK_BOX[deck]])+')' : deck;
-    hdr.innerHTML=hdrLabel+' <span class="deck-count">('+matched.length+' cards)</span>';
+    const hdrCards=new Set(matched.map(c=>c.id)).size;
+    const hdrPrints=showDupes ? matched.length : matched.reduce((n,c)=>n+(c.copies||1),0);
+    hdr.innerHTML=hdrLabel+' <span class="deck-count">('+hdrCards+' card'+(hdrCards!==1?'s':'')
+      +' \u00b7 '+hdrPrints+' printing'+(hdrPrints!==1?'s':'')+')</span>';
     section.appendChild(hdr);
     const grid=document.createElement('div');
     grid.className=viewMode==='pill'?'card-grid':'img-grid';
@@ -1601,14 +1667,17 @@ function render(){
     section.appendChild(grid);
     groups.appendChild(section);
   });
-  // total = distinct resolved cards shown; copies = sum of physical printings
-  let copies=0;
-  ALL_CARDS.forEach(c=>{ if(cardMatches(c)) copies+=(c.copies||1); });
-  document.getElementById('distinctDisplay').textContent=total;
+  // Two numbers, always: distinct cards, and printings across the selected boxes.
+  // In expanded mode `total` counts tiles, so distinct ids has to be counted separately.
+  const shown=ALL_CARDS.filter(cardMatches);
+  const distinct=new Set(shown.map(c=>c.id)).size;
+  const printings=showDupes ? shown.length : shown.reduce((n,c)=>n+(c.copies||1),0);
+  document.getElementById('distinctDisplay').textContent=distinct;
   document.getElementById('searchCount').innerHTML =
-    '<b>'+total+'</b> card'+(total!==1?'s':'')+(copies!==total?' \u00b7 '+copies+' copies':'');
+    '<b>'+distinct+'</b> card'+(distinct!==1?'s':'')
+    +' \u00b7 <b>'+printings+'</b> printing'+(printings!==1?'s':'');
   const extra=document.getElementById('copiesExtra');
-  extra.textContent = (copies!==total) ? ('  ·  '+copies+' copies') : '';
+  extra.textContent = (printings!==distinct) ? ('  ·  '+printings+' printings') : '';
   updateBadges();
   placePosPills();
   if(!total){

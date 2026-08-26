@@ -121,7 +121,9 @@ globalThis.__api = {
   get STRATEGY_COUNTS(){return STRATEGY_COUNTS;}, get openStrategyId(){return openStrategyId;},
   buildPillCard:(c)=>buildPillCard(c), buildStrategyDrawer:(c)=>buildStrategyDrawer(c),
   ensureStrategyIndex:()=>ensureStrategyIndex(), toggleStrategy:(id)=>toggleStrategy(id),
-  applyQuery:(t)=>applyQuery(t)
+  applyQuery:(t)=>applyQuery(t), deckKey:(c)=>deckKey(c),
+  otherPrintingsLine:(c)=>otherPrintingsLine(c), get showDupes(){return showDupes;},
+  syncFilterPills:()=>syncFilterPills()
 };`;
 vm.runInContext(body + '\n' + epilogue, sandbox, {filename:'scanner'});
 await new Promise(r=>setTimeout(r,300));
@@ -205,8 +207,13 @@ assert(imgSrcFor('Rom',['tbg']) === 'img/box2/rom.jpg',
   'a reprint browsed in Box 2 shows the Box 2 scan');
 assert(imgSrcFor('Rom',['core']) === 'img/box1/rom.jpg',
   'the same reprint browsed in Box 1 shows the Box 1 scan');
-assert(imgSrcFor('Rom',['core','tbg']) === 'img/box2/rom.jpg',
-  'with both boxes selected the newest printing wins');
+assert(imgSrcFor('Rom',['core','tbg']) === 'img/box1/rom.jpg',
+  'expanded: the first tile of a reprint is its Box 1 printing, showing the Box 1 scan');
+api.applyQuery('box:core box:tbg dupes:off'); api.render();
+const romCollapsed = api.ALL_CARDS.find(c=>c.name === 'Rom');
+assert(romCollapsed && romCollapsed.imgBox === 'tbg',
+  'collapsed: one tile, and the newest printing still supplies the art');
+api.applyQuery(''); api.render();
 // Invariant, independent of which scans happen to exist: an updated card never inherits the
 // art of the printing it superseded.
 assert(imgSrcFor('Phlox',['tbg']) === 'img/box2/phlox.jpg',
@@ -242,6 +249,11 @@ assert(html.indexOf('id="btnImg"') < html.indexOf('id="btnPill"'),
   'Images sits before Text in the toggle');
 assert(html.indexOf('class="clear-btn"') < html.indexOf('id="searchCount"'),
   'the controls lead the row and the count trails on the right');
+assert(html.indexOf('class="clear-btn"') < html.indexOf('id="showDupes"')
+    && html.indexOf('id="showDupes"') < html.indexOf('id="searchCount"'),
+  'Show duplicates sits between Reset and the count, in the toolbar row');
+assert(html.indexOf('id="showDupes"') > html.indexOf('id="boxFilters"') + 400 || !/id="boxFilters"><\/div>\s*<label/.test(html),
+  'and no longer hangs under the Box pills');
 assert(/\.search-count-row \.search-count\{margin-left:auto;\}/.test(html),
   'the count is the element pushed right, not the toggle');
 assert(/<button class="vtoggle active" id="btnImg"/.test(html),
@@ -260,9 +272,76 @@ assert(/No cards match the current filters/.test(env.document.getElementById('de
   'a query that matches nothing still says so, rather than the arrival hint');
 api.applyQuery(''); api.render();
 
+// --- duplicates across boxes ------------------------------------------------
+const dupOn  = runQuery('box:core box:tbg');
+const dupOff = runQuery('box:core box:tbg dupes:off');
+assert(new Set(dupOn.map(c=>c.id)).size === dupOff.length,
+  'both modes cover the same set of distinct cards');
+assert(dupOn.length > dupOff.length,
+  'showing duplicates yields more tiles than collapsing them');
+assert(dupOn.length - dupOff.length === 54,
+  'the extra tiles are exactly the 45 reprints and 9 updates of Box 2');
+const romTiles = dupOn.filter(c=>c.name === 'Rom');
+assert(romTiles.length === 2 && romTiles.some(c=>c.box==='core') && romTiles.some(c=>c.box==='tbg'),
+  'a reprint gets one tile per box it was printed in');
+assert(romTiles.every(c=>c.badgeKind === 'duplicate'),
+  'both tiles of a reprint carry the Duplicate badge');
+assert(romTiles.map(c=>api.deckKey(c)).sort().join(',') === 'Common:core,Common:tbg',
+  'the two tiles file under their own box deck groups, which is what made the shared card invisible before');
+assert(dupOff.filter(c=>c.name === 'Rom').length === 1, 'dupes:off collapses it back to one tile');
+assert(api.showDupes === false, 'dupes:off is what the query set');
+assert(env.document.getElementById('showDupes').checked === false,
+  'and the checkbox follows the query, so a shared dupes:off link arrives unticked');
+runQuery('box:core box:tbg');
+assert(api.showDupes === true, 'and duplicates are back on without the token');
+
+// the line naming the other printings
+const romCore = romTiles.find(c=>c.box==='core');
+const romTbg  = romTiles.find(c=>c.box==='tbg');
+assert(api.otherPrintingsLine(romCore) === 'Also in: To Boldly Go',
+  'a Box 1 printing names the box that reprinted it');
+assert(api.otherPrintingsLine(romTbg) === "Also in: Captain's Chair",
+  'and the reprint names the original, box selection notwithstanding');
+const phlox = runQuery('box:core box:tbg phlox');
+const phloxCore = phlox.find(c=>c.box==='core'), phloxTbg = phlox.find(c=>c.box==='tbg');
+assert(api.otherPrintingsLine(phloxCore) === 'Updated in: To Boldly Go',
+  'a superseded printing says where it was updated');
+assert(api.otherPrintingsLine(phloxTbg) === "Updates: Captain's Chair",
+  'and the updated printing says what it updates');
+// A card printed once anywhere, not merely once in the current selection: the line reads
+// every printing, so "copies === 1" is not the same question.
+const onceOnly = runQuery('box:core').find(c=>!c.badgeKind && api.otherPrintingsLine(c) === '');
+assert(onceOnly && api.otherPrintingsLine(onceOnly) === '',
+  'a card printed in one box only says nothing');
+const jarok = runQuery('box:core').find(c=>c.name === 'Admiral Jarok');
+assert(jarok.copies === 1 && api.otherPrintingsLine(jarok) === 'Also in: To Boldly Go',
+  'and a card whose other printing is outside the selection still names it');
+assert(api.otherPrintingsLine(romCore) === api.otherPrintingsLine(
+  runQuery('box:core').filter(c=>c.name==='Rom')[0]),
+  'the line is read from every printing, so deselecting Box 2 does not hide it');
+
+// counts
+runQuery('box:core box:tbg trait:scientist');
+assert(/<b>\d+<\/b> cards? · <b>\d+<\/b> printings?/.test(env.document.getElementById('searchCount').innerHTML),
+  'the total line always shows cards and printings');
+const headers=[...env.document.getElementById('deckGroups').children]
+  .map(sec=>sec.children[0] && sec.children[0].innerHTML).filter(Boolean);
+assert(headers.length > 0 && headers.every(h=>/\(\d+ cards? · \d+ printings?\)/.test(h)),
+  'each deck header shows both numbers too');
+// Expanded mode files each printing under its own box's group, so within a group the two
+// numbers agree. Collapsed mode is where they diverge, and that is the case the user could
+// not read before: 6 cards, 7 printings.
+runQuery('box:core box:tbg dupes:off trait:scientist');
+const collapsedHeaders=[...env.document.getElementById('deckGroups').children]
+  .map(sec=>sec.children[0] && sec.children[0].innerHTML).filter(Boolean);
+assert(collapsedHeaders.some(h=>{const m=h.match(/\((\d+) cards? · (\d+) printings?\)/); return m && m[1] !== m[2];}),
+  'collapsed, a group with a shared card shows cards and printings differing');
+runQuery('');
+
 // --- query keys: vp, position, variant --------------------------------------
 function runQuery(q){
-  api.applyQuery(q); api.render();
+  // Mirrors what the page does on every query change: apply, sync the controls, render.
+  api.applyQuery(q); api.syncFilterPills(); api.render();
   return api.ALL_CARDS.filter(c=>api.cardMatches(c));
 }
 const v4 = runQuery('vp:4');
@@ -423,10 +502,13 @@ api.applyQuery(''); api.render();
 
 // hidden query
 const egg = runQuery('picard combo');
-assert(egg.length === 4 && ['picard-daystrom-institute','moriarty','picard-uss-bozeman','holographic-drone-ship']
-         .every(id=>egg.some(c=>c.id===id)),
+const eggIds = new Set(egg.map(c=>c.id));
+assert(eggIds.size === 4 && ['picard-daystrom-institute','moriarty','picard-uss-bozeman','holographic-drone-ship']
+         .every(id=>eggIds.has(id)),
   'the hidden picard combo query returns its four cards');
-assert(runQuery('combo picard').length === 4, 'word order does not matter');
+assert(new Set(runQuery('combo picard').map(c=>c.id)).size === 4, 'word order does not matter');
+assert(egg.length === 5,
+  'and with duplicates shown, Holographic Drone Ship contributes two tiles');
 assert(runQuery('picard').length > 4 && runQuery('combo').length !== 4,
   'either word alone behaves as an ordinary name search');
 api.applyQuery(''); api.render();
