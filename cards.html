@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
 <title>ST:CC Card Scanner</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;600&family=Antonio:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;600&family=Antonio:wght@600&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
 <script data-goatcounter="https://stcc-compendium.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <style>
 :root{
@@ -174,7 +174,9 @@ a{color:var(--blue);text-decoration:none;}
 .deck-groups{max-width:1100px;margin:0 auto;padding:0 1.5rem 3rem;}
 .deck-group{margin-bottom:1.5rem;}
 .deck-group-header{font-family:'Orbitron',sans-serif;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);border-bottom:1px solid var(--border);padding-bottom:0.4rem;margin-bottom:0.6rem;display:flex;align-items:center;gap:0.5rem;}
-.deck-count{color:var(--muted);font-size:0.55rem;}
+/* Barlow Condensed, not the header's Orbitron: at this size Orbitron's "(8" reads as "18". */
+.deck-count{color:var(--muted);font-family:var(--card-font);font-size:0.78rem;letter-spacing:0.01em;
+  text-transform:none;font-variant-numeric:tabular-nums;}
 .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0.6rem;}
 
 /* CARD ENTRIES */

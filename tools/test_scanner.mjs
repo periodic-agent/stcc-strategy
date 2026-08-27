@@ -234,6 +234,21 @@ if(fs.existsSync(repo + '/img/box1')){
 assert(typeof api.setView === 'function' && typeof api.clearAll === 'function',
   'inline-handler functions are reachable at global scope');
 
+// --- fonts ------------------------------------------------------------------
+assert(/fonts\.googleapis\.com[^"]*Barlow\+Condensed/.test(html),
+  'Barlow Condensed is actually requested, not merely named in CSS');
+{
+  const link=(html.match(/fonts\.googleapis\.com[^"]*/)||[''])[0];
+  const asked=new Set([...html.matchAll(/font-family:\s*(?:var\(--card-font\)|'([^']+)')/g)]
+    .map(m=>m[1]||'Barlow Condensed'));
+  const missing=[...asked].filter(f=>!/^(sans-serif|serif|monospace|inherit)$/.test(f)
+    && !link.includes(f.replace(/ /g,'+')));
+  assert(missing.length === 0,
+    'every font the CSS asks for is in the Google Fonts request (was: Barlow Condensed silently falling back)');
+}
+assert(/\.deck-count\{[^}]*var\(--card-font\)/.test(html),
+  'the deck count uses the card face, not the header Orbitron');
+
 // --- landing state ----------------------------------------------------------
 // Checked BEFORE any applyQuery call in this file, so it reflects what init() left on screen:
 // the earlier version of this suite applied an empty query first and so missed a page that
