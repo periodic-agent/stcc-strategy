@@ -4040,7 +4040,7 @@
     "text": "If you have a Kelpien in play, return this card, and you may spend 3 Dilithium to gain 1 Glory."
    },
    {
-    "kind": "special",
+    "kind": "surprise",
     "action": null,
     "qual": "Bot only",
     "text": "Gain 1 Glory and discard the top card of the Bot deck. You gain 2 Dilithium. Return this card."
