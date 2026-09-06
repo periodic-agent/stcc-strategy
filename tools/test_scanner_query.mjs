@@ -105,5 +105,11 @@ t("kind-scoped negated", "-passive:cloak",
   { negKindText: [{ kind: "passive", term: "cloak" }] });
 t("unknown kind is not a key", "sneeze:cloak", { names: ["sneeze:cloak"] });
 
+// sort + dupes toggles
+t("sort:position", "sort:position", { sort: "position" });
+t("sort short form", "sort:pos", { sort: "pos" });
+t("dupes off", "dupes:off", { dupes: false });
+t("dupes stays on by default", "kirk", { names: ["kirk"], dupes: true });
+
 if (failures) { console.log(failures + " failure(s)"); process.exit(1); }
 console.log("all tests pass");

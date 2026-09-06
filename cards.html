@@ -512,6 +512,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     </div>
     <button class="clear-btn" onclick="clearAll()">Reset</button>
     <label class="dupes-toggle"><input type="checkbox" id="showDupes" checked onchange="setDupes(this.checked)"> Show duplicates</label>
+    <label class="dupes-toggle"><input type="checkbox" id="sortPos" onchange="setSortPos(this.checked)"> Sort by position</label>
     <span class="search-count" id="searchCount"></span>
   </div>
 
@@ -526,6 +527,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>skill:military</code> · <code>focus:influence</code><span>icon search; also skill:any, skill:variable</span></div>
     <div class="qh-row"><code>box:promo1</code> · <code>box:all</code><span>promos in; empty bar = empty page</span></div>
     <div class="qh-row"><code>dupes:off</code><span>one tile per card instead of one per printing</span></div>
+    <div class="qh-row"><code>sort:position</code><span>order each deck by starting position instead of card number</span></div>
     <div class="qh-row"><code>vp:4</code> · <code>vp&gt;=3</code><span>victory points, the number bottom-right; cards without a value never match</span></div>
     <div class="qh-row"><code>position:reserve</code> · <code>position:incident-deck</code><span>starting position; hyphens for spaces</span></div>
     <div class="qh-row"><code>strip:reaction</code> &middot; <code>strip:any</code><span>cards carrying that operation strip</span></div>
@@ -668,6 +670,20 @@ let viewMode     = "image";   // scans first; the rendered text is the second re
 // Duplicates across boxes are shown by default: one tile per printing, filed under the deck
 // group of the box it was printed in. `dupes:off` collapses each card to a single tile.
 let showDupes    = true;
+// Deck groups are ordered by card number unless asked for play order.
+let sortByPos    = false;
+// Play order: the sequence cards reach the table, then the Location values, then the solo
+// variants, then anything without a position. Index is the sort key; unknown values land
+// just before the position-less cards, so a new indicator is visible rather than hidden.
+const POSITION_ORDER = ['Captain','Status','Available','Deployed','Controlled Location',
+  'Development','Reserve','Discard','Incident Deck','Starting','Advanced','Rewards',
+  'Solo Campaign','Solo Challenge'];
+function positionRank(c){
+  const p=(c.position_indicator===undefined||c.position_indicator===null)?'':String(c.position_indicator);
+  if(!p) return POSITION_ORDER.length+1;
+  const i=POSITION_ORDER.indexOf(p);
+  return i<0 ? POSITION_ORDER.length : i;
+}
 // --- strategy index -------------------------------------------------------
 // STRATEGY_COUNTS is card_id -> mention count, from the 8 KB companion file.
 // The 550 KB index with the actual passages is fetched only once a drawer is
@@ -994,7 +1010,7 @@ function makePill(text,cls,kind){
 function parseQuery(text, vocab){
   const res={boxes:[],decks:[],suits:[],tags:[],skills:[],names:[],
              negBoxes:[],negDecks:[],negSuits:[],negTags:[],negSkills:[],negNames:[],
-             vp:[],negVp:[],positions:[],negPositions:[],variants:[],negVariants:[],dupes:true,
+             vp:[],negVp:[],positions:[],negPositions:[],variants:[],negVariants:[],dupes:true,sort:'',
              strips:[],negStrips:[],text:[],negText:[],kindText:[],negKindText:[]};
   // A key may be followed by ':' or by a comparison operator, so both vp>4 and
   // vp:>4 parse. The operator is captured separately from the value.
@@ -1039,6 +1055,8 @@ function parseQuery(text, vocab){
       // free text across every strip on the card: this is what makes the rules
       // searchable rather than merely filterable
       put(res.text,res.negText,lv);
+    } else if(key==='sort'){
+      res.sort = lv;
     } else if(key==='dupes'){
       res.dupes = !(lv==='off'||lv==='no'||lv==='0'||lv==='hide');
     } else if(key==='variant'){
@@ -1111,6 +1129,7 @@ function applyQuery(text){
   const egg=EASTER_EGGS.find(e=>e.words.join(' ')===bare);
   comboIds = egg ? new Set(egg.ids) : null;
   showDupes = q.dupes !== false;
+  sortByPos = q.sort === 'position' || q.sort === 'pos';
   vpTests=q.vp; negVp=q.negVp;
   activePositions=new Set(q.positions); negPositions=new Set(q.negPositions);
   activeVariants=new Set(q.variants);   negVariants=new Set(q.negVariants);
@@ -1124,6 +1143,11 @@ function currentQuery(){ return document.getElementById('searchInput').value||''
 function setDupes(on){
   const toks=tokenList(currentQuery()).filter(t=>!/^-?dupes:/i.test(t));
   if(!on) toks.push('dupes:off');
+  setQuery(toks.join(' '));
+}
+function setSortPos(on){
+  const toks=tokenList(currentQuery()).filter(t=>!/^-?sort:/i.test(t));
+  if(on) toks.push('sort:position');
   setQuery(toks.join(' '));
 }
 function tokenList(text){ return text.match(/-?(?:[A-Za-z]+:)?"[^"]*"|[^\s"]+/g)||[]; }
@@ -1176,6 +1200,8 @@ function syncFilterPills(){
   // the checkbox follows the query, so a shared dupes:off link arrives with it unticked
   const dup=document.getElementById('showDupes');
   if(dup) dup.checked=showDupes;
+  const sp=document.getElementById('sortPos');
+  if(sp) sp.checked=sortByPos;
   document.querySelectorAll('.suit-pill').forEach(p=>p.classList.toggle('active',activeSuits.has(p.dataset.suit)));
   document.querySelectorAll('.species-pill,.regular-pill,.other-pill').forEach(p=>p.classList.toggle('active',activeTags.has(p.dataset.value)));
   document.querySelectorAll('.skill-pill').forEach(p=>p.classList.toggle('active',activeSkills.has(p.dataset.value)));
@@ -1643,7 +1669,13 @@ function render(){
   // Also include Promo deck in order if promos active
   const allDecks=[...DECK_ORDER, 'Promo'];
   allDecks.forEach(deck=>{
-    const matched=ALL_CARDS.filter(c=>deckKey(c)===deck&&cardMatches(c));
+    let matched=ALL_CARDS.filter(c=>deckKey(c)===deck&&cardMatches(c));
+    if(sortByPos){
+      // Stable: equal positions keep the card-number order they arrived in.
+      matched=matched.map((c,i)=>[c,i])
+        .sort((a,b)=>(positionRank(a[0])-positionRank(b[0]))||(a[1]-b[1]))
+        .map(p=>p[0]);
+    }
     if(!matched.length) return;
     total+=matched.length;
     const section=document.createElement('div'); section.className='deck-group';

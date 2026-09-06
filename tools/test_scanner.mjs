@@ -123,7 +123,8 @@ globalThis.__api = {
   ensureStrategyIndex:()=>ensureStrategyIndex(), toggleStrategy:(id)=>toggleStrategy(id),
   applyQuery:(t)=>applyQuery(t), deckKey:(c)=>deckKey(c),
   otherPrintingsLine:(c)=>otherPrintingsLine(c), get showDupes(){return showDupes;},
-  syncFilterPills:()=>syncFilterPills()
+  syncFilterPills:()=>syncFilterPills(), get sortByPos(){return sortByPos;},
+  positionRank:(c)=>positionRank(c)
 };`;
 vm.runInContext(body + '\n' + epilogue, sandbox, {filename:'scanner'});
 await new Promise(r=>setTimeout(r,300));
@@ -286,6 +287,52 @@ api.applyQuery('box:core zzzznope'); api.render();
 assert(/No cards match the current filters/.test(env.document.getElementById('deckGroups').innerHTML),
   'a query that matches nothing still says so, rather than the arrival hint');
 api.applyQuery(''); api.render();
+
+// --- sort by starting position ----------------------------------------------
+// The sort happens inside render(), so it has to be read off the rendered sections:
+// filtering ALL_CARDS again returns the unsorted array and proves nothing.
+function renderedDeck(query, deckLabel){
+  api.applyQuery(query); api.syncFilterPills(); api.setView('pill'); api.render();
+  const sec=[...env.document.getElementById('deckGroups').children]
+    .find(s=>s.children[0].innerHTML.indexOf(deckLabel) === 0);
+  if(!sec) return [];
+  return sec.children[1].children.map(t=>{
+    const m=t.innerHTML.match(/class="nb"[^>]*>([^<]+)</);
+    return m ? m[1] : '?';
+  });
+}
+const byNumber = renderedDeck('box:tbg deck:archer', 'Archer');
+const byPos    = renderedDeck('box:tbg deck:archer sort:position', 'Archer');
+assert(byNumber.length === byPos.length && byNumber.length > 0,
+  'sorting changes the order, not the contents');
+assert(byNumber.join() !== byPos.join(), 'and the order really does change');
+assert(new Set(byNumber).size === new Set(byPos).size,
+  'no card is dropped or duplicated by the sort');
+{
+  // Names are only unique within a deck: "Strange New Worlds" exists in four of them,
+  // so the lookup has to be built from the deck being examined.
+  api.applyQuery('box:tbg deck:archer sort:position'); api.render();
+  const deckCards = api.ALL_CARDS.filter(c=>api.deckKey(c) === 'Archer');
+  const byName = new Map(deckCards.map(c=>[c.name,c]));
+  const r = byPos.map(n=>api.positionRank(byName.get(n)));
+  assert(r.every(v=>Number.isFinite(v)), 'every rendered tile was matched back to its card');
+  assert(r.every((v,i)=>i===0||r[i-1]<=v), 'the rendered order is non-decreasing in position rank');
+  assert(r[0] === 0 && r[1] === 1, 'the captain and its status card lead the deck');
+}
+assert(api.sortByPos === true, 'sort:position is what the query set');
+assert(env.document.getElementById('sortPos').checked === true,
+  'and the checkbox follows the query');
+api.applyQuery('box:tbg deck:archer'); api.syncFilterPills(); api.render();
+assert(api.sortByPos === false && env.document.getElementById('sortPos').checked === false,
+  'dropping the token returns to card-number order');
+{
+  // Stability: within one position the card-number order survives.
+  const dev = renderedDeck('box:tbg deck:archer sort:position', 'Archer');
+  const devByNumber = byNumber.filter(n=>dev.includes(n));
+  const firstDev = dev.filter(n=>devByNumber.includes(n));
+  assert(firstDev.length === dev.length, 'every card kept, ties unbroken');
+}
+assert(/sort:position/.test(html), 'the token is documented in the help panel');
 
 // --- duplicates across boxes ------------------------------------------------
 const dupOn  = runQuery('box:core box:tbg');
