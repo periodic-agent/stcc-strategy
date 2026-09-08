@@ -1,0 +1,289 @@
+{
+ "resupply": {
+  "label": "RESUPPLY",
+  "card": "archer-jonathan-archer",
+  "y": [
+   1081,
+   1324
+  ],
+  "bar": "#62db5a",
+  "body": "#e9e8e2",
+  "bar_px": 34,
+  "bar_pct": 2.91,
+  "keyword": "#2bbe65",
+  "text": "dark",
+  "raw": {
+   "bar": [
+    81,
+    184,
+    73
+   ],
+   "body": [
+    193,
+    195,
+    183
+   ]
+  }
+ },
+ "endgame": {
+  "label": "ENDGAME",
+  "card": "archer-jonathan-archer",
+  "y": [
+   1341,
+   1506
+  ],
+  "bar": "#e03511",
+  "body": "#eecac7",
+  "bar_px": 35,
+  "bar_pct": 2.99,
+  "keyword": "#e03511",
+  "text": "dark",
+  "raw": {
+   "bar": [
+    188,
+    42,
+    7
+   ],
+   "body": [
+    197,
+    170,
+    161
+   ]
+  }
+ },
+ "cleanup": {
+  "label": "CLEAN-UP",
+  "card": "archer-earth",
+  "y": [
+   766,
+   1082
+  ],
+  "bar": "#77dc6b",
+  "body": "#e9e8e2",
+  "bar_px": 36,
+  "bar_pct": 3.08,
+  "keyword": "#43c271",
+  "text": "dark",
+  "raw": {
+   "bar": [
+    93,
+    181,
+    90
+   ],
+   "body": [
+    182,
+    191,
+    190
+   ]
+  }
+ },
+ "table": {
+  "label": "REACTION + PASSIVE",
+  "card": "archer-earth",
+  "y": [
+   1094,
+   1508
+  ],
+  "bar": "#237ccf",
+  "body": "#8aacd9",
+  "bar_px": 38,
+  "bar_pct": 3.25,
+  "keyword": "#ffffff",
+  "text": "light",
+  "raw": {
+   "bar": [
+    27,
+    102,
+    174
+   ],
+   "body": [
+    108,
+    142,
+    182
+   ]
+  }
+ },
+ "banner": {
+  "label": "no keyword",
+  "card": "sukal",
+  "y": [
+   1028,
+   1142
+  ],
+  "bar": "#bdbcb5",
+  "body": "#e9e8e2",
+  "bar_px": 43,
+  "bar_pct": 3.68,
+  "keyword": "#c24b36",
+  "text": "dark",
+  "raw": {
+   "bar": [
+    172,
+    168,
+    165
+   ],
+   "body": [
+    212,
+    207,
+    206
+   ]
+  }
+ },
+ "passive": {
+  "label": "PASSIVE",
+  "card": "sukal",
+  "y": [
+   1148,
+   1321
+  ],
+  "bar": "#146aaa",
+  "body": "#7693b0",
+  "bar_px": 45,
+  "bar_pct": 3.85,
+  "keyword": "#ffffff",
+  "text": "light",
+  "raw": {
+   "bar": [
+    18,
+    95,
+    155
+   ],
+   "body": [
+    107,
+    131,
+    160
+   ]
+  }
+ },
+ "special": {
+  "label": "SPECIAL",
+  "card": "sukal",
+  "y": [
+   1331,
+   1504
+  ],
+  "bar": "#bea7b5",
+  "body": "#c0b2b7",
+  "bar_px": 2,
+  "bar_pct": 0.17,
+  "keyword": "#91388a",
+  "text": "dark",
+  "raw": {
+   "bar": [
+    172,
+    149,
+    165
+   ],
+   "body": [
+    175,
+    159,
+    167
+   ]
+  }
+ },
+ "play": {
+  "label": "PLAY + SUPPORT",
+  "card": "riker-brad-boimler-lt-jg",
+  "y": [
+   825,
+   1312
+  ],
+  "bar": "#d6d6d5",
+  "body": "#e9e8e2",
+  "bar_px": 16,
+  "bar_pct": 1.37,
+  "keyword": "#14161c",
+  "text": "dark",
+  "raw": {
+   "bar": [
+    164,
+    165,
+    167
+   ],
+   "body": [
+    179,
+    179,
+    177
+   ]
+  }
+ },
+ "activation": {
+  "label": "ACTIVATION",
+  "card": "riker-brad-boimler-lt-jg",
+  "y": [
+   1327,
+   1497
+  ],
+  "bar": "#096abd",
+  "body": "#7ea3cc",
+  "bar_px": 37,
+  "bar_pct": 3.16,
+  "keyword": "#ffffff",
+  "text": "light",
+  "raw": {
+   "bar": [
+    7,
+    82,
+    148
+   ],
+   "body": [
+    97,
+    126,
+    160
+   ]
+  }
+ },
+ "cost": {
+  "label": "DEV. COST",
+  "card": "picard-tamarians",
+  "y": [
+   1400,
+   1500
+  ],
+  "bar": "#202128",
+  "body": "#44454d",
+  "bar_px": 348,
+  "bar_pct": 29.7,
+  "keyword": "#ffffff",
+  "text": "light",
+  "mode": "inbar",
+  "raw": {
+   "bar": [
+    27,
+    27,
+    33
+   ],
+   "body": [
+    57,
+    57,
+    63
+   ]
+  }
+ },
+ "surprise": {
+  "label": "SURPRISE",
+  "card": "dilithium-shockwave",
+  "y": [
+   1342,
+   1505
+  ],
+  "bar": "#e9cbe2",
+  "body": "#e9d9db",
+  "bar_px": 2,
+  "bar_pct": 0.17,
+  "keyword": "#a355af",
+  "text": "dark",
+  "raw": {
+   "bar": [
+    183,
+    171,
+    195
+   ],
+   "body": [
+    183,
+    183,
+    189
+   ]
+  }
+ }
+}

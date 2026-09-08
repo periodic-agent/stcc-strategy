@@ -1,0 +1,66 @@
+{
+ "play": {
+  "category": "play",
+  "color": "gray"
+ },
+ "support": {
+  "category": "play",
+  "color": "gray"
+ },
+ "resupply": {
+  "category": "upkeep",
+  "color": "green"
+ },
+ "cleanup": {
+  "category": "upkeep",
+  "color": "green"
+ },
+ "activation": {
+  "category": "table",
+  "color": "blue"
+ },
+ "passive": {
+  "category": "table",
+  "color": "blue"
+ },
+ "reaction": {
+  "category": "table",
+  "color": "blue"
+ },
+ "endgame": {
+  "category": "endgame",
+  "color": "red"
+ },
+ "special": {
+  "category": "special",
+  "color": "purple"
+ },
+ "cost": {
+  "category": "devcost",
+  "color": "black"
+ },
+ "control": {
+  "category": "control",
+  "color": "tbd"
+ },
+ "goal": {
+  "category": "mission",
+  "color": "tbd"
+ },
+ "reward": {
+  "category": "mission",
+  "color": "tbd"
+ },
+ "awayteams": {
+  "category": "table",
+  "color": "tbd"
+ },
+ "surprise": {
+  "category": "special",
+  "color": "tbd"
+ },
+ "banner": {
+  "category": "banner",
+  "color": "none"
+ }
+}
