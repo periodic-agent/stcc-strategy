@@ -512,7 +512,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     </div>
     <button class="clear-btn" onclick="clearAll()">Reset</button>
     <label class="dupes-toggle"><input type="checkbox" id="showDupes" checked onchange="setDupes(this.checked)"> Show duplicates</label>
-    <label class="dupes-toggle"><input type="checkbox" id="sortPos" onchange="setSortPos(this.checked)"> Sort by position</label>
+    <label class="dupes-toggle"><input type="checkbox" id="sortPos" checked onchange="setSortPos(this.checked)"> Sort by position</label>
     <span class="search-count" id="searchCount"></span>
   </div>
 
@@ -527,7 +527,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>skill:military</code> · <code>focus:influence</code><span>icon search; also skill:any, skill:variable</span></div>
     <div class="qh-row"><code>box:promo1</code> · <code>box:all</code><span>promos in; empty bar = empty page</span></div>
     <div class="qh-row"><code>dupes:off</code><span>one tile per card instead of one per printing</span></div>
-    <div class="qh-row"><code>sort:position</code><span>order each deck by starting position instead of card number</span></div>
+    <div class="qh-row"><code>sort:number</code><span>order each deck by card number; without it, decks are in play order</span></div>
     <div class="qh-row"><code>vp:4</code> · <code>vp&gt;=3</code><span>victory points, the number bottom-right; cards without a value never match</span></div>
     <div class="qh-row"><code>position:reserve</code> · <code>position:incident-deck</code><span>starting position; hyphens for spaces</span></div>
     <div class="qh-row"><code>strip:reaction</code> &middot; <code>strip:any</code><span>cards carrying that operation strip</span></div>
@@ -671,12 +671,13 @@ let viewMode     = "image";   // scans first; the rendered text is the second re
 // group of the box it was printed in. `dupes:off` collapses each card to a single tile.
 let showDupes    = true;
 // Deck groups are ordered by card number unless asked for play order.
-let sortByPos    = false;
+let sortByPos    = true;    // play order is the common case; sort:number opts out
 // Play order: the sequence cards reach the table, then the Location values, then the solo
 // variants, then anything without a position. Index is the sort key; unknown values land
 // just before the position-less cards, so a new indicator is visible rather than hidden.
-const POSITION_ORDER = ['Captain','Status','Available','Deployed','Controlled Location',
-  'Development','Reserve','Discard','Incident Deck','Starting','Advanced','Rewards',
+// Rulebook order, with Captain leading as the deck's face and Discard after Available.
+const POSITION_ORDER = ['Captain','Status','Deployed','Controlled Location','Available',
+  'Discard','Reserve','Development','Incident Deck','Starting','Advanced','Rewards',
   'Solo Campaign','Solo Challenge'];
 function positionRank(c){
   const p=(c.position_indicator===undefined||c.position_indicator===null)?'':String(c.position_indicator);
@@ -1133,7 +1134,9 @@ function applyQuery(text){
   const egg=EASTER_EGGS.find(e=>e.words.join(' ')===bare);
   comboIds = egg ? new Set(egg.ids) : null;
   showDupes = q.dupes !== false;
-  sortByPos = q.sort === 'position' || q.sort === 'pos';
+  // On unless explicitly turned off. `sort:position` stays valid for links shared earlier.
+  sortByPos = !(q.sort === 'number' || q.sort === 'card-number' || q.sort === 'cardnumber'
+                || q.sort === 'off' || q.sort === 'no');
   vpTests=q.vp; negVp=q.negVp;
   activePositions=new Set(q.positions); negPositions=new Set(q.negPositions);
   activeVariants=new Set(q.variants);   negVariants=new Set(q.negVariants);
@@ -1151,7 +1154,7 @@ function setDupes(on){
 }
 function setSortPos(on){
   const toks=tokenList(currentQuery()).filter(t=>!/^-?sort:/i.test(t));
-  if(on) toks.push('sort:position');
+  if(!on) toks.push('sort:number');
   setQuery(toks.join(' '));
 }
 function tokenList(text){ return text.match(/-?(?:[A-Za-z]+:)?"[^"]*"|[^\s"]+/g)||[]; }
