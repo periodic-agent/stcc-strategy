@@ -27,12 +27,13 @@ body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:v
 a{color:var(--blue);text-decoration:none;}
 .nav-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:0.75rem 1.5rem;}
 .nav-bar a{font-family:'Orbitron',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--scanner);}
-.chapter-header{background:linear-gradient(135deg,#160820 0%,#2a1035 50%,#160820 100%);border-bottom:2px solid var(--scanner);padding:1.2rem 2rem 1rem;text-align:center;position:relative;overflow:hidden;}
-.chapter-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(212,105,159,0.03) 60px,rgba(212,105,159,0.03) 61px);}
-.chapter-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.25em;color:var(--scanner);text-transform:uppercase;margin-bottom:0.6rem;}
-.chapter-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:700;color:#fff;letter-spacing:0.05em;text-shadow:0 0 40px rgba(212,105,159,0.5);}
-.chapter-title span{color:var(--scanner2);}
-.chapter-meta{margin-top:0.4rem;font-size:0.78rem;color:var(--muted);}
+.chapter-header{background:#06080f;border-bottom:2px solid #f0b323;padding:1.4rem 1.5rem 1.1rem;text-align:center;position:relative;overflow:hidden;}
+.chapter-header::before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,rgba(200,16,46,0.35) 0 22%,transparent 22.3%),linear-gradient(115deg,transparent 0 30%,rgba(28,110,194,0.28) 30.3% 44%,transparent 44.3%),linear-gradient(115deg,transparent 0 52%,rgba(240,179,35,0.22) 52.3% 60%,transparent 60.3%);}
+.chapter-header>*{position:relative;}
+.chapter-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.25em;color:#f0b323;text-transform:uppercase;margin-bottom:0.6rem;}
+.chapter-title{font-family:'Antonio',sans-serif;font-size:clamp(1.7rem,5vw,2.6rem);font-weight:600;color:#fff;letter-spacing:0.1em;text-transform:uppercase;line-height:1.05;text-shadow:0 2px 20px rgba(0,0,0,0.6);}
+.chapter-title span{color:#ffd166;}
+.chapter-meta{margin-top:0.5rem;font-family:'Antonio',sans-serif;font-size:0.95rem;letter-spacing:0.04em;color:var(--muted);}
 .controls{max-width:1100px;margin:1.5rem auto 0;padding:0 1.5rem;}
 .filter-section{margin-bottom:1rem;}
 .filter-label{font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;}
@@ -494,8 +495,8 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 <div class="nav-bar"><a href="index.html">← Back to Compendium</a></div>
 
 <header class="chapter-header">
-  <h1 class="chapter-title"><span>Card</span> Scanner</h1>
-  <div class="chapter-meta">Select boxes, filter by suit, trait, or skill, search by name, starting position.</div>
+  <h1 class="chapter-title">ST:CC <span>Card Scanner</span></h1>
+  <div class="chapter-meta">Select boxes, filter by suit, trait, or skill, search by name or card text</div>
 </header>
 
 <div class="controls">
