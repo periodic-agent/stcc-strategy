@@ -1,0 +1,3052 @@
+[
+  {
+    "id": "ambassador-spock",
+    "name": "Ambassador Spock",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3PER01/13",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Rewards",
+    "species_traits": [
+      "Human",
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Telepath",
+      "Crossover",
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "filename": "ambassador-spock.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Log a card from your hand to gain 3 [[dilithium]]. You may log a beamed card to scan for [[res-focus]].",
+      "table": "Reaction [[res5]]: After putting an [[encounter]] into play, gain 1 [[research]]/[[influence]]/[[military]]. Passive: You may additionally have another [[person]] with [[vulcan]]/[[romulan]]/[[ambassador]] on duty.",
+      "goal": "",
+      "reward": "Special: If not logged, this card scores [[-2vp]]."
+    }
+  },
+  {
+    "id": "barry-waddle",
+    "name": "Barry Waddle",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3PER02/13",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Rewards",
+    "species_traits": [
+      "Human",
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Business",
+      "Crossover"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "barry-waddle.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Attack Play: Steal 2 [[dilithium]]. You may spend 2 [[latinum]] to scan for [[inf-focus]].",
+      "table": "Passive: Increase your hand size by 1. Reaction [[inf5]]: After spending [[latinum]], refresh another card that shares a trait with this card.",
+      "goal": "",
+      "reward": "Special: If not logged, this card scores [[-2vp]]."
+    }
+  },
+  {
+    "id": "chancellor-gowron",
+    "name": "Chancellor Gowron",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3PER03/13",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Rewards",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Imperial",
+      "Crossover"
+    ],
+    "other_traits": [],
+    "filename": "chancellor-gowron.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Find a [[klingon]] or a [[ship]]. If the found card is a [[ship]] with [[klingon]], gain 1 [[glory]]. You may spend 3 [[dilithium]] to scan for [[mil-focus]].",
+      "table": "Reaction [[mil5]]: After taking control of a [[location]], choose 2 of the following: draw a card OR junk a card from the Market OR discard a card to gain 1 [[glory]].",
+      "goal": "",
+      "reward": "Special: If not logged, this card scores [[-2vp]]."
+    }
+  },
+  {
+    "id": "chef-riker",
+    "name": "Chef Riker",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3PER04/13",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Rewards",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Crossover",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "chef-riker.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Draw a card from your Discard pile for each different one of [[beverage]] / [[engineer]] / [[nx-01]] you have in play. You may duplicate a play operation of a [[person]]/[[directive]] from your Log. You may promote this card to Duty Officer.",
+      "table": "Activation: Free play a [[ship]] with [[starfleet]]. Activation: Draw a [[ship]]/[[hologram]]/[[nx-01]] from your Discard pile.",
+      "goal": "",
+      "reward": "Special: If not logged, this card scores [[-1vp]]."
+    }
+  },
+  {
+    "id": "ensign-boimler",
+    "name": "Ensign Boimler",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3PER05/13",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Rewards",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Crossover",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "ensign-boimler.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: Discard 3 cards to gain an [[action]]. Support: After you junk or promote a [[person]], duplicate a play operation of that card.",
+      "table": "This card cannot be promoted.",
+      "goal": "",
+      "reward": "Special: If not logged, this card scores [[-2vp]]."
+    }
+  },
+  {
+    "id": "ensign-mariner",
+    "name": "Ensign Mariner",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3PER06/13",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Rewards",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Crossover",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "ensign-mariner.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: Gain 1 [[latinum]]. Up to twice: take an [[incident]] to your Discard pile to find any card, except in your Reserve deck. Support: After you exhaust a Duty Officer, refresh it and you may send an [[away team]] to a [[location]] where you have a [[ship]].",
+      "table": "This card cannot be promoted.",
+      "goal": "",
+      "reward": "Special: If not logged, this card scores [[-1vp]]."
+    }
+  },
+  {
+    "id": "lieutenant-dax",
+    "name": "Lieutenant Dax",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3PER07/13",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Rewards",
+    "species_traits": [
+      "Trill"
+    ],
+    "regular_traits": [
+      "Crossover",
+      "Starfleet",
+      "Scientist"
+    ],
+    "other_traits": [],
+    "filename": "lieutenant-dax.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Gain 1 [[research]]/[[influence]]/[[military]]. You may spend 1 [[latinum]] to gain 1 [[research]]/[[influence]]/[[military]]. If you have a [[vulcan]] on duty, gain 1 [[research]]/[[influence]]/[[military]]. You may promote this card to Duty Officer.",
+      "table": "Reaction: When you would gain a card, scan 2 of the same suit instead, then draw a card.",
+      "goal": "",
+      "reward": "Special: If not logged, this card scores [[-1vp]]."
+    }
+  },
+  {
+    "id": "the-living-witness",
+    "name": "The Living Witness",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3PER08/13",
+    "variant": "original",
+    "glory": 4,
+    "position_indicator": "Rewards",
+    "species_traits": [],
+    "regular_traits": [
+      "Doctor",
+      "Hologram",
+      "Crossover",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "the-living-witness.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: Draw a card. You may free play an [[incident]]. If you have an [[ancient]] in play, log this card and you may (additionally) find and return an [[incident]].",
+      "table": "",
+      "goal": "Endgame: Score [[4vp]].",
+      "reward": ""
+    }
+  },
+  {
+    "id": "derika-tendi",
+    "name": "D'Erika Tendi",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3PER09/13",
+    "variant": "original",
+    "glory": 1,
+    "position_indicator": null,
+    "species_traits": [
+      "Orion"
+    ],
+    "regular_traits": [
+      "Shady"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "derika-tendi.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Attack Play: Discard a card to choose 2 of the following: steal 1 [[latinum]] OR gain a [[ship]] from the Junk OR gain 1 [[influence]] OR gain 1 [[military]]. If you have another [[orion]] in play, you may exhaust a [[ship]] to do up to all 4 instead.",
+      "table": "Attack Activation: Spend 2 [[latinum]] to send an [[away team]] to a neutral [[location]]. You may remove an opponent [[away team]] from the same [[location]] to gain 1 [[glory]].",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "jennifer-shreyan",
+    "name": "Jennifer Sh'reyan",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3PER10/13",
+    "variant": "original",
+    "glory": 1,
+    "position_indicator": null,
+    "species_traits": [
+      "Andorian"
+    ],
+    "regular_traits": [
+      "Pilot",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "jennifer-shreyan.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: Beam this card to a deployed [[ship]] to gain 2 [[dilithium]]. You may recall another card beamed to that [[ship]]. You may warp that [[ship]]. Support: After gaining a [[person]], draw a card and you may send an [[away team]] to a controlled [[location]].",
+      "table": "Activation: Warp a [[ship]] to draw 2 cards and discard one of them.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "kranch",
+    "name": "K'ranch",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3PER11/13",
+    "variant": "original",
+    "glory": 1,
+    "position_indicator": null,
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [],
+    "filename": "kranch.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Gain 1 [[military]]. Draw a card. You may log the drawn card to gain 2 [[glory]]. If you do, you may promote this card to Duty Officer.",
+      "table": "Reaction: After gaining a card, log the gained card to gain 1 [[dilithium]] and draw a card.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "maah",
+    "name": "Ma'ah",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3PER12/13",
+    "variant": "original",
+    "glory": 1,
+    "position_indicator": null,
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "maah.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Dismiss a Duty Officer to gain 1 [[influence]], 1 [[military]], and 1 [[glory]]. Support: After putting a [[klingon]] into play, gain a [[ship]]. Then, either spend an [[action]] and discard an [[incident]] OR take an [[incident]].",
+      "table": "Activation: Log a [[klingon]] / [[shady]] / [[lower decker]] from your hand or Discard pile to gain 1 [[influence]] and draw 2 cards.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "parmen",
+    "name": "Parmen",
+    "suit": "Person",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3PER13/13",
+    "variant": "original",
+    "glory": 1,
+    "position_indicator": null,
+    "species_traits": [],
+    "regular_traits": [
+      "Ancient",
+      "Augment",
+      "Telepath"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "parmen.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Attack Play: Find any card in your Draw deck. Exhaust an opponent Duty Officer and their [[captain]]. Play: Discard a card to gain 1 [[latinum]] and 1 [[influence]].",
+      "table": "Reaction [[inf6]]: After gaining a [[person]], except during your Resupply Step, discard a card to free play the gained card.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "betazed-intelligence",
+    "name": "Betazed Intelligence",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3ALL01/3",
+    "variant": "original",
+    "glory": 3,
+    "position_indicator": null,
+    "species_traits": [
+      "Betazoid"
+    ],
+    "regular_traits": [
+      "Spy",
+      "Telepath"
+    ],
+    "other_traits": [],
+    "filename": "betazed-intelligence.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: Find a [[beverage]]/[[ambassador]]/[[telepath]], except in your Reserve deck.",
+      "table": "",
+      "goal": "",
+      "reward": "Clean-up: Temporarily increase your hand size by 1 for each different one of [[starfleet]] / [[beverage]] / [[ambassador]] you have in play. If this increased your hand size by 2 or 3, log this card."
+    }
+  },
+  {
+    "id": "illyrians",
+    "name": "Illyrians",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3ALL02/3",
+    "variant": "original",
+    "glory": 3,
+    "position_indicator": null,
+    "species_traits": [],
+    "regular_traits": [
+      "Augment"
+    ],
+    "other_traits": [],
+    "filename": "illyrians.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: Promote a [[person]] from your hand or the Staging Area to Duty Officer. [[action]] Play: Discard a [[starfleet]] to scan 2 of [[person]]. Promote the gained card to Duty Officer.",
+      "table": "",
+      "goal": "",
+      "reward": "Clean-up: Gain 1 [[research]] for each Duty Officer you have in play. If you have no other [[augment]] in play, log this card. Special: While this card is in your Staging Area, you may have up to two additional [[person]] on duty."
+    }
+  },
+  {
+    "id": "nova-fleet",
+    "name": "Nova Fleet",
+    "suit": "Ally",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3ALL03/3",
+    "variant": "original",
+    "glory": 3,
+    "position_indicator": null,
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "nova-fleet.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Gain an [[ally]]/[[cargo]] from the Junk. Log this card. Support: When you junk a card from the Market, gain it to your hand instead. If your opponent has a [[lower decker]] in play, take an [[incident]].",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "gift-box",
+    "name": "Gift Box",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3CAR01/3",
+    "variant": "original",
+    "glory": 2,
+    "position_indicator": null,
+    "species_traits": [
+      "Betazoid"
+    ],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "gift-box.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Deploy this card. You may discard a card to gain a [[cargo]].",
+      "table": "Activation: Beam a [[cargo]] from your Discard pile here. Your opponent may draw a card. Reaction: After putting a [[betazoid]] into play (including this card), gain 1 [[latinum]].",
+      "goal": "",
+      "reward": "Resupply: You may recall a card beamed here."
+    }
+  },
+  {
+    "id": "moopsy",
+    "name": "Moopsy",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3CAR02/3",
+    "variant": "original",
+    "glory": 2,
+    "position_indicator": null,
+    "species_traits": [],
+    "regular_traits": [
+      "Creature"
+    ],
+    "other_traits": [
+      "Attack",
+      "Ongoing"
+    ],
+    "filename": "moopsy.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Attack Play: Spend 1 [[latinum]] to deploy this card. Force your opponent to log a [[person]] from their hand, Discard pile, or in play.",
+      "table": "Reaction: After you or your opponent logs a [[person]], draw a card.",
+      "goal": "",
+      "reward": "Resupply: Refresh this card. You may log a [[person]] from play. Refresh this card."
+    }
+  },
+  {
+    "id": "protocol-12",
+    "name": "Protocol 12",
+    "suit": "Cargo",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3CAR03/3",
+    "variant": "original",
+    "glory": 2,
+    "position_indicator": null,
+    "species_traits": [],
+    "regular_traits": [
+      "Shady",
+      "Doctor",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "protocol-12.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play [[mil5]]: For each [[doctor]] you have in play (excluding this card, max 3), send an [[away team]] to a [[location]]. If you sent 3, gain 1 [[glory]]. Play: Take an [[incident]] and log a [[person]]/[[directive]] from your hand or in play to gain 1 [[military]].",
+      "table": "",
+      "goal": "",
+      "reward": "Special: While this card is in your Staging Area, all of your [[person]] with [[doctor]] are additionally treated as [[augment]]."
+    }
+  },
+  {
+    "id": "fesarius",
+    "name": "Fesarius",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3SHI01/2",
+    "variant": "original",
+    "glory": 2,
+    "position_indicator": null,
+    "species_traits": [],
+    "regular_traits": [
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "filename": "fesarius.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: Deploy and warp this ship.",
+      "table": "Activation: Warp this ship. Activation: Spend 1 [[dilithium]] to beam a card here. Activation: Log a [[person]] with [[starfleet]] that is beamed here, discard a [[directive]], and exhaust another [[ship]] to take the top [[encounter]] to your Discard pile. Log this card.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "ris-talvath",
+    "name": "R.I.S. Talvath",
+    "suit": "Ship",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3SHI02/2",
+    "variant": "original",
+    "glory": 2,
+    "position_indicator": null,
+    "species_traits": [
+      "Romulan"
+    ],
+    "regular_traits": [
+      "Scientist"
+    ],
+    "other_traits": [],
+    "filename": "ris-talvath.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Deploy this ship. You may warp this ship.",
+      "table": "Reaction: After you or your opponent puts an [[anomaly]]/[[communication]]/[[time travel]] into play, place 1 [[dilithium]] on this card and you may warp this ship. Passive: When this ship is dismissed during your Control Step, gain 1 [[glory]] and gain all resources from this card.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "krulmuth-b",
+    "name": "Krulmuth-B",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3LOC01/2",
+    "variant": "original",
+    "glory": 2,
+    "position_indicator": "Starting",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly",
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "filename": "krulmuth-b.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Control: You may take an [[incident]] to scan for an [[orion]].",
+      "table": "Activation: Remove an [[away team]] from here to look at 2 random [[crossover]] from the Reward pile. Take one of them and destroy the other. Reaction: After putting a [[scientist]] or an [[orion]] into play, send an [[away team]] here.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "orion",
+    "name": "Orion",
+    "suit": "Location",
+    "source": "Common",
+    "game_box": "Second Contact",
+    "card_number": "3LOC02/2",
+    "variant": "original",
+    "glory": 1,
+    "position_indicator": "Advanced",
+    "species_traits": [
+      "Orion"
+    ],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "orion.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "Control: You may spend 1 [[latinum]] to gain a [[ship]] from the top of the deck, and free play it, if able.",
+      "table": "Activation: Log a [[ship]] from your hand or Discard pile to gain an [[action]] and 1 [[dilithium]]/[[latinum]].",
+      "goal": "Endgame: Score [[1vp]] for each of your [[orion]] cards.",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-carol-freeman",
+    "name": "Carol Freeman",
+    "suit": "Captain",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE01/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Captain",
+    "away_team": "5",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "freeman-carol-freeman.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "",
+      "table": "Reaction: After gaining [[research]]/[[influence]]/[[military]], discard a [[person]] to send an [[away team]] to the location of the *U.S.S. Cerritos*. Reaction: After returning an [[incident]], warp the *U.S.S. Cerritos*.",
+      "goal": "Endgame: Score [[1vp]] for every 2 cards in your Log.",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-uss-cerritos",
+    "name": "U.S.S. Cerritos",
+    "suit": "Ship",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE02/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Deployed",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "freeman-uss-cerritos.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Deploy this ship. You may beam a card here from your hand or Discard pile. You may spend 1 [[dilithium]] to gain 1 [[research]]/[[influence]]/[[military]], whichever is the lowest. Exhaust this ship.",
+      "table": "Activation: Spend 1 [[dilithium]] to warp this ship. Activation: Discard a card to beam a card here. Activation: Promote a [[person]] from your hand to Duty Officer.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-a-fleet-of-30-california-class-ships",
+    "name": "A Fleet of 30 California-Class Ships",
+    "suit": "Ship",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE03/25",
+    "variant": "original",
+    "glory": 3,
+    "position_indicator": "Development",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "freeman-a-fleet-of-30-california-class-ships.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ],
+    "text": {
+      "cost": "[[dilithium]] x6",
+      "hand": "[[action]] Play: Deploy and warp this ship. Refresh every deployed [[ship]].",
+      "table": "Passive: You may have an additional [[person]] on duty.",
+      "goal": "",
+      "reward": "Special: For the purposes of securing [[location]] this ship counts as 2 tokens. ^This operation applies to the Bot as well.^"
+    }
+  },
+  {
+    "id": "freeman-apergosians",
+    "name": "Apergosians",
+    "suit": "Ally",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE04/25",
+    "variant": "original",
+    "glory": 3,
+    "position_indicator": "Development",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "filename": "freeman-apergosians.jpg",
+    "icons": [],
+    "text": {
+      "cost": "[[latinum]] x3",
+      "hand": "[[action]] Play: Find a [[person]]/[[cargo]]. Duplicate one of the found card's play operations up to two times, ignoring any effect that would log this card. Then, log the found card. Gain 2 [[glory]]. Log this card.",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-tlyn",
+    "name": "T'Lyn",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE05/25",
+    "variant": "original",
+    "glory": 2,
+    "position_indicator": "Development",
+    "species_traits": [
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Scientist",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "freeman-tlyn.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ],
+    "text": {
+      "cost": "[[dilithium]] x2",
+      "hand": "Support: After logging a card, either gain 2 [[dilithium]] OR draw a card from your Discard pile. Then, you may either free play a [[lower decker]] OR promote a [[lower decker]] to Duty Officer from your hand or the Staging Area (can be this card).",
+      "table": "Reaction: After gaining a card, except during your Resupply Step, gain 1 [[research]] and you may spend 1 [[dilithium]] to free play the gained card.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-strange-new-worlds",
+    "name": "Strange New Worlds",
+    "suit": "Directive",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE06/25",
+    "variant": "original",
+    "glory": 2,
+    "position_indicator": "Development",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "freeman-strange-new-worlds.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ],
+    "text": {
+      "cost": "find 2 [[starfleet]] and log both",
+      "hand": "[[action]] Play: Select a controlled [[location]]. If there is 1+ [[away team]] and 1+ [[ship]] there, look at the top 2 [[encounter]]. Take one of them and return the other to the bottom of its deck. Log the selected [[location]] to gain 1 [[research]].",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-t88-diagnostic-tool",
+    "name": "T88 Diagnostic Tool",
+    "suit": "Cargo",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE07/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Development",
+    "species_traits": [],
+    "regular_traits": [
+      "Engineer"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "freeman-t88-diagnostic-tool.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ],
+    "text": {
+      "cost": "[[dilithium]] x2",
+      "hand": "Play: You may refresh a [[ship]]. Deploy this card.",
+      "table": "Reaction: When you would gain a card, scan 2 of the same suit instead.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-the-farm",
+    "name": "The Farm",
+    "suit": "Location",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE08/25",
+    "variant": "original",
+    "glory": 1,
+    "position_indicator": "Development",
+    "species_traits": [],
+    "regular_traits": [
+      "Doctor"
+    ],
+    "other_traits": [],
+    "filename": "freeman-the-farm.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ],
+    "text": {
+      "cost": "[[latinum]] x2, [[dilithium]] x2",
+      "hand": "[[action]] Play: Take control of this location. Control: You may free play an [[incident]].",
+      "table": "Activation: Beam a card here. Activation [[res5]]: Log all cards beamed here. If at least 2 of the logged cards have [[anomaly]], take the top [[encounter]] and log this card.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-kayshon",
+    "name": "Kayshon",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE09/25",
+    "variant": "original",
+    "glory": 2,
+    "position_indicator": "Development",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Security",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "freeman-kayshon.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ],
+    "text": {
+      "cost": "[[dilithium]] x2",
+      "hand": "[[action]] Play: Draw a card. You may discard up to one of each of the following: [[person]], [[cargo]], [[ship]], [[ally]], [[encounter]], [[incident]]. Gain 1 [[glory]] for each card discarded this way. Promote this card to Duty Officer.",
+      "table": "Activation [[mil5]]: Send an [[away team]] to a [[location]]. Repeat this for each [[spy]] your opponent has in play.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-shax",
+    "name": "Shax",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE10/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Development",
+    "species_traits": [
+      "Bajoran"
+    ],
+    "regular_traits": [
+      "Security",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "freeman-shax.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ],
+    "text": {
+      "cost": "[[dilithium]] x2",
+      "hand": "Play: Log a [[ship]] from your hand to gain 2 [[glory]]. Return up to 2 [[incident]].",
+      "table": "Attack Activation: Remove an opponent [[away team]] from a neutral [[location]] to gain 1 [[glory]].",
+      "goal": "",
+      "reward": "Special: After you log this card, draw it from your Log."
+    }
+  },
+  {
+    "id": "freeman-uss-carlsbad",
+    "name": "U.S.S. Carlsbad",
+    "suit": "Ship",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE11/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Reserve",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "freeman-uss-carlsbad.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Deploy this ship. You may beam a card here from your hand or Discard pile. You may spend 1 [[dilithium]] to gain 1 [[research]]/[[influence]]/[[military]], whichever is the lowest. Exhaust this ship.",
+      "table": "Activation: Spend 1 [[dilithium]] to warp this ship. Activation: Discard a card to beam a card here. Activation: Promote a [[person]] from your hand to Duty Officer.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-tana",
+    "name": "T'Ana",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE12/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Reserve",
+    "species_traits": [],
+    "regular_traits": [
+      "Doctor",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "freeman-tana.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Variable"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "Play: Gain 1 [[research]]. You may return an [[incident]] from your Discard pile.",
+      "table": "Reaction: After taking an [[incident]], return it, then put this card on the bottom of your deck and gain an [[action]]. Passive: This card has 1 [[res-skill]].",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-samanthan-rutherford",
+    "name": "Samanthan Rutherford",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE13/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Reserve",
+    "species_traits": [
+      "Human",
+      "Synthetic"
+    ],
+    "regular_traits": [
+      "Engineer",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "freeman-samanthan-rutherford.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Take an [[incident]] to enlist a Development. Support: After exhausting a [[ship]], refresh it and you may beam this card to it. If you have another [[synthetic]] in play, gain 1 [[glory]].",
+      "table": "[[action]] Activation: Gain 1 [[dilithium]], and 2 [[dilithium]] for each controlled [[location]] you have in play. If you have another [[engineer]] in play, you may discard a card to gain an [[action]].",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-dvana-tendi",
+    "name": "D'Vana Tendi",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE14/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Reserve",
+    "species_traits": [
+      "Orion"
+    ],
+    "regular_traits": [
+      "Weapon",
+      "Scientist",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "freeman-dvana-tendi.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play [[inf5]]: Spend 1 [[latinum]] to scan for [[orion]] and free play the gained card. Support: After promoting a [[lower decker]], gain 2 [[research]]/[[influence]]/[[military]] and you may promote this card to Duty Officer.",
+      "table": "Passive: You may spend [[latinum]] as if it was [[dilithium]] and vice versa. You may additionally have another [[person]] with [[starfleet]] on duty.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-subspace-phenomenon",
+    "name": "Subspace Phenomenon",
+    "suit": "Incident",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE15/25",
+    "variant": "original",
+    "glory": -2,
+    "position_indicator": "Reserve",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "freeman-subspace-phenomenon.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Discard a card to return this card. If the discarded card has [[res-skill]]/[[res-focus]], draw 2 cards and discard one of them. [[action]] Play: If you have a [[time travel]] in play, return this card and draw 2 cards and discard one of them.",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-second-contact",
+    "name": "Second Contact",
+    "suit": "Directive",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE16/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "freeman-second-contact.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Draw a card. You may gain an [[ally]] from the Junk. If your Reserve deck is empty, log this card; otherwise shuffle the gained card into your deck.",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-set-a-course",
+    "name": "Set a Course",
+    "suit": "Directive",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE17/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "freeman-set-a-course.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Discard up to 3 [[person]] to send the same number of [[away team]] to the same [[location]]. Play: Draw a card, then discard a card. Warp up to 2 of your [[ship]].",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-type-6a-shuttlecraft",
+    "name": "Type 6A Shuttlecraft",
+    "suit": "Ship",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE18/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "freeman-type-6a-shuttlecraft.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Send an [[away team]] to a [[location]] where you have a [[ship]]. You may put this card on the top of your deck. Play: Gain 1 [[dilithium]]. Then you may either: beam a card to a [[ship]] OR recall a card beamed to a [[ship]].",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-douglas-station",
+    "name": "Douglas Station",
+    "suit": "Location",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE19/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [
+      "Starbase",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "freeman-douglas-station.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Take control of this location. Control: You may gain a [[person]]. You may log a card from your hand or Discard pile.",
+      "table": "Activation: If you have an [[away team]] here, draw a card. If you have 4+ [[lower decker]] in play, draw a card and gain 1 [[dilithium]].",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-dooplers",
+    "name": "Dooplers",
+    "suit": "Ally",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE20/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "freeman-dooplers.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Take an [[incident]] to your Discard pile. Gain an [[ally]]. Gain 1 [[influence]]. Then either: spend 1 [[latinum]] OR shuffle this card into your deck.",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-anomaly-consolidation-day",
+    "name": "Anomaly Consolidation Day",
+    "suit": "Directive",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE21/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "filename": "freeman-anomaly-consolidation-day.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Junk a card from the Market. You may take an [[incident]]. You may discard an [[incident]] to gain a [[cargo]].",
+      "table": "",
+      "goal": "",
+      "reward": "Special: While this card is in your Staging Area, after resolving a support operation you may either: gain 2 [[dilithium]] OR draw a card and discard a card."
+    }
+  },
+  {
+    "id": "freeman-jack-ransom",
+    "name": "Jack Ransom",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE22/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "freeman-jack-ransom.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: You may draw a non-[[lower decker]] card from your Discard pile. Spend 1 [[dilithium]] to send an [[away team]] to a controlled [[location]]. You may discard a [[lower decker]] to trigger that card's control operation.",
+      "table": "Activation: Put a card on the top of your deck to gain a [[person]] to your Discard pile.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-bradward-boimler",
+    "name": "Bradward Boimler",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE23/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "freeman-bradward-boimler.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: Spend all your remaining [[action]] (possibly none). For each [[action]] spent this way, draw a card; then draw one additional card. Free play one of the drawn cards. Support: After promoting a [[person]], duplicate a play operation of that card.",
+      "table": "[[action]] Activation: Dismiss 4 [[lower decker]] (one of them can be this card) and take an [[incident]] to take the top [[encounter]].",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-beckett-mariner",
+    "name": "Beckett Mariner",
+    "suit": "Person",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE24/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "freeman-beckett-mariner.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Take 2 [[incident]] to gain a [[ship]] and free play the gained card. Support: After putting an [[ally]] into play, gain 1 [[latinum]] and send an [[away team]] to a [[location]] where you have a [[ship]].",
+      "table": "[[action]] Activation: Gain on one Specialty track ([[research]]/[[influence]]/[[military]]) for each matching Skill icon you have in play (excluding beamed cards). If you gained 3+ [[research]]/[[influence]]/[[military]], dismiss this card.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-red-alert",
+    "name": "Red Alert",
+    "suit": "Incident",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE25/25",
+    "variant": "original",
+    "glory": -2,
+    "position_indicator": "Incident Deck",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "freeman-red-alert.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Put a card on the top of your deck to return this card. You may promote a [[person]] from your Staging Area to Duty Officer.",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "freeman-mission-1",
+    "name": "Project Swing By",
+    "suit": "Mission",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE/M1",
+    "virtual": true,
+    "position_indicator": null,
+    "vp": 4,
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "icons": [],
+    "filename": "",
+    "text": {
+      "cost": "",
+      "hand": "",
+      "table": "",
+      "goal": "Goal: Have 4 [[ally]] on the same [[ship]], and at least two of [[military]]/[[influence]]/[[research]] at 4+.",
+      "reward": "Reward: Gain 4 [[dilithium]] and draw 4 cards. You may junk a card from the Market."
+    }
+  },
+  {
+    "id": "freeman-mission-2",
+    "name": "Beta Shift",
+    "suit": "Mission",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE/M2",
+    "virtual": true,
+    "position_indicator": null,
+    "vp": 1,
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "icons": [],
+    "filename": "",
+    "text": {
+      "cost": "",
+      "hand": "",
+      "table": "",
+      "goal": "Goal: Have 4 [[person]] including at least 2 [[lower decker]] on the same [[ship]].",
+      "reward": "Reward: You may scan for an [[anomaly]]. You may send an [[away team]] to a [[location]]. Gain 2 [[glory]]."
+    }
+  },
+  {
+    "id": "freeman-mission-3",
+    "name": "Calling all your friends",
+    "suit": "Mission",
+    "source": "Freeman",
+    "game_box": "Second Contact",
+    "card_number": "3FRE/M3",
+    "virtual": true,
+    "position_indicator": null,
+    "vp": 1,
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "icons": [],
+    "filename": "",
+    "text": {
+      "cost": "",
+      "hand": "",
+      "table": "",
+      "goal": "Goal: Have 5 [[ship]] (deployed and/or beamed) at the same neutral [[location]].",
+      "reward": "Reward: Two times: Gain 1 [[research]]/[[influence]]/[[military]], whichever is lowest. Scan for either [[res-focus]] or [[inf-focus]] or [[mil-focus]]."
+    }
+  },
+  {
+    "id": "pike-christopher-pike",
+    "name": "Christopher Pike",
+    "suit": "Captain",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK01/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Captain",
+    "away_team": "4+",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "filename": "pike-christopher-pike.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "",
+      "table": "Reaction: After putting a [[time travel]] into play, log an [[incident]] (from your hand) to gain 1 [[glory]]. Passive: Operations that find, free play, or return [[incident]] from your hand can also target cards from your Log.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "pike-improbable-unstoppable-sensational",
+    "name": "Improbable, Unstoppable, Sensational",
+    "suit": "Status",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK02/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Status",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "pike-improbable-unstoppable-sensational.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "",
+      "table": "Reaction: After you put a card with one or more Skill icons into play (excluding beaming), gain 1 on the Specialty track matching ^one^ of those icons.",
+      "goal": "",
+      "reward": "Clean-up: If you have no [[shady]]/[[attack]] in play, gain 1 [[influence]]; otherwise spend 1 [[glory]], if able."
+    }
+  },
+  {
+    "id": "pike-starbase-one",
+    "name": "Starbase One",
+    "suit": "Location",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK03/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Controlled Location",
+    "species_traits": [],
+    "regular_traits": [
+      "Starbase",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "pike-starbase-one.jpg",
+    "icons": [],
+    "away_team": "1",
+    "text": {
+      "cost": "",
+      "hand": "Control: Gain an [[action]].",
+      "table": "Activation: For every 2 [[ship]] you have in play, draw a card (max 3 cards). Activation: Promote a [[person]] from your hand to Duty Officer.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "pike-lt-scott",
+    "name": "Lt. Scott",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK04/26",
+    "variant": "original",
+    "glory": 2,
+    "position_indicator": "Development",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Engineer",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "pike-lt-scott.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ],
+    "text": {
+      "cost": "[[dilithium]] x3 and have enlisted *Pelia*.",
+      "hand": "Play: Dismiss a deployed [[ship]] to trigger a controlled [[location]]'s control operation. You may exhaust a [[ship]] to draw 2 cards and discard one of them.",
+      "table": "Activation: Gain 2 [[dilithium]]. Then, either find a [[ship]] OR refresh a [[ship]]. Activation: Discard a card to refresh a [[location]].",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "pike-talosians",
+    "name": "Talosians",
+    "suit": "Ally",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK05/26",
+    "variant": "original",
+    "glory": 3,
+    "position_indicator": "Development",
+    "species_traits": [],
+    "regular_traits": [
+      "Telepath"
+    ],
+    "other_traits": [],
+    "filename": "pike-talosians.jpg",
+    "icons": [],
+    "text": {
+      "cost": "[[dilithium]] x3, [[latinum]] x1",
+      "hand": "Play: Select one of [[person]] / [[cargo]] / [[ship]] / [[ally]]. You may swap a card of the selected suit between the Market and the Junk. You may draw a card of the selected suit from your Discard pile. Play: Draw 2 cards for each [[telepath]] you have in play (max 6 cards), then put 1 card on the top of your deck for each [[telepath]] you have in play.",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "pike-kherkovians",
+    "name": "Kherkovians",
+    "suit": "Ally",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK06/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Development",
+    "species_traits": [
+      "Alien"
+    ],
+    "regular_traits": [
+      "Anomaly",
+      "Doctor"
+    ],
+    "other_traits": [],
+    "filename": "pike-kherkovians.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ],
+    "text": {
+      "cost": "[[dilithium]] x3, and take an [[incident]]",
+      "hand": "Play: Find a card with multiple [[different species]]. [[action]] Play [[res9]]: Scan 2 of either [[person]], [[cargo]], or [[ally]]. Gain 1 [[glory]] for each [[different species]] on the gained card. Gain 1 [[glory]] if you have another [[doctor]] in play. Log this card.",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "pike-rigel-vii",
+    "name": "Rigel VII",
+    "suit": "Location",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK07/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Development",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "pike-rigel-vii.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ],
+    "text": {
+      "cost": "[[dilithium]] x2, [[latinum]] x2",
+      "hand": "[[action]] Play: Take control of this location. Control: Draw a card. You may beam a card here from your hand or Discard pile.",
+      "table": "[[action]] Activation: Draw a card. Log all cards beamed here. For every 2 cards logged this way, gain 1 [[glory]].",
+      "goal": "",
+      "reward": "Clean-up: You may beam a card here from your hand or Staging Area. Gain 1 [[dilithium]] for each card beamed here."
+    }
+  },
+  {
+    "id": "pike-pelia",
+    "name": "Pelia",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK08/26",
+    "variant": "original",
+    "glory": 3,
+    "position_indicator": "Development",
+    "species_traits": [],
+    "regular_traits": [
+      "Engineer",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "pike-pelia.jpg",
+    "icons": [],
+    "text": {
+      "cost": "[[latinum]] x3 OR free if *Hemmer* is logged.",
+      "hand": "Play: You may find and free play a [[cargo]].",
+      "table": "[[action]] Activation: Discard a card to gain a [[cargo]] from the Junk. You may spend 1 [[latinum]] to draw a card and gain 1 [[glory]].",
+      "goal": "",
+      "reward": "Special: While this card is in play (excluding beamed) and you have another [[engineer]] in play, this card is additionally treated as [[wildcard]]."
+    }
+  },
+  {
+    "id": "pike-james-kirk",
+    "name": "James Kirk (United Earth Fleet)",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK09/26",
+    "variant": "original",
+    "glory": 2,
+    "position_indicator": "Development",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "filename": "pike-james-kirk.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ],
+    "text": {
+      "cost": "[[dilithium]] x2, and have 2 [[incident]] logged.",
+      "hand": "Play: You may draw a [[directive]] from your Discard pile. You may free play a [[directive]]. [[action]] Play: Take an [[incident]] to scan 3 of [[person]] and draw a card.",
+      "table": "[[action]] Activation: Discard a [[person]] to gain a [[person]]/[[ship]]. Draw a card. Dismiss this card.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "pike-marie-batel",
+    "name": "Marie Batel",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK10/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Development",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "pike-marie-batel.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Influence"
+      }
+    ],
+    "text": {
+      "cost": "[[dilithium]] x3",
+      "hand": "Play: Free play a [[starfleet]]. Play: Promote *Marie Batel* and a [[person]] from your hand, Staging Area, or your Discard pile to Duty Officers.",
+      "table": "Activation: Refresh *Improbable, Unstoppable, Sensational*. Passive: You may have an additional [[person]] on duty.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "pike-dakrah",
+    "name": "Dak'rah",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK11/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Reserve",
+    "species_traits": [
+      "Klingon"
+    ],
+    "regular_traits": [
+      "Ambassador"
+    ],
+    "other_traits": [],
+    "filename": "pike-dakrah.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Take an [[incident]] to scan 1 of [[ally]].",
+      "table": "",
+      "goal": "",
+      "reward": "Resupply: You may lose 1 [[military]] to gain 3 [[influence]]. Clean-up: If you have a [[weapon]] in play, log this card and gain 1 [[glory]]."
+    }
+  },
+  {
+    "id": "pike-christine-chapel",
+    "name": "Christine Chapel",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK12/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Reserve",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Doctor"
+    ],
+    "other_traits": [],
+    "filename": "pike-christine-chapel.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Free play an [[incident]]. If you do, you may beam this card to a deployed [[ship]] to send an [[away team]] to its [[location]]. [[action]] Play [[res6]]: Scan for a [[doctor]]. Draw a card.",
+      "table": "This card cannot be promoted.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "pike-una-number-one-chin-riley",
+    "name": "Una \"Number One\" Chin-Riley",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK13/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Reserve",
+    "species_traits": [],
+    "regular_traits": [
+      "Augment",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "pike-una-number-one-chin-riley.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Discard a [[starfleet]] to gain a [[ship]]. You may discard a card to free play the gained card. Then, if you have no other [[augment]] in play, take an [[incident]].",
+      "table": "[[action]] Activation: Discard a card to send an [[away team]] to a [[location]].",
+      "goal": "",
+      "reward": "Resupply: If able, duplicate a resupply operation of a [[person]] in your Discard pile."
+    }
+  },
+  {
+    "id": "pike-political-crisis",
+    "name": "Political Crisis",
+    "suit": "Incident",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK14/26",
+    "variant": "original",
+    "glory": -2,
+    "position_indicator": "Reserve",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "pike-political-crisis.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Discard a card to return this card. If the discarded card has [[inf-skill]]/[[inf-focus]], gain 1 [[latinum]]. [[action]] Play: If you have an [[ambassador]] in play, return this card and gain 1 [[latinum]].",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "pike-time-crystal",
+    "name": "Time Crystal",
+    "suit": "Cargo",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK15/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Reserve",
+    "species_traits": [],
+    "regular_traits": [
+      "Time Travel"
+    ],
+    "other_traits": [],
+    "filename": "pike-time-crystal.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: Discard a card to recall a non-[[time travel]] card from your Staging Area. Log a [[time travel]] from in play (can be this card). Play: Take an [[incident]] to duplicate a play operation of a [[person]] or [[ally]] from your Development pile.",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "pike-hit-it",
+    "name": "Hit It",
+    "suit": "Directive",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK16/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "pike-hit-it.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: Draw 2 cards and discard one of the drawn cards. You may warp a [[ship]]. Play: If the *U.S.S. Enterprise* is at a controlled [[location]], take an [[incident]] to trigger that card's control operation.",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "pike-knowledge-of-a-terrible-fate",
+    "name": "Knowledge of a Terrible Fate",
+    "suit": "Directive",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK17/26",
+    "variant": "original",
+    "glory": -4,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [
+      "Time Travel"
+    ],
+    "other_traits": [
+      "Ongoing",
+      "Surprise"
+    ],
+    "filename": "pike-knowledge-of-a-terrible-fate.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Deploy this card.",
+      "table": "Activation: Log an [[encounter]] (from your hand) to destroy this card. Reaction: After taking an [[incident]], draw 2 cards.",
+      "goal": "",
+      "reward": "Resupply: Junk a [[person]]/[[ally]] from your Development pile. Surprise (Bot only): Gain 1 [[glory]]. Discard the bottom card of the Supplement deck. Destroy this card."
+    }
+  },
+  {
+    "id": "pike-strange-new-worlds",
+    "name": "Strange New Worlds",
+    "suit": "Directive",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK18/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "pike-strange-new-worlds.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Select a controlled [[location]]. If there is 1+ [[away team]] and 1+ [[ship]] there, look at the top 2 [[encounter]]. Take one of them and return the other to the bottom of its deck. Log the selected [[location]] to gain 1 [[research]].",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "pike-uss-enterprise",
+    "name": "U.S.S. Enterprise",
+    "suit": "Ship",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK19/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "pike-uss-enterprise.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Deploy this ship. Warp this ship OR beam a card here.",
+      "table": "Activation: Spend 1 [[dilithium]] to warp this ship. Activation: Discard a card to beam a card here. Activation: Promote a [[person]] from your hand to Duty Officer to refresh *Improbable, Unstoppable, Sensational*.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "pike-hemmer",
+    "name": "Hemmer",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK20/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [
+      "Aenar"
+    ],
+    "regular_traits": [
+      "Engineer",
+      "Starfleet",
+      "Telepath"
+    ],
+    "other_traits": [],
+    "filename": "pike-hemmer.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Spend 3 [[dilithium]] to gain a [[ship]] from the top of the deck, if it is [[attack]], take an [[incident]].",
+      "table": "[[action]] Activation: You may free play an [[incident]]. Log this card to select a secured neutral [[location]] and take control of it.",
+      "goal": "",
+      "reward": "Resupply: Gain 1 [[dilithium]]. You may recall a card beamed to a [[ship]]."
+    }
+  },
+  {
+    "id": "pike-lt-spock",
+    "name": "Lt. Spock",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK21/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [
+      "Human",
+      "Vulcan"
+    ],
+    "regular_traits": [
+      "Scientist",
+      "Starfleet",
+      "Telepath"
+    ],
+    "other_traits": [],
+    "filename": "pike-lt-spock.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Log a card from your hand to gain 3 [[dilithium]] and gain 1 [[research]]/[[influence]]/[[military]]. If the logged card has [[mil-skill]]/[[mil-focus]] gain 1 (additional) [[influence]].",
+      "table": "Activation: Discard a [[res-skill]]/[[res-focus]] to find any card, except in your Reserve deck.",
+      "goal": "",
+      "reward": "Resupply: If you have more [[research]] than [[influence]], exhaust this card to either: gain 1 [[glory]] OR draw a card."
+    }
+  },
+  {
+    "id": "pike-laan-noonien-singh",
+    "name": "La'an Noonien Singh",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK22/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Security",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "pike-laan-noonien-singh.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Take an [[incident]] to scan 1 of [[cargo]]. For each controlled [[location]] where you have an [[away team]], draw a card. If you have 2+ [[away team]] on a neutral [[location]], gain 1 [[military]].",
+      "table": "Activation: Beam a card to a [[ship]]. Passive: If you have a [[weapon]] in play, all [[mil-skill]] on your cards are treated as [[wild-skill]] instead.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "pike-joseph-mbenga",
+    "name": "Joseph M'Benga",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK23/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Doctor",
+      "Starfleet",
+      "Weapon"
+    ],
+    "other_traits": [],
+    "filename": "pike-joseph-mbenga.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Gain 1 [[research]]. You may return an [[incident]]. Junk a [[person]] from the Market, if able. If you do both, gain 1 [[glory]].",
+      "table": "Reaction: After discarding a card with [[mil-skill]]/[[wild-skill]] during your Action step, return an [[incident]] from your hand or Discard pile.",
+      "goal": "",
+      "reward": "Resupply [[mil5]]: You may send an [[away team]] to a [[location]] where you have a [[ship]]."
+    }
+  },
+  {
+    "id": "pike-cadet-uhura",
+    "name": "Cadet Uhura",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK24/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Communication",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "pike-cadet-uhura.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Spend 2 [[dilithium]] to gain a [[person]]/[[ally]]. [[action]] Play [[inf5]]: Spend 2 [[dilithium]] to gain an [[alien]], including from the Junk.",
+      "table": "Reaction: After exhausting *Improbable, Unstoppable, Sensational*, discard a card to draw a card from your Discard pile.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "pike-negotiate",
+    "name": "Negotiate",
+    "suit": "Directive",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK25/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Discard",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "pike-negotiate.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: Gain 1 [[latinum]] or 2 [[dilithium]]. You may discard up to 3 [[cargo]]/[[ship]]/[[ally]]. Gain 1 [[latinum]] and 1 [[dilithium]] for each card discarded this way. You may find an [[encounter]].",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "pike-erica-ortegas",
+    "name": "Erica Ortegas",
+    "suit": "Person",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK26/26",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Discard",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Pilot",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "pike-erica-ortegas.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Select a [[ship]] and warp it. You may spend 1 [[dilithium]] to send an [[away team]] to its [[location]]. You may take an [[incident]] to send an [[away team]] to the same [[location]].",
+      "table": "Reaction: After deploying a [[ship]], you may discard a card to gain 1 [[glory]], and you may discard a card to find *Hit it*.",
+      "goal": "",
+      "reward": "Resupply: You may warp a [[ship]] to gain 1 [[dilithium]]."
+    }
+  },
+  {
+    "id": "pike-mission-1",
+    "name": "Weight of the Future",
+    "suit": "Mission",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK/M1",
+    "virtual": true,
+    "position_indicator": null,
+    "vp": 3,
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "icons": [],
+    "filename": "",
+    "text": {
+      "cost": "",
+      "hand": "",
+      "table": "",
+      "goal": "Goal: Have 4 [[time travel]] in play (excluding your [[captain]]) and 2 deployed [[ongoing]].",
+      "reward": "Reward: Up to twice, return an [[incident]] from your hand, Discard pile, or Log. For each [[incident]] returned this way, draw a card."
+    }
+  },
+  {
+    "id": "pike-mission-2",
+    "name": "Boy Scout",
+    "suit": "Mission",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK/M2",
+    "virtual": true,
+    "position_indicator": null,
+    "vp": 4,
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "icons": [],
+    "filename": "",
+    "text": {
+      "cost": "",
+      "hand": "",
+      "table": "",
+      "goal": "Goal: Have 7 [[person]] in play, and [[influence]] at 7+.",
+      "reward": "Reward: Scan 2 of [[ally]]. Refresh a card for each non-[[starfleet]] [[person]] you have in play."
+    }
+  },
+  {
+    "id": "pike-mission-3",
+    "name": "To Explore",
+    "suit": "Mission",
+    "source": "Pike",
+    "game_box": "Second Contact",
+    "card_number": "3PIK/M3",
+    "virtual": true,
+    "position_indicator": null,
+    "vp": 2,
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "icons": [],
+    "filename": "",
+    "text": {
+      "cost": "",
+      "hand": "",
+      "table": "",
+      "goal": "Goal: Have 2 [[encounter]] in play, and have 3 [[starfleet]] and an [[alien]]/[[anomaly]] at the same neutral [[location]].",
+      "reward": "Reward: Take control of the [[location]] used to fulfill the goal. Remove 1 [[glory]] from the Stardate card."
+    }
+  },
+  {
+    "id": "riker-william-t-riker",
+    "name": "William T. Riker",
+    "suit": "Captain",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK01/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Captain",
+    "away_team": "4",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "riker-william-t-riker.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "",
+      "table": "Activation: Put a card on the top of your deck to draw a card of the same suit from your Discard pile. [[action]] Activation: Take an [[incident]] to send an [[away team]] to a [[location]]. If you targeted a controlled [[location]], you may spend 1 [[latinum]] to trigger that card's control operation.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-uss-titan",
+    "name": "U.S.S. Titan",
+    "suit": "Ship",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK02/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Deployed",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "riker-uss-titan.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Deploy this ship. Warp this ship OR beam a card here.",
+      "table": "Activation: Spend 1 [[dilithium]] to warp this ship. Activation: Discard a card to beam a card here. Activation: Promote a [[person]] from your hand to Duty Officer.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-nepenthe",
+    "name": "Nepenthe",
+    "suit": "Location",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK03/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Development",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "riker-nepenthe.jpg",
+    "icons": [],
+    "text": {
+      "cost": "Log a deployed [[ship]].",
+      "hand": "Play: Exhaust your [[captain]] to take control of this location. Control: You may scan for a [[synthetic]].",
+      "table": "Activation: Log a card from your hand or Discard pile. You may return an [[incident]] from the same place. If the logged card is [[android]], gain 3 [[glory]].",
+      "goal": "Endgame [[res9]]: Score [[3vp]].",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-solving-science-mysteries",
+    "name": "Solving Science Mysteries",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK04/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Development",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "riker-solving-science-mysteries.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      },
+      {
+        "type": "Focus",
+        "specialty": "Research"
+      }
+    ],
+    "text": {
+      "cost": "[[dilithium]]x every 2 [[military]]",
+      "hand": "Play: Take an [[incident]] to deploy this card. [[action]] Play: Spend 4 [[dilithium]] to scan for a [[scientist]] and draw a card. Deploy this card.",
+      "table": "Passive: All of your [[mil-skill]] are treated as [[res-skill]] instead. (They cannot be used as [[mil-skill]] any more, [[wild-skill]] can still be either.)",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-william-boimler-lt-jg",
+    "name": "William Boimler, Lt. JG",
+    "suit": "Person",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK05/25",
+    "variant": "original",
+    "glory": 2,
+    "position_indicator": "Development",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Anomaly",
+      "Spy",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "riker-william-boimler-lt-jg.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ],
+    "text": {
+      "cost": "[[dilithium]] x1, [[latinum]] x1, find 3 [[person]] and beam them to the same [[ship]].",
+      "hand": "Support: After exhausting your [[captain]], discard a card to scan 1 of [[cargo]]. If the gained card is [[beverage]], draw it.",
+      "table": "Passive: Increase your hand size by 1.",
+      "goal": "",
+      "reward": "Clean-up: If *Brad Boimler, Lt. jg* is in play, temporarily increase your hand size by 1."
+    }
+  },
+  {
+    "id": "riker-uss-zheng-he",
+    "name": "U.S.S. Zheng He",
+    "suit": "Ship",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK06/25",
+    "variant": "original",
+    "glory": 4,
+    "position_indicator": "Development",
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "riker-uss-zheng-he.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ],
+    "text": {
+      "cost": "[[dilithium]] x5",
+      "hand": "[[action]] Attack Play: Deploy this ship. If the opponent has at least one [[ship]] at a neutral [[location]], they take an [[incident]]. Refresh your [[captain]].",
+      "table": "Activation: Spend 1 [[dilithium]] to warp this ship. Activation: Discard a card to beam a card here. Activation: Spend 1 [[dilithium]] to recall this ship.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-proximity-blast",
+    "name": "Proximity Blast",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK07/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Development",
+    "species_traits": [],
+    "regular_traits": [
+      "Weapon"
+    ],
+    "other_traits": [
+      "Attack"
+    ],
+    "filename": "riker-proximity-blast.jpg",
+    "icons": [
+      {
+        "type": "Focus",
+        "specialty": "Military"
+      }
+    ],
+    "text": {
+      "cost": "[[dilithium]] x3",
+      "hand": "Attack Play: Dismiss an opponent [[ship]] sharing a [[location]] with one of your [[ship]]. You may spend 2 [[dilithium]] to draw 2 cards. If you do, your opponent takes an [[incident]]. Play [[inf5]]: Dismiss 3 [[weapon]] beamed to the same [[ship]] to take control of its neutral [[location]]. Log this card.",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-utilize",
+    "name": "Utilize",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK08/25",
+    "variant": "original",
+    "glory": 2,
+    "position_indicator": "Development",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "riker-utilize.jpg",
+    "icons": [],
+    "text": {
+      "cost": "[[dilithium]] x1, [[latinum]] x1, find/recall and log *Swooping In*.",
+      "hand": "[[action]] Play: Gain 1 [[dilithium]], and 2 [[dilithium]] for each controlled [[location]] you have in play. [[action]] Play: Gain on one Specialty track ([[research]]/[[influence]]/[[military]]) for each matching Skill icon you have in play (excluding beamed cards).",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-gluonic-distortion",
+    "name": "Gluonic Distortion",
+    "suit": "Status",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK09/25",
+    "variant": "original",
+    "glory": 4,
+    "position_indicator": "Status",
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly"
+    ],
+    "other_traits": [],
+    "filename": "riker-gluonic-distortion.jpg",
+    "icons": [],
+    "text": {
+      "cost": "[[dilithium]] x3, have an [[encounter]] in play",
+      "hand": "",
+      "table": "Passive: Your Draw deck is face-up. When interacting with your deck you can choose any of its cards.",
+      "goal": "",
+      "reward": "Resupply: Exhaust this card and take an [[incident]]. Clean-up: If this card is exhausted, shuffle your deck and log this card. Special: When this card is enlisted, put it into play immediately."
+    }
+  },
+  {
+    "id": "riker-chateau-picard",
+    "name": "Chateau Picard",
+    "suit": "Cargo",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK10/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Reserve",
+    "species_traits": [],
+    "regular_traits": [
+      "Beverage"
+    ],
+    "other_traits": [],
+    "filename": "riker-chateau-picard.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Spend 1 [[latinum]] and discard a [[directive]] to gain an [[ally]], including from the Junk. Junk a card from the Market. Play: Discard a [[starfleet]] to return an [[incident]] from your hand or Discard pile.",
+      "table": "",
+      "goal": "",
+      "reward": "Clean-up: Gain 1 [[glory]] ^from the supply^ for each [[beverage]] you have in play (max 3, excluding this card). Then, your opponent does the same for each [[beverage]] they have in play (max 5)."
+    }
+  },
+  {
+    "id": "riker-holodeck",
+    "name": "Holodeck",
+    "suit": "Cargo",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK11/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Reserve",
+    "species_traits": [],
+    "regular_traits": [
+      "Hologram",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "riker-holodeck.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: You may recall a Duty Officer. You may draw a card. Put a card on the top of your deck and junk a card from the Market. [[action]] Play: Spend 1 [[dilithium]] to duplicate a play operation of a [[person]]/[[cargo]]/[[ally]] from your hand or Discard pile. If you have an [[nx-01]] in play, gain 1 [[research]]/[[influence]]/[[military]]/[[glory]].",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-tactical-officer",
+    "name": "Tactical Officer (U.S.S. Titan)",
+    "suit": "Person",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK12/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Reserve",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Security",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "riker-tactical-officer.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Variable"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Variable"
+      },
+      {
+        "type": "Skill",
+        "specialty": "Variable"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Send an [[away team]] to a [[location]]. You may beam a card from your hand or Staging Area to a deployed [[ship]]. If you have another [[starfleet]] in your Staging Area, you may promote this card to Duty Officer.",
+      "table": "Passive: This card has 1 [[mil-skill]] for each [[person]] with [[starfleet]] you have in play (max 3), excluding this card.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-chief-engineer",
+    "name": "Chief Engineer (U.S.S. Titan)",
+    "suit": "Person",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK13/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Reserve",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Engineer",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "riker-chief-engineer.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: Find a [[ship]] and gain 1 [[dilithium]]. [[action]] Play: Discard a [[ship]] to scan for a [[weapon]] and draw a card.",
+      "table": "Passive: While this card is exhausted, all your other [[person]] with [[starfleet]] are additionally treated as [[weapon]]. Activation: Discard a card to discard the top card of your draw deck and gain 1 [[glory]].",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-brad-boimler-lt-jg",
+    "name": "Brad Boimler, Lt. JG",
+    "suit": "Person",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK14/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Reserve",
+    "species_traits": [
+      "Human"
+    ],
+    "regular_traits": [
+      "Ops",
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "riker-brad-boimler-lt-jg.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "Play: Spend all your remaining [[action]] (possibly none). For each [[action]] spent this way, draw a card; then draw one additional card. Free play one of the drawn cards. Support: After promoting a [[person]], duplicate a play operation of that card.",
+      "table": "[[action]] Activation: Discard a card with [[res-skill]] and take an [[incident]] to enlist a Development.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-deanna-troi-riker",
+    "name": "Deanna Troi-Riker",
+    "suit": "Person",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK15/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [
+      "Betazoid",
+      "Human"
+    ],
+    "regular_traits": [
+      "Starfleet",
+      "Telepath"
+    ],
+    "other_traits": [],
+    "filename": "riker-deanna-troi-riker.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Influence"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "Play: Draw a card, then either: put it on the top of your deck OR discard it OR log it.",
+      "table": "Passive: You may treat any [[incident]]'s play operation as \"[[action]] Play: Discard a card to return this card. If you do, you may draw a card\". Activation: Refresh your [[captain]].",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-first-officer",
+    "name": "First Officer (U.S.S. Titan)",
+    "suit": "Person",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK16/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [
+      "Ops",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "riker-first-officer.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Military"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "Play: If you have a [[scientist]] in play, you may spend 2 [[dilithium]] to gain an [[action]]. If you have a [[weapon]] in play, gain 1 [[military]]. You may exhaust your [[captain]] to recall a card beamed to a [[ship]].",
+      "table": "[[action]] Activation: Gain a [[cargo]].",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-strange-new-worlds",
+    "name": "Strange New Worlds",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK17/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "riker-strange-new-worlds.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Select a controlled [[location]]. If there is 1+ [[away team]] and 1+ [[ship]] there, look at the top 2 [[encounter]]. Take one of them and return the other to the bottom of its deck. Log the selected [[location]] to gain 1 [[research]].",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-recruit",
+    "name": "Recruit",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK18/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "riker-recruit.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Put a card on the top of your deck to gain a [[person]]. [[action]] Play: Take an [[incident]] to gain an [[ally]].",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-analyze",
+    "name": "Analyze",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK19/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "riker-analyze.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Take an [[incident]] to gain a [[ship]]. [[action]] Play: Discard 2 cards to gain a [[cargo]]. Play: Gain 2 [[dilithium]].",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-hostile-contact",
+    "name": "Hostile Contact",
+    "suit": "Incident",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK20/25",
+    "variant": "original",
+    "glory": -2,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "riker-hostile-contact.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Discard a card to return this card. If the discarded card has [[mil-skill]]/[[mil-focus]], gain 2 [[dilithium]]. [[action]] Play: If you have a [[communication]] in play, return this card and gain 2 [[dilithium]].",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-warp-in-the-factor-of-5-6-7-8",
+    "name": "Warp in the Factor of 5, 6, 7, 8!",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK21/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "riker-warp-in-the-factor-of-5-6-7-8.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: Draw 2 cards and discard one of the drawn cards. You may warp up to 3 [[ship]] with [[starfleet]]. [[action]] Play: For each deployed [[ship]] with [[starfleet]] you have, send an [[away team]] to its [[location]].",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-starbase-25",
+    "name": "Starbase 25",
+    "suit": "Location",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK22/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Available",
+    "species_traits": [],
+    "regular_traits": [
+      "Starbase",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "riker-starbase-25.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Take control of this location. Control: You may exhaust the *U.S.S. Titan* to gain 1 [[influence]]. You may spend 1 [[dilithium]] to send an [[away team]] here.",
+      "table": "Activation: If you have an [[away team]] here, draw a card. If you have 3+ total [[away team]] on 1 or more controlled [[location]], draw a card.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-swooping-in",
+    "name": "Swooping In",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK23/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Discard",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "riker-swooping-in.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Warp a [[ship]] to a controlled [[location]], if able. Gain 1 [[dilithium]], and 1 [[dilithium]] for each controlled [[location]] you have in play. If you have more [[res-skill]] than [[mil-skill]] in play (excluding beamed cards), gain 1 [[research]]. Otherwise, gain 1 [[military]].",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-red-alert",
+    "name": "Red Alert",
+    "suit": "Incident",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK24/25",
+    "variant": "original",
+    "glory": -2,
+    "position_indicator": "Discard",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "riker-red-alert.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Put a card on the top of your deck to return this card. You may promote a [[person]] from your Staging Area to Duty Officer.",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-the-riker-maneuver",
+    "name": "The Riker Maneuver",
+    "suit": "Directive",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK25/25",
+    "variant": "original",
+    "glory": null,
+    "position_indicator": "Discard",
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "filename": "riker-the-riker-maneuver.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Any"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Dismiss a Duty Officer to send an [[away team]] to a [[location]]. You may exhaust your [[captain]] to promote this card to Duty Officer as if it is a [[person]], then exhaust this card.",
+      "table": "Activation: Choose up to 2 of the following: gain 2 [[latinum]] OR free play a [[directive]]/[[person]] OR promote a [[person]] from your hand to Duty Officer. Dismiss this card.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "riker-mission-1",
+    "name": "Battling the Pakled",
+    "suit": "Mission",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK/M1",
+    "virtual": true,
+    "position_indicator": null,
+    "vp": 3,
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "icons": [],
+    "filename": "",
+    "text": {
+      "cost": "",
+      "hand": "",
+      "table": "",
+      "goal": "Goal: Meet 2 of the following 3 criteria: have a [[pakled]] logged OR have [[military]] at 8+ OR have [[influence]] at 4+.",
+      "reward": "Reward: Gain 3 [[dilithium]]/[[latinum]]. Up to twice, send an [[away team]] to a [[location]]. If you meet all 3 criteria, gain 2 [[glory]]."
+    }
+  },
+  {
+    "id": "riker-mission-2",
+    "name": "Spirit of Starfleet",
+    "suit": "Mission",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK/M2",
+    "virtual": true,
+    "position_indicator": null,
+    "vp": 2,
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "icons": [],
+    "filename": "",
+    "text": {
+      "cost": "",
+      "hand": "",
+      "table": "",
+      "goal": "Goal: Have a [[starfleet]] on duty, and have 5 cards with [[res-skill]]/[[wild-skill]] in play (excluding beamed cards).",
+      "reward": "Reward: Gain an [[action]]. Scan for [[any species]] of your choice. (Name the species before scanning.)"
+    }
+  },
+  {
+    "id": "riker-mission-3",
+    "name": "Messages from Old Friends",
+    "suit": "Mission",
+    "source": "Riker",
+    "game_box": "Second Contact",
+    "card_number": "3RIK/M3",
+    "virtual": true,
+    "position_indicator": null,
+    "vp": 2,
+    "species_traits": [],
+    "regular_traits": [],
+    "other_traits": [],
+    "icons": [],
+    "filename": "",
+    "text": {
+      "cost": "",
+      "hand": "",
+      "table": "",
+      "goal": "Goal: Have 4 different of [[klingon]] / [[pilot]] / [[doctor]] / [[scientist]] / [[synthetic]] in play.",
+      "reward": "Reward: Refresh your [[captain]]. Take the bottom [[encounter]]."
+    }
+  }
+]

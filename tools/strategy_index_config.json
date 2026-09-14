@@ -1,0 +1,51 @@
+{
+ "stopwords": [
+  "Orion",
+  "Vulcan",
+  "Klingon",
+  "Romulan",
+  "Earth",
+  "Phasers",
+  "Data",
+  "Memory Alpha"
+ ],
+ "aliases": {
+  "mekleth": [
+   "mek leth"
+  ],
+  "vger": [
+   "v ger"
+  ],
+  "uss-enterprise-c": [
+   "enterprise c"
+  ],
+  "uss-enterprise-d": [
+   "enterprise d"
+  ],
+  "b-4": [
+   "b 4"
+  ]
+ },
+ "deck_prefix_by_guide": {
+  "picard.html": "picard",
+  "sisko.html": "sisko",
+  "koloth.html": "koloth",
+  "sela.html": "sela",
+  "shran.html": "shran",
+  "burnham.html": "burnham",
+  "georgiou.html": "georgiou",
+  "soval.html": "soval",
+  "kirk.html": "kirk",
+  "archer.html": "archer"
+ },
+ "exclude_files": [
+  "index.html",
+  "cards.html",
+  "card-browser-mockup.html",
+  "harmless_kitten.html"
+ ],
+ "max_hits_per_guide": 2,
+ "snippet_max_chars": 420,
+ "min_name_length": 4,
+ "skip_lore_in_text_mode": true
+}

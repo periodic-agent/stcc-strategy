@@ -1,0 +1,94 @@
+{
+ "resupply": {
+  "label": "RESUPPLY",
+  "bar": "#62db5a",
+  "body": "#e9e8e2",
+  "keyword": "#2bbe65",
+  "text": "dark"
+ },
+ "endgame": {
+  "label": "ENDGAME",
+  "bar": "#e03511",
+  "body": "#eecac7",
+  "keyword": "#e03511",
+  "text": "dark"
+ },
+ "cleanup": {
+  "label": "CLEAN-UP",
+  "bar": "#77dc6b",
+  "body": "#e9e8e2",
+  "keyword": "#43c271",
+  "text": "dark"
+ },
+ "table": {
+  "label": "REACTION + PASSIVE",
+  "bar": "#237ccf",
+  "body": "#8aacd9",
+  "keyword": "#ffffff",
+  "text": "light"
+ },
+ "banner": {
+  "label": "no keyword",
+  "bar": "#bdbcb5",
+  "body": "#e9e8e2",
+  "keyword": "#c24b36",
+  "text": "dark"
+ },
+ "passive": {
+  "label": "PASSIVE",
+  "bar": "#146aaa",
+  "body": "#7693b0",
+  "keyword": "#ffffff",
+  "text": "light"
+ },
+ "special": {
+  "label": "SPECIAL",
+  "bar": "#bea7b5",
+  "body": "#c0b2b7",
+  "keyword": "#91388a",
+  "text": "dark"
+ },
+ "play": {
+  "label": "PLAY + SUPPORT",
+  "bar": "#d6d6d5",
+  "body": "#e9e8e2",
+  "keyword": "#14161c",
+  "text": "dark"
+ },
+ "activation": {
+  "label": "ACTIVATION",
+  "bar": "#096abd",
+  "body": "#7ea3cc",
+  "keyword": "#ffffff",
+  "text": "light"
+ },
+ "cost": {
+  "label": "DEV. COST",
+  "bar": "#202128",
+  "body": "#44454d",
+  "keyword": "#ffffff",
+  "text": "light",
+  "mode": "inbar"
+ },
+ "surprise": {
+  "label": "SURPRISE",
+  "bar": "#e9cbe2",
+  "body": "#e9d9db",
+  "keyword": "#a355af",
+  "text": "dark"
+ },
+ "goal": {
+  "label": "GOAL",
+  "bar": "#0a375d",
+  "body": "#fefefe",
+  "keyword": "#0a375d",
+  "text": "dark"
+ },
+ "reward": {
+  "label": "REWARD",
+  "bar": "#62db5a",
+  "body": "#dff0da",
+  "keyword": "#2bbe65",
+  "text": "dark"
+ }
+}

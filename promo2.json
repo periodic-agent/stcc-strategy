@@ -1,0 +1,162 @@
+[
+  {
+    "id": "drones-of-cube-90182",
+    "name": "Drones of Cube 90182",
+    "suit": "Ally",
+    "source": "Promo",
+    "game_box": "Promo Pack 2",
+    "card_number": "0ALL01/?",
+    "glory": 3,
+    "position_indicator": null,
+    "species_traits": [
+      "Borg"
+    ],
+    "regular_traits": [],
+    "other_traits": [
+      "Lower Decker"
+    ],
+    "filename": "drones-of-cube-90182.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: Beam this card to a [[ship]]. Either: refresh that [[ship]] OR draw a card. You may spend 1 [[dilithium]] to do both instead. Support: After putting a [[borg]] into play, spend 1 [[dilithium]] to draw a card and gain 2 [[research]]. Support [[col5]]: After assimilating a card, gain 1 [[collective]] and draw 2 cards.",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "frank-hollander",
+    "name": "Frank Hollander",
+    "suit": "Cargo",
+    "source": "Promo",
+    "game_box": "Promo Pack 2",
+    "card_number": "0CAR02/?",
+    "glory": 2,
+    "position_indicator": null,
+    "species_traits": [
+      "Android"
+    ],
+    "regular_traits": [
+      "Anomaly",
+      "Hologram"
+    ],
+    "other_traits": [],
+    "filename": "frank-hollander.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: Log a [[cargo]] from your hand, Discard pile, or in play to gain 1 [[glory]]. You may free play a [[hologram]]/[[incident]].",
+      "table": "",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "golden-statue-of-obrien",
+    "name": "Golden Statue of O'Brien",
+    "suit": "Cargo",
+    "source": "Promo",
+    "game_box": "Promo Pack 2",
+    "card_number": "0CAR03/?",
+    "glory": 2,
+    "position_indicator": null,
+    "species_traits": [],
+    "regular_traits": [
+      "Starfleet"
+    ],
+    "other_traits": [
+      "Ongoing"
+    ],
+    "filename": "golden-statue-of-obrien.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Play: You may find an [[engineer]], except in your Reserve deck. Deploy this card.",
+      "table": "Reaction: After logging an [[engineer]], recall a beamed card.",
+      "goal": "Endgame: Score [[1vp]] for each [[engineer]] in your Log.",
+      "reward": ""
+    }
+  },
+  {
+    "id": "starbase-80",
+    "name": "Starbase 80",
+    "suit": "Location",
+    "source": "Promo",
+    "game_box": "Promo Pack 2",
+    "card_number": "0LOC01/?",
+    "glory": 3,
+    "position_indicator": "Advanced",
+    "species_traits": [],
+    "regular_traits": [
+      "Ops",
+      "Starfleet",
+      "Starbase"
+    ],
+    "other_traits": [],
+    "filename": "starbase-80.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "Control: Gain a [[person]]/[[cargo]]/[[ship]] from the Junk.",
+      "table": "[[action]] Activation: Beam a [[person]] here to junk an [[incident]] from your hand or Discard pile. You may junk a card from the Market. Reaction: When gaining a card, log a card beamed here to include the Junk. Passive: When taking an [[incident]], you may take it from the Junk.",
+      "goal": "",
+      "reward": ""
+    }
+  },
+  {
+    "id": "subspace-rhapsody",
+    "name": "Subspace Rhapsody",
+    "suit": "Incident",
+    "source": "Promo",
+    "game_box": "Promo Pack 2",
+    "card_number": "0INC03/?",
+    "glory": -2,
+    "position_indicator": null,
+    "species_traits": [],
+    "regular_traits": [
+      "Anomaly",
+      "Communication"
+    ],
+    "other_traits": [],
+    "filename": "subspace-rhapsody.jpg",
+    "icons": [],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Put a [[directive]] in your Staging Area (without triggering its play operation) to return this card. You may sing the text of its first play operation to refresh either a Duty Officer OR your [[captain]].",
+      "table": "",
+      "goal": "",
+      "reward": "Special: During setup, replace a random [[incident]] in the Incident deck with this card."
+    }
+  },
+  {
+    "id": "uss-cabot",
+    "name": "U.S.S. Cabot",
+    "suit": "Ship",
+    "source": "Promo",
+    "game_box": "Promo Pack 2",
+    "card_number": "0SHI02/?",
+    "glory": 2,
+    "position_indicator": null,
+    "species_traits": [],
+    "regular_traits": [
+      "Scientist",
+      "Starfleet"
+    ],
+    "other_traits": [],
+    "filename": "uss-cabot.jpg",
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ],
+    "text": {
+      "cost": "",
+      "hand": "[[action]] Play: Deploy this ship. You may take an [[incident]] to scan for a [[creature]].",
+      "table": "Activation: Spend 1 [[dilithium]] to warp this ship. Activation: Discard a card to beam a card here. Passive: After exhausting this card, either: free play *Tribbles* OR draw *Tribbles* from your Discard pile.",
+      "goal": "",
+      "reward": "Resupply: Draw a card for each [[creature]] you have in play. If you drew 3 or more, gain 1 [[glory]] and log this card."
+    }
+  }
+]

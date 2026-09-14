@@ -1,0 +1,1306 @@
+[
+  {
+    "captain": "Archer",
+    "variant": null,
+    "id": "archer",
+    "traits": [
+      {
+        "key": "[[time travel]]",
+        "text": "Gain 1 [[research]], 1 [[influence]], 1 [[military]]. Continue resolution."
+      },
+      {
+        "key": "[[nx-01]]",
+        "text": "If this card is a [[person]], gain a [[res-focus]]/[[inf-focus]]/[[mil-focus]] > [[cargo]]. Otherwise, if this card is a [[cargo]], gain an [[incident]] and resolve the top card of the Supplement deck. Otherwise, continue resolution."
+      },
+      {
+        "key": "[[vulcan]] / [[andorian]] / [[tellarite]]",
+        "text": "Discard the top card of the Supplement deck. If able, gain [[andorian]]/[[vulcan]]/[[tellarite]]. Otherwise add an [[away team]] token from the supply to the Bot [[captain]] card (max 6 [[away team]] total), and send it to a neutral [[location]]. Continue resolution."
+      },
+      {
+        "key": "[[xindi]]",
+        "text": "Gain 1 [[influence]]. If Bot has 7 or fewer [[influence]], gain a [[xindi]] > [[time travel]] > [[andorian]]/[[tellarite]]/[[vulcan]], including from the Junk, if able. Otherwise, gain top [[encounter]] and log this card, and @you exhaust a controlled /@[[location]], and $if you have a /$[[xindi]]$ in play,/$ both the bot and @you take an /@[[incident]]."
+      },
+      {
+        "key": "[[attack]]",
+        "text": "Send an [[away team]] to a neutral [[location]]. If able, @you remove all your /@[[away team]] from a neutral [[location]] where the bot has a [[ship]] then log this card. Otherwise, log a non-[[nx-01]] card from the bot Discard pile and gain all resources from a card in the Market."
+      }
+    ],
+    "suits": [
+      {
+        "suit": "incident",
+        "text": "Log the top card of the Bot deck. Gain 1 [[research]]. Return this card.",
+        "do_text": "Log the top card of the Bot deck. Gain 1 [[research]]. Return this card."
+      },
+      {
+        "suit": "ship",
+        "text": "Discard the top 2 cards of the Bot deck. Deploy this [[ship]]; it explores. If able, send an [[away team]] to a neutral [[xindi]]/[[tellarite]]; otherwise gain 1 [[glory]].",
+        "do_text": "Deploy this [[ship]]; it engages. Send an [[away team]] to a neutral [[xindi]]/[[tellarite]] > [[location]]. Gain 1 [[military]]. Dismiss Duty Officer."
+      },
+      {
+        "suit": "ally",
+        "text": "Gain [[andorian]]/[[vulcan]] > [[alien]]/[[ambassador]] > [[person]]. Log this card.",
+        "do_text": "Gain [[xindi]] > [[tellarite]] > [[ship]]. Log this card."
+      },
+      {
+        "suit": "cargo",
+        "text": "Discard the top 2 cards of the Bot deck. Resolve an [[nx-01]] from Bot Discard if able; otherwise gain a [[ship]] and gain an [[incident]].",
+        "do_text": "Log the top card of the Bot deck. Send an [[away team]] to a neutral [[xindi]]/[[tellarite]] > [[location]]. Dismiss Duty Officer. Log this card."
+      },
+      {
+        "suit": "person",
+        "text": "Gain [[xindi]]/[[andorian]] > [[cargo]]. Promote this card to Duty Officer.",
+        "do_text": "Resolve a [[directive]] from the Bot Discard pile if able; otherwise gain 1 [[glory]]. Dismiss Duty Officer."
+      },
+      {
+        "suit": "directive",
+        "text": "Discard the top card of the Bot deck. Gain [[nx-01]] if able; otherwise twice: gain 1 [[research]] / [[influence]] / [[military]], whichever is lower. Promote a [[person]] with [[nx-01]] from the Bot Discard pile to Duty Officer, if able.",
+        "do_text": "If able to do both, log a controlled [[location]] and remove 2 [[away team]] to take top [[encounter]], then log this card. Otherwise, gain [[nx-01]] > [[ally]]/[[ship]]. If a [[ship]] was gained, dismiss Duty Officer; otherwise send [[away team]] to a neutral [[location]]."
+      },
+      {
+        "suit": "encounter",
+        "text": "Discard the top card of the Supplement deck. Log this card.",
+        "do_text": "Resolve the top card of the Supplement deck. Log this card."
+      },
+      {
+        "suit": "location",
+        "text": "Discard the top 2 cards of the Bot deck. Gain a [[person]]. Gain 3 [[glory]] from the supply.",
+        "do_text": "Discard the top card of the Supplement deck. Log the top 2 cards of the Bot deck. Gain 1 [[glory]] (from the Stardate card), and another 2 [[glory]] from the supply. Log Duty Officer."
+      }
+    ],
+    "special": null,
+    "campaign": {
+      "win": {
+        "cards": "[[nx-01]] / [[andorian]] / [[tellarite]]",
+        "bonus": [
+          "BOOST: After drawing the starting hand, enlist a Reserve.",
+          "BOOST: After drawing the starting hand, spend 1 [[dilithium]] to scan for [[nx-01]]."
+        ]
+      },
+      "loss": {
+        "cards": "[[xindi]] / [[vulcan]] / [[ally]]",
+        "bonus": [
+          "BOOST: After drawing the starting hand, spend 1 [[glory]] to scan for [[nx-01]].",
+          "REINFORCE: A non-[[incident]] card from your Reserve deck."
+        ]
+      }
+    }
+  },
+  {
+    "captain": "Burnham",
+    "variant": null,
+    "id": "burnham",
+    "traits": [
+      {
+        "key": "[[creature]]",
+        "text": "Gain 1 [[military]]. Gain a [[person]] / [[cargo]]. If a [[ship]] is in Bot Discard pile, deploy it; it explores."
+      },
+      {
+        "key": "[[scientist]]",
+        "text": "Log the top card of the Bot deck. Take an [[incident]]. Gain 1 [[research]]. Gain an [[ally]]."
+      },
+      {
+        "key": "[[anomaly]]",
+        "text": "If a [[person]] is in Bot Discard pile, promote it to Duty Officer. If this card is a [[ship]], deploy it; it explores. Otherwise, gain 2 [[glory]]."
+      },
+      {
+        "key": "[[kelpien]]",
+        "text": "If able, gain a [[kelpien]]. Otherwise, gain the card in the Market with the most [[dilithium]] > most [[glory]]. If this card is a [[person]], promote it to Duty Officer."
+      }
+    ],
+    "suits": [
+      {
+        "suit": "incident",
+        "text": "Discard the top card of the Bot deck. Gain 1 [[glory]]. Gain a [[scientist]] > [[creature]] > [[person]]. Return this card.",
+        "do_text": "Log the top card of the Bot deck. Gain 2 [[research]]. Send an [[away team]] to a neutral [[location]]. Return this card."
+      },
+      {
+        "suit": "ship",
+        "text": "Deploy this [[ship]]; it engages. Send an [[away team]] to a neutral [[location]].",
+        "do_text": "Gain 1 [[military]]. Deploy this [[ship]]; it explores. Send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "suit": "ally",
+        "text": "Discard the top 3 cards of the Bot deck. Take an [[incident]]. Gain 1 [[research]].",
+        "do_text": "Discard the top 3 cards of the Bot deck. Gain 1 [[military]]. Send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "suit": "cargo",
+        "text": "Gain the card in the Market with the most [[dilithium]] > most [[glory]]. Send an [[away team]] to a neutral [[location]]. Log this card.",
+        "do_text": "Log the top card of the Bot deck. Gain a [[ship]]. Log Duty Officer."
+      },
+      {
+        "suit": "person",
+        "text": "Gain 1 [[research]]. Send an [[away team]] to a neutral [[location]]. Promote this card to Duty Officer.",
+        "do_text": "Discard the top 2 cards of Bot deck. Gain 1 [[research]] / [[influence]] (whichever is lower). Send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "suit": "directive",
+        "text": "Discard the top 2 cards of the Bot deck. Gain 2 [[influence]]. Remove 1 [[glory]] from the stardate card.",
+        "do_text": "If able to do both, log a controlled [[location]] and remove an [[away team]] to gain top [[encounter]]. Otherwise, discard the top 2 cards of the Bot deck and gain the card in the Market with the most [[dilithium]] > most [[glory]]."
+      },
+      {
+        "suit": "encounter",
+        "text": "Log the top 2 cards of the Bot deck. Take a [[person]].",
+        "do_text": "Gain 1 [[research]]. Gain 1 [[influence]]. Gain a [[scientist]] > [[anomaly]] > [[ship]]. Log this card."
+      },
+      {
+        "suit": "location",
+        "text": "Discard the top 2 cards of the Bot deck. Gain 1 [[military]]. Gain 1 [[research]] / [[influence]] (whichever is lower).",
+        "do_text": "Log the top 2 cards of the Bot deck. Gain 1 [[research]]. Dismiss Duty Officer."
+      }
+    ],
+    "special": "During Clean-up Step, *instead of* adding [[glory]], remove 1 [[glory]] from the Stardate card and add 2 [[dilithium]] to one Market card instead. At the end of the game, the bot scores [[1vp]] per [[dilithium]] (instead of the usual [[1vp]] per 2 [[dilithium]]).",
+    "campaign": {
+      "win": {
+        "cards": "[[person]] / [[creature]]",
+        "bonus": [
+          "BOOST: After drawing the starting hand, draw 2 cards.",
+          "REINFORCE: A non-[[incident]] card from your Reserve deck"
+        ]
+      },
+      "loss": {
+        "cards": "[[cargo]] / [[starfleet]] / [[person]]",
+        "bonus": [
+          "BOOST: After drawing the starting hand, draw 1 card.",
+          "REINFORCE: A non-[[incident]] card from your Available cards."
+        ]
+      }
+    }
+  },
+  {
+    "captain": "Freeman",
+    "variant": null,
+    "id": "freeman",
+    "traits": [
+      {
+        "key": "[[orion]]",
+        "text": "If the Bot has 3 or fewer [[influence]], gain 1 [[influence]]. Otherwise, if able gain an [[orion]] including from the Junk; otherwise gain 2 [[glory]]. Gain 1 [[influence]]. Continue resolution."
+      },
+      {
+        "key": "[[lower decker]]",
+        "text": "If this card is a [[person]] and the Bot has no Duty Officer, promote this card to Duty Officer and resolve the top card of the Bot deck; otherwise discard the top 2 cards of the Bot deck and continue resolution."
+      },
+      {
+        "key": "[[anomaly]]",
+        "text": "Junk the most valuable card in the Market (ignoring any with tokens). Gain an [[incident]] and a [[cargo]]. If there is an [[anomaly]] in the Bot's Log already, gain the top [[encounter]] and destroy this card; otherwise log this card."
+      },
+      {
+        "key": "[[doctor]]",
+        "text": "Gain 1 [[research]]. Discard the top 2 cards of the Bot deck. If able, return an [[incident]] from the Bot Discard pile; otherwise gain 1 [[research]]."
+      },
+      {
+        "key": "[[security]]/[[ops]]",
+        "text": "If able, @you remove an /@[[away team]]@ from a neutral /@[[location]] and the Bot gains 1 [[research]]/[[influence]]/[[military]] (whichever is lower); otherwise gain 2 [[glory]] and 2 [[military]]."
+      }
+    ],
+    "suits": [
+      {
+        "suit": "incident",
+        "text": "Log the top card of the Bot deck. Return this card.",
+        "do_text": "Send an [[away team]] to a neutral [[location]]. Gain 1 [[military]]. Return this card."
+      },
+      {
+        "suit": "ship",
+        "text": "Deploy this [[ship]]; it explores. Send an [[away team]] to a neutral [[location]]. If able, promote a [[person]] from Bot Discard pile to Duty Officer; otherwise gain a [[lower decker]] > [[orion]]/[[security]]/[[ops]] > [[ally]].",
+        "do_text": "Deploy this [[ship]]; it explores. Send an [[away team]] to a neutral [[location]]. If Duty Officer is [[lower decker]], dismiss them; otherwise log them and the top card of the Bot deck."
+      },
+      {
+        "suit": "ally",
+        "text": "Gain a [[person]]. Log the top card of the Bot deck. Log this card.",
+        "do_text": "Discard the top 2 cards of the Bot deck. Gain a [[person]]. Log the top card of the Bot deck. Log this card."
+      },
+      {
+        "suit": "cargo",
+        "text": "Discard the top 2 cards of the Bot deck. Send an [[away team]] to a neutral [[location]]. If able, promote a [[person]] from Bot Discard pile to Duty Officer; otherwise gain [[ship]]/[[ally]].",
+        "do_text": "Discard the top 2 cards of the Bot deck. Gain a [[person]]. If able, resolve a [[ship]] from the Bot Discard pile; otherwise gain 1 [[research]]/[[influence]]/[[military]], whichever is higher. Log the top card of the Bot deck. Log this card."
+      },
+      {
+        "suit": "person",
+        "text": "Log the top card of the Bot deck. Gain 1 [[research]] / [[military]] (whichever is lower). If the Bot has 4 or more [[research]], gain [[lower decker]]/[[anomaly]]/[[doctor]], including from the Junk. If the Bot has 4 or more [[military]], send an [[away team]] to a neutral [[location]]. Promote this card to Duty Officer.",
+        "do_text": "Gain 1 [[research]]. If this card is [[synthetic]] take an [[incident]] and discard the top card of the Supplement deck. If able, gain a [[res-focus]]/[[inf-focus]]/[[mil-focus]] > [[ship]]. Dismiss Duty Officer."
+      },
+      {
+        "suit": "directive",
+        "text": "Take a [[lower decker]] if able; otherwise gain a [[ship]]/[[ally]] and take an [[incident]]. Send an [[away team]] to a neutral [[location]].",
+        "do_text": "If able to do both, log a controlled [[location]] and remove 2 [[away team]] to take top [[encounter]], then log this card. Otherwise gain 1 [[research]] / [[military]], whichever is lower, and discard the top card of the Bot deck."
+      },
+      {
+        "suit": "encounter",
+        "text": "Gain 2 [[glory]] and log this card.",
+        "do_text": "Take a [[lower decker]]/[[orion]]/[[anomaly]]/[[doctor]]/[[security]]/[[ops]], if able, and log this card; otherwise log the top 2 cards of the Bot deck."
+      },
+      {
+        "suit": "location",
+        "text": "Gain 1 [[influence]]. Discard the top card of the Bot deck. Return an [[incident]] from the Bot Discard pile if able; otherwise gain a [[person]].",
+        "do_text": "Discard the top 2 cards of the Bot deck. Gain 1 [[influence]]. Log the top card of the Bot deck. If the Duty Officer is [[lower decker]], dismiss them; otherwise log them."
+      }
+    ],
+    "special": "If a card with [[lower decker]] would be logged when logging the top card of the Bot deck, ^discard it instead^. #newline Cards with [[lower decker]] are considered +1 value for the Bot.",
+    "campaign": {
+      "win": {
+        "cards": "[[lower decker]] / [[anomaly]] / [[starfleet]]",
+        "bonus": [
+          "BOOST: Before drawing the starting hand, take an [[incident]] to scan for [[lower decker]].",
+          "BOOST: After drawing the starting hand, find an [[incident]] and return it."
+        ]
+      },
+      "loss": {
+        "cards": "[[ally]] / [[starfleet]]",
+        "bonus": [
+          "REINFORCE: A [[person]] from your Available cards or Reserve deck",
+          "BOOST: Gain an [[action]]."
+        ]
+      }
+    }
+  },
+  {
+    "captain": "Georgiou",
+    "variant": null,
+    "id": "georgiou",
+    "traits": [
+      {
+        "key": "[[anomaly]]",
+        "text": "Junk the most valuable card in the Market (ignoring any with tokens). Gain an [[incident]]. Log this card. Resolve the top card of the Bot deck."
+      },
+      {
+        "key": "[[kelpien]]",
+        "text": "Log the top card of the Bot deck. Gain 1 [[research]]. Continue resolution."
+      },
+      {
+        "key": "[[vulcan]]",
+        "text": "Discard the top card of the Bot deck. Gain 1 [[influence]]. Continue resolution."
+      },
+      {
+        "key": "[[security]] / [[ops]]",
+        "text": "@You remove /@[[away team]]. Gain [[spy]]/[[klingon]] if able. Otherwise, gain 1 [[military]] and 1 [[glory]]. If this card is a [[person]], promote it to Duty Officer."
+      },
+      {
+        "key": "[[attack]]",
+        "text": "If [[research]] is higher than [[military]], gain 1 [[glory]] and continue resolution. Otherwise: Dismiss Duty Officer if able, otherwise take an [[incident]]. @You dismiss a Duty Officer, if able/@, otherwise the bot takes [[kelpien]]/[[vulcan]] > [[ship]] and gains 1 [[research]]. If this card is a [[person]], promote it to Duty Officer."
+      }
+    ],
+    "suits": [
+      {
+        "suit": "incident",
+        "text": "Log the top card of the Bot deck. Gain a [[person]]. Return this card.",
+        "do_text": "Send an [[away team]] to a neutral [[location]]. Gain 1 [[military]]. Return this card."
+      },
+      {
+        "suit": "ship",
+        "text": "Deploy this [[ship]]; it explores. If a [[person]] is in Bot Discard pile, send an [[away team]] to a neutral [[location]].",
+        "do_text": "Gain 1 [[research]]. Deploy this [[ship]]; it explores. Send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "suit": "ally",
+        "text": "Discard the top 2 cards of the Bot deck. If a [[person]] is in Bot Discard pile, gain 1 [[research]] / [[influence]] / [[military]] (whichever is lower). For each [[ship]] in Bot Discard pile, send an [[away team]] to a neutral [[location]]. Log this card.",
+        "do_text": "Discard the top card of the Bot deck. Gain a [[kelpien]] > [[ally]]. Log Duty Officer. Log this card."
+      },
+      {
+        "suit": "cargo",
+        "text": "Discard the top 2 cards of the Bot deck. Send an [[away team]] to a neutral [[location]]. Take a [[person]]. Log this card.",
+        "do_text": "Log the top card of the Bot deck. Discard the top 2 cards of the Bot deck. Gain a [[ship]]. Deploy the gained [[ship]]; it explores. Log Duty Officer."
+      },
+      {
+        "suit": "person",
+        "text": "Log the top card of the Bot deck. Gain 1 [[research]] / [[military]] (whichever is lower). Send an [[away team]] to a neutral [[location]]. Promote this card to Duty Officer.",
+        "do_text": "Log the top card of the Bot deck. Send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "suit": "directive",
+        "text": "Gain a [[ship]] / [[ally]] and take an [[incident]]. Send an [[away team]] to a neutral [[location]].",
+        "do_text": "If able to do both, log a controlled [[location]] and remove 2 [[away team]] to take top [[encounter]] then log this card. Otherwise, gain a [[res-focus]]/[[mil-focus]] > [[anomaly]] > [[cargo]]."
+      },
+      {
+        "suit": "encounter",
+        "text": "Log the top 2 cards of the Bot deck. Take a [[ship]]. Log this card.",
+        "do_text": "Gain 1 [[research]] / [[military]] (whichever is higher). Take a [[vulcan]] > [[ally]] > [[ship]]. Log this card."
+      },
+      {
+        "suit": "location",
+        "text": "Discard the top card of the Bot deck. Return an [[incident]] from Bot Discard pile if able, otherwise gain 1 [[glory]].",
+        "do_text": "Log the top 2 cards of the Bot deck. Gain 1 [[research]]. Log Duty Officer."
+      }
+    ],
+    "special": null,
+    "campaign": {
+      "win": {
+        "cards": "[[security]] / [[ops]] / [[kelpien]]",
+        "bonus": [
+          "REINFORCE: A [[person]] from your Available cards and/or a [[person]] from your Reserve deck.",
+          "BOOST: After drawing the starting hand, draw a card and gain an [[action]]."
+        ]
+      },
+      "loss": {
+        "cards": "[[starfleet]]",
+        "bonus": [
+          "REINFORCE: A [[person]] from your Available cards or Reserve deck.",
+          "BOOST: Gain an [[action]]."
+        ]
+      }
+    }
+  },
+  {
+    "captain": "Khan",
+    "variant": "Exile",
+    "id": "khan-exile",
+    "traits": [
+      {
+        "key": "[[augment]]",
+        "text": "Send an [[away team]] to a neutral ^unmarked^ > [[augment]]/[[scientist]] > [[location]]. Take an [[incident]] to gain a [[person]]."
+      },
+      {
+        "key": "[[incident]]",
+        "text": "Discard the top card of the Bot deck. If the discarded card shares a non-[[human]] trait with $your /$[[captain]], gain 1 [[glory]]. Return this card."
+      },
+      {
+        "key": "[[ship]]",
+        "text": "Junk the most valuable card in the Market (ignoring any with tokens). Send an [[away team]] to a neutral ^unmarked^ > [[location]]."
+      },
+      {
+        "key": "[[directive]]",
+        "text": "Junk the most valuable card in the Market (ignoring any with tokens). Gain an ^unmarked^ > [[person]]/[[cargo]]/[[ship]]/[[ally]] from the Junk."
+      },
+      {
+        "key": "[[person]] / [[cargo]] / [[ally]] / [[location]]",
+        "text": "Discard the top card of the Bot deck. If this card is a [[location]] taken during the Control Step, gain an [[incident]], and spend 1 [[dilithium]], if able. If this card is a [[person]], gain 1 [[glory]] ^from the supply^."
+      }
+    ],
+    "suits": [],
+    "special": "If a [[location]] is played during its Action Step, it is ^not^ placed into the bot's Control Area. #newline Whenever a card is drawn/discarded from the Supplement deck, the bot gains 1 [[dilithium]]. #newline At the end of its turn, the bot gains 1 [[dilithium]]. Then, if it has 5+ [[dilithium]], it spends them all, gains the top [[encounter]], and replace ^this^ card with the regular Automated Command Cards.",
+    "campaign": null
+  },
+  {
+    "captain": "Khan",
+    "variant": "Regular",
+    "id": "khan-regular",
+    "traits": [
+      {
+        "key": "[[mind control]]",
+        "text": "@You dismiss a Duty Officer, if able, /@otherwise gain 2 [[glory]]. Continue resolution."
+      },
+      {
+        "key": "[[augment]] / [[ops]]",
+        "text": "Send an [[away team]] to a neutral ^unmarked^ > [[augment]]/[[scientist]] > [[location]]. If this card is a [[person]], take an [[incident]] and take a [[person]]; otherwise discard the top card of the Supplement deck."
+      },
+      {
+        "key": "[[creature]] / [[scientist]]",
+        "text": "Return an [[incident]] from Bot Discard pile, if able. Send 2 [[away team]] to a neutral [[location]], ignoring any opponent [[ship]]. Log this card."
+      },
+      {
+        "key": "[[attack]]",
+        "text": "Mark a trait. @You take an /@[[incident]] from Bot Discard pile, if able. Otherwise, @you find any card, and log the found card./@ If this card is *Revenge is a dish best served cold*, @you log this card/@; otherwise the bot logs this card."
+      }
+    ],
+    "suits": [
+      {
+        "suit": "incident",
+        "text": "Discard the top card of the Bot deck. If the discarded card shares a non-[[human]] trait with $your /$[[captain]], gain 1 [[glory]]. Return this card.",
+        "do_text": "Discard the top card of the Bot deck. If the discarded card shares a non-[[human]] trait with $your /$[[captain]], gain 1 [[glory]]. @You take this card./@"
+      },
+      {
+        "suit": "ship",
+        "text": "Deploy this ship; it engages.",
+        "do_text": "Deploy this ship; it engages. Send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "suit": "ally",
+        "text": "Take a [[spy]]/[[cloak]]/[[synthetic]] if able; otherwise gain a [[person]]/[[ship]]. Log this card.",
+        "do_text": "Gain a [[cargo]] > [[ally]] > [[person]]. Log Duty Officer. Log this card."
+      },
+      {
+        "suit": "cargo",
+        "text": "Gain a [[person]] from the top of the deck.",
+        "do_text": "Gain a [[ally]] > [[person]]/[[ship]]. Log Duty Officer."
+      },
+      {
+        "suit": "person",
+        "text": "Gain 1 [[glory]]. Gain an [[incident]]. Promote this card to Duty Officer.",
+        "do_text": "Put an [[augment]] from Bot Discard pile on top of the Bot deck, if able. Dismiss Duty Officer."
+      },
+      {
+        "suit": "directive",
+        "text": "Junk the most valuable card in the Market (ignoring any with tokens). Gain an [[ally]] > [[ship]] from the Junk.",
+        "do_text": "Junk the most valuable card in the Market (ignoring any with tokens). Gain a [[person]]/[[cargo]]/[[ally]], including from the Junk."
+      },
+      {
+        "suit": "encounter",
+        "text": "Resolve the top card of the Supplement deck.",
+        "do_text": "If 8 or more traits are marked, gain the highest value card of the top 3 [[encounter]] and destroy the other two, then log the gained card and this card. Otherwise, resolve the top card of the Supplement deck."
+      },
+      {
+        "suit": "location",
+        "text": "Discard the top 2 cards of the Bot deck. Gain a [[ship]].",
+        "do_text": "Discard the top card of the Supplement deck. Log Duty Officer."
+      }
+    ],
+    "special": "At the end of the game the bot scores [[3vp]] for each marked trait, and it considers each ^unmarked^ card's value [[3vp]] higher when gaining cards. #newline Each [[res-focus]]/[[inf-focus]]/[[mil-focus]] scores (and is valued for it at) [[3vp]].",
+    "campaign": {
+      "win": {
+        "cards": "[[augment]] / [[attack]]",
+        "bonus": [
+          "BOOST: Before drawing the starting hand, spend 1 [[latinum]] to scan for an [[augment]] or a [[creature]] or a [[scientist]].",
+          "ATTACK BOOST: Before drawing the starting hand, find an [[incident]], except in your Reserve deck, and give it to your opponent."
+        ]
+      },
+      "loss": {
+        "cards": "[[person]]",
+        "bonus": [
+          "BOOST: Before drawing the starting hand, spend 1 [[latinum]] to scan for an [[augment]].",
+          "ATTACK BOOST: After drawing the starting hand, draw a card and your opponent takes an [[incident]]."
+        ]
+      }
+    }
+  },
+  {
+    "captain": "Kirk",
+    "variant": null,
+    "id": "kirk",
+    "traits": [
+      {
+        "key": "[[time travel]]",
+        "text": "Gain 2 [[research]] / [[influence]] / [[military]] (whichever is lower). Resolve the top card of the Bot deck. Log this card."
+      },
+      {
+        "key": "[[klingon]]",
+        "text": "Gain 1 [[military]]. If this card is a [[ship]], deploy it; it engages. If this card is a [[person]], promote it to Duty Officer. If able, resolve a [[directive]] from Bot Discard pile. Otherwise, send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "key": "[[attack]]",
+        "text": "If able, log a deployed [[ship]] to send 2 [[away team]] to a neutral [[location]] and @you discard a card/@. Otherwise, discard the top 2 cards of the Bot deck and @you dismiss a Duty Officer and take an [[incident]]/@. If this card is a [[person]], promote it to Duty Officer."
+      },
+      {
+        "key": "[[engineer]]",
+        "text": "Discard the top 2 cards of the Bot deck. If able, resolve a [[ship]] in Bot Discard pile. Otherwise, discard the top card of the Supplement deck. If this card is a [[person]], promote it to Duty Officer."
+      },
+      {
+        "key": "[[scientist]] / [[vulcan]]",
+        "text": "Log the top card of the Bot deck. Gain 1 [[research]] / [[influence]] / [[military]] (whichever is lower). Gain 1 [[research]] / [[influence]] / [[military]] (whichever is lower). If this card is a [[person]] and the Bot has no Duty Officer, promote it to Duty Officer. Otherwise, send an [[away team]] to a neutral [[location]]."
+      }
+    ],
+    "suits": [
+      {
+        "suit": "incident",
+        "text": "Log the top card of the Bot deck. Gain a [[person]]. Return this card.",
+        "do_text": "Discard the top card of the Bot deck. Gain 1 [[research]] / [[influence]] / [[military]] (whichever is lower). Log Duty Officer. Return this card."
+      },
+      {
+        "suit": "ship",
+        "text": "Deploy this [[ship]]; it explores. If Bot has 5+ [[influence]], send an [[away team]] to a neutral [[location]], ignoring any opponent [[ship]]. Otherwise, gain 1 [[influence]].",
+        "do_text": "Gain 1 [[military]]. Deploy this [[ship]]; it engages. Send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "suit": "ally",
+        "text": "Discard the top 2 cards of the Bot deck. Gain 1 [[research]] / [[influence]] / [[military]] (whichever is lower). If Bot has 5+ [[influence]], gain 2 [[glory]] and log this card.",
+        "do_text": "Discard the top card of the Bot deck. Gain 1 [[research]]. Gain [[any species]] excluding [[human]] > [[person]] / [[ally]]. Log Duty Officer. Log this card."
+      },
+      {
+        "suit": "cargo",
+        "text": "Discard the top 2 cards of the Bot deck. If able, promote a [[person]] from Bot Discard pile to Duty Officer. Otherwise, gain a [[vulcan]] > [[person]] and log this card.",
+        "do_text": "Log the top card of the Bot deck. Gain 1 [[research]]. Gain a [[ship]]. Deploy the gained [[ship]]; it explores."
+      },
+      {
+        "suit": "person",
+        "text": "Gain 1 [[research]] / [[influence]] / [[military]] (whichever is lower). Send an [[away team]] to a neutral [[location]]. Promote this card to Duty Officer.",
+        "do_text": "Discard the top card of the Bot deck. Gain a [[vulcan]] > [[any species]] excluding [[human]] > [[person]] / [[cargo]] / [[ship]] / [[ally]]."
+      },
+      {
+        "suit": "directive",
+        "text": "Gain a [[ship]] / [[ally]] and take an [[incident]]. Send an [[away team]] to a neutral [[location]].",
+        "do_text": "If able to do both, log a controlled [[location]] and remove 2 [[away team]] to take top [[encounter]], then log this card. Otherwise, discard the top card of the Supplement deck."
+      },
+      {
+        "suit": "encounter",
+        "text": "Log the top card of the Bot deck. Gain the card in the Market with the most [[glory]].",
+        "do_text": "Gain 1 [[research]]. Gain 1 [[influence]]. Gain 1 [[military]]. Gain 1 [[glory]]. Log this card."
+      },
+      {
+        "suit": "location",
+        "text": "Log the top card of the Bot deck. Gain 1 [[research]] / [[influence]] / [[military]] (whichever is lower). Send an [[away team]] to a neutral [[location]].",
+        "do_text": "Gain 1 [[research]]. Gain 1 [[influence]]. Gain 1 [[military]]. Take an [[incident]]. If able, deploy a [[ship]] from Bot Discard pile; it explores. Otherwise, send an [[away team]] to neutral [[location]]. Log Duty Officer."
+      }
+    ],
+    "special": null,
+    "campaign": {
+      "win": {
+        "cards": "[[person]]",
+        "bonus": [
+          "BOOST: Before drawing the starting hand, discard the top card of your deck and gain 2 [[research]]/[[influence]]/[[military]].",
+          "BOOST: Send an [[away team]] each to two different neutral [[location]]."
+        ]
+      },
+      "loss": {
+        "cards": "[[vulcan]] / [[time travel]] / [[klingon]]",
+        "bonus": [
+          "BOOST: Gain 1 [[research]]/[[influence]]/[[military]].",
+          "BOOST: After drawing the starting hand, find a [[directive]] in your Draw deck."
+        ]
+      }
+    }
+  },
+  {
+    "captain": "Koloth",
+    "variant": null,
+    "id": "koloth",
+    "traits": [
+      {
+        "key": "[[weapon]]",
+        "text": "Junk the most valuable card in the Market (ignoring any with tokens). Gain 1 [[military]]. If Bot has 9+ [[military]] and Bot Duty Officer is a [[klingon]], dismiss Duty Officer, gain 4 [[glory]], and log this card. Otherwise, @if able, you remove /@[[away team]]. Otherwise, gain 1 [[military]]."
+      },
+      {
+        "key": "[[attack]]",
+        "text": "Junk the most valuable card in the Market (ignoring any with tokens). If able, return a [[ship]] from discard to the top of the Bot deck. Otherwise, @if able, you dismiss /@[[ship]]. Otherwise gain 1 [[glory]]."
+      },
+      {
+        "key": "[[romulan]]",
+        "text": "Log the top card of the Bot deck. Take the top card of the Supplement deck. Log this card."
+      },
+      {
+        "key": "[[scientist]]",
+        "text": "Discard the top card of the Bot deck. Gain 2 [[glory]]. Gain 1 [[influence]]."
+      }
+    ],
+    "suits": [
+      {
+        "suit": "incident",
+        "text": "Gain a [[mil-focus]] > [[person]] / [[ship]]. Send an [[away team]] to a neutral [[location]]. $You may draw a card./$ Return this card.",
+        "do_text": "Gain 1 [[military]]. If able, gain a [[romulan]]. Otherwise, take a [[mil-focus]] > [[cargo]]. Send an [[away team]] to a neutral [[location]]. Return this card."
+      },
+      {
+        "suit": "ship",
+        "text": "Deploy this [[ship]]; it explores. Send an [[away team]] to a neutral [[location]].",
+        "do_text": "Gain 1 [[influence]]. Deploy this [[ship]]; it engages. Send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "suit": "ally",
+        "text": "If able, gain a [[romulan]]. Otherwise, take a [[ship]] / [[person]] and @you take an /@[[incident]]. Log this card.",
+        "do_text": "If able, gain a [[romulan]]. Otherwise, take an [[incident]], gain 1 [[glory]], @you take an /@[[incident]]@ and discard it/@, then dismiss Duty Officer. Log this card."
+      },
+      {
+        "suit": "cargo",
+        "text": "Gain 1 [[influence]]. Gain 1 [[military]]. Gain a [[person]] / [[ship]] / [[ally]].",
+        "do_text": "Gain 1 [[influence]]. Gain 1 [[military]]. Discard the top card of the Supplement deck. Log Duty Officer."
+      },
+      {
+        "suit": "person",
+        "text": "Discard the top card of the Bot deck. Log the top card of the Bot deck. Gain 1 [[military]] / [[influence]] (whichever is lower). Gain a [[weapon]] > [[ship]]. Promote this card to Duty Officer.",
+        "do_text": "Log the top card of Bot deck. Gain a [[cargo]]. If able, return a [[ship]] from Bot Discard pile to the top of the Bot deck. Otherwise, take a [[ship]]."
+      },
+      {
+        "suit": "directive",
+        "text": "Discard the top 3 cards of the Bot deck. Gain 1 [[military]]. Take an [[incident]]. Send an [[away team]] to a neutral [[location]].",
+        "do_text": "If able to do both, log a [[ship]] and remove an [[away team]] to take top [[encounter]], then log this card and log Duty Officer. Otherwise, gain 1 [[glory]], 1 [[military]], and a [[person]]."
+      },
+      {
+        "suit": "encounter",
+        "text": "Gain a [[person]] / [[ally]]. Send an [[away team]] to a neutral [[location]]. Log this card.",
+        "do_text": "Gain 1 [[influence]] / [[military]] (whichever is higher). Gain a [[ship]]. Deploy the gained [[ship]]; it engages."
+      },
+      {
+        "suit": "location",
+        "text": "Log the top card of the Bot deck. Discard the top 2 cards of the Bot deck. If a [[ship]] is in Bot Discard pile, gain 1 [[glory]].",
+        "do_text": "Dismiss Duty Officer. Gain 1 [[glory]]. Resolve the top card of the Bot deck."
+      }
+    ],
+    "special": null,
+    "campaign": {
+      "win": {
+        "cards": "[[ship]]",
+        "bonus": [
+          "BOOST: Gain 3 [[military]].",
+          "BOOST: Gain 2 [[glory]]."
+        ]
+      },
+      "loss": {
+        "cards": "[[weapon]] / [[attack]] / [[klingon]]",
+        "bonus": [
+          "REINFORCE: A non-[[incident]] card from your Reserve deck",
+          "REINFORCE: A non-[[incident]] card from your Available cards."
+        ]
+      }
+    }
+  },
+  {
+    "captain": "Picard",
+    "variant": null,
+    "id": "picard",
+    "traits": [
+      {
+        "key": "[[synthetic]] / [[android]]",
+        "text": "Log the top card of the Bot deck. Gain 1 [[research]]. Gain 1 [[influence]]. If this card is a [[person]], promote it to Duty Officer."
+      },
+      {
+        "key": "[[klingon]]",
+        "text": "Discard the top 3 cards of the Bot deck. Send an [[away team]] to a neutral [[location]]. @If able, you remove an /@[[away team]]. Otherwise, gain 1 [[glory]] and take an [[incident]]."
+      },
+      {
+        "key": "[[alien]]",
+        "text": "Discard the top card of the Bot deck. Gain 1 [[influence]]. If Bot has 5+ [[influence]], gain 1 [[research]] and [[cargo]]. Log this card."
+      },
+      {
+        "key": "[[doctor]]",
+        "text": "Discard the top 2 cards of the Bot deck. If able, return an [[incident]] from discard. Otherwise, gain 2 [[glory]] and 1 [[research]]. If this card is a [[person]], promote it to Duty Officer."
+      },
+      {
+        "key": "[[attack]]",
+        "text": "Send an [[away team]] to a neutral [[location]]. If able, put a [[ship]] from discard on top of the Bot deck. Otherwise, gain 1 [[influence]]. If this card is a [[person]], promote it to Duty Officer."
+      }
+    ],
+    "suits": [
+      {
+        "suit": "incident",
+        "text": "Log the top card of the Bot deck. Gain a [[person]]. Return this card.",
+        "do_text": "Discard the top 2 cards of the Bot deck. Gain 1 [[research]]. Return this card."
+      },
+      {
+        "suit": "ship",
+        "text": "Deploy this [[ship]]; it explores. If a [[person]] is in Bot Discard pile, send an [[away team]] to a neutral [[location]].",
+        "do_text": "Gain 1 [[influence]]. Deploy this [[ship]]; it explores. Send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "suit": "ally",
+        "text": "Discard the top 2 cards of the Bot deck. For each [[person]] in Bot Discard pile, gain 1 [[influence]]. For each [[ship]] in Bot Discard pile, send an [[away team]] to a neutral [[location]].",
+        "do_text": "Discard the top card of the Bot deck. Gain a [[klingon]] > [[person]] / [[ship]] / [[ally]]. Log Duty Officer. Log this card."
+      },
+      {
+        "suit": "cargo",
+        "text": "Discard the top 2 cards of the Bot deck. Gain 2 [[glory]]. Take a [[person]]. Log this card.",
+        "do_text": "Log the top card of the Bot deck. Discard the top 2 cards of the Bot deck. Gain a [[ship]]. Deploy the gained [[ship]]; it explores. Log Duty Officer."
+      },
+      {
+        "suit": "person",
+        "text": "Log the top card of the Bot deck. Gain 1 [[research]] / [[influence]] (whichever is lower). Send an [[away team]] to a neutral [[location]]. Promote this card to Duty Officer.",
+        "do_text": "Log the top card of the Bot deck. Gain 1 [[research]] / [[influence]] (whichever is lower). Send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "suit": "directive",
+        "text": "If able, gain a [[klingon]]. Otherwise, gain a [[ship]] / [[ally]] and take an [[incident]]. Gain 1 [[research]] / [[influence]] (whichever is lower). Send an [[away team]] to a neutral [[location]].",
+        "do_text": "If able to do both, log a controlled [[location]] and remove 2 [[away team]] to take top [[encounter]] then log this card. Otherwise, gain a [[res-focus]] > [[alien]] > [[cargo]] / [[ally]]."
+      },
+      {
+        "suit": "encounter",
+        "text": "Log the top 2 cards of the Bot deck. Take a [[ship]]. Log this card.",
+        "do_text": "Gain 1 [[research]] / [[influence]] (whichever is higher). Take a [[klingon]] > [[ally]] > [[ship]]. Log this card."
+      },
+      {
+        "suit": "location",
+        "text": "Log the top card of the Bot deck. Discard the top 3 cards of the Bot deck.",
+        "do_text": "Log the top 2 cards of the Bot deck. Gain 1 [[research]]. Log Duty Officer."
+      }
+    ],
+    "special": null,
+    "campaign": {
+      "win": {
+        "cards": "[[alien]] / [[transcendent]]",
+        "bonus": [
+          "BOOST: Gain 3 [[research]].",
+          "BOOST: Before drawing the starting hand, find two cards (excluding from your Reserve deck)."
+        ]
+      },
+      "loss": {
+        "cards": "[[ally]] / [[alien]] / [[synthetic]]",
+        "bonus": [
+          "BOOST: Gain 1 [[research]].",
+          "BOOST: Before drawing the starting hand, find one card (excluding from your Reserve deck)."
+        ]
+      }
+    }
+  },
+  {
+    "captain": "Pike",
+    "variant": null,
+    "id": "pike",
+    "traits": [
+      {
+        "key": "[[time travel]]",
+        "text": "If this card is a [[person]], discard the top card of the Bot deck, take an [[incident]], gain a [[person]]/[[ship]], and promote this card to Duty Officer. Otherwise, if this card is a [[cargo]], gain an [[incident]] and resolve the top card of the Supplement deck, then log that card. Otherwise, gain 3 [[glory]] and log this card."
+      },
+      {
+        "key": "[[engineer]]",
+        "text": "Discard the top 2 cards of the Bot deck. Send an [[away team]] to a neutral [[location]]. Resolve a [[cargo]]/[[ship]] from the Bot Discard if able; otherwise continue resolution."
+      },
+      {
+        "key": "[[doctor]]",
+        "text": "If able, return an [[incident]] from the Bot Discard; otherwise, if able, send an [[away team]] to a [[location]] where the Bot has a [[ship]]. If Bot has 6 or more [[research]], gain a [[time travel]] > [[doctor]] > [[person]]. Otherwise, gain 1 [[research]] and continue resolution."
+      },
+      {
+        "key": "[[telepath]]",
+        "text": "Discard the top 3 cards of the Bot deck. Discard the top card of the Supplement deck."
+      },
+      {
+        "key": "[[attack]]/[[shady]]",
+        "text": "Gain an [[incident]]. Log this card."
+      }
+    ],
+    "suits": [
+      {
+        "suit": "incident",
+        "text": "If able, gain [[res-focus]]/[[inf-focus]]; otherwise gain 1 [[research]]/[[influence]]/[[military]] (whichever is lower). Return this card.",
+        "do_text": "Discard the top card of the Bot deck. If Bot has 10 or more [[research]]/[[influence]]/[[military]] and if able, gain a card with matching Focus, including from the Junk; otherwise gain 1 [[research]] and 1 [[influence]]. Return this card."
+      },
+      {
+        "suit": "ship",
+        "text": "Discard the top 3 cards of the Bot deck. Deploy this [[ship]]; it explores. If a [[person]] is in the Bot Discard pile, send an [[away team]] to a neutral [[location]].",
+        "do_text": "For each [[starbase]] and [[engineer]] in play, discard the top card of the Bot deck. Deploy this [[ship]]; it engages. Send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "suit": "ally",
+        "text": "Discard the top 2 cards of the Bot deck. Gain a [[person]]. Gain 1 [[research]]/[[influence]]/[[military]] (whichever is lower). Log this card.",
+        "do_text": "Gain 1 [[influence]]/[[military]] (whichever is lower). If Bot has 8 or fewer [[research]], gain a [[ship]] from the top of the deck and gain 1 [[research]]; otherwise take [[time travel]] > [[doctor]] > [[person]], and gain 1 [[glory]] for each [[doctor]] in play or in the Bot Discard. Log this card and dismiss Duty Officer."
+      },
+      {
+        "suit": "cargo",
+        "text": "Gain 1 [[influence]]. Send an [[away team]] to a neutral [[location]]. Discard the top 2 cards of the Bot deck. if able, log a non-[[time travel]] [[person]] from the Bot Discard to gain 1 [[glory]]. Log this card.",
+        "do_text": "Discard the top 3 cards of the Bot deck. Gain a [[res-focus]]/[[inf-focus]] > [[ally]]. Dismiss Duty Officer."
+      },
+      {
+        "suit": "person",
+        "text": "If there is no [[starfleet]] in the Bot Discard, take a [[res-focus]]/[[inf-focus]] > [[starfleet]]/[[augment]] > [[ship]]; otherwise send an [[away team]] to a neutral [[location]]. Promote this card to Duty Officer.",
+        "do_text": "Junk the most valuable card in the Market (ignoring any with tokens). If Bot has 6 or more [[influence]], gain an [[inf-focus]]/[[ship]]/[[ally]] and dismiss Duty Officer; otherwise gain 2 [[influence]]."
+      },
+      {
+        "suit": "directive",
+        "text": "Discard the top 2 cards of the Bot deck. Resolve a [[ship]] from the Bot Discard, if able; otherwise take an [[incident]] and send an [[away team]] to a neutral [[location]].",
+        "do_text": "If able to do both, log a controlled [[location]] and remove 2 [[away team]] to take top [[encounter]], then log this card. Otherwise gain 1 [[research]] and gain [[res-focus]]/[[res-skill]]/[[inf-focus]]/[[inf-skill]]/[[mil-focus]]/[[mil-skill]]."
+      },
+      {
+        "suit": "encounter",
+        "text": "Discard the top 3 cards of the Bot deck. Take a [[time travel]] > [[doctor]] > [[res-focus]]/[[inf-focus]]/[[mil-focus]] > [[person]]. Discard the top card of the Supplement deck. Log this card.",
+        "do_text": "Log the top card of the Bot deck. Gain 1 [[military]]. Gain 1 [[influence]]. Take an [[ally]]. Resolve the top card of the Supplement deck. Log this card."
+      },
+      {
+        "suit": "location",
+        "text": "Discard the top 2 cards of the Bot deck. Gain 1 [[glory]]. If this card is a [[starbase]], send an [[away team]] to a neutral [[location]].",
+        "do_text": "Discard the top 3 cards of the Bot deck. Gain 1 [[influence]]. If Duty Officer is [[time travel]], dismiss it; otherwise log it."
+      }
+    ],
+    "special": "When a card with one or more [[res-skill]]/[[inf-skill]]/[[mil-skill]] is resolved, gain 1 on the corresponding Specialty track. If multiple different Skills (or a [[wild-skill]]) is present, gain whichever is higher.",
+    "campaign": {
+      "win": {
+        "cards": "[[time travel]] / [[doctor]]",
+        "bonus": [
+          "BOOST: Before drawing the starting hand, take an [[incident]] to enlist a Development.",
+          "BOOST: Gain 1 [[research]], 1 [[influence]], and 1 [[military]]."
+        ]
+      },
+      "loss": {
+        "cards": "[[ship]]",
+        "bonus": [
+          "REINFORCE: A card with [[res-skill]]/[[inf-skill]]/[[mil-skill]] from your Available cards or Reserve deck.",
+          "BOOST: After drawing the starting hand, free play a non-[[time travel]] card, then recall it."
+        ]
+      }
+    }
+  },
+  {
+    "captain": "Rebner",
+    "variant": null,
+    "id": "rebner",
+    "traits": [
+      {
+        "key": "[[helmet]]",
+        "text": "If this card is *Big Enough Helmet*, take top [[encounter]] and log this card. Otherwise, gain the most valuable card in the Market and discard the top 2 cards of the Bot deck."
+      },
+      {
+        "key": "[[weapon]]",
+        "text": "If Bot has 6+ [[military]], log this card and @you take an /@[[incident]]. Otherwise, gain 1 [[military]] and send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "key": "[[attack]]",
+        "text": "If able to do both, log a [[weapon]] from Bot Discard pile, and @you log a /@[[ship]]@ either from your hand, Discard pile, or in play/@. Otherwise, @you discard a card/@. If this card is a [[ship]], deploy it; it engages. If this card is a [[person]], promote it to Duty Officer."
+      },
+      {
+        "key": "[[engineer]]",
+        "text": "Junk the most valuable card in the Market (ignoring any with tokens). Discard the top card of the Supplement deck. Gain 1 [[military]]. If this card is a [[person]], promote it to Duty Officer."
+      },
+      {
+        "key": "[[scientist]] / [[communication]]",
+        "text": "Gain 1 [[military]]. If this card is a [[ship]], deploy this [[ship]]; it explores. Otherwise, log the top card of the Bot deck, gain 1 [[glory]], and if able, gain a [[mil-focus]]>[[cargo]], including from the Junk."
+      }
+    ],
+    "suits": [
+      {
+        "suit": "incident",
+        "text": "Junk the most valuable card in the Market (ignoring any with tokens). If able, gain a [[mil-focus]]. Otherwise, gain 2 [[military]]. Return this card.",
+        "do_text": "Gain 1 [[military]]. Send an [[away team]] to a neutral [[location]]. Return this card."
+      },
+      {
+        "suit": "ship",
+        "text": "Deploy this [[ship]]; it explores. If a [[helmet]] is in Bot Discard pile: If able, gain a [[helmet]] / [[cargo]] / [[mil-focus]] from the Junk. Otherwise, send an [[away team]] to a neutral [[location]].",
+        "do_text": "Deploy this [[ship]]; it engages. If a [[helmet]] is in Bot Discard pile, send an [[away team]] to a neutral [[location]]. Otherwise, discard the top 2 cards of the Bot deck."
+      },
+      {
+        "suit": "ally",
+        "text": "Discard the top card of the Supplement deck. Gain 2 [[military]]. If able, gain a [[mil-focus]] from the Junk. @You take an /@[[incident]]. Log this card.",
+        "do_text": "Take an [[incident]]. Gain 1 [[military]]. If able, gain a [[mil-focus]]. Otherwise, gain a [[cargo]] and log Duty Officer. Log this card."
+      },
+      {
+        "suit": "cargo",
+        "text": "If a [[helmet]] is in Bot Discard pile, take an [[incident]] and gain a [[ship]] / [[ally]]. Otherwise, discard the top 2 cards of the Bot deck, then if able, gain a [[mil-focus]] > [[person]] > [[cargo]] from the Junk.",
+        "do_text": "Gain a [[mil-focus]] > [[person]]. Gain 1 [[military]] and @you remove an /@[[away team]]@ from a neutral /@[[location]] where the Bot has 1+ token. Send an [[away team]] to a neutral [[location]]. Dismiss Duty Officer."
+      },
+      {
+        "suit": "person",
+        "text": "Gain a [[weapon]] > [[ship]]. Promote this card to Duty Officer.",
+        "do_text": "If the top card of the Bot deck is a [[helmet]], discard it and send an [[away team]] to a neutral [[location]]. Otherwise, log it, gain 1 [[military]], and gain an [[communication]] > [[scientist]] > [[ally]] / [[ship]], including from the Junk."
+      },
+      {
+        "suit": "directive",
+        "text": "Junk the most valuable card in the Market (ignoring any with tokens). Discard the top 3 cards of the Bot deck. If able, promote a [[person]] from Bot Discard pile to Duty Officer. Otherwise, send an [[away team]] to a neutral [[location]].",
+        "do_text": "Junk the most valuable card in the Market (ignoring any with tokens). Discard the top 2 cards of the Bot deck. If a [[helmet]] is in Bot Discard pile, gain a [[cargo]] / [[ship]]. Otherwise, send an [[away team]] to a neutral [[location]] and gain 1 [[military]]."
+      },
+      {
+        "suit": "encounter",
+        "text": "Discard the top 2 cards of the Bot deck. Gain a [[mil-focus]]>[[attack]]>[[weapon]]>[[ship]]. Gain 1 [[glory]]. Log this card.",
+        "do_text": "Gain 1 [[glory]]. Gain an [[engineer]] / [[communication]] / [[scientist]] > [[person]], including from the Junk. Log this card."
+      },
+      {
+        "suit": "location",
+        "text": "If able, gain an [[engineer]] / [[communication]] / [[scientist]]. Otherwise, gain a [[weapon]] / [[attack]]>[[person]] from the Junk.",
+        "do_text": "If a [[helmet]] is in Bot Discard pile, gain 1 [[military]] and discard the top card of the Supplement deck. Otherwise, dismiss Duty Officer, then resolve the top card of the Bot deck."
+      }
+    ],
+    "special": null,
+    "campaign": {
+      "win": {
+        "cards": "[[cargo]] (except [[helmet]])",
+        "bonus": [
+          "BOOST: After drawing the starting hand, discard up to 3 cards from your hand, then draw the same number of cards.",
+          "BOOST: After drawing the starting hand, gain a card from the top of the deck or from the Junk."
+        ]
+      },
+      "loss": {
+        "cards": "[[business]] / [[shady]] / [[attack]]",
+        "bonus": [
+          "BOOST: After drawing the starting hand, take an [[incident]] to scan 1 of [[cargo]].",
+          "BOOST: Gain 1 [[latinum]]."
+        ]
+      }
+    }
+  },
+  {
+    "captain": "Riker",
+    "variant": null,
+    "id": "riker",
+    "traits": [
+      {
+        "key": "[[nx-01]]/[[android]]/[[pakled]]",
+        "text": "Gain 3 [[glory]]. Log this card."
+      },
+      {
+        "key": "[[lower decker]]",
+        "text": "Gain a [[beverage]] > [[cargo]]. Resolve a [[person]] from the Discard pile, if able; otherwise gain 1 [[research]], take an [[incident]], and resolve the top card of the Supplement deck, then log this card."
+      },
+      {
+        "key": "[[betazoid]]",
+        "text": "Gain 1 [[influence]]. Discard the top card of the Bot deck. Return an [[incident]] from the Bot Discard pile, if able; otherwise send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "key": "[[beverage]]",
+        "text": "Gain 1 [[glory]], take an [[ally]] and log the Duty Officer. Continue resolution."
+      },
+      {
+        "key": "[[attack]]",
+        "text": "Gain 1 [[glory]]. $If you have at least 1 /$[[ship]]$ at a neutral /$[[location]], @you either dismiss one of them/@ OR @take an /@[[incident]]. Continue resolution."
+      }
+    ],
+    "suits": [
+      {
+        "suit": "incident",
+        "text": "Gain a [[person]]. Log the top card of the Bot deck. Gain 1 [[research]]/[[military]] (whichever is lower). Return this card.",
+        "do_text": "Take a [[res-focus]]/[[mil-focus]], if able. Gain 1 [[research]]/[[military]] (whichever is higher). Return this card."
+      },
+      {
+        "suit": "ship",
+        "text": "Deploy this [[ship]]; it engages. Discard the top card of the Bot deck. If there is a [[starfleet]] in the Bot discard pile, send an [[away team]] to a neutral [[location]].",
+        "do_text": "Deploy this [[ship]]; it engages. Send an [[away team]] to a neutral [[location]]. If this card is [[starfleet]], resolve a [[directive]] from the Bot Discard pile. Dismiss Duty Officer."
+      },
+      {
+        "suit": "ally",
+        "text": "Take an [[incident]] and a [[person]]. Gain 2 [[research]]/[[influence]]/[[military]] (whichever is lower). Log this card.",
+        "do_text": "Gain 2 [[influence]]. If able to do both, gain [[res-focus]]/[[inf-focus]]/[[mil-focus]] and dismiss the Duty Officer. Otherwise log the top card of the Bot deck. Log this card."
+      },
+      {
+        "suit": "cargo",
+        "text": "Junk the most valuable card in the Market (ignoring any with tokens). Gain 1 [[glory]]. Resolve a [[person]]/[[ally]] from the Discard pile, if able. Log this card.",
+        "do_text": "Junk the most valuable card in the Market (ignoring any with tokens). Discard the top 2 cards of the Bot deck. Return an [[incident]] from the Bot Discard pile, if able. Gain 1 [[glory]]."
+      },
+      {
+        "suit": "person",
+        "text": "Discard the top 3 cards of the Bot deck. If one of the discarded cards is [[incident]], return it; otherwise gain a [[cargo]]. Promote this card to Duty Officer.",
+        "do_text": "Take an [[incident]]. Resolve a [[ship]] from the Bot Discard pile if able; otherwise take a [[ship]] and dismiss Duty Officer."
+      },
+      {
+        "suit": "directive",
+        "text": "Gain 1 [[research]]. If this card has a Skill icon, gain 2 (additional) [[research]]; otherwise take an [[incident]] and a [[ship]]/[[ally]]/[[person]]. Send an [[away team]] to a neutral [[location]].",
+        "do_text": "If able to do both, log a controlled [[location]] and remove 2 [[away team]] to take top [[encounter]], then log this card. Otherwise, gain 1 [[research]]/[[military]] (whichever is lower), and discard the top 2 cards of the Bot deck."
+      },
+      {
+        "suit": "encounter",
+        "text": "Discard the entire Bot deck. Gain 2 [[glory]]. Log this card.",
+        "do_text": "Gain 1 [[glory]]. Discard the entire Bot deck. Resolve the top card of the Supplement deck. Return an [[incident]] from the Bot Discard pile, if able. Log this card."
+      },
+      {
+        "suit": "location",
+        "text": "Gain 1 [[influence]]. Send an [[away team]] to a neutral [[location]].",
+        "do_text": "Gain 1 [[influence]]. Discard the top card of the Supplement deck. Log the Duty Officer."
+      }
+    ],
+    "special": "Cards with any of [[nx-01]], [[android]], [[pakled]], [[lower decker]], [[beverage]], [[betazoid]] are considered +1 value for the Bot.",
+    "campaign": {
+      "win": {
+        "cards": "[[pakled]] / [[lower decker]] / [[beverage]]",
+        "bonus": [
+          "BOOST: Before drawing the starting hand, find a [[location]], except in your Reserve deck, and immediately free play it.",
+          "BOOST: Before drawing the starting hand, find a [[person]], except in your Reserve deck, and promote them to Duty Officer."
+        ]
+      },
+      "loss": {
+        "cards": "[[res-skill]] / [[res-focus]] / [[mil-skill]] / [[mil-focus]]",
+        "bonus": [
+          "BOOST: After drawing the starting hand, choose 2 of the following: find a [[ship]], except in your Reserve deck OR spend 1 [[latinum]] to free play a [[ship]] OR warp a [[ship]].",
+          "BOOST: After drawing the starting hand, find a [[person]], except in your Reserve deck, and promote them to Duty Officer."
+        ]
+      }
+    }
+  },
+  {
+    "captain": "Sela",
+    "variant": null,
+    "id": "sela",
+    "traits": [
+      {
+        "key": "[[shady]]",
+        "text": "Gain 1 [[military]]. If able, gain a [[klingon]] > [[shady]]. If Bot has 8+ [[military]], take control of the neutral [[location]] with most Bot tokens (minimum 1) and log this card. If Bot has 7 or fewer [[military]], gain 1 [[military]] and 1 [[influence]]."
+      },
+      {
+        "key": "[[cloak]]",
+        "text": "If this card is a [[ship]], send an [[away team]] to a neutral [[location]], ignoring any opponent [[ship]], and deploy this [[ship]]; it engages. Otherwise, log this card and gain 3 [[glory]]."
+      },
+      {
+        "key": "[[vulcan]]",
+        "text": "Log the top card of the Bot deck. Gain 1 [[research]] / [[influence]] (whichever is lower). Gain a [[klingon]] > [[ship]]. If this card is a [[person]], promote it to Duty Officer."
+      },
+      {
+        "key": "[[klingon]]",
+        "text": "Discard the top 2 cards of the Bot deck. Gain 2 [[influence]] / [[military]], whichever is lower. If this card is a [[ship]], then deploy this [[ship]]; it explores. Otherwise, either @you dismiss a [[ship]]/@ OR resolve the top card of the Bot deck."
+      },
+      {
+        "key": "[[attack]]",
+        "text": "Junk the most valuable card in the Market (ignoring any with tokens). Send an [[away team]] to a neutral [[location]]. @You take an [[incident]]/@ OR @dismiss (one of) your Duty Officer(s)/@. If Bot has 8+ [[military]], log this card and either @you log a controlled [[location]]/@ OR @discard a card/@."
+      }
+    ],
+    "suits": [
+      {
+        "suit": "incident",
+        "text": "Gain 1 [[research]] / [[influence]] / [[military]] (whichever is lower). Gain a [[person]] / [[ally]]. Return this card.",
+        "do_text": "Log the top card of the Bot deck. Gain 1 [[military]]. Send an [[away team]] to a neutral [[location]]. $You may draw a card/$. Return this card."
+      },
+      {
+        "suit": "ship",
+        "text": "Gain 1 [[military]]. Deploy this [[ship]]; it explores.",
+        "do_text": "Deploy this [[ship]]; it engages. Send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "suit": "ally",
+        "text": "Discard the top 2 cards of the Bot deck. Gain a [[klingon]] > [[shady]] > [[person]]. Send an [[away team]] to a neutral [[location]], ignoring any opponent [[ship]]. $You may draw a card/$.",
+        "do_text": "Discard the top 2 cards of the Bot deck. Take an [[incident]]. Gain 2 [[research]] / [[influence]] / [[military]] (whichever is lower), and @you take an [[incident]]/@. Dismiss Duty Officer. Log this card."
+      },
+      {
+        "suit": "cargo",
+        "text": "Gain an [[ally]] > [[person]]. If Bot has 7+ [[military]], gain 1 [[research]] and 1 [[influence]]. Otherwise, gain 2 [[glory]] and 1 [[military]].",
+        "do_text": "Resolve the top card of the Supplement deck. Log Duty Officer. Log this card."
+      },
+      {
+        "suit": "person",
+        "text": "Gain 1 [[military]]. If able, gain a [[vulcan]] > [[klingon]]. Otherwise, if able, dismiss a [[ship]] to gain a [[person]] / [[ship]]. Otherwise, gain a [[cargo]]. Promote this card to Duty Officer.",
+        "do_text": "Log the top card of the Bot deck. Discard the top 3 cards of the Bot deck. If able, gain a [[shady]] > [[vulcan]]. Otherwise, gain 2 [[military]]."
+      },
+      {
+        "suit": "directive",
+        "text": "Discard the top 3 cards of the Bot deck. Gain 2 [[research]] / [[influence]] / [[military]] (whichever is lower).",
+        "do_text": "If able, remove 2 [[away team]] to gain top [[encounter]], then log this card and log Duty Officer. Otherwise, gain a [[shady]] > [[attack]] > [[cargo]] / [[ship]]."
+      },
+      {
+        "suit": "encounter",
+        "text": "Resolve the top card of the Supplement deck. Log this card.",
+        "do_text": "Gain 2 [[glory]]. Send an [[away team]] to a neutral [[location]]. Send an [[away team]] to a neutral [[location]]. Log Duty Officer. Log this card."
+      },
+      {
+        "suit": "location",
+        "text": "Log the top card of the Bot deck. Gain a [[person]] and promote it to Duty Officer.",
+        "do_text": "If able, gain a [[shady]]. Otherwise, dismiss Duty Officer, gain a [[person]] / [[cargo]] / [[ally]], and @you discard a card/@."
+      }
+    ],
+    "special": null,
+    "campaign": {
+      "win": {
+        "cards": "[[attack]] / [[shady]] / [[cloak]]",
+        "bonus": [
+          "BOOST: Before drawing the starting hand, find a card (from your draw deck or Reserve) and log the found card.",
+          "BOOST: After drawing the starting hand, take a card from your Reinforcement deck."
+        ]
+      },
+      "loss": {
+        "cards": "[[weapon]] / [[attack]] / [[romulan]]",
+        "bonus": [
+          "REINFORCE: A non-[[incident]] card from your Reserve deck",
+          "REINFORCE: A non-[[incident]] card from your Available cards."
+        ]
+      }
+    }
+  },
+  {
+    "captain": "Shran",
+    "variant": null,
+    "id": "shran",
+    "traits": [
+      {
+        "key": "[[weapon]]",
+        "text": "Junk the most valuable card in the Market (ignoring any with tokens). Send an [[away team]] to a neutral [[location]]. Either @you take an /@[[incident]] OR @you remove an /@[[away team]]."
+      },
+      {
+        "key": "[[attack]]",
+        "text": "Send an [[away team]] to a neutral [[location]]. @You discard the top card of your deck/@. If it is a [[person]], @you take an /@[[incident]] and the bot takes an [[incident]]. Otherwise, gain 1 [[military]]. If this card is a [[person]], promote it to Duty Officer."
+      },
+      {
+        "key": "[[business]]",
+        "text": "Log the top card of the Bot deck. Gain a [[weapon]] > [[cargo]] / [[ship]]. Resolve the top card of the Bot deck. Log this card."
+      },
+      {
+        "key": "[[ambassador]]",
+        "text": "Discard the top 2 cards of the Bot deck. Gain 2 [[glory]]. $You may return an /$[[incident]]$ from your hand or Discard pile/$. If this card is a [[person]], promote it to Duty Officer. Otherwise, log this card."
+      }
+    ],
+    "suits": [
+      {
+        "suit": "incident",
+        "text": "Gain a [[person]]. Discard the top 3 cards of the Bot deck. Return this card.",
+        "do_text": "Log the top card of the Bot deck. Gain 1 [[glory]]. Return this card."
+      },
+      {
+        "suit": "ship",
+        "text": "Deploy this [[ship]]; it explores. If a [[person]] is in Bot Discard pile, send an [[away team]] to a neutral [[location]]. If a [[cargo]] is in Bot Discard pile, gain 1 [[influence]].",
+        "do_text": "Deploy this [[ship]]; it engages. Send an [[away team]] to a neutral [[location]]. Gain 1 [[military]]."
+      },
+      {
+        "suit": "ally",
+        "text": "Discard the top 3 cards of the Bot deck. For each [[person]] in Bot Discard pile, gain 1 [[influence]]. For each [[ship]] in Bot Discard pile, send an [[away team]] to a neutral [[location]].",
+        "do_text": "Gain a [[business]] > [[person]] / [[ship]] / [[ally]]. If an [[attack]] is in Bot Discard pile, gain 1 [[military]] and 1 [[glory]]. Log Duty Officer. Log this card."
+      },
+      {
+        "suit": "cargo",
+        "text": "Discard the top 2 cards of the Bot deck. Gain 2 [[glory]]. Gain a [[business]] > [[person]]. Log this card.",
+        "do_text": "Log the top card of the Bot deck. Gain 1 [[influence]]. Gain 1 [[military]]. Log Duty Officer. Log this card."
+      },
+      {
+        "suit": "person",
+        "text": "Discard the top 2 cards of the Bot deck. Gain 1 [[influence]] / [[military]] (whichever is lower). Send an [[away team]] to a neutral [[location]]. Promote this card to Duty Officer.",
+        "do_text": "Log the top card of the Bot deck. Gain 1 [[influence]]. Gain 1 [[military]]. Take a [[ship]] / [[ally]]."
+      },
+      {
+        "suit": "directive",
+        "text": "Gain a [[business]] > [[cargo]]. Send an [[away team]] to a neutral [[location]]. If Bot has 5+ [[influence]], gain 1 [[glory]] and take an [[incident]].",
+        "do_text": "If able to do both, log a controlled [[location]] and remove 2 [[away team]] to take top [[encounter]], then log this card. Otherwise, gain a [[cargo]] / [[ship]]."
+      },
+      {
+        "suit": "encounter",
+        "text": "Discard the top 2 cards of the Bot deck. Gain a [[person]]. Gain a [[cargo]]. Log this card.",
+        "do_text": "Gain 1 [[glory]]. Gain 1 [[military]]. Take a [[ship]] > [[ally]]. Log this card."
+      },
+      {
+        "suit": "location",
+        "text": "Log the top card of the Bot deck. Discard the top 2 cards of the Bot deck.",
+        "do_text": "Gain 1 [[military]]. Gain 1 [[glory]]. Log Duty Officer."
+      }
+    ],
+    "special": null,
+    "campaign": {
+      "win": {
+        "cards": "[[weapon]] / [[business]]",
+        "bonus": [
+          "BOOST: Before drawing the starting hand, find a [[location]] (excluding from your Reserve deck) and immediately free play it.",
+          "BOOST: Gain 2 [[dilithium]]."
+        ]
+      },
+      "loss": {
+        "cards": "[[cargo]] / [[human]] / [[tellarite]]",
+        "bonus": [
+          "BOOST: Gain 1 [[dilithium]].",
+          "REINFORCE: A non-[[incident]] card from your Reserve deck"
+        ]
+      }
+    }
+  },
+  {
+    "captain": "Sisko",
+    "variant": null,
+    "id": "sisko",
+    "traits": [
+      {
+        "key": "[[transcendent]]",
+        "text": "If able, gain a [[bajoran]] > [[dominion]] > [[changeling]]. Otherwise, gain 2 [[military]] and 1 [[glory]]."
+      },
+      {
+        "key": "[[starbase]]",
+        "text": "Discard the top 3 cards of the Bot deck. If this card is a [[ship]], deploy this card. Otherwise, gain 1 [[glory]]. If able, resolve a [[person]] from Bot Discard pile. Otherwise gain 2 [[influence]]."
+      },
+      {
+        "key": "[[bajoran]]",
+        "text": "Gain 1 [[influence]] and 1 [[military]]. Take an [[incident]]. If an [[ally]] is in Bot Discard pile, send 2 [[away team]] to a neutral [[location]]. Otherwise, @you dismiss (one of) your Duty Officer(s)/@ and the bot gains 2 [[military]]. If this card is a [[person]], promote it to Duty Officer."
+      },
+      {
+        "key": "[[changeling]] / [[dominion]]",
+        "text": "Log the top card of the Bot deck. Resolve the top card of the Bot deck. If this card is a [[person]], promote it to Duty Officer."
+      },
+      {
+        "key": "[[attack]]",
+        "text": "Send an [[away team]] to a neutral [[starbase]] > [[starfleet]] > [[location]]. If this card is a [[ship]], @you discard a card/@ and deploy this [[ship]]; it engages. Otherwise, gain 2 [[military]]."
+      }
+    ],
+    "suits": [
+      {
+        "suit": "incident",
+        "text": "Discard the top card of the Bot deck. Gain a [[mil-focus]] > [[inf-focus]] > [[person]] / [[ally]]. Return this card.",
+        "do_text": "Take a [[mil-focus]] > [[ship]] > [[cargo]]. Gain 1 [[military]]. Return this card."
+      },
+      {
+        "suit": "ship",
+        "text": "Discard the top 3 cards of the Bot deck. Deploy this [[ship]]; it explores. If a [[person]] is in Bot Discard pile, send an [[away team]] to a neutral [[starbase]] > [[starfleet]] > [[location]].",
+        "do_text": "If able, log a [[starbase]] in play to resolve the top card of the Supplement deck. Deploy this [[ship]]; it explores. Send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "suit": "ally",
+        "text": "Gain 1 [[glory]]. Discard the top 2 cards of the Bot deck. For each [[person]] in Bot Discard pile, gain 1 [[influence]]. For each [[ship]] in Bot Discard pile, send an [[away team]] to a neutral [[starbase]] > [[starfleet]] > [[location]].",
+        "do_text": "Gain 1 [[influence]] / [[military]] (whichever is lower). Gain a [[cargo]] > [[ship]] / [[ally]]. Log this card."
+      },
+      {
+        "suit": "cargo",
+        "text": "Discard the top 2 cards of the Bot deck. If able, log a [[person]] from Bot Discard pile. Gain 1 [[glory]]. Gain 1 [[influence]]. Gain 1 [[military]]. Send an [[away team]] to a neutral [[location]].",
+        "do_text": "Discard the top 3 cards of the Bot deck. Gain 1 [[military]]. Gain an [[inf-focus]] > [[mil-focus]] > [[ship]]. Log Duty Officer."
+      },
+      {
+        "suit": "person",
+        "text": "Gain 1 [[influence]]. Send an [[away team]] to a neutral [[location]]. Promote this card to Duty Officer.",
+        "do_text": "Discard the top 3 cards of the Bot deck. Gain 1 [[influence]] / [[military]] (whichever is lower). Gain a [[ship]] / [[inf-focus]]."
+      },
+      {
+        "suit": "directive",
+        "text": "Discard the top 3 cards of the Bot deck. If able, log a [[person]] from Bot Discard pile to send an [[away team]] to a neutral [[location]]. Otherwise, gain 1 [[influence]] / [[military]] (whichever is lower) and gain a [[person]].",
+        "do_text": "If able to do both, log a controlled [[location]] (not a [[starbase]]) and remove 2 [[away team]] to take top [[encounter]] and log this card. Otherwise, send an [[away team]] to a neutral [[location]], gain 1 [[influence]], and dismiss Duty Officer."
+      },
+      {
+        "suit": "encounter",
+        "text": "Discard the top 3 cards of the Bot deck. Take an [[inf-focus]] > [[person]]. Log this card.",
+        "do_text": "Discard the top card of the Bot deck. Gain 1 [[military]]. Gain 1 [[influence]]. Take a [[ship]] / [[ally]]."
+      },
+      {
+        "suit": "location",
+        "text": "Log the top card of the Bot deck. Discard the top 3 cards of the Bot deck. Gain 1 [[military]]. If able, return a [[ship]] from Bot Discard pile to top of the Bot deck.",
+        "do_text": "Log the top card of the Bot deck. Discard the top 3 cards of the Bot deck. Gain 1 [[influence]]. Log Duty Officer."
+      }
+    ],
+    "special": null,
+    "campaign": {
+      "win": {
+        "cards": "[[anomaly]] / [[scientist]]",
+        "bonus": [
+          "BOOST: Gain 3 [[influence]].",
+          "BOOST: Gain 2 [[latinum]]."
+        ]
+      },
+      "loss": {
+        "cards": "[[cargo]] / [[ally]] / [[person]]",
+        "bonus": [
+          "BOOST: Gain 1 [[influence]].",
+          "BOOST: Gain 1 [[dilithium]]."
+        ]
+      }
+    }
+  },
+  {
+    "captain": "Soval",
+    "variant": null,
+    "id": "soval",
+    "traits": [
+      {
+        "key": "[[telepath]]",
+        "text": "$You may return an/$ [[incident]] $from your hand or Discard pile./$ If you do, resolve the top card of the Bot deck. If this card is a [[person]], promote it to Duty Officer. Continue resolution."
+      },
+      {
+        "key": "[[scientist]] / [[anomaly]]",
+        "text": "Gain 1 [[glory]]. Take [[res-skill]] / [[inf-skill]] / [[mil-skill]], if able. Otherwise gain 2 [[research]] and discard the top card of the Bot deck. If this card is a [[ship]], deploy it; it explores."
+      },
+      {
+        "key": "[[human]] / [[engineer]]",
+        "text": "Discard the top 3 cards of the Bot deck. Gain 1 [[research]] / [[influence]] / [[military]] (whichever is lower). If this card is a [[person]], promote it to Duty Officer."
+      },
+      {
+        "key": "[[path of surak]]",
+        "text": "Take top [[encounter]]. If this card is [[cargo]] resolve the top card of the Bot deck and log this card."
+      },
+      {
+        "key": "[[attack]]",
+        "text": "If Bot has 8 or fewer [[military]], @you remove an /@[[away team]]@ from a neutral /@[[location]]@, if able/@, then send a bot [[away team]] to the same [[location]], if able. If either option failed, gain 2 [[military]]. If Bot has 9+ [[military]], the bot takes control of a neutral [[location]] (excluding ones $you have secured/$), then log this card."
+      }
+    ],
+    "suits": [
+      {
+        "suit": "incident",
+        "text": "Log the top card of the Bot deck. Gain a [[person]]. Return this card.",
+        "do_text": "Log the top card of the Bot deck. Gain 1 [[research]]. Gain 1 [[military]]. Return this card."
+      },
+      {
+        "suit": "ship",
+        "text": "Deploy this [[ship]]; it explores. If Bot has 5+ [[military]] send an [[away team]] to a neutral [[location]]. Otherwise gain a [[research]].",
+        "do_text": "Deploy this [[ship]]; it explores. Gain 1 [[military]]. Send an [[away team]] to a neutral [[location]]."
+      },
+      {
+        "suit": "ally",
+        "text": "Gain a [[human]] > [[person]]. Send an [[away team]] to a neutral [[location]]. Log this card.",
+        "do_text": "Gain a [[scientist]]/[[telepath]] > [[ship]] > [[ally]]. If Duty Officer is not [[vulcan]], log Duty Officer. Log this card."
+      },
+      {
+        "suit": "cargo",
+        "text": "Gain 1 [[research]] / [[military]] (whichever is higher).",
+        "do_text": "Gain [[scientist]]/[[anomaly]]/[[engineer]] > [[ally]], including from Junk. Dismiss Duty Officer."
+      },
+      {
+        "suit": "person",
+        "text": "Log the top card of the Bot deck. Gain 1 [[research]] / [[military]] (whichever is lower). Send an [[away team]] to a neutral [[location]]. Promote this card to Duty Officer.",
+        "do_text": "If [[ship]] is in Bot Discard, put it on top of the Bot deck. Gain a [[res-focus]] > [[mil-focus]] > [[inf-focus]] > [[ship]] and dismiss Duty Officer."
+      },
+      {
+        "suit": "directive",
+        "text": "Gain a [[res-focus]] > [[scientist]]/[[telepath]] > [[ally]] and gain an [[incident]].",
+        "do_text": "Gain 1 [[research]]. Gain 1 [[influence]] / [[military]] (whichever is lower). If Duty Officer is [[vulcan]], discard the top 2 cards of the Bot deck; otherwise gain 1 [[glory]]."
+      },
+      {
+        "suit": "encounter",
+        "text": "Gain 1 [[research]]. Discard the top card of the Supplement deck.",
+        "do_text": "Gain 1 [[research]]. Gain 1 [[influence]]. Resolve the top card of the Supplement deck. Log this card."
+      },
+      {
+        "suit": "location",
+        "text": "Discard the top 3 cards of the Bot deck. Gain 1 [[glory]].",
+        "do_text": "Gain 1 [[influence]]. Gain a [[res-skill]] > [[starfleet]] > [[cargo]]. Log Duty Officer."
+      }
+    ],
+    "special": "If a card with [[path of surak]] would be logged when logging the top card of the Bot deck, ^discard it instead^.",
+    "campaign": {
+      "win": {
+        "cards": "[[telepath]] / [[res-skill]]",
+        "bonus": [
+          "BOOST: Gain 1 [[research]], 1 [[military]], and 1 [[research]]/[[military]].",
+          "BOOST: Before drawing the starting hand, find a [[person]], except in your Reserve deck, and promote them to Duty Officer."
+        ]
+      },
+      "loss": {
+        "cards": "[[vulcan]] / [[scientist]] / [[anomaly]]",
+        "bonus": [
+          "BOOST: Gain 1 [[research]]/[[military]].",
+          "BOOST: After drawing the starting hand, find a [[person]] in your Draw deck."
+        ]
+      }
+    }
+  }
+]
