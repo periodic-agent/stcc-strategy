@@ -303,11 +303,9 @@ a{color:var(--blue);text-decoration:none;}
 @keyframes dnflash{from{background:rgba(255,255,255,.07);}to{background:transparent;}}
 @media (prefers-reduced-motion:reduce){.dnote.flash{animation:none;}}
 
-.card-img-badge{position:absolute;top:6px;left:6px;font-family:'Exo 2',sans-serif;font-size:0.5rem;font-weight:600;padding:0.08rem 0.4rem;border-radius:2px;border:1px solid;z-index:2;}
-.card-img-badge.update{background:rgba(90,100,120,0.92);color:#fff;border-color:rgba(160,170,190,0.8);}
-.card-img-badge.duplicate{background:rgba(90,100,120,0.75);color:#fff;border-color:rgba(160,170,190,0.6);}
-.card-img-badge.errata{background:rgba(224,90,90,0.95);color:#fff;border-color:rgba(255,140,140,0.9);font-weight:700;}
-.card-img-badge.errata.second{left:30px;}
+.nm-marks{white-space:nowrap;}
+.nm-mark{color:#8a94ac;margin-left:.25em;cursor:help;}
+.nm-mark.err{color:#e05a5a;font-weight:700;}
 .card-img-entry{position:relative;}
 .card-tags{display:flex;flex-wrap:wrap;gap:0.22rem;margin-bottom:0.3rem;}
 .ctag{font-size:0.58rem;padding:0.07rem 0.3rem;border-radius:2px;}
@@ -649,6 +647,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>strip:reaction</code> &middot; <code>strip:any</code><span>cards carrying that operation strip</span></div>
     <div class="qh-row"><code>text:cloak</code> &middot; <code>text:"gain 2"</code><span>search the rules text of every strip</span></div>
     <div class="qh-row"><code>reaction:"putting a shady"</code> &middot; <code>activation:draw</code><span>text inside one kind of strip; every strip name is a key</span></div>
+    <div class="qh-row"><code>view:details</code><span>open in Details view; the Images | Details toggle writes it, so a shared link keeps the view</span></div>
     <div class="qh-row"><code>variant:update</code> · <code>variant:duplicate</code><span>cards wearing that badge in the current boxes</span></div>
     <div class="qh-row"><code>errata</code> · <code>update</code><span>cards with an errata or an updated printing; update alone lists updated printings only</span></div>
     <div class="qh-row"><code>errata:wording</code> · <code>errata:"operation redesign"</code><span>errata of that type: card name change, card trait change, operation added/removed, operation redesign, wording correction, card replacement</span></div>
@@ -1082,10 +1081,18 @@ function writeHash(q, card){
 
 
 
+function syncViewButtons(){
+  document.getElementById('btnPill').classList.toggle('active',viewMode==='pill');
+  document.getElementById('btnImg').classList.toggle('active',viewMode==='image');
+}
 function setView(v){
-  viewMode=v;
-  document.getElementById('btnPill').classList.toggle('active',v==='pill');
-  document.getElementById('btnImg').classList.toggle('active',v==='image');
+  viewMode=(v==='pill') ? 'pill' : 'image';
+  syncViewButtons();
+  const toks=tokenList(currentQuery()).filter(t=>!/^-?view:/i.test(t));
+  if(viewMode==='pill') toks.push('view:details');
+  const text=toks.join(' ');
+  document.getElementById('searchInput').value=text;
+  writeHash(text, (LB_INDEX>=0 && LB_LIST[LB_INDEX]) ? cardKey(LB_LIST[LB_INDEX]) : null);
   render();
 }
 
@@ -1115,7 +1122,7 @@ function parseQuery(text, vocab){
   const res={boxes:[],decks:[],suits:[],tags:[],skills:[],names:[],
              negBoxes:[],negDecks:[],negSuits:[],negTags:[],negSkills:[],negNames:[],
              vp:[],negVp:[],positions:[],negPositions:[],variants:[],negVariants:[],dupes:true,sort:'',bot:false,promo:false,
-             strips:[],negStrips:[],text:[],negText:[],kindText:[],negKindText:[],
+             strips:[],negStrips:[],text:[],negText:[],kindText:[],negKindText:[],view:'',
              has:[],negHas:[],changeType:[],negChangeType:[]};
   const HAS_WORDS={errata:'errata',update:'update',updates:'update',notes:'notes',note:'notes',
                    strategy:'strategy',guides:'strategy'};
@@ -1156,6 +1163,9 @@ function parseQuery(text, vocab){
       put(res.strips,res.negStrips,lv.replace(/[\s-]/g,''));
     } else if(key==='text'||key==='rules'){
       put(res.text,res.negText,lv);
+    } else if(key==='view'){
+      res.view = ['details','detail','text','pill','cards'].includes(lv) ? 'pill'
+               : ['images','image','scans','scan'].includes(lv) ? 'image' : '';
     } else if(key==='sort'){
       res.sort = lv;
     } else if(key==='dupes'){
@@ -1300,7 +1310,8 @@ function buildQueryVocab(){
 
 function applyQuery(text){
   const q=parseQuery(text,QUERY_VOCAB);
-  const asked=tokenList(String(text||'')).some(t=>!/^-?(dupes|sort|bots?|promos?):/i.test(t));
+  const asked=tokenList(String(text||'')).some(t=>!/^-?(dupes|sort|bots?|promos?|view):/i.test(t));
+  viewMode = q.view || 'image';
   activeBoxes=new Set(q.boxes.length?q.boxes.filter(b=>DEFAULT_BOXES.includes(b)):(asked?DEFAULT_BOXES:[]));
   q.negBoxes.forEach(b=>activeBoxes.delete(b));
   showPromo = q.promo === true;
@@ -1414,6 +1425,7 @@ function setBoxTokens(target){
   setQuery(toks.join(' '));
 }
 function syncFilterPills(){
+  syncViewButtons();
   const dup=document.getElementById('showDupes');
   if(dup) dup.checked=showDupes;
   const sn=document.getElementById('sortNum');
@@ -1982,19 +1994,20 @@ function buildImgCard(c){
   const away=(c.away_team||'').trim();
   const awayHTML=away?('<svg class="awayteam" viewBox="0 0 30 27" role="img" aria-label="Away team '+away+'"><title>Away team '+away+'</title><path d="M4.2 1.1h21.6a3.1 3.1 0 0 1 3.1 3.1v14.6a3.1 3.1 0 0 1-3.1 3.1h-8.2l-2.6 4.6-2.6-4.6H4.2a3.1 3.1 0 0 1-3.1-3.1V4.2a3.1 3.1 0 0 1 3.1-3.1z" fill="#1b2f4d" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><text x="15" y="16.6" text-anchor="middle" font-family="Antonio,sans-serif" font-weight="700" font-size="12" fill="#fff">'+away+'</text></svg>'):'';
   const badge=badgeInfo(c);
-  const badgeOv = (badge ? '<div class="card-img-badge '+badge.cls+'">'+(badge.cls==='update'?'\u2020':'\u25CF')+'</div>' : '')
-    + (hasErrataMark(c) ? '<div class="card-img-badge errata'+(badge?' second':'')+'" title="Errata">!</div>' : '');
+  const marks = (badge ? '<span class="nm-mark" title="'+badge.text+'">'+(badge.cls==='update'?'\u2020':'\u25CF')+'</span>' : '')
+    + (hasErrataMark(c) ? '<span class="nm-mark err" title="Errata">!</span>' : '');
+  const nameHTML='<div class="card-img-name">'+c.name+(marks ? '<span class="nm-marks">'+marks+'</span>' : '')+'</div>';
   const alsoTxt=printingsParts(c).also;
   const alsoHTML=alsoTxt?'<div class="alsoin">'+alsoTxt+'</div>':'';
   const lbIdx=LB_CARDS.push(c)-1;
   el.onclick=()=>openCardAt(lbIdx);
   if(src){
-    el.innerHTML=badgeOv+'<img loading="lazy" src="'+src+'" alt="'+c.name+'" '
+    el.innerHTML='<img loading="lazy" src="'+src+'" alt="'+c.name+'" '
       +'onload="IMG_OK.add(this.src.split(\'/\').slice(-3).join(\'/\'));" '
       +'onerror="this.onerror=null;IMG_FAILED.add(this.getAttribute(&quot;src&quot;));this.outerHTML=\'<div class=&quot;img-placeholder&quot;>NO IMAGE</div>\';">'
-      +'<div class="card-img-name">'+c.name+'</div>'+alsoHTML;
+      +nameHTML+alsoHTML;
   } else {
-    el.innerHTML=badgeOv+'<div class="img-placeholder">NO IMAGE</div><div class="card-img-name">'+c.name+'</div>'+alsoHTML;
+    el.innerHTML='<div class="img-placeholder">NO IMAGE</div>'+nameHTML+alsoHTML;
   }
   return el;
 }
