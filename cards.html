@@ -1485,6 +1485,16 @@ function specPill(spec,src,alt){
 }
 
 const TRAIT_FAM_COL={species:'#e2a04a',regular:'#79b3c7',other:'#c85340',variable:'#f6c9bd'};
+function traitWeight(t){
+  let w=0;
+  for(const ch of String(t).toUpperCase()) if(ch!=='-'&&ch!=='I'&&ch!=='1') w++;
+  return w;
+}
+function sortTraits(list){
+  return list.map((t,i)=>[t,i])
+             .sort((a,b)=>(traitWeight(a[0])-traitWeight(b[0]))||(a[1]-b[1]))
+             .map(p=>p[0]);
+}
 function traitFamily(name){
   if(String(name).toLowerCase()==='wildcard') return 'variable';
   const has=(list,n)=>Array.isArray(list)&&list.some(x=>x.toLowerCase()===n);
@@ -1793,7 +1803,7 @@ function buildPillCard(c){
   const sGly_=CARDFACE.suit[sk_]||(CARDFACE.suitFont&&CARDFACE.suitFont[sk_]);
   const sIcon=sGly_?'<img src="'+sGly_+'" alt="">':'';
   const tkey=t=>t.toLowerCase().replace(/['’]/g,'').replace(/\s+/g,'-');
-  const allTags=[...c.species,...c.regular,...c.other].sort((a,b)=>a.length-b.length);
+  const allTags=sortTraits([...c.species,...c.regular,...c.other]);
   const vt=allTags.map((t,i)=>{
     let fam=t==='Wildcard'?'variable':c.species.includes(t)?'species':c.other.includes(t)?'other':'regular';
     const ic=CARDFACE.trait[tkey(t)];
