@@ -283,6 +283,7 @@ a{color:var(--blue);text-decoration:none;}
 .card-badge.strategy{background:rgba(94,200,200,0.14);color:#6fd3d3;border-color:rgba(94,200,200,0.45);}
 .card-badge + .card-badge{margin-left:0.3rem;}
 .cwrap{display:flex;flex-direction:column;min-width:0;position:relative;padding-bottom:22px;}
+.img-grid > .cwrap{padding-bottom:0;}
 .cwrap > .card-entry{flex:1;}
 .img-grid{align-items:start;}
 .xtab{position:absolute;bottom:0;left:50%;transform:translateX(-50%);display:inline-flex;white-space:nowrap;
@@ -1034,7 +1035,7 @@ function wrapTile(c, el){
   const w=document.createElement('div');
   w.className='cwrap'+((viewMode==='image' && el.classList.contains('card-entry')) ? ' wide' : '');
   w.appendChild(el);
-  const kinds=tabKinds(c);
+  const kinds=(viewMode==='pill') ? tabKinds(c) : [];
   if(kinds.length){
     const idx=LB_CARDS.length-1;
     const t=document.createElement('div');
