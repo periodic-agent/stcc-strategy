@@ -338,7 +338,8 @@ body.lb-open{overflow:hidden;}
 .lbx-count{margin-left:auto;font-family:'Exo 2',sans-serif;font-size:.75rem;color:var(--muted);}
 .lbx-x{background:none;border:0;color:var(--text);font-size:1.5rem;line-height:1;cursor:pointer;padding:0 .2rem;}
 .lbx-body{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:1.2rem;padding:1rem 3.4rem;overflow:hidden;min-height:0;}
-.lbx-left{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:0;}
+.lbx-left{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-height:0;}
+.dnote-q.plain a.lb-print{color:#6fd3d3;text-decoration:underline dotted;text-underline-offset:2px;}
 .lbx-left img{max-width:100%;max-height:100%;min-height:0;object-fit:contain;border-radius:8px;border:1px solid rgba(212,105,159,0.4);box-shadow:0 0 60px rgba(212,105,159,0.25);}
 .lbx-right{overflow-y:auto;min-height:0;padding-right:.3rem;}
 .lbx-right .card-entry{cursor:default;}
@@ -650,7 +651,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>reaction:"putting a shady"</code> &middot; <code>activation:draw</code><span>text inside one kind of strip; every strip name is a key</span></div>
     <div class="qh-row"><code>view:details</code><span>open in Details view; the Images | Details toggle writes it, so a shared link keeps the view</span></div>
     <div class="qh-row"><code>variant:update</code> · <code>variant:duplicate</code><span>cards wearing that badge in the current boxes</span></div>
-    <div class="qh-row"><code>errata</code> · <code>update</code><span>cards with an errata or an updated printing; update alone lists updated printings only</span></div>
+    <div class="qh-row"><code>errata</code> · <code>update</code><span>printings marked ! (errata), or &dagger; (updated in a later box)</span></div>
     <div class="qh-row"><code>errata:wording</code> · <code>errata:"operation redesign"</code><span>errata of that type: card name change, card trait change, operation added/removed, operation redesign, wording correction, card replacement</span></div>
     <div class="qh-row"><code>notes</code> · <code>strategy</code><span>cards with a designer's note, or with their own section in a strategy guide</span></div>
     <div class="qh-note">Click a card for its scan, errata, notes and guide links; the arrows page through the results. Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>
@@ -868,6 +869,9 @@ function resolveCards(rawPool, expand){
         return boxRank(rawBoxKey(b)) - boxRank(rawBoxKey(a));
       });
       const chosenImg = imgCandidates.find(c=>c.filename && c.filename.trim());
+      const face = (chosen.variant === 'updated') ? chosen
+        : ((FULL_BY_ID[chosen.id] || []).filter(p=>p.variant === 'updated')
+            .sort((a,b)=>boxRank(rawBoxKey(b)) - boxRank(rawBoxKey(a)))[0] || chosen);
       const pick = (field) => {
         const own = chosen[field];
         if(own !== undefined && own !== null && own !== '') return own;
@@ -880,10 +884,10 @@ function resolveCards(rawPool, expand){
         suit: chosen.suit,
         deck: chosen.source === 'Promo' ? 'Common' : chosen.source,
         box: rawBoxKey(chosen),
-        species: chosen.species_traits||[],
-        regular: chosen.regular_traits||[],
-        other: chosen.other_traits||[],
-        skills: normIcons(chosen.icons),
+        species: face.species_traits||[],
+        regular: face.regular_traits||[],
+        other: face.other_traits||[],
+        skills: normIcons(face.icons),
         filename: chosenImg ? chosenImg.filename : '',
         imgBox: chosenImg ? rawBoxKey(chosenImg) : null,
         boxes: boxes,
@@ -900,6 +904,8 @@ function resolveCards(rawPool, expand){
         position_indicator: pick('position_indicator'),
         away_team: (() => { const a = pick('away_team'); return a ? String(a) : ''; })(),
         strips: (() => {
+                         if (face.text && typeof face.text === 'object') return textToStrips(face.text, TOKEN_MAP);
+                         if (Array.isArray(face.strips) && face.strips.length) return face.strips;
                          if (chosen.text && typeof chosen.text === 'object') return textToStrips(chosen.text, TOKEN_MAP);
                          if (Array.isArray(chosen.strips) && chosen.strips.length) return chosen.strips;
                          for (const pr of group) {
@@ -1014,11 +1020,8 @@ function printingsParts(c){
           updates: parts.filter(p=>!/^Also in:/.test(p)).join(' \u00b7 ')};
 }
 function hasErrataMark(c){ return (c.errata||[]).length > 0 && c.badgeKind !== 'update'; }
-function hasErrataInfo(c){
-  return (c.errata||[]).length > 0 || c.badgeKind === 'update' || !!printingsParts(c).updates;
-}
 function hasExtra(c, k){
-  if(k === 'errata')   return hasErrataInfo(c);
+  if(k === 'errata')   return hasErrataMark(c);
   if(k === 'notes')    return !!noteOf(c);
   if(k === 'strategy') return hasStrategy(c);
   return false;
@@ -2229,11 +2232,32 @@ function lbSection(cls, label, inner, sec){
     +'<span class="dnote-label">'+label+'</span><span class="dnote-rule"></span></div>'+inner+'</div>';
 }
 
+function printingLinksHTML(c){
+  const others=(FULL_BY_ID[c.id]||[]).filter(pr=>rawBoxKey(pr)!==c.box);
+  const upd=c.variant==='updated';
+  const targets=others.filter(pr=>upd ? pr.variant!=='updated' : pr.variant==='updated');
+  if(!targets.length) return '';
+  const seen=new Set(), links=[];
+  targets.forEach(pr=>{
+    const b=rawBoxKey(pr);
+    if(seen.has(b)) return;
+    seen.add(b);
+    const key=cardKey(pr), label=lbEsc(boxLabelFromKey(b));
+    links.push(key ? '<a href="#" class="lb-print" onclick="return lbGoPrint(event,\''+lbEsc(key)+'\')">'+label+'</a>' : label);
+  });
+  return (upd ? 'Updates: ' : 'Updated in: ')+links.join(', ');
+}
+function lbGoPrint(e, key){
+  if(e && e.preventDefault) e.preventDefault();
+  openCardByKey(key);
+  return false;
+}
+
 function lbExtrasHTML(c){
   let h='';
   const lines=(c.errata||[]).map(e=>lbEsc(e.type)+', '+lbEsc(e.date));
-  const upd=printingsParts(c).updates;
-  if(upd) lines.push(lbEsc(upd));
+  const upd=printingLinksHTML(c);
+  if(upd) lines.push(upd);
   if(lines.length) h+=lbSection('errata','Errata',lines.map(l=>'<div class="dnote-q plain">'+l+'</div>').join(''));
   const note=noteOf(c);
   if(note) h+=lbSection('note',ICON_PEN+'Designer\u2019s note','<blockquote class="dnote-q">'+lbEsc(note)+'</blockquote>','note');
