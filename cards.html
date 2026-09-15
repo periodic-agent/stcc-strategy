@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
 <title>ST:CC Card Scanner</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;600&family=Antonio:wght@600;700&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&family=Antonio:wght@600;700&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
 <script data-goatcounter="https://stcc-compendium.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <style>
 :root{
@@ -488,8 +488,26 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   letter-spacing:.03em;text-transform:uppercase;color:#fff;vertical-align:-.2em;}
 .stripchip img{height:1em;width:auto;}
 .stripchip.plain{padding-left:.38em;}
-.reqchip,.vpchip{display:inline-flex;align-items:center;gap:.12em;vertical-align:-.2em;}
-.reqchip b,.vpchip b{font-family:'Antonio',sans-serif;font-weight:600;}
+.vpchip{display:inline-flex;align-items:center;gap:.12em;vertical-align:-.2em;}
+.vpchip b{font-family:'Antonio',sans-serif;font-weight:600;}
+.req-marker{--rm-h:0.95em;--rm-ink:#232122;display:inline-flex;align-items:center;
+  height:var(--rm-h);background:var(--rm-ink);border-radius:.1em;
+  padding:0 calc(var(--rm-h)*0.37) 0 calc(var(--rm-h)*2.05);
+  margin:0 .16em;position:relative;vertical-align:-.30em;white-space:nowrap;}
+.req-marker .rm-dia{position:absolute;left:calc(var(--rm-h)*1.071);top:47%;
+  width:calc(var(--rm-h)*1.246);height:calc(var(--rm-h)*1.246);
+  transform:translate(-50%,-50%) rotate(45deg);transform-origin:center;
+  background:var(--rm-ink);border-radius:.1em;
+  display:flex;align-items:center;justify-content:center;}
+.req-marker .rm-med{width:calc(var(--rm-h)*1.214);height:calc(var(--rm-h)*1.214);
+  border-radius:50%;overflow:hidden;transform:rotate(-45deg);position:relative;}
+.req-marker .rm-med img{position:absolute;height:100%;width:auto;max-width:none;display:block;}
+.req-marker b{font-family:'Orbitron',sans-serif;font-weight:900;
+  font-size:calc(var(--rm-h)*1.32);line-height:1;color:#fff;letter-spacing:.01em;
+  text-shadow:0 -.17em 0 var(--rm-ink),0 .17em 0 var(--rm-ink),
+    -.14em 0 0 var(--rm-ink),.14em 0 0 var(--rm-ink),
+    -.11em -.13em 0 var(--rm-ink),.11em -.13em 0 var(--rm-ink),
+    -.11em .13em 0 var(--rm-ink),.11em .13em 0 var(--rm-ink);}
 .vpchip{position:relative;}
 .vpchip img{height:1.35em;width:auto;}
 .vpchip b{position:absolute;left:0;right:0;top:0;bottom:0;display:flex;align-items:center;justify-content:center;color:#14161c;font-size:.8em;line-height:1;}
@@ -1457,6 +1475,8 @@ const STRIP_RES={dilithium:'dilithium',latinum:'latinum',glory:'glory-token',
 const STRIP_SPEC=['Research','Influence','Military','Any','Variable'];
 const SPEC_COL={military:'#ab2242',research:'#015c80',influence:'#c0b422',
                 any:'#5a6678',variable:'#5a6678'};
+const REQ_GLYPH_CX={research:34.5,military:35.0,influence:36.4,any:31.2,
+                    variable:49.3,collective:50};
 function specPill(spec,src,alt){
   const col=SPEC_COL[String(spec).toLowerCase()];
   if(!src) return alt;
@@ -1519,12 +1539,17 @@ function stripToken(t){
     return specPill(m[1],src,m[1])+'<span class="restr">restriction</span>';
   }
   if((m=t.match(/^req:([^:]+):(.+)$/))){
-    if(m[1]==='Collective'){
-      const cs=stripIcon('borg-collective');
-      return '<span class="reqchip">'+(cs?'<img class="stripimg" src="'+cs+'" alt="Collective">':'Collective ')+'<b>'+m[2]+'</b></span>';
-    }
-    const src=(CARDFACE.skillChip||CARDFACE.skill||{})[m[1].toLowerCase()];
-    return '<span class="reqchip">'+specPill(m[1],src,m[1])+'<b>'+m[2]+'</b></span>';
+    const rspec=m[1], rk=String(rspec).toLowerCase();
+    const rsrc=(rk==='collective')?stripIcon('borg-collective')
+                                  :((CARDFACE.skillChip||CARDFACE.skill||{})[rk]||'');
+    if(!rsrc) return rspec+' '+m[2];
+    const rcol=SPEC_COL[rk]?' style="background:'+SPEC_COL[rk]+'"':'';
+    const rgx=(REQ_GLYPH_CX[rk]!==undefined)?REQ_GLYPH_CX[rk]:50;
+    return '<span class="req-marker" title="Requires '+m[2]+' '+rspec+'">'
+      +'<span class="rm-dia"><span class="rm-med"'+rcol+'>'
+      +'<img src="'+rsrc+'" alt="'+rspec+'" '
+      +'style="left:50%;top:50%;transform:translate(-'+rgx+'%,-50%)"></span></span>'
+      +'<b>'+m[2]+'</b></span>';
   }
   if((m=t.match(/^tok:(.+)$/))){
     const src=stripIcon(m[1]);
