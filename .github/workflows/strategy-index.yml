@@ -41,6 +41,6 @@ jobs:
         run: |
           git config user.name  "stcc-index-bot"
           git config user.email "stcc-index-bot@users.noreply.github.com"
-          git add data/strategy-index.json data/strategy-cards.json
+          git add data/strategy-index.json data/strategy-links.json
           git commit -m "Rebuild strategy index [skip ci]"
           git push

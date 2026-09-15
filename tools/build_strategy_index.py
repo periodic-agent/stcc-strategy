@@ -212,6 +212,28 @@ def build(repo, cfg):
     }
 
 
+def build_links(index, cfg):
+    labels = cfg.get("guide_labels", {})
+    cards, used = {}, set()
+    for cid, entries in index["cards"].items():
+        files = []
+        for e in entries:
+            if e["guide"] not in files and any(
+                    h["mode"] == "anchor" and h["anchor"] == cid for h in e["hits"]):
+                files.append(e["guide"])
+        if files:
+            cards[cid] = files
+            used.update(files)
+    missing = sorted(g for g in used if g not in labels)
+    if missing:
+        raise SystemExit("guide_labels missing in the config for: %s" % ", ".join(missing))
+    return {"guides": {g: labels[g] for g in sorted(used)}, "cards": cards}
+
+
+def dump_links(links):
+    return json.dumps(links, ensure_ascii=False, separators=(",", ":"), sort_keys=True)
+
+
 def report(index, cards):
     print("guides indexed : %d" % index["guide_count"])
     print("cards with hits: %d of %d (%.0f%%)"
@@ -261,20 +283,29 @@ def main():
             print("STALE: %s does not match a fresh build. Run "
                   "python tools/build_strategy_index.py" % out_path, file=sys.stderr)
             return 1
-        print("OK: %s is current." % out_path)
+        links_path = os.path.join(os.path.dirname(out_path), "strategy-links.json")
+        fresh_links = json.loads(dump_links(build_links(index, cfg)))
+        try:
+            with open(links_path, encoding="utf-8") as fh:
+                current_links = json.load(fh)
+        except (OSError, ValueError):
+            current_links = None
+        if current_links != fresh_links:
+            print("STALE: %s does not match a fresh build. Run "
+                  "python tools/build_strategy_index.py" % links_path, file=sys.stderr)
+            return 1
+        print("OK: %s and %s are current." % (out_path, links_path))
         return 0
 
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as fh:
         fh.write(payload)
 
-    badge_path = os.path.join(os.path.dirname(out_path), "strategy-cards.json")
-    badges = {"generated": index["generated"],
-              "cards": {cid: sum(g["count"] for g in e) for cid, e in index["cards"].items()}}
-    badge_json = json.dumps(badges, ensure_ascii=False, separators=(",", ":"), sort_keys=True)
-    with open(badge_path, "w", encoding="utf-8") as fh:
-        fh.write(badge_json)
-    print("wrote %s (%.0f KB)" % (badge_path, len(badge_json) / 1024.0))
+    links_path = os.path.join(os.path.dirname(out_path), "strategy-links.json")
+    links_json = dump_links(build_links(index, cfg))
+    with open(links_path, "w", encoding="utf-8") as fh:
+        fh.write(links_json)
+    print("wrote %s (%.0f KB)" % (links_path, len(links_json) / 1024.0))
     print("wrote %s (%.0f KB, %d cards, %d guides)"
           % (out_path, len(payload) / 1024.0, index["card_count"], index["guide_count"]))
 

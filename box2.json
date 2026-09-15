@@ -109,7 +109,13 @@
       "table": "Reaction: After sending an [[away team]] to a controlled [[location]], spend 1 [[dilithium]] to trigger that card's control operation.",
       "goal": "",
       "reward": ""
-    }
+    },
+    "errata": [
+      {
+        "type": "Operation redesign",
+        "date": "2026-09"
+      }
+    ]
   },
   {
     "id": "degra",
@@ -437,11 +443,17 @@
     "icons": [],
     "text": {
       "cost": "",
-      "hand": "[[action]] Play: Return any number of beamed [[incident]]. If you returned at least 2 [[incident]] this way, gain 2 [[glory]].",
-      "table": "Reaction: After playing *Utilize* or *Inspire*, gain an [[action]]. Passive: You may additionally have another [[person]] with [[ambassador]] on duty.",
+      "hand": "[[action]] Play: Return up to 3 beamed [[incident]]. If you returned at least 2 [[incident]] this way, gain 2 [[dilithium]].",
+      "table": "Reaction: After playing *Utilize* or *Inspire*, discard an [[ally]] to gain an [[action]]. Passive: You may additionally have another [[person]] with [[ambassador]] on duty.",
       "goal": "",
       "reward": ""
-    }
+    },
+    "errata": [
+      {
+        "type": "Operation redesign",
+        "date": "2026-09"
+      }
+    ]
   },
   {
     "id": "riva",
@@ -1002,7 +1014,13 @@
       "table": "",
       "goal": "",
       "reward": ""
-    }
+    },
+    "errata": [
+      {
+        "type": "Wording correction",
+        "date": "with TBG"
+      }
+    ]
   },
   {
     "id": "horta",
@@ -2405,7 +2423,13 @@
       "table": "",
       "goal": "",
       "reward": ""
-    }
+    },
+    "errata": [
+      {
+        "type": "Operation redesign",
+        "date": "2026-09"
+      }
+    ]
   },
   {
     "id": "borg-probe",
@@ -2552,7 +2576,13 @@
       "table": "Activation: Warp this ship.",
       "goal": "",
       "reward": "Clean-up: You may dismiss this ship to gain 2 [[glory]]."
-    }
+    },
+    "errata": [
+      {
+        "type": "Operation redesign",
+        "date": "with TBG"
+      }
+    ]
   },
   {
     "id": "kazon-raider",
@@ -2677,7 +2707,13 @@
       "table": "Activation: Spend 1 [[dilithium]] to warp this ship. Activation: Discard a card to beam a card here. Activation: Dismiss this ship and discard a card to gain 1 [[glory]], 1 [[action]] and recall a non-[[time travel]] card from your Staging Area.",
       "goal": "",
       "reward": ""
-    }
+    },
+    "errata": [
+      {
+        "type": "Operation redesign",
+        "date": "with TBG"
+      }
+    ]
   },
   {
     "id": "uss-pasteur",

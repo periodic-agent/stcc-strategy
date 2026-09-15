@@ -434,7 +434,13 @@
       "table": "Reaction: After putting a [[cargo]] into play, draw a card.",
       "goal": "",
       "reward": ""
-    }
+    },
+    "errata": [
+      {
+        "type": "Card replacement",
+        "date": "with TBG"
+      }
+    ]
   },
   {
     "id": "moriarty",
@@ -883,7 +889,13 @@
       "table": "",
       "goal": "",
       "reward": ""
-    }
+    },
+    "errata": [
+      {
+        "type": "Wording correction",
+        "date": "with TBG"
+      }
+    ]
   },
   {
     "id": "horta",
@@ -1275,11 +1287,17 @@
     ],
     "text": {
       "cost": "",
-      "hand": "Play [[res7]]: Draw a card. Duplicate a play operation of a [[ship]] from the Market or any player's Fleet Area. Play: Discard a [[telepath]] to deploy and warp this ship.",
+      "hand": "Play [[res7]]: Draw a card. Duplicate a play operation of a non-[[time travel]] [[ship]] from the Market or deployed by any player. Play: Discard a [[telepath]] to deploy and warp this ship.",
       "table": "Activation: Warp this ship.",
       "goal": "",
       "reward": "Clean-up: You may dismiss this ship to gain 2 [[glory]]."
-    }
+    },
+    "errata": [
+      {
+        "type": "Operation redesign",
+        "date": "with TBG"
+      }
+    ]
   },
   {
     "id": "ktinga-battlecruiser",
@@ -1429,7 +1447,13 @@
       "table": "Activation: Spend 1 [[dilithium]] to warp this ship. Activation: Discard a card to beam a card here. Activation: Dismiss this ship and discard a card to gain 1 [[glory]], 1 [[action]] and recall a non-[[time travel]] card from your Staging Area.",
       "goal": "",
       "reward": ""
-    }
+    },
+    "errata": [
+      {
+        "type": "Operation redesign",
+        "date": "with TBG"
+      }
+    ]
   },
   {
     "id": "uss-pasteur",
