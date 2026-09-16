@@ -663,7 +663,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>deck:sisko suit:ship</code><span>ships in Sisko's deck</span></div>
     <div class="qh-row"><code>deck:common</code><span>commons of every visible box</span></div>
     <div class="qh-row"><code>deck:common-cc</code> · <code>deck:common-tbg</code><span>one box's commons; also common-2nd</span></div>
-    <div class="qh-row"><code>skill:military</code> · <code>focus:influence</code><span>icon search; also skill:any, skill:variable</span></div>
+    <div class="qh-row"><code>skill:military</code> · <code>focus:influence</code><span>icon search; also skill:any, skill:variable, focus:best</span></div>
     <div class="qh-row"><code>box:all</code> · <code>box:tbg</code><span>the three main boxes, or one; empty bar = empty page; box:none shows nothing</span></div>
     <div class="qh-row"><code>dupes:off</code><span>one tile per card instead of one per printing</span></div>
     <div class="qh-row"><code>promo:on</code><span>show the promo cards, filed under the commons. Promo 1 shows with Captain's Chair, Promo 2 with To Boldly Go or Second Contact</span></div>
@@ -803,7 +803,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   <p>If this tool has been helpful to you, you can <a class="tip-hi" href="https://buymeacoffee.com/periodic_agent" target="_blank" rel="noopener">tip here</a>.</p>
 </div>
 
-<footer>Star Trek: Captain's Chair is designed by D&aacute;vid Turczi and Nigel Buckle (To Boldly Go: with Adam Turczi) and published by WizKids. Card images &copy; WizKids. Star Trek and related marks are trademarks of CBS Studios Inc.<br>Card data entered by Periodic_agent, Assmatt, Esquire_Sandwich, Lynette T, Dreadreaper.<br>Card scans from Periodoc_agent, Seth Bryant, pepper0nc1n1.<br>This website is unofficial fan content.</footer>
+<footer>Star Trek: Captain's Chair is designed by D&aacute;vid Turczi and Nigel Buckle (To Boldly Go: with Adam Turczi) and published by WizKids. Card images &copy; WizKids. Star Trek and related marks are trademarks of CBS Studios Inc.<br>Card data entered by Periodic_agent, Assmatt, Esquire_Sandwich, Lynette T, Dreadreaper.<br>Card scans from Periodic_agent, Seth Bryant, pepper0nc1n1.<br>This website is unofficial fan content.</footer>
 
 <script>
 let ALL_CARDS = [];
@@ -869,8 +869,11 @@ function rawBoxKey(c){
 }
 
 function normIcons(icons){
-  return (icons||[]).filter(i=>i.specialty&&i.type).map(i=>i.specialty+' '+i.type);
+  return (icons||[]).filter(i=>i.specialty&&i.type)
+    .map(i=>((i.type==='Focus' && i.specialty==='Any') ? 'Best' : i.specialty)+' '+i.type);
 }
+if(typeof CARDFACE!=='undefined' && CARDFACE.focus && CARDFACE.focus.any && !CARDFACE.focus.best)
+  CARDFACE.focus.best = CARDFACE.focus.any;
 
 const BOX_ORDER = ['core','tbg','2nd'];
 function boxRank(k){ const i=BOX_ORDER.indexOf(k); return i<0 ? 90 : i; }
@@ -1355,6 +1358,7 @@ function buildQueryVocab(){
     if(!m) return;
     (m[2]==='Skill'?skillShort:focusShort)[m[1].toLowerCase()]=v;
   });
+  if(focusShort.best && !focusShort.any) focusShort.any=focusShort.best;
   const positions={};
   FULL_POOL.forEach(c=>{ const p=c.position_indicator; if(p) positions[String(p).toLowerCase()]=p; });
   const suits=map(SUITS_DISPLAY);
@@ -1364,6 +1368,8 @@ function buildQueryVocab(){
   QUERY_VOCAB={allBoxes:DEFAULT_BOXES,decks,suits,positions,stripKinds,
                tags:map([...allSpecies,...allRegular,...allOther]),skills:map(allSkills),
                skillShort,focusShort};
+  if(QUERY_VOCAB.skills['best focus'] && !QUERY_VOCAB.skills['any focus'])
+    QUERY_VOCAB.skills['any focus']=QUERY_VOCAB.skills['best focus'];
 }
 
 function applyQuery(text){
@@ -2264,7 +2270,7 @@ const skillTok=t=>{ const m=t.match(/^(.+)\s+(Skill|Focus)$/);
 allSkills.forEach(t=>{
   const p=document.createElement('span');
   const spec=(t.match(/^(.+)\s+(Skill|Focus)$/)||[])[1];
-  p.className='skill-pill'+(spec?' sk-'+spec.toLowerCase():'');
+  p.className='skill-pill'+(spec?' sk-'+(spec.toLowerCase()==='best' ? 'any' : spec.toLowerCase()):'');
   {const m2=t.match(/^(.+)\s+(Skill|Focus)$/);
   const spec2=m2?m2[1].toLowerCase():'';
   const isF=m2&&m2[2]==='Focus';
