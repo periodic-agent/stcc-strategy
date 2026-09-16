@@ -676,8 +676,8 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>reaction:"putting a shady"</code> &middot; <code>activation:draw</code><span>text inside one kind of strip; every strip name is a key</span></div>
     <div class="qh-row"><code>view:details</code><span>open in Details view; the Images | Details toggle writes it, so a shared link keeps the view</span></div>
     <div class="qh-row"><code>variant:update</code> · <code>variant:duplicate</code><span>cards wearing that badge in the current boxes</span></div>
-    <div class="qh-row"><code>errata</code> · <code>update</code><span>printings marked &lt;!&gt; (errata: an official fix no daggered card carries), or &dagger; (updated in a later box)</span></div>
-    <div class="qh-row"><code>patched</code><span>cards fixed silently between print runs of the same box (no mark)</span></div>
+    <div class="qh-row"><code>errata</code> · <code>update</code><span>printings marked &lt;!&gt; (official errata or a silent patch; see the card's Errata section), or &dagger; (updated in a later box)</span></div>
+    <div class="qh-row"><code>patched</code><span>cards fixed silently between print runs of the same box</span></div>
     <div class="qh-row"><code>errata:wording</code> · <code>errata:"operation redesign"</code><span>errata of that type: card name change, card trait change, operation added/removed, operation redesign, wording correction, card replacement</span></div>
     <div class="qh-row"><code>notes</code> · <code>strategy</code><span>cards with a designer's note, or with their own section in a strategy guide</span></div>
     <div class="qh-note">Click a card for its scan, errata, notes and guide links; the arrows page through the results. Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>
@@ -1059,7 +1059,8 @@ function strategyLinksOf(c){
 function noteOf(c){ const n = NOTES[c.id]; return (n && n.note) ? String(n.note) : ''; }
 function errataKind(e){ return (e && e.kind) || 'errata'; }
 function errataEntries(c, kind){ return (c.errata||[]).filter(e=>errataKind(e)===kind); }
-function hasErrataMark(c){ return errataEntries(c,'errata').length > 0 && c.badgeKind !== 'update'; }
+function markEntries(c){ return (c.errata||[]).filter(e=>errataKind(e)!=='update'); }
+function hasErrataMark(c){ return markEntries(c).length > 0 && c.badgeKind !== 'update'; }
 function errataLine(e){
   const k=errataKind(e), t=lbEsc(e.type||'');
   if(k==='update') return t;
@@ -2073,7 +2074,7 @@ function buildPillCard(c, opts){
   if(c.card_number||badge||posin||errMark){
     numline='<div class="ce-bottom"><div class="ce-footrow"><span class="cid2">'+(c.card_number||'')
       +(badge?(c.card_number?' ':'')+'<span class="meta">'+badgeMark+'</span>':'')
-      +(errMark?' <span class="meta errata" title="Errata '+lbEsc((errataEntries(c,'errata')[0].date||errataEntries(c,'errata')[0].note||''))+'">&lt;!&gt; Errata</span>':'')+'</span>'
+      +(errMark?' <span class="meta errata" title="'+errataLine(markEntries(c)[0])+'">&lt;!&gt; Errata</span>':'')+'</span>'
       +(posin?'<span class="posin">'+posin+'</span>':'')+'</div></div>';
   }
   el.innerHTML='<div class="ce-row"><div class="ce-main">'
@@ -2360,13 +2361,11 @@ function lbGoPrint(e, key){
 function lbExtrasHTML(c){
   let h='';
   const entries=c.errata||[];
-  const lines=entries.map(errataLine);
+  const shown=entries.filter(e=>errataKind(e)!=='update'
+    || !entries.some(o=>o!==e && errataKind(o)!=='update' && o.type===e.type));
+  const lines=shown.map(errataLine);
   const upd=printingLinksHTML(c);
-  if(upd){
-    let at=-1;
-    entries.forEach((e,i)=>{ if(errataKind(e)==='update') at=i; });
-    if(at<0) lines.push(upd); else lines.splice(at+1, 0, upd);
-  }
+  if(upd) lines.push(upd);
   if(lines.length) h+=lbSection('errata','Errata',lines.map(l=>'<div class="dnote-q plain">'+l+'</div>').join(''));
   const note=noteOf(c);
   if(note) h+=lbSection('note',ICON_PEN+'Designer\u2019s note','<blockquote class="dnote-q">'+lbEsc(note)+'</blockquote>','note');
