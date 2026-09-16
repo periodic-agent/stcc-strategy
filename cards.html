@@ -586,6 +586,35 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .results-bar{justify-content:space-between;flex-wrap:wrap;gap:.6rem;}
 .strip-note{font-family:'Exo 2',sans-serif;font-size:0.69rem;color:var(--muted);
   margin:.35rem 0 0;opacity:.85;}
+.chapter-meta,.search-box,.search-count,.query-help,.dupes-toggle,.tip-jar,.no-results{
+  font-family:'Exo 2',sans-serif;font-weight:400;font-size:.8125rem;letter-spacing:0;font-style:normal;}
+.active-summary,.qh-note,.strip-note,footer,.deck-count{
+  font-family:'Exo 2',sans-serif;font-weight:400;font-size:.72rem;letter-spacing:0;font-style:normal;}
+.query-help code{font-size:.75rem;}
+.nav-bar a,.filter-label,.also-show-label,.deck-group-header,.qh-title,.result-count,.pill-sublabel{
+  font-family:'Orbitron',sans-serif;font-weight:400;font-size:.6875rem;letter-spacing:.12em;}
+.vtoggle,.clear-btn{font-family:'Antonio',sans-serif;font-weight:600;font-size:.8rem;letter-spacing:.04em;
+  border-radius:999px;height:22px;box-sizing:border-box;display:inline-flex;align-items:center;padding:0 .8rem;}
+.clear-btn{color:#e05a5a;border-color:rgba(224,90,90,.45);}
+.clear-btn:hover{color:#f08a8a;border-color:#e05a5a;background:rgba(224,90,90,.1);}
+.query-help-btn{font-family:'Exo 2',sans-serif;font-weight:600;font-size:.9rem;}
+.results-bar{margin-top:1.1rem;}
+.box-pill,.promo-pill,.deck-pill,.vtoggle,.clear-btn{font-size:.86rem;letter-spacing:.03em;}
+.st-pill{font-family:'Antonio',sans-serif;font-weight:600;font-size:.86rem;letter-spacing:.03em;text-transform:uppercase;
+  height:22px;box-sizing:border-box;display:inline-flex;align-items:center;gap:.35rem;padding:0 .8rem;
+  border-radius:999px;border:1px solid var(--border);cursor:pointer;transition:all 0.15s;user-select:none;}
+.st-pill .xt-ic{width:13px;height:13px;}
+.st-pill .cnt{font-size:.69rem;font-weight:400;opacity:.75;}
+.st-pill.zero{opacity:.45;}
+.st-pill[data-st=errata]{border-color:#e05a5a;color:#e05a5a;}
+.st-pill[data-st=errata].active{background:#e05a5a;color:#fff;}
+.st-pill[data-st=update],.st-pill[data-st=dupes]{border-color:#4a9fd4;color:#4a9fd4;}
+.st-pill[data-st=update].active,.st-pill[data-st=dupes].active{background:#4a9fd4;color:#000;}
+.st-pill[data-st=strategy]{border-color:#6fd3d3;color:#6fd3d3;}
+.st-pill[data-st=strategy].active{background:#6fd3d3;color:#000;}
+.st-pill[data-st=notes]{border-color:#f0b323;color:#f0b323;}
+.st-pill[data-st=notes].active{background:#f0b323;color:#000;}
+.active-summary.status{color:#c8d2e0;}
 </style>
 <meta name="description" content="Searchable card database for Star Trek: Captain's Chair. Filter every card by box, deck, suit, traits, skills and name — built for mid-game lookups.">
 <link rel="canonical" href="https://periodic-agent.github.io/stcc-strategy/cards.html">
@@ -603,7 +632,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 
 <header class="chapter-header">
   <h1 class="chapter-title">ST:CC <span>Card Scanner</span></h1>
-  <div class="chapter-meta">Select boxes, filter by suit, trait, or skill, search by name or card text</div>
+  <div class="chapter-meta">Select boxes, filter by suit or trait, search names or card text. Click a card for errata and strategy.</div>
 </header>
 
 <div class="controls">
@@ -620,7 +649,6 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     </div>
     <button class="clear-btn" onclick="clearAll()">Reset</button>
     <span class="also-show"><span class="also-show-label">Also show:</span>
-      <label class="dupes-toggle"><input type="checkbox" id="showDupes" checked onchange="setDupes(this.checked)"> Duplicates</label>
       <label class="dupes-toggle"><input type="checkbox" id="showPromo" onchange="setPromo(this.checked)"> Promo cards</label>
       <label class="dupes-toggle"><input type="checkbox" id="showBots" onchange="setBots(this.checked)"> Auto. Command (Bot)</label>
     </span>
@@ -670,81 +698,94 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   </div>
 
   <div class="filter-section">
-    <div class="collapsible-header open" onclick="toggleSection(this,'speciesBody','speciesSummary')">
+    <div class="collapsible-header" id="speciesHead" onclick="toggleSection(this,'speciesBody','speciesSummary')">
       <div style="display:flex;align-items:center;gap:0.4rem;">
         <div class="filter-label">Species Traits</div>
         <span class="active-summary" id="speciesSummary"></span>
       </div>
       <span class="collapsible-arrow">&#9660;</span>
     </div>
-    <div class="collapsible-body open" id="speciesBody">
+    <div class="collapsible-body" id="speciesBody">
       <div class="pill-row" id="speciesFilters"></div>
     </div>
   </div>
 
   <div class="filter-section">
-    <div class="collapsible-header open" onclick="toggleSection(this,'regularBody','regularSummary')">
+    <div class="collapsible-header" id="regularHead" onclick="toggleSection(this,'regularBody','regularSummary')">
       <div style="display:flex;align-items:center;gap:0.4rem;">
         <div class="filter-label">Regular Traits</div>
         <span class="active-summary regular" id="regularSummary"></span>
       </div>
       <span class="collapsible-arrow">&#9660;</span>
     </div>
-    <div class="collapsible-body open" id="regularBody">
+    <div class="collapsible-body" id="regularBody">
       <div class="pill-row" id="regularFilters"></div>
     </div>
   </div>
 
   <div class="filter-section">
-    <div class="collapsible-header open" onclick="toggleSection(this,'otherBody','otherSummary')">
+    <div class="collapsible-header" id="otherHead" onclick="toggleSection(this,'otherBody','otherSummary')">
       <div style="display:flex;align-items:center;gap:0.4rem;">
         <div class="filter-label">Other Traits</div>
         <span class="active-summary other" id="otherSummary"></span>
       </div>
       <span class="collapsible-arrow">&#9660;</span>
     </div>
-    <div class="collapsible-body open" id="otherBody">
+    <div class="collapsible-body" id="otherBody">
       <div class="pill-row" id="otherFilters"></div>
     </div>
   </div>
 
   <div class="filter-section">
-    <div class="collapsible-header open" onclick="toggleSection(this,'skillsBody','skillsSummary')">
+    <div class="collapsible-header" id="skillsHead" onclick="toggleSection(this,'skillsBody','skillsSummary')">
       <div style="display:flex;align-items:center;gap:0.4rem;">
         <div class="filter-label">Skills</div>
         <span class="active-summary skill" id="skillsSummary"></span>
       </div>
       <span class="collapsible-arrow">&#9660;</span>
     </div>
-    <div class="collapsible-body open" id="skillsBody">
+    <div class="collapsible-body" id="skillsBody">
       <div class="pill-row" id="skillFilters"></div>
     </div>
   </div>
 
   <div class="filter-section">
-    <div class="collapsible-header open" onclick="toggleSection(this,'focusBody','focusSummary')">
+    <div class="collapsible-header" id="focusHead" onclick="toggleSection(this,'focusBody','focusSummary')">
       <div style="display:flex;align-items:center;gap:0.4rem;">
         <div class="filter-label">Focus</div>
         <span class="active-summary skill" id="focusSummary"></span>
       </div>
       <span class="collapsible-arrow">&#9660;</span>
     </div>
-    <div class="collapsible-body open" id="focusBody">
+    <div class="collapsible-body" id="focusBody">
       <div class="pill-row" id="focusFilters"></div>
     </div>
   </div>
 
-  <div class="filter-group">
-    <div class="collapsible-header open" onclick="toggleSection(this,'stripBody','stripSummary')">
+  <div class="filter-section">
+    <div class="collapsible-header" id="stripHead" onclick="toggleSection(this,'stripBody','stripSummary')">
       <div style="display:flex;align-items:center;gap:0.4rem;">
         <div class="filter-label">Strip</div>
         <span class="active-summary skill" id="stripSummary"></span>
       </div>
       <span class="collapsible-arrow">&#9660;</span>
     </div>
-    <div class="collapsible-body open" id="stripBody">
+    <div class="collapsible-body" id="stripBody">
       <div class="pill-row" id="stripFilters"></div>
       <div class="strip-note">Card text follows the current wording; promo packs are still transcriptions.</div>
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <div class="collapsible-header" id="statusHead" onclick="toggleSection(this,'statusBody','statusSummary')">
+      <div style="display:flex;align-items:center;gap:0.4rem;">
+        <div class="filter-label">Card status</div>
+        <span class="active-summary status" id="statusSummary"></span>
+      </div>
+      <span class="collapsible-arrow">&#9660;</span>
+    </div>
+    <div class="collapsible-body" id="statusBody">
+      <div class="pill-row" id="statusFilters"></div>
     </div>
   </div>
 
@@ -759,7 +800,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 <div class="deck-groups" id="deckGroups"></div>
 
 <div class="tip-jar">
-  <p>If this tool has been helpful to you, you can <a class="tip-hi" href="https://buymeacoffee.com/periodic_agent" target="_blank" rel="noopener">tip here</a>. Thanks!</p>
+  <p>If this tool has been helpful to you, you can <a class="tip-hi" href="https://buymeacoffee.com/periodic_agent" target="_blank" rel="noopener">tip here</a>.</p>
 </div>
 
 <footer>Star Trek: Captain's Chair is designed by D&aacute;vid Turczi and Nigel Buckle (To Boldly Go: with Adam Turczi) and published by WizKids. Card images &copy; WizKids. Star Trek and related marks are trademarks of CBS Studios Inc.<br>Card data entered by Periodic_agent, Assmatt, Esquire_Sandwich, Lynette T, Dreadreaper.<br>Card scans from BGG, Seth Bryant, pepper0nc1n1.<br>This website is unofficial fan content.</footer>
@@ -1020,6 +1061,27 @@ function hasExtra(c, k){
 }
 const ICON_BOOK='<svg class="xt-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 5.5C5 4 8 4 12 6c4-2 7-2 9.5-.5v13c-2.5-1.5-5.5-1.5-9.5.5-4-2-7-2-9.5-.5z"/><path d="M12 6v13"/></svg>';
 const ICON_PEN='<svg class="xt-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.2-4.6L15.6 5a2.1 2.1 0 0 1 3 0l.4.4a2.1 2.1 0 0 1 0 3L8.6 18.8z"/><path d="M13.6 7l3.4 3.4"/><path d="M4 20h7"/></svg>';
+const STATUS_PILLS=[
+  {k:'errata', label:'&lt;!&gt; Errata', name:'Errata', word:'errata', re:/^-?(errata|variant:errata)$/i,
+   on:()=>activeHas.has('errata'), neg:()=>negHas.has('errata'), test:c=>hasErrataMark(c)},
+  {k:'update', label:'\u2020 Updated', name:'Updated', word:'update', re:/^-?(updates?|variant:updated?)$/i,
+   on:()=>activeVariants.has('update'), neg:()=>negVariants.has('update'), test:c=>c.badgeKind==='update'},
+  {k:'dupes', label:'\u25CF Duplicate', name:'Duplicate', word:null,
+   on:()=>showDupes, neg:()=>false, test:c=>c.badgeKind==='duplicate'},
+  {k:'strategy', label:ICON_BOOK+'Strategy', name:'Strategy', word:'strategy', re:/^-?(strategy|guides)$/i,
+   on:()=>activeHas.has('strategy'), neg:()=>negHas.has('strategy'), test:c=>hasStrategy(c)},
+  {k:'notes', label:ICON_PEN+'Designer\u2019s note', name:'Designer\u2019s note', word:'notes', re:/^-?notes?$/i,
+   on:()=>activeHas.has('notes'), neg:()=>negHas.has('notes'), test:c=>!!noteOf(c)},
+];
+function statusToggle(k){
+  const d=STATUS_PILLS.find(x=>x.k===k);
+  if(!d) return;
+  if(!d.word){ setDupes(!showDupes); return; }
+  const was=d.on();
+  const toks=tokenList(currentQuery()).filter(t=>!d.re.test(t));
+  if(!was) toks.push(d.word);
+  setQuery(toks.join(' '));
+}
 function tabKinds(c){
   const k=[];
   if(hasStrategy(c)) k.push('guide');
@@ -1422,8 +1484,6 @@ function setBoxTokens(target){
 }
 function syncFilterPills(){
   syncViewButtons();
-  const dup=document.getElementById('showDupes');
-  if(dup) dup.checked=showDupes;
   const sn=document.getElementById('sortNum');
   if(sn) sn.checked=sortByNumber;
   const bt=document.getElementById('showBots');
@@ -1523,6 +1583,26 @@ function updateSummaries(){
   const skOnly=sk.filter(v=>!/Focus$/.test(v)), foOnly=sk.filter(v=>/Focus$/.test(v));
   document.getElementById('skillsSummary').textContent=skOnly.length?skOnly.join(', '):'';
   document.getElementById('focusSummary').textContent=foOnly.length?foOnly.join(', '):'';
+  const stripLabel=Object.fromEntries(STRIP_KINDS);
+  document.getElementById('stripSummary').textContent=[...activeStrips].map(k=>stripLabel[k]||k).join(', ');
+  const st=STATUS_PILLS.filter(d=>d.word && d.on()).map(d=>d.name);
+  STATUS_PILLS.forEach(d=>{ if(d.neg()) st.push('not '+d.name); });
+  if(!showDupes) st.push('duplicates hidden');
+  document.getElementById('statusSummary').textContent=st.join(', ');
+  const negSk=[...negSkills];
+  const used={
+    species:allSpecies.some(t=>negTags.has(t)),
+    regular:allRegular.some(t=>negTags.has(t)),
+    other:allOther.some(t=>negTags.has(t)),
+    skills:negSk.some(v=>!/Focus$/.test(v)),
+    focus:negSk.some(v=>/Focus$/.test(v)),
+    strip:negStrips.size>0,
+    status:false};
+  Object.keys(used).forEach(s=>{
+    if(!used[s] && !document.getElementById(s+'Summary').textContent) return;
+    document.getElementById(s+'Head').classList.add('open');
+    document.getElementById(s+'Body').classList.add('open');
+  });
 }
 
 function getPoolWithout(excludeTag, excludeSkill){
@@ -1570,6 +1650,14 @@ function updateBadges(){
     cnt.textContent='('+n+')';
     if(!cnt.style.minWidth) cnt.style.minWidth=Math.ceil(cnt.getBoundingClientRect().width)+'px';
     p.classList.toggle('active', activeStrips.has(kind));
+    p.classList.toggle('zero', n===0);
+  });
+  document.getElementById('statusFilters').querySelectorAll('.st-pill').forEach(p=>{
+    const d=STATUS_PILLS.find(x=>x.k===p.dataset.st);
+    const n=ALL_CARDS.filter(d.test).length;
+    const cnt=p.querySelector('.cnt');
+    if(cnt) cnt.textContent='('+n+')';
+    p.classList.toggle('active', d.on());
     p.classList.toggle('zero', n===0);
   });
 }
@@ -2157,6 +2245,15 @@ STRIP_KINDS.filter(([kind])=>!STRIP_CHIPS_HIDDEN.has(kind)).forEach(([kind,label
   p.innerHTML='<span class="lbl">'+label+'</span><span class="cnt"></span>';
   p.onclick=()=>toggleToken(tokenOf('strip',kind));
   stripContainer.appendChild(p);
+});
+
+const statusContainer=document.getElementById('statusFilters');
+STATUS_PILLS.forEach(d=>{
+  const p=document.createElement('span');
+  p.className='st-pill'; p.dataset.st=d.k;
+  p.innerHTML=d.label+' <span class="cnt"></span>';
+  p.onclick=()=>statusToggle(d.k);
+  statusContainer.appendChild(p);
 });
 
 document.getElementById('speciesFilters').append(...allSpecies.map(t=>makePill(t,'species-pill','trait')));
