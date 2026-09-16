@@ -615,6 +615,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .st-pill[data-st=notes]{border-color:#f0b323;color:#f0b323;}
 .st-pill[data-st=notes].active{background:#f0b323;color:#000;}
 .active-summary.status{color:#c8d2e0;}
+.st-pill .st-mk{display:inline-block;font-size:.8em;line-height:1;transform:translateY(-.08em);}
 </style>
 <meta name="description" content="Searchable card database for Star Trek: Captain's Chair. Filter every card by box, deck, suit, traits, skills and name — built for mid-game lookups.">
 <link rel="canonical" href="https://periodic-agent.github.io/stcc-strategy/cards.html">
@@ -665,7 +666,6 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>deck:common-cc</code> · <code>deck:common-tbg</code><span>one box's commons; also common-2nd</span></div>
     <div class="qh-row"><code>skill:military</code> · <code>focus:influence</code><span>icon search; also skill:any, skill:variable, focus:best</span></div>
     <div class="qh-row"><code>box:all</code> · <code>box:tbg</code><span>the three main boxes, or one; empty bar = empty page; box:none shows nothing</span></div>
-    <div class="qh-row"><code>dupes:off</code><span>one tile per card instead of one per printing</span></div>
     <div class="qh-row"><code>promo:on</code><span>show the promo cards, filed under the commons. Promo 1 shows with Captain's Chair, Promo 2 with To Boldly Go or Second Contact</span></div>
     <div class="qh-row"><code>sort:number</code><span>order each deck by card number; decks are in play order otherwise</span></div>
     <div class="qh-row"><code>bot:on</code><span>show each captain's Automated Command cards before the deck; hides missions</span></div>
@@ -676,7 +676,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>reaction:"putting a shady"</code> &middot; <code>activation:draw</code><span>text inside one kind of strip; every strip name is a key</span></div>
     <div class="qh-row"><code>view:details</code><span>open in Details view; the Images | Details toggle writes it, so a shared link keeps the view</span></div>
     <div class="qh-row"><code>variant:update</code> · <code>variant:duplicate</code><span>cards wearing that badge in the current boxes</span></div>
-    <div class="qh-row"><code>errata</code> · <code>update</code><span>printings marked &lt;!&gt; (official errata or a silent patch; see the card's Errata section), or &dagger; (updated in a later box)</span></div>
+    <div class="qh-row"><code>errata</code> · <code>update</code> · <code>duplicate</code><span>printings marked &lt;!&gt; (official errata or a silent patch; see the card's Errata section), &dagger; (updated in a later box), or &#9679; (reprinted in another box)</span></div>
     <div class="qh-row"><code>patched</code><span>cards fixed silently between print runs of the same box</span></div>
     <div class="qh-row"><code>errata:wording</code> · <code>errata:"operation redesign"</code><span>errata of that type: card name change, card trait change, operation added/removed, operation redesign, wording correction, card replacement</span></div>
     <div class="qh-row"><code>notes</code> · <code>strategy</code><span>cards with a designer's note, or with their own section in a strategy guide</span></div>
@@ -1082,8 +1082,9 @@ const STATUS_PILLS=[
    on:()=>activeHas.has('errata'), neg:()=>negHas.has('errata'), test:c=>hasErrataMark(c)},
   {k:'update', label:'\u2020 Updated', name:'Updated', word:'update', re:/^-?(updates?|variant:updated?)$/i,
    on:()=>activeVariants.has('update'), neg:()=>negVariants.has('update'), test:c=>c.badgeKind==='update'},
-  {k:'dupes', label:'\u25CF Duplicate', name:'Duplicate', word:null,
-   on:()=>showDupes, neg:()=>false, test:c=>c.badgeKind==='duplicate'},
+  {k:'dupes', label:'<span class="st-mk">\u25CF</span>Duplicate', name:'Duplicate', word:'duplicate',
+   re:/^-?(duplicates?|reprints?|variant:(duplicates?|reprints?|dupes?))$/i,
+   on:()=>activeVariants.has('duplicate'), neg:()=>negVariants.has('duplicate'), test:c=>c.badgeKind==='duplicate'},
   {k:'strategy', label:ICON_BOOK+'Strategy', name:'Strategy', word:'strategy', re:/^-?(strategy|guides)$/i,
    on:()=>activeHas.has('strategy'), neg:()=>negHas.has('strategy'), test:c=>hasStrategy(c)},
   {k:'notes', label:ICON_PEN+'Designer\u2019s note', name:'Designer\u2019s note', word:'notes', re:/^-?notes?$/i,
@@ -1092,7 +1093,6 @@ const STATUS_PILLS=[
 function statusToggle(k){
   const d=STATUS_PILLS.find(x=>x.k===k);
   if(!d) return;
-  if(!d.word){ setDupes(!showDupes); return; }
   const was=d.on();
   const toks=tokenList(currentQuery()).filter(t=>!d.re.test(t));
   if(!was) toks.push(d.word);
@@ -1200,6 +1200,7 @@ function parseQuery(text, vocab){
              has:[],negHas:[],changeType:[],negChangeType:[]};
   const HAS_WORDS={errata:'errata',update:'update',updates:'update',notes:'notes',note:'notes',
                    patched:'patched',patch:'patched',
+                   duplicate:'duplicate',duplicates:'duplicate',reprint:'duplicate',reprints:'duplicate',
                    strategy:'strategy',guides:'strategy'};
   const tokRe=/(-)?(?:([A-Za-z][A-Za-z-]*)\s*(:|>=|<=|>|<))?("([^"]*)"|[^\s"]+)/g;
   let m;
@@ -1259,7 +1260,7 @@ function parseQuery(text, vocab){
     } else if(vocab.stripKinds && vocab.stripKinds[key]){
       put(res.kindText,res.negKindText,{kind:key,term:lv});
     } else if(!key && HAS_WORDS[lv]){
-      if(HAS_WORDS[lv]==='update') put(res.variants,res.negVariants,'update');
+      if(HAS_WORDS[lv]==='update'||HAS_WORDS[lv]==='duplicate') put(res.variants,res.negVariants,HAS_WORDS[lv]);
       else put(res.has,res.negHas,HAS_WORDS[lv]);
     } else {
       put(res.names,res.negNames,(key?key+':':'')+lv);
@@ -1607,7 +1608,6 @@ function updateSummaries(){
   document.getElementById('stripSummary').textContent=[...activeStrips].map(k=>stripLabel[k]||k).join(', ');
   const st=STATUS_PILLS.filter(d=>d.word && d.on()).map(d=>d.name);
   STATUS_PILLS.forEach(d=>{ if(d.neg()) st.push('not '+d.name); });
-  if(!showDupes) st.push('duplicates hidden');
   document.getElementById('statusSummary').textContent=st.join(', ');
   const negSk=[...negSkills];
   const used={
@@ -1674,7 +1674,7 @@ function updateBadges(){
   });
   document.getElementById('statusFilters').querySelectorAll('.st-pill').forEach(p=>{
     const d=STATUS_PILLS.find(x=>x.k===p.dataset.st);
-    const n=ALL_CARDS.filter(d.test).length;
+    const n=new Set(ALL_CARDS.filter(d.test).map(x=>x.id)).size;
     const cnt=p.querySelector('.cnt');
     if(cnt) cnt.textContent='('+n+')';
     p.classList.toggle('active', d.on());
