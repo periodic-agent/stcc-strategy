@@ -112,6 +112,7 @@
     },
     "errata": [
       {
+        "kind": "errata",
         "type": "Operation redesign",
         "date": "2026-09"
       }
@@ -450,6 +451,7 @@
     },
     "errata": [
       {
+        "kind": "errata",
         "type": "Operation redesign",
         "date": "2026-09"
       }
@@ -1014,13 +1016,7 @@
       "table": "",
       "goal": "",
       "reward": ""
-    },
-    "errata": [
-      {
-        "type": "Wording correction",
-        "date": "with TBG"
-      }
-    ]
+    }
   },
   {
     "id": "horta",
@@ -2426,6 +2422,7 @@
     },
     "errata": [
       {
+        "kind": "errata",
         "type": "Operation redesign",
         "date": "2026-09"
       }
@@ -2576,13 +2573,7 @@
       "table": "Activation: Warp this ship.",
       "goal": "",
       "reward": "Clean-up: You may dismiss this ship to gain 2 [[glory]]."
-    },
-    "errata": [
-      {
-        "type": "Operation redesign",
-        "date": "with TBG"
-      }
-    ]
+    }
   },
   {
     "id": "kazon-raider",
@@ -2707,13 +2698,7 @@
       "table": "Activation: Spend 1 [[dilithium]] to warp this ship. Activation: Discard a card to beam a card here. Activation: Dismiss this ship and discard a card to gain 1 [[glory]], 1 [[action]] and recall a non-[[time travel]] card from your Staging Area.",
       "goal": "",
       "reward": ""
-    },
-    "errata": [
-      {
-        "type": "Operation redesign",
-        "date": "with TBG"
-      }
-    ]
+    }
   },
   {
     "id": "uss-pasteur",

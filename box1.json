@@ -437,8 +437,9 @@
     },
     "errata": [
       {
+        "kind": "errata",
         "type": "Card replacement",
-        "date": "with TBG"
+        "note": "replacement card included in To Boldly Go and Second Contact"
       }
     ]
   },
@@ -715,7 +716,14 @@
       "table": "[[action]] Activation: Put a [[ship]] in your Staging Area (without triggering its play operation) and spend 3 [[dilithium]] to take the top [[encounter]] and log this card.",
       "goal": "",
       "reward": ""
-    }
+    },
+    "errata": [
+      {
+        "kind": "silent",
+        "type": "Card name change",
+        "note": "2nd print run"
+      }
+    ]
   },
   {
     "id": "biobed",
@@ -892,8 +900,9 @@
     },
     "errata": [
       {
+        "kind": "silent",
         "type": "Wording correction",
-        "date": "with TBG"
+        "note": "2nd print run"
       }
     ]
   },
@@ -1294,8 +1303,13 @@
     },
     "errata": [
       {
+        "kind": "update",
+        "type": "Operation redesign"
+      },
+      {
+        "kind": "silent",
         "type": "Operation redesign",
-        "date": "with TBG"
+        "note": "2nd print run"
       }
     ]
   },
@@ -1450,8 +1464,8 @@
     },
     "errata": [
       {
-        "type": "Operation redesign",
-        "date": "with TBG"
+        "kind": "update",
+        "type": "Operation redesign"
       }
     ]
   },
