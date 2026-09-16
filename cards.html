@@ -146,11 +146,13 @@ a{color:var(--blue);text-decoration:none;}
 .box-pill[data-box="2nd"]{border-color:#c8a84b;color:#c8a84b;}
 .box-pill[data-box="2nd"]:hover{border-color:#e8c96a;color:#e8c96a;}
 .box-pill[data-box="2nd"].active{background:#c8a84b;border-color:#c8a84b;color:#000;font-weight:600;}
-.box-pill[data-box="promo1"]{border-color:#4a9fd4;color:#4a9fd4;}
-.box-pill[data-box="promo1"].active{background:#4a9fd4;border-color:#4a9fd4;color:#000;font-weight:600;}
-.box-pill[data-box="promo2"]{border-color:#c0392b;color:#c0392b;}
-.box-pill[data-box="promo2"]:hover{border-color:#e05a5a;color:#e05a5a;}
-.box-pill[data-box="promo2"].active{background:#c0392b;border-color:#c0392b;color:#fff;font-weight:600;}
+/* Promos: an extra source of cards, off by default, styled as the outsider it is */
+.box-pill[data-box="promo"]{border-color:#7a8aaa;border-style:dashed;color:#9aa8bc;margin-left:0.35rem;}
+.box-pill[data-box="promo"]:hover{border-color:#a8b4c8;color:#c8d2e0;}
+.box-pill[data-box="promo"].active{background:#7a8aaa;border-color:#7a8aaa;border-style:solid;color:#0a0e1a;font-weight:600;}
+/* Automated Command mode: the card-only filter rows do not apply to the faces */
+body.bot-mode #suitFilters,body.bot-mode #speciesBody,body.bot-mode #regularBody,body.bot-mode #otherBody,
+body.bot-mode #skillsBody,body.bot-mode #focusBody,body.bot-mode #stripBody,body.bot-mode #statusBody{opacity:.35;pointer-events:none;}
 
 .promo-pill{font-family:'Exo 2',sans-serif;font-size:0.72rem;padding:0.22rem 0.75rem;border-radius:3px;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:all 0.15s;user-select:none;}
 .promo-pill[data-promo="promo1"]{border-color:#4a9fd4;color:#4a9fd4;}
@@ -581,8 +583,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .dupes-toggle{display:inline-flex;align-items:center;gap:.35rem;white-space:nowrap;
   font-family:'Exo 2',sans-serif;font-size:.72rem;color:var(--muted);cursor:pointer;user-select:none;}
 .dupes-toggle input{accent-color:var(--blue);cursor:pointer;}
-.also-show{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.7rem;}
-.also-show-label{font-family:'Orbitron',sans-serif;font-size:0.69rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);}
+.mode-radio{display:inline-flex;align-items:center;gap:.7rem;margin-left:.2rem;}
 .results-bar{justify-content:space-between;flex-wrap:wrap;gap:.6rem;}
 .strip-note{font-family:'Exo 2',sans-serif;font-size:0.69rem;color:var(--muted);
   margin:.35rem 0 0;opacity:.85;}
@@ -591,7 +592,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .active-summary,.qh-note,.strip-note,footer,.deck-count{
   font-family:'Exo 2',sans-serif;font-weight:400;font-size:.72rem;letter-spacing:0;font-style:normal;}
 .query-help code{font-size:.75rem;}
-.nav-bar a,.filter-label,.also-show-label,.deck-group-header,.qh-title,.result-count,.pill-sublabel{
+.nav-bar a,.filter-label,.deck-group-header,.qh-title,.result-count,.pill-sublabel{
   font-family:'Orbitron',sans-serif;font-weight:400;font-size:.6875rem;letter-spacing:.12em;}
 .vtoggle,.clear-btn{font-family:'Antonio',sans-serif;font-weight:600;font-size:.8rem;letter-spacing:.04em;
   border-radius:999px;height:22px;box-sizing:border-box;display:inline-flex;align-items:center;padding:0 .8rem;}
@@ -649,9 +650,9 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
       <button class="vtoggle" id="btnPill" onclick="setView('pill')">Details</button>
     </div>
     <button class="clear-btn" onclick="clearAll()">Reset</button>
-    <span class="also-show"><span class="also-show-label">Also show:</span>
-      <label class="dupes-toggle"><input type="checkbox" id="showPromo" onchange="setPromo(this.checked)"> Promos</label>
-      <label class="dupes-toggle"><input type="checkbox" id="showBots" onchange="setBots(this.checked)"> Bots</label>
+    <span class="mode-radio">
+      <label class="dupes-toggle"><input type="radio" name="mode" id="modeCards" checked onchange="setBots(false)"> Cards</label>
+      <label class="dupes-toggle"><input type="radio" name="mode" id="modeBots" onchange="setBots(true)"> Bots</label>
     </span>
   </div>
 
@@ -666,9 +667,9 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>deck:common-cc</code> · <code>deck:common-tbg</code><span>one box's commons; also common-2nd</span></div>
     <div class="qh-row"><code>skill:military</code> · <code>focus:influence</code><span>icon search; also skill:any, skill:variable, focus:best</span></div>
     <div class="qh-row"><code>box:all</code> · <code>box:tbg</code><span>the three main boxes, or one; empty bar = empty page; box:none shows nothing</span></div>
-    <div class="qh-row"><code>promo:on</code><span>show the promo cards, filed under the commons. Promo 1 shows with Captain's Chair, Promo 2 with To Boldly Go or Second Contact</span></div>
+    <div class="qh-row"><code>box:promo</code><span>the promo packs, filed under the commons; on their own or alongside the boxes</span></div>
     <div class="qh-row"><code>sort:number</code><span>order each deck by card number; decks are in play order otherwise</span></div>
-    <div class="qh-row"><code>bot:on</code><span>show each captain's Automated Command cards before the deck; hides missions</span></div>
+    <div class="qh-row"><code>bot:on</code><span>Automated Command mode: the faces of every captain in the selected boxes, and nothing else</span></div>
     <div class="qh-row"><code>vp:4</code> · <code>vp&gt;=3</code><span>victory points, the number bottom-right; cards without a value never match</span></div>
     <div class="qh-row"><code>position:reserve</code> · <code>position:incident-deck</code><span>starting position; hyphens for spaces</span></div>
     <div class="qh-row"><code>strip:reaction</code> &middot; <code>strip:any</code><span>cards carrying that operation strip</span></div>
@@ -1217,7 +1218,7 @@ function parseQuery(text, vocab){
     const put=(arr,negArr,v)=>(neg?negArr:arr).push(v);
     if(key==='box'){
       if(lv==='all') vocab.allBoxes.forEach(b=>put(res.boxes,res.negBoxes,b));
-      else if(lv==='promo1'||lv==='promo2') res.promo = !neg;
+      else if(lv==='promo'||lv==='promos'||lv==='promo1'||lv==='promo2') res.promo = !neg;
       else put(res.boxes,res.negBoxes,lv);
     } else if(key==='deck'){
       put(res.decks,res.negDecks,vocab.decks[lv]!==undefined?vocab.decks[lv]:val);
@@ -1389,22 +1390,17 @@ function buildQueryVocab(){
 
 function applyQuery(text){
   const q=parseQuery(text,QUERY_VOCAB);
-  const asked=tokenList(String(text||'')).some(t=>!/^-?(dupes|sort|bots?|promos?|view):/i.test(t));
+  // A bare search term pulls the three main boxes in; a mode token or the promo pill alone
+  // does not (box:promo on its own shows the promo packs and nothing else).
+  const asked=tokenList(String(text||'')).some(t=>!/^-?(dupes|sort|bots?|promos?|view|box:promos?[12]?)(:|$)/i.test(t));
   viewMode = q.view || 'image';
   activeBoxes=new Set(q.boxes.length?q.boxes.filter(b=>DEFAULT_BOXES.includes(b)):(asked?DEFAULT_BOXES:[]));
   q.negBoxes.forEach(b=>activeBoxes.delete(b));
   showPromo = q.promo === true;
-  if(showPromo){
-    if(activeBoxes.has('core')) activeBoxes.add('promo1');
-    if(activeBoxes.has('tbg') || activeBoxes.has('2nd')) activeBoxes.add('promo2');
-  }
+  if(showPromo){ activeBoxes.add('promo1'); activeBoxes.add('promo2'); }
   const expand=list=>{ const out=new Set();
     list.forEach(d=>{ if(d==='::common') [...activeBoxes].forEach(b=>out.add('Common:'+b)); });
     list.forEach(d=>{ if(d!=='::common') out.add(d); });
-    if(showPromo){
-      if(out.has('Common:core') && activeBoxes.has('promo1')) out.add('Common:promo1');
-      if((out.has('Common:tbg')||out.has('Common:2nd')) && activeBoxes.has('promo2')) out.add('Common:promo2');
-    }
     return out; };
   activeDecks=expand(q.decks); negDecks=expand(q.negDecks);
   activeSuits=new Set(q.suits); negSuits=new Set(q.negSuits);
@@ -1440,8 +1436,8 @@ function setSortNum(on){
   setQuery(toks.join(' '));
 }
 function setPromo(on){
-  const toks=tokenList(currentQuery()).filter(t=>!/^-?(promos?|box:promo[12])(:|$)/i.test(t));
-  if(on) toks.push('promo:on');
+  const toks=tokenList(currentQuery()).filter(t=>!/^-?(promos?:|box:promos?[12]?$)/i.test(t));
+  if(on) toks.push('box:promo');
   setQuery(toks.join(' '));
 }
 function setBots(on){
@@ -1486,7 +1482,7 @@ function withBoxAdded(text,b){
   toks.push('box:'+b); return toks.join(' ');
 }
 function setBoxTokens(target){
-  let toks=tokenList(currentQuery()).filter(t=>!/^-?box:/i.test(t));
+  let toks=tokenList(currentQuery()).filter(t=>!/^-?box:/i.test(t) || /^box:promos?$/i.test(t));
   target=target.filter(b=>DEFAULT_BOXES.includes(b));
   const dropped=DEFAULT_BOXES.filter(b=>!target.includes(b));
   if(dropped.length) toks=toks.filter(t=>{
@@ -1507,10 +1503,9 @@ function syncFilterPills(){
   syncViewButtons();
   const sn=document.getElementById('sortNum');
   if(sn) sn.checked=sortByNumber;
-  const bt=document.getElementById('showBots');
-  if(bt) bt.checked=showBots;
-  const pr=document.getElementById('showPromo');
-  if(pr) pr.checked=showPromo;
+  document.getElementById('modeCards').checked=!showBots;
+  document.getElementById('modeBots').checked=showBots;
+  document.body.classList.toggle('bot-mode',showBots);
   document.querySelectorAll('.suit-pill').forEach(p=>p.classList.toggle('active',activeSuits.has(p.dataset.suit)));
   document.querySelectorAll('.species-pill,.regular-pill,.other-pill').forEach(p=>p.classList.toggle('active',activeTags.has(p.dataset.value)));
   document.querySelectorAll('.skill-pill').forEach(p=>p.classList.toggle('active',activeSkills.has(p.dataset.value)));
@@ -1521,6 +1516,7 @@ function syncBoxPills(){
   document.querySelectorAll('.box-pill').forEach(p=>{
     const id=p.dataset.box;
     if(id==='all') p.classList.toggle('active', DEFAULT_BOXES.every(b=>activeBoxes.has(b)));
+    else if(id==='promo') p.classList.toggle('active', showPromo);
     else p.classList.toggle('active', activeBoxes.has(id));
   });
 }
@@ -2003,9 +1999,14 @@ function botMatches(bot){
   return true;
 }
 
+// Automated Command mode: every captain of the selected boxes, narrowed by the captain
+// pills when any are active. Card filters (suit, traits, skills, strips, status) do not
+// apply to the faces; text: does.
 function botsForDeck(deck){
-  if(!showBots || !activeDecks.size) return [];
-  if(!activeDecks.has(deck) || negDecks.has(deck)) return [];
+  if(!showBots) return [];
+  if(!activeBoxes.has(DECK_BOX[deck])) return [];
+  if(activeDecks.size && !activeDecks.has(deck)) return [];
+  if(negDecks.has(deck)) return [];
   return BOTS.filter(b=>b.captain===deck && botMatches(b));
 }
 
@@ -2134,8 +2135,7 @@ function render(){
   const allDecks=[...DECK_ORDER, 'Common:promo1', 'Common:promo2'];
   allDecks.forEach(deck=>{
     const deckBots=botsForDeck(deck);
-    let matched=ALL_CARDS.filter(c=>deckKey(c)===deck&&cardMatches(c)
-                                    &&!(showBots&&deckBots.length&&c.suit==='Mission'));
+    let matched=showBots ? [] : ALL_CARDS.filter(c=>deckKey(c)===deck&&cardMatches(c));
     if(!sortByNumber){
       matched=matched.map((c,i)=>[c,i])
         .sort((a,b)=>(positionRank(a[0])-positionRank(b[0]))||(a[1]-b[1]))
@@ -2149,8 +2149,8 @@ function render(){
     const printed=matched.filter(c=>!c.virtual);
     const hdrCards=new Set(printed.map(c=>c.id)).size;
     const hdrPrints=showDupes ? printed.length : printed.reduce((n,c)=>n+(c.copies||1),0);
-    hdr.innerHTML=hdrLabel+' <span class="deck-count">('+hdrCards+' card'+(hdrCards!==1?'s':'')
-      +' \u00b7 '+hdrPrints+' printing'+(hdrPrints!==1?'s':'')+')</span>';
+    hdr.innerHTML=hdrLabel+(showBots ? '' : ' <span class="deck-count">('+hdrCards+' card'+(hdrCards!==1?'s':'')
+      +' \u00b7 '+hdrPrints+' printing'+(hdrPrints!==1?'s':'')+')</span>');
     section.appendChild(hdr);
     if(deckBots.length){
       const bg=document.createElement('div');
@@ -2169,13 +2169,15 @@ function render(){
     section.appendChild(grid);
     groups.appendChild(section);
   });
-  const shown=ALL_CARDS.filter(c=>cardMatches(c)&&!c.virtual
-                                 &&!(showBots&&botsForDeck(deckKey(c)).length&&c.suit==='Mission'));
+  const shown=showBots ? [] : ALL_CARDS.filter(c=>cardMatches(c)&&!c.virtual);
   const distinct=new Set(shown.map(c=>c.id)).size;
   const printings=showDupes ? shown.length : shown.reduce((n,c)=>n+(c.copies||1),0);
   document.getElementById('distinctDisplay').textContent=distinct;
-  document.getElementById('searchCount').innerHTML =
-    '<b>'+distinct+'</b> card'+(distinct!==1?'s':'')
+  const faces=showBots ? document.querySelectorAll('#deckGroups .botface').length : 0;
+  if(showBots) total+=faces;
+  document.getElementById('searchCount').innerHTML = showBots
+    ? '<b>'+faces+'</b> Automated Command face'+(faces!==1?'s':'')
+    : '<b>'+distinct+'</b> card'+(distinct!==1?'s':'')
     +' \u00b7 <b>'+printings+'</b> printing'+(printings!==1?'s':'');
   const extra=document.getElementById('copiesExtra');
   extra.textContent = (printings!==distinct) ? ('  ·  '+printings+' printings') : '';
@@ -2217,6 +2219,13 @@ boxDefs.forEach(({id,label})=>{
   p.onclick=()=>{ const t=new Set(activeBoxes); if(t.has(id)) t.delete(id); else t.add(id); setBoxTokens([...t]); };
   boxContainer.appendChild(p);
 });
+// Promos close the row: an extra source, toggled on its own token, never part of All.
+{
+  const p=document.createElement('span');
+  p.className='box-pill'; p.dataset.box='promo'; p.textContent='Promos';
+  p.onclick=()=>setPromo(!showPromo);
+  boxContainer.appendChild(p);
+}
 syncBoxPills();
 
 const deckContainer = document.getElementById('deckFilters');
