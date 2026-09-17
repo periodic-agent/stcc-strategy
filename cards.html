@@ -355,6 +355,22 @@ body.lb-open{overflow:hidden;}
 .lbx-prev{left:.4rem;}
 .lbx-next{right:.4rem;}
 .lbx-panel.single .lbx-nav{display:none;}
+.multsec .mt-key{display:flex;justify-content:center;gap:.7rem;font-family:'Orbitron',sans-serif;
+  font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;margin:-.1rem 0 .3rem;}
+.multsec .mt-key b{font-weight:400;}
+.multsec .mt-key .kb{color:#7ec8f0;}
+.multsec .mt-key .ka{color:#e09050;}
+.mt-row{display:flex;align-items:center;gap:.3rem;margin:.34rem 0;}
+.mt-chip{flex:none;display:inline-flex;align-items:center;height:1.15em;border-radius:999px;overflow:hidden;}
+.mt-chip img{height:1.15em;width:auto;display:block;}
+.mt-slots{flex:1;display:grid;grid-template-columns:repeat(15,1fr);align-items:center;gap:1px;}
+.mt-slot{position:relative;height:30px;display:flex;align-items:center;justify-content:center;}
+.mt-slot::after{content:'';width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.18);}
+.mt-slot.on::after{width:5px;height:5px;background:rgba(255,255,255,.55);}
+.mt-slot b,.mt-slot s{position:absolute;left:0;right:0;text-align:center;text-decoration:none;
+  font-family:'Antonio',sans-serif;font-weight:700;font-size:.62rem;line-height:1;}
+.mt-slot b{top:0;color:#7ec8f0;}
+.mt-slot s{bottom:0;color:#e09050;}
 .dnote{margin:.9rem 0 .2rem;}
 .dnote-head{display:flex;align-items:center;gap:.45rem;margin-bottom:.35rem;}
 .dnote-rule{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(240,179,35,.7),transparent);}
@@ -1696,6 +1712,34 @@ const STRIP_RES={dilithium:'dilithium',latinum:'latinum',glory:'glory-token',
 const STRIP_SPEC=['Research','Influence','Military','Any','Variable'];
 const SPEC_COL={military:'#ab2242',research:'#015c80',influence:'#c0b422',
                 any:'#5a6678',variable:'#5a6678'};
+const DECK_MULT={"Picard":{"res":{"2":1,"7":2,"10":3,"13":4,"15":5},"inf":{"3":1,"8":2,"11":4,"15":6},"mil":{"5":2,"10":3,"14":4}},"Koloth":{"res":{"5":2,"10":3,"14":4},"inf":{"3":1,"8":2,"11":4,"15":6},"mil":{"2":1,"7":2,"10":3,"13":4,"15":6}},"Sisko":{"res":{"3":1,"8":2,"11":4,"15":6},"inf":{"2":1,"7":2,"10":3,"13":4,"15":5},"mil":{"4":1,"9":3,"13":4,"15":5}},"Sela":{"res":{"5":2,"10":3,"14":4},"inf":{"5":2,"10":3,"14":4},"mil":{"5":2,"10":3,"14":4}},"Shran":{"res":{"5":2,"10":3,"14":4},"inf":{"2":1,"7":2,"10":3,"13":4,"15":5},"mil":{"3":1,"8":2,"11":4,"15":5}},"Burnham":{"res":{"2":1,"7":2,"10":3,"13":4,"15":5},"inf":{"2":1,"7":2,"10":3,"13":4,"15":5},"mil":{"5":2,"10":3,"14":4}},"Kirk":{"res":{"2":1,"3":2,"6":3,"10":4},"inf":{"2":1,"3":2,"6":3,"10":4},"mil":{"2":1,"3":2,"6":3,"10":4}},"Archer":{"res":{"3":1,"8":3,"15":5},"inf":{"3":1,"8":3,"15":6},"mil":{"3":1,"8":3,"15":5}},"Khan":{},"Georgiou":{"res":{"2":1,"7":2,"10":3,"13":4,"15":5},"inf":{"3":1,"8":2,"11":4,"15":6},"mil":{"2":1,"7":2,"10":3,"14":4}},"Soval":{"res":{"2":1,"7":2,"10":3,"13":4,"15":5},"inf":{"3":1,"8":3,"11":4,"15":5},"mil":{"2":1,"7":2,"10":3,"13":4,"15":5}},"Rebner":{"mil":{"3":1,"6":2,"9":3,"12":4,"15":5}},"Riker":{"res":{"8":2,"11":3,"13":4},"inf":{"5":2,"10":3,"14":4},"mil":{"2":1,"7":2,"11":3,"15":5}},"Pike":{"res":{"9":3,"14":4},"inf":{"5":2,"10":3,"15":5},"mil":{"3":1,"5":2,"9":3}},"Freeman":{"res":{"2":1,"7":2,"10":3,"13":4,"15":5},"inf":{"2":1,"7":2,"10":3,"13":4,"15":5},"mil":{"2":1,"7":2,"10":3,"13":4,"15":5}}};
+const MULT_TRACKS=[['res','research','#015c80'],['inf','influence','#c0b422'],
+                   ['mil','military','#ab2242']];
+function deckMultHTML(c){
+  if(!c || c.suit!=='Captain') return '';
+  const d=DECK_MULT[c.deck];
+  if(!d) return '';
+  let rows='';
+  for(const [k,name,col] of MULT_TRACKS){
+    const t=d[k];
+    if(!t) continue;
+    const src=(CARDFACE.skillChip||CARDFACE.skill||{})[name];
+    const chip=src?'<span class="mt-chip" style="background:'+col+'">'
+      +'<img src="'+src+'" alt="'+name+'"></span>':'';
+    let slots='';
+    for(let i=1;i<=15;i++){
+      const v=t[String(i)];
+      slots+='<div class="mt-slot'+(v?' on':'')+'"'
+        +(v?' title="Space '+i+': basic \u00d7'+(v+1)+', advanced \u00d7'+v+'"':'')+'>'
+        +(v?'<b>\u00d7'+(v+1)+'</b><s>\u00d7'+v+'</s>':'')+'</div>';
+    }
+    rows+='<div class="mt-row">'+chip+'<div class="mt-slots">'+slots+'</div></div>';
+  }
+  if(!rows) return '';
+  return '<div class="dnote multsec"><div class="dnote-head"><span class="dnote-rule"></span>'
+    +'<span class="dnote-label">Multipliers</span><span class="dnote-rule"></span></div>'
+    +'<div class="mt-key"><b class="kb">Basic</b><b class="ka">Advanced</b></div>'+rows+'</div>';
+}
 const REQ_GLYPH_CX={research:34.5,military:35.0,influence:36.4,any:31.2,
                     variable:49.3,collective:50};
 function specPill(spec,src,alt){
@@ -2084,7 +2128,7 @@ function buildPillCard(c, opts){
     +awayHTML
     +(skillsHTML?'<div class="skcol">'+skillsHTML+'</div>':'')
     +'</div><div class="ce-traits2">'+vt+'</div></div>'
-    +stripHTML+numline+corner;
+    +stripHTML+numline+deckMultHTML(c)+corner;
   return el;
 }
 
