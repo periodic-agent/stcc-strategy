@@ -1,8 +1,8 @@
 {
- "generated": "2026-09-15T20:33:28Z",
+ "generated": "2026-09-17T15:52:04Z",
  "generator": "tools/build_strategy_index.py",
- "guide_count": 29,
- "card_count": 453,
+ "guide_count": 30,
+ "card_count": 477,
  "guides": {
   "allies.html": {
    "title": "Ally Deck Strategy Guide",
@@ -58,6 +58,10 @@
   },
   "promo-pack-2.html": {
    "title": "Promo Pack Two",
+   "label": "To Boldly Go"
+  },
+  "rebner.html": {
+   "title": "Rebner",
    "label": "To Boldly Go"
   },
   "sc-market-locations-rewards.html": {
@@ -236,6 +240,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Admiral Necheyev isn’t ideal for Rebner, not just because she doesn’t score but because you have very few cards in hand to even bother beaming. I’d avoid her.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "admiral-pressman": [
@@ -304,6 +322,20 @@
       "heading": "Phasing Cloak (Cargo)",
       "snippet": "How I love the thematic tie-in of getting Admiral Pressman and the Phasing Cloak out at the same time. Or even better, junking Pressman from the market as part of this action. Sorry to all you Enterprise fans who had your finale hijacked by this TNG episode, but the card itself is pretty great. A simple, no cost activation allows you to free play a ship (excellent) and the passive ability renders your opponents",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Admiral Pressman on the other hand is a great Rebner card, both for the Shady trait and because he can free play an Attack. He’s not going to do much as a Duty Officer, but that’s fine. You can discard him to keep Varuvian Bomb in play.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -434,6 +466,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Ambassador Kamarag might be worth it for the Military and scan, if you know what you’re looking for with that Klingon scan (Lursa, Dorg, or K’t’inga Battlecruiser would be good ones for Rebner).",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "ambassador-spock": [
@@ -526,6 +572,20 @@
       "heading": "Encounters",
       "snippet": "Core Set: Omega Particle for resource generation is both good for Kirk and provides a reliable focus scoring if you can max it out at four or five points. Boltzmann Brain is great for everybody, unless you just hit a point where you stopped taking Incidents. Sha Ka Ree is pretty good due to the Vulcan trait, and Kirk can afford to lose the ship needed to beam. Ancient Gene Fragments can be good if you get it early",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Ancient Gene Fragments might actually be useful for Rebner, not just for scoring but because he may have some Scientist cards from his mission.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -1034,6 +1094,20 @@
       "heading": "Archer’s Reserve Cards",
       "snippet": "Archer has seven Reserve Cards consisting of four Directives, two Person Cards, and one (very good) Cargo (boy). Among the Directives are First Contact, Inspire, and Strange New Worlds, all of which we’ve seen in previous decks. Inspire is Archer’s primary method of advancing on his skill tracks, but doesn’t give him a Dilithium the way that Utilize does for most captains. First Contact is a one-off Directive",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "President Rillak loses a lot of her benefit for Rebner because he doesn’t have Utilize or Inspire, but she’s good at returning Incidents which everybody loves.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -1614,6 +1688,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Tholians are pretty great for everyone, but Rebner needs those resources and won’t be logging too many planets (no Strange New Worlds and only a Varuvian Bomb) so you’ll get a decent amount of resources when you pull the trigger on them.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "sc-market-locations-rewards.html",
     "count": 1,
     "hits": [
@@ -1719,6 +1807,20 @@
       "anchor": "soval-muroc",
       "heading": "Muroc (Person)",
       "snippet": "Muroc has a Military skill and the Vulcan trait. Muroc has a play action that allows you to choose two: gain an Influence, a Military, or send an away team to a location with a ship. If you have more than six Influence you can do all three and then log Muroc. His Activations make him the Vulcan Riker, as he can draw a Ship from your discard pile or free play a Ship with Vulcan. I often use T’Pol to promote him to",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "to-boldly-go",
+      "heading": "To Boldly Go",
+      "snippet": "Archer: I think most people playing an experienced Archer game will be able to fight you in the Neutral Zone by turn three or four, but still rely on your Ship advantage as long as you can. Block planets and prevent Away Teams from being sent. Be on guard for T’Pol, as Archer will scoop up cards you want from the market decks before you can get them. Junk what you can (this won’t help once the Badlands are in play,",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -1862,6 +1964,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Arin’sen only makes sense for Rebner if you’ve been gathering Klingons throughout the game.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -1950,6 +2066,20 @@
       "heading": "Person Deck",
       "snippet": "To Boldly Go : Admiral Jarok is good for a Development but Kirk has enough attacks that I would avoid promoting him. Ambassador Gral is a great choice simply for Incident management and a “controlled” Burn win. Ash Tyler triggers Kirk’s Reaction and you might be able to use him for hand size, but you won’t have a situation with more Klingons than Starfleet. Hoshi Sato can be really helpful in searching for Vulcans",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Ash Tyler seems like a great choice for Rebner, especially since he has no Starfleet or Klingon cards in his deck and can find Military skill/focus cards, and he usually gets a lot of Glory.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -2212,6 +2342,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Betazed Intelligence can help you find Grubdin, but beyond that it’s not the best or most useful Ally you could be looking for.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "shran.html",
     "count": 1,
     "hits": [
@@ -2264,6 +2408,20 @@
       "heading": "Ally Deck",
       "snippet": "Second Contact: Betazed Intelligence helps you find Sarek, but other than that you’re probably only getting one turn with a slightly increased handsize before this logs. Illyrians are good because you can use Sarek to have 3 Duty officers, but you’ll only get one shot at it unless you can leverage an Augment somehow. The play actions aren’t bad for Kirk either. Nova Fleet is also great, though not any more for Kirk",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Betazed Intelligence can help you find Grubdin, but beyond that it’s not the best or most useful Ally you could be looking for.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -2336,6 +2494,20 @@
       "heading": "Cargo Deck",
       "snippet": "Core Set: Tribbles and Tachyon Detection Grid continue to be useful against specific captains, but aren’t uniquely good for Kirk in my opinion. Biobed is great for Kirk and can allow you to Find Bones, or simply keep your Incidents managed. Mek’leth is most useful for Kirk for the Klingon trait. Kirk should be able to meet the restriction for Unstable Wormhole easily, and it’s mostly just for him to help predict",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Biobed isn’t helpful for Rebner.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -2428,6 +2600,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Bird of Prey is kind of a middle-of-the road choice for Rebner. It’s got things he won’t use, but it’s not a bad option for sending Away Teams.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "sela.html",
     "count": 1,
     "hits": [
@@ -2493,6 +2679,20 @@
       "anchor": "ally-deck",
       "heading": "Ally Deck",
       "snippet": "Arin’sen has the potential for a big play if you’ve been gathering Klingons for Kirk. Otherwise, Denobulans, Bolians, Bynars, Organians, and Kelpians don’t really have any unique benefit for Kirk. Lethians can work if you need to draw Levitation Boots from your Discard pile, but since they log themselves that will only work one time. Suliban have that fun Time-Travel recall ability, and the alien trait can be useful.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Bolians, Bynars, Denobulans, Kelpiens, and Organians are usually pretty good for everybody, but they all have downsides for Rebner, from not scoring to giving less useful benefits. Tread carefully.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -2572,6 +2772,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Boltzmann Brain is great for everybody, and Rebner can benefit as well.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -2597,6 +2811,28 @@
       "snippet": "This ship has the Borg tag, naturally. It has a free play action to deploy and warp the ship, but you can optionally spend an action token and one Dilithium to gain a person and log that card. That seems kind of silly (it's just a point, unless the card has a focus or market glory on it), except that if you have a Borg captain you can assimilate that card instead. What does that mean? What does that do? I don't know",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Soji Asha gives me pause because she doesn’t score points, but getting the Borg Probe is great for beaming and she can really help thin the deck.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Borg Probe is almost always great for everyone and Rebner is no exception.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -2718,6 +2954,20 @@
       "heading": "Notable Market Cards",
       "snippet": "In the Person Deck, I tend to like grabbing Lenara Khan for her Scientist trait and her Research focus scoring (as does Bruce Maddox), in addition to her ability to scan for anomalies. I often feel limited on ships early on, so Lursa can help with away team placement and gaining more ships, and she can be logged for your Shady requirement on mission three. Adding any spies and drawing a minimum of seven cards a turn",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Bruce Maddox is really only beneficial if you’ve gotten other Synthetics or Androids, which Rebner might get eventually. Even though he doesn’t score, you might consider getting him for the Engineer and Scientist traits for Rebner’s first Mission.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -3186,6 +3436,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Burnham: Burnham’s Dilithium in the market is a great advantage for you, just watch out for her to put it on cards that don’t score you anything. A rush-game seems appropriate against Burnham, but she has (in my experience) pretty fast games too, so don’t neglect taking lots of locations to make up the difference. Remember that she can get Ships from the Junk with Recover, so you need to grab what you want when you",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "burnham-saru": [
@@ -3474,6 +3738,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Bolians, Bynars, Denobulans, Kelpiens, and Organians are usually pretty good for everybody, but they all have downsides for Rebner, from not scoring to giving less useful benefits. Tread carefully.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -3513,6 +3791,28 @@
       "snippet": "The first in a trio of Klingon sibling-antagonists on Lower Decks, Dorg is a fairly powerful card no matter what you're using him for. As an action, he's a great way to get a ship or glory (and if you discard Holographic Drone Ship, both). He also has 2 reactions, one to get an extra action token, and another to remove opponent away teams. That's some great versatility and he's a top card, for sure.",
       "truncated": false,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Captain Dorg synergizes really well with Rebner, so I’d almost argue he’s a must-get if you can.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Type III Disruptor Pistols are fine, especially if you have the traits necessary to remove opponent Away Teams (a thematic team-up with Captain Dorg should supply the opportunity).",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -3698,6 +3998,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Cloaking Device on the other hand is great and will help him make use of those Away Teams. The only issue might be having enough cards to discard.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -3778,6 +4092,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Commander Tysess is pretty good for everyone, and Rebner is no exception.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "computer-virus": [
@@ -3826,6 +4154,20 @@
       "heading": "Cargo Deck",
       "snippet": "To Boldly Go: I’m definitely a fan of Augmentation plague due to Georgiou’s late game focus on Klingon cards, and if you can nab it early you can get some Glory every time you put a Klingon in play. You shouldn’t have to worry about specialty restrictions for cards like forced Singularity, which also gives you focus scoring for research and yet another duty officer. Same benefit to Computer Virus, and you should get",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Computer Virus has a Military Skill and two of the three traits you need for your first mission, which is a no-brainer.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -3974,6 +4316,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Degra is a good early choice for scanning for Xindi to find Kemocite (to later find Weapons) and Xindi-Reptilian Battleship (for the scoring and Cargo gain), but the Encounter won’t be possible most of the time.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "delphic-expanse-sphere": [
@@ -4014,6 +4370,20 @@
       "heading": "Encounters",
       "snippet": "To Boldly Go: Delphic Expanse Sphere is good for sending away teams to controlled locations to set up Strange New Worlds. Gomtuu is amazing for Kirk because it counts as an Encounter on a Ship by itself, meaning you only need to beam one more Encounter here to complete Kirk’s mission. New Federation Applicants is fine for Incident management and card draw, and the wild focus offers some good flexibility for scoring.",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Delphic Expanse Sphere has a free-play to send Away Teams, market gain-utility, and a Military skill, so it’s not a bad option for Rebner.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -4124,6 +4494,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Bolians, Bynars, Denobulans, Kelpiens, and Organians are usually pretty good for everybody, but they all have downsides for Rebner, from not scoring to giving less useful benefits. Tread carefully.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -4189,6 +4573,20 @@
       "anchor": "person-deck",
       "heading": "Person Deck",
       "snippet": "Second Contact: All five person cards from Second Contact are great for Kirk…but I don’t particularly see them being bad for anybody. Both Ma’ah and D’Erika Tendi are great for ships, which makes Kirk even more deadly in the Neutral Zone. Parmen, K’Ranch, and Jennifer all benefit to different degrees as you gain person cards, which Uhura will help you with too. There’s no bad persons, only bad circumstances.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "D’Erika Tendi, might be the only way I’d suggest going for cards with Influence requirements, because you might be able to play her enough to meet some low ones. And, she’s otherwise fantastic for Rebner.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -4310,6 +4708,20 @@
       "heading": "Ship Deck",
       "snippet": "To Boldly Go: D’Kora Marauder will really only benefit Kirk if he can get a Latinum engine going, and his kit isn’t really designed for that. Medusan Vessel is nice for gaining some more Telepaths but I’m not sure Kirk benefits from it uniquely except for the Alien trait. D’Var has the free play deploy, but beyond that its pretty standard for Kirk. Vor’Cha Attack Cruiser is great, because Kirk always wants Klingons",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "D’Kora Marauder has a Military skill and allows you to steal and utilize Latinum, which works well for Rebner.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -4436,6 +4848,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "D’Var is great because of the Scientist trait and free play, but that secondary activation is useless for Rebner.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "sc-market-locations-rewards.html",
     "count": 1,
     "hits": [
@@ -4550,6 +4976,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Edosians aren’t likely to get you an Encounter. But they will give you some free card draw, which may make them worth getting.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -4652,6 +5092,20 @@
       "heading": "Tevrin Krit",
       "snippet": "Tevrin Krit originates from one of the Short Treks minisodes during the first couple seasons of Discovery. As a bounty hunter, his action costs 2 Dilithium but gains him a scan 3 of Persons, which is a great spread of choices. Beaming them (because you're delivering a bounty) gets you paid a Latinum. The resupply is pretty great if you have cargo and need Latinum too. Getting this card recently and using the Emerald",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Emerald Chain is actually a really good card for Rebner, considering how many Business traits he has here and there that they can free play.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -4826,6 +5280,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Rebner and EVA Suits are a pretty good combination, especially when you consider the number of Ships he has.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -4892,6 +5360,20 @@
       "heading": "Cargo Deck",
       "snippet": "Core Set: Tribbles and Tachyon Detection Grid continue to be useful against specific captains, but aren’t uniquely good for Kirk in my opinion. Biobed is great for Kirk and can allow you to Find Bones, or simply keep your Incidents managed. Mek’leth is most useful for Kirk for the Klingon trait. Kirk should be able to meet the restriction for Unstable Wormhole easily, and it’s mostly just for him to help predict",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Ferengi Wine has an Influence restriction but can maybe help you get Ally cards.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -4971,6 +5453,20 @@
       "anchor": "ship-deck",
       "heading": "Ship Deck",
       "snippet": "Second Contact: The R.I.S. Talvath is pretty good because there’s going to be plenty of Anomaly/Communication/Time Travel cards in play. Fesarius is good for the free play and free warp operations, and Kirk has plenty of Person cards that can be sent here (Spock could get logged twice).",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Fesarius might be a good candidate for an extra encounter, but you’ll need a Person with Starfleet to make it happen.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -5116,6 +5612,20 @@
       "heading": "Notable Market Cards",
       "snippet": "In the Cargo Deck, you can't go wrong with any of the weapons, which includes Phasers, Type III Disruptor Pistols, and Mek'Leth (Lirpa is kind of underwhelming without a lot of Vulcans). I like grabbing any military focus cards, especially Plasma Manifold because it gives an Engineering tag and the flexibility of an additional action. Anything with Science requirements or focus scoring is probably worth ignoring,",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Forced Singularity is a weird one for Rebner. On one hand, he likes having multiple Duty Officers and can usually benefit with enough Engineer cards. On the other hand, it scores for Research. It might be okay in the early game, but you make the call.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -5294,6 +5804,28 @@
       "heading": "Cargo Deck",
       "snippet": "Second Contact: I would really be careful with Moopsy. Kirk is already going to be logging cards with Spock, so logging even more Person cards is a dangerous game. But card draw is great, and you can still benefit from your opponent logging Person cards. Protocol 12 works with Bones but you’ll need to find some more Doctors. Gift Box has general utility but as I’ve noted before, Kirk really isn’t too heavy a Cargo",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 4,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Second Contact:",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Second Contact:",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -6122,6 +6654,28 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 3,
+    "hits": [
+     {
+      "anchor": "rebner-harpy",
+      "heading": "Harpy (Ship) (Dev Cost: 2 Latinum)",
+      "snippet": "Harpy has a Military skill and the Pakled trait, and most importantly, it’s your version of Utilize. When it enters play, you gain a Military for each Military skill you have in play. You can’t beam anything there, but you can warp it for controlling the Neutral Zone, or you can discard a Helmet to dismiss it and place it on top of your deck. This is one of my first Developments for Rebner simply so I can max out",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "President Rillak loses a lot of her benefit for Rebner because he doesn’t have Utilize or Inspire, but she’s good at returning Incidents which everybody loves.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "burnham.html",
     "count": 2,
     "hits": [
@@ -6318,6 +6872,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Gift Box is a pretty good way for Rebner to cycle his Cargo out of his deck and gain some Latinum.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -6400,6 +6968,20 @@
       "heading": "Encounters",
       "snippet": "To Boldly Go: I hesitated including Encounters at first because most captains love most of them. Still, here’s some things I saw that could be helpful. Gomtuu really helps Georgiou move up Military fast, while still offering her a chance to increase Research Focus scoring, both of which she needs for victory. Species 10-C can certainly help, but you’re risking future Encounter gain by eating up those locations and I",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Gomtuu is fine, but you won’t likely have a bunch of Research traits in play to make it useful.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -6516,6 +7098,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "V’Ger, Koala and the Guardian of Forever nearly always have general applicability, though Guardian is a little weaker for Rebner.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -6624,6 +7220,20 @@
       "heading": "Notable Market Cards",
       "snippet": "For the Ally Deck, I'd especially suggest Tholians and Arin'sen for their resource gain. I enjoy using the Karemma for additional actions. And Letheans are often useful. I would avoid the Halkan Council (or at least junk it) if you hope to repeatedly benefit, as they will give you three Dilithium once and probably get logged from any of your many Attack cards. Finally, if you managed to get Betazoid as a starting",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Halkan Council will give you Dilithium once, and then probably will get logged.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -6768,6 +7378,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Holographic Drone Ship is helpful as a Weapon card but that’s pretty much it. Everything else works against Rebner.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -6848,6 +7472,20 @@
       "heading": "Cargo Deck",
       "snippet": "To Boldly Go: I’m definitely a fan of Augmentation plague due to Georgiou’s late game focus on Klingon cards, and if you can nab it early you can get some Glory every time you put a Klingon in play. You shouldn’t have to worry about specialty restrictions for cards like forced Singularity, which also gives you focus scoring for research and yet another duty officer. Same benefit to Computer Virus, and you should get",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Holosuite can be good for Rebner as a way to get cards from the market and get some extra Latinum.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -6976,6 +7614,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Horta is probably not worth the Development.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-cargo.html",
     "count": 1,
     "hits": [
@@ -7044,6 +7696,20 @@
       "heading": "Person Deck",
       "snippet": "To Boldly Go : Admiral Jarok is good for a Development but Kirk has enough attacks that I would avoid promoting him. Ambassador Gral is a great choice simply for Incident management and a “controlled” Burn win. Ash Tyler triggers Kirk’s Reaction and you might be able to use him for hand size, but you won’t have a situation with more Klingons than Starfleet. Hoshi Sato can be really helpful in searching for Vulcans",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Hoshi Sato is nearly completely useless for Rebner. Her only benefit would maybe be the Communication trait.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -7222,6 +7888,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Iconian Gateway is fine but no scoring.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -7302,6 +7982,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Illyrians are almost pointless for Rebner, except they do score three points.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -7364,6 +8058,20 @@
       "heading": "Person Deck",
       "snippet": "To Boldly Go : Admiral Jarok is good for a Development but Kirk has enough attacks that I would avoid promoting him. Ambassador Gral is a great choice simply for Incident management and a “controlled” Burn win. Ash Tyler triggers Kirk’s Reaction and you might be able to use him for hand size, but you won’t have a situation with more Klingons than Starfleet. Hoshi Sato can be really helpful in searching for Vulcans",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Jackabog is the perfect Pakled market card, and you can potentially scan for him with the Shady scan, use him to gain ships, and then gain another Encounter (probably the easiest Encounter for Rebner).",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -7448,6 +8156,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Jago’s Epigenetic Implant might be a way to get some Latinum, but beyond that it’s not really that useful.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "jennifer-shreyan": [
@@ -7500,6 +8222,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Jennifer Sh’reyan is nice for the Recall ability, but more than that I like that there’s some moderate Dilithium generation.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "joret-dal": [
@@ -7540,6 +8276,20 @@
       "heading": "Person Deck",
       "snippet": "Core Set: Ambassador Kamrag lets Kirk scan for some more Klingons, which is helpful as a potential completion route for The Undiscovered Country along with the Captain Reaction benefit. Kirk should have a decent number of Person cards to benefit from Joret Dal. Captain Dorg feels like he should be helpful, but without Weapon cards, he loses some of his bite. B-4 can help you there with getting Cargo, but is",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Joret Dal is not terrible for Rebner, but I don’t like the idea of logging his Person cards when they’re his main method for Dilithium production. Still, the hand size increase is nice.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -7598,6 +8348,20 @@
       "heading": "Ally Deck",
       "snippet": "To Boldly Go: The Kaelon II Science Ministry can be useful if you’re willing to log Person/Directive cards, and Kirk’s as willing if not more than most Captains. Orion Syndicate is great for Kirk due to his massive fleet of deck ships, and it’ll fuel your Latinum production which you need pretty badly. I like Red Squadron for Kirk about as much as everyone else, and the more I play the more I enjoy the ability to",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "The Kaelon II Science Ministry is a decent amount of work for a small amount of pay-off, and Research track movement you don’t need.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -7704,6 +8468,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Karemma are also great for Rebner because of the Latinum engine and extra actions, which he can absolutely make use of.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "sisko.html",
     "count": 1,
     "hits": [
@@ -7755,6 +8533,20 @@
       "anchor": "ship-deck",
       "heading": "Ship Deck",
       "snippet": "Kazon Raider Might be good if it’s what’s available but I worry about Archer’s Latinium production.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Kazon Raider is good for some Latinum but may end up costing you more Latinum to use its Reaction.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -7844,6 +8636,20 @@
       "heading": "Su'Kal",
       "snippet": "From Star Trek Discovery, Su'Kal is a Kelpien, and I'll leave it at that in case you were worried about spoilers for Discovery. The card can't be played, which means it can't be put in the staging area. It can however be beamed or promoted to duty officer. There's some good Dilithium generation, especially if you're taking a lot of incidents. But the real advantage here is the Special scoring allowing for the return",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Bolians, Bynars, Denobulans, Kelpiens, and Organians are usually pretty good for everybody, but they all have downsides for Rebner, from not scoring to giving less useful benefits. Tread carefully.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -7975,6 +8781,28 @@
       "anchor": "person-deck",
       "heading": "Person Deck",
       "snippet": "Degra is not only thematic, provides a Xindi trait, but helps you find other Xindi cards like Kemocite, and should be able to get you an Encounter before the game ends.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Degra is a good early choice for scanning for Xindi to find Kemocite (to later find Weapons) and Xindi-Reptilian Battleship (for the scoring and Cargo gain), but the Encounter won’t be possible most of the time.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Kemocite is fantastic for Rebner and should be sought out, if possible.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -8878,6 +9706,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "V’Ger, Koala and the Guardian of Forever nearly always have general applicability, though Guardian is a little weaker for Rebner.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -9558,6 +10400,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "K’Ranch has a Weapon trait and Military skill along with a Play action that gains Military and Glory. Rebner loves him.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "krulmuth-b": [
@@ -9613,6 +10469,28 @@
    }
   ],
   "ktinga-battlecruiser": [
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Ambassador Kamarag might be worth it for the Military and scan, if you know what you’re looking for with that Klingon scan (Lursa, Dorg, or K’t’inga Battlecruiser would be good ones for Rebner).",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "K’t’inga Battlecruiser is excellent, and should be obtained if possible.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "archer.html",
     "count": 1,
@@ -9778,6 +10656,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Laas has more utility for Pakleds precisely because he can become a Helmet (or at least copy their play action). His Duty Officer Activation isn’t bad but again, Dilithium is sparse.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-allies.html",
     "count": 1,
     "hits": [
@@ -9844,6 +10736,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Landru is pretty pointless for Rebner, unless you can find some reason to get two Influence.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "sc-market-locations-rewards.html",
     "count": 1,
     "hits": [
@@ -9900,6 +10806,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Laris is another card that needs an Android around to be of full benefit for her play action, but her Activation can be utilized by Rebner, especially if he’s grabbed some extra Helmets.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "lenara-kahn": [
@@ -9944,6 +10864,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Lenara Kahn is good for her Scientist trait, and that’s about it for Rebner.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "letheans": [
@@ -9970,6 +10904,20 @@
       "heading": "Notable Market Cards",
       "snippet": "For the Ally Deck, I'd especially suggest Tholians and Arin'sen for their resource gain. I enjoy using the Karemma for additional actions. And Letheans are often useful. I would avoid the Halkan Council (or at least junk it) if you hope to repeatedly benefit, as they will give you three Dilithium once and probably get logged from any of your many Attack cards. Finally, if you managed to get Betazoid as a starting",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Letheans are great, not just for scoring but because you want to have some Shady cards, and you can potentially draw a Helmet or other Cargo out of your discard.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -10100,6 +11048,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Lirpa is good for the Weapon trait and attack, but you shouldn’t have a ton of other Vulcan cards so the card-draw element is wasted.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -10139,6 +11101,28 @@
       "snippet": "My biggest surprise at seeing Lursa in the person deck is the realization that she cannot be a captain with her sister B'Etor in the weirdest duel-captain deck that could theoretically exist in the future. As for this card itself, Lursa has the typical Klingon and Shady tags you'd expect from a Klingon adversary, and a military focus that makes her more valuable to captains favoring that skill track. Her activation",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Lursa is a great card for Rebner, not just for the scoring but for sending Away Teams and gaining ships. Her Activation can also benefit from Business card discards, of which Rebner has a decent degree.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Ambassador Kamarag might be worth it for the Military and scan, if you know what you’re looking for with that Klingon scan (Lursa, Dorg, or K’t’inga Battlecruiser would be good ones for Rebner).",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -10286,6 +11270,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Lwaxana Troi is a good choice for refreshing Rebner, but that’s about it.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -10378,6 +11376,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Ma’ah is fine, but his abilities focus on Klingon cards so you’ll need to evaluate if you have enough of them for that to matter.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "malcolm-reed": [
@@ -10421,6 +11433,20 @@
       "snippet": "Reed has the Security and Ops traits, along with the obligatory Human, Starfleet, and NX-01. I love the resupply if you have an engineer (Tucker) in play, because it's very thematic. The reaction will be useful most of the game as ships are constantly coming and going, and the flexibility to send more Away Teams or find a Weapon is great. His play action is also great, giving you Military advancement of one plus one",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Malcolm Reed is also pretty good for Rebner simply because he’s a free play card and has the potential for military gain, and Dilithium gain in the Resupply.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -10471,6 +11497,20 @@
       "anchor": "person-deck",
       "heading": "Person Deck",
       "snippet": "Malik can be interesting for Archer, but I mostly like him for his Reaction that lets you gain Action tokens, not necessarily for gaining a Development.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Malik is great for Rebner due to the Weapon trait and potential for Military skills and gaining extra actions.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -10556,6 +11596,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Medical Diagnostic Hat is probably not going to affect your Rebner game.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "medusan-vessel": [
@@ -10582,6 +11636,20 @@
       "heading": "Ship Deck",
       "snippet": "To Boldly Go: D’Kora Marauder will really only benefit Kirk if he can get a Latinum engine going, and his kit isn’t really designed for that. Medusan Vessel is nice for gaining some more Telepaths but I’m not sure Kirk benefits from it uniquely except for the Alien trait. D’Var has the free play deploy, but beyond that its pretty standard for Kirk. Vor’Cha Attack Cruiser is great, because Kirk always wants Klingons",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Medusan Vessel is fine for the Communication trait but otherwise normal.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -10668,6 +11736,20 @@
       "heading": "Notable Market Cards",
       "snippet": "In the Cargo Deck, you can't go wrong with any of the weapons, which includes Phasers, Type III Disruptor Pistols, and Mek'Leth (Lirpa is kind of underwhelming without a lot of Vulcans). I like grabbing any military focus cards, especially Plasma Manifold because it gives an Engineering tag and the flexibility of an additional action. Anything with Science requirements or focus scoring is probably worth ignoring,",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Mek’leth might be helpful as a free play with military gain.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -10828,6 +11910,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Moopsy is fine but only if you have a lot of market Persons you can burn through.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -10914,6 +12010,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Moriarty is basically just lights and forcefields for Rebner.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "solo.html",
     "count": 1,
     "hits": [
@@ -10966,6 +12076,20 @@
       "heading": "Encounters",
       "snippet": "To Boldly Go: Delphic Expanse Sphere is good for sending away teams to controlled locations to set up Strange New Worlds. Gomtuu is amazing for Kirk because it counts as an Encounter on a Ship by itself, meaning you only need to beam one more Encounter here to complete Kirk’s mission. New Federation Applicants is fine for Incident management and card draw, and the wild focus offers some good flexibility for scoring.",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "New Federation Applicants will score well, and may help Rebner with Incident management and his need may be greater than some other captains.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -11052,6 +12176,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Nova Fleet is great for everybody, and Rebner’s not an exception this time.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -11124,6 +12262,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Omega Particle again has no applicable focus scoring but resources are good.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -11190,6 +12342,20 @@
       "heading": "Zefram Cochrane",
       "snippet": "I absolutely love finding and getting the father of warp travel. Cochrane is a consistent 3 card draw at the cost of an action token. Making sure you have one or two cards in your deck that give more action tokens makes this a no-brainer, as you'll have extra cards for beaming to ships, extra opportunities for combos, and you'll move through your deck quicker. His activation is also great, as it just requires you to",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Orb of Time is good for everybody… but Rebner doesn’t score for it or have a great logging engine so maybe not for him?",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -11324,6 +12490,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Bolians, Bynars, Denobulans, Kelpiens, and Organians are usually pretty good for everybody, but they all have downsides for Rebner, from not scoring to giving less useful benefits. Tread carefully.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -11442,6 +12622,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Orion Syndicate is a really good card for its Play Actions, but it doesn’t score you anything, so you’ll need to balance out whether it’s worth it.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "sc-market-locations-rewards.html",
     "count": 1,
     "hits": [
@@ -11495,6 +12689,28 @@
       "snippet": "Ship good. Ship Business and Pakled. Ship go and person come and go normal way. Ship can deploy for token cost. You gain junk Cargo, and if Cargo weapon/anomaly, you gain Military. Ship very good, with broken thing in junk most of all. Person who write promise not to do this for every Pakled Card. [Edit: Person may not be saying truth because Designer promise Pakled Planet great Influence in game].",
       "truncated": false,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Rebner starts with the Mondor deployed. The ship appeared in Samaritan Snare (TNG 2x17) as the first and only Pakled vessel to be encountered on-screen by the Enterprise-D. It has the Business and Pakled traits, along with the standard Activations for a starting ship (Warp/Beam/Promote). It also has the same Play Action as the market card Pakled Freighter, allowing you to deploy the ship and gain a Cargo from the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Pakled Freighter is obviously great for Rebner, as it’s just the Mondor again.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -11608,6 +12824,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Parmen is a great card to play but likely doesn’t work as your Duty Officer because you won’t hit that six-Influence requirement. Nor should you.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -11708,6 +12938,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Peanut Hamper is great for Rebner due to your Dilithium need and the Shady trait.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "wesley-crusher-guide.html",
     "count": 1,
     "hits": [
@@ -11753,6 +12997,20 @@
       "anchor": "person-deck",
       "heading": "Person Deck",
       "snippet": "Petra Aberdeen isn’t anything special for Archer unless he really needs something in the junk.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Petra Aberdeen isn’t really helpful for Rebner except as a potential Latinum engine as a Duty Officer.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -11836,6 +13094,20 @@
       "heading": "Denobulans",
       "snippet": "Primarily represented by Dr. Phlox and introduced in Enterprise, the Denobulans have two actions, both of which will self-log the card. The first simply gains the player a Person card. The second requires three influence and allows for scanning three Person cards, resulting in a choice among the three drawn cards and the face up card. This is a decent way to choose from a spread of cards, which is self-evidently",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Phlox is not great because of his Research affinity.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -12808,6 +14080,28 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "U.S.S. Enterprise-C has the same utility for everyone else, just with no scoring. It’s probably worth avoiding unless you fear a blind draw from the top of the deck.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "promos",
+      "heading": "Promos",
+      "snippet": "U.S.S. Enterprise B is an okay option for Rebner, especially once you have more Person cards than you need.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "georgiou.html",
     "count": 1,
     "hits": [
@@ -12902,6 +14196,20 @@
       "heading": "Notable Market Cards",
       "snippet": "In the Cargo Deck, you can't go wrong with any of the weapons, which includes Phasers, Type III Disruptor Pistols, and Mek'Leth (Lirpa is kind of underwhelming without a lot of Vulcans). I like grabbing any military focus cards, especially Plasma Manifold because it gives an Engineering tag and the flexibility of an additional action. Anything with Science requirements or focus scoring is probably worth ignoring,",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Plasma Manifold is excellent so long as you have enough Dilithium to power it.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -13010,6 +14318,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "President Rillak loses a lot of her benefit for Rebner because he doesn’t have Utilize or Inspire, but she’s good at returning Incidents which everybody loves.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "protocol-12": [
@@ -13078,6 +14400,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Protocol 12 may actually work for Rebner as a Shady card that can log Person/Directive cards for Military gain. But beyond that it’s not that useful.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -13092,7 +14428,277 @@
     ]
    }
   ],
+  "rebner-ambassador-grubdin": [
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "rebner-ambassador-grubdin",
+      "heading": "Ambassador Grubdin (Person)",
+      "snippet": "Ambassador Grubdin has the Pakled and Ambassador traits. His Play Action allows you to send an Away Team to a Location, and you may discard a Business or Shady card to send an additional Away Team. This is great, but I feel like I never have the card in my hand to discard (and Rebner’s hand is so small to begin with). As Duty Officer, he can spend an action token to gain a Military for each Helmet you have in play,",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-big-enough-helmet": [
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "rebner-big-enough-helmet",
+      "heading": "Big Enough Helmet (Cargo) (Dev Cost: Your Opponent may draw 2 cards)",
+      "snippet": "As discussed, this Big Enough Helmet is necessary for getting an Encounter, but on its own it’s a great resources generator and it allows you to refresh Rebner. Super powerful as a Helmet card and can help you push through mid-game with resources and repeated card draw. It scores 3 points.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-big-helmet": [
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "rebner-big-helmet",
+      "heading": "Big Helmet (Cargo)",
+      "snippet": "There are two Big Helmet cards in your deck. They both have the Helmet trait, and all three actions are free play actions. I’m declining writing out all of the text because they’re so freaking simple to understand. The real question with the helmets is how you’re going to use them. I think the constant temptation is to use Helmets to draw two cards and discard one, at least that’s what I find myself leaning towards.",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-even-bigger-helmet": [
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "rebner-even-bigger-helmet",
+      "heading": "Even Bigger Helmet (Cargo)",
+      "snippet": "Who is in charge here? It’s the guy with the even bigger Helmet? Okay then. With the free play Action, you can gain a Latinum and Dilithium, and you must Promote a Person from your hand or Staging Area to Duty Officer (if you can). You can also spend an action token and take an Incident to enlist Big Enough Helmet… oh, there’s another one? Sigh.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-grebnedlog": [
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "rebner-grebnedlog",
+      "heading": "Grebnedlog (Person)",
+      "snippet": "Grebnedlog is the Pakled captain of the Mondor and appears in Samaritan Snare. It’s hard to tell how much he plays dumb in order to trap Geordi La Forge on the Mondor. He uses him both as a hostage, in order to demand the computer information from Enterprise, but also in order gain some weapons that Geordi can manufacture.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "rebner-grebnedlog",
+      "heading": "Grebnedlog (Person)",
+      "snippet": "Grebnedlog has the Pakled traits and three different Play Actions. The first allows you to gain a Person (simple enough). The second has a 3-Military requirement and allows you to spend a Dilithium to scan for an Engineer. This is great for your first mission and several Engineer cards synergize well with your kit. The third Play Action has a 6-Military requirement and lets you spend a Latinum to scan for either a",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-harpy": [
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "rebner-harpy",
+      "heading": "Harpy (Ship) (Dev Cost: 2 Latinum)",
+      "snippet": "Harpy is a class of ship that the Pakleds used when fighting the U.S.S. Titan, right before it snuck away into a Gluonic Distortion (see Riker’s Deck guide).",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "rebner-harpy",
+      "heading": "Harpy (Ship) (Dev Cost: 2 Latinum)",
+      "snippet": "Harpy has a Military skill and the Pakled trait, and most importantly, it’s your version of Utilize. When it enters play, you gain a Military for each Military skill you have in play. You can’t beam anything there, but you can warp it for controlling the Neutral Zone, or you can discard a Helmet to dismiss it and place it on top of your deck. This is one of my first Developments for Rebner simply so I can max out",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-jackabogs-clumpship": [
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "rebner-jackabogs-clumpship",
+      "heading": "Jackabog’s Clumpship (Ship) (Dev Cost: 3 Dilithium, 1 Latinum)",
+      "snippet": "Destroyer of the U.S.S. Solvang, Jackabog’s Clumpship almost took out the U.S.S. Cerritos… but thankfully, the U.S.S. Titan swooped in to save the day.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "rebner-jackabogs-clumpship",
+      "heading": "Jackabog’s Clumpship (Ship) (Dev Cost: 3 Dilithium, 1 Latinum)",
+      "snippet": "Jackabog’s Clumpship is nearly identical to The Clumpship Pakled , other than the Dev Cost and printed points. To be honest, I usually only develop this one if I really need it for my Mission, or in order to further control the Neutral Zone. It scores four points, which is another reason I usually end up developing it by the end of the game.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-karzill-vi": [
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "rebner-karzill-vi",
+      "heading": "Karzill VI (Location) (Dev Cost: 2 Latinum and 5+ Military)",
+      "snippet": "The location of a mining colony that processed refined Varuvian ore, the Pakleds took over the planet to mine resources for their Varuvian Bomb. It was here that a freak transporter accident created two Bradward Boimlers, the original who left for the Cerritos, and the clone who went by William Boimler and Captained the Anaximander for Section 31.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "rebner-karzill-vi",
+      "heading": "Karzill VI (Location) (Dev Cost: 2 Latinum and 5+ Military)",
+      "snippet": "Karzill VI has the Business trait (mining after all) and allows you to free play a ship when you control it. If you don’t spend all your action tokens, you can gain a Dilithium and a Glory for each unspent token, and at Endgame it scores a point for every four Glory you have. It also scores a printed 3 points. It’s a nice boost for Rebner, who can end the game pretty quickly but needs an extra boost in scoring.",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-mission-1": [
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "missions",
+      "heading": "Missions",
+      "snippet": "Rebner has no focus multiplier for Research or Influence, and his basic side maxes out at 6x for Military. As always the advanced side’s thresholds are one less, which is still zero for Research and Influence (he doesn’t lose points for those tracks), and 5x for Military. His basic mission is Things That Make Us Smart, which requires an Engineer, a Scientist, and a Communication in play. He only has one Engineer",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "missions",
+      "heading": "Missions",
+      "snippet": "Rebner’s Advanced side gives you three points for Things That Make Us Smart. His second mission is Things That Make Us Strong. You need to have two Weapon traits in play and your Military track at six or higher. Your reward gives you a point and allows you to scan for a Military Focus and draw three cards. You have one Weapon in your Developments (Varuvian Bomb) and otherwise you’ll need to find another Weapon in",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-mission-2": [
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "missions",
+      "heading": "Missions",
+      "snippet": "Rebner’s Advanced side gives you three points for Things That Make Us Smart. His second mission is Things That Make Us Strong. You need to have two Weapon traits in play and your Military track at six or higher. Your reward gives you a point and allows you to scan for a Military Focus and draw three cards. You have one Weapon in your Developments (Varuvian Bomb) and otherwise you’ll need to find another Weapon in",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-mission-3": [
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "missions",
+      "heading": "Missions",
+      "snippet": "Rebner’s Advanced side gives you three points for Things That Make Us Smart. His second mission is Things That Make Us Strong. You need to have two Weapon traits in play and your Military track at six or higher. Your reward gives you a point and allows you to scan for a Military Focus and draw three cards. You have one Weapon in your Developments (Varuvian Bomb) and otherwise you’ll need to find another Weapon in",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-mondor": [
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Rebner starts with the Mondor deployed. The ship appeared in Samaritan Snare (TNG 2x17) as the first and only Pakled vessel to be encountered on-screen by the Enterprise-D. It has the Business and Pakled traits, along with the standard Activations for a starting ship (Warp/Beam/Promote). It also has the same Play Action as the market card Pakled Freighter, allowing you to deploy the ship and gain a Cargo from the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Pakled Freighter is obviously great for Rebner, as it’s just the Mondor again.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-pakled-decree": [
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "rebner-pakled-decree",
+      "heading": "Pakled Decree (Directive)",
+      "snippet": "An ongoing card, once you have it in your Fleet Area you can use it to gain Cargo (at the cost of an action token and beaming a Helmet to this card). It’s one of Rebner’s main ways to get more Cargo, certainly if you’re not using Salvage and looking in the Junk. There’s also a free Activation that lets you log a Weapon from your hand or Discard pile to draw three cards and discard one, though it requires you to max",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "rebner-pakled-planet": [
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "rebner-pakled-planet",
+      "heading": "Pakled Planet (Location)",
+      "snippet": "Pakled Planet is accurately and plainly named. It has the Pakled trait and when you control it you can find a Helmet (except in your Reserve). The first Activation requires you to beam a Helmet to Pakled Planet to send an Away Team to a location, gaining a Glory if there’s a Ship at that location. The second Activation lets you beam a Helmet to your Duty Officer, and this is the primary way you’ll be getting Helmets",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "ships.html",
     "count": 1,
@@ -13108,7 +14714,45 @@
     ]
    }
   ],
+  "rebner-rebelution": [
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "rebner-rebelution",
+      "heading": "Rebelution (Directive)",
+      "snippet": "When it’s a Rebelution, all of the Pakleds change Helmets and a new Pakled is in charge. Let’s start with the Special Text which prevents this card from being logged, which is super important as this is the only consistent way to return Helmets to your deck. The first Play Action gains you a Glory and you dismiss every Helmet. Alternatively, if you have 5 Military, you dismiss every Helmet card and exhaust every",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "rebner-rebner": [
+   {
+    "guide": "rebner.html",
+    "count": 101,
+    "hits": [
+     {
+      "anchor": null,
+      "heading": "Introduction",
+      "snippet": "Welcome to my guide for Rebner, the Pakled captain from Lower Decks. The Pakleds might have seemed like an odd, weird choice for a captain for this game. To be sure, there’s not a ton of episodes of the live action series that feature them. Introduced in the Next Generation episode Samaritan Snare, Pakleds take advantage of their features and affect to make a first impression that comes across as… really dumb. That",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "missions",
+      "heading": "Missions",
+      "snippet": "Rebner has no focus multiplier for Research or Influence, and his basic side maxes out at 6x for Military. As always the advanced side’s thresholds are one less, which is still zero for Research and Influence (he doesn’t lose points for those tracks), and 5x for Military. His basic mission is Things That Make Us Smart, which requires an Engineer, a Scientist, and a Communication in play. He only has one Engineer",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "archer.html",
     "count": 1,
@@ -13250,6 +14894,174 @@
     ]
    }
   ],
+  "rebner-red-alarm": [
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "rebner-red-alarm",
+      "heading": "Red Alarm (Incident)",
+      "snippet": "You need to be able to recall a Duty Officer to return Red Alarm. Then you can spend a Dilithium to draw a Helmet from your discard pile or refresh a Ship. I usually refresh a Ship and often just promote the same Duty Officer again! But if there’s a Helmet in the discard, it’s often worth getting.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-reginod": [
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "rebner-reginod",
+      "heading": "Reginod (Person)",
+      "snippet": "”He is Reginod”. The “Chief Engineer” (?) of the Mondor, he is somehow smart enough to hide the true state of the Mondor from the Enterprise in order to kidnap and threaten them for their computer data. I presume that he’s smart enough to keep the ship running, but with Pakleds, you never know.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "rebner-reginod",
+      "heading": "Reginod (Person)",
+      "snippet": "Reginod has the Engineer and Pakled traits, and his Play Action lets you draw a Pakled from your discard pile and you may discard a Cargo to gain four Dilithium (which you’ll need). You also gain a Military if you discarded a Cargo with the Weapon trait. His resupply gains you one Dilithium, and his Activation lets you warp a Ship and beam a card to a Ship, and if he’s wearing a Helmet you can draw a Person from",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-rumdar": [
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "rebner-rumdar",
+      "heading": "Rumdar (Person)",
+      "snippet": "Rumdar good spy. He goes on board the Cerritos while Freeman and Shaxs are down trying to negotiate on Pakled planet. He’s able to survive the vacuum of space (somehow) after mistaking an airlock for a bathroom. Sigh. We’re not dealing with the best and brightest, are we?",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "rebner-rumdar",
+      "heading": "Rumdar (Person)",
+      "snippet": "Rumdar has the Spy, Attack, and Pakled traits and allows you to send an Away Team to a neutral location. His Attack forces your opponent to discard a card, and if they have a Spy in play you can dismiss them to gain a Glory (if multiple you choose). His Reaction is awesome, as it allows you to draw two additional cards after you draw cards due to Rebner’s operations (doubling the draw from two to four). If he’s",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-salvage": [
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "rebner-salvage",
+      "heading": "Salvage (Directive)",
+      "snippet": "This is the first time I’m talking about the Salvage Directive, though it does appear in Khan’s deck so we’ll talk about it next time again. There’s a free play Action that lets you Junk a card in the market to draw a card, which helps when you’re low on Action tokens or need that one more card you know you have in your deck. There’s also a Play Action where you can gain a standard suit card from the Junk to your",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-samaritan-snare": [
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "rebner-samaritan-snare",
+      "heading": "Samaritan Snare (Directive)",
+      "snippet": "Another reference to the TNG episode of the same name, Samaritan Snare allows you to beam a Helmet to grab a Ship or Ally card (at the cost of a Helmet and action token, of course). The other Activation lets you discard an Incident to gain a Military, which is often helpful when you have no other purpose for the Incidents in your hand.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-the-clumpship-pakled": [
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "rebner-the-clumpship-pakled",
+      "heading": "The Clumpship Pakled (Ship)",
+      "snippet": "An amalgamation of many ships, The Clumpship Pakled is just powerful enough to beat up the California-class of Federation vessels. Still, it’s no match for the U.S.S. Titan.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "rebner-the-clumpship-pakled",
+      "heading": "The Clumpship Pakled (Ship)",
+      "snippet": "The Clumpship Pakled has a Military Skill and the Pakled and Attack traits. When you deploy it, you’ll draw a card for each Ship your opponent has in play (deployed or beamed). And then you may log one of them with the Weapon trait to force your opponent to log a Ship from their hand, discard pile, or in play. Devastating effect when performed correctly, and it has a higher chance of success when your opponent has",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-the-pakled-emperor": [
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "rebner-the-pakled-emperor",
+      "heading": "The Pakled Emperor (Person) (Dev Cost: 2 Latinum)",
+      "snippet": "Ah, yes, the Pakled Queen is here to negotiate. Oh, that’s not a Big Enough Helmet? Okay, what about the Pakled King? Him neither? Who else is there? The Pakled Emperor! Finally, we come across someone in charge and… dang, a Rebelution just killed him. Oops.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "rebner-the-pakled-emperor",
+      "heading": "The Pakled Emperor (Person) (Dev Cost: 2 Latinum)",
+      "snippet": "The Pakled Emperor is the only one with a Big Enough Helmet. He has the Imperial and Pakled traits. You can use the Play Action to find any card and free play an Incident. As Duty Officer, as long as he’s wearing a Big Enough Helmet, you can spend four Dilithium to take the top Encounter and log both The Pakled Emperor and the Big Enough Helmet. As this is the only way to get an Encounter from Rebner’s deck, it’s",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "rebner-varuvian-bomb": [
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "rebner-varuvian-bomb",
+      "heading": "Varuvian Bomb (Cargo) (Dev Cost: 5 Dilithium OR free if you have 1+ Away Teams on Karzill VI )",
+      "snippet": "The Pakleds spent the entirety of Lower Decks season 2 trying to get their hands on a Varuvian Bomb, only to blow up a bomb on their own planet. Turns out they just wanted to frame the Federation in hopes of getting a more resource-rich planet, but it would take a covert ops team including Tuvok and Morgan Bateson to figure that out.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "rebner-varuvian-bomb",
+      "heading": "Varuvian Bomb (Cargo) (Dev Cost: 5 Dilithium OR free if you have 1+ Away Teams on Karzill VI )",
+      "snippet": "With the Attack and Weapon traits, the Varuvian Bomb forces your opponent to take an Incident. You log a controlled Location, gaining one Military, and another Military for every skill icon the logged Location has. Then, you either discard a card with the Shady trait or log Varuvian Bomb. To be honest, I’ve usually logged it, because I usually max out the Military track by the time this card is in play. However,",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "red-alert": [
    {
     "guide": "encounters-incidents.html",
@@ -13376,6 +15188,20 @@
       "heading": "Ally Deck",
       "snippet": "To Boldly Go: The Kaelon II Science Ministry can be useful if you’re willing to log Person/Directive cards, and Kirk’s as willing if not more than most Captains. Orion Syndicate is great for Kirk due to his massive fleet of deck ships, and it’ll fuel your Latinum production which you need pretty badly. I like Red Squadron for Kirk about as much as everyone else, and the more I play the more I enjoy the ability to",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Red Squadron isn’t anything special, and will be a card draw card exclusively.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -13632,6 +15458,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The R.I.S. Talvath is a fine option for the Scientist trait, and is a good way to get some Dilithium.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -13720,6 +15560,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Riva isn’t a great card for Rebner unless you want to rush the endgame by logging Attack cards. He’s not worth points but can get you Glory.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-persons.html",
     "count": 1,
     "hits": [
@@ -13773,6 +15627,20 @@
       "anchor": "person-deck",
       "heading": "Person Deck",
       "snippet": "Sakonna actually can work well for Archer, especially if you’ve gotten the Xindi-Reptilian Battleship and you have a lot of weapons out and about.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Sakonna is fine for Rebner, and will be even better once everybody starts playing with the Badlands.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -13848,6 +15716,20 @@
       "heading": "Ally Deck",
       "snippet": "To Boldly Go: The Kaelon II Science Ministry can be useful if you’re willing to log Person/Directive cards, and Kirk’s as willing if not more than most Captains. Orion Syndicate is great for Kirk due to his massive fleet of deck ships, and it’ll fuel your Latinum production which you need pretty badly. I like Red Squadron for Kirk about as much as everyone else, and the more I play the more I enjoy the ability to",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Salt Vampires is pretty great, but you can’t afford to log your Helmets so it may only be in play once before self-logging.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -13954,6 +15836,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Sarina Douglas isn’t bad for Rebner, as wild traits and Incident management are both really great for him.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "saurian-brandy": [
@@ -14016,6 +15912,20 @@
       "heading": "Person Deck",
       "snippet": "Core Set: Ambassador Kamrag lets Kirk scan for some more Klingons, which is helpful as a potential completion route for The Undiscovered Country along with the Captain Reaction benefit. Kirk should have a decent number of Person cards to benefit from Joret Dal. Captain Dorg feels like he should be helpful, but without Weapon cards, he loses some of his bite. B-4 can help you there with getting Cargo, but is",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Saurian Brandy is worth avoiding because you have other ways to gain Person cards.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -14696,6 +16606,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Sela: A worthy Neutral Zone fight, I’d suggest that rushing this matchup usually works to your advantage. You’ll be able to make use of your Clumpships to force logging of Sela’s ships, just get some weapon cards and make her regret having a fleet. Don’t let her get deep into those developments.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "shran.html",
     "count": 1,
     "hits": [
@@ -14936,6 +16860,20 @@
       "heading": "Starting Hand Strategies",
       "snippet": "Koloth's start very much depends on what Kahless chooses to bless you with in any particular moment. Let's start with the highest risk/reward play for Koloth, and that's Good Day to Die. If you have Good Day to Die and the I.K.S. Klothos in your starting hand, you can deploy the Klothos and play Good Day to Die to log Klothos, dismiss the Gr'oth, and gain your choice of the top two Encounters. Most of the encounters",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Sha Ka Ree is pretty great for Rebner as he has ships to spare.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -15455,6 +17393,20 @@
       "snippet": "Another card which requires discarding an Andorian to use, it is a free-play card which is great. You also gain a glory, which is great. And if they have a duty officer, it forces them to dismiss one of them. I’ve had lots of times when this didn’t apply, at least against the bot, but it’s a dangerous weapon early on against a two-person opponent.",
       "truncated": false,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Shran: Shran will mess with your Duty Officers using his Ushaan-Tor, which will be annoying. If you can find a way with weapons to defend against that, it’s helpful to do so. Speaking of weapons, you’re going to be fighting for every Cargo, so try to Junk what you can (when not using the Badlands) and keep him from weapon cards that you want for yourself. You still have a Ship advantage, so use it to dominate the",
+      "truncated": true,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -16162,6 +18114,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Soji Asha gives me pause because she doesn’t score points, but getting the Borg Probe is great for beaming and she can really help thin the deck.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "solum": [
@@ -16246,6 +18212,20 @@
       "heading": "Notable Market Cards",
       "snippet": "There really aren't that many bad ships with Koloth. While you might not score high for the Enterprise C or the Pasteur, their abilities benefit you significantly like most other captains. The Son'a Battlecruiser and D'Kty Cruiser and Xindi-Reptilian Battleship all have synergies with Koloth and the Military track or scoring. Even getting Holographic Drone Ship just to beam it and use it for your second mission",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The Son’a Battlecruiser has a six Military requirement which is no issue for Rebner, and should be obtained when it is possible.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -16690,6 +18670,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "to-boldly-go",
+      "heading": "To Boldly Go",
+      "snippet": "Soval: Soval’s playing a different game than you, in many respects. He’s going to be draining the Encounter deck, and you can only dream of one. He’s also able to get through his Developments rather quickly, if he wants to. Try to lull a Soval player into a false sense of security, then freak them out by taking as much Glory as you can in a short period of time. You’re looking for them to commit to a long game, then",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "tbg-persons.html",
     "count": 1,
     "hits": [
@@ -17002,6 +18996,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Species 10-C is fine, and Rebner may be able to make use of logging locations that he would normally just be stuck with.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -17062,6 +19070,20 @@
       "heading": "Encounters",
       "snippet": "To Boldly Go: Delphic Expanse Sphere is good for sending away teams to controlled locations to set up Strange New Worlds. Gomtuu is amazing for Kirk because it counts as an Encounter on a Ship by itself, meaning you only need to beam one more Encounter here to complete Kirk’s mission. New Federation Applicants is fine for Incident management and card draw, and the wild focus offers some good flexibility for scoring.",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Stone of Gol is a pretty strong card for Rebner, especially if there’s some junked Attacks that he can make use of (several cards with Military focus scoring have the Attack trait).",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -17200,6 +19222,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Su’kal is universally helpful.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -17294,6 +19330,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Suliban are a strong maybe, and they won’t score for their Influence focus, , so I’d avoid them in most cases. Nevertheless you can use them for Time Travel shenanigans, so I wouldn’t rule it out entirely.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -17341,6 +19391,28 @@
       "snippet": "Sehlat is a Vulcan native creature — a kind of Vulcan sabre-tooth bear — that also appears in Enterprise. I like the Creature tag and the fact that this card has no action costs. There are three different actions here, the first being finding a Vulcan and forcing your opponent to discard a Person card. Pretty useful. The second is a Vulcan free-play, which is also useful if you have one. Finally, you can promote a",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Deciding whether to get Tachyon Detection Grid is really more a question about the Captain Rebner’s facing, but unfortunately there’s Influence focus scoring making it less desirable.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Sisko: Sisko is a decent Neutral Zone matchup, and the Defiant’s Attack gives you a reason to get Tachyon Detection Grid, despite it not scoring for Influence focus. Still, you can put the pressure on Sisko to advance through his developments, while not giving him time to advance on his tracks. Fight for those Military Focus scoring cards and try to make him split his focus on too many objectives.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -17690,6 +19762,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Tellarites are good but nothing uniquely special.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -17828,6 +19914,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Thelev isn’t that amazing but if you have an Ambassador card and if your opponents have some Ambassadors then it’s worth the card draw and focus scoring.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "tholians": [
@@ -17930,6 +20030,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Tholians are pretty great for everyone, but Rebner needs those resources and won’t be logging too many planets (no Strange New Worlds and only a Varuvian Bomb) so you’ll get a decent amount of resources when you pull the trigger on them.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -18014,6 +20128,20 @@
       "heading": "Person Deck",
       "snippet": "To Boldly Go : Admiral Jarok is good for a Development but Kirk has enough attacks that I would avoid promoting him. Ambassador Gral is a great choice simply for Incident management and a “controlled” Burn win. Ash Tyler triggers Kirk’s Reaction and you might be able to use him for hand size, but you won’t have a situation with more Klingons than Starfleet. Hoshi Sato can be really helpful in searching for Vulcans",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Travis Mayweather seems good until you realize that you really can’t afford to exhaust Rebner and your economy isn’t good enough to constantly spend Dilithium.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -18142,6 +20270,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Tribbles isn’t really worth it Rebner at all.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -18236,6 +20378,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Type III Disruptor Pistols are fine, especially if you have the traits necessary to remove opponent Away Teams (a thematic team-up with Captain Dorg should supply the opportunity).",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "unimatrix-zero": [
@@ -18276,6 +20432,20 @@
       "heading": "Ally Deck",
       "snippet": "To Boldly Go: The Kaelon II Science Ministry can be useful if you’re willing to log Person/Directive cards, and Kirk’s as willing if not more than most Captains. Orion Syndicate is great for Kirk due to his massive fleet of deck ships, and it’ll fuel your Latinum production which you need pretty badly. I like Red Squadron for Kirk about as much as everyone else, and the more I play the more I enjoy the ability to",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Unimatrix Zero is worth avoiding, as you won’t get much from them and won’t score.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -18378,6 +20548,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Universal Translator is probably not the way you’re getting another Encounter, but you might benefit from the Communication trait.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -18472,6 +20656,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Unstable Wormhole isn’t great for Rebner, so I take back what I’ve been saying about it being great for everyone.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "sela.html",
     "count": 1,
     "hits": [
@@ -18540,6 +20738,28 @@
       "heading": "Notable Market Cards",
       "snippet": "There really aren't that many bad ships with Koloth. While you might not score high for the Enterprise C or the Pasteur, their abilities benefit you significantly like most other captains. The Son'a Battlecruiser and D'Kty Cruiser and Xindi-Reptilian Battleship all have synergies with Koloth and the Military track or scoring. Even getting Holographic Drone Ship just to beam it and use it for your second mission",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "U.S.S. Enterprise-C has the same utility for everyone else, just with no scoring. It’s probably worth avoiding unless you fear a blind draw from the top of the deck.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "U.S.S. Enterprise-C has the same utility for everyone else, just with no scoring. It’s probably worth avoiding unless you fear a blind draw from the top of the deck.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -18686,6 +20906,38 @@
     ]
    }
   ],
+  "uss-pasteur": [
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The U.S.S. Pasteur is fine for its Communication trait and Scanning Play Action, but no scoring makes it a tough one to reliably recommend.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "uss-reliant": [
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The U.S.S. Reliant is probably not worth it because it’s a completely generic ship without the second play action that Rebner will never meet the Influence requirement for.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "vaal-trask": [
    {
     "guide": "archer.html",
@@ -18710,6 +20962,20 @@
       "heading": "Person Deck",
       "snippet": "To Boldly Go: You're looking for Klingons and Starfleet cards in the person deck, so Ash Tyler is an excellent (and moderately thematic) choice that may even allow you to use both of his abilities throughout the game (depending on whether you have more Starfleet or Klingons). Lursa is the only other Klingon Person, but she’s got such a great ability you might even be able to log Analyze and just rely on her to get",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Va’al Trask is fantastic for Rebner in almost every way, including scanning for Weapon cards, logging Person cards, his Military Skills, and his Weapon trait.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -18754,6 +21020,20 @@
       "heading": "Ally Deck",
       "snippet": "To Boldly Go: The Kaelon II Science Ministry can be useful if you’re willing to log Person/Directive cards, and Kirk’s as willing if not more than most Captains. Orion Syndicate is great for Kirk due to his massive fleet of deck ships, and it’ll fuel your Latinum production which you need pretty badly. I like Red Squadron for Kirk about as much as everyone else, and the more I play the more I enjoy the ability to",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Vadic’s Splinter Group might make sense, even if it’s just for the points.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -18876,6 +21156,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "V’Ger, Koala and the Guardian of Forever nearly always have general applicability, though Guardian is a little weaker for Rebner.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -18950,6 +21244,20 @@
       "heading": "Missions",
       "snippet": "Georgiou’s Advanced side gives you three points for Call in the Reinforcements. Her second mission is Hardly a Negotiation, which requires three non-Starfleet Person cards on the same ship, and at least one of each skill track. The second part of that isn’t hard with Utilize and other random abilities, but you’ll need to intentionally gain person cards to get this one done. It rewards you with three points, a",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Vice Admiral Pasalk is quite good for Rebner as Duty Officer because Rebner has two Ongoing cards in play constantly.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -19034,6 +21342,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Vidiians is a surprisingly good card for you, as it is for everyone.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "vorcha-attack-cruiser": [
@@ -19074,6 +21396,20 @@
       "heading": "Ship Deck",
       "snippet": "To Boldly Go: D’Kora Marauder will really only benefit Kirk if he can get a Latinum engine going, and his kit isn’t really designed for that. Medusan Vessel is nice for gaining some more Telepaths but I’m not sure Kirk benefits from it uniquely except for the Alien trait. D’Var has the free play deploy, but beyond that its pretty standard for Kirk. Vor’Cha Attack Cruiser is great, because Kirk always wants Klingons",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Vor’Cha Attack Cruiser is worth considering for the Away Team utility.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -19188,6 +21524,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Voth Research Vessel isn’t a bad ship. You can even get the Encounter from it with just one Human Person to beam there (and you wouldn’t want to give that to your opponent).",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -19262,6 +21612,20 @@
     ]
    },
    {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Xindi-Aquatic Cruiser isn’t as helpful as it is for most captains due to the Influence Skills and heavy warp costs.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -19315,6 +21679,20 @@
       "anchor": "person-deck",
       "heading": "Person Deck",
       "snippet": "Zephram (Zefram) Cochrane is always great for card draw, and Archer’s deck is so small to start that an early Cochrane can be really good for your cycle-game. His Encounter is achievable but Dilithium is scarce.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Zefram Cochrane is a pretty good choice for Rebner, not just because you need some other ways to get Encounters, but also because you’ll have plenty of Ships to put in your Staging Area, and alternatively three card draw and the Engineer trait help you as well.",
       "truncated": false,
       "mode": "text",
       "lore": false
