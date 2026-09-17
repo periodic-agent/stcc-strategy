@@ -28,6 +28,7 @@
  },
  "deck_prefix_by_guide": {
   "picard.html": "picard",
+    "rebner.html": "rebner",
   "sisko.html": "sisko",
   "koloth.html": "koloth",
   "sela.html": "sela",
@@ -55,6 +56,7 @@
   "kirk.html": "Kirk guide",
   "koloth.html": "Koloth guide",
   "picard.html": "Picard guide",
+    "rebner.html": "Rebner guide",
   "sela.html": "Sela guide",
   "shran.html": "Shran guide",
   "sisko.html": "Sisko guide",
