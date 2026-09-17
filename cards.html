@@ -510,6 +510,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .vt-regular{background:#79b3c7;}
 .vt-other{background:#c85340;}
 .vt-variable{background:#f6c9bd;color:#141821;}
+.ce-face{position:relative;display:flex;flex-direction:column;}
 .focorner{position:absolute;right:-3px;bottom:-3px;height:43px;width:auto;z-index:2;}
 .card-entry.has-focus .ce-traits2{margin-bottom:46px;}
 .glorybadge{position:absolute;right:5px;bottom:3px;width:33px;height:30px;z-index:2;}
@@ -2122,13 +2123,13 @@ function buildPillCard(c, opts){
       +(errMark?' <span class="meta errata" title="'+errataLine(markEntries(c)[0])+'">&lt;!&gt; Errata</span>':'')+'</span>'
       +(posin?'<span class="posin">'+posin+'</span>':'')+'</div></div>';
   }
-  el.innerHTML='<div class="ce-row"><div class="ce-main">'
+  el.innerHTML='<div class="ce-face"><div class="ce-row"><div class="ce-main">'
     +'<div class="nb" style="background:'+col+'">'+c.name+'</div>'
     +'<div class="sb" style="background:'+col+'">'+sIcon+c.suit+'</div>'
     +awayHTML
     +(skillsHTML?'<div class="skcol">'+skillsHTML+'</div>':'')
     +'</div><div class="ce-traits2">'+vt+'</div></div>'
-    +stripHTML+numline+deckMultHTML(c)+corner;
+    +stripHTML+numline+corner+'</div>'+deckMultHTML(c);
   return el;
 }
 
