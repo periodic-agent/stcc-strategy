@@ -27,33 +27,58 @@ body.theme-sc{
 body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:var(--text);line-height:1.75;font-size:1rem;}
 p{margin-bottom:1rem;}
 s{text-decoration:line-through;opacity:0.6;}
-h2{font-family:'Orbitron',sans-serif;font-size:1rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent2);border-left:3px solid var(--accent);padding-left:0.75rem;margin:2.5rem 0 1rem;}
-h3{font-family:'Orbitron',sans-serif;font-size:0.8rem;font-weight:400;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;margin:1.75rem 0 0.5rem;}
-body.theme-tbg h3,body.theme-sc h3{font-size:0.85rem;font-weight:700;margin:2rem 0 0.75rem;}
+h2{font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent2);border-left:3px solid var(--accent);padding-left:0.75rem;margin:2.5rem 0 1rem;}
+h3{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:500;letter-spacing:0.1em;color:var(--gold);text-transform:uppercase;margin:1.75rem 0 0.5rem;}
+body.theme-tbg h3,body.theme-sc h3{font-size:1.05rem;font-weight:600;margin:2rem 0 0.75rem;}
 
-.nav-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:0.75rem 1.5rem;}
-.nav-bar a{font-family:'Orbitron',sans-serif;font-size:0.65rem;letter-spacing:0.15em;color:var(--ui);text-decoration:none;text-transform:uppercase;}
-.back-top{display:block;text-align:right;font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-top:0.25rem;margin-bottom:0.5rem;}
+/* Nav link sits inside the chapter header (top-left) rather than in its own band. */
+body{position:relative;}
+.nav-bar{background:var(--bg);border-top:1px solid var(--border);padding:0.75rem 1.5rem;}
+#top.nav-bar{position:absolute;top:0;left:0;z-index:2;background:none;border:0;padding:0.7rem 1.25rem;}
+.nav-bar a{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:0.1em;color:var(--ui);text-decoration:none;text-transform:uppercase;opacity:0.85;}
+.nav-bar a:hover{opacity:1;}
+.back-top{display:block;text-align:right;font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-top:0.25rem;margin-bottom:0.5rem;}
 .back-top:hover{color:var(--ui);}
 
-.chapter-header{background:linear-gradient(135deg,var(--hdr-edge) 0%,var(--hdr-mid) 50%,var(--hdr-edge) 100%);border-bottom:2px solid var(--accent);padding:3rem 2rem 2rem;text-align:center;position:relative;overflow:hidden;}
-.chapter-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(var(--accent-rgb),0.03) 60px,rgba(var(--accent-rgb),0.03) 61px);}
-.chapter-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.25em;color:var(--accent);text-transform:uppercase;margin-bottom:0.75rem;}
-.chapter-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.6rem,5vw,2.8rem);font-weight:700;color:#fff;letter-spacing:0.05em;text-shadow:0 0 40px rgba(var(--accent-rgb),var(--title-glow));}
+/* Chapter header: same language as the index hero and Card Scanner banner; box colour kept via --hdr-* and --accent. */
+.chapter-header{background:linear-gradient(135deg,var(--hdr-edge) 0%,var(--hdr-mid) 50%,var(--hdr-edge) 100%);border-bottom:2px solid var(--accent);padding:2.3rem 2rem 1.3rem;text-align:center;position:relative;}
+.chapter-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:0.22em;color:var(--accent);text-transform:uppercase;margin-bottom:0.15rem;}
+.chapter-title{font-family:'Antonio',sans-serif;font-size:clamp(1.7rem,4.5vw,2.5rem);font-weight:600;color:#fff;letter-spacing:0.09em;text-transform:uppercase;line-height:1.05;}
 .chapter-title span{color:var(--accent2);}
-.chapter-meta{margin-top:1rem;font-size:0.8rem;color:var(--muted);letter-spacing:0.1em;}
+.chapter-meta{display:inline;margin-top:0;font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:0.92rem;letter-spacing:0.04em;color:#9fb0c8;}
 .chapter-meta a{color:var(--accent2);text-decoration:none;}
-.chapter-date{font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;margin-top:0.3rem;}
-.chapter-tags{display:flex;justify-content:center;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;}
-.tag{font-family:'Orbitron',sans-serif;font-size:0.6rem;letter-spacing:0.1em;padding:0.2rem 0.6rem;border:1px solid var(--accent);color:var(--ui);border-radius:2px;}
+.chapter-date{display:inline;font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:0.92rem;letter-spacing:0.04em;color:var(--muted);}
+.chapter-date::before{content:'\00b7';margin:0 0.5rem;color:var(--muted);}
+.chapter-meta,.chapter-date{margin-top:0.45rem;}
+.chapter-tags{display:flex;justify-content:center;gap:0.4rem;margin-top:0.6rem;flex-wrap:wrap;}
+.tag{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.1rem 0.55rem;border:1px solid var(--accent);color:var(--ui);border-radius:2px;line-height:1.5;}
+@media (max-width:620px){.chapter-header{padding:3rem 1rem 1.1rem;}#top.nav-bar{padding:0.6rem 1rem;}#top.nav-bar a{font-size:0.72rem;}.chapter-meta,.chapter-date{display:block;}.chapter-date::before{content:none;}}
+
+/* Captain spec row: traits (species, then regular), focus if any, McCue's complexity rating. Icons from the Card Scanner asset set. */
+.chapter-spec{display:flex;justify-content:center;align-items:center;gap:0.45rem;margin-top:0.7rem;flex-wrap:wrap;}
+.chip{display:inline-flex;align-items:center;gap:0.35rem;height:24px;font-family:'Antonio',sans-serif;font-weight:600;font-size:0.88rem;letter-spacing:0.04em;text-transform:uppercase;padding:0 0.6rem 0 0.15rem;border-radius:999px;border:1.5px solid var(--cc);color:var(--cc);background:rgba(0,0,0,0.25);line-height:1;}
+.chip img{height:20px;width:20px;}
+.chip-species{--cc:#e2a04a;}
+.chip-regular{--cc:#79b3c7;}
+.chip-focus{--cc:#f0b323;flex-direction:row-reverse;padding:0 0.1rem 0 0.65rem;}
+.chip-focus img{height:22px;width:auto;}
+.chip-cx{--cc:var(--accent);padding-left:0.6rem;gap:0.5rem;color:var(--accent2);}
+.chip-cx .cx-lbl{color:var(--muted);}
+.cx-dots{display:inline-flex;gap:3px;}
+.cx-dots i{display:block;width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.12);}
+.cx-dots i.on{background:var(--accent2);}
+.cx-num{color:var(--accent2);}
+.chip-tool{--cc:var(--accent2);background:rgba(var(--accent-rgb),0.14);padding:0 0.55rem 0 0.65rem;text-decoration:none;margin-left:0.35rem;transition:background 0.15s;}
+.chip-tool:hover{background:rgba(var(--accent-rgb),0.32);color:#fff;}
+.chip-tool .arr{margin-left:0.35rem;}
 
 .content{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem;}
 
 .toc-grid{max-width:860px;margin:1.5rem auto 0;padding:0 1.5rem;}
-.toc-grid-label{font-family:'Orbitron',sans-serif;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem;}
+.toc-grid-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.93rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem;}
 .toc-cards{display:flex;flex-wrap:wrap;gap:0.4rem;}
 .toc-list{max-width:860px;margin:1.5rem auto 0;padding:0 1.5rem;}
-.toc-list-label{font-family:'Orbitron',sans-serif;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem;}
+.toc-list-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.93rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem;}
 .toc-list ol{list-style:none;display:flex;flex-wrap:wrap;gap:0.3rem 1.5rem;padding:0 0 0 1rem;margin:0;border-left:2px solid var(--border);}
 .toc-list li{font-size:0.8rem;}
 .toc-list a{color:var(--accent2);text-decoration:none;}
@@ -72,7 +97,7 @@ body.theme-tbg h3,body.theme-sc h3{font-size:0.85rem;font-weight:700;margin:2rem
 .board-pair{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.25rem 0;}
 .board-pair img{width:100%;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;transition:transform 0.2s,box-shadow 0.2s;}
 .board-pair img:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 12px 30px rgba(var(--accent-rgb),0.3);border-color:var(--accent);}
-.board-label{font-family:'Orbitron',sans-serif;font-size:0.55rem;letter-spacing:0.15em;color:var(--muted);text-align:center;margin-top:0.4rem;text-transform:uppercase;}
+.board-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.69rem;letter-spacing:0.15em;color:var(--muted);text-align:center;margin-top:0.4rem;text-transform:uppercase;}
 .img-pair{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0 1.5rem;}
 .img-pair img{width:100%;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;transition:transform 0.2s,box-shadow 0.2s;}
 .img-pair img:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(var(--accent-rgb),0.25);border-color:var(--accent);}
@@ -95,7 +120,7 @@ body.theme-tbg h3,body.theme-sc h3{font-size:0.85rem;font-weight:700;margin:2rem
 .yt-thumb img{width:100%;display:block;}
 .yt-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#fff;text-shadow:0 0 12px rgba(0,0,0,0.8);opacity:0.85;}
 .yt-card:hover .yt-play{opacity:1;}
-.yt-label{font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.08em;color:var(--text);padding:0.6rem 0.75rem 0.2rem;}
+.yt-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.18rem;letter-spacing:0.08em;color:var(--text);padding:0.6rem 0.75rem 0.2rem;}
 .yt-sub{font-size:0.72rem;color:var(--muted);padding:0 0.75rem 0.75rem;}
 
 footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:0.75rem;color:var(--muted);line-height:1.8;}
