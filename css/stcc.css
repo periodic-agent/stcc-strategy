@@ -60,7 +60,10 @@ body{position:relative;}
 .chip img{height:20px;width:20px;}
 .chip-species{--cc:#e2a04a;}
 .chip-regular{--cc:#79b3c7;}
-.chip-focus{--cc:#f0b323;flex-direction:row-reverse;padding:0 0.1rem 0 0.65rem;}
+.chip-focus{--cc:#e8d44a;padding:0 0.1rem 0 0.65rem;}
+.chip-focus.fx-research{--cc:#5cb4e4;}
+.chip-focus.fx-military{--cc:#e05a5a;}
+.chip-focus.fx-influence{--cc:#e8d44a;}
 .chip-focus img{height:22px;width:auto;}
 .chip-cx{--cc:var(--accent);padding-left:0.6rem;gap:0.5rem;color:var(--accent2);}
 .chip-cx .cx-lbl{color:var(--muted);}
