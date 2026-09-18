@@ -146,11 +146,9 @@ a{color:var(--blue);text-decoration:none;}
 .box-pill[data-box="2nd"]{border-color:#c8a84b;color:#c8a84b;}
 .box-pill[data-box="2nd"]:hover{border-color:#e8c96a;color:#e8c96a;}
 .box-pill[data-box="2nd"].active{background:#c8a84b;border-color:#c8a84b;color:#000;font-weight:600;}
-/* Promos: an extra source of cards, off by default, styled as the outsider it is */
 .box-pill[data-box="promo"]{border-color:#7a8aaa;border-style:dashed;color:#9aa8bc;margin-left:0.35rem;}
 .box-pill[data-box="promo"]:hover{border-color:#a8b4c8;color:#c8d2e0;}
 .box-pill[data-box="promo"].active{background:#7a8aaa;border-color:#7a8aaa;border-style:solid;color:#0a0e1a;font-weight:600;}
-/* Automated Command mode: the card-only filter rows do not apply to the faces */
 body.bot-mode #suitFilters,body.bot-mode #speciesBody,body.bot-mode #regularBody,body.bot-mode #otherBody,
 body.bot-mode #skillsBody,body.bot-mode #focusBody,body.bot-mode #stripBody,body.bot-mode #statusBody{opacity:.35;pointer-events:none;}
 
@@ -1112,8 +1110,6 @@ function statusToggle(k){
   const was=d.on();
   let toks=tokenList(currentQuery()).filter(t=>!d.re.test(t));
   if(k==='dupes'){
-    // A reprint carrying new text is badged 'update', never 'duplicate', so Duplicate
-    // alone hides the very cards people click it to see. The two words travel together.
     const u=STATUS_PILLS.find(x=>x.k==='update');
     const negated=toks.some(t=>t.charAt(0)==='-'&&u.re.test(t));
     toks=toks.filter(t=>t.charAt(0)==='-'||!u.re.test(t));
@@ -1412,8 +1408,6 @@ function buildQueryVocab(){
 
 function applyQuery(text){
   const q=parseQuery(text,QUERY_VOCAB);
-  // A bare search term pulls the three main boxes in; a mode token or the promo pill alone
-  // does not (box:promo on its own shows the promo packs and nothing else).
   const asked=tokenList(String(text||'')).some(t=>!/^-?(dupes|sort|bots?|promos?|view|box:promos?[12]?)(:|$)/i.test(t));
   viewMode = q.view || 'image';
   activeBoxes=new Set(q.boxes.length?q.boxes.filter(b=>DEFAULT_BOXES.includes(b)):(asked?DEFAULT_BOXES:[]));
@@ -2044,9 +2038,6 @@ function botMatches(bot){
   return true;
 }
 
-// Automated Command mode: every captain of the selected boxes, narrowed by the captain
-// pills when any are active. Card filters (suit, traits, skills, strips, status) do not
-// apply to the faces; text: does.
 function botsForDeck(deck){
   if(!showBots) return [];
   if(!activeBoxes.has(DECK_BOX[deck])) return [];
@@ -2259,7 +2250,6 @@ boxDefs.forEach(({id,label})=>{
   p.onclick=()=>{ const t=new Set(activeBoxes); if(t.has(id)) t.delete(id); else t.add(id); setBoxTokens([...t]); };
   boxContainer.appendChild(p);
 });
-// Promos close the row: an extra source, toggled on its own token, never part of All.
 {
   const p=document.createElement('span');
   p.className='box-pill'; p.dataset.box='promo'; p.textContent='Promos';

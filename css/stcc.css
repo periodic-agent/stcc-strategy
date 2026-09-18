@@ -31,7 +31,6 @@ h2{font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:600;le
 h3{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:500;letter-spacing:0.1em;color:var(--gold);text-transform:uppercase;margin:1.75rem 0 0.5rem;}
 body.theme-tbg h3,body.theme-sc h3{font-size:1.05rem;font-weight:600;margin:2rem 0 0.75rem;}
 
-/* Nav link sits inside the chapter header (top-left) rather than in its own band. */
 body{position:relative;}
 .nav-bar{background:var(--bg);border-top:1px solid var(--border);padding:0.75rem 1.5rem;}
 #top.nav-bar{position:absolute;top:0;left:0;z-index:2;background:none;border:0;padding:0.7rem 1.25rem;}
@@ -40,7 +39,6 @@ body{position:relative;}
 .back-top{display:block;text-align:right;font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-top:0.25rem;margin-bottom:0.5rem;}
 .back-top:hover{color:var(--ui);}
 
-/* Chapter header: same language as the index hero and Card Scanner banner; box colour kept via --hdr-* and --accent. */
 .chapter-header{background:linear-gradient(135deg,var(--hdr-edge) 0%,var(--hdr-mid) 50%,var(--hdr-edge) 100%);border-bottom:2px solid var(--accent);padding:2.3rem 2rem 1.3rem;text-align:center;position:relative;}
 .chapter-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:0.22em;color:var(--accent);text-transform:uppercase;margin-bottom:0.15rem;}
 .chapter-title{font-family:'Antonio',sans-serif;font-size:clamp(1.7rem,4.5vw,2.5rem);font-weight:600;color:#fff;letter-spacing:0.09em;text-transform:uppercase;line-height:1.05;}
@@ -54,7 +52,6 @@ body{position:relative;}
 .tag{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.1rem 0.55rem;border:1px solid var(--accent);color:var(--ui);border-radius:2px;line-height:1.5;}
 @media (max-width:620px){.chapter-header{padding:3rem 1rem 1.1rem;}#top.nav-bar{padding:0.6rem 1rem;}#top.nav-bar a{font-size:0.72rem;}.chapter-meta,.chapter-date{display:block;}.chapter-date::before{content:none;}}
 
-/* Captain spec row: traits (species, then regular), focus if any, McCue's complexity rating. Icons from the Card Scanner asset set. */
 .chapter-spec{display:flex;justify-content:center;align-items:center;gap:0.45rem;margin-top:0.7rem;flex-wrap:wrap;}
 .chip{display:inline-flex;align-items:center;gap:0.35rem;height:24px;font-family:'Antonio',sans-serif;font-weight:600;font-size:0.88rem;letter-spacing:0.04em;text-transform:uppercase;padding:0 0.6rem 0 0.15rem;border-radius:999px;border:1.5px solid var(--cc);color:var(--cc);background:rgba(0,0,0,0.25);line-height:1;}
 .chip img{height:20px;width:20px;}
