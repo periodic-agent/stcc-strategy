@@ -71,6 +71,15 @@ body{position:relative;}
 .cx-dots i{display:block;width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.12);}
 .cx-dots i.on{background:var(--accent2);}
 .cx-num{color:var(--accent2);}
+.chip-suit{background:var(--cc);border-color:var(--cc);color:#fff;padding:0 0.65rem 0 0.45rem;gap:0.4rem;}
+.chip-suit img{height:14px;width:auto;}
+.chip-suit.suit-person{--cc:#b89c2c;}
+.chip-suit.suit-ally{--cc:#9b6ecf;}
+.chip-suit.suit-ship{--cc:#7a8aaa;}
+.chip-suit.suit-cargo{--cc:#3a6aaa;}
+.chip-suit.suit-location{--cc:#2e9e6a;}
+.chip-suit.suit-encounter{--cc:#d4699f;}
+.chip-suit.suit-incident{--cc:#e05a5a;}
 .chip-tool{--cc:var(--accent2);background:rgba(var(--accent-rgb),0.14);padding:0 0.55rem 0 0.65rem;text-decoration:none;margin-left:0.35rem;transition:background 0.15s;}
 .chip-tool:hover{background:rgba(var(--accent-rgb),0.32);color:#fff;}
 .chip-tool .arr{margin-left:0.35rem;}
