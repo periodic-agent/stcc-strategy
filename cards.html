@@ -230,8 +230,6 @@ body.bot-mode #skillsBody,body.bot-mode #focusBody,body.bot-mode #stripBody,body
 .collapsible-body.open{display:block;}
 
 .results-bar{max-width:1100px;margin:0.5rem auto 0;padding:0 1.5rem 0.5rem;display:flex;align-items:center;}
-.result-count{font-family:'Orbitron',sans-serif;font-size:0.69rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);}
-.result-count span{color:var(--blue2);}
 
 .deck-groups{max-width:1100px;margin:0 auto;padding:0 1.5rem 3rem;}
 .deck-group{margin-bottom:1.5rem;}
@@ -481,6 +479,8 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .skill-pill .cnt{font-size:0.69rem;font-weight:400;opacity:.75;margin-left:.35rem;display:inline-block;text-align:left;}
 .skill-pill img{height:15px;width:auto;vertical-align:0;margin-left:.35rem;margin-right:.35rem;}
 .skill-pill img.skb{height:19px;margin-left:0;margin-right:.4rem;}
+.skill-pill img.fxi{height:19px;order:2;margin-left:.4rem;margin-right:-.55rem;}
+.skill-pill img.fxi + .lbl{padding-left:.55rem;}
 .card-grid{grid-template-columns:repeat(auto-fill,minmax(248px,1fr));}
 .card-entry{border-radius:10px;}
 .nb{display:flex;align-items:center;width:fit-content;margin-left:-0.7rem;max-width:calc(100% + .2rem);
@@ -608,7 +608,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .active-summary,.qh-note,.strip-note,footer,.deck-count{
   font-family:'Exo 2',sans-serif;font-weight:400;font-size:.72rem;letter-spacing:0;font-style:normal;}
 .query-help code{font-size:.75rem;}
-.nav-bar a,.filter-label,.deck-group-header,.qh-title,.result-count,.pill-sublabel{
+.nav-bar a,.filter-label,.deck-group-header,.qh-title,.pill-sublabel{
   font-family:'Orbitron',sans-serif;font-weight:400;font-size:.6875rem;letter-spacing:.12em;}
 .vtoggle,.clear-btn{font-family:'Antonio',sans-serif;font-weight:600;font-size:.8rem;letter-spacing:.04em;
   border-radius:999px;height:22px;box-sizing:border-box;display:inline-flex;align-items:center;padding:0 .8rem;}
@@ -810,7 +810,6 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 </div>
 
 <div class="results-bar">
-  <div class="result-count" hidden><span id="distinctDisplay">0</span> distinct cards<span id="copiesExtra"></span></div>
   <span class="search-count" id="searchCount"></span>
   <label class="dupes-toggle"><input type="checkbox" id="sortNum" onchange="setSortNum(this.checked)"> Sort by card number</label>
 </div>
@@ -1441,11 +1440,6 @@ function applyQuery(text){
 }
 
 function currentQuery(){ return document.getElementById('searchInput').value||''; }
-function setDupes(on){
-  const toks=tokenList(currentQuery()).filter(t=>!/^-?dupes:/i.test(t));
-  if(!on) toks.push('dupes:off');
-  setQuery(toks.join(' '));
-}
 function setSortNum(on){
   const toks=tokenList(currentQuery()).filter(t=>!/^-?sort:/i.test(t));
   if(on) toks.push('sort:number');
@@ -2192,9 +2186,7 @@ function render(){
     const hdrLabel = deck.startsWith('Common:') ? 'Common ('+({core:"Captain\'s Chair",tbg:"To Boldly Go","2nd":"Second Contact",promo1:"Promo 1",promo2:"Promo 2"}[DECK_BOX[deck]])+')' : deck;
     const printed=matched.filter(c=>!c.virtual);
     const hdrCards=new Set(printed.map(c=>c.id)).size;
-    const hdrPrints=showDupes ? printed.length : printed.reduce((n,c)=>n+(c.copies||1),0);
-    hdr.innerHTML=hdrLabel+(showBots ? '' : ' <span class="deck-count">('+hdrCards+' card'+(hdrCards!==1?'s':'')
-      +' \u00b7 '+hdrPrints+' printing'+(hdrPrints!==1?'s':'')+')</span>');
+    hdr.innerHTML=hdrLabel+(showBots ? '' : ' <span class="deck-count">('+hdrCards+' card'+(hdrCards!==1?'s':'')+')</span>');
     section.appendChild(hdr);
     if(deckBots.length){
       const bg=document.createElement('div');
@@ -2216,15 +2208,12 @@ function render(){
   const shown=showBots ? [] : ALL_CARDS.filter(c=>cardMatches(c)&&!c.virtual);
   const distinct=new Set(shown.map(c=>c.id)).size;
   const printings=showDupes ? shown.length : shown.reduce((n,c)=>n+(c.copies||1),0);
-  document.getElementById('distinctDisplay').textContent=distinct;
   const faces=showBots ? document.querySelectorAll('#deckGroups .botface').length : 0;
   if(showBots) total+=faces;
   document.getElementById('searchCount').innerHTML = showBots
     ? '<b>'+faces+'</b> Automated Command face'+(faces!==1?'s':'')
     : '<b>'+distinct+'</b> card'+(distinct!==1?'s':'')
     +' \u00b7 <b>'+printings+'</b> printing'+(printings!==1?'s':'');
-  const extra=document.getElementById('copiesExtra');
-  extra.textContent = (printings!==distinct) ? ('  ·  '+printings+' printings') : '';
   updateBadges();
   placePosPills();
   if(!total){
