@@ -1110,8 +1110,15 @@ function statusToggle(k){
   const d=STATUS_PILLS.find(x=>x.k===k);
   if(!d) return;
   const was=d.on();
-  const toks=tokenList(currentQuery()).filter(t=>!d.re.test(t));
-  if(!was) toks.push(d.word);
+  let toks=tokenList(currentQuery()).filter(t=>!d.re.test(t));
+  if(k==='dupes'){
+    // A reprint carrying new text is badged 'update', never 'duplicate', so Duplicate
+    // alone hides the very cards people click it to see. The two words travel together.
+    const u=STATUS_PILLS.find(x=>x.k==='update');
+    const negated=toks.some(t=>t.charAt(0)==='-'&&u.re.test(t));
+    toks=toks.filter(t=>t.charAt(0)==='-'||!u.re.test(t));
+    if(!was){ toks.push(d.word); if(!negated) toks.push(u.word); }
+  } else if(!was) toks.push(d.word);
   setQuery(toks.join(' '));
 }
 function tabKinds(c){
