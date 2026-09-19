@@ -1755,8 +1755,10 @@ function sortTraits(list){
              .sort((a,b)=>(traitWeight(a[0])-traitWeight(b[0]))||(a[1]-b[1]))
              .map(p=>p[0]);
 }
+const SPECIES_MARKERS=['any species','different species'];
 function traitFamily(name){
   if(String(name).toLowerCase()==='wildcard') return 'variable';
+  if(SPECIES_MARKERS.includes(String(name).toLowerCase())) return 'species';
   const has=(list,n)=>Array.isArray(list)&&list.some(x=>x.toLowerCase()===n);
   const n=String(name).toLowerCase();
   if(has(allSpecies,n)) return 'species';
