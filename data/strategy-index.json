@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T15:52:04Z",
+ "generated": "2026-09-19T11:58:10Z",
  "generator": "tools/build_strategy_index.py",
  "guide_count": 30,
  "card_count": 477,
@@ -848,7 +848,7 @@
      {
       "anchor": "archer-strength-of-the-soul",
       "heading": "Strength of the Soul (Directive)",
-      "snippet": "Strength of the Soul has two very different Play operations. The first is a free-Play Action that lets you draw a Directive or Encounter from your discard pile. Practically speaking, this could be Analyze (which starts in your discard pile) on turn one, but as the game goes on it has a lot of flexibility in how you might use it to grab Reach Any Star, Faith of the Heart, Founding the Federation, or your standard",
+      "snippet": "Strength of the Soul has two very different Play operations. The first is a free play Action that lets you draw a Directive or Encounter from your discard pile. Practically speaking, this could be Analyze (which starts in your discard pile) on turn one, but as the game goes on it has a lot of flexibility in how you might use it to grab Reach Any Star, Faith of the Heart, Founding the Federation, or your standard",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -992,7 +992,7 @@
      {
       "anchor": "archer-faith-of-the-heart",
       "heading": "Faith of the Heart (Directive)",
-      "snippet": "Two free-Play Actions on this card, the first of which allows you to exhaust Archer to scan for an NX-01 trait card, which for now is limited to the Person deck (I have no information on future NX-01 cards, if any). This is your main way to access Phlox, Hoshi, Mayweather, and Reed. When you gain them, you’ll put them on top of your Reserve deck (reforming a new Reserve deck if you don’t have one anymore).",
+      "snippet": "Two free play Actions on this card, the first of which allows you to exhaust Archer to scan for an NX-01 trait card, which for now is limited to the Person deck (I have no information on future NX-01 cards, if any). This is your main way to access Phlox, Hoshi, Mayweather, and Reed. When you gain them, you’ll put them on top of your Reserve deck (reforming a new Reserve deck if you don’t have one anymore).",
       "truncated": false,
       "mode": "anchor",
       "lore": false
@@ -1030,7 +1030,7 @@
      {
       "anchor": "archer-s-reserve-deck-strategy",
       "heading": "Archer’s Reserve Deck Strategy",
-      "snippet": "After that the order is completely random, as always, but I have some things I’m at least hoping for (and can try to manipulate thanks to the second free Play Action on Faith of the Heart). I think any Archer game where Inspire comes out first is a good sign. Not only do you get some card draw, but so many of your Reserve crew have specialty restrictions, and it’s good to be able to capitalize on your skills gained",
+      "snippet": "After that the order is completely random, as always, but I have some things I’m at least hoping for (and can try to manipulate thanks to the second free play Action on Faith of the Heart). I think any Archer game where Inspire comes out first is a good sign. Not only do you get some card draw, but so many of your Reserve crew have specialty restrictions, and it’s good to be able to capitalize on your skills gained",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -1212,7 +1212,7 @@
      {
       "anchor": "archer-major-hayes-maco",
       "heading": "Major Hayes, MACO (Person)",
-      "snippet": "Major Hayes has a thematic Military skill, as well as the Human, Attack, and Weapon traits. He has the consistent benefit of allowing you to send an Away Team to a Location as a Play Action, but also has a free Play Action that lets you log a card (hand or discard) to gain all resources from a market card, then junk a card in the market. Playing against captains like Burnham, you can see how this can be an advantage",
+      "snippet": "Major Hayes has a thematic Military skill, as well as the Human, Attack, and Weapon traits. He has the consistent benefit of allowing you to send an Away Team to a Location as a Play Action, but also has a free play Action that lets you log a card (hand or discard) to gain all resources from a market card, then junk a card in the market. Playing against captains like Burnham, you can see how this can be an advantage",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -1374,7 +1374,7 @@
      {
       "anchor": "archer-porthos",
       "heading": "Porthos (Cargo)",
-      "snippet": "Porthos has a Free play action that lets you find a Person card, including in your Reserve deck if you discard the found card. Porthos lets you refresh Captain Archer, which is great because you’ll be exhausting Archer quite a bit. If you have an Alien in play, you gain a Glory and both players take an Incident card, but this isn’t an Attack. While you have to be a little careful of taking too many Incidents with",
+      "snippet": "Porthos has a free play action that lets you find a Person card, including in your Reserve deck if you discard the found card. Porthos lets you refresh Captain Archer, which is great because you’ll be exhausting Archer quite a bit. If you have an Alien in play, you gain a Glory and both players take an Incident card, but this isn’t an Attack. While you have to be a little careful of taking too many Incidents with",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -1390,7 +1390,7 @@
      {
       "anchor": "archer-reach-any-star",
       "heading": "Reach Any Star (Directive)",
-      "snippet": "The third and final custom Directive based on lyrics to “Faith of the Heart,” it has an Influence skill which is applicable when it’s in the Staging Area after being played for its first free-Play Action. That action gives you the choice between drawing a card, warping a Ship, or exhausting your captain to do both (told you you’re going to be exhausting Archer a lot). You may also spend a Dilithium to send an Away",
+      "snippet": "The third and final custom Directive based on lyrics to “Faith of the Heart,” it has an Influence skill which is applicable when it’s in the Staging Area after being played for its first free play Action. That action gives you the choice between drawing a card, warping a Ship, or exhausting your captain to do both (told you you’re going to be exhausting Archer a lot). You may also spend a Dilithium to send an Away",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -1760,7 +1760,7 @@
      {
       "anchor": "archer-strength-of-the-soul",
       "heading": "Strength of the Soul (Directive)",
-      "snippet": "Strength of the Soul has two very different Play operations. The first is a free-Play Action that lets you draw a Directive or Encounter from your discard pile. Practically speaking, this could be Analyze (which starts in your discard pile) on turn one, but as the game goes on it has a lot of flexibility in how you might use it to grab Reach Any Star, Faith of the Heart, Founding the Federation, or your standard",
+      "snippet": "Strength of the Soul has two very different Play operations. The first is a free play Action that lets you draw a Directive or Encounter from your discard pile. Practically speaking, this could be Analyze (which starts in your discard pile) on turn one, but as the game goes on it has a lot of flexibility in how you might use it to grab Reach Any Star, Faith of the Heart, Founding the Federation, or your standard",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -1868,7 +1868,7 @@
      {
       "anchor": "archer-xindi-council",
       "heading": "Xindi Council (Ally) (Dev Cost: Have an Incident and an Encounter in play)",
-      "snippet": "The Xindi Council has a Play Action that gives you two Influence and allows you to Scan for a card with the Xindi trait, including from the Junk. This is super helpful for getting the cards you need to Enlist Agent Daniels. The second action is a free Play Action and requires six Influence. If your opponent has a Xindi in play, you both take an Incident, thematically representing the discord among the council. You",
+      "snippet": "The Xindi Council has a Play Action that gives you two Influence and allows you to Scan for a card with the Xindi trait, including from the Junk. This is super helpful for getting the cards you need to Enlist Agent Daniels. The second action is a free play Action and requires six Influence. If your opponent has a Xindi in play, you both take an Incident, thematically representing the discord among the council. You",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -4826,7 +4826,7 @@
      {
       "anchor": "ship-deck",
       "heading": "Ship Deck",
-      "snippet": "D’Var is generally good as a free-play Ship, but Archer can usually benefit from Research skills making the unique Activation very useful.",
+      "snippet": "D’Var is generally good as a free play Ship, but Archer can usually benefit from Research skills making the unique Activation very useful.",
       "truncated": false,
       "mode": "text",
       "lore": false
