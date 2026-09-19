@@ -386,6 +386,7 @@
   .scanner-launch { font-size: 0.78rem; letter-spacing: 0.14em; }
 
   .entry { display: flex; align-items: baseline; gap: 0.5rem; padding: 0.4rem 2rem 0.45rem 0.9rem; min-height: 0; }
+  .entry:has(.entry-sub:empty) .entry-name { white-space: normal; }
   .entry-name { margin: 0; padding: 0; white-space: nowrap; }
   .entry-sub { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .entry-sub:not(:empty)::before { content: '\00b7'; margin-right: 0.5rem; opacity: 0.6; }
