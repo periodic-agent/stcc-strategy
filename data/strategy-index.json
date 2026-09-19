@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-19T11:58:10Z",
+ "generated": "2026-09-19T12:13:07Z",
  "generator": "tools/build_strategy_index.py",
  "guide_count": 30,
  "card_count": 477,
@@ -264,7 +264,7 @@
      {
       "anchor": "admiral-pressman",
       "heading": "Admiral Pressman",
-      "snippet": "Admiral Terry Quinn himself graces ST:CC with a wonderfully thematic card. His free Play action allows an attack to get free played, saving you an action token. He also can promote a duty officer from hand or discard pile if you don't have one already. His resupply action supports a strong security force, and his activation allows you to dismiss a card with cloak in play to gain 3 glory and log him, just like Picard",
+      "snippet": "Admiral Terry Quinn himself graces ST:CC with a wonderfully thematic card. His free play action allows an attack to get free played, saving you an action token. He also can promote a duty officer from hand or discard pile if you don't have one already. His resupply action supports a strong security force, and his activation allows you to dismiss a card with cloak in play to gain 3 glory and log him, just like Picard",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -388,7 +388,7 @@
      {
       "anchor": "ambassador-gral",
       "heading": "Ambassador Gral",
-      "snippet": "There don't seem to be a lot of downsides to having Ambassador Gral on your crew. His actions are both free-play, and finding a card is nearly always useful, even if it's limited to Influence skill/focus. His attack targets your opponent's Vulcans or Andorians (watch out Soval and Shran) for a Glory, and is a free promotion for Gral or another Tellarite. Even if you don't have another Tellarite, he can self-promote,",
+      "snippet": "There don't seem to be a lot of downsides to having Ambassador Gral on your crew. His actions are both free play, and finding a card is nearly always useful, even if it's limited to Influence skill/focus. His attack targets your opponent's Vulcans or Andorians (watch out Soval and Shran) for a Glory, and is a free promotion for Gral or another Tellarite. Even if you don't have another Tellarite, he can self-promote,",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -672,7 +672,7 @@
      {
       "anchor": "starting-hand-strategies",
       "heading": "Starting Hand Strategies",
-      "snippet": "I really do suggest watching Paul Grogan's Sela vs. Sisko multiplayer game for a really good starting turn. In my opinion, it is very close to the best possible Sela opening. He starts with Romulus, I.R.W. Khazara, Remus, T'Rul, and Movar. He plays Romulus to free-play the I.R.W. Khazara, sends an away team (to the Ancient Relay Station). He plays Remus, activating Sela's reaction and gains a Dilithium. He then",
+      "snippet": "I really do suggest watching Paul Grogan's Sela vs. Sisko multiplayer game for a really good starting turn. In my opinion, it is very close to the best possible Sela opening. He starts with Romulus, I.R.W. Khazara, Remus, T'Rul, and Movar. He plays Romulus to free play the I.R.W. Khazara, sends an away team (to the Ancient Relay Station). He plays Remus, activating Sela's reaction and gains a Dilithium. He then",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -848,7 +848,7 @@
      {
       "anchor": "archer-strength-of-the-soul",
       "heading": "Strength of the Soul (Directive)",
-      "snippet": "Strength of the Soul has two very different Play operations. The first is a free play Action that lets you draw a Directive or Encounter from your discard pile. Practically speaking, this could be Analyze (which starts in your discard pile) on turn one, but as the game goes on it has a lot of flexibility in how you might use it to grab Reach Any Star, Faith of the Heart, Founding the Federation, or your standard",
+      "snippet": "Strength of the Soul has two very different Play operations. The first is a free play action that lets you draw a Directive or Encounter from your discard pile. Practically speaking, this could be Analyze (which starts in your discard pile) on turn one, but as the game goes on it has a lot of flexibility in how you might use it to grab Reach Any Star, Faith of the Heart, Founding the Federation, or your standard",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -992,7 +992,7 @@
      {
       "anchor": "archer-faith-of-the-heart",
       "heading": "Faith of the Heart (Directive)",
-      "snippet": "Two free play Actions on this card, the first of which allows you to exhaust Archer to scan for an NX-01 trait card, which for now is limited to the Person deck (I have no information on future NX-01 cards, if any). This is your main way to access Phlox, Hoshi, Mayweather, and Reed. When you gain them, you’ll put them on top of your Reserve deck (reforming a new Reserve deck if you don’t have one anymore).",
+      "snippet": "Two free play actions on this card, the first of which allows you to exhaust Archer to scan for an NX-01 trait card, which for now is limited to the Person deck (I have no information on future NX-01 cards, if any). This is your main way to access Phlox, Hoshi, Mayweather, and Reed. When you gain them, you’ll put them on top of your Reserve deck (reforming a new Reserve deck if you don’t have one anymore).",
       "truncated": false,
       "mode": "anchor",
       "lore": false
@@ -1030,7 +1030,7 @@
      {
       "anchor": "archer-s-reserve-deck-strategy",
       "heading": "Archer’s Reserve Deck Strategy",
-      "snippet": "After that the order is completely random, as always, but I have some things I’m at least hoping for (and can try to manipulate thanks to the second free play Action on Faith of the Heart). I think any Archer game where Inspire comes out first is a good sign. Not only do you get some card draw, but so many of your Reserve crew have specialty restrictions, and it’s good to be able to capitalize on your skills gained",
+      "snippet": "After that the order is completely random, as always, but I have some things I’m at least hoping for (and can try to manipulate thanks to the second free play action on Faith of the Heart). I think any Archer game where Inspire comes out first is a good sign. Not only do you get some card draw, but so many of your Reserve crew have specialty restrictions, and it’s good to be able to capitalize on your skills gained",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -1212,7 +1212,7 @@
      {
       "anchor": "archer-major-hayes-maco",
       "heading": "Major Hayes, MACO (Person)",
-      "snippet": "Major Hayes has a thematic Military skill, as well as the Human, Attack, and Weapon traits. He has the consistent benefit of allowing you to send an Away Team to a Location as a Play Action, but also has a free play Action that lets you log a card (hand or discard) to gain all resources from a market card, then junk a card in the market. Playing against captains like Burnham, you can see how this can be an advantage",
+      "snippet": "Major Hayes has a thematic Military skill, as well as the Human, Attack, and Weapon traits. He has the consistent benefit of allowing you to send an Away Team to a Location as a Play Action, but also has a free play action that lets you log a card (hand or discard) to gain all resources from a market card, then junk a card in the market. Playing against captains like Burnham, you can see how this can be an advantage",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -1390,7 +1390,7 @@
      {
       "anchor": "archer-reach-any-star",
       "heading": "Reach Any Star (Directive)",
-      "snippet": "The third and final custom Directive based on lyrics to “Faith of the Heart,” it has an Influence skill which is applicable when it’s in the Staging Area after being played for its first free play Action. That action gives you the choice between drawing a card, warping a Ship, or exhausting your captain to do both (told you you’re going to be exhausting Archer a lot). You may also spend a Dilithium to send an Away",
+      "snippet": "The third and final custom Directive based on lyrics to “Faith of the Heart,” it has an Influence skill which is applicable when it’s in the Staging Area after being played for its first free play action. That action gives you the choice between drawing a card, warping a Ship, or exhausting your captain to do both (told you you’re going to be exhausting Archer a lot). You may also spend a Dilithium to send an Away",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -1636,7 +1636,7 @@
      {
       "anchor": "boltzmann-brain",
       "heading": "Boltzmann Brain",
-      "snippet": "The only core box card to be a direct Strange New Worlds reference, Boltzmann Brain is the spontaneously generated consciousness that interacted with Dr. M'Benga in season one. It's a free-play action that allows for a card draw and returning one incident. It also has the Telepath and Doctor traits, as well as six points. I usually grab this one when it pops up because even if you don't have the Incident, there's",
+      "snippet": "The only core box card to be a direct Strange New Worlds reference, Boltzmann Brain is the spontaneously generated consciousness that interacted with Dr. M'Benga in season one. It's a free play action that allows for a card draw and returning one incident. It also has the Telepath and Doctor traits, as well as six points. I usually grab this one when it pops up because even if you don't have the Incident, there's",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -1760,7 +1760,7 @@
      {
       "anchor": "archer-strength-of-the-soul",
       "heading": "Strength of the Soul (Directive)",
-      "snippet": "Strength of the Soul has two very different Play operations. The first is a free play Action that lets you draw a Directive or Encounter from your discard pile. Practically speaking, this could be Analyze (which starts in your discard pile) on turn one, but as the game goes on it has a lot of flexibility in how you might use it to grab Reach Any Star, Faith of the Heart, Founding the Federation, or your standard",
+      "snippet": "Strength of the Soul has two very different Play operations. The first is a free play action that lets you draw a Directive or Encounter from your discard pile. Practically speaking, this could be Analyze (which starts in your discard pile) on turn one, but as the game goes on it has a lot of flexibility in how you might use it to grab Reach Any Star, Faith of the Heart, Founding the Federation, or your standard",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -1868,7 +1868,7 @@
      {
       "anchor": "archer-xindi-council",
       "heading": "Xindi Council (Ally) (Dev Cost: Have an Incident and an Encounter in play)",
-      "snippet": "The Xindi Council has a Play Action that gives you two Influence and allows you to Scan for a card with the Xindi trait, including from the Junk. This is super helpful for getting the cards you need to Enlist Agent Daniels. The second action is a free play Action and requires six Influence. If your opponent has a Xindi in play, you both take an Incident, thematically representing the discord among the council. You",
+      "snippet": "The Xindi Council has a Play Action that gives you two Influence and allows you to Scan for a card with the Xindi trait, including from the Junk. This is super helpful for getting the cards you need to Enlist Agent Daniels. The second action is a free play action and requires six Influence. If your opponent has a Xindi in play, you both take an Incident, thematically representing the discord among the council. You",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -2478,7 +2478,7 @@
      {
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
-      "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free-play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
+      "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -2634,7 +2634,7 @@
      {
       "anchor": "ship-deck",
       "heading": "Ship Deck",
-      "snippet": "Core Set: The Reliant is solid for Soval without being anything too crazy, though he should be able to free-play by reaching that five Influence requirement pretty fast. Same with the Son’a Battlecruiser and their six Military requirement. K’T’Inga Battlecruiser can be scanned for with Military skill, Bird of Prey with Influence skill, and Voth Research Vessel with Research, so T’Pol may be well-suited looking there",
+      "snippet": "Core Set: The Reliant is solid for Soval without being anything too crazy, though he should be able to free play by reaching that five Influence requirement pretty fast. Same with the Son’a Battlecruiser and their six Military requirement. K’T’Inga Battlecruiser can be scanned for with Military skill, Bird of Prey with Influence skill, and Voth Research Vessel with Research, so T’Pol may be well-suited looking there",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -2736,7 +2736,7 @@
      {
       "anchor": "boltzmann-brain",
       "heading": "Boltzmann Brain",
-      "snippet": "The only core box card to be a direct Strange New Worlds reference, Boltzmann Brain is the spontaneously generated consciousness that interacted with Dr. M'Benga in season one. It's a free-play action that allows for a card draw and returning one incident. It also has the Telepath and Doctor traits, as well as six points. I usually grab this one when it pops up because even if you don't have the Incident, there's",
+      "snippet": "The only core box card to be a direct Strange New Worlds reference, Boltzmann Brain is the spontaneously generated consciousness that interacted with Dr. M'Benga in season one. It's a free play action that allows for a card draw and returning one incident. It also has the Telepath and Doctor traits, as well as six points. I usually grab this one when it pops up because even if you don't have the Incident, there's",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -3210,7 +3210,7 @@
      {
       "anchor": "burnham-s-development-cards",
       "heading": "Burnham's Development Cards",
-      "snippet": "Jett Reno (Person) (Dev Cost: Dismiss a Deployed Ship) — Played by deadpan comedian Tig Notaro, Jett Reno has the Human, Starfleet, and Engineering traits. She has two free Play actions, one which gives you three Dilithium and one which lets you recrystallize two Dilithium. Her Activation requires you to Take an Incident, then you gain and discard a cargo or a ship. So, when to get Reno? When you're desperate for",
+      "snippet": "Jett Reno (Person) (Dev Cost: Dismiss a Deployed Ship) — Played by deadpan comedian Tig Notaro, Jett Reno has the Human, Starfleet, and Engineering traits. She has two free play actions, one which gives you three Dilithium and one which lets you recrystallize two Dilithium. Her Activation requires you to Take an Incident, then you gain and discard a cargo or a ship. So, when to get Reno? When you're desperate for",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -3258,7 +3258,7 @@
      {
       "anchor": "burnham-s-available-cards",
       "heading": "Directives",
-      "snippet": "Maximum Warp (Directive) — A free-play directive, Maximum Warp lets you draw two cards, discard one of them, and you may warp a ship. It's part of the directive for Set a Course, just without the ability to send away teams. I find it useful for drawing cards, and for warping ships that aren't the Discovery-A. The nicest part is that it's a free-play action, so it mostly gives you more options.",
+      "snippet": "Maximum Warp (Directive) — A free play directive, Maximum Warp lets you draw two cards, discard one of them, and you may warp a ship. It's part of the directive for Set a Course, just without the ability to send away teams. I find it useful for drawing cards, and for warping ships that aren't the Discovery-A. The nicest part is that it's a free play action, so it mostly gives you more options.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -3280,7 +3280,7 @@
      {
       "anchor": "jennifer",
       "heading": "Jennifer Sh'reyan (Person)",
-      "snippet": "Jennifer features the new Lower Decker trait in addition to her Pilot, Starfleet, and Andorian ones. Her free-play action lets you beam her to a deployed ship to gain two Dilithium, and you may recall another card beamed to that ship and may warp that ship. Her Support ability triggers after you gain a Person (at which time you would play Jennifer from your hand), then you draw a card and you may send an Away Team",
+      "snippet": "Jennifer features the new Lower Decker trait in addition to her Pilot, Starfleet, and Andorian ones. Her free play action lets you beam her to a deployed ship to gain two Dilithium, and you may recall another card beamed to that ship and may warp that ship. Her Support ability triggers after you gain a Person (at which time you would play Jennifer from your hand), then you draw a card and you may send an Away Team",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -3564,7 +3564,7 @@
      {
       "anchor": "burnham-s-development-cards",
       "heading": "Burnham's Development Cards",
-      "snippet": "Jett Reno (Person) (Dev Cost: Dismiss a Deployed Ship) — Played by deadpan comedian Tig Notaro, Jett Reno has the Human, Starfleet, and Engineering traits. She has two free Play actions, one which gives you three Dilithium and one which lets you recrystallize two Dilithium. Her Activation requires you to Take an Incident, then you gain and discard a cargo or a ship. So, when to get Reno? When you're desperate for",
+      "snippet": "Jett Reno (Person) (Dev Cost: Dismiss a Deployed Ship) — Played by deadpan comedian Tig Notaro, Jett Reno has the Human, Starfleet, and Engineering traits. She has two free play actions, one which gives you three Dilithium and one which lets you recrystallize two Dilithium. Her Activation requires you to Take an Incident, then you gain and discard a cargo or a ship. So, when to get Reno? When you're desperate for",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -4086,7 +4086,7 @@
      {
       "anchor": "commander-tysess",
       "heading": "Commander Tysess",
-      "snippet": "Tysess has a free-play action, with a twist. He lets you find any Person and promote them to Duty Officer, then if you want to spend an action token you can use that promoted person's play operation, and Tysess can be beamed to a ship for Dilithium. That's great, but I think his Reaction is probably even better, since you can trigger a control operation of a controlled location after you send an Away Team. It's",
+      "snippet": "Tysess has a free play action, with a twist. He lets you find any Person and promote them to Duty Officer, then if you want to spend an action token you can use that promoted person's play operation, and Tysess can be beamed to a ship for Dilithium. That's great, but I think his Reaction is probably even better, since you can trigger a control operation of a controlled location after you send an Away Team. It's",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -4124,7 +4124,7 @@
      {
       "anchor": "computer-virus",
       "heading": "Computer Virus",
-      "snippet": "I like the military skill with the Engineering and Communication traits (always useful to have out there). The free-play attack is great, forcing your opponent to take incidents if they have no beamed cards. The reaction is also great, as you can get the card back to attack again anytime your opponent warps their ship. However, the card is logged when your opponent puts a Security/Engineer in play. I think this card",
+      "snippet": "I like the military skill with the Engineering and Communication traits (always useful to have out there). The free play attack is great, forcing your opponent to take incidents if they have no beamed cards. The reaction is also great, as you can get the card back to attack again anytime your opponent warps their ship. However, the card is logged when your opponent puts a Security/Engineer in play. I think this card",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -4382,7 +4382,7 @@
      {
       "anchor": "encounters",
       "heading": "Encounters",
-      "snippet": "Delphic Expanse Sphere has a free-play to send Away Teams, market gain-utility, and a Military skill, so it’s not a bad option for Rebner.",
+      "snippet": "Delphic Expanse Sphere has a free play to send Away Teams, market gain-utility, and a Military skill, so it’s not a bad option for Rebner.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -5012,7 +5012,7 @@
      {
       "anchor": "emerald-chain",
       "heading": "Emerald Chain",
-      "snippet": "An Orion-Andorian post-Burn Alliance in the wake of a weakened Federation, the Emerald Chain also gets an Attack and Shady trait. Their action costs an action token and gains one military as well as stealing a Dilithium from your opponent. You also get to free-play a Business-trait card, and it doesn't log itself. Pretty great, and those traits can't be beat (especially as we get more Orion cards as David and Adam",
+      "snippet": "An Orion-Andorian post-Burn Alliance in the wake of a weakened Federation, the Emerald Chain also gets an Attack and Shady trait. Their action costs an action token and gains one military as well as stealing a Dilithium from your opponent. You also get to free play a Business-trait card, and it doesn't log itself. Pretty great, and those traits can't be beat (especially as we get more Orion cards as David and Adam",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -5344,7 +5344,7 @@
      {
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
-      "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free-play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
+      "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -5970,7 +5970,7 @@
      {
       "anchor": "burnham-s-available-cards",
       "heading": "Directives",
-      "snippet": "Maximum Warp (Directive) — A free-play directive, Maximum Warp lets you draw two cards, discard one of them, and you may warp a ship. It's part of the directive for Set a Course, just without the ability to send away teams. I find it useful for drawing cards, and for warping ships that aren't the Discovery-A. The nicest part is that it's a free-play action, so it mostly gives you more options.",
+      "snippet": "Maximum Warp (Directive) — A free play directive, Maximum Warp lets you draw two cards, discard one of them, and you may warp a ship. It's part of the directive for Set a Course, just without the ability to send away teams. I find it useful for drawing cards, and for warping ships that aren't the Discovery-A. The nicest part is that it's a free play action, so it mostly gives you more options.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -6740,7 +6740,7 @@
      {
       "anchor": "jennifer",
       "heading": "Jennifer Sh'reyan (Person)",
-      "snippet": "Jennifer features the new Lower Decker trait in addition to her Pilot, Starfleet, and Andorian ones. Her free-play action lets you beam her to a deployed ship to gain two Dilithium, and you may recall another card beamed to that ship and may warp that ship. Her Support ability triggers after you gain a Person (at which time you would play Jennifer from your hand), then you draw a card and you may send an Away Team",
+      "snippet": "Jennifer features the new Lower Decker trait in addition to her Pilot, Starfleet, and Andorian ones. Her free play action lets you beam her to a deployed ship to gain two Dilithium, and you may recall another card beamed to that ship and may warp that ship. Her Support ability triggers after you gain a Person (at which time you would play Jennifer from your hand), then you draw a card and you may send an Away Team",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -7148,7 +7148,7 @@
      {
       "anchor": "halkan-council",
       "heading": "Halkan Council",
-      "snippet": "From the TOS episode \"Mirror, Mirror\", the Halkan Council of both the prime and mirror universes denied the Enterprise access to their Dilithium for fear that it would be used offensively. Thus, the thematic benefit of a free-play action of gaining three Dilithium, a benefit that can be repeated over multiple turns. The downside is that all it takes is one in-play card with an attack trait and it's getting logged.",
+      "snippet": "From the TOS episode \"Mirror, Mirror\", the Halkan Council of both the prime and mirror universes denied the Enterprise access to their Dilithium for fear that it would be used offensively. Thus, the thematic benefit of a free play action of gaining three Dilithium, a benefit that can be repeated over multiple turns. The downside is that all it takes is one in-play card with an attack trait and it's getting logged.",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -8108,7 +8108,7 @@
      {
       "anchor": "jagos-epigenetic-implant",
       "heading": "Jago's Epigenetic Implant",
-      "snippet": "This cargo requires an action token and discard to deploy, but if you discard a Doctor or Business card, you also get two Latinum and an Incident free-play. There's also a Resupply that lets you draw and discard cards based on the number of Augment traits you have in play, and this box does have quite a few of them. Just be aware of the dismissal that can happen if you don't have a Duty Officer. Khan is not as",
+      "snippet": "This cargo requires an action token and discard to deploy, but if you discard a Doctor or Business card, you also get two Latinum and an Incident free play. There's also a Resupply that lets you draw and discard cards based on the number of Augment traits you have in play, and this box does have quite a few of them. Just be aware of the dismissal that can happen if you don't have a Duty Officer. Khan is not as",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -8878,7 +8878,7 @@
      {
       "anchor": "khitomer",
       "heading": "Khitomer",
-      "snippet": "Khitomer is the location of both a Federation-Klingon peace treaty, and also a Romulan attack, which logically lends to the three species traits. I like the benefit of a Starfleet free-play, but the reaction is where this really shines. You can either defensively use this to give your opponent Incidents when they attack, or gain extra actions via logging attacks or Military skill/focus cards. Really looking forward",
+      "snippet": "Khitomer is the location of both a Federation-Klingon peace treaty, and also a Romulan attack, which logically lends to the three species traits. I like the benefit of a Starfleet free play, but the reaction is where this really shines. You can either defensively use this to give your opponent Incidents when they attack, or gain extra actions via logging attacks or Military skill/focus cards. Really looking forward",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -9028,7 +9028,7 @@
      {
       "anchor": "kirk-leonard-mccoy",
       "heading": "Leonard McCoy (Person)",
-      "snippet": "Leonard McCoy has the Human, Doctor, and Starfleet traits, and uses his action to gain a Research and return an Incident. His Reaction lets you free play an Incident from your hand or discard pile when you discard or log a Person during your action step. That’s a pretty flexible ability considering Spock’s play action centers around logging cards. Still, I like returning Incidents more than Free Playing them",
+      "snippet": "Leonard McCoy has the Human, Doctor, and Starfleet traits, and uses his action to gain a Research and return an Incident. His Reaction lets you free play an Incident from your hand or discard pile when you discard or log a Person during your action step. That’s a pretty flexible ability considering Spock’s play action centers around logging cards. Still, I like returning Incidents more than free playing them",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -9186,7 +9186,7 @@
      {
       "anchor": "kirk-montgomery-scotty-scott",
       "heading": "Montgomery “Scotty” Scott (Person)",
-      "snippet": "Scotty is the ever vigilant Chief Engineer of the Enterprise, earning his Human, Starfleet, and Engineer Traits. He has a Free Play action that lets you find a ship, and if it's found in your reserve deck (the H.M.S. Bounty ), you take an Incident. This can absolutely be worth it to speed up your tempo, but even if you’re just fishing Ships out of your deck that’s helpful. His other Play Action lets you dismiss a",
+      "snippet": "Scotty is the ever vigilant Chief Engineer of the Enterprise, earning his Human, Starfleet, and Engineer Traits. He has a free play action that lets you find a ship, and if it's found in your reserve deck (the H.M.S. Bounty ), you take an Incident. This can absolutely be worth it to speed up your tempo, but even if you’re just fishing Ships out of your deck that’s helpful. His other Play Action lets you dismiss a",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -9202,7 +9202,7 @@
      {
       "anchor": "kirk-needs-of-the-many",
       "heading": "Needs of the Many (Directive)",
-      "snippet": "An oft-cited Vulcan (and Human) philosophical statement, uttered most directly in connection with Spock’s sacrifice in Wrath of Khan, appears as a thematic free-play Directive. You’ll dismiss a deployed ship or Duty Officer, then log that dismissed card to enlist a person from your Developments. I like to use this thematically to log Spock (or someone else), though you could also use it to Log the U.S.S. Enterprise",
+      "snippet": "An oft-cited Vulcan (and Human) philosophical statement, uttered most directly in connection with Spock’s sacrifice in Wrath of Khan, appears as a thematic free play Directive. You’ll dismiss a deployed ship or Duty Officer, then log that dismissed card to enlist a person from your Developments. I like to use this thematically to log Spock (or someone else), though you could also use it to Log the U.S.S. Enterprise",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -9850,7 +9850,7 @@
      {
       "anchor": "koloth-curzon-dax",
       "heading": "Curzon Dax (Person)",
-      "snippet": "Benjamin Sisko's actual \"Old Man\" friend and mentor, Curzon Dax is the rare non-Klingon to have a positive relationship with the Klingon Empire in the turmoil of the late 2200s. His status as an Ambassador gives him the Trill and Ambassador traits. He has two free Play actions, the first which raises your Influence or Military, whichever is lower, and the second which returns an Incident from your hand. I like both",
+      "snippet": "Benjamin Sisko's actual \"Old Man\" friend and mentor, Curzon Dax is the rare non-Klingon to have a positive relationship with the Klingon Empire in the turmoil of the late 2200s. His status as an Ambassador gives him the Trill and Ambassador traits. He has two free play actions, the first which raises your Influence or Military, whichever is lower, and the second which returns an Incident from your hand. I like both",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -10068,7 +10068,7 @@
      {
       "anchor": "koloth-kor-the-dahar-master",
       "heading": "Kor, The Dahar Master (Person)",
-      "snippet": "The first of the DS9-era Developments, Kor has the Weapon and Klingon traits. He has a free Play action that sends an Away Team to a neutral location, and if it's secured you can spend an action token to take control of the location and log Kor. This is great for the last round so you can grab another location you normally wouldn't get. He has a reaction that gains you a military when you gain any amount of",
+      "snippet": "The first of the DS9-era Developments, Kor has the Weapon and Klingon traits. He has a free play action that sends an Away Team to a neutral location, and if it's secured you can spend an action token to take control of the location and log Kor. This is great for the last round so you can grab another location you normally wouldn't get. He has a reaction that gains you a military when you gain any amount of",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -10256,7 +10256,7 @@
      {
       "anchor": "sela-romulus",
       "heading": "Romulus (Location)",
-      "snippet": "Romulus has an Influence and Military skill, along with Imperial and Romulan tags. Its control gives a free-play of a ship, which is almost always useful for Sela. It has the same activation as Farpoint/Andoria/Qo'noS, providing card draw depending on your away teams on controlled planets. This will be difficult for Sela as she only has four away teams, but there is an ideal cycling strategy to expand upon below.",
+      "snippet": "Romulus has an Influence and Military skill, along with Imperial and Romulan tags. Its control gives a free play of a ship, which is almost always useful for Sela. It has the same activation as Farpoint/Andoria/Qo'noS, providing card draw depending on your away teams on controlled planets. This will be difficult for Sela as she only has four away teams, but there is an ideal cycling strategy to expand upon below.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -10568,7 +10568,7 @@
      {
       "anchor": "ship-deck",
       "heading": "Ship Deck",
-      "snippet": "Core Set: The Reliant is solid for Soval without being anything too crazy, though he should be able to free-play by reaching that five Influence requirement pretty fast. Same with the Son’a Battlecruiser and their six Military requirement. K’T’Inga Battlecruiser can be scanned for with Military skill, Bird of Prey with Influence skill, and Voth Research Vessel with Research, so T’Pol may be well-suited looking there",
+      "snippet": "Core Set: The Reliant is solid for Soval without being anything too crazy, though he should be able to free play by reaching that five Influence requirement pretty fast. Same with the Son’a Battlecruiser and their six Military requirement. K’T’Inga Battlecruiser can be scanned for with Military skill, Bird of Prey with Influence skill, and Voth Research Vessel with Research, so T’Pol may be well-suited looking there",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -11482,7 +11482,7 @@
      {
       "anchor": "malik",
       "heading": "Malik",
-      "snippet": "The first stand-out mechanism here is the passive ability that gives him a Military skill for each Augment in-play, up to three (but at least one). His reaction lets you discard a card to gain an action token when you put an attack card in play, which is also great. His Attack Free Play action lets you steal a Glory from an opponent, the first card I'm seeing with that ability in the game. He can also get you a",
+      "snippet": "The first stand-out mechanism here is the passive ability that gives him a Military skill for each Augment in-play, up to three (but at least one). His reaction lets you discard a card to gain an action token when you put an attack card in play, which is also great. His Attack free play action lets you steal a Glory from an opponent, the first card I'm seeing with that ability in the game. He can also get you a",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -11706,7 +11706,7 @@
      {
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
-      "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free-play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
+      "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -13556,7 +13556,7 @@
      {
       "anchor": "admiral-pressman",
       "heading": "Admiral Pressman",
-      "snippet": "Admiral Terry Quinn himself graces ST:CC with a wonderfully thematic card. His free Play action allows an attack to get free played, saving you an action token. He also can promote a duty officer from hand or discard pile if you don't have one already. His resupply action supports a strong security force, and his activation allows you to dismiss a card with cloak in play to gain 3 glory and log him, just like Picard",
+      "snippet": "Admiral Terry Quinn himself graces ST:CC with a wonderfully thematic card. His free play action allows an attack to get free played, saving you an action token. He also can promote a duty officer from hand or discard pile if you don't have one already. His resupply action supports a strong security force, and his activation allows you to dismiss a card with cloak in play to gain 3 glory and log him, just like Picard",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -14484,7 +14484,7 @@
      {
       "anchor": "rebner-even-bigger-helmet",
       "heading": "Even Bigger Helmet (Cargo)",
-      "snippet": "Who is in charge here? It’s the guy with the even bigger Helmet? Okay then. With the free play Action, you can gain a Latinum and Dilithium, and you must Promote a Person from your hand or Staging Area to Duty Officer (if you can). You can also spend an action token and take an Incident to enlist Big Enough Helmet… oh, there’s another one? Sigh.",
+      "snippet": "Who is in charge here? It’s the guy with the even bigger Helmet? Okay then. With the free play action, you can gain a Latinum and Dilithium, and you must Promote a Person from your hand or Staging Area to Duty Officer (if you can). You can also spend an action token and take an Incident to enlist Big Enough Helmet… oh, there’s another one? Sigh.",
       "truncated": false,
       "mode": "anchor",
       "lore": false
@@ -14844,7 +14844,7 @@
      {
       "anchor": "computer-virus",
       "heading": "Computer Virus",
-      "snippet": "I like the military skill with the Engineering and Communication traits (always useful to have out there). The free-play attack is great, forcing your opponent to take incidents if they have no beamed cards. The reaction is also great, as you can get the card back to attack again anytime your opponent warps their ship. However, the card is logged when your opponent puts a Security/Engineer in play. I think this card",
+      "snippet": "I like the military skill with the Engineering and Communication traits (always useful to have out there). The free play attack is great, forcing your opponent to take incidents if they have no beamed cards. The reaction is also great, as you can get the card back to attack again anytime your opponent warps their ship. However, the card is logged when your opponent puts a Security/Engineer in play. I think this card",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -14966,7 +14966,7 @@
      {
       "anchor": "rebner-salvage",
       "heading": "Salvage (Directive)",
-      "snippet": "This is the first time I’m talking about the Salvage Directive, though it does appear in Khan’s deck so we’ll talk about it next time again. There’s a free play Action that lets you Junk a card in the market to draw a card, which helps when you’re low on Action tokens or need that one more card you know you have in your deck. There’s also a Play Action where you can gain a standard suit card from the Junk to your",
+      "snippet": "This is the first time I’m talking about the Salvage Directive, though it does appear in Khan’s deck so we’ll talk about it next time again. There’s a free play action that lets you Junk a card in the market to draw a card, which helps when you’re low on Action tokens or need that one more card you know you have in your deck. There’s also a Play Action where you can gain a standard suit card from the Junk to your",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -16098,7 +16098,7 @@
      {
       "anchor": "sela-infiltrate",
       "heading": "Infiltrate (Directive)",
-      "snippet": "Infiltrate is an interesting card, because it really has three play operations. The first is a free-play, and lets you warp up to 3 of your ships with the Cloak tag. Useful, especially with an ideal opening and the three cloaked ships you start with. The second operation costs 2 discarded cards and a Dilithium for a Person/Cargo/Ally. It's a bit steep, but sometimes necessary considering Sela's limited market access",
+      "snippet": "Infiltrate is an interesting card, because it really has three play operations. The first is a free play, and lets you warp up to 3 of your ships with the Cloak tag. Useful, especially with an ideal opening and the three cloaked ships you start with. The second operation costs 2 discarded cards and a Dilithium for a Person/Cargo/Ally. It's a bit steep, but sometimes necessary considering Sela's limited market access",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -16274,7 +16274,7 @@
      {
       "anchor": "sela-remans",
       "heading": "Remans (Ally) — Discard Pile",
-      "snippet": "The Reman ally is an odd one, as it gives a free-play away team at the cost of putting a card on top of your deck. Then you have to either log the Remans or your opponent may draw a card. There's a lot of reasons not to log them, considering their use with Shinzon and the Scimitar later on in the game, the ability to discard them for Dilithium with Remus' Resupply, and the use of the away team without an action",
+      "snippet": "The Reman ally is an odd one, as it gives a free play away team at the cost of putting a card on top of your deck. Then you have to either log the Remans or your opponent may draw a card. There's a lot of reasons not to log them, considering their use with Shinzon and the Scimitar later on in the game, the ability to discard them for Dilithium with Remus' Resupply, and the use of the away team without an action",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -16306,7 +16306,7 @@
      {
       "anchor": "sela-romulus",
       "heading": "Romulus (Location)",
-      "snippet": "Romulus has an Influence and Military skill, along with Imperial and Romulan tags. Its control gives a free-play of a ship, which is almost always useful for Sela. It has the same activation as Farpoint/Andoria/Qo'noS, providing card draw depending on your away teams on controlled planets. This will be difficult for Sela as she only has four away teams, but there is an ideal cycling strategy to expand upon below.",
+      "snippet": "Romulus has an Influence and Military skill, along with Imperial and Romulan tags. Its control gives a free play of a ship, which is almost always useful for Sela. It has the same activation as Farpoint/Andoria/Qo'noS, providing card draw depending on your away teams on controlled planets. This will be difficult for Sela as she only has four away teams, but there is an ideal cycling strategy to expand upon below.",
       "truncated": false,
       "mode": "anchor",
       "lore": false
@@ -16504,7 +16504,7 @@
      {
       "anchor": "tachyon-detection-grid",
       "heading": "Sehlat — Promo Pack 1",
-      "snippet": "Sehlat is a Vulcan native creature — a kind of Vulcan sabre-tooth bear — that also appears in Enterprise. I like the Creature tag and the fact that this card has no action costs. There are three different actions here, the first being finding a Vulcan and forcing your opponent to discard a Person card. Pretty useful. The second is a Vulcan free-play, which is also useful if you have one. Finally, you can promote a",
+      "snippet": "Sehlat is a Vulcan native creature — a kind of Vulcan sabre-tooth bear — that also appears in Enterprise. I like the Creature tag and the fact that this card has no action costs. There are three different actions here, the first being finding a Vulcan and forcing your opponent to discard a Person card. Pretty useful. The second is a Vulcan free play, which is also useful if you have one. Finally, you can promote a",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -16722,7 +16722,7 @@
      {
       "anchor": "sela-sub-commander-trul",
       "heading": "Sub-Commander T'Rul (Person)",
-      "snippet": "A free-play action, T'Rul allows for a card draw, and then you may discard a card to draw a Cloak from your discard pile. This means that from the start of the game, you'll be able to get the I.R.W. Terix out of your discard pile and into your hand. Her reaction allows for a Latinum gain for putting a Cloak tag into play. It has its uses, specifically if you're cycling your ships in and out of play with frequent",
+      "snippet": "A free play action, T'Rul allows for a card draw, and then you may discard a card to draw a Cloak from your discard pile. This means that from the start of the game, you'll be able to get the I.R.W. Terix out of your discard pile and into your hand. Her reaction allows for a Latinum gain for putting a Cloak tag into play. It has its uses, specifically if you're cycling your ships in and out of play with frequent",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -16776,7 +16776,7 @@
      {
       "anchor": "tachyon-detection-grid",
       "heading": "Sehlat — Promo Pack 1",
-      "snippet": "Sehlat is a Vulcan native creature — a kind of Vulcan sabre-tooth bear — that also appears in Enterprise. I like the Creature tag and the fact that this card has no action costs. There are three different actions here, the first being finding a Vulcan and forcing your opponent to discard a Person card. Pretty useful. The second is a Vulcan free-play, which is also useful if you have one. Finally, you can promote a",
+      "snippet": "Sehlat is a Vulcan native creature — a kind of Vulcan sabre-tooth bear — that also appears in Enterprise. I like the Creature tag and the fact that this card has no action costs. There are three different actions here, the first being finding a Vulcan and forcing your opponent to discard a Person card. Pretty useful. The second is a Vulcan free play, which is also useful if you have one. Finally, you can promote a",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -17004,7 +17004,7 @@
      {
       "anchor": "sela-romulus",
       "heading": "Romulus (Location)",
-      "snippet": "Romulus has an Influence and Military skill, along with Imperial and Romulan tags. Its control gives a free-play of a ship, which is almost always useful for Sela. It has the same activation as Farpoint/Andoria/Qo'noS, providing card draw depending on your away teams on controlled planets. This will be difficult for Sela as she only has four away teams, but there is an ideal cycling strategy to expand upon below.",
+      "snippet": "Romulus has an Influence and Military skill, along with Imperial and Romulan tags. Its control gives a free play of a ship, which is almost always useful for Sela. It has the same activation as Farpoint/Andoria/Qo'noS, providing card draw depending on your away teams on controlled planets. This will be difficult for Sela as she only has four away teams, but there is an ideal cycling strategy to expand upon below.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -17390,7 +17390,7 @@
      {
       "anchor": "shran-ushaan-tor",
       "heading": "Ushaan-Tor (Cargo)",
-      "snippet": "Another card which requires discarding an Andorian to use, it is a free-play card which is great. You also gain a glory, which is great. And if they have a duty officer, it forces them to dismiss one of them. I’ve had lots of times when this didn’t apply, at least against the bot, but it’s a dangerous weapon early on against a two-person opponent.",
+      "snippet": "Another card which requires discarding an Andorian to use, it is a free play card which is great. You also gain a glory, which is great. And if they have a duty officer, it forces them to dismiss one of them. I’ve had lots of times when this didn’t apply, at least against the bot, but it’s a dangerous weapon early on against a two-person opponent.",
       "truncated": false,
       "mode": "anchor",
       "lore": false
@@ -17494,7 +17494,7 @@
      {
       "anchor": "sela-remans",
       "heading": "Remans (Ally) — Discard Pile",
-      "snippet": "The Reman ally is an odd one, as it gives a free-play away team at the cost of putting a card on top of your deck. Then you have to either log the Remans or your opponent may draw a card. There's a lot of reasons not to log them, considering their use with Shinzon and the Scimitar later on in the game, the ability to discard them for Dilithium with Remus' Resupply, and the use of the away team without an action",
+      "snippet": "The Reman ally is an odd one, as it gives a free play away team at the cost of putting a card on top of your deck. Then you have to either log the Remans or your opponent may draw a card. There's a lot of reasons not to log them, considering their use with Shinzon and the Scimitar later on in the game, the ability to discard them for Dilithium with Remus' Resupply, and the use of the away team without an action",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -18238,7 +18238,7 @@
      {
       "anchor": "ship-deck",
       "heading": "Ship Deck",
-      "snippet": "Core Set: The Reliant is solid for Soval without being anything too crazy, though he should be able to free-play by reaching that five Influence requirement pretty fast. Same with the Son’a Battlecruiser and their six Military requirement. K’T’Inga Battlecruiser can be scanned for with Military skill, Bird of Prey with Influence skill, and Voth Research Vessel with Research, so T’Pol may be well-suited looking there",
+      "snippet": "Core Set: The Reliant is solid for Soval without being anything too crazy, though he should be able to free play by reaching that five Influence requirement pretty fast. Same with the Son’a Battlecruiser and their six Military requirement. K’T’Inga Battlecruiser can be scanned for with Military skill, Bird of Prey with Influence skill, and Voth Research Vessel with Research, so T’Pol may be well-suited looking there",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -18334,7 +18334,7 @@
      {
       "anchor": "soval-kirshara",
       "heading": "Kir’Shara (Cargo) (Dev Cost 2 Dilithium, 1 Latinum, and dismiss a Duty Officer)",
-      "snippet": "The Kir’Shara gets the Path of Surak trait. The free Play Action applies if you have seven Vulcan cards in play (excluding Captain Soval), and lets you take an Incident and the top Encounter before logging Kir’Shara. It scores for Research Focus. Gaining another Encounter is always great, it’s just an issue of whether you have seven Vulcan cards in play once you get it. If you have the opportunity to develop, use",
+      "snippet": "The Kir’Shara gets the Path of Surak trait. The free play action applies if you have seven Vulcan cards in play (excluding Captain Soval), and lets you take an Incident and the top Encounter before logging Kir’Shara. It scores for Research Focus. Gaining another Encounter is always great, it’s just an issue of whether you have seven Vulcan cards in play once you get it. If you have the opportunity to develop, use",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -18648,7 +18648,7 @@
      {
       "anchor": "computer-virus",
       "heading": "Computer Virus",
-      "snippet": "I like the military skill with the Engineering and Communication traits (always useful to have out there). The free-play attack is great, forcing your opponent to take incidents if they have no beamed cards. The reaction is also great, as you can get the card back to attack again anytime your opponent warps their ship. However, the card is logged when your opponent puts a Security/Engineer in play. I think this card",
+      "snippet": "I like the military skill with the Engineering and Communication traits (always useful to have out there). The free play attack is great, forcing your opponent to take incidents if they have no beamed cards. The reaction is also great, as you can get the card back to attack again anytime your opponent warps their ship. However, the card is logged when your opponent puts a Security/Engineer in play. I think this card",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -18690,7 +18690,7 @@
      {
       "anchor": "ambassador-gral",
       "heading": "Ambassador Gral",
-      "snippet": "There don't seem to be a lot of downsides to having Ambassador Gral on your crew. His actions are both free-play, and finding a card is nearly always useful, even if it's limited to Influence skill/focus. His attack targets your opponent's Vulcans or Andorians (watch out Soval and Shran) for a Glory, and is a free promotion for Gral or another Tellarite. Even if you don't have another Tellarite, he can self-promote,",
+      "snippet": "There don't seem to be a lot of downsides to having Ambassador Gral on your crew. His actions are both free play, and finding a card is nearly always useful, even if it's limited to Influence skill/focus. His attack targets your opponent's Vulcans or Andorians (watch out Soval and Shran) for a Glory, and is a free promotion for Gral or another Tellarite. Even if you don't have another Tellarite, he can self-promote,",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -18920,7 +18920,7 @@
      {
       "anchor": "soval-vulcan-high-command",
       "heading": "Vulcan High Command (Directive) (Dev Cost 3 Dilithium)",
-      "snippet": "A mirror of Shran’s Andorian Commandos, this Directive gets the Vulcan trait and scores for Military Focus. Its free Play action lets you send an away team to a Location where you have a Ship, and find a Vulcan. Its regular Play action lets you scan for a Starfleet, draw two cards, then self-log Vulcan High Command. I love the theme here, as Soval is dismissed from the High Command after allying himself with",
+      "snippet": "A mirror of Shran’s Andorian Commandos, this Directive gets the Vulcan trait and scores for Military Focus. Its free play action lets you send an away team to a Location where you have a Ship, and find a Vulcan. Its regular Play action lets you scan for a Starfleet, draw two cards, then self-log Vulcan High Command. I love the theme here, as Soval is dismissed from the High Command after allying himself with",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -19388,7 +19388,7 @@
      {
       "anchor": "tachyon-detection-grid",
       "heading": "Sehlat — Promo Pack 1",
-      "snippet": "Sehlat is a Vulcan native creature — a kind of Vulcan sabre-tooth bear — that also appears in Enterprise. I like the Creature tag and the fact that this card has no action costs. There are three different actions here, the first being finding a Vulcan and forcing your opponent to discard a Person card. Pretty useful. The second is a Vulcan free-play, which is also useful if you have one. Finally, you can promote a",
+      "snippet": "Sehlat is a Vulcan native creature — a kind of Vulcan sabre-tooth bear — that also appears in Enterprise. I like the Creature tag and the fact that this card has no action costs. There are three different actions here, the first being finding a Vulcan and forcing your opponent to discard a Person card. Pretty useful. The second is a Vulcan free play, which is also useful if you have one. Finally, you can promote a",
       "truncated": true,
       "mode": "anchor",
       "lore": false
@@ -19438,7 +19438,7 @@
      {
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
-      "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free-play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
+      "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -19796,7 +19796,7 @@
      {
       "anchor": "ambassador-gral",
       "heading": "Ambassador Gral",
-      "snippet": "There don't seem to be a lot of downsides to having Ambassador Gral on your crew. His actions are both free-play, and finding a card is nearly always useful, even if it's limited to Influence skill/focus. His attack targets your opponent's Vulcans or Andorians (watch out Soval and Shran) for a Glory, and is a free promotion for Gral or another Tellarite. Even if you don't have another Tellarite, he can self-promote,",
+      "snippet": "There don't seem to be a lot of downsides to having Ambassador Gral on your crew. His actions are both free play, and finding a card is nearly always useful, even if it's limited to Influence skill/focus. His attack targets your opponent's Vulcans or Andorians (watch out Soval and Shran) for a Glory, and is a free promotion for Gral or another Tellarite. Even if you don't have another Tellarite, he can self-promote,",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -20220,7 +20220,7 @@
      {
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
-      "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free-play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
+      "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -20634,7 +20634,7 @@
      {
       "anchor": "notable-market-cards",
       "heading": "Cargo Deck",
-      "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free-play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
+      "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -21544,7 +21544,7 @@
      {
       "anchor": "ship-deck",
       "heading": "Ship Deck",
-      "snippet": "Core Set: The Reliant is solid for Soval without being anything too crazy, though he should be able to free-play by reaching that five Influence requirement pretty fast. Same with the Son’a Battlecruiser and their six Military requirement. K’T’Inga Battlecruiser can be scanned for with Military skill, Bird of Prey with Influence skill, and Voth Research Vessel with Research, so T’Pol may be well-suited looking there",
+      "snippet": "Core Set: The Reliant is solid for Soval without being anything too crazy, though he should be able to free play by reaching that five Influence requirement pretty fast. Same with the Son’a Battlecruiser and their six Military requirement. K’T’Inga Battlecruiser can be scanned for with Military skill, Bird of Prey with Influence skill, and Voth Research Vessel with Research, so T’Pol may be well-suited looking there",
       "truncated": true,
       "mode": "text",
       "lore": false
