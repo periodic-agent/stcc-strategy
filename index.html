@@ -275,7 +275,6 @@
   .gray-box:hover:not(.soon) { border-color: var(--muted); }
 
   @media (max-width: 500px) {
-    .card-grid { grid-template-columns: 1fr 1fr; }
     .hero { padding: 1.5rem 1rem 1.3rem; }
     .hero::before { top: auto; height: 8px; bottom: 0; }
   }
@@ -386,6 +385,18 @@
   .hero-date { font-size: 0.7rem; }
   .scanner-launch { font-size: 0.78rem; letter-spacing: 0.14em; }
 
+  .entry { display: flex; align-items: baseline; gap: 0.5rem; padding: 0.4rem 2rem 0.45rem 0.9rem; min-height: 0; }
+  .entry-name { margin: 0; padding: 0; white-space: nowrap; }
+  .entry-sub { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .entry-sub:not(:empty)::before { content: '\00b7'; margin-right: 0.5rem; opacity: 0.6; }
+  .entry-badge { top: 50%; transform: translateY(-50%); }
+  .card-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+  @media (max-width: 500px) {
+    .entry { padding-right: 1.9rem; }
+    .card-grid { grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+    .card-grid:has(.entry-sub:not(:empty)) { grid-template-columns: 1fr; }
+  }
+
 </style>
 </head>
 <body>
@@ -394,7 +405,7 @@
   <div class="hero-eyebrow">Strategy Compendium</div>
   <h1 class="hero-title">Star Trek: Captain's <span>Chair</span></h1>
   <div class="hero-note">Guides by Matthew McCue &middot; Website and Card Database by Periodic Agent</div>
-  <div class="hero-date">Last updated 18 Sep 2026</div>
+  <div class="hero-date">Last updated 19 Sep 2026</div>
 </header>
 
 <main class="toc">
