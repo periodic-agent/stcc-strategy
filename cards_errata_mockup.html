@@ -1156,8 +1156,32 @@ async function loadDesignerEdits(){
     else delete c.updatedFrom;
   });
 }
+let TRAIT_BY_KEY = null;
+function traitByKey(k){
+  if(!TRAIT_BY_KEY){
+    TRAIT_BY_KEY = {};
+    FULL_POOL.forEach(c=>{
+      ['species_traits','regular_traits','other_traits'].forEach(f=>{
+        (c[f]||[]).forEach(t=>{ TRAIT_BY_KEY[String(t).toLowerCase().replace(/[^a-z0-9]/g,'')] = t; });
+      });
+    });
+  }
+  return TRAIT_BY_KEY[k] || null;
+}
+function errataTokenMap(s){
+  const extra = {};
+  String(s||'').replace(/\[\[([^\]]+)\]\]/g, (m, tok)=>{
+    const low = tok.trim().toLowerCase();
+    if(!TOKEN_MAP[low] && !/^[a-z]+:/.test(low)){
+      const t = traitByKey(low.replace(/[^a-z0-9]/g, ''));
+      if(t) extra[low] = {type:'trait', value:t};
+    }
+    return m;
+  });
+  return Object.keys(extra).length ? Object.assign({}, TOKEN_MAP, extra) : TOKEN_MAP;
+}
 function errataProse(s){
-  const html = stripBody(convertBody(String(s||''), TOKEN_MAP).text, true);
+  const html = stripBody(convertBody(String(s||''), errataTokenMap(s)).text, true);
   return html.replace(/`([^`]+)`/g, '<span class="er-q">$1</span>');
 }
 function ordSup(html){
