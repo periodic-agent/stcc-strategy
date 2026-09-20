@@ -1,8 +1,8 @@
 {
- "generated": "2026-09-19T12:13:07Z",
+ "generated": "2026-09-20T13:21:55Z",
  "generator": "tools/build_strategy_index.py",
  "guide_count": 30,
- "card_count": 477,
+ "card_count": 478,
  "guides": {
   "allies.html": {
    "title": "Ally Deck Strategy Guide",
@@ -2887,6 +2887,78 @@
       "anchor": "soji-asha",
       "heading": "Soji Asha",
       "snippet": "\"The Android who didn't know she was an Android\" from Picard Season One, Soji has some pretty typical Synthetic/Android archetype abilities. She can free play to log a card, gaining a Dilithium. Her reaction also lets you log a card from your hand when you put a Synthetic into play, drawing a card for every five in your log. But, thematic to Soji and her Borg reclamation project, you can spend two Dilithium to scan",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "borg-spatial-trajector": [
+   {
+    "guide": "cargo.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "borg-spatial-trajector",
+      "heading": "Borg Spatial Trajector",
+      "snippet": "Based on research this was used to send Picard and Soji to visit sad Riker and Troi on Nepenthe in Picard season one. This card has the Borg and Scientist tags, and two play actions. The first costs an action, requires four Research, and allows you to select three Persons from your hand or discard pile to beam them to a ship or put them on top of your deck to send an away team to a location. That ability is pretty",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "archer.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Borg Spatial Trajector should be usable by Archer, both from a Research specialty restriction and having the Person cards needed to make good use of it, especially endgame when it helps to get more traits onto Ships for Archer’s scoring.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "georgiou.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "notable-market-cards",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: I’m definitely a fan of Augmentation plague due to Georgiou’s late game focus on Klingon cards, and if you can nab it early you can get some Glory every time you put a Klingon in play. You shouldn’t have to worry about specialty restrictions for cards like forced Singularity, which also gives you focus scoring for research and yet another duty officer. Same benefit to Computer Virus, and you should get",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Borg Spatial Trajector is essentially useless to Rebner.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "soval.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "To Boldly Go: A Research scan of the Cargo deck gets you Universal Translator, which by itself isn’t super interesting for Soval because he may have the Starfleet cards but gets no particular benefit from Alien traits themselves. A Military scan on the other hand will fish out Computer Virus which is super interesting against an aggressive opponent warping ships. There’s a decent amount of Away Team focused cards in",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -21701,4 +21773,4 @@
    }
   ]
  }
-}
+}

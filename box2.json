@@ -838,8 +838,8 @@
     }
   },
   {
-    "id": "borg-spatial-trajectory",
-    "name": "Borg Spatial Trajectory",
+    "id": "borg-spatial-trajector",
+    "name": "Borg Spatial Trajector",
     "suit": "Cargo",
     "source": "Common",
     "game_box": "To Boldly Go",
@@ -854,7 +854,7 @@
       "Scientist"
     ],
     "other_traits": [],
-    "filename": "borg-spatial-trajectory.jpg",
+    "filename": "borg-spatial-trajector.jpg",
     "icons": [],
     "text": {
       "cost": "",
