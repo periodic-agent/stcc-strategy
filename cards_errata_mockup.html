@@ -657,6 +657,8 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .er-run sup{font-size:.7em;line-height:0;vertical-align:.45em;}
 .dnote.errata .dnote-label{color:#e8ecf8;}
 .dnote.errata .dnote-rule{background:linear-gradient(90deg,transparent,rgba(232,236,248,.75),transparent);}
+.dnote.updated .dnote-label{color:#4a9fd4;}
+.dnote.updated .dnote-rule{background:linear-gradient(90deg,transparent,rgba(74,159,212,.75),transparent);}
 .er-run a{color:#6fd3d3;text-decoration:underline dotted;text-underline-offset:2px;}
 .er-note img.stripimg,.er-note .stripchip{vertical-align:-0.18em;}
 .pn-help-btn{width:1.35rem;height:1.35rem;display:inline-flex;align-items:center;justify-content:center;
@@ -1003,6 +1005,7 @@ function resolveCards(rawPool, expand){
               : preferOwn ? []
               : ((group.find(pr=>Array.isArray(pr.errata) && pr.errata.length) || {}).errata || []),
         virtual: !!chosen.virtual,
+        updatedFrom: Array.isArray(chosen.updatedFrom) ? chosen.updatedFrom : [],
         vp: (() => { const v = (chosen.vp !== undefined && chosen.vp !== null) ? chosen.vp : chosen.glory;
                      if (v !== undefined && v !== null) return v;
                      for (const pr of group) { const w = (pr.vp !== undefined && pr.vp !== null) ? pr.vp : pr.glory; if (w !== undefined && w !== null) return w; }
@@ -1138,9 +1141,19 @@ async function loadDesignerEdits(){
   }catch(e){ console.warn('Could not load data/errata-mockup.json', e); }
   FULL_POOL.forEach(c=>{
     const byBox = DESIGNER_EDITS.entries[c.id];
-    const list = byBox && byBox[rawBoxKey(c)];
+    const here = rawBoxKey(c);
+    const list = byBox && byBox[here];
     if(list && list.length) c.errata = list.slice().sort((a,b)=>typeIndex(a.type)-typeIndex(b.type));
     else delete c.errata;
+    const from = [];
+    for(const src in (byBox||{})){
+      if(src === here) continue;
+      byBox[src].forEach(e=>{
+        if((e.correct||[]).some(p=>boxKeyOfLabel(p) === here)) from.push(e);
+      });
+    }
+    if(from.length) c.updatedFrom = from.sort((a,b)=>typeIndex(a.type)-typeIndex(b.type));
+    else delete c.updatedFrom;
   });
 }
 function errataProse(s){
@@ -1175,6 +1188,15 @@ function errataEntryHTML(c, e){
     h += '<div class="er-run"><span class="er-k">Affected print runs:</span> '+ordSup(lbEsc(e.affected.join(', ')))+'</div>';
   h += '<div class="er-run"><span class="er-k">Corrected in:</span> '
      + ((e.correct||[]).length ? correctHTML(c, e.correct) : 'not yet in print')+'</div>';
+  return h + '</div>';
+}
+function updatedEntryHTML(c, e){
+  const cls = levelClass(e.level);
+  let h = '<div class="er-entry"><div class="er-head"><span class="er-type '+cls+'">'
+        + lbEsc(e.type || 'Change') + '</span></div>';
+  if(e.note) h += '<div class="er-note">'+errataProse(e.note)+'</div>';
+  if((e.affected||[]).length)
+    h += '<div class="er-run"><span class="er-k">Changed from:</span> '+correctHTML(c, e.affected)+'</div>';
   return h + '</div>';
 }
 function pnHelpHTML(){
@@ -2544,8 +2566,10 @@ function lbExtrasHTML(c){
   const entries=c.errata||[];
   let body=entries.map(e=>errataEntryHTML(c, e)).join('');
   const upd=printingLinksHTML(c);
-  if(upd && !entries.length) body+='<div class="dnote-q plain">'+upd+'</div>';
+  const from=c.updatedFrom||[];
+  if(upd && !entries.length && !from.length) body+='<div class="dnote-q plain">'+upd+'</div>';
   if(body) h+=lbSection('errata','Errata',body);
+  if(from.length) h+=lbSection('updated','Updated',from.map(e=>updatedEntryHTML(c, e)).join(''));
   const note=noteOf(c);
   if(note) h+=lbSection('note',ICON_PEN+'Designer\u2019s note','<blockquote class="dnote-q">'+lbEsc(note)+'</blockquote>','note');
   const links=strategyLinksOf(c);
