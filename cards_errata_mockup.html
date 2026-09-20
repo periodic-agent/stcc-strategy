@@ -636,12 +636,12 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .lv-green{color:#4ac48a;}
 .lv-yellow{color:#e8d44a;}
 .lv-red{color:#e05a5a;}
-.lv-black{color:#b98ae0;}
+.lv-black{color:#05070c;text-shadow:0 0 2px rgba(190,202,220,.95),0 0 5px rgba(190,202,220,.55);}
 .lv-none{color:#9aa8bc;}
 .nm-mark.err.lv-green,.cid2 .meta.errata.lv-green{color:#4ac48a;}
 .nm-mark.err.lv-yellow,.cid2 .meta.errata.lv-yellow{color:#e8d44a;}
 .nm-mark.err.lv-red,.cid2 .meta.errata.lv-red{color:#e05a5a;}
-.nm-mark.err.lv-black,.cid2 .meta.errata.lv-black{color:#b98ae0;}
+.nm-mark.err.lv-black,.cid2 .meta.errata.lv-black{color:#05070c;text-shadow:0 0 2px rgba(190,202,220,.95),0 0 5px rgba(190,202,220,.55);}
 .nm-mark.err.lv-none,.cid2 .meta.errata.lv-none{color:#9aa8bc;}
 .st-pill[data-st=errata]{border-color:#e8ecf8;color:#e8ecf8;}
 .st-pill[data-st=errata].active{background:#e8ecf8;color:#000;}
@@ -1127,7 +1127,7 @@ function noteOf(c){ const n = NOTES[c.id]; return (n && n.note) ? String(n.note)
 
 let DESIGNER_EDITS = {types:{}, entries:{}, boxes:{}};
 const LEVEL_CLASS = {'Green':'green','Yellow Alert':'yellow','Red Alert':'red','Black Alert':'black'};
-const LEVEL_WORD = {'Green':'Green','Yellow Alert':'Yellow','Red Alert':'Red','Black Alert':'Purple'};
+const LEVEL_WORD = {'Green':'Green','Yellow Alert':'Yellow','Red Alert':'Red','Black Alert':'Black'};
 function levelWord(l){ return LEVEL_WORD[l] || ''; }
 function levelClass(l){ return 'lv-'+(LEVEL_CLASS[l]||'none'); }
 function typeIndex(t){
@@ -1205,7 +1205,7 @@ function pnHelpHTML(){
   let h = '<h4>What changed</h4>';
   h += order.map(k=>'<div class="pn-row"><span class="pn-k '+levelClass(t[k].level)+'">'+lbEsc(k)
       +'</span><span class="pn-v">'+lbEsc(t[k].explanation||'')+'</span></div>').join('');
-  h += '<h4>Color code</h4>';
+  h += '<h4>Alert level</h4>';
   h += (DESIGNER_EDITS.levels||[]).map(l=>'<div class="pn-row"><span class="pn-k '+levelClass(l)+'">'
       +lbEsc(levelWord(l))+'</span><span class="pn-v">'+lbEsc(
         l === 'Green' ? 'nothing to do: the card plays the same.'
@@ -1214,7 +1214,7 @@ function pnHelpHTML(){
       : 'only matters once you play with the newer boxes.')+'</span></div>').join('');
   h += '<h4>Marks</h4>'
     + '<div class="pn-row"><span class="pn-k"><span class="pn-mark">&lt;!&gt;</span>Errata</span>'
-    + '<span class="pn-v">this printing\u2019s text was changed; the color is the code above.</span></div>'
+    + '<span class="pn-v">this printing\u2019s text was changed; the color is the alert level above.</span></div>'
     + '<div class="pn-row"><span class="pn-k"><span class="pn-mark">\u2020</span>Updated</span>'
     + '<span class="pn-v">a later box printed the card again with the fix on it.</span></div>'
     + '<div class="pn-row"><span class="pn-k"><span class="pn-mark">\u25CF</span>Duplicate</span>'
@@ -1228,7 +1228,12 @@ function togglePnHelp(ev){
   if(ev && ev.stopPropagation) ev.stopPropagation();
   const p = document.getElementById('pnHelp');
   if(!p.innerHTML) p.innerHTML = pnHelpHTML();
+  const opening = !p.classList.contains('open');
   p.classList.toggle('open');
+  if(opening){
+    document.getElementById('statusHead').classList.add('open');
+    document.getElementById('statusBody').classList.add('open');
+  }
   return false;
 }
 function errataKind(e){ return (e && e.kind) || 'errata'; }
