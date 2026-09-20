@@ -654,6 +654,9 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .er-note .er-q{background:rgba(122,138,170,.16);border-radius:3px;padding:0 .3em;}
 .er-run{font-family:'Exo 2',sans-serif;font-size:.8125rem;color:var(--muted);line-height:1.5;}
 .er-run .er-k{font-weight:700;color:#c8d2e0;}
+.er-run sup{font-size:.7em;line-height:0;vertical-align:.45em;}
+.dnote.errata .dnote-label{color:#e8ecf8;}
+.dnote.errata .dnote-rule{background:linear-gradient(90deg,transparent,rgba(232,236,248,.75),transparent);}
 .er-run a{color:#6fd3d3;text-decoration:underline dotted;text-underline-offset:2px;}
 .er-note img.stripimg,.er-note .stripchip{vertical-align:-0.18em;}
 .pn-help-btn{width:1.35rem;height:1.35rem;display:inline-flex;align-items:center;justify-content:center;
@@ -1144,6 +1147,9 @@ function errataProse(s){
   const html = stripBody(convertBody(String(s||''), TOKEN_MAP).text, true);
   return html.replace(/`([^`]+)`/g, '<span class="er-q">$1</span>');
 }
+function ordSup(html){
+  return html.replace(/\b(\d+)(st|nd|rd|th)\b/g, '$1<sup>$2</sup>');
+}
 function boxKeyOfLabel(label){
   const map = DESIGNER_EDITS.boxes || {};
   for(const k in map){ if(label.indexOf(map[k]) === 0) return k; }
@@ -1151,12 +1157,13 @@ function boxKeyOfLabel(label){
 }
 function correctHTML(c, parts){
   return parts.map(p=>{
+    const lab = ordSup(lbEsc(p));
     const k = boxKeyOfLabel(p);
     const pr = k && (FULL_BY_ID[c.id]||[]).find(x=>rawBoxKey(x) === k && rawBoxKey(x) !== c.box);
-    if(!pr) return lbEsc(p);
+    if(!pr) return lab;
     const key = cardKey(pr);
-    return key ? '<a href="#" onclick="return lbGoPrint(event,\'' + lbEsc(key) + '\')">' + lbEsc(p) + '</a>'
-               : lbEsc(p);
+    return key ? '<a href="#" onclick="return lbGoPrint(event,\'' + lbEsc(key) + '\')">' + lab + '</a>'
+               : lab;
   }).join(', ');
 }
 function errataEntryHTML(c, e){
@@ -1165,7 +1172,7 @@ function errataEntryHTML(c, e){
         + lbEsc(e.type || 'Change') + '</span></div>';
   if(e.note) h += '<div class="er-note">'+errataProse(e.note)+'</div>';
   if((e.affected||[]).length)
-    h += '<div class="er-run"><span class="er-k">Affected print runs:</span> '+lbEsc(e.affected.join(', '))+'</div>';
+    h += '<div class="er-run"><span class="er-k">Affected print runs:</span> '+ordSup(lbEsc(e.affected.join(', ')))+'</div>';
   h += '<div class="er-run"><span class="er-k">Corrected in:</span> '
      + ((e.correct||[]).length ? correctHTML(c, e.correct) : 'not yet in print')+'</div>';
   return h + '</div>';
