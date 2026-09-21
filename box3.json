@@ -941,7 +941,7 @@
   },
   {
     "id": "freeman-shax",
-    "name": "Shax",
+    "name": "Shaxs",
     "suit": "Person",
     "source": "Freeman",
     "game_box": "Second Contact",
@@ -976,7 +976,10 @@
       "table": "Attack Activation: Remove an opponent [[away team]] from a neutral [[location]] to gain 1 [[glory]].",
       "goal": "",
       "reward": "Special: After you log this card, draw it from your Log."
-    }
+    },
+    "aliases": [
+      "Shax"
+    ]
   },
   {
     "id": "freeman-uss-carlsbad",
