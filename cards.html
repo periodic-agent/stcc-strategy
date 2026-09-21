@@ -925,7 +925,7 @@ function resolveCards(rawPool, expand){
         return boxRank(rawBoxKey(b)) - boxRank(rawBoxKey(a));
       });
       const chosenImg = imgCandidates.find(c=>c.filename && c.filename.trim());
-      const face = (chosen.variant === 'updated') ? chosen
+      const face = (preferOwn || chosen.variant === 'updated') ? chosen
         : ((FULL_BY_ID[chosen.id] || []).filter(p=>p.variant === 'updated')
             .sort((a,b)=>boxRank(rawBoxKey(b)) - boxRank(rawBoxKey(a)))[0] || chosen);
       const pick = (field) => {

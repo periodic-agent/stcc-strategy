@@ -976,7 +976,7 @@ function resolveCards(rawPool, expand){
         return boxRank(rawBoxKey(b)) - boxRank(rawBoxKey(a));
       });
       const chosenImg = imgCandidates.find(c=>c.filename && c.filename.trim());
-      const face = (chosen.variant === 'updated') ? chosen
+      const face = (preferOwn || chosen.variant === 'updated') ? chosen
         : ((FULL_BY_ID[chosen.id] || []).filter(p=>p.variant === 'updated')
             .sort((a,b)=>boxRank(rawBoxKey(b)) - boxRank(rawBoxKey(a)))[0] || chosen);
       const pick = (field) => {
@@ -1168,11 +1168,22 @@ function traitByKey(k){
   }
   return TRAIT_BY_KEY[k] || null;
 }
+const TOKEN_ALIAS = {'col-restriction':'collective'};
+const PROSE_FIX = [
+  ['a 6 [[col-restriction]] added', 'a Requires [[col6]] restriction has been added']
+];
+function errataFix(s){
+  let t = String(s||'');
+  PROSE_FIX.forEach(p=>{ t = t.split(p[0]).join(p[1]); });
+  return t;
+}
 function errataTokenMap(s){
   const extra = {};
   String(s||'').replace(/\[\[([^\]]+)\]\]/g, (m, tok)=>{
     const low = tok.trim().toLowerCase();
     if(!TOKEN_MAP[low] && !/^[a-z]+:/.test(low)){
+      const al = TOKEN_ALIAS[low];
+      if(al && TOKEN_MAP[al]){ extra[low] = TOKEN_MAP[al]; return m; }
       const t = traitByKey(low.replace(/[^a-z0-9]/g, ''));
       if(t) extra[low] = {type:'trait', value:t};
     }
@@ -1180,8 +1191,9 @@ function errataTokenMap(s){
   });
   return Object.keys(extra).length ? Object.assign({}, TOKEN_MAP, extra) : TOKEN_MAP;
 }
-function errataProse(s){
-  const html = stripBody(convertBody(String(s||''), errataTokenMap(s)).text, true);
+function errataProse(raw){
+  const s = errataFix(raw);
+  const html = stripBody(convertBody(s, errataTokenMap(s)).text, true);
   return html.replace(/`([^`]+)`/g, '<span class="er-q">$1</span>');
 }
 function ordSup(html){

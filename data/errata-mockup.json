@@ -282,7 +282,7 @@
     {
      "type": "Typo",
      "level": "Green",
-     "note": "The `No effect` Control operation was not capitalized in early printings.",
+     "note": "The `Gain 1 [[glory]]` Control operation was not capitalized in early printings.",
      "affected": [
       "Captain's Chair",
       "English 1st-2nd print"
@@ -389,8 +389,13 @@
      "type": "Minor Wording Change",
      "level": "Green",
      "note": "Previously said `take an [[incident]] and discard it`, changed to say `take an [[incident]] to your Discard pile`.",
-     "affected": [],
-     "correct": [],
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later"
+     ],
      "live": true
     }
    ]
@@ -400,9 +405,15 @@
     {
      "type": "Minor Wording Change",
      "level": "Green",
-     "note": "Previously said `take an [[incident]] and put it on the bottom of your Discard pile`, changed to say `take an [[incident]] to the bottom of your Discard pile`.",
-     "affected": [],
-     "correct": [],
+     "note": "Previously said `take an [[incident]] and put it on the bottom of your Draw deck`, changed to say `take an [[incident]] to the bottom of your Draw deck`.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later",
+      "To Boldly Go"
+     ],
      "live": true
     },
     {
@@ -575,7 +586,7 @@
     {
      "type": "Minor Wording Change",
      "level": "Green",
-     "note": "The word `would` has been added to be consistent with other reaction wordings.",
+     "note": "The word `would` has been removed to be consistent with other reaction wordings.",
      "affected": [
       "Second Contact",
       "English 1st print"
@@ -656,11 +667,29 @@
   "president-rillak": {
    "tbg": [
     {
-     "type": "",
-     "level": "",
-     "note": "",
-     "affected": [],
-     "correct": [],
+     "type": "Balance Fix",
+     "level": "Red Alert",
+     "note": "The Reaction operation gained an additional `discard an [[ally]]` cost to gain the [[action]].",
+     "affected": [
+      "To Boldly Go",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "To Boldly Go, 3rd print and later"
+     ],
+     "live": true
+    },
+    {
+     "type": "Balance Fix",
+     "level": "Red Alert",
+     "note": "The Play operation has been severly nerfed: instead of any number, she can return a maximum of 3 [[incident]], and instead of gaining 2 [[glory]], she gains 2 [[dilithium]].",
+     "affected": [
+      "To Boldly Go",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "To Boldly Go, 3rd print and later"
+     ],
      "live": true
     }
    ]
@@ -668,11 +697,16 @@
   "commander-tysess": {
    "tbg": [
     {
-     "type": "",
-     "level": "",
-     "note": "",
-     "affected": [],
-     "correct": [],
+     "type": "Edge case fix",
+     "level": "Yellow Alert",
+     "note": "The Play operation has been adjusted to exclude [[time travel]] cards from being recalled.",
+     "affected": [
+      "To Boldly Go",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "To Boldly Go, 3rd print and later"
+     ],
      "live": true
     }
    ]
@@ -680,11 +714,16 @@
   "vidiians": {
    "tbg": [
     {
-     "type": "",
-     "level": "",
-     "note": "",
-     "affected": [],
-     "correct": [],
+     "type": "Balance Fix",
+     "level": "Red Alert",
+     "note": "The Play operaiton has been severly nerfed: the [[person]] is now restricted to be found not in the Reserve, you either log the [[person]] (and get the [[glory]]) or free play the [[person]] and log the *Vidiians*, with one of the two options being mandatory (as opposed to before where you could just find a [[person]] and keep it).",
+     "affected": [
+      "To Boldly Go",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "To Boldly Go, 3rd print and later"
+     ],
      "live": true
     }
    ]
@@ -692,36 +731,17 @@
   "landru": {
    "tbg": [
     {
-     "type": "",
-     "level": "",
-     "note": "",
-     "affected": [],
-     "correct": [],
+     "type": "Trait fix",
+     "level": "Red Alert",
+     "note": "An [[ancient]] trait has been added to the card. This currently only matters for *Petra Aberdeen*, but it will matter for more cards in the future.",
+     "affected": [
+      "To Boldly Go",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "To Boldly Go, 3rd print and later"
+     ],
      "live": true
-    }
-   ]
-  },
-  "kirk-uss-excelsior": {
-   "tbg": [
-    {
-     "type": "",
-     "level": "",
-     "note": "",
-     "affected": [],
-     "correct": [],
-     "live": false
-    }
-   ]
-  },
-  "riker-uss-zheng-he": {
-   "2nd": [
-    {
-     "type": "",
-     "level": "",
-     "note": "",
-     "affected": [],
-     "correct": [],
-     "live": false
     }
    ]
   },
@@ -730,18 +750,28 @@
     {
      "type": "Typo",
      "level": "Green",
-     "note": "",
-     "affected": [],
-     "correct": [],
-     "live": false
+     "note": "His name was previously incorrectly given as `Shax`.",
+     "affected": [
+      "Second Contact",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "Second Contact, 3rd print and later"
+     ],
+     "live": true
     },
     {
-     "type": "Minor Wording Change",
-     "level": "Green",
-     "note": "",
-     "affected": [],
-     "correct": [],
-     "live": false
+     "type": "Minor Effect Change",
+     "level": "Yellow Alert",
+     "note": "`Log a [[ship]] from your hand. Gain 2 [[glory]]. You may ...` has been changed to `Log a [[ship]] from your hand to gain 2 [[glory]]. You may...` to enforce the card's intention that logging the ship is a cost.",
+     "affected": [
+      "Second Contact",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "Second Contact, 3rd print and later"
+     ],
+     "live": true
     }
    ]
   },
@@ -750,10 +780,15 @@
     {
      "type": "Typo",
      "level": "Green",
-     "note": "",
-     "affected": [],
-     "correct": [],
-     "live": false
+     "note": "His name was previously incorrectly given as `Zephram Cochrane`.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later"
+     ],
+     "live": true
     }
    ]
   },
@@ -762,10 +797,64 @@
     {
      "type": "Typo",
      "level": "Green",
-     "note": "",
-     "affected": [],
+     "note": "The name of the ship was incorrectly given as `Xindi-Reptillian Battleship` (should be spelled with one L only).",
+     "affected": [
+      "No idea",
+      "we keep missing this :D"
+     ],
      "correct": [],
-     "live": false
+     "live": true
+    }
+   ]
+  },
+  "khan-revenge-is-a-dish-best-served-cold": {
+   "tbg": [
+    {
+     "type": "Minor Errata",
+     "level": "Green",
+     "note": "The `[[-1vp]]` in the Special operation was previously incorrectly rendered, but fully comprehensible.",
+     "affected": [
+      "To Boldly Go",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "To Boldly Go, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "pike-kherkovians": {
+   "2nd": [
+    {
+     "type": "Typo",
+     "level": "Green",
+     "note": "This card's title was previously incorrectly given as `Kherkovians`",
+     "affected": [
+      "Second Contact",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "Second Contact, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "riker-deanna-troi-riker": {
+   "2nd": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "The Play operation has been changed from `Look at the top card of your deck. You may return it to the top OR discard it OR log it` to  `Draw a card, then either: put it on the top of your deck OR discard it OR log it` to be consistant with Picard's Deanna and Shran's Jhamel.",
+     "affected": [
+      "Second Contact",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "Second Contact, 3rd print and later"
+     ],
+     "live": true
     }
    ]
   }
