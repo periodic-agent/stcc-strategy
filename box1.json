@@ -434,14 +434,7 @@
       "table": "Reaction: After putting a [[cargo]] into play, draw a card.",
       "goal": "",
       "reward": ""
-    },
-    "errata": [
-      {
-        "kind": "errata",
-        "type": "Card replacement",
-        "note": "replacement card included in To Boldly Go and Second Contact"
-      }
-    ]
+    }
   },
   {
     "id": "moriarty",
@@ -716,14 +709,7 @@
       "table": "[[action]] Activation: Put a [[ship]] in your Staging Area (without triggering its play operation) and spend 3 [[dilithium]] to take the top [[encounter]] and log this card.",
       "goal": "",
       "reward": ""
-    },
-    "errata": [
-      {
-        "kind": "silent",
-        "type": "Card name change",
-        "note": "2nd print run"
-      }
-    ]
+    }
   },
   {
     "id": "biobed",
@@ -897,14 +883,7 @@
       "table": "",
       "goal": "",
       "reward": ""
-    },
-    "errata": [
-      {
-        "kind": "silent",
-        "type": "Wording correction",
-        "note": "2nd print run"
-      }
-    ]
+    }
   },
   {
     "id": "horta",
@@ -1300,18 +1279,7 @@
       "table": "Activation: Warp this ship.",
       "goal": "",
       "reward": "Clean-up: You may dismiss this ship to gain 2 [[glory]]."
-    },
-    "errata": [
-      {
-        "kind": "update",
-        "type": "Operation redesign"
-      },
-      {
-        "kind": "silent",
-        "type": "Operation redesign",
-        "note": "2nd print run"
-      }
-    ]
+    }
   },
   {
     "id": "ktinga-battlecruiser",
@@ -1461,13 +1429,7 @@
       "table": "Activation: Spend 1 [[dilithium]] to warp this ship. Activation: Discard a card to beam a card here. Activation: Dismiss this ship and discard a card to gain 1 [[glory]], 1 [[action]] and recall a non-[[time travel]] card from your Staging Area.",
       "goal": "",
       "reward": ""
-    },
-    "errata": [
-      {
-        "kind": "update",
-        "type": "Operation redesign"
-      }
-    ]
+    }
   },
   {
     "id": "uss-pasteur",

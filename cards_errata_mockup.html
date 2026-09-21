@@ -676,7 +676,6 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   letter-spacing:.03em;text-transform:uppercase;}
 .pn-row .pn-v{color:var(--muted);}
 .pn-mark{font-weight:700;margin-right:.3rem;}
-
 .st-pill .st-mk{display:inline-block;font-size:.8em;line-height:1;transform:translateY(-.08em);}
 </style>
 <meta name="description" content="Searchable card database for Star Trek: Captain's Chair. Filter every card by box, deck, suit, traits, skills and name — built for mid-game lookups.">
@@ -691,8 +690,8 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 </head>
 <body>
 
-<div class="mock-bar">Private mockup for the designers: the edit list rendered in the card scanner.
-<b>Not linked from the site.</b></div>
+<div class="mock-bar">Private review page for the designers: the edit list as it
+would appear in the card scanner. <b>Not linked from the site.</b></div>
 <div class="nav-bar"><a href="cards.html">← Back to the card scanner</a></div>
 
 <header class="chapter-header">
@@ -741,7 +740,6 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>view:details</code><span>open in Details view; the Images | Details toggle writes it, so a shared link keeps the view</span></div>
     <div class="qh-row"><code>variant:update</code> · <code>variant:duplicate</code><span>cards wearing that badge in the current boxes</span></div>
     <div class="qh-row"><code>errata</code> · <code>update</code> · <code>duplicate</code><span>printings marked &lt;!&gt; (official errata or a silent patch; see the card's Errata section), &dagger; (updated in a later box), or &#9679; (reprinted in another box)</span></div>
-    <div class="qh-row"><code>patched</code><span>cards fixed silently between print runs of the same box</span></div>
     <div class="qh-row"><code>errata:wording</code> · <code>errata:"operation redesign"</code><span>errata of that type: card name change, card trait change, operation added/removed, operation redesign, wording correction, card replacement</span></div>
     <div class="qh-row"><code>notes</code> · <code>strategy</code><span>cards with a designer's note, or with their own section in a strategy guide</span></div>
     <div class="qh-note">Click a card for its scan, errata, notes and guide links; the arrows page through the results. Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>
@@ -1246,7 +1244,7 @@ function pnHelpHTML(){
       +lbEsc(levelWord(l))+'</span><span class="pn-v">'+lbEsc(
         l === 'Green' ? 'nothing to do: the card plays the same.'
       : l === 'Yellow Alert' ? 'worth knowing: the card can behave differently in a corner case.'
-      : l === 'Red Alert' ? 'mark or replace your copy.'
+      : l === 'Red Alert' ? 'if possible, print paste-up until replacements can be provided.'
       : 'only matters once you play with the newer boxes.')+'</span></div>').join('');
   h += '<h4>Marks</h4>'
     + '<div class="pn-row"><span class="pn-k"><span class="pn-mark">&lt;!&gt;</span>Errata</span>'
@@ -1273,7 +1271,7 @@ function togglePnHelp(ev){
   return false;
 }
 function errataKind(e){ return (e && e.kind) || 'errata'; }
-function errataEntries(c, kind){ return (c.errata||[]).filter(e=>errataKind(e)===kind); }
+
 function markEntries(c){ return (c.errata||[]).filter(e=>errataKind(e)!=='update'); }
 function hasErrataMark(c){ return markEntries(c).length > 0 && c.badgeKind !== 'update'; }
 function errataLine(e){
@@ -1284,7 +1282,6 @@ function errataLine(e){
   return t+(d ? ', '+lbEsc(d) : '');
 }
 function hasExtra(c, k){
-  if(k === 'patched')  return errataEntries(c,'silent').length > 0;
   if(k === 'errata')   return hasErrataMark(c);
   if(k === 'notes')    return !!noteOf(c);
   if(k === 'strategy') return hasStrategy(c);
@@ -1419,7 +1416,6 @@ function parseQuery(text, vocab){
              strips:[],negStrips:[],text:[],negText:[],kindText:[],negKindText:[],view:'',
              has:[],negHas:[],changeType:[],negChangeType:[]};
   const HAS_WORDS={errata:'errata',update:'update',updates:'update',notes:'notes',note:'notes',
-                   patched:'patched',patch:'patched',
                    duplicate:'duplicate',duplicates:'duplicate',reprint:'duplicate',reprints:'duplicate',
                    strategy:'strategy',guides:'strategy'};
   const tokRe=/(-)?(?:([A-Za-z][A-Za-z-]*)\s*(:|>=|<=|>|<))?("([^"]*)"|[^\s"]+)/g;

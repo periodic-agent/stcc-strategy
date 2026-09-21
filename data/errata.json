@@ -1,0 +1,862 @@
+{
+ "note": "Card edits provided by the designers. Types and levels are theirs.",
+ "types": {
+  "Minor Wording Change": {
+   "level": "Green",
+   "index": "4.0",
+   "explanation": "The words have been changed, but the card does the same."
+  },
+  "Errata": {
+   "level": "Red Alert",
+   "index": "0.0",
+   "explanation": "We screwed up. A replacement is being provided asap."
+  },
+  "Edge case fix": {
+   "level": "Yellow Alert",
+   "index": "3.0",
+   "explanation": "There are situations in which case this card can be broken, so a new version was devised. If you have the old version, you are perfectly fine, unless you're literally trying to provoke the situation we are addressing."
+  },
+  "Typo": {
+   "level": "Green",
+   "index": "5.0",
+   "explanation": "Typo, usually in the card's name. Nothing gameplay relevant."
+  },
+  "Minor Effect Change": {
+   "level": "Yellow Alert",
+   "index": "2.0",
+   "explanation": "The words have been changed, and it now technically does something different in a small way. If you have the old card and don't have any weird questions, then there is nothing to worry about. If you have weird questions, the new wording should be unambiguous."
+  },
+  "Cross-set update": {
+   "level": "Black Alert",
+   "index": "6.0",
+   "explanation": "The old version was perfectly fine at the time, but demands of newer boxes required the change. If you're using only the older box, you're fine having the older copy."
+  },
+  "Trait fix": {
+   "level": "Red Alert",
+   "index": "1.0",
+   "explanation": "We realized a trait was missing/wrong trait was added to a card. If you can mark it on your card until a replacement can be provided it would be great, but it won't ruin your game if you don't."
+  },
+  "Minor Errata": {
+   "level": "Green",
+   "index": "4.0",
+   "explanation": "We screwed up, but it won't really affect you."
+  },
+  "Balance Fix": {
+   "level": "Red Alert",
+   "index": "1.0",
+   "explanation": "We realized there is something wrong with the card's balance, and can cause some reproducible issues in its current context. If you can mark it on your card until a replacement can be provided it would be great, but if you don't, it will still be playable, just the card will be noticeably too weak/too strong."
+  }
+ },
+ "levels": [
+  "Green",
+  "Yellow Alert",
+  "Red Alert",
+  "Black Alert"
+ ],
+ "boxes": {
+  "core": "Captain's Chair",
+  "tbg": "To Boldly Go",
+  "2nd": "Second Contact",
+  "promo1": "Promo pack 1",
+  "promo2": "Promo pack 2"
+ },
+ "entries": {
+  "cloaking-device": {
+   "core": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "Previously said `gains [[cloak]]`, has been changed to `additionally treated as [[cloak]]` to be consistent.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later",
+      "To Boldly Go",
+      "Resistance is Futile"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "koloth-prototype-cloak": {
+   "core": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "Previously said `gains [[cloak]]`, has been changed to `additionally treated as [[cloak]]` to be consistent.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "shran-ambassador-thoris": {
+   "core": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "Previously said `all players`, has been changed to `both players`, error was caused by a copy paste from an Imperium CLH card.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "mirok": {
+   "core": [
+    {
+     "type": "Major Errata",
+     "level": "Red Alert",
+     "note": "Previously incorrectly showed the Play operation of *Tachyon Detection Grid* instead. Replacements have been issued in TBG and 2C.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later",
+      "a replacement card"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "tevrin-krit": {
+   "core": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "Previously said `...beam the gained card to a [[ship]] you have in play to...`, has been changed to `...beam the gained card to a deployed [[ship]] to...`.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later",
+      "To Boldly Go"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "holographic-drone-ship": {
+   "core": [
+    {
+     "type": "Edge case fix",
+     "level": "Yellow Alert",
+     "note": "The first Play operation got an additional `non-[[time travel]]` restriction. The dismissal reworked from an Activation to an optional Clean-up operation.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later",
+      "To Boldly Go",
+      "Resistance is Futile"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "uss-enterprise-c": {
+   "core": [
+    {
+     "type": "Edge case fix",
+     "level": "Yellow Alert",
+     "note": "The Play operation used to allow a single beaming, whereas now it allows for a beam+warp or two beamings, regardless it exhausts the deployed ship.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later",
+      "To Boldly Go",
+      "Resistance is Futile"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "archer-iv": {
+   "core": [
+    {
+     "type": "Typo",
+     "level": "Green",
+     "note": "The `No effect` Control operation was not capitalized in early printings.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later",
+      "To Boldly Go"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "corvan-ii": {
+   "core": [
+    {
+     "type": "Typo",
+     "level": "Green",
+     "note": "The `No effect` Control operation was not capitalized in early printings.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later",
+      "Resistance is Futile"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "delta-vega": {
+   "core": [
+    {
+     "type": "Typo",
+     "level": "Green",
+     "note": "The `No effect` Control operation was not capitalized in early printings.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later",
+      "To Boldly Go"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "deep-space-k-7": {
+   "core": [
+    {
+     "type": "Typo",
+     "level": "Green",
+     "note": "The `No effect` Control operation was not capitalized in early printings.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "kelvas-docks": {
+   "core": [
+    {
+     "type": "Typo",
+     "level": "Green",
+     "note": "The `No effect` Control operation was not capitalized in early printings.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later",
+      "To Boldly Go"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "verex-iii": {
+   "core": [
+    {
+     "type": "Typo",
+     "level": "Green",
+     "note": "The `Gain 1 [[glory]]` Control operation was not capitalized in early printings.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later",
+      "To Boldly Go",
+      "Resistance is Futile"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "xahea": {
+   "core": [
+    {
+     "type": "Typo",
+     "level": "Green",
+     "note": "The `No effect` Control operation was not capitalized in early printings.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later",
+      "To Boldly Go"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "burnham-jett-reno": {
+   "core": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "Previously said `Take an [[incident]] to gain a [[cargo]] or a [[ship]] and discard the gained card.`, has been changed to `Take an [[incident]] to gain a [[cargo]]/[[ship]] to your Discard pile.`",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "holosuite": {
+   "core": [
+    {
+     "type": "Minor Effect Change",
+     "level": "Yellow Alert",
+     "note": "Previously said `If you spent 2 or more, draw the gained card.`, has been changed to `If you spent 2 or more, draw a card.`",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later",
+      "To Boldly Go"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "koloth-qonos": {
+   "core": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "Previously used the word `pay` instead of `spend`.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "sona-battlecruiser": {
+   "core": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "Previously said `Your opponent discards a card`, changed to say `Force your opponent to discard a card.`",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "picard-worf": {
+   "core": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "Previously said `take an [[incident]] and discard it`, changed to say `take an [[incident]] to your Discard pile`.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "solum": {
+   "core": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "Previously said `take an [[incident]] and put it on the bottom of your Draw deck`, changed to say `take an [[incident]] to the bottom of your Draw deck`.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later",
+      "To Boldly Go"
+     ],
+     "live": true
+    },
+    {
+     "type": "Cross-set update",
+     "level": "Black Alert",
+     "note": "The [[alien]] trait was changed to [[vau'nakat]].",
+     "affected": [
+      "Captain's Chair"
+     ],
+     "correct": [
+      "To Boldly Go"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "phlox": {
+   "core": [
+    {
+     "type": "Cross-set update",
+     "level": "Black Alert",
+     "note": "An [[nx-01]] trait was added.",
+     "affected": [
+      "Captain's Chair"
+     ],
+     "correct": [
+      "To Boldly Go"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "kazon-raider": {
+   "core": [
+    {
+     "type": "Cross-set update",
+     "level": "Black Alert",
+     "note": "A [[kazon]] trait was added.",
+     "affected": [
+      "Captain's Chair"
+     ],
+     "correct": [
+      "To Boldly Go"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "letheans": {
+   "core": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "`Dismiss (one of) your opponent's Duty Officer(s)` has been changed to `Dismiss an opponent Duty Officer.`",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "sisko-garak": {
+   "core": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "`Dismiss (one of) your opponent's Duty Officer(s)` has been changed to `Dismiss an opponent Duty Officer.`",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "picard-mission-3": {
+   "core": [
+    {
+     "type": "Minor Errata",
+     "level": "Green",
+     "note": "`DISCOVERY` should be `[[encounter]]`.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st print"
+     ],
+     "correct": [
+      "Captain's Chair, 2nd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "burnham-mission-1": {
+   "core": [
+    {
+     "type": "Minor Errata",
+     "level": "Green",
+     "note": "`DISCOVERY` should be `[[encounter]]`.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st print"
+     ],
+     "correct": [
+      "Captain's Chair, 2nd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "conspiracy": {
+   "core": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "The clarification `(not even in the Clean-up Step)` has been added to its Special operation",
+     "affected": [
+      "Captain's Chair",
+      "English 1-3rd print"
+     ],
+     "correct": [
+      "Captain's Chair, 4th print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "eva-suits": {
+   "tbg": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "The word order of the reaction has been changed to be consistent with usage elsewhere, no meaningful change.",
+     "affected": [
+      "To Boldly Go",
+      "English 1st print"
+     ],
+     "correct": [
+      "To Boldly Go, 2nd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "drones-of-cube-90182": {
+   "promo2": [
+    {
+     "type": "Minor Effect Change",
+     "level": "Yellow Alert",
+     "note": "`Beam this card to a SHIP <<ship>>. Either:` has been changed to `Beam this card to a SHIP <<ship>> to either:`, to enforce the card's intention that beaming is a cost.",
+     "affected": [
+      "Promo pack 2",
+      "English 1st print"
+     ],
+     "correct": [
+      "Promo pack 2, 2nd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "nova-fleet": {
+   "2nd": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "The word `would` has been removed to be consistent with other reaction wordings.",
+     "affected": [
+      "Second Contact",
+      "English 1st print"
+     ],
+     "correct": [
+      "Second Contact, 2nd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "phasers": {
+   "core": [
+    {
+     "type": "Balance Fix",
+     "level": "Red Alert",
+     "note": "The first operation originally had an [[action]] cost, this has been removed.",
+     "affected": [
+      "Captain's Chair"
+     ],
+     "correct": [
+      "To Boldly Go"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "borg-spatial-trajector": {
+   "core": [
+    {
+     "type": "Minor Errata",
+     "level": "Green",
+     "note": "The wording of the 2nd Play op has been changed and a 6 [[col-restriction]] added to match how the other Borg specific operations are worded in future sets.",
+     "affected": [
+      "Captain's Chair"
+     ],
+     "correct": [
+      "To Boldly Go",
+      "Resistance is Futile"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "lirpa": {
+   "core": [
+    {
+     "type": "Cross-set update",
+     "level": "Black Alert",
+     "note": "A `(max 5)` has been added to avoid being OP for Soval.",
+     "affected": [
+      "Captain's Chair"
+     ],
+     "correct": [
+      "To Boldly Go"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "orb-of-time": {
+   "core": [
+    {
+     "type": "Cross-set update",
+     "level": "Black Alert",
+     "note": "A [[transcendent]] trait has been added.",
+     "affected": [
+      "Captain's Chair"
+     ],
+     "correct": [
+      "To Boldly Go",
+      "Resistance is Futile"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "president-rillak": {
+   "tbg": [
+    {
+     "type": "Balance Fix",
+     "level": "Red Alert",
+     "note": "The Reaction operation gained an additional `discard an [[ally]]` cost to gain the [[action]].",
+     "affected": [
+      "To Boldly Go",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "To Boldly Go, 3rd print and later"
+     ],
+     "live": true
+    },
+    {
+     "type": "Balance Fix",
+     "level": "Red Alert",
+     "note": "The Play operation has been severly nerfed: instead of any number, she can return a maximum of 3 [[incident]], and instead of gaining 2 [[glory]], she gains 2 [[dilithium]].",
+     "affected": [
+      "To Boldly Go",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "To Boldly Go, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "commander-tysess": {
+   "tbg": [
+    {
+     "type": "Edge case fix",
+     "level": "Yellow Alert",
+     "note": "The Play operation has been adjusted to exclude [[time travel]] cards from being recalled.",
+     "affected": [
+      "To Boldly Go",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "To Boldly Go, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "vidiians": {
+   "tbg": [
+    {
+     "type": "Balance Fix",
+     "level": "Red Alert",
+     "note": "The Play operaiton has been severly nerfed: the [[person]] is now restricted to be found not in the Reserve, you either log the [[person]] (and get the [[glory]]) or free play the [[person]] and log the *Vidiians*, with one of the two options being mandatory (as opposed to before where you could just find a [[person]] and keep it).",
+     "affected": [
+      "To Boldly Go",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "To Boldly Go, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "landru": {
+   "tbg": [
+    {
+     "type": "Trait fix",
+     "level": "Red Alert",
+     "note": "An [[ancient]] trait has been added to the card. This currently only matters for *Petra Aberdeen*, but it will matter for more cards in the future.",
+     "affected": [
+      "To Boldly Go",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "To Boldly Go, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "freeman-shax": {
+   "2nd": [
+    {
+     "type": "Typo",
+     "level": "Green",
+     "note": "His name was previously incorrectly given as `Shax`.",
+     "affected": [
+      "Second Contact",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "Second Contact, 3rd print and later"
+     ],
+     "live": true
+    },
+    {
+     "type": "Minor Effect Change",
+     "level": "Yellow Alert",
+     "note": "`Log a [[ship]] from your hand. Gain 2 [[glory]]. You may ...` has been changed to `Log a [[ship]] from your hand to gain 2 [[glory]]. You may...` to enforce the card's intention that logging the ship is a cost.",
+     "affected": [
+      "Second Contact",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "Second Contact, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "zefram-cochrane": {
+   "core": [
+    {
+     "type": "Typo",
+     "level": "Green",
+     "note": "His name was previously incorrectly given as `Zephram Cochrane`.",
+     "affected": [
+      "Captain's Chair",
+      "English 1st-2nd print"
+     ],
+     "correct": [
+      "Captain's Chair, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "xindi-reptillian-battleship": {
+   "core": [
+    {
+     "type": "Typo",
+     "level": "Green",
+     "note": "The name of the ship was incorrectly given as `Xindi-Reptillian Battleship` (should be spelled with one L only).",
+     "affected": [
+      "No idea",
+      "we keep missing this :D"
+     ],
+     "correct": [],
+     "live": true
+    }
+   ]
+  },
+  "khan-revenge-is-a-dish-best-served-cold": {
+   "tbg": [
+    {
+     "type": "Minor Errata",
+     "level": "Green",
+     "note": "The `[[-1vp]]` in the Special operation was previously incorrectly rendered, but fully comprehensible.",
+     "affected": [
+      "To Boldly Go",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "To Boldly Go, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "pike-kherkovians": {
+   "2nd": [
+    {
+     "type": "Typo",
+     "level": "Green",
+     "note": "This card's title was previously incorrectly given as `Kherkovians`",
+     "affected": [
+      "Second Contact",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "Second Contact, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "riker-deanna-troi-riker": {
+   "2nd": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "The Play operation has been changed from `Look at the top card of your deck. You may return it to the top OR discard it OR log it` to  `Draw a card, then either: put it on the top of your deck OR discard it OR log it` to be consistant with Picard's Deanna and Shran's Jhamel.",
+     "affected": [
+      "Second Contact",
+      "1st and 2nd print"
+     ],
+     "correct": [
+      "Second Contact, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  }
+ }
+}

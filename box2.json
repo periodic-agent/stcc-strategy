@@ -109,14 +109,7 @@
       "table": "Reaction: After sending an [[away team]] to a controlled [[location]], spend 1 [[dilithium]] to trigger that card's control operation.",
       "goal": "",
       "reward": ""
-    },
-    "errata": [
-      {
-        "kind": "errata",
-        "type": "Operation redesign",
-        "date": "2026-09"
-      }
-    ]
+    }
   },
   {
     "id": "degra",
@@ -449,14 +442,7 @@
       "table": "Reaction: After playing *Utilize* or *Inspire*, discard an [[ally]] to gain an [[action]]. Passive: You may additionally have another [[person]] with [[ambassador]] on duty.",
       "goal": "",
       "reward": ""
-    },
-    "errata": [
-      {
-        "kind": "errata",
-        "type": "Operation redesign",
-        "date": "2026-09"
-      }
-    ]
+    }
   },
   {
     "id": "riva",
@@ -2420,14 +2406,7 @@
       "table": "",
       "goal": "",
       "reward": ""
-    },
-    "errata": [
-      {
-        "kind": "errata",
-        "type": "Operation redesign",
-        "date": "2026-09"
-      }
-    ]
+    }
   },
   {
     "id": "borg-probe",

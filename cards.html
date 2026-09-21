@@ -630,6 +630,49 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .st-pill[data-st=notes]{border-color:#f0b323;color:#f0b323;}
 .st-pill[data-st=notes].active{background:#f0b323;color:#000;}
 .active-summary.status{color:#c8d2e0;}
+.lv-green{color:#4ac48a;}
+.lv-yellow{color:#e8d44a;}
+.lv-red{color:#e05a5a;}
+.lv-black{color:#05070c;text-shadow:0 0 2px rgba(190,202,220,.95),0 0 5px rgba(190,202,220,.55);}
+.lv-none{color:#9aa8bc;}
+.nm-mark.err.lv-green,.cid2 .meta.errata.lv-green{color:#4ac48a;}
+.nm-mark.err.lv-yellow,.cid2 .meta.errata.lv-yellow{color:#e8d44a;}
+.nm-mark.err.lv-red,.cid2 .meta.errata.lv-red{color:#e05a5a;}
+.nm-mark.err.lv-black,.cid2 .meta.errata.lv-black{color:#05070c;text-shadow:0 0 2px rgba(190,202,220,.95),0 0 5px rgba(190,202,220,.55);}
+.nm-mark.err.lv-none,.cid2 .meta.errata.lv-none{color:#9aa8bc;}
+.st-pill[data-st=errata]{border-color:#e8ecf8;color:#e8ecf8;}
+.st-pill[data-st=errata].active{background:#e8ecf8;color:#000;}
+.er-entry{padding:.35rem 0 .5rem;}
+.er-entry + .er-entry{border-top:1px solid rgba(122,138,170,.25);}
+.er-head{display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap;}
+.er-type{font-family:'Antonio',sans-serif;font-weight:600;font-size:.95rem;letter-spacing:.03em;
+  text-transform:uppercase;}
+.er-note{font-family:'Exo 2',sans-serif;font-size:.8125rem;line-height:1.5;color:#e3e8f4;margin:.3rem 0 .35rem;}
+.er-note .er-q{background:rgba(122,138,170,.16);border-radius:3px;padding:0 .3em;}
+.er-run{font-family:'Exo 2',sans-serif;font-size:.8125rem;color:var(--muted);line-height:1.5;}
+.er-run .er-k{font-weight:700;color:#c8d2e0;}
+.er-run sup{font-size:.7em;line-height:0;vertical-align:.45em;}
+.dnote.errata .dnote-label{color:#e8ecf8;}
+.dnote.errata .dnote-rule{background:linear-gradient(90deg,transparent,rgba(232,236,248,.75),transparent);}
+.dnote.updated .dnote-label{color:#4a9fd4;}
+.dnote.updated .dnote-rule{background:linear-gradient(90deg,transparent,rgba(74,159,212,.75),transparent);}
+.er-run a{color:#6fd3d3;text-decoration:underline dotted;text-underline-offset:2px;}
+.er-note img.stripimg,.er-note .stripchip{vertical-align:-0.18em;}
+.pn-help-btn{width:1.35rem;height:1.35rem;display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid var(--border);border-radius:50%;color:var(--muted);cursor:pointer;
+  font-family:'Exo 2',sans-serif;font-weight:600;font-size:.75rem;user-select:none;margin-left:.45rem;}
+.pn-help-btn:hover{color:var(--blue);border-color:var(--blue);}
+.pn-help{display:none;background:var(--bg2);border:1px solid var(--border);border-radius:4px;
+  padding:.8rem 1rem;margin:.5rem 0 .2rem;font-family:'Exo 2',sans-serif;font-size:.8125rem;line-height:1.6;}
+.pn-help.open{display:block;}
+.pn-help h4{font-family:'Orbitron',sans-serif;font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--blue);margin:.6rem 0 .3rem;font-weight:400;}
+.pn-help h4:first-child{margin-top:0;}
+.pn-row{display:flex;gap:.6rem;align-items:baseline;}
+.pn-row .pn-k{flex:0 0 11rem;font-family:'Antonio',sans-serif;font-weight:600;font-size:.86rem;
+  letter-spacing:.03em;text-transform:uppercase;}
+.pn-row .pn-v{color:var(--muted);}
+.pn-mark{font-weight:700;margin-right:.3rem;}
 .st-pill .st-mk{display:inline-block;font-size:.8em;line-height:1;transform:translateY(-.08em);}
 </style>
 <meta name="description" content="Searchable card database for Star Trek: Captain's Chair. Filter every card by box, deck, suit, traits, skills and name — built for mid-game lookups.">
@@ -692,7 +735,6 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>view:details</code><span>open in Details view; the Images | Details toggle writes it, so a shared link keeps the view</span></div>
     <div class="qh-row"><code>variant:update</code> · <code>variant:duplicate</code><span>cards wearing that badge in the current boxes</span></div>
     <div class="qh-row"><code>errata</code> · <code>update</code> · <code>duplicate</code><span>printings marked &lt;!&gt; (official errata or a silent patch; see the card's Errata section), &dagger; (updated in a later box), or &#9679; (reprinted in another box)</span></div>
-    <div class="qh-row"><code>patched</code><span>cards fixed silently between print runs of the same box</span></div>
     <div class="qh-row"><code>errata:wording</code> · <code>errata:"operation redesign"</code><span>errata of that type: card name change, card trait change, operation added/removed, operation redesign, wording correction, card replacement</span></div>
     <div class="qh-row"><code>notes</code> · <code>strategy</code><span>cards with a designer's note, or with their own section in a strategy guide</span></div>
     <div class="qh-note">Click a card for its scan, errata, notes and guide links; the arrows page through the results. Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>
@@ -796,12 +838,14 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="collapsible-header" id="statusHead" onclick="toggleSection(this,'statusBody','statusSummary')">
       <div style="display:flex;align-items:center;gap:0.4rem;">
         <div class="filter-label">Printings and notes</div>
+        <span class="pn-help-btn" id="pnHelpBtn" title="What these marks mean" onclick="return togglePnHelp(event)">?</span>
         <span class="active-summary status" id="statusSummary"></span>
       </div>
       <span class="collapsible-arrow">&#9660;</span>
     </div>
     <div class="collapsible-body" id="statusBody">
       <div class="pill-row" id="statusFilters"></div>
+    <div class="pn-help" id="pnHelp"></div>
     </div>
   </div>
 
@@ -954,6 +998,7 @@ function resolveCards(rawPool, expand){
               : preferOwn ? []
               : ((group.find(pr=>Array.isArray(pr.errata) && pr.errata.length) || {}).errata || []),
         virtual: !!chosen.virtual,
+        updatedFrom: Array.isArray(chosen.updatedFrom) ? chosen.updatedFrom : [],
         vp: (() => { const v = (chosen.vp !== undefined && chosen.vp !== null) ? chosen.vp : chosen.glory;
                      if (v !== undefined && v !== null) return v;
                      for (const pr of group) { const w = (pr.vp !== undefined && pr.vp !== null) ? pr.vp : pr.glory; if (w !== undefined && w !== null) return w; }
@@ -1053,6 +1098,7 @@ async function loadBoxes(){
   }
   await loadExtras();
   buildFullPool();
+  await loadDesignerEdits();
 }
 
 async function loadExtras(){
@@ -1071,8 +1117,156 @@ function strategyLinksOf(c){
   return (STRATEGY_LINKS.cards[c.id] || []).map(g=>({href:g + '#' + c.id, label:STRATEGY_LINKS.guides[g] || g}));
 }
 function noteOf(c){ const n = NOTES[c.id]; return (n && n.note) ? String(n.note) : ''; }
+
+let DESIGNER_EDITS = {types:{}, entries:{}, boxes:{}};
+const LEVEL_CLASS = {'Green':'green','Yellow Alert':'yellow','Red Alert':'red','Black Alert':'black'};
+const LEVEL_WORD = {'Green':'Green','Yellow Alert':'Yellow','Red Alert':'Red','Black Alert':'Black'};
+function levelWord(l){ return LEVEL_WORD[l] || ''; }
+function levelClass(l){ return 'lv-'+(LEVEL_CLASS[l]||'none'); }
+function typeIndex(t){
+  const v = (DESIGNER_EDITS.types[t]||{}).index;
+  return (v === undefined || v === null || v === '') ? 99 : Number(v);
+}
+async function loadDesignerEdits(){
+  try{
+    const r = await fetch('data/errata.json', {cache:'no-store'});
+    if(r.ok) DESIGNER_EDITS = await r.json();
+  }catch(e){ console.warn('Could not load data/errata.json', e); }
+  FULL_POOL.forEach(c=>{
+    const byBox = DESIGNER_EDITS.entries[c.id];
+    const here = rawBoxKey(c);
+    const list = byBox && byBox[here];
+    if(list && list.length) c.errata = list.slice().sort((a,b)=>typeIndex(a.type)-typeIndex(b.type));
+    else delete c.errata;
+    const from = [];
+    for(const src in (byBox||{})){
+      if(src === here) continue;
+      byBox[src].forEach(e=>{
+        if((e.correct||[]).some(p=>boxKeyOfLabel(p) === here)) from.push(e);
+      });
+    }
+    if(from.length) c.updatedFrom = from.sort((a,b)=>typeIndex(a.type)-typeIndex(b.type));
+    else delete c.updatedFrom;
+  });
+}
+let TRAIT_BY_KEY = null;
+function traitByKey(k){
+  if(!TRAIT_BY_KEY){
+    TRAIT_BY_KEY = {};
+    FULL_POOL.forEach(c=>{
+      ['species_traits','regular_traits','other_traits'].forEach(f=>{
+        (c[f]||[]).forEach(t=>{ TRAIT_BY_KEY[String(t).toLowerCase().replace(/[^a-z0-9]/g,'')] = t; });
+      });
+    });
+  }
+  return TRAIT_BY_KEY[k] || null;
+}
+const TOKEN_ALIAS = {'col-restriction':'collective'};
+const PROSE_FIX = [
+  ['a 6 [[col-restriction]] added', 'a Requires [[col6]] restriction has been added']
+];
+function errataFix(s){
+  let t = String(s||'');
+  PROSE_FIX.forEach(p=>{ t = t.split(p[0]).join(p[1]); });
+  return t;
+}
+function errataTokenMap(s){
+  const extra = {};
+  String(s||'').replace(/\[\[([^\]]+)\]\]/g, (m, tok)=>{
+    const low = tok.trim().toLowerCase();
+    if(!TOKEN_MAP[low] && !/^[a-z]+:/.test(low)){
+      const al = TOKEN_ALIAS[low];
+      if(al && TOKEN_MAP[al]){ extra[low] = TOKEN_MAP[al]; return m; }
+      const t = traitByKey(low.replace(/[^a-z0-9]/g, ''));
+      if(t) extra[low] = {type:'trait', value:t};
+    }
+    return m;
+  });
+  return Object.keys(extra).length ? Object.assign({}, TOKEN_MAP, extra) : TOKEN_MAP;
+}
+function errataProse(raw){
+  const s = errataFix(raw);
+  const html = stripBody(convertBody(s, errataTokenMap(s)).text, true);
+  return html.replace(/`([^`]+)`/g, '<span class="er-q">$1</span>');
+}
+function ordSup(html){
+  return html.replace(/\b(\d+)(st|nd|rd|th)\b/g, '$1<sup>$2</sup>');
+}
+function boxKeyOfLabel(label){
+  const map = DESIGNER_EDITS.boxes || {};
+  for(const k in map){ if(label.indexOf(map[k]) === 0) return k; }
+  return null;
+}
+function correctHTML(c, parts){
+  return parts.map(p=>{
+    const lab = ordSup(lbEsc(p));
+    const k = boxKeyOfLabel(p);
+    const pr = k && (FULL_BY_ID[c.id]||[]).find(x=>rawBoxKey(x) === k && rawBoxKey(x) !== c.box);
+    if(!pr) return lab;
+    const key = cardKey(pr);
+    return key ? '<a href="#" onclick="return lbGoPrint(event,\'' + lbEsc(key) + '\')">' + lab + '</a>'
+               : lab;
+  }).join(', ');
+}
+function errataEntryHTML(c, e){
+  const cls = levelClass(e.level);
+  let h = '<div class="er-entry"><div class="er-head"><span class="er-type '+cls+'">'
+        + lbEsc(e.type || 'Change') + '</span></div>';
+  if(e.note) h += '<div class="er-note">'+errataProse(e.note)+'</div>';
+  if((e.affected||[]).length)
+    h += '<div class="er-run"><span class="er-k">Affected print runs:</span> '+ordSup(lbEsc(e.affected.join(', ')))+'</div>';
+  h += '<div class="er-run"><span class="er-k">Corrected in:</span> '
+     + ((e.correct||[]).length ? correctHTML(c, e.correct) : 'not yet in print')+'</div>';
+  return h + '</div>';
+}
+function updatedEntryHTML(c, e){
+  const cls = levelClass(e.level);
+  let h = '<div class="er-entry"><div class="er-head"><span class="er-type '+cls+'">'
+        + lbEsc(e.type || 'Change') + '</span></div>';
+  if(e.note) h += '<div class="er-note">'+errataProse(e.note)+'</div>';
+  if((e.affected||[]).length)
+    h += '<div class="er-run"><span class="er-k">Changed from:</span> '+correctHTML(c, e.affected)+'</div>';
+  return h + '</div>';
+}
+function pnHelpHTML(){
+  const t = DESIGNER_EDITS.types || {};
+  const order = Object.keys(t).sort((a,b)=>typeIndex(a)-typeIndex(b));
+  let h = '<h4>What changed</h4>';
+  h += order.map(k=>'<div class="pn-row"><span class="pn-k '+levelClass(t[k].level)+'">'+lbEsc(k)
+      +'</span><span class="pn-v">'+lbEsc(t[k].explanation||'')+'</span></div>').join('');
+  h += '<h4>Alert level</h4>';
+  h += (DESIGNER_EDITS.levels||[]).map(l=>'<div class="pn-row"><span class="pn-k '+levelClass(l)+'">'
+      +lbEsc(levelWord(l))+'</span><span class="pn-v">'+lbEsc(
+        l === 'Green' ? 'nothing to do: the card plays the same.'
+      : l === 'Yellow Alert' ? 'worth knowing: the card can behave differently in a corner case.'
+      : l === 'Red Alert' ? 'if possible, print paste-up until replacements can be provided.'
+      : 'only matters once you play with the newer boxes.')+'</span></div>').join('');
+  h += '<h4>Marks</h4>'
+    + '<div class="pn-row"><span class="pn-k"><span class="pn-mark">&lt;!&gt;</span>Errata</span>'
+    + '<span class="pn-v">this printing\u2019s text was changed; the color is the alert level above.</span></div>'
+    + '<div class="pn-row"><span class="pn-k"><span class="pn-mark">\u2020</span>Updated</span>'
+    + '<span class="pn-v">a later box printed the card again with the fix on it.</span></div>'
+    + '<div class="pn-row"><span class="pn-k"><span class="pn-mark">\u25CF</span>Duplicate</span>'
+    + '<span class="pn-v">the same card, reprinted unchanged in another box.</span></div>'
+    + '<h4>Also in this row</h4>'
+    + '<div class="pn-row"><span class="pn-k">Strategy</span><span class="pn-v">cards that have been discussed in Matthew McCue\u2019s strategy guides.</span></div>'
+    + '<div class="pn-row"><span class="pn-k">Designer\u2019s note</span><span class="pn-v">cards that carry a thematic note from the designers.</span></div>';
+  return h;
+}
+function togglePnHelp(ev){
+  if(ev && ev.stopPropagation) ev.stopPropagation();
+  const p = document.getElementById('pnHelp');
+  if(!p.innerHTML) p.innerHTML = pnHelpHTML();
+  const opening = !p.classList.contains('open');
+  p.classList.toggle('open');
+  if(opening){
+    document.getElementById('statusHead').classList.add('open');
+    document.getElementById('statusBody').classList.add('open');
+  }
+  return false;
+}
 function errataKind(e){ return (e && e.kind) || 'errata'; }
-function errataEntries(c, kind){ return (c.errata||[]).filter(e=>errataKind(e)===kind); }
+
 function markEntries(c){ return (c.errata||[]).filter(e=>errataKind(e)!=='update'); }
 function hasErrataMark(c){ return markEntries(c).length > 0 && c.badgeKind !== 'update'; }
 function errataLine(e){
@@ -1083,7 +1277,6 @@ function errataLine(e){
   return t+(d ? ', '+lbEsc(d) : '');
 }
 function hasExtra(c, k){
-  if(k === 'patched')  return errataEntries(c,'silent').length > 0;
   if(k === 'errata')   return hasErrataMark(c);
   if(k === 'notes')    return !!noteOf(c);
   if(k === 'strategy') return hasStrategy(c);
@@ -1218,7 +1411,6 @@ function parseQuery(text, vocab){
              strips:[],negStrips:[],text:[],negText:[],kindText:[],negKindText:[],view:'',
              has:[],negHas:[],changeType:[],negChangeType:[]};
   const HAS_WORDS={errata:'errata',update:'update',updates:'update',notes:'notes',note:'notes',
-                   patched:'patched',patch:'patched',
                    duplicate:'duplicate',duplicates:'duplicate',reprint:'duplicate',reprints:'duplicate',
                    strategy:'strategy',guides:'strategy'};
   const tokRe=/(-)?(?:([A-Za-z][A-Za-z-]*)\s*(:|>=|<=|>|<))?("([^"]*)"|[^\s"]+)/g;
@@ -2113,7 +2305,7 @@ function buildPillCard(c, opts){
   if(c.card_number||badge||posin||errMark){
     numline='<div class="ce-bottom"><div class="ce-footrow"><span class="cid2">'+(c.card_number||'')
       +(badge?(c.card_number?' ':'')+'<span class="meta">'+badgeMark+'</span>':'')
-      +(errMark?' <span class="meta errata" title="'+errataLine(markEntries(c)[0])+'">&lt;!&gt; Errata</span>':'')+'</span>'
+      +(errMark?' <span class="meta errata '+levelClass(markEntries(c)[0].level)+'" title="'+lbEsc((markEntries(c)[0].type||'')+(levelWord(markEntries(c)[0].level)?' \u00b7 '+levelWord(markEntries(c)[0].level):''))+'">&lt;!&gt; Errata</span>':'')+'</span>'
       +(posin?'<span class="posin">'+posin+'</span>':'')+'</div></div>';
   }
   el.innerHTML='<div class="ce-row"><div class="ce-main">'
@@ -2136,7 +2328,8 @@ function buildImgCard(c){
   const awayHTML=away?('<svg class="awayteam" viewBox="0 0 30 27" role="img" aria-label="Away team '+away+'"><title>Away team '+away+'</title><path d="M4.2 1.1h21.6a3.1 3.1 0 0 1 3.1 3.1v14.6a3.1 3.1 0 0 1-3.1 3.1h-8.2l-2.6 4.6-2.6-4.6H4.2a3.1 3.1 0 0 1-3.1-3.1V4.2a3.1 3.1 0 0 1 3.1-3.1z" fill="#1b2f4d" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><text x="15" y="16.6" text-anchor="middle" font-family="Antonio,sans-serif" font-weight="700" font-size="12" fill="#fff">'+away+'</text></svg>'):'';
   const badge=badgeInfo(c);
   const marks = (badge ? '<span class="nm-mark" title="'+badge.text+'">'+(badge.cls==='update'?'\u2020':'\u25CF')+'</span>' : '')
-    + (hasErrataMark(c) ? '<span class="nm-mark err" title="Errata">&lt;!&gt;</span>' : '');
+    + (hasErrataMark(c) ? '<span class="nm-mark err '+levelClass(markEntries(c)[0].level)+'" title="'
+        +lbEsc((markEntries(c)[0].type||'')+(levelWord(markEntries(c)[0].level)?' \u00b7 '+levelWord(markEntries(c)[0].level):''))+'">&lt;!&gt;</span>' : '');
   const nameHTML='<div class="card-img-name">'+c.name+(marks ? '<span class="nm-marks">'+marks+'</span>' : '')+'</div>';
   const lbIdx=LB_CARDS.push(c)-1;
   el.onclick=()=>openCardAt(lbIdx);
@@ -2403,12 +2596,12 @@ function lbExtrasHTML(c){
   let h='';
   h+=deckMultHTML(c);
   const entries=c.errata||[];
-  const shown=entries.filter(e=>errataKind(e)!=='update'
-    || !entries.some(o=>o!==e && errataKind(o)!=='update' && o.type===e.type));
-  const lines=shown.map(errataLine);
+  let body=entries.map(e=>errataEntryHTML(c, e)).join('');
   const upd=printingLinksHTML(c);
-  if(upd) lines.push(upd);
-  if(lines.length) h+=lbSection('errata','Errata',lines.map(l=>'<div class="dnote-q plain">'+l+'</div>').join(''));
+  const from=c.updatedFrom||[];
+  if(upd && !entries.length && !from.length) body+='<div class="dnote-q plain">'+upd+'</div>';
+  if(body) h+=lbSection('errata','Errata',body);
+  if(from.length) h+=lbSection('updated','Updated',from.map(e=>updatedEntryHTML(c, e)).join(''));
   const note=noteOf(c);
   if(note) h+=lbSection('note',ICON_PEN+'Designer\u2019s note','<blockquote class="dnote-q">'+lbEsc(note)+'</blockquote>','note');
   const links=strategyLinksOf(c);
