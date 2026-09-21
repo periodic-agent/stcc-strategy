@@ -5558,7 +5558,9 @@
     "position_indicator": "Reserve",
     "species_traits": [],
     "regular_traits": [],
-    "other_traits": [],
+    "other_traits": [
+      "Ongoing"
+    ],
     "filename": "shran-you-owe-me-one.jpg",
     "icons": [],
     "text": {
