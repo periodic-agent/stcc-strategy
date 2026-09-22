@@ -709,7 +709,10 @@
       "table": "[[action]] Activation: Put a [[ship]] in your Staging Area (without triggering its play operation) and spend 3 [[dilithium]] to take the top [[encounter]] and log this card.",
       "goal": "",
       "reward": ""
-    }
+    },
+    "aliases": [
+      "Zephram Cochrane"
+    ]
   },
   {
     "id": "biobed",
@@ -1519,7 +1522,7 @@
   },
   {
     "id": "xindi-reptillian-battleship",
-    "name": "Xindi-Reptillian Battleship",
+    "name": "Xindi-Reptilian Battleship",
     "suit": "Ship",
     "source": "Common",
     "game_box": "Captain's Chair",
@@ -1544,7 +1547,10 @@
       "table": "Activation: Spend 1 [[dilithium]] to warp this ship. Activation: Discard a card to beam a card here.",
       "goal": "",
       "reward": "Resupply: Draw a card for every 2 [[anomaly]] you have in play (max 4 cards)."
-    }
+    },
+    "aliases": [
+      "Xindi-Reptillian Battleship"
+    ]
   },
   {
     "id": "arinsen",

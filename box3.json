@@ -1597,7 +1597,7 @@
   },
   {
     "id": "pike-kherkovians",
-    "name": "Kherkovians",
+    "name": "Kerkovians",
     "suit": "Ally",
     "source": "Pike",
     "game_box": "Second Contact",
@@ -1628,8 +1628,7 @@
       "reward": ""
     },
     "aliases": [
-      "Kerkovians",
-      "Kerkhovians"
+      "Kherkovians"
     ]
   },
   {
