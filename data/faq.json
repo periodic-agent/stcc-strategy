@@ -1,7 +1,17 @@
 {
  "note": "Rules notes, attached to the cards whose text raises the question.",
  "rules": {
-  "action-cap": "You must discard down to 3 [[action]] tokens in your Clean-Up step."
+  "action-cap": "You must discard down to 3 [[action]] tokens in your Clean-Up step.",
+  "shuttlecraft-no-deploy": "There is no way to deploy these ships. Thematically, you cannot patrol a planet with a tiny shuttlecraft.",
+  "trul-cloak-trigger": "The Reaction will trigger when a [[ship]] being deployed gains [[cloak]] via a Cloaking Device. The Cloaking Device triggers after deploying a [[ship]]; T'Rul triggers after putting a [[cloak]] into play.",
+  "mines-passive-triggers": "The Passive operation of Self-Replicating Mines will trigger even if the incoming attack results in no negative effects.",
+  "phasers-any-number": "Phasers will protect any number of [[away team]] from being removed by a single effect.",
+  "phasers-log-location": "Phasers cannot protect from an effect that logs a location. Removal of the [[away team]] from the location is a side effect.",
+  "snw-mandatory": "Is it mandatory to log the location targeted? Everything within an operation is mandatory, unless preceded by “may”.",
+  "snw-sha-ka-ree": "You can target Sha Ka Ree with Strange New Worlds. The [[ship]] beamed to Sha Ka Ree fulfils the requirement, since the card says “ship” and not “deployed ship”. You also need an [[away team]] there.",
+  "jadzia-dax-scan": "This card's reaction can be used on a “scan X of suit” effect, where it sets X to 2, so changing a scan 1 to a scan 2 is beneficial. It cannot be used on a “scan for trait” effect or on a “gain a specific trait” effect.",
+  "horta-dilithium": "Getting resources from the Market counts as gaining resources. The Horta triggers when you get a card with [[dilithium]] on it. When you yourself are playing with Burnham, any [[dilithium]] you gain (except from the Market) is placed on your Inert Dilithium Status card. The Horta boosts any [[dilithium]] gain (including, as mentioned, when gaining [[dilithium]] from the Market), but since the additional [[dilithium]] gained from the Horta is not taken from the Market, it is inert.",
+  "amargosa-warp": "When this card is logged, before dismissing any ships at this location, choose another location in play (either controlled by you or in the Neutral Zone) and warp all of your deployed ships to that location."
  },
  "entries": {
   "captain-dorg": [
@@ -11,7 +21,9 @@
    "action-cap"
   ],
   "phasers": [
-   "action-cap"
+   "action-cap",
+   "phasers-any-number",
+   "phasers-log-location"
   ],
   "plasma-manifold": [
    "action-cap"
@@ -132,6 +144,72 @@
   ],
   "flight-training-accident": [
    "action-cap"
+  ],
+  "picard-type-7-shuttlecraft": [
+   "shuttlecraft-no-deploy"
+  ],
+  "georgiou-class-c-shuttlecraft": [
+   "shuttlecraft-no-deploy"
+  ],
+  "archer-shuttlepod-1": [
+   "shuttlecraft-no-deploy"
+  ],
+  "freeman-type-6a-shuttlecraft": [
+   "shuttlecraft-no-deploy"
+  ],
+  "sela-sub-commander-trul": [
+   "trul-cloak-trigger"
+  ],
+  "sisko-self-replicating-mines": [
+   "mines-passive-triggers"
+  ],
+  "picard-strange-new-worlds": [
+   "snw-mandatory",
+   "snw-sha-ka-ree"
+  ],
+  "burnham-strange-new-worlds": [
+   "snw-mandatory",
+   "snw-sha-ka-ree"
+  ],
+  "sisko-strange-new-worlds": [
+   "snw-mandatory",
+   "snw-sha-ka-ree"
+  ],
+  "georgiou-strange-new-worlds": [
+   "snw-mandatory",
+   "snw-sha-ka-ree"
+  ],
+  "archer-strange-new-worlds": [
+   "snw-mandatory",
+   "snw-sha-ka-ree"
+  ],
+  "kirk-strange-new-worlds": [
+   "snw-mandatory",
+   "snw-sha-ka-ree"
+  ],
+  "freeman-strange-new-worlds": [
+   "snw-mandatory",
+   "snw-sha-ka-ree"
+  ],
+  "pike-strange-new-worlds": [
+   "snw-mandatory",
+   "snw-sha-ka-ree"
+  ],
+  "riker-strange-new-worlds": [
+   "snw-mandatory",
+   "snw-sha-ka-ree"
+  ],
+  "sisko-jadzia-dax": [
+   "jadzia-dax-scan"
+  ],
+  "lieutenant-dax": [
+   "jadzia-dax-scan"
+  ],
+  "horta": [
+   "horta-dilithium"
+  ],
+  "amargosa-observatory": [
+   "amargosa-warp"
   ]
  }
 }

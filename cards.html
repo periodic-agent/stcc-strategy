@@ -629,6 +629,8 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .st-pill[data-st=strategy].active{background:#6fd3d3;color:#000;}
 .st-pill[data-st=notes]{border-color:#f0b323;color:#f0b323;}
 .st-pill[data-st=notes].active{background:#f0b323;color:#000;}
+.st-pill[data-st=faq]{border-color:#b98ae0;color:#b98ae0;}
+.st-pill[data-st=faq].active{background:#b98ae0;color:#000;}
 .active-summary.status{color:#c8d2e0;}
 .dnote.faq .dnote-label{color:#b98ae0;}
 .dnote.faq .dnote-rule{background:linear-gradient(90deg,transparent,rgba(185,138,224,.75),transparent);}
@@ -741,7 +743,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
     <div class="qh-row"><code>variant:update</code> · <code>variant:duplicate</code><span>cards wearing that badge in the current boxes</span></div>
     <div class="qh-row"><code>errata</code> · <code>update</code> · <code>duplicate</code><span>printings marked &lt;!&gt; (official errata or a silent patch; see the card's Errata section), &dagger; (updated in a later box), or &#9679; (reprinted in another box)</span></div>
     <div class="qh-row"><code>errata:wording</code> · <code>errata:"operation redesign"</code><span>errata of that type: card name change, card trait change, operation added/removed, operation redesign, wording correction, card replacement</span></div>
-    <div class="qh-row"><code>notes</code> · <code>strategy</code><span>cards with a designer's note, or with their own section in a strategy guide</span></div>
+    <div class="qh-row"><code>notes</code> · <code>strategy</code> · <code>faq</code><span>cards with a designer's note, with their own section in a strategy guide, or with a rules note in their FAQ section</span></div>
     <div class="qh-note">Click a card for its scan, errata, notes and guide links; the arrows page through the results. Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>
   </div>
 
@@ -1269,7 +1271,8 @@ function pnHelpHTML(){
     + '<span class="pn-v">the same card, reprinted unchanged in another box.</span></div>'
     + '<h4>Also in this row</h4>'
     + '<div class="pn-row"><span class="pn-k">Strategy</span><span class="pn-v">cards that have been discussed in Matthew McCue\u2019s strategy guides.</span></div>'
-    + '<div class="pn-row"><span class="pn-k">Designer\u2019s note</span><span class="pn-v">cards that carry a thematic note from the designers.</span></div>';
+    + '<div class="pn-row"><span class="pn-k">Designer\u2019s note</span><span class="pn-v">cards that carry a thematic note from the designers.</span></div>'
+    + '<div class="pn-row"><span class="pn-k">FAQ</span><span class="pn-v">cards that carry a rules note answering a question the text raises.</span></div>';
   return h;
 }
 function togglePnHelp(ev){
@@ -1299,6 +1302,7 @@ function hasExtra(c, k){
   if(k === 'errata')   return hasErrataMark(c);
   if(k === 'notes')    return !!noteOf(c);
   if(k === 'strategy') return hasStrategy(c);
+  if(k === 'faq')      return faqNotes(c).length > 0;
   return false;
 }
 const ICON_BOOK='<svg class="xt-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 5.5C5 4 8 4 12 6c4-2 7-2 9.5-.5v13c-2.5-1.5-5.5-1.5-9.5.5-4-2-7-2-9.5-.5z"/><path d="M12 6v13"/></svg>';
@@ -1315,6 +1319,8 @@ const STATUS_PILLS=[
    on:()=>activeHas.has('strategy'), neg:()=>negHas.has('strategy'), test:c=>hasStrategy(c)},
   {k:'notes', label:ICON_PEN+'Designer\u2019s note', name:'Designer\u2019s note', word:'notes', re:/^-?notes?$/i,
    on:()=>activeHas.has('notes'), neg:()=>negHas.has('notes'), test:c=>!!noteOf(c)},
+  {k:'faq', label:'FAQ', name:'FAQ', word:'faq', re:/^-?(faq|questions?)$/i,
+   on:()=>activeHas.has('faq'), neg:()=>negHas.has('faq'), test:c=>faqNotes(c).length>0},
 ];
 function statusToggle(k){
   const d=STATUS_PILLS.find(x=>x.k===k);
@@ -1431,7 +1437,8 @@ function parseQuery(text, vocab){
              has:[],negHas:[],changeType:[],negChangeType:[]};
   const HAS_WORDS={errata:'errata',update:'update',updates:'update',notes:'notes',note:'notes',
                    duplicate:'duplicate',duplicates:'duplicate',reprint:'duplicate',reprints:'duplicate',
-                   strategy:'strategy',guides:'strategy'};
+                   strategy:'strategy',guides:'strategy',
+                   faq:'faq',question:'faq',questions:'faq'};
   const tokRe=/(-)?(?:([A-Za-z][A-Za-z-]*)\s*(:|>=|<=|>|<))?("([^"]*)"|[^\s"]+)/g;
   let m;
   while((m=tokRe.exec(text))){
