@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-20T13:21:55Z",
+ "generated": "2026-09-22T01:31:00Z",
  "generator": "tools/build_strategy_index.py",
  "guide_count": 30,
  "card_count": 478,
@@ -21714,13 +21714,71 @@
   ],
   "xindi-reptillian-battleship": [
    {
-    "guide": "georgiou.html",
+    "guide": "archer.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Sakonna actually can work well for Archer, especially if you’ve gotten the Xindi-Reptilian Battleship and you have a lot of weapons out and about.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The Xindi-Reptilian Battleship is great for Archer, because he’ll have Daniels Time Travel trait (Second Play Action scoring) and he needs the Xindi trait here.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "rebner.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Degra is a good early choice for scanning for Xindi to find Kemocite (to later find Weapons) and Xindi-Reptilian Battleship (for the scoring and Cargo gain), but the Encounter won’t be possible most of the time.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The Xindi-Reptilian Battleship is fantastic, as it incentivizes weapons and scores well for Rebner.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "koloth.html",
     "count": 1,
     "hits": [
      {
       "anchor": "notable-market-cards",
-      "heading": "Ship Deck",
-      "snippet": "To Boldly Go: The repeat ships from the Corebox are all great, but Borg Cube gives the extra advantage of endgame scoring for Georgiou so long as you can keep it in play at the end of the game with lots of beamed cards. D’kyr Cruiser has that Vulcan trait and Military restriction that Georgiou can benefit from too. Medusian Vessel is a good pick for the Alien trait. Grabbing Vor’cha Attack Cruiser can help push the",
+      "heading": "Notable Market Cards",
+      "snippet": "There really aren't that many bad ships with Koloth. While you might not score high for the Enterprise C or the Pasteur, their abilities benefit you significantly like most other captains. The Son'a Battlecruiser and D'Kty Cruiser and Xindi-Reptilian Battleship all have synergies with Koloth and the Military track or scoring. Even getting Holographic Drone Ship just to beam it and use it for your second mission",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "tbg-ships.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": null,
+      "heading": "Introduction",
+      "snippet": "Getting official versions of the changes to the Holo Drone Ship and Enterprise-C is great, and their abilities are good enough to be valuable in multiple boxes. Keeping the Xindi-Reptilian Battleship will be good for Captain Archer. The Kazon now get a specific trait, which bodes well for their future in the game. Also glad to see the Pakled Freighter again for Rebner (and everybody else who just likes gaining Cargo",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -21773,4 +21831,4 @@
    }
   ]
  }
-}
+}
