@@ -633,6 +633,11 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .mock-bar{background:#2a1330;border-bottom:1px solid #6d3f86;color:#e6d6f2;text-align:center;
   padding:.45rem 1rem;font-family:'Exo 2',sans-serif;font-size:.8125rem;}
 .mock-bar b{color:#d7a6f2;font-weight:600;}
+.dnote.faq .dnote-label{color:#b98ae0;}
+.dnote.faq .dnote-rule{background:linear-gradient(90deg,transparent,rgba(185,138,224,.75),transparent);}
+.faq-note{font-family:'Exo 2',sans-serif;font-size:.8125rem;line-height:1.5;color:#e3e8f4;padding:.15rem 0;}
+.faq-note + .faq-note{margin-top:.35rem;}
+.faq-note img.stripimg,.faq-note .stripchip{vertical-align:-0.18em;}
 .lv-green{color:#4ac48a;}
 .lv-yellow{color:#e8d44a;}
 .lv-red{color:#e05a5a;}
@@ -1104,6 +1109,7 @@ async function loadBoxes(){
   await loadExtras();
   buildFullPool();
   await loadDesignerEdits();
+  await loadFaq();
 }
 
 async function loadExtras(){
@@ -1188,6 +1194,19 @@ function errataTokenMap(s){
     return m;
   });
   return Object.keys(extra).length ? Object.assign({}, TOKEN_MAP, extra) : TOKEN_MAP;
+}
+let FAQ = {rules:{}, entries:{}};
+async function loadFaq(){
+  try{
+    const r = await fetch('data/faq.json', {cache:'no-store'});
+    if(r.ok) FAQ = await r.json();
+  }catch(e){ console.warn('Could not load data/faq.json', e); }
+}
+function faqNotes(c){
+  return (FAQ.entries[c.id] || []).map(k=>FAQ.rules[k]).filter(Boolean);
+}
+function faqHTML(c){
+  return faqNotes(c).map(t=>'<div class="faq-note">'+errataProse(t)+'</div>').join('');
 }
 function errataProse(raw){
   const s = errataFix(raw);
@@ -2607,6 +2626,8 @@ function lbExtrasHTML(c){
   if(upd && !entries.length && !from.length) body+='<div class="dnote-q plain">'+upd+'</div>';
   if(body) h+=lbSection('errata','Errata',body);
   if(from.length) h+=lbSection('updated','Updated',from.map(e=>updatedEntryHTML(c, e)).join(''));
+  const faq=faqHTML(c);
+  if(faq) h+=lbSection('faq','FAQ',faq);
   const note=noteOf(c);
   if(note) h+=lbSection('note',ICON_PEN+'Designer\u2019s note','<blockquote class="dnote-q">'+lbEsc(note)+'</blockquote>','note');
   const links=strategyLinksOf(c);

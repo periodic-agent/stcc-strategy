@@ -1,0 +1,137 @@
+{
+ "note": "Rules notes, attached to the cards whose text raises the question.",
+ "rules": {
+  "action-cap": "You must discard down to 3 [[action]] tokens in your Clean-Up step."
+ },
+ "entries": {
+  "captain-dorg": [
+   "action-cap"
+  ],
+  "sakonna": [
+   "action-cap"
+  ],
+  "phasers": [
+   "action-cap"
+  ],
+  "plasma-manifold": [
+   "action-cap"
+  ],
+  "karemma": [
+   "action-cap"
+  ],
+  "ancient-gene-fragments": [
+   "action-cap"
+  ],
+  "guardian-of-forever": [
+   "action-cap"
+  ],
+  "energy-drain": [
+   "action-cap"
+  ],
+  "baku": [
+   "action-cap"
+  ],
+  "deep-space-k-7": [
+   "action-cap"
+  ],
+  "indri-viii": [
+   "action-cap"
+  ],
+  "picard-mission-2": [
+   "action-cap"
+  ],
+  "burnham-admiral-vance": [
+   "action-cap"
+  ],
+  "burnham-saru": [
+   "action-cap"
+  ],
+  "koloth-energy-drain": [
+   "action-cap"
+  ],
+  "shran-mission-1": [
+   "action-cap"
+  ],
+  "sela-proconsul-neral": [
+   "action-cap"
+  ],
+  "sela-energy-drain": [
+   "action-cap"
+  ],
+  "malik": [
+   "action-cap"
+  ],
+  "president-rillak": [
+   "action-cap"
+  ],
+  "travis-mayweather": [
+   "action-cap"
+  ],
+  "khitomer": [
+   "action-cap"
+  ],
+  "orion-syndicate": [
+   "action-cap"
+  ],
+  "tellarites": [
+   "action-cap"
+  ],
+  "georgiou-red-angel": [
+   "action-cap"
+  ],
+  "georgiou-thruster-pack": [
+   "action-cap"
+  ],
+  "georgiou-lt-saru": [
+   "action-cap"
+  ],
+  "georgiou-mission-2": [
+   "action-cap"
+  ],
+  "archer-mission-3": [
+   "action-cap"
+  ],
+  "soval-energy-drain": [
+   "action-cap"
+  ],
+  "soval-mission-3": [
+   "action-cap"
+  ],
+  "kirk-mission-3": [
+   "action-cap"
+  ],
+  "khan-wajahut": [
+   "action-cap"
+  ],
+  "khan-joachim": [
+   "action-cap"
+  ],
+  "ensign-boimler": [
+   "action-cap"
+  ],
+  "orion": [
+   "action-cap"
+  ],
+  "freeman-tana": [
+   "action-cap"
+  ],
+  "freeman-samanthan-rutherford": [
+   "action-cap"
+  ],
+  "pike-starbase-one": [
+   "action-cap"
+  ],
+  "riker-first-officer": [
+   "action-cap"
+  ],
+  "riker-mission-2": [
+   "action-cap"
+  ],
+  "uss-enterprise-b": [
+   "action-cap"
+  ],
+  "flight-training-accident": [
+   "action-cap"
+  ]
+ }
+}
