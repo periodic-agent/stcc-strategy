@@ -399,8 +399,8 @@ body.lb-open{overflow:hidden;}
 .no-results{text-align:center;padding:3rem;color:var(--muted);font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.15em;}
 .tip-jar{text-align:center;padding:1.5rem 1.5rem 0.5rem;font-size:0.85rem;color:var(--muted);line-height:1.8;}
 .tip-jar p{margin:0;}
-.tip-jar .tip-hi{color:#FFDD00;text-decoration:underline;text-underline-offset:3px;}
-.tip-jar .tip-hi:hover{color:#fff0a0;}
+.tip-jar .tip-hi{color:var(--blue2);text-decoration:underline;text-underline-offset:3px;}
+.tip-jar .tip-hi:hover{color:#a8ddf8;}
 footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:center;font-size:0.72rem;color:var(--muted);line-height:1.8;}
 
 .box-pill,.promo-pill,.deck-pill,.suit-pill,.species-pill,.regular-pill,.other-pill,.skill-pill{
@@ -1342,7 +1342,6 @@ function statusToggle(k){
 }
 function tabKinds(c){
   const k=[];
-  if(hasStrategy(c)) k.push('guide');
   if(noteOf(c)) k.push('note');
   return k;
 }
