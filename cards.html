@@ -51,6 +51,7 @@ a{color:var(--blue);text-decoration:none;}
   .vtoggle,.clear-btn{padding:0.3rem 0.5rem;letter-spacing:0.06em;}
   .search-count-row{gap:0.4rem;}
   .search-count-row .search-count{margin-left:0;}
+  .search-count-row #searchCountTop{margin-left:auto;}
 }
 .search-count{color:var(--muted);font-size:0.8rem;font-family:'Exo 2',sans-serif;}
 .search-count b{color:var(--blue2);font-weight:600;}
@@ -726,6 +727,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
       <label class="dupes-toggle"><input type="radio" name="mode" id="modeCards" checked onchange="setBots(false)"> Cards</label>
       <label class="dupes-toggle"><input type="radio" name="mode" id="modeBots" onchange="setBots(true)"> Bots</label>
     </span>
+    <span class="search-count" id="searchCountTop"></span>
   </div>
 
   <div id="queryHelp" class="query-help">
@@ -2436,10 +2438,13 @@ function render(){
   const printings=showDupes ? shown.length : shown.reduce((n,c)=>n+(c.copies||1),0);
   const faces=showBots ? document.querySelectorAll('#deckGroups .botface').length : 0;
   if(showBots) total+=faces;
-  document.getElementById('searchCount').innerHTML = showBots
+  const countHTML = showBots
     ? '<b>'+faces+'</b> Automated Command face'+(faces!==1?'s':'')
     : '<b>'+distinct+'</b> card'+(distinct!==1?'s':'')
     +' \u00b7 <b>'+printings+'</b> printing'+(printings!==1?'s':'');
+  document.getElementById('searchCount').innerHTML = countHTML;
+  const topCount=document.getElementById('searchCountTop');
+  if(topCount) topCount.innerHTML = countHTML;
   updateBadges();
   placePosPills();
   if(!total){
