@@ -51,6 +51,7 @@ a{color:var(--blue);text-decoration:none;}
   .vtoggle,.clear-btn{padding:0.3rem 0.5rem;letter-spacing:0.06em;}
   .search-count-row{gap:0.4rem;}
   .search-count-row .search-count{margin-left:0;}
+  .search-count-row #searchCountTop{margin-left:auto;}
 }
 .search-count{color:var(--muted);font-size:0.8rem;font-family:'Exo 2',sans-serif;}
 .search-count b{color:var(--blue2);font-weight:600;}
@@ -399,8 +400,8 @@ body.lb-open{overflow:hidden;}
 .no-results{text-align:center;padding:3rem;color:var(--muted);font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.15em;}
 .tip-jar{text-align:center;padding:1.5rem 1.5rem 0.5rem;font-size:0.85rem;color:var(--muted);line-height:1.8;}
 .tip-jar p{margin:0;}
-.tip-jar .tip-hi{color:#FFDD00;text-decoration:underline;text-underline-offset:3px;}
-.tip-jar .tip-hi:hover{color:#fff0a0;}
+.tip-jar .tip-hi{color:var(--blue2);text-decoration:underline;text-underline-offset:3px;}
+.tip-jar .tip-hi:hover{color:#a8ddf8;}
 footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:center;font-size:0.72rem;color:var(--muted);line-height:1.8;}
 
 .box-pill,.promo-pill,.deck-pill,.suit-pill,.species-pill,.regular-pill,.other-pill,.skill-pill{
@@ -694,7 +695,10 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 <meta name="robots" content="noindex,nofollow">
 <meta property="og:title" content="ST:CC Card Scanner">
 <meta property="og:description" content="Searchable card database for Star Trek: Captain's Chair. Filter every card by box, deck, suit, traits, skills and name — built for mid-game lookups.">
-<meta property="og:image" content="https://periodic-agent.github.io/stcc-strategy/img/misc/pic9663837.png">
+<meta property="og:image" content="https://periodic-agent.github.io/stcc-strategy/img/misc/og-cards-1200.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Star Trek: Captain’s Chair card scanner: every printed card, searchable.">
 <meta property="og:url" content="https://periodic-agent.github.io/stcc-strategy/cards.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -728,11 +732,12 @@ would appear in the card scanner. <b>Not linked from the site.</b></div>
       <label class="dupes-toggle"><input type="radio" name="mode" id="modeCards" checked onchange="setBots(false)"> Cards</label>
       <label class="dupes-toggle"><input type="radio" name="mode" id="modeBots" onchange="setBots(true)"> Bots</label>
     </span>
+    <span class="search-count" id="searchCountTop"></span>
   </div>
 
   <div id="queryHelp" class="query-help">
     <div class="qh-title">Search syntax</div>
-    <div class="qh-row"><code>kirk</code><span>name contains "kirk"</span></div>
+    <div class="qh-row"><code>kirk</code><span>name contains "kirk" (other spellings of a name count too)</span></div>
     <div class="qh-row"><code>trait:klingon suit:person</code><span>Klingon persons (space = AND)</span></div>
     <div class="qh-row"><code>-trait:starfleet</code><span>minus excludes</span></div>
     <div class="qh-row"><code>trait:"mind control"</code><span>quotes for multi-word values</span></div>
@@ -1016,6 +1021,7 @@ function resolveCards(rawPool, expand){
               : ((group.find(pr=>Array.isArray(pr.errata) && pr.errata.length) || {}).errata || []),
         virtual: !!chosen.virtual,
         updatedFrom: Array.isArray(chosen.updatedFrom) ? chosen.updatedFrom : [],
+        aliases: [...new Set((FULL_BY_ID[chosen.id] || [chosen]).flatMap(p=>p.aliases || []))],
         vp: (() => { const v = (chosen.vp !== undefined && chosen.vp !== null) ? chosen.vp : chosen.glory;
                      if (v !== undefined && v !== null) return v;
                      for (const pr of group) { const w = (pr.vp !== undefined && pr.vp !== null) ? pr.vp : pr.glory; if (w !== undefined && w !== null) return w; }
@@ -1347,7 +1353,6 @@ function statusToggle(k){
 }
 function tabKinds(c){
   const k=[];
-  if(hasStrategy(c)) k.push('guide');
   if(noteOf(c)) k.push('note');
   return k;
 }
@@ -1773,7 +1778,7 @@ function cardMatches(c){
   if(negDecks.size && negDecks.has(deckKey(c))) return false;
   if(activeSuits.size && !activeSuits.has(c.suit)) return false;
   if(negSuits.has(c.suit)) return false;
-  const lname=c.name.toLowerCase();
+  const lname=[c.name, ...(c.aliases||[])].join('\n').toLowerCase();
   const lsuit=(c.suit||'').toLowerCase();
   const bare=t=>lname.includes(t)||lsuit===t;
   if(nameTerms.length && !nameTerms.every(bare)) return false;
@@ -1866,7 +1871,7 @@ function getPoolWithout(excludeTag, excludeSkill){
     if(activeDecks.size && !activeDecks.has(deckKey(c))) return false;
     if(activeSuits.size && !activeSuits.has(c.suit)) return false;
     if(negSuits.has(c.suit)) return false;
-    const lname=c.name.toLowerCase();
+    const lname=[c.name, ...(c.aliases||[])].join('\n').toLowerCase();
     if(nameTerms.length && !nameTerms.every(t=>lname.includes(t))) return false;
     if(negNames.some(t=>lname.includes(t))) return false;
     const allTags=[...c.species,...c.regular,...c.other];
@@ -2439,10 +2444,13 @@ function render(){
   const printings=showDupes ? shown.length : shown.reduce((n,c)=>n+(c.copies||1),0);
   const faces=showBots ? document.querySelectorAll('#deckGroups .botface').length : 0;
   if(showBots) total+=faces;
-  document.getElementById('searchCount').innerHTML = showBots
+  const countHTML = showBots
     ? '<b>'+faces+'</b> Automated Command face'+(faces!==1?'s':'')
     : '<b>'+distinct+'</b> card'+(distinct!==1?'s':'')
     +' \u00b7 <b>'+printings+'</b> printing'+(printings!==1?'s':'');
+  document.getElementById('searchCount').innerHTML = countHTML;
+  const topCount=document.getElementById('searchCountTop');
+  if(topCount) topCount.innerHTML = countHTML;
   updateBadges();
   placePosPills();
   if(!total){

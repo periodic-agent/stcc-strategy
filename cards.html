@@ -732,7 +732,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 
   <div id="queryHelp" class="query-help">
     <div class="qh-title">Search syntax</div>
-    <div class="qh-row"><code>kirk</code><span>name contains "kirk"</span></div>
+    <div class="qh-row"><code>kirk</code><span>name contains "kirk" (other spellings of a name count too)</span></div>
     <div class="qh-row"><code>trait:klingon suit:person</code><span>Klingon persons (space = AND)</span></div>
     <div class="qh-row"><code>-trait:starfleet</code><span>minus excludes</span></div>
     <div class="qh-row"><code>trait:"mind control"</code><span>quotes for multi-word values</span></div>
@@ -1016,6 +1016,7 @@ function resolveCards(rawPool, expand){
               : ((group.find(pr=>Array.isArray(pr.errata) && pr.errata.length) || {}).errata || []),
         virtual: !!chosen.virtual,
         updatedFrom: Array.isArray(chosen.updatedFrom) ? chosen.updatedFrom : [],
+        aliases: [...new Set((FULL_BY_ID[chosen.id] || [chosen]).flatMap(p=>p.aliases || []))],
         vp: (() => { const v = (chosen.vp !== undefined && chosen.vp !== null) ? chosen.vp : chosen.glory;
                      if (v !== undefined && v !== null) return v;
                      for (const pr of group) { const w = (pr.vp !== undefined && pr.vp !== null) ? pr.vp : pr.glory; if (w !== undefined && w !== null) return w; }
@@ -1772,7 +1773,7 @@ function cardMatches(c){
   if(negDecks.size && negDecks.has(deckKey(c))) return false;
   if(activeSuits.size && !activeSuits.has(c.suit)) return false;
   if(negSuits.has(c.suit)) return false;
-  const lname=c.name.toLowerCase();
+  const lname=[c.name, ...(c.aliases||[])].join('\n').toLowerCase();
   const lsuit=(c.suit||'').toLowerCase();
   const bare=t=>lname.includes(t)||lsuit===t;
   if(nameTerms.length && !nameTerms.every(bare)) return false;
@@ -1865,7 +1866,7 @@ function getPoolWithout(excludeTag, excludeSkill){
     if(activeDecks.size && !activeDecks.has(deckKey(c))) return false;
     if(activeSuits.size && !activeSuits.has(c.suit)) return false;
     if(negSuits.has(c.suit)) return false;
-    const lname=c.name.toLowerCase();
+    const lname=[c.name, ...(c.aliases||[])].join('\n').toLowerCase();
     if(nameTerms.length && !nameTerms.every(t=>lname.includes(t))) return false;
     if(negNames.some(t=>lname.includes(t))) return false;
     const allTags=[...c.species,...c.regular,...c.other];

@@ -699,7 +699,7 @@
     {
      "type": "Edge case fix",
      "level": "Yellow Alert",
-     "note": "The Play operation has been adjusted to exclude [[time travel]] cards from being recalled.",
+     "note": "The Play operation has been adjusted to exclude [[time travel]] cards from being found.",
      "affected": [
       "To Boldly Go",
       "1st and 2nd print"
