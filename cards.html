@@ -356,18 +356,24 @@ body.lb-open{overflow:hidden;}
   font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;margin:-.1rem 0 .3rem;}
 .multsec .mt-key b{font-weight:400;}
 .multsec .mt-key .kb{color:#7ec8f0;}
-.multsec .mt-key .ka{color:#e09050;}
+.multsec .mt-key .ka{color:var(--muted);}
 .mt-row{display:flex;align-items:center;gap:.3rem;margin:.34rem 0;}
 .mt-chip{flex:none;display:inline-flex;align-items:center;height:1.15em;border-radius:999px;overflow:hidden;}
 .mt-chip img{height:1.15em;width:auto;display:block;}
 .mt-slots{flex:1;display:grid;grid-template-columns:repeat(15,1fr);align-items:center;gap:1px;}
-.mt-slot{position:relative;height:30px;display:flex;align-items:center;justify-content:center;}
+.mt-slot{position:relative;height:22px;display:flex;align-items:center;justify-content:center;}
 .mt-slot::after{content:'';width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.18);}
-.mt-slot.on::after{width:5px;height:5px;background:rgba(255,255,255,.55);}
-.mt-slot b,.mt-slot s{position:absolute;left:0;right:0;text-align:center;text-decoration:none;
-  font-family:'Antonio',sans-serif;font-weight:700;font-size:.62rem;line-height:1;}
-.mt-slot b{top:0;color:#7ec8f0;}
-.mt-slot s{bottom:0;color:#e09050;}
+.mt-slot.on::after{display:none;}
+.mt-slot b{position:relative;z-index:1;text-align:center;
+  font-family:'Antonio',sans-serif;font-weight:700;font-size:.78rem;line-height:1;
+  color:#7ec8f0;background:var(--bg2);padding:1px 0;}
+.mt-slot b i{font-style:normal;font-size:1.55em;line-height:0;vertical-align:-.06em;margin-right:.02em;}
+.mt-scale{margin:.1rem 0 -.1rem;}
+.mt-scale .mt-chip{visibility:hidden;}
+.mt-tick{text-align:center;font-family:'Antonio',sans-serif;font-weight:600;font-size:.62rem;
+  line-height:1;color:var(--muted);letter-spacing:.02em;}
+.mt-slots .mt-slot:nth-child(5n)::before{content:'';position:absolute;left:50%;top:-.17rem;bottom:-.17rem;
+  border-left:1px dashed rgba(255,255,255,.14);}
 .dnote{margin:.9rem 0 .2rem;}
 .dnote-head{display:flex;align-items:center;gap:.45rem;margin-bottom:.35rem;}
 .dnote-rule{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(240,179,35,.7),transparent);}
@@ -1942,26 +1948,31 @@ function deckMultHTML(c){
   if(!c || c.suit!=='Captain') return '';
   const d=DECK_MULT[c.deck];
   if(!d) return '';
-  let rows='';
+  let rows='', firstChip='';
   for(const [k,name,col] of MULT_TRACKS){
     const t=d[k];
     if(!t) continue;
     const src=(CARDFACE.skillChip||CARDFACE.skill||{})[name];
     const chip=src?'<span class="mt-chip" style="background:'+col+'">'
       +'<img src="'+src+'" alt="'+name+'"></span>':'';
+    if(!firstChip) firstChip=chip;
     let slots='';
     for(let i=1;i<=15;i++){
       const v=t[String(i)];
       slots+='<div class="mt-slot'+(v?' on':'')+'"'
         +(v?' title="Space '+i+': basic \u00d7'+(v+1)+', advanced \u00d7'+v+'"':'')+'>'
-        +(v?'<b>\u00d7'+(v+1)+'</b><s>\u00d7'+v+'</s>':'')+'</div>';
+        +(v?'<b><i>\u00d7</i>'+(v+1)+'</b>':'')+'</div>';
     }
     rows+='<div class="mt-row">'+chip+'<div class="mt-slots">'+slots+'</div></div>';
   }
   if(!rows) return '';
+  let ticks='';
+  for(let i=1;i<=15;i++) ticks+='<div class="mt-tick">'+(i%5===0?i:'')+'</div>';
+  const scale='<div class="mt-row mt-scale" aria-hidden="true">'
+    +firstChip.replace(/ alt="[^"]*"/,' alt=""')+'<div class="mt-slots">'+ticks+'</div></div>';
   return '<div class="dnote multsec"><div class="dnote-head"><span class="dnote-rule"></span>'
     +'<span class="dnote-label">Multipliers</span><span class="dnote-rule"></span></div>'
-    +'<div class="mt-key"><b class="kb">Basic</b><b class="ka">Advanced</b></div>'+rows+'</div>';
+    +'<div class="mt-key"><b class="kb">Basic side</b><b class="ka">(Advanced: \u22121)</b></div>'+scale+rows+'</div>';
 }
 const REQ_GLYPH_CX={research:34.5,military:35.0,influence:36.4,any:31.2,
                     variable:49.3,collective:50};
