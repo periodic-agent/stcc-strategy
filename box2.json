@@ -4223,7 +4223,12 @@
       "Attack"
     ],
     "filename": "georgiou-cmdr-burnham.jpg",
-    "icons": [],
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ],
     "text": {
       "cost": "",
       "hand": "Attack Play: *Requires *[[mil-restriction]] > [[res-restriction]]: Dismiss a Duty Officer. Force your opponent to either: log (one of) their Duty Officer(s) OR dismiss (one of) their Duty Officer(s) and you gain 3 [[glory]]. [[action]] Play: *Requires *[[res-restriction]] > [[mil-restriction]]: Discard a non-[[starfleet]] card to scan for [[any species]] matching the discarded card.",
@@ -4641,7 +4646,12 @@
     ],
     "other_traits": [],
     "filename": "archer-nx-01-enterprise.jpg",
-    "icons": [],
+    "icons": [
+      {
+        "type": "Skill",
+        "specialty": "Research"
+      }
+    ],
     "text": {
       "cost": "",
       "hand": "[[action]] Play: Deploy this ship. You may exhaust a Duty Officer to warp this ship.",
