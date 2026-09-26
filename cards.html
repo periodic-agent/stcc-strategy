@@ -532,7 +532,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .cid2 .meta{color:#8a94ac;font-weight:400;margin-left:.35rem;}
 .cid2.has-cap{padding-right:.95rem;}
 .capmini{flex:none;align-self:stretch;position:relative;z-index:2;margin-left:-.5rem;}
-.capmini img{position:absolute;left:0;bottom:calc(-.7rem - 1px);height:2.65rem;width:auto;display:block;
+.capmini img{position:absolute;left:0;bottom:calc(-.7rem - 1px);height:2.3rem;width:auto;display:block;
   filter:drop-shadow(0 0 .6px rgba(255,255,255,.55));}
 .posin{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1;
   background:#14171f;color:#e8ecf5;white-space:nowrap;
@@ -2356,7 +2356,7 @@ function buildPillCard(c, opts){
     numline='<div class="ce-bottom"><div class="ce-footrow"><span class="cid2'+(capSrc?' has-cap':'')+'">'+(c.card_number||'')
       +(badge?(c.card_number?' ':'')+'<span class="meta">'+badgeMark+'</span>':'')
       +(errMark?' <span class="meta errata '+levelClass(markEntries(c)[0].level)+'" title="'+lbEsc((markEntries(c)[0].type||'')+(levelWord(markEntries(c)[0].level)?' \u00b7 '+levelWord(markEntries(c)[0].level):''))+'">&lt;!&gt; Errata</span>':'')+'</span>'
-      +(capSrc?'<span class="capmini" style="width:calc('+capAR+' * 2.65rem - .2rem)"><img src="'+capSrc+'" alt=""></span>':'')
+      +(capSrc?'<span class="capmini" style="width:calc('+capAR+' * 2.3rem - .2rem)"><img src="'+capSrc+'" alt=""></span>':'')
       +(posin?'<span class="posin">'+posin+'</span>':'')+'</div></div>';
   }
   el.innerHTML='<div class="ce-row"><div class="ce-main">'
