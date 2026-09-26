@@ -530,6 +530,10 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   font-family:'Antonio',sans-serif;font-size:.56rem;font-weight:600;letter-spacing:.07em;
   padding:.12rem .55rem;border-radius:0 999px 999px 0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22);}
 .cid2 .meta{color:#8a94ac;font-weight:400;margin-left:.35rem;}
+.cid2.has-cap{padding-right:.95rem;}
+.capmini{flex:none;align-self:stretch;position:relative;z-index:2;margin-left:-.5rem;}
+.capmini img{position:absolute;left:0;bottom:calc(-.7rem - 1px);height:2.65rem;width:auto;display:block;
+  filter:drop-shadow(0 0 .6px rgba(255,255,255,.55));}
 .posin{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1;
   background:#14171f;color:#e8ecf5;white-space:nowrap;
   font-family:'Antonio',sans-serif;font-size:.56rem;font-weight:600;letter-spacing:.07em;
@@ -2349,10 +2353,14 @@ function buildPillCard(c, opts){
   const badgeMark=badge?(badge.cls==='update'?'\u2020':'\u25CF')+' '+badge.text:'';
   let numline='';
   const posin=(c.position_indicator===undefined||c.position_indicator===null)?'':String(c.position_indicator);
+  const capKey=String(c.deck||'').toLowerCase();
+  const capSrc=(CARDFACE.captain||{})[capKey];
+  const capAR=(CARDFACE.captainAR||{})[capKey]||1;
   if(c.card_number||badge||posin||errMark){
-    numline='<div class="ce-bottom"><div class="ce-footrow"><span class="cid2">'+(c.card_number||'')
+    numline='<div class="ce-bottom"><div class="ce-footrow"><span class="cid2'+(capSrc?' has-cap':'')+'">'+(c.card_number||'')
       +(badge?(c.card_number?' ':'')+'<span class="meta">'+badgeMark+'</span>':'')
       +(errMark?' <span class="meta errata '+levelClass(markEntries(c)[0].level)+'" title="'+lbEsc((markEntries(c)[0].type||'')+(levelWord(markEntries(c)[0].level)?' \u00b7 '+levelWord(markEntries(c)[0].level):''))+'">&lt;!&gt; Errata</span>':'')+'</span>'
+      +(capSrc?'<span class="capmini" style="width:calc('+capAR+' * 2.65rem - .2rem)"><img src="'+capSrc+'" alt=""></span>':'')
       +(posin?'<span class="posin">'+posin+'</span>':'')+'</div></div>';
   }
   el.innerHTML='<div class="ce-row"><div class="ce-main">'
@@ -2395,10 +2403,16 @@ let VISIBLE_IMG_CARDS=[];
 
 function placePosPills(){
   document.querySelectorAll('.card-entry .posin').forEach(p=>{
-    p.classList.remove('wide');
-    const row=p.parentElement, cid=row.querySelector('.cid2');
+    p.classList.remove('wide'); p.style.left='';
+    const row=p.parentElement, cap=row.querySelector('.capmini'), cid=cap||row.querySelector('.cid2');
     if(!cid) return;
-    if(p.getBoundingClientRect().left < cid.getBoundingClientRect().right + 4) p.classList.add('wide');
+    if(cap){
+      const rr=row.getBoundingClientRect();
+      const from=cap.getBoundingClientRect().right-rr.left;
+      const to=rr.width-(row.closest('.card-entry').classList.contains('has-focus')?38:2);
+      p.style.left=((from+to)/2)+'px';
+    }
+    if(p.getBoundingClientRect().left < cid.getBoundingClientRect().right + 4){ p.style.left=''; p.classList.add('wide'); }
   });
 }
 
