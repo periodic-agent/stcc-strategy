@@ -534,7 +534,7 @@ footer a{color:var(--muted);text-decoration:underline;}
   padding:.12rem .55rem;border-radius:0 999px 999px 0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22);}
 .cid2 .meta{color:#8a94ac;font-weight:400;margin-left:.35rem;}
 .cid2.has-cap{padding-right:.95rem;}
-.capmini{flex:none;align-self:stretch;position:relative;z-index:2;margin-left:-.5rem;}
+.capmini{flex:none;align-self:stretch;position:relative;z-index:2;}
 .capmini img{position:absolute;left:0;bottom:calc(-.7rem - 1px);height:2.3rem;width:auto;display:block;
   filter:drop-shadow(0 0 .6px rgba(255,255,255,.55));}
 .posin{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1;
@@ -712,7 +712,7 @@ footer a{color:var(--muted);text-decoration:underline;}
 <meta property="og:url" content="https://periodic-agent.github.io/stcc-strategy/cards.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<script src="cardface-assets.js?v=c07331a3"></script>
+<script src="cardface-assets.js?v=0d8ae5c7"></script>
 </head>
 <body>
 
@@ -2355,11 +2355,12 @@ function buildPillCard(c, opts){
   const capKey=String(c.deck||'').toLowerCase();
   const capSrc=(CARDFACE.captain||{})[capKey];
   const capAR=(CARDFACE.captainAR||{})[capKey]||1;
+  const capFit=(CARDFACE.captainFit||{})[capKey]||[-.217,.413];
   if(c.card_number||badge||posin||errMark){
-    numline='<div class="ce-bottom"><div class="ce-footrow"><span class="cid2'+(capSrc?' has-cap':'')+'">'+(c.card_number||'')
+    numline='<div class="ce-bottom"><div class="ce-footrow"><span class="cid2'+(capSrc?' has-cap" style="padding-right:calc('+capFit[1]+' * 2.3rem)':'')+'">'+(c.card_number||'')
       +(badge?(c.card_number?' ':'')+'<span class="meta">'+badgeMark+'</span>':'')
       +(errMark?' <span class="meta errata '+levelClass(markEntries(c)[0].level)+'" title="'+lbEsc((markEntries(c)[0].type||'')+(levelWord(markEntries(c)[0].level)?' \u00b7 '+levelWord(markEntries(c)[0].level):''))+'">&lt;!&gt; Errata</span>':'')+'</span>'
-      +(capSrc?'<span class="capmini" style="width:calc('+capAR+' * 2.3rem - .2rem)"><img src="'+capSrc+'" alt=""></span>':'')
+      +(capSrc?'<span class="capmini" style="margin-left:calc('+capFit[0]+' * 2.3rem);width:calc('+capAR+' * 2.3rem)"><img src="'+capSrc+'" alt=""></span>':'')
       +(posin?'<span class="posin">'+posin+'</span>':'')+'</div></div>';
   }
   el.innerHTML='<div class="ce-row"><div class="ce-main">'
