@@ -409,7 +409,7 @@
     "suit": "Person",
     "source": "Common",
     "game_box": "Captain's Chair",
-    "card_number": "1PER15/25",
+    "card_number": "1PER15/25†",
     "glory": null,
     "position_indicator": null,
     "species_traits": [
@@ -434,7 +434,8 @@
       "table": "Reaction: After putting a [[cargo]] into play, draw a card.",
       "goal": "",
       "reward": ""
-    }
+    },
+    "variant": "updated"
   },
   {
     "id": "moriarty",
@@ -2063,7 +2064,7 @@
     "source": "Common",
     "game_box": "Captain's Chair",
     "card_number": "1ENC07/8",
-    "glory": 1,
+    "glory": 7,
     "position_indicator": null,
     "species_traits": [
       "Transcendent",
@@ -3778,7 +3779,7 @@
     "icons": [],
     "text": {
       "cost": "",
-      "hand": "[[action]] Play: You may send an [[away team]] to the *U.S.S. Discovery*'s [[location]]. You may beam a card from your hand or Discard pile to the *U.S.S. Discovery*. If you do both, gain 1 [[glory]].",
+      "hand": "[[action]] Play: You may send an [[away team]] to the *U.S.S. Discovery-A*'s [[location]]. You may beam a card from your hand or Discard pile to the *U.S.S. Discovery-A*. If you do both, gain 1 [[glory]].",
       "table": "Activation: Exhaust a [[ship]] to refresh its [[location]].",
       "goal": "",
       "reward": "Resupply: Discard the top card of your deck and gain 1 [[latinum]]."
@@ -3848,7 +3849,7 @@
     "text": {
       "cost": "",
       "hand": "[[action]] Play: You may take an [[incident]] to gain 2 [[research]]. For each deployed [[ship]] you have in play, recrystallize 1 [[dilithium]].",
-      "table": "[[action]] Activation: Dismiss *U.S.S. Discovery* and this card and spend 3 [[dilithium]] to take the top [[encounter]].",
+      "table": "[[action]] Activation: Dismiss *U.S.S. Discovery-A* and this card and spend 3 [[dilithium]] to take the top [[encounter]].",
       "goal": "",
       "reward": ""
     }

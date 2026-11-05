@@ -1314,7 +1314,7 @@ function togglePnHelp(ev){
 function errataKind(e){ return (e && e.kind) || 'errata'; }
 
 function markEntries(c){ return (c.errata||[]).filter(e=>errataKind(e)!=='update'); }
-function hasErrataMark(c){ return markEntries(c).length > 0 && c.badgeKind !== 'update'; }
+function hasErrataMark(c){ return markEntries(c).length > 0 && (c.badgeKind !== 'update' || !(FULL_BY_ID[c.id]||[]).some(p=>p.variant!=='updated')); }
 function errataLine(e){
   const k=errataKind(e), t=lbEsc(e.type||'');
   if(k==='update') return t;
