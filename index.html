@@ -210,6 +210,9 @@
     border-radius: 2px;
     text-transform: uppercase;
   }
+  .entry .entry-badge.badge-contributed { top: auto; right: auto; transform: none; align-self: center; flex: none; order: 3; margin-right: 0; background: rgba(94,200,200,0.12); color: #5ec8c8; border: 1px solid rgba(94,200,200,0.45); position: static; font-size: 0.55rem; letter-spacing: 0.05em; padding: 0.1rem 0.3rem; margin-left: auto; white-space: nowrap; }
+  .gray-box[data-faction="contributed"] { border-left: 3px solid #5ec8c8; }
+  .gray-box[data-faction="contributed"] .entry-sub { flex-shrink: 0; }
   .badge-live {
     background: rgba(74,196,138,0.15);
     color: var(--green);
@@ -664,6 +667,12 @@
     <a href="wesley-crusher-guide.html" class="entry gray-box" data-faction="neutral">
       <div class="entry-name">Wesley Crusher</div>
       <div class="entry-sub"></div>
+    </a>
+
+    <a href="rxn_guide.html" class="entry gray-box" data-faction="contributed">
+      <div class="entry-name">Reactions</div>
+      <div class="entry-sub">Esquire_Sandwich</div>
+      <span class="entry-badge badge-contributed">Contributed</span>
     </a>
 
 
