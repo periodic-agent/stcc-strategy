@@ -1,8 +1,8 @@
 {
- "generated": "2026-09-22T01:31:00Z",
+ "generated": "2026-11-05T00:26:18Z",
  "generator": "tools/build_strategy_index.py",
- "guide_count": 30,
- "card_count": 478,
+ "guide_count": 31,
+ "card_count": 501,
  "guides": {
   "allies.html": {
    "title": "Ally Deck Strategy Guide",
@@ -34,6 +34,10 @@
   },
   "georgiou.html": {
    "title": "Philippa Georgiou",
+   "label": "To Boldly Go"
+  },
+  "khan.html": {
+   "title": "Khan",
    "label": "To Boldly Go"
   },
   "kirk.html": {
@@ -228,6 +232,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Admiral Necheyev is fine for Khan, but not necessarily any more than any other Captain.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "koloth.html",
     "count": 1,
     "hits": [
@@ -279,6 +297,20 @@
       "anchor": "person-deck",
       "heading": "Person Deck",
       "snippet": "Admiral Pressman is a solid card despite the fact that you probably use him primarily to free play Attack cards, and not for his table operations.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Admiral Pressman is great for a Captain with a lot of Attack cards, and you can often find yourself with no way to promote, so his self-promotion to Duty Officer is often helpful.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -468,6 +500,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Ambassador Kamarag is an overpriced scan for a Klingon or Starfleet card, but if you need his traits, it might be worth it.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -557,6 +603,20 @@
       "anchor": "notable-market-cards",
       "heading": "Encounters",
       "snippet": "Core Set: Ancient Gene Fragments is probably good for Georgiou, especially if she has a Scientist in play. Boltzman Brain, Iconian Gateway, and Omega Particle help her about as much as anybody else. Georgiou should be able to use Sha Kar Ree pretty effectively, so it’s certainly in the top half of the list for me.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Ancient Gene Fragments has the Augment trait, making it hard to pass up. Beyond that, you may have a decent number of Away Teams on Controlled Locations and Scientists in Play to make this effectively a free-play Encounter.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -725,6 +785,20 @@
       "anchor": "core-box",
       "heading": "Core Box",
       "snippet": "Sela: While the Scimitar is a beast, you’ve got your own weapon with Vulcan Hello. You’re not going to be able to take locations without focused attention on the neutral zone, so it might be worth it to send Away Teams to the Neutral Zone instead of your controlled locations. But don’t sacrifice card draw simply to stall out against an opponent that will overwhelm you with ships and Away Teams. Turn your attention",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Devastated Ceti Alpha V is the more familiar landscape seen in The Wrath of Khan. It has the Attack and Anomaly traits. When Ceti Alpha VI explodes (logs), your opponent will take an Incident and you’ll send all of your Away Teams here, either from your Captain, controlled Locations, the Neutral Zone, or any other hypothetical Location (that’s not a tease of future content, I’m simply trying to say “from",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -1100,6 +1174,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "President Rillak can be good for Khan if you’re using a ship for beaming some Incidents, which requires a ship set aside as a beaming-ship. You don’t have Utilize or Inspire, so she’s really not helpful as a Duty Officer.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -1323,6 +1411,20 @@
       "anchor": "captain-card-starting-components",
       "heading": "Captain Card & Starting Components",
       "snippet": "Archer starts with the NX-01 Enterprise deployed, and it’s objectively a little worse than most starting ships (very thematic). It only has a Research skill, which is fitting because the ship leaves spacedock without much in terms of weapon systems. It has the NX-01, Human, and Starfleet traits. It also doesn’t have much of a transporter system (it’s fine for Cargo, right?) and everyone using it is a little unsure",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Khan starts with two Controlled Locations. The first is Ceti Alpha V, which has a Passive that increases your hand size by one, meaning that you start the game with a six-card hand. The image here of Ceti Alpha V is actually from the television show Enterprise (ENT 3x8: Twilight), in an episode where Archer contracts interspatial parasites which prevent him from forming new memories, and because he cannot lead the",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -1652,6 +1754,28 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Tholians are pretty great for everyone, and Khan does well because he usually has a decent number of Locations since there’s no Strange New Worlds logging controlled Locations.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "putting-it-all-together",
+      "heading": "Putting It All Together",
+      "snippet": "I hope you enjoyed this strategy guide for Khan’s deck. Be sure to add any comments or questions below or in the Star Trek Captain’s Chair Discord. Make sure to subscribe to the BGG listing for Second Contact for my next Captain, Captain Christopher Pike from Strange New Worlds. And if you haven’t heard, there’s 10 more Captains heading our way next year, and I’m excited to write about all of them.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "picard.html",
     "count": 2,
     "hits": [
@@ -1814,6 +1938,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "to-boldly-go",
+      "heading": "To Boldly Go",
+      "snippet": "Archer: Archer might be the one Captain that it’s worth fighting early in the Neutral Zone, as he doesn’t have enough Ships and Away Teams to stop you early on. That said, he has a decent point threshold and is going to steal good ships with T’Pol, so fight where you can and focus on junking as many cards as you can otherwise. He’s got some traits you want in his deck so be sure to use Revenge Is a Dish Best Served",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -1936,6 +2074,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Arin’Sen only makes sense for Khan if you’ve been gathering Klingons throughout the game.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -2052,6 +2204,20 @@
       "heading": "Person Deck",
       "snippet": "To Boldly Go: You're looking for Klingons and Starfleet cards in the person deck, so Ash Tyler is an excellent (and moderately thematic) choice that may even allow you to use both of his abilities throughout the game (depending on whether you have more Starfleet or Klingons). Lursa is the only other Klingon Person, but she’s got such a great ability you might even be able to log Analyze and just rely on her to get",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Ash Tyler is a good choice, as you’re likely to have at least one trait you can use (mainly Spy) and Khan tends to hoard Glory so you’ll be able to use him as Duty Officer pretty effectively.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -2328,6 +2494,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Betazed Intelligence is only useful in coordination with other cards, as you don’t have anything in your deck that interacts with its pinged traits.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -2393,6 +2573,20 @@
       "anchor": "ally-deck",
       "heading": "Ally Deck",
       "snippet": "Betazed Intelligence helps you find Soval and T’Pol, and you’ll probably get at least a two-card hand size increase before it logs, and it makes a great Ally card for later beaming to Earth.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Betazed Intelligence is only useful in coordination with other cards, as you don’t have anything in your deck that interacts with its pinged traits.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -2486,6 +2680,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Biobed isn’t a fine way to return Incidents and get a Doctor trait.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -2566,6 +2774,20 @@
       "heading": "Sela",
       "snippet": "Sela's Reinforce traits are a tiny bit more specific than most Captains. On a win you can reinforce an Attack, Shady, or Cloak card. At first blush this seems limited, as no one Suit is included, but there's a lot of Attack (17) and Shady (9) cards, and even two common cloaks (Cloaking device and Bird-Of-Prey). The real question will be whether your captain can benefit from those Attack cards. On a loss, you can",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Bird-of-Prey might be kind of expensive for Khan, but no more than any other Captain. You’ll benefit from that Cloak trait, and sending an Away Team is always a benefit.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -2672,6 +2894,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Bolians, Bynars, Denobulans, Kelpiens, and Organians are usually pretty good for everybody, but Khan is stuck with Specialty restrictions until the end of the game, so it may be less worth it to grab these Ally cards than it is for other Captains.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -2758,6 +2994,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Boltzmann Brain is great for everybody, and Khan loves it too.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -2811,6 +3061,28 @@
       "snippet": "This ship has the Borg tag, naturally. It has a free play action to deploy and warp the ship, but you can optionally spend an action token and one Dilithium to gain a person and log that card. That seems kind of silly (it's just a point, unless the card has a focus or market glory on it), except that if you have a Borg captain you can assimilate that card instead. What does that mean? What does that do? I don't know",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Borg Probe is almost always great for everyone, though Khan doesn’t have Missions to worry about it’s still a great ship for controlling Locations.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Unimatrix Zero doesn’t do much for Khan without Borg Probe.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -2938,6 +3210,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Borg Spatial Trajector can be useful once you get to Wrathful Khan.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -3026,6 +3312,20 @@
       "heading": "Notable Market Cards",
       "snippet": "In the Person Deck, I tend to like grabbing Lenara Khan for her Scientist trait and her Research focus scoring (as does Bruce Maddox), in addition to her ability to scan for anomalies. I often feel limited on ships early on, so Lursa can help with away team placement and gaining more ships, and she can be logged for your Shady requirement on mission three. Adding any spies and drawing a minimum of seven cards a turn",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Bruce Maddox can be good if you still need the Scientist or Engineer traits and have a Synthetic hanging around in your deck.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -3796,6 +4096,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Bolians, Bynars, Denobulans, Kelpiens, and Organians are usually pretty good for everybody, but Khan is stuck with Specialty restrictions until the end of the game, so it may be less worth it to grab these Ally cards than it is for other Captains.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -3912,6 +4226,20 @@
       "heading": "Person Deck",
       "snippet": "Core Set: Once again we have Klingon with a Military Focus on Captain Dorg who will work well for Georgiou, as will Ambassador Kamarag. Lenara Kahn is a good way to get Anomaly cards and gain some Research. Sakona’s not bad especially for the Vulcan trait and Military requirement as duty officer, so long as you’ve found some Weapons. I like Peanut Hamper simply to avoid Dilithium scarcity. Let me know if you all see",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Captain Dorg is a pretty good card for Khan in terms of how many different options he has, but he’s not critical to your gameplay.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -4042,6 +4370,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Cloaking Device is pretty great for Khan, both with a rarer Cloak trait and the ability to better send Away Teams.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -4166,6 +4508,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Commander Tysess is fine for Khan, and can help you get a Duty Officer promoted when you don’t have a Ship that can promote. A free beam can also help you fill up the S.S. Botany Bay .",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -4226,6 +4582,20 @@
       "heading": "Cargo Deck",
       "snippet": "To Boldly Go: I’m definitely a fan of Augmentation plague due to Georgiou’s late game focus on Klingon cards, and if you can nab it early you can get some Glory every time you put a Klingon in play. You shouldn’t have to worry about specialty restrictions for cards like forced Singularity, which also gives you focus scoring for research and yet another duty officer. Same benefit to Computer Virus, and you should get",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Computer Virus is a fine card for Khan, but it’s more about keeping it from your opponents.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -4406,6 +4776,28 @@
   ],
   "delphic-expanse-sphere": [
    {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "khan-genesis-device",
+      "heading": "Genesis Device (Cargo) (Dev Cost: 2 Dilithium, 1 Latinum, have no other cards in your Development Pile)",
+      "snippet": "Genesis Device has the Ongoing and Attack traits, with a free play that allows you to mark any one trait. This is great if you just can’t find that last trait you need from the market (when not mixing boxes, that’s often Synthetic for me). As a note, if you have checked all twelve traits, you can still play this card (it’s not a cost). Then, you’ll destroy a neutral Location, and no Glory is given for any tokens",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Delphic Expanse Sphere has a free-play to send Away Teams and market gain-utility which Khan can make good use of.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "archer.html",
     "count": 1,
     "hits": [
@@ -4552,6 +4944,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Bolians, Bynars, Denobulans, Kelpiens, and Organians are usually pretty good for everybody, but Khan is stuck with Specialty restrictions until the end of the game, so it may be less worth it to grab these Ally cards than it is for other Captains.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -4638,6 +5044,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "D’Erika Tendi has some abilities that don’t matter (gaining on Influence and Military) but I like gaining Ships from the junk and stealing Latinum, making this one worth considering (and she’s a great Duty Officer).",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -4718,6 +5138,20 @@
       "lore": true
      }
     ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "khan-surprise-attack",
+      "heading": "Surprise Attack (Directive) (Dev Cost: 2 Dilithium, take an Incident)",
+      "snippet": "Who can forget that first strike on the Enterprise, taking out all those cadets that stayed at their posts! Khan can use Surprise Attack to give an opponent an Incident from your hand at the cost of a Dilithium. I love using this when playing with promo Incidents or just more complex ones like Dilithium Shockwave. Try not to give your opponent your Available custom Incidents, because they can just give them right",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "dkora-marauder": [
@@ -4766,6 +5200,20 @@
       "heading": "Ship Deck",
       "snippet": "To Boldly Go: The repeat ships from the Corebox are all great, but Borg Cube gives the extra advantage of endgame scoring for Georgiou so long as you can keep it in play at the end of the game with lots of beamed cards. D’kyr Cruiser has that Vulcan trait and Military restriction that Georgiou can benefit from too. Medusian Vessel is a good pick for the Alien trait. Grabbing Vor’cha Attack Cruiser can help push the",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "D’Kora Marauder Is a decent choice since it can be used by Khan to get his Away Teams out, and you benefit from the Business trait.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -4906,6 +5354,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "D’Var is amazing because you’ll be able to return Incidents using the Scientist trait and Vacated Regula I, and it will enter and exit play as you control Locations.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -5014,6 +5476,20 @@
       "heading": "Ally Deck",
       "snippet": "Core Set: The standouts when adding the core set back in tend to be more military focused. Karemma gives Georgiou some much-needed Latinum and extra actions. Tholians are excellent for Georgiou, especially once she’s got quite a few ships under her control. I will note that the Edosians are a bit underwhelming and it might be hard to reach the Influence threshold. The Emerald Chain can help with Military gain, but",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Edosians are pretty good for Khan. You’ll get some deck churn to get what you want and you’ll probably be able to get the Encounter once your Captain is Wrathful Khan.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -5136,6 +5612,20 @@
       "heading": "Ally Deck",
       "snippet": "Core Set: The standouts when adding the core set back in tend to be more military focused. Karemma gives Georgiou some much-needed Latinum and extra actions. Tholians are excellent for Georgiou, especially once she’s got quite a few ships under her control. I will note that the Edosians are a bit underwhelming and it might be hard to reach the Influence threshold. The Emerald Chain can help with Military gain, but",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Emerald Chain doesn’t really synergize with anything in Khan’s deck.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -5338,6 +5828,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "EVA Suits are helpful for Khan because it’s another way to put Augments in play without spending action tokens or discarding cards to beam them.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -5418,6 +5922,20 @@
       "heading": "Cargo Deck",
       "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Ferengi Wine helps Khan have more control over gaining Ally cards, so I’m not opposed to it.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -5511,6 +6029,20 @@
       "anchor": "notable-market-cards",
       "heading": "Ship Deck",
       "snippet": "Second Contact: Fesarius is great for everyone, and Georgiou has plenty of Starfleet Person cards to use to gain an encounter with Fesarius . The R.I.S. Talvath isn’t anything special but might help you with pushing the endgame.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Fesarius is quite good for Khan, as he has plenty of ways to get the Encounter, with an Ambassador trait as well.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -5656,6 +6188,20 @@
       "heading": "Cargo Deck",
       "snippet": "To Boldly Go: I’m definitely a fan of Augmentation plague due to Georgiou’s late game focus on Klingon cards, and if you can nab it early you can get some Glory every time you put a Klingon in play. You shouldn’t have to worry about specialty restrictions for cards like forced Singularity, which also gives you focus scoring for research and yet another duty officer. Same benefit to Computer Virus, and you should get",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Forced Singularity is not the most necessary card for Khan, and you won’t be able to have additional Duty Officers until you become Wrathful, but it’s not a bad card for him either.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -5832,6 +6378,28 @@
       "heading": "Person Deck",
       "snippet": "Second Contact: Second Contact adds some helpful traits and abilities from Person cards, including the Klingon Ma’ah and Alien K’Ranch. Parmen’s not the best due to the six Influence requirement for his activation, but his find ability is tremendous. D’Erika Tendi is pretty great too because of track gain and Ship gain. And Jennifer Sh’reyan provides another option for Set a Course in her Activation, meaning you can",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 5,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Second Contact:",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Second Contact:",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -6726,6 +7294,28 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 3,
+    "hits": [
+     {
+      "anchor": "khan-cmdr-chekov",
+      "heading": "Cmdr. Chekov (Person) (Dev Cost: Take an Incident)",
+      "snippet": "This version of Chekov is nearly identical to the card in Kirk’s deck, except that he has the Mind Control trait (and he is a Development instead of a Reserve, thus having two printed points). For Khan, I recommend using him primarily to send away teams and mess with human opponents, though there are likely enough Person cards in Khan’s deck that you can certainly utilize him as Duty Officer.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "President Rillak can be good for Khan if you’re using a ship for beaming some Incidents, which requires a ship set aside as a beaming-ship. You don’t have Utilize or Inspire, so she’s really not helpful as a Duty Officer.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 3,
     "hits": [
@@ -6930,6 +7520,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Gift Box might be a bit helpful, but I wouldn’t go out of my way to get it with no usable traits.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -7040,6 +7644,20 @@
       "heading": "Encounters",
       "snippet": "To Boldly Go: I hesitated including Encounters at first because most captains love most of them. Still, here’s some things I saw that could be helpful. Gomtuu really helps Georgiou move up Military fast, while still offering her a chance to increase Research Focus scoring, both of which she needs for victory. Species 10-C can certainly help, but you’re risking future Encounter gain by eating up those locations and I",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Gomtuu is fine, but only to control the Neutral Zone. The Research skill and the Military gain element is pointless, making the minimal two points kind of underwhelming for Khan.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -7170,6 +7788,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "V’Ger, Koala and the Guardian of Forever nearly always have general applicability, though you can’t get a trait from V’Ger and Guardian of Forever isn’t as helpful with no track movement.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -7270,6 +7902,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Halkan Council will give you Dilithium once, and then probably will get logged.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -7340,6 +7986,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Harry Mudd is a good card once Khan can ignore restrictions, but prior to that he’ll be clogging up your deck.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "holographic-drone-ship": [
@@ -7402,6 +8062,20 @@
       "heading": "Shran",
       "snippet": "A win against Shran can allow you a Reinforce of a Weapon or Business trait. For now, that's Tevrin Krit, Holosuite, Pakled Freighter, or Karemma for Business, and Lirpa, Mek'leth, Phasers, Disruptor Pistols, or Holographic Drone Ship for Weapons. I think that's a good amount of flexibility to get something defensive or offensive against the Bot, and I love finding a reason to remove Bot away teams in exchange for",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Holographic Drone Ship is great late-game once Khan loses his Specialty restrictions. Earlier it’s not as great.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -7550,6 +8224,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Holosuite is fine for Khan because the Business trait, the ability to scan, and he’s got a decent Latinum engine early-game.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -7672,6 +8360,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Horta is fantastic, both as a Creature trait (hard to find) and as an additional way to get a Development. You won’t get Dilithium from it until late game (Wrathful Khan), but it’s worth having.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "koloth.html",
     "count": 1,
     "hits": [
@@ -7755,6 +8457,20 @@
       "snippet": "Hoshi has a free play action that lets her find a card with Research skill/focus. Her second action requires five Research and lets you pick a species to scan for when you discard a card with Research skill/focus. Depending on your missions, the choice of your desired card will vary, but that offers a ton of flexibility for any captain. Her Activation also costs an action token, and lets you draw a card for each",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Hoshi Sato might be helpful late game if you have the right cards to use her second Play Action, but I don’t think any Khan player is going to be seeking her out consistently.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -7932,6 +8648,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Iconian Gateway is pretty good for Khan, especially with a thin deck and repeated use.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -8040,6 +8770,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Illyrians might be nice when Khan has trouble with promotion of a Duty Officer, and he does have some Starfleet which might be helpful to be able to get a good trait. .",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -8117,6 +8861,20 @@
       "snippet": "Jackabog use shiny things to get broken ships, and when Jackabog strong he gets very good card. Anyone can use Jackabog with helmets! With Helmet, Jackabog gets cards, which is good for Rebner, because he doesn't get many cards. But every captain likes cards! Jackabog is a good person card, but he is a shady person. We are done now. A quick point: because of that Activation, any captain can benefit from Jackabog as",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Jackabog is a decent card for Khan because he’s a great way to gain more ships, and once you flip your captain he can get you an extra Encounter.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -8216,6 +8974,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Jago’s Epigenetic Implant was designed for Khan, in the sense that it really benefits from Augment traits and can be marked as a Doctor or Business trait.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -8296,6 +9068,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Jennifer Sh’reyan is good for Khan, can help speed up your S.S. Botany Bay Location control while gaining Dilithium you need.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -8333,6 +9119,20 @@
       "anchor": "person-deck",
       "heading": "Person Deck",
       "snippet": "Joret Dal provides a nice hand size boost, but so does Daniels. He’s really more helpful for keeping your deck trim and gaining a Glory, so I’d say he’s solidly situational. Spy and Cardassian aren’t the most common traits so that’s another reason to grab him.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Joret Dal is worth the Spy trait usually, and he does help thin the deck and increase your hand, so I say go for it.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -8406,6 +9206,20 @@
       "heading": "Ally Deck",
       "snippet": "To Boldly Go: While Georgiou can make use of most of these Ally cards, there are very few that I consider to be truly vital to her. As always, you’re hoping to get the Kelpiens from Saru, but let this be a second reminder that if you’re playing Burnham as she’ll scan for them too. If you’re looking for resources, grab Arin’sen, Kaelon II Science Ministry, or the Orion Syndicate. She’s also likely to get some benefit",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "The Kaelon II Science Ministry isn’t terrible, you just don’t have a lot of methods to log cards and you don’t get any benefit from gaining Research.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -8512,6 +9326,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Karemma are great for Khan, either for extra actions or Latinum generation.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -8612,6 +9440,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Kazon Raider might be okay for Khan considering he has decent Latinum generation. I don’t usually find that he’s at a loss for ways to get more cards, but the option is always appreciated.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -8693,6 +9535,20 @@
       "anchor": "ally-deck",
       "heading": "Ally Deck",
       "snippet": "Bolians, Bynars, Denobulans, Kelpiens, and Organians are all generally useful depending on the situation.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Bolians, Bynars, Denobulans, Kelpiens, and Organians are usually pretty good for everybody, but Khan is stuck with Specialty restrictions until the end of the game, so it may be less worth it to grab these Ally cards than it is for other Captains.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -8896,6 +9752,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Kemocite is only really good if you’ve got a decent amount of weapons or extra actions to use with the second free play action.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "soval.html",
     "count": 1,
     "hits": [
@@ -8910,7 +9780,173 @@
     ]
    }
   ],
+  "khan-ceti-alpha-v": [
+   {
+    "guide": "khan.html",
+    "count": 12,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Khan’s front side of his Captain card has four Away Teams (the Augments that survive Ceti Alpha V are really working hard). Khan has the Human and Augment traits. His basic side has one Activation and two Passives. His Activation allows you to Discard an Incident to draw two cards (discarding one). That’s a great way to get to look at more of your deck, but there’s some complexity there that we’ll get into later on.",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Khan starts with two Controlled Locations. The first is Ceti Alpha V, which has a Passive that increases your hand size by one, meaning that you start the game with a six-card hand. The image here of Ceti Alpha V is actually from the television show Enterprise (ENT 3x8: Twilight), in an episode where Archer contracts interspatial parasites which prevent him from forming new memories, and because he cannot lead the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-ceti-alpha-vi": [
+   {
+    "guide": "khan.html",
+    "count": 10,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Khan also has Ceti Alpha VI as a Controlled Location. The image here is just as striking, and as Khan describes it in The Wrath of Khan, Ceti Alpha VI exploded, shifting the system’s orbit enough for Starfleet to later believe that Ceti Alpha V was in fact the destroyed Ceti Alpha VI. There’s a lot to unpack here, and it’s worth going from bottom to top. First, the Passive operation tells you to add two Dilithium to",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Devastated Ceti Alpha V is the more familiar landscape seen in The Wrath of Khan. It has the Attack and Anomaly traits. When Ceti Alpha VI explodes (logs), your opponent will take an Incident and you’ll send all of your Away Teams here, either from your Captain, controlled Locations, the Neutral Zone, or any other hypothetical Location (that’s not a tease of future content, I’m simply trying to say “from",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-ceti-eel": [
+   {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "khan-ceti-eel",
+      "heading": "Ceti Eel (Cargo) (Dev Cost: 1 Dilithium, 1 Latinum)",
+      "snippet": "The only life native to Ceti Alpha V that survived the cataclysm, they nested in Khan’s people, killing them off one by one. When two Starfleet officers arrive with an opportunity for Khan to enact revenge, he uses them to his advantage to manipulate and escape his exile.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "khan-ceti-eel",
+      "heading": "Ceti Eel (Cargo) (Dev Cost: 1 Dilithium, 1 Latinum)",
+      "snippet": "Ceti Eel has the Attack, Creature, and Mind Control traits. Both actions are free to play. The first requires you to dismiss an opponent’s Duty Officer to send two Away Teams to any neutral Location where either player has a token, ignoring any opponent’s Ship. Then, you’ll return Ceti Eel to your Development Pile and your opponent may draw two cards. Khan really appreciates having this boost for Away Teams, but you",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-cmdr-chekov": [
+   {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "khan-cmdr-chekov",
+      "heading": "Cmdr. Chekov (Person) (Dev Cost: Take an Incident)",
+      "snippet": "Commander Pavel Chekov served with Captain Terrell on board the U.S.S. Reliant, as it scouted appropriate planets for testing the Genesis Device. Once arriving at the derelict shelter of the former crew of the S.S. Botany Bay, Chekov realizes their peril too late. Khan is able to use the Ceti Eels to control Chekov, and use him to get to Genesis. Thankfully, his plot armor causes the Ceti Eel to flee after the death",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "khan-cmdr-chekov",
+      "heading": "Cmdr. Chekov (Person) (Dev Cost: Take an Incident)",
+      "snippet": "This version of Chekov is nearly identical to the card in Kirk’s deck, except that he has the Mind Control trait (and he is a Development instead of a Reserve, thus having two printed points). For Khan, I recommend using him primarily to send away teams and mess with human opponents, though there are likely enough Person cards in Khan’s deck that you can certainly utilize him as Duty Officer.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-cpt-terrell": [
+   {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "khan-cpt-terrell",
+      "heading": "Cpt. Terrell (Person) (Dev Cost: Take an Incident)",
+      "snippet": "Captain Clark Terrell was the commanding officer of the U.S.S. Reliant as it supported the Genesis Project by scouting for suitable planets on which to test the device. He’s another great example of why you don’t let the Captain go on Away Missions (glad they figured that out by Riker’s era). Terrell was controlled by Khan until given the order to kill Admiral Kirk, which he resisted by turning his phaser on himself",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "khan-cpt-terrell",
+      "heading": "Cpt. Terrell (Person) (Dev Cost: Take an Incident)",
+      "snippet": "Cpt. Terrell has the Human, Starfleet, and Mind Control traits. He has a free play that helps you cycle by drawing two and discarding one, which is the main way I tend to use him in my games. It gets him into play (so you can develop the Reliant) and I always like more options each turn. His second Play Action enlists a Development at no Dilithium, Latinum, or Incident costs then logs Terrell. This came up in the",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-devastated-ceti-alpha-v": [
+   {
+    "guide": "khan.html",
+    "count": 8,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Devastated Ceti Alpha V is the more familiar landscape seen in The Wrath of Khan. It has the Attack and Anomaly traits. When Ceti Alpha VI explodes (logs), your opponent will take an Incident and you’ll send all of your Away Teams here, either from your Captain, controlled Locations, the Neutral Zone, or any other hypothetical Location (that’s not a tease of future content, I’m simply trying to say “from",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "khan-marla-mcgivers",
+      "heading": "Marla McGivers (Person)",
+      "snippet": "Marla has the Starfleet and Human traits. Her Play Action gains Khan a Dilithium for each Starfleet in play and another Dilithium for each controlled Location Khan has in play. She can also self-promote by putting two cards on the top of the deck, which gains Khan a Glory. This is another nice Dilithium boost early, and depending on your strategy in regard to Ceti Alpha VI, it can help extend the amount of time it",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "khan-genesis-device": [
+   {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "khan-genesis-device",
+      "heading": "Genesis Device (Cargo) (Dev Cost: 2 Dilithium, 1 Latinum, have no other cards in your Development Pile)",
+      "snippet": "\"What exactly is Genesis? Well, put simply, Genesis is life from lifelessness.\" - Carol Marcus, 2284",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "khan-genesis-device",
+      "heading": "Genesis Device (Cargo) (Dev Cost: 2 Dilithium, 1 Latinum, have no other cards in your Development Pile)",
+      "snippet": "The Genesis Device was both a scientific tool meant to fight overpopulation and limited food supplies, and a weapon that could destroy a planet by converting matter into a fresh M-class planet. Khan came into possession of the device, and having been bested by Kirk in the Battle of the Mutara Nebula, detonated it as a final effort to exact his revenge.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     }
+    ]
+   },
    {
     "guide": "locations.html",
     "count": 1,
@@ -8926,7 +9962,221 @@
     ]
    }
   ],
+  "khan-hijacked-uss-reliant": [
+   {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "khan-hijacked-uss-reliant",
+      "heading": "Hijacked U.S.S. Reliant (Ship) (Dev Cost: 3 Dilithium and have a Person with Mind Control in play)",
+      "snippet": "The crew of the U.S.S. Reliant was tricked into giving over their vessel to Khan when he mind-controlled Captain Terrell and Commander Chekov on Ceti Alpha V. According to the script, the crew was mostly marooned on Ceti Alpha V and was later rescued by Kirk after the events of The Wrath of Khan",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "khan-hijacked-uss-reliant",
+      "heading": "Hijacked U.S.S. Reliant (Ship) (Dev Cost: 3 Dilithium and have a Person with Mind Control in play)",
+      "snippet": "Because it’s been hijacked, the Hijacked U.S.S. Reliant has the Starfleet and Augment traits, which means that you’ll be able to enlist more Developments using this Ship when it enters play. Similar to the market version of the U.S.S. Reliant , it has a Play Action that deploys and sends an Away Team and you draw a card if your opponent has no more than one deployed Ship. Beyond that, it has the typical Activation",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-infiltrate": [
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "khan-infiltrate",
+      "heading": "Infiltrate (Directive) (Dev Cost: 2 Latinum)",
+      "snippet": "We haven’t seen this Directive since Sela’s deck, and it’s a bit more useful there because it allows her to warp her Ships with cloak, and Khan doesn’t have any of those without gaining them from the market. Khan doesn’t have a lot of ways to gain cards directly from the market, so Infiltrate’s second Play Action will help him get what he needs. It’s not a card I use every turn as Khan, but it can provide some",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-joachim": [
+   {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "khan-joachim",
+      "heading": "Joachim (Person)",
+      "snippet": "A faithful disciple of Khan, Joachim fled with Khan on the S.S. Botany Bay, and accompanied Khan in exile to Ceti Alpha V. After helping to hijack the U.S.S. Reliant, Joachim manned the helm and weapons. He died when Khan did not heed his advice to take the Genesis Device and ignore Kirk’s taunts, leading Khan to swear “I shall avenge you.”",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "khan-joachim",
+      "heading": "Joachim (Person)",
+      "snippet": "Joachim has the Ops, Human, and Augment traits. His first Play Action lets you gain a Person card from the top of the deck at the cost of taking an Incident. For extended Ceti Alpha VI games, this is an important part of that strategy. Alternatively, you can use his second Play Action to send an Away Team to a neutral Location, and if you have both Ceti Alpha VI and Wajahut in play, you’ll gain back an action token",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-khan-noonien-singh": [
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": null,
+      "heading": "Introduction",
+      "snippet": "Welcome to yet another strategy guide for Star Trek Captain’s Chair: To Boldly Go. It’s the final guide from To Boldly Go, for one of the most iconic villains in Star Trek: Khan Noonien Singh. Although recent Star Trek has messed with his origins a bit (see SNW 2x3: Tomorrow and Tomorrow and Tomorrow), his background as a genetically modified Augment remains consistent. He was considered the “best of tyrants and the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-marla-mcgivers": [
+   {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "khan-marla-mcgivers",
+      "heading": "Marla McGivers (Person)",
+      "snippet": "The Enterprise historian Lieutenant Marla McGivers was asked to accompany James Kirk and the Away Team to survey the S.S. Botany Bay. She then immediately felt attraction to Khan, to the degree that she submitted to his violent and forceful methods of coercion and assisted him in reviving his Augment crew and taking over the Enterprise. When it became clear that this action would result in the deaths of Kirk and the",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "khan-marla-mcgivers",
+      "heading": "Marla McGivers (Person)",
+      "snippet": "Marla has the Starfleet and Human traits. Her Play Action gains Khan a Dilithium for each Starfleet in play and another Dilithium for each controlled Location Khan has in play. She can also self-promote by putting two cards on the top of the deck, which gains Khan a Glory. This is another nice Dilithium boost early, and depending on your strategy in regard to Ceti Alpha VI, it can help extend the amount of time it",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-mission-1": [
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "missions",
+      "heading": "Missions",
+      "snippet": "Khan’s Missions are directly tied to marking traits, making him one of the most straightforward captains in that regard. His first Mission, I’ve Hurt You, requires you to mark six traits and rewards you with a point and the top Encounter. The second Mission, I Shall Leave You As You Left Me, requires you to mark nine traits and rewards you with two points and a choice between the top two Encounters, and then you",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-mission-2": [
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "missions",
+      "heading": "Missions",
+      "snippet": "Khan’s Missions are directly tied to marking traits, making him one of the most straightforward captains in that regard. His first Mission, I’ve Hurt You, requires you to mark six traits and rewards you with a point and the top Encounter. The second Mission, I Shall Leave You As You Left Me, requires you to mark nine traits and rewards you with two points and a choice between the top two Encounters, and then you",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-mission-3": [
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "missions",
+      "heading": "Missions",
+      "snippet": "Khan’s Missions are directly tied to marking traits, making him one of the most straightforward captains in that regard. His first Mission, I’ve Hurt You, requires you to mark six traits and rewards you with a point and the top Encounter. The second Mission, I Shall Leave You As You Left Me, requires you to mark nine traits and rewards you with two points and a choice between the top two Encounters, and then you",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-mutara-nebula": [
+   {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "khan-mutara-nebula",
+      "heading": "Mutara Nebula (Location)",
+      "snippet": "The Mutara Nebula was an interstellar dust cloud comprised of static discharge and ionized gases. Sensors and shields of any ship entering the Nebula became inoperative, making it a perfect place for Kirk to even the odds against Khan and the hijacked U.S.S. Reliant. When the battle was lost, Khan detonated the Genesis Device, causing a new planet to form in the matter of the Nebula.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "khan-mutara-nebula",
+      "heading": "Mutara Nebula (Location)",
+      "snippet": "Another available Location, the Mutara Nebula has the Anomaly trait. Its Play Action requires you to junk a card from the market (no problem for Khan) and then if you have seven or more traits marked, you’ll gain a Ship from the Junk. Otherwise, you’ll have to discard two cards (or one, or none, if you don’t have two cards left in your hand, since it’s not a cost) to take control of the Mutara Nebula. This begs the",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-revenge-is-a-dish-best-served-cold": [
+   {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "khan-revenge-is-a-dish-best-served-cold",
+      "heading": "Revenge Is a Dish Best Served Cold (Directive) (Dev Cost: 1 Latinum, have Marla McGivers logged)",
+      "snippet": "“Ah, Kirk, my old friend. Do you know the Klingon proverb that tells us revenge is a dish best served cold? It is very cold… in space.”",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "khan-revenge-is-a-dish-best-served-cold",
+      "heading": "Revenge Is a Dish Best Served Cold (Directive) (Dev Cost: 1 Latinum, have Marla McGivers logged)",
+      "snippet": "Putting aside the question of where Khan learned Klingon Proverbs (did they give him a computer database on Ceti Alpha V?), this iconic line is now a custom Directive! There’s two main ways to use this card, and you’ll need to be intentional with when and how you decide to use it. The first Play Action gains you a Glory, and forces your opponent to find and log any card (their choice). Then, you may select a card in",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
   "khan-salvage": [
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "khan-salvage",
+      "heading": "Salvage (Directive)",
+      "snippet": "I discussed the Salvage Directive in the Rebner guide (and I’m guessing it’ll come up again too). It has a free play that lets you Junk a card in the market to draw a card, which helps when you’re low on action tokens or need that one more card you know you have in your deck. It also has a Play Action where you can gain a standard suit card from the Junk to your discard pile at the cost of a Latinum. This is great",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "combining-markets.html",
     "count": 1,
@@ -8936,6 +10186,150 @@
       "heading": "Market Mixing Considerations",
       "snippet": "Another thing to be aware of is the effect that mixing boxes has on the junk. For each box being mixed outside the first, one card from each suit is put in the junk at game setup. The captains that have built in grab from junk effects or a salvage card in their directives will have an easier time with more choice seeded at game start without needing to strategically junk the first few turns. It also prevents other",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-ss-botany-bay": [
+   {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "khan-ss-botany-bay",
+      "heading": "S.S. Botany Bay (Ship)",
+      "snippet": "Khan’s escape from Earth, the S.S. Botany Bay was found by James Kirk, at which time Khan was revived. It was discarded by Khan when he took over the Enterprise, but what Captain’s Chair supposes is… what if it wasn’t?.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "khan-ss-botany-bay",
+      "heading": "S.S. Botany Bay (Ship)",
+      "snippet": "The S.S. Botany Bay gets the rare Human trait on a ship (because Starfleet ships, while predominantly Human, are not exclusively Human). Its free play requires you to take an Incident to deploy, then you may promote a Person from your hand or discard pile to Duty Officer, and may beam a Person to the S.S. Botany Bay . It cannot be warped, so the Ship token is going the way of the Shuttlecrafts (it’s thematic because",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-surprise-attack": [
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "khan-surprise-attack",
+      "heading": "Surprise Attack (Directive) (Dev Cost: 2 Dilithium, take an Incident)",
+      "snippet": "Who can forget that first strike on the Enterprise, taking out all those cadets that stayed at their posts! Khan can use Surprise Attack to give an opponent an Incident from your hand at the cost of a Dilithium. I love using this when playing with promo Incidents or just more complex ones like Dilithium Shockwave. Try not to give your opponent your Available custom Incidents, because they can just give them right",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-to-the-last-i-will-grapple-with-thee": [
+   {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "khan-to-the-last-i-will-grapple-with-thee",
+      "heading": "To The Last, I Will Grapple With Thee! From Hell’s Heart, I Stab at Thee! I Spit My Last Breath at Thee! (Incident)",
+      "snippet": "These lines, spoken by Khan who is quoting Herman Melville’s Captain Ahab from the novel Moby Dick, are his last (unheard by Kirk) taunt as he uses his last strength before dying to ensure that the Genesis Device will go off. Kirk is able to escape thanks to the sacrifice of Spock, but without warp power these words would have been the prelude to his doom.",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "khan-to-the-last-i-will-grapple-with-thee",
+      "heading": "To The Last, I Will Grapple With Thee! From Hell’s Heart, I Stab at Thee! I Spit My Last Breath at Thee! (Incident)",
+      "snippet": "Khan gets three, nearly identical (except for the thematic name) custom Incidents in his Available cards. This is a new way to handle Incidents, where instead of returning them, they will go in your opponent’s discard pile, at the low cost of placing a card on top of your deck (and the standard action token). If the revealed card shares a non-Human trait with your opponent’s captain, you’ll gain a Glory and the",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-two-dimensional-thinking": [
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Khan also starts the game with a custom Incident in the Incident Deck, titled Two Dimensional Thinking. This is a reference to Kirk’s inquiry of Spock during the Battle of the Mutara Nebula, when Spock analyzes Khan as “Intelligent, but not experienced. His pattern indicates two-dimensional thinking.” This weakness allows Kirk to use his knowledge of the three dimensions of space to lose Khan in the Mutara Nebula,",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-vacated-regula-i": [
+   {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "khan-vacated-regula-i",
+      "heading": "Vacated Regula I (Location)",
+      "snippet": "When Khan escapes Ceti Alpha V with his fellow Augments, he heads to the Regula I Space Laboratory, home of Project Genesis. Hoping to lure Kirk near the station, he leaves the mind controlled Chekov and Terrell as spies in case he cannot defeat Kirk in space combat (which proves true).",
+      "truncated": false,
+      "mode": "anchor",
+      "lore": true
+     },
+     {
+      "anchor": "khan-vacated-regula-i",
+      "heading": "Vacated Regula I (Location)",
+      "snippet": "Regula I made an appearance as an Advanced Location in the Core Box, but it’s slightly different here. It lacks the Scientist trait and two Research Skills (the scientists vacated after all), but retains the Starfleet and Starbase traits. It’s otherwise completely different from the Neutral Zone Location. You can only use the Play Action if you have a Ship at a neutral Location, which means that until you get a Ship",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-wajahut": [
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "khan-wajahut",
+      "heading": "Wajahut (Person)",
+      "snippet": "There’s not a lot of lore on Wajahut, and I’m not even sure her name is mentioned anywhere outside of the Star Trek Customizable Card Game, so I’m not going to try to make a bigger lore mountain out of a molehill. She has the Ops, Human, and Augment traits. Her free play lets you discard a card to draw a card from your discard pile, which can be super useful when using Khan’s Activation to draw two/discard one. Her",
+      "truncated": true,
+      "mode": "anchor",
+      "lore": false
+     }
+    ]
+   }
+  ],
+  "khan-wrathful-khan": [
+   {
+    "guide": "khan.html",
+    "count": 7,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "When you complete your second Mission (nine traits marked), you flip your Captain card to “Wrathful Khan.” This is Khan after his battle with Kirk in the Mutara Nebula, burned face and nothing left to lose. Even though there are no Away Teams listed, you will still return Away Teams to your new Captain card after controlling Locations. Your traits remain Human and Augment, but your Passive ability to gain Dilithium",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Thelev is fine for Khan, especially once he becomes Wrathful Khan and can use the Passive Spy Operation.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -9069,6 +10463,20 @@
    }
   ],
   "kirk-james-t-kirk": [
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": null,
+      "heading": "Introduction",
+      "snippet": "Welcome to yet another strategy guide for Star Trek Captain’s Chair: To Boldly Go. It’s the final guide from To Boldly Go, for one of the most iconic villains in Star Trek: Khan Noonien Singh. Although recent Star Trek has messed with his origins a bit (see SNW 2x3: Tomorrow and Tomorrow and Tomorrow), his background as a genetically modified Augment remains consistent. He was considered the “best of tyrants and the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "kirk.html",
     "count": 1,
@@ -9618,6 +11026,20 @@
       "lore": false
      }
     ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "to-boldly-go",
+      "heading": "To Boldly Go",
+      "snippet": "Kirk: The most iconic match-up, but Kirk has the advantage here. He can play quickly, get a ton of Encounters, and score really well. You can try to rush him to the end of the game and saddle him with Incidents, but that’s not going to make the difference. You can put up a good Neutral Zone fight, but he’s still going to attack you with the U.S.S. Excelsior . I would try to gain your advantage with Advanced",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
    }
   ],
   "kirk-utilize": [
@@ -9744,6 +11166,20 @@
       "heading": "Encounters",
       "snippet": "To Boldly Go: I hesitated including Encounters at first because most captains love most of them. Still, here’s some things I saw that could be helpful. Gomtuu really helps Georgiou move up Military fast, while still offering her a chance to increase Research Focus scoring, both of which she needs for victory. Species 10-C can certainly help, but you’re risking future Encounter gain by eating up those locations and I",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "V’Ger, Koala and the Guardian of Forever nearly always have general applicability, though you can’t get a trait from V’Ger and Guardian of Forever isn’t as helpful with no track movement.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -10460,6 +11896,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "K’Ranch is a fine logging card, especially considering that you can quickly thin your deck while gaining traits.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -10592,6 +12042,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "K’t’inga Battlecruiser is another great way to send Away Teams.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -10714,6 +12178,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Laas is fun because his Play Action can allow you to put a Person in your Staging Area, which can be an Augment and thus will trigger Devastated Ceti Alpha V’s Reaction for enlisting a Development. He’s not bad as Duty Officer either.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -10787,6 +12265,20 @@
       "anchor": "person-deck",
       "heading": "Person Deck",
       "snippet": "Archer has the Person cards to benefit from Landru, so he’s worth considering if you have time to gain the Location. I like Lursa for Archer because he needs Ships, and she’s good at getting ships and sending Away Teams.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Landru is mostly good for Khan because of the Synthetic trait, which is rare in TBG but appears on Khan’s board. Landru’s not a bad way to gain an extra Location, but be careful not to log your Augments with him until you’ve completely Developed.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -10880,6 +12372,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Laris needs an Android to be useful, otherwise she’s only really helpful as a Duty Officer.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -10938,6 +12444,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Lenara Kahn is good for her Scientist trait and specifically scanning for Anomaly cards, but beyond she’s probably not worth seeking out.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -10963,6 +12483,20 @@
       "snippet": "Introduced in DS9, Letheans are telepathic (hence the trait) and come up twice as villains working illegally around DS9. This card allows you to dismiss one of your opponent's duty officers, scan for a Shady card, and draw a cargo from your discard pile, for only an action token cost. The card then self-logs. It scores for a Military focus.",
       "truncated": false,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Letheans work pretty well for Khan, even if it’s just for the Telepath trait.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -11086,6 +12620,20 @@
       "heading": "Shran",
       "snippet": "A win against Shran can allow you a Reinforce of a Weapon or Business trait. For now, that's Tevrin Krit, Holosuite, Pakled Freighter, or Karemma for Business, and Lirpa, Mek'leth, Phasers, Disruptor Pistols, or Holographic Drone Ship for Weapons. I think that's a good amount of flexibility to get something defensive or offensive against the Bot, and I love finding a reason to remove Bot away teams in exchange for",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Lirpa is fine if you have other Vulcans but otherwise not special for Khan.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -11242,6 +12790,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Lursa is a good card for Khan, because he needs to send Away Teams and gain some extra ships, and she helps solve both problems.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "sela.html",
     "count": 1,
     "hits": [
@@ -11322,6 +12884,20 @@
       "heading": "Burnham's Reserve Cards",
       "snippet": "Ni'Var (Location) — Go forward far enough, and Spock's vision of Vulcan united (and renamed) is reality, giving it the Vulcan and Romulan traits. When you play and control Ni'Var, you remove one glory from the Stardate card and you can either find Inspire or scan for an Ambassador. Usually, I'm going to recommend Ambassador to get the Enterprise C, but you can consider going after Riva, Lwaxana Troi, or Ambassador",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Lwaxana Troi has two traits you’re looking for, which makes her helpful, and she can refresh Khan, which is not all that farfetched thematically if you think about it.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -11436,6 +13012,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Ma’ah is only really good if you’re putting Klingon cards in play consistently, as his normal Play Action is nearly pointless for Khan.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -11510,6 +13100,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Malcolm Reed is useless in the Staging Area, but can be a good Person to have as Duty Officer for the Away Teams.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -11557,6 +13161,28 @@
       "snippet": "The first stand-out mechanism here is the passive ability that gives him a Military skill for each Augment in-play, up to three (but at least one). His reaction lets you discard a card to gain an action token when you put an attack card in play, which is also great. His Attack free play action lets you steal a Glory from an opponent, the first card I'm seeing with that ability in the game. He can also get you a",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 3,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Devastated Ceti Alpha V is the more familiar landscape seen in The Wrath of Khan. It has the Attack and Anomaly traits. When Ceti Alpha VI explodes (logs), your opponent will take an Incident and you’ll send all of your Away Teams here, either from your Captain, controlled Locations, the Neutral Zone, or any other hypothetical Location (that’s not a tease of future content, I’m simply trying to say “from",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "khan-s-development-cards",
+      "heading": "Khan’s Development Cards",
+      "snippet": "Khan has no Reserve deck. In order to Develop, you’ll need to trigger the Reaction from Devastated Ceti Alpha V, which triggers when an Augment gets put into play. You can still use cards that allow you to enlist a Development, like Cpt. Terrell or Malik (he’s a fun one, check the market for his discussion). Khan has eight Development cards, including two Persons, two Cargo, one Ship, and three Directives.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -11656,6 +13282,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Medical Diagnostic Hat has the Doctor trait and a way to free play an Incident, so I’m in favor of Khan getting it.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -11693,6 +13333,20 @@
       "anchor": "ship-deck",
       "heading": "Ship Deck",
       "snippet": "Medusan Vessel is best for Archer if you decide to rely on the Alien/Hoshi/Universal Translator strategy. If not, it has the general benefit of the Telepath scan.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Medusan Vessel isn’t special for Khan but is still a good ship.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -11780,6 +13434,20 @@
       "heading": "Cargo Deck",
       "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Mek’leth isn’t great for Khan, as you’ll have to discard a card with no benefit to play it.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -11968,6 +13636,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Moopsy is a fine Creature trait but you want to be careful not to log your Augments.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -12047,6 +13729,20 @@
       "anchor": "person-deck",
       "heading": "Person Deck",
       "snippet": "Moriarty is most useful to Archer in a multiplayer game, and is otherwise not amazing but can be situationally great if you’ve managed to get a lot of Synthetic cards. Scanning for Hologram or Engineer isn’t a bad option for Archer either.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Moriarty is great once you have Wrathful Khan, but until then he’s just an okay Duty Officer.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -12134,6 +13830,20 @@
       "heading": "Encounters",
       "snippet": "To Boldly Go: I hesitated including Encounters at first because most captains love most of them. Still, here’s some things I saw that could be helpful. Gomtuu really helps Georgiou move up Military fast, while still offering her a chance to increase Research Focus scoring, both of which she needs for victory. Species 10-C can certainly help, but you’re risking future Encounter gain by eating up those locations and I",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "New Federation Applicants will score okay, but returning Incidents will be extremely useful for an Incident-afflicted Khan.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -12234,6 +13944,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Nova Fleet is great for everybody, including Khan.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -12313,6 +14037,20 @@
       "anchor": "notable-market-cards",
       "heading": "Encounters",
       "snippet": "Core Set: Ancient Gene Fragments is probably good for Georgiou, especially if she has a Scientist in play. Boltzman Brain, Iconian Gateway, and Omega Particle help her about as much as anybody else. Georgiou should be able to use Sha Kar Ree pretty effectively, so it’s certainly in the top half of the list for me.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Omega Particle is a great way to never worry about resources again but limited scoring.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -12400,6 +14138,20 @@
       "heading": "Cargo Deck",
       "snippet": "To Boldly Go: I’m definitely a fan of Augmentation plague due to Georgiou’s late game focus on Klingon cards, and if you can nab it early you can get some Glory every time you put a Klingon in play. You shouldn’t have to worry about specialty restrictions for cards like forced Singularity, which also gives you focus scoring for research and yet another duty officer. Same benefit to Computer Virus, and you should get",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Orb of Time is good for everybody, Khan included.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -12548,6 +14300,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Bolians, Bynars, Denobulans, Kelpiens, and Organians are usually pretty good for everybody, but Khan is stuck with Specialty restrictions until the end of the game, so it may be less worth it to grab these Ally cards than it is for other Captains.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -12674,6 +14440,20 @@
       "heading": "Ally Deck",
       "snippet": "To Boldly Go: While Georgiou can make use of most of these Ally cards, there are very few that I consider to be truly vital to her. As always, you’re hoping to get the Kelpiens from Saru, but let this be a second reminder that if you’re playing Burnham as she’ll scan for them too. If you’re looking for resources, grab Arin’sen, Kaelon II Science Ministry, or the Orion Syndicate. She’s also likely to get some benefit",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Orion Syndicate might be a good choice for Khan, if only for resource production.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -12816,6 +14596,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Pakled Freighter is a fine option for Khan, especially since he can use it to gain additional cargo from the junk.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "shran.html",
     "count": 1,
     "hits": [
@@ -12875,6 +14669,20 @@
       "anchor": "person-deck",
       "heading": "Person Deck",
       "snippet": "Parmen is always great and gives Archer a consistent way to gain some Latinum, and his Reaction is great for free playing cards.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Parmen is fantastic as a Telepathic Augment, along with benefits that Khan can mostly benefit from as well as anybody else.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -12982,6 +14790,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Peanut Hamper is great for the Dilithium gain and the Synthetic trait.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -13076,6 +14898,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Petra Aberdeen is decent for Khan because she can find and log cards from the junk, which translates to marking traits and not clogging your deck.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -13153,6 +14989,28 @@
       "snippet": "I haven't seen Enterprise yet (it's on the list) but I'm kind of surprised that Phlox doesn't have a Starfleet tag as he was ostensibly part of Starfleet's organization. But onto his card, which has a common Doctor ability to deal with incidents. But if you have six research, you can return any incidents in your hand and one from your discard pile while beaming Phlox to a ship, which is a fantastic way to kill a lot",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "captain-card-starting-components",
+      "heading": "Captain Card & Starting Components",
+      "snippet": "Khan starts with two Controlled Locations. The first is Ceti Alpha V, which has a Passive that increases your hand size by one, meaning that you start the game with a six-card hand. The image here of Ceti Alpha V is actually from the television show Enterprise (ENT 3x8: Twilight), in an episode where Archer contracts interspatial parasites which prevent him from forming new memories, and because he cannot lead the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Phlox is better once you can meet all restrictions, but you should also get him because of that Doctor trait.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -14082,6 +15940,20 @@
   ],
   "pike-christopher-pike": [
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "putting-it-all-together",
+      "heading": "Putting It All Together",
+      "snippet": "I hope you enjoyed this strategy guide for Khan’s deck. Be sure to add any comments or questions below or in the Star Trek Captain’s Chair Discord. Make sure to subscribe to the BGG listing for Second Contact for my next Captain, Captain Christopher Pike from Strange New Worlds. And if you haven’t heard, there’s 10 more Captains heading our way next year, and I’m excited to write about all of them.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "sc-market-locations-rewards.html",
     "count": 1,
     "hits": [
@@ -14146,6 +16018,28 @@
       "heading": "Kirk’s Starting Hand Strategies",
       "snippet": "You have Spock, Maximum warp, Set a Course, Subspace Phenomenon, and one other card in your starting hand. You play Subspace Phenomenon, discarding Spock, and draw two cards and discard one of them. You NEED to keep Levitation Boot if possible, and you hope that you've discarded Uhura or Bones as the discarded card. Your hand is now Maximum Warp, Set a Course, Levitation Boots (for this to work), and one other card.",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 3,
+    "hits": [
+     {
+      "anchor": null,
+      "heading": "Introduction",
+      "snippet": "Welcome to yet another strategy guide for Star Trek Captain’s Chair: To Boldly Go. It’s the final guide from To Boldly Go, for one of the most iconic villains in Star Trek: Khan Noonien Singh. Although recent Star Trek has messed with his origins a bit (see SNW 2x3: Tomorrow and Tomorrow and Tomorrow), his background as a genetically modified Augment remains consistent. He was considered the “best of tyrants and the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "U.S.S. Enterprise-C has the Ambassador trait, a great recall ability, and focus scoring, making it a great choice for Khan.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -14254,6 +16148,20 @@
       "heading": "Cargo Deck",
       "snippet": "To Boldly Go: I’m definitely a fan of Augmentation plague due to Georgiou’s late game focus on Klingon cards, and if you can nab it early you can get some Glory every time you put a Klingon in play. You shouldn’t have to worry about specialty restrictions for cards like forced Singularity, which also gives you focus scoring for research and yet another duty officer. Same benefit to Computer Virus, and you should get",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Plasma Manifold is excellent so long as you have enough Dilithium to power it.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -14392,6 +16300,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "President Rillak can be good for Khan if you’re using a ship for beaming some Incidents, which requires a ship set aside as a beaming-ship. You don’t have Utilize or Inspire, so she’s really not helpful as a Duty Officer.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -14452,6 +16374,20 @@
       "heading": "Cargo Deck",
       "snippet": "Second Contact: Gift Box has the ongoing and Anomaly traits, both of which can give some additional endgame points with Georgiou’s suite of cards. Moopsy sounds good, but you’ll lose your advantage of being able to beam a lot of Person cards out of your deck, instead having them logged. Protocol 12 is okay, but unless you’re really hurting for Military track movement I don’t think you’ll get much out of it unless",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Protocol 12 is a weird one because of the Special that treats your Person cards with Doctor as Augments while it’s in play, but you’ll only ever want to put it into play with the first Play Action that’s Specialty restricted. So it may be situationally worth it, but only rarely, despite turning Doctors into Augments.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -14820,6 +16756,28 @@
       "heading": "Missions",
       "snippet": "Rebner has no focus multiplier for Research or Influence, and his basic side maxes out at 6x for Military. As always the advanced side’s thresholds are one less, which is still zero for Research and Influence (he doesn’t lose points for those tracks), and 5x for Military. His basic mission is Things That Make Us Smart, which requires an Engineer, a Scientist, and a Communication in play. He only has one Engineer",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 3,
+    "hits": [
+     {
+      "anchor": "khan-salvage",
+      "heading": "Salvage (Directive)",
+      "snippet": "I discussed the Salvage Directive in the Rebner guide (and I’m guessing it’ll come up again too). It has a free play that lets you Junk a card in the market to draw a card, which helps when you’re low on action tokens or need that one more card you know you have in your deck. It also has a Play Action where you can gain a standard suit card from the Junk to your discard pile at the cost of a Latinum. This is great",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "to-boldly-go",
+      "heading": "To Boldly Go",
+      "snippet": "Rebner: This was actually a pretty hard match-up for me in solo. Both Captains are adept at rushing the game (especially the bots). It can lead to match-ups where you’re hard-pressed to get all your traits marked. However, you can mess with Rebner in the usual ways (taking Military focus cards primarily). Just be aware that you’ll need more ships than you think, as Rebner has ways of forcing you to log your Ships.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -15252,6 +17210,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Red Squadron can work well, especially since you can beam a Person from your Staging Area to the S.S. Botany Bay .",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -15365,6 +17337,28 @@
       "snippet": "This is the space station in Star Trek Wrath of Khan where David and Carol Marcus were working on the Genesis Device. As such it has appropriately 2 research skills and focuses on scientist cards. The control ability will be situational, as you may not have a scientist you're aware of in your deck or you might not have enough Dilithium to bother with the scan. The reaction is good, again, if you have scientist",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 4,
+    "hits": [
+     {
+      "anchor": "khan-vacated-regula-i",
+      "heading": "Vacated Regula I (Location)",
+      "snippet": "Regula I made an appearance as an Advanced Location in the Core Box, but it’s slightly different here. It lacks the Scientist trait and two Research Skills (the scientists vacated after all), but retains the Starfleet and Starbase traits. It’s otherwise completely different from the Neutral Zone Location. You can only use the Play Action if you have a Ship at a neutral Location, which means that until you get a Ship",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "khan-s-early-game-strategies",
+      "heading": "Khan’s Early Game Strategies",
+      "snippet": "The current rules for mixing boxes will mean that the game starts with cards in the Junk. In that instance, I might consider using Salvage to get a Ship I want, and I’d use that Ship to get Vacated Regula I out early, especially if there’s more than one trait in the Junk I want to check off. This could mean upwards of two checked traits early on, and the more traits you have checked early the better, because it will",
+      "truncated": true,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -15516,6 +17510,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The R.I.S. Talvath is pretty good, both for the Scientist trait and the potential Dilithium.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -15599,6 +17607,28 @@
       "snippet": "I never really liked Loud as a Whisper that much as an episode, but the idea of a telepathic mediator was pretty fascinating. Riva has an influence skill and some valuable tags (especially for the Political Crisis and Hostile Contact Incidents). His Play action is free, and provides card draw and potential glory, which is almost universally helpful (unless you just have zero attacks). His Reaction is more",
       "truncated": true,
       "mode": "anchor",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": null,
+      "heading": "Introduction",
+      "snippet": "During Khan’s game, anytime he gains a card or takes control of a Location, you can mark a trait on your board that matches a trait on the gained/controlled card. Wildcard counts as any trait (and that’ll be coming up on a Location in Resistance is Futile). You don’t get to mark traits for taking an Encounter or Incident (or being given a card by your opponent). A couple basic notes on traits. You have to make the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Riva is actually a fine card for Khan, especially if you’re ready to start logging Attack cards. Now, that’s situational, for sure, but it’s worth considering. His traits of Telepath and Ambassador make him very useful for options on multiple potential markable traits.",
+      "truncated": false,
+      "mode": "text",
       "lore": false
      }
     ]
@@ -15706,6 +17736,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Sakonna is only good for Khan if you’ve been seeking out Weapon traits, and you have too many traits you need to mark for that to be a priority.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -15773,6 +17817,20 @@
       "anchor": "promos",
       "heading": "Promos",
       "snippet": "U.S.S. Cabot is a fine ship, and grabbing some Creature cards from the Cargo deck makes this a great way to increase your hand with Porthos and at least one other Creature. You can scan for Salt Vampires too.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Salt Vampires are excellent for Khan, so long as you don’t mind the other card you’re logging. You get the Telepath and Creature traits so there’s some good flexibility there.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -15896,6 +17954,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Sarina Douglas is a desired card simply for the Augment trait. Her Duty Officer role can be helpful, but Khan doesn’t care about her traits.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -15970,6 +18042,20 @@
       "heading": "Cargo Deck",
       "snippet": "To Boldly Go: I’m definitely a fan of Augmentation plague due to Georgiou’s late game focus on Klingon cards, and if you can nab it early you can get some Glory every time you put a Klingon in play. You shouldn’t have to worry about specialty restrictions for cards like forced Singularity, which also gives you focus scoring for research and yet another duty officer. Same benefit to Computer Virus, and you should get",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Saurian Brandy is fine, particularly once you remove Specialty restrictions.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -16628,6 +18714,28 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Tachyon Detection Grid probably isn’t worth it, even playing against Sela.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Sela: So, just let Sela have the Neutral Zone. Use Joachim for more Person cards and work really hard to get Ships and clean out your Developments. If you do all of that, and you do it quick enough that Sela can’t rush her tracks or Developments, you might have a decent shot at ending the game before she can really get her whole kit implemented.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "persons.html",
     "count": 2,
     "hits": [
@@ -16903,6 +19011,20 @@
       "anchor": "encounters",
       "heading": "Encounters",
       "snippet": "Sha Ka Ree has some good traits and scoring, and is a good Strange New Worlds candidate for Archer if you already have those traits in play.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Sha Ka Ree can be awesome for Khan, especially if he’s considering a forced Burn win.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -17470,6 +19592,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Shran: Shran will mess with your Duty Officers using his Ushaan-Tor, which will be annoying. If you can find a way with weapons to defend against that, it’s helpful to do so. Khan doesn’t have a lot of weapon cards with traits he’s hunting for, so it’s fine to junk them or ignore them so long as you don’t let Shranbot get too many (and keep an eye on an opponent with many weapons too). You’ll probably have a Neutral",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -17735,6 +19871,20 @@
       "anchor": null,
       "heading": "Market Mixing Considerations",
       "snippet": "That being said, I personally couldn't resist the desire to mix everything together after about fifteen plays of To Boldly Go, at least for my solo games. The markets are quite a bit more crowded, and are far less likely to run out (especially in solo play with Bots focusing on particular decks). Since the market cards are meant to be situationally useful, you'll always be able to find something that will benefit",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "core-box",
+      "heading": "Core Box",
+      "snippet": "Sisko: Because Sisko has so many Ships (and incentives to get them) you’re not going to have great control of the Neutral Zone. But you can try to put pressure on him, especially with lots of Incidents. It’ll force him to Enlist Julian Bashir early to deal with the Incidents, and that keeps him from some of his more dynamic Developments. I don’t know if you can rush him into a victory every time, but it’s worth",
       "truncated": true,
       "mode": "text",
       "lore": false
@@ -18188,6 +20338,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Soji Asha is perfect for Khan because she can log cards and she has a very rare trait for the To Boldly Go commons (Synthetic).",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -18256,6 +20420,20 @@
       "heading": "Ship Deck",
       "snippet": "Core Set: The only real necessary grab here is the K’tinga Battlecruiser, which has that Military skill and focus with sending an away team. You also should be able to make use of the Son’a Battlecruiser , but it will be more helpful in multiplayer than solo because of how stealing rules work. Georgiou is also in perfect position to gain another encounter from the Voth Research Vessel , so I wouldn’t pass it up,",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The Son’a Battlecruiser isn’t a ship you want used against you, so for that reason alone it’s worth taking so your opponent can’t steal your Dilithium. Besides, you can benefit from getting some more Dilithium as well.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -18742,6 +20920,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "to-boldly-go",
+      "heading": "To Boldly Go",
+      "snippet": "Soval: I would try to mess with a Soval player by rushing the game and hitting them with Incidents. I think Soval is about as dynamic as you are in the Neutral Zone, so mess with him a bit and force him to really decide where he’s going to get his points from. Try to build up a good fleet and speed through your Developments at his pace, if possible.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -19054,6 +21246,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Species 10-C is good for Khan since he can’t really make use of logged Locations otherwise.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -19127,6 +21333,20 @@
       "anchor": "encounters",
       "heading": "Encounters",
       "snippet": "Stone of Gol works well with your Telepaths, making it a little easier to benefit from the second play action.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "Stone of Gol is also good for Khan, and is a great way to gain more cards from the junk.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -19280,6 +21500,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Su’Kal is universally helpful and you’re very likely to at least have one or two Incidents left at game end.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "persons.html",
     "count": 1,
     "hits": [
@@ -19382,6 +21616,20 @@
       "heading": "Picard",
       "snippet": "Win or lose, facing Picard will let you Reinforce an Alien-trait card. If you've been having trouble with Reinforcing the right cards, it wouldn't hurt to focus there so it doesn't matter if you win or lose. Since four Ally cards have the Alien trait (Bynars, Edosians, Suliban, and Tholians) in addition to Horta (Cargo) and Voth Research Vessel (Ship), this is probably your best bet against Picard. Transcendent only",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Suliban is best as a way to get another Augment recalled so you can Enlist multiple times a turn.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -19512,6 +21760,20 @@
       "heading": "Cargo Deck",
       "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Tachyon Detection Grid probably isn’t worth it, even playing against Sela.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -19657,6 +21919,20 @@
       "anchor": "person-deck",
       "heading": "Person Deck",
       "snippet": "Sukal and Talok are nothing special for Archer, but remain good cards to have.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Talok has the Spy trait for Khan’s trait game, and his Passive Operation is nice, but the rest of his text isn’t remarkably helpful.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -19834,6 +22110,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Tellarites are good because you can really overwhelm your opponent with your Incidents.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -19920,6 +22210,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Tevrin Krit is great for Khan because anytime you can scan the person deck, you have a better chance to get a trait you need.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "shran.html",
     "count": 1,
     "hits": [
@@ -19981,6 +22285,20 @@
       "anchor": "person-deck",
       "heading": "Person Deck",
       "snippet": "You can scan for Tysess, Thelev, and Va’al Trask using Shran, and Archer can use all of them with varying degrees of effectiveness.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Thelev is fine for Khan, especially once he becomes Wrathful Khan and can use the Passive Spy Operation.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -20068,6 +22386,20 @@
       "heading": "Ally Deck",
       "snippet": "Core Set: The standouts when adding the core set back in tend to be more military focused. Karemma gives Georgiou some much-needed Latinum and extra actions. Tholians are excellent for Georgiou, especially once she’s got quite a few ships under her control. I will note that the Edosians are a bit underwhelming and it might be hard to reach the Influence threshold. The Emerald Chain can help with Military gain, but",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Tholians are pretty great for everyone, and Khan does well because he usually has a decent number of Locations since there’s no Strange New Worlds logging controlled Locations.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -20192,6 +22524,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Travis Mayweather is good for getting those Away Teams out, but you kind of like Khan’s Activations and Dilithium is rare, so you probably won’t use him constantly.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -20294,6 +22640,20 @@
       "heading": "Cargo Deck",
       "snippet": "Core Set: The additional cards unique to the Core set don’t do much for Georgiou, which is why it’s good for her that they aren’t in To Boldly Go. Mek’leth is probably the best, as it’s a reliable free play attack with a Military track boost. Tribbles are fine but if you’re taking all the Klingons from the market your opponent will mostly be using it against you, Unstable Wormhole is great, but Georgiou isn’t going",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Tribbles is worth the Creature trait but not much else.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -20438,6 +22798,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Type III Disruptor Pistols are fine but not necessary.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "koloth.html",
     "count": 1,
     "hits": [
@@ -20490,6 +22864,20 @@
       "heading": "Ally Deck",
       "snippet": "To Boldly Go: While Georgiou can make use of most of these Ally cards, there are very few that I consider to be truly vital to her. As always, you’re hoping to get the Kelpiens from Saru, but let this be a second reminder that if you’re playing Burnham as she’ll scan for them too. If you’re looking for resources, grab Arin’sen, Kaelon II Science Ministry, or the Orion Syndicate. She’s also likely to get some benefit",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Unimatrix Zero doesn’t do much for Khan without Borg Probe.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -20620,6 +23008,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Universal Translator is probably a waste of a card for Khan, because it would be really hard to pull off anything useful with it.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -20714,6 +23116,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "cargo-deck",
+      "heading": "Cargo Deck",
+      "snippet": "Unstable Wormhole is great, specifically once you’re Wrathful Khan.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -20788,6 +23204,28 @@
       "heading": "Notable Market Cards",
       "snippet": "In the Ship Deck, you should be able to use Ni'Var to get the Enterprise-C (which I'd recommend over scanning the person deck) for its awesome Activations and Research focus scoring. Holographic Drone Ship should also be easily accessible, either by discarding Booker as the Telepath or with the seven Research threshold requirement. The real issue with this deck will be trying to junk as many of these ships as you",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 2,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "U.S.S. Enterprise-C has the Ambassador trait, a great recall ability, and focus scoring, making it a great choice for Khan.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "U.S.S. Enterprise-C has the Ambassador trait, a great recall ability, and focus scoring, making it a great choice for Khan.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -20980,6 +23418,20 @@
   ],
   "uss-pasteur": [
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The U.S.S. Pasteur is great, with two potential traits and the potential to scan for specific traits, all of which Khan needs.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -20995,6 +23447,28 @@
    }
   ],
   "uss-reliant": [
+   {
+    "guide": "khan.html",
+    "count": 5,
+    "hits": [
+     {
+      "anchor": "khan-cpt-terrell",
+      "heading": "Cpt. Terrell (Person) (Dev Cost: Take an Incident)",
+      "snippet": "Cpt. Terrell has the Human, Starfleet, and Mind Control traits. He has a free play that helps you cycle by drawing two and discarding one, which is the main way I tend to use him in my games. It gets him into play (so you can develop the Reliant) and I always like more options each turn. His second Play Action enlists a Development at no Dilithium, Latinum, or Incident costs then logs Terrell. This came up in the",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     },
+     {
+      "anchor": "khan-hijacked-uss-reliant",
+      "heading": "Hijacked U.S.S. Reliant (Ship) (Dev Cost: 3 Dilithium and have a Person with Mind Control in play)",
+      "snippet": "Because it’s been hijacked, the Hijacked U.S.S. Reliant has the Starfleet and Augment traits, which means that you’ll be able to enlist more Developments using this Ship when it enters play. Similar to the market version of the U.S.S. Reliant , it has a Play Action that deploys and sends an Away Team and you draw a card if your opponent has no more than one deployed Ship. Beyond that, it has the typical Activation",
+      "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
    {
     "guide": "rebner.html",
     "count": 1,
@@ -21040,6 +23514,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Va’Al Trask is just okay for Khan, without much too notable.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -21078,6 +23566,20 @@
       "heading": "Ally Deck",
       "snippet": "To Boldly Go: While Georgiou can make use of most of these Ally cards, there are very few that I consider to be truly vital to her. As always, you’re hoping to get the Kelpiens from Saru, but let this be a second reminder that if you’re playing Burnham as she’ll scan for them too. If you’re looking for resources, grab Arin’sen, Kaelon II Science Ministry, or the Orion Syndicate. She’s also likely to get some benefit",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Vadic’s Splinter Group is a must-get, not just for the abilities but the Augment trait makes it a great way to speed through your Developments.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -21194,6 +23696,20 @@
       "heading": "Encounters",
       "snippet": "To Boldly Go: I hesitated including Encounters at first because most captains love most of them. Still, here’s some things I saw that could be helpful. Gomtuu really helps Georgiou move up Military fast, while still offering her a chance to increase Research Focus scoring, both of which she needs for victory. Species 10-C can certainly help, but you’re risking future Encounter gain by eating up those locations and I",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "encounters",
+      "heading": "Encounters",
+      "snippet": "V’Ger, Koala and the Guardian of Forever nearly always have general applicability, though you can’t get a trait from V’Ger and Guardian of Forever isn’t as helpful with no track movement.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -21322,6 +23838,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Vice Admiral Pasalk is not really great for Khan, but it’s good to avoid letting your opponent have it.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "rebner.html",
     "count": 1,
     "hits": [
@@ -21402,6 +23932,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ally-deck",
+      "heading": "Ally Deck",
+      "snippet": "Vidiians is great, since Khan can get overwhelmed with Incidents.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -21454,6 +23998,20 @@
       "heading": "Ship Deck",
       "snippet": "To Boldly Go: The repeat ships from the Corebox are all great, but Borg Cube gives the extra advantage of endgame scoring for Georgiou so long as you can keep it in play at the end of the game with lots of beamed cards. D’kyr Cruiser has that Vulcan trait and Military restriction that Georgiou can benefit from too. Medusian Vessel is a good pick for the Alien trait. Grabbing Vor’cha Attack Cruiser can help push the",
       "truncated": true,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Vor’Cha Attack Cruiser is great for the Away Team and Cloak trait.",
+      "truncated": false,
       "mode": "text",
       "lore": false
      }
@@ -21582,6 +24140,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Voth Research Vessel is a good ship, and Khan doesn’t have to log the Person beamed there in order to gain the Encounter, making it ideal for sending Augments.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "kirk.html",
     "count": 1,
     "hits": [
@@ -21663,6 +24235,20 @@
       "anchor": "ship-deck",
       "heading": "Ship Deck",
       "snippet": "Xindi-Aquatic Cruiser is a must get for the trait, and Archer really benefits from the skills and ability to free play beamed cards.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "Xindi-Aquatic Cruiser is fairly high-cost for Khan with no other major upsides, so it might be worth skipping.",
       "truncated": false,
       "mode": "text",
       "lore": false
@@ -21758,6 +24344,20 @@
     ]
    },
    {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "ship-deck",
+      "heading": "Ship Deck",
+      "snippet": "The Xindi-Reptilian Battleship is another great option, with focus scoring and a way to gain Cargo. You’ll be less concerned to get the Glory from the Weapon, and getting traits you actually need.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
     "guide": "koloth.html",
     "count": 1,
     "hits": [
@@ -21809,6 +24409,20 @@
       "anchor": "person-deck",
       "heading": "Person Deck",
       "snippet": "Zephram (Zefram) Cochrane is always great for card draw, and Archer’s deck is so small to start that an early Cochrane can be really good for your cycle-game. His Encounter is achievable but Dilithium is scarce.",
+      "truncated": false,
+      "mode": "text",
+      "lore": false
+     }
+    ]
+   },
+   {
+    "guide": "khan.html",
+    "count": 1,
+    "hits": [
+     {
+      "anchor": "person-deck",
+      "heading": "Person Deck",
+      "snippet": "Zefram Cochrane is a chance at another Encounter and the Engineer traits, so I like him.",
       "truncated": false,
       "mode": "text",
       "lore": false
