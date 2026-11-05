@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Everything You Wanted To Know About Reactions But Were Too Afraid To Ask | ST:CC Compendium</title>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600&family=Barlow+Condensed:wght@500;600&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#0a0e1a;--bg2:#0f1628;--bg3:#141c35;
+  --accent:#4a9fd4;--accent2:#7ec8f0;--accent-rgb:74,159,212;
+  --gold:#c8a84b;--text:#ccd6f0;--muted:#7a8aaa;--green:#4ac48a;
+  --border:rgba(74,159,212,0.25);
+  --ui:var(--accent);
+  --hdr-edge:#061020;--hdr-mid:#0d1e3a;
+  --title-glow:0.5;
+}
+body.theme-tbg{
+  --accent:#d44a4a;--accent2:#f07e7e;--accent-rgb:212,74,74;
+  --border:rgba(212,74,74,0.25);
+  --ui:var(--accent2);
+  --hdr-edge:#160608;--hdr-mid:#2a0e10;
+  --title-glow:0.4;
+}
+body.theme-sc{
+  --accent:#c8a84b;--accent2:#e8c96a;--accent-rgb:200,168,75;
+  --border:rgba(200,168,75,0.25);
+  --ui:var(--accent2);
+  --hdr-edge:#161206;--hdr-mid:#2a2410;
+  --title-glow:0.4;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:var(--text);line-height:1.75;font-size:1rem;}
+p{margin-bottom:1rem;}
+s{text-decoration:line-through;opacity:0.6;}
+h2{font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent2);border-left:3px solid var(--accent);padding-left:0.75rem;margin:2.5rem 0 1rem;}
+h3{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:500;letter-spacing:0.1em;color:var(--gold);text-transform:uppercase;margin:1.75rem 0 0.5rem;}
+body.theme-tbg h3,body.theme-sc h3{font-size:1.05rem;font-weight:600;margin:2rem 0 0.75rem;}
+
+body{position:relative;}
+.nav-bar{background:var(--bg);border-top:1px solid var(--border);padding:0.75rem 1.5rem;}
+#top.nav-bar{position:absolute;top:0;left:0;z-index:2;background:none;border:0;padding:0.7rem 1.25rem;}
+.nav-bar a{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:0.1em;color:var(--ui);text-decoration:none;text-transform:uppercase;opacity:0.85;}
+.nav-bar a:hover{opacity:1;}
+.back-top{display:block;text-align:right;font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-top:0.25rem;margin-bottom:0.5rem;}
+.back-top:hover{color:var(--ui);}
+
+.chapter-header{background:linear-gradient(135deg,var(--hdr-edge) 0%,var(--hdr-mid) 50%,var(--hdr-edge) 100%);border-bottom:2px solid var(--accent);padding:2.3rem 2rem 1.3rem;text-align:center;position:relative;}
+.chapter-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:0.22em;color:var(--accent);text-transform:uppercase;margin-bottom:0.15rem;}
+.chapter-title{font-family:'Antonio',sans-serif;font-size:clamp(1.7rem,4.5vw,2.5rem);font-weight:600;color:#fff;letter-spacing:0.09em;text-transform:uppercase;line-height:1.05;}
+.chapter-title span{color:var(--accent2);}
+.chapter-meta{display:inline;margin-top:0;font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:0.92rem;letter-spacing:0.04em;color:#9fb0c8;}
+.chapter-meta a{color:var(--accent2);text-decoration:none;}
+.chapter-date{display:inline;font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:0.92rem;letter-spacing:0.04em;color:var(--muted);}
+.chapter-date::before{content:'\00b7';margin:0 0.5rem;color:var(--muted);}
+.chapter-meta,.chapter-date{margin-top:0.45rem;}
+.chapter-tags{display:flex;justify-content:center;gap:0.4rem;margin-top:0.6rem;flex-wrap:wrap;}
+.tag{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.1rem 0.55rem;border:1px solid var(--accent);color:var(--ui);border-radius:2px;line-height:1.5;}
+@media (max-width:620px){.chapter-header{padding:3rem 1rem 1.1rem;}#top.nav-bar{padding:0.6rem 1rem;}#top.nav-bar a{font-size:0.72rem;}.chapter-meta,.chapter-date{display:block;}.chapter-date::before{content:none;}}
+
+.chapter-spec{display:flex;justify-content:center;align-items:center;gap:0.45rem;margin-top:0.7rem;flex-wrap:wrap;}
+.chip{display:inline-flex;align-items:center;gap:0.35rem;height:24px;font-family:'Antonio',sans-serif;font-weight:600;font-size:0.88rem;letter-spacing:0.04em;text-transform:uppercase;padding:0 0.6rem 0 0.15rem;border-radius:999px;border:1.5px solid var(--cc);color:var(--cc);background:rgba(0,0,0,0.25);line-height:1;}
+.chip img{height:20px;width:20px;}
+.chip-species{--cc:#e2a04a;}
+.chip-regular{--cc:#79b3c7;}
+.chip-focus{--cc:#e8d44a;padding:0 0.1rem 0 0.65rem;}
+.chip-focus.fx-research{--cc:#5cb4e4;}
+.chip-focus.fx-military{--cc:#e05a5a;}
+.chip-focus.fx-influence{--cc:#e8d44a;}
+.chip-focus img{height:22px;width:auto;}
+.chip-cx{--cc:var(--accent);padding-left:0.6rem;gap:0.5rem;color:var(--accent2);}
+.chip-cx .cx-lbl{color:var(--muted);}
+.cx-dots{display:inline-flex;gap:3px;}
+.cx-dots i{display:block;width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.12);}
+.cx-dots i.on{background:var(--accent2);}
+.cx-num{color:var(--accent2);}
+.chip-suit{background:var(--cc);border-color:var(--cc);color:#fff;padding:0 0.65rem 0 0.45rem;gap:0.4rem;}
+.chip-suit img{height:14px;width:auto;}
+.chip-suit.suit-person{--cc:#b89c2c;}
+.chip-suit.suit-ally{--cc:#9b6ecf;}
+.chip-suit.suit-ship{--cc:#7a8aaa;}
+.chip-suit.suit-cargo{--cc:#3a6aaa;}
+.chip-suit.suit-location{--cc:#2e9e6a;}
+.chip-suit.suit-encounter{--cc:#d4699f;}
+.chip-suit.suit-incident{--cc:#e05a5a;}
+.chip-tool{--cc:var(--accent2);background:rgba(var(--accent-rgb),0.14);padding:0 0.55rem 0 0.65rem;text-decoration:none;margin-left:0.35rem;transition:background 0.15s;}
+.chip-tool:hover{background:rgba(var(--accent-rgb),0.32);color:#fff;}
+.chip-tool .arr{margin-left:0.35rem;}
+
+.content{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem;}
+
+.toc-grid{max-width:860px;margin:1.5rem auto 0;padding:0 1.5rem;}
+.toc-grid-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.93rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem;}
+.toc-cards{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.toc-list{max-width:860px;margin:1.5rem auto 0;padding:0 1.5rem;}
+.toc-list-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.93rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem;}
+.toc-list ol{list-style:none;display:flex;flex-wrap:wrap;gap:0.3rem 1.5rem;padding:0 0 0 1rem;margin:0;border-left:2px solid var(--border);}
+.toc-list li{font-size:0.8rem;}
+.toc-list a{color:var(--accent2);text-decoration:none;}
+.toc-list a:hover{color:#fff;text-decoration:underline;}
+
+.card-row{display:flex;gap:0.75rem;overflow-x:auto;padding:1rem 0 0.5rem;margin:1rem 0 1.5rem;scrollbar-width:thin;scrollbar-color:var(--accent) var(--bg2);}
+.card-row::-webkit-scrollbar{height:4px;}
+.card-row::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px;}
+.card-row::-webkit-scrollbar-track{background:var(--bg2);}
+.card-row img{height:220px;width:auto;border-radius:6px;border:1px solid var(--border);flex-shrink:0;transition:transform 0.2s,box-shadow 0.2s;cursor:zoom-in;}
+.card-row img:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 12px 30px rgba(var(--accent-rgb),0.3);border-color:var(--accent);}
+.card-img{margin:0.75rem 0 1.25rem;}
+.card-img img{max-width:260px;width:100%;border-radius:8px;border:1px solid var(--border);display:block;transition:transform 0.2s,box-shadow 0.2s;cursor:zoom-in;}
+.card-img img:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 25px rgba(var(--accent-rgb),0.25);border-color:var(--accent);}
+.card-grid-small{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:0.75rem;margin:1rem 0 1.5rem;}
+.board-pair{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.25rem 0;}
+.board-pair img{width:100%;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;transition:transform 0.2s,box-shadow 0.2s;}
+.board-pair img:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 12px 30px rgba(var(--accent-rgb),0.3);border-color:var(--accent);}
+.board-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.69rem;letter-spacing:0.15em;color:var(--muted);text-align:center;margin-top:0.4rem;text-transform:uppercase;}
+.img-pair{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0 1.5rem;}
+.img-pair img{width:100%;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;transition:transform 0.2s,box-shadow 0.2s;}
+.img-pair img:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(var(--accent-rgb),0.25);border-color:var(--accent);}
+.guide-img{max-width:100%;border-radius:6px;border:1px solid var(--border);margin:1rem 0 1.5rem;cursor:zoom-in;transition:transform 0.2s,box-shadow 0.2s;display:block;}
+.guide-img:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(var(--accent-rgb),0.25);border-color:var(--accent);}
+
+.lore{font-style:italic;color:#a8b8d0;border-left:3px solid rgba(200,168,75,0.4);padding-left:1rem;margin-bottom:1rem;line-height:1.8;}
+.lore a,.card-props a{color:#c8a84b;text-decoration:none;border-bottom:1px dotted rgba(200,168,75,0.5);}
+.lore a:hover,.card-props a:hover{color:#e8c878;border-bottom-color:#e8c878;}
+
+.card-props{list-style:none;padding:0;margin:0.75rem 0 1rem;display:flex;flex-direction:column;gap:0.35rem;}
+.card-props li{font-size:0.85rem;line-height:1.5;padding-left:1rem;position:relative;color:var(--text);}
+.card-props li strong{color:var(--accent2);}
+.card-props li::before{content:'—';position:absolute;left:0;color:var(--gold);font-weight:600;}
+
+.yt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:1.25rem 0 2rem;}
+.yt-card{text-decoration:none;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:var(--bg2);transition:border-color 0.2s,transform 0.2s;}
+.yt-card:hover{border-color:var(--accent);transform:translateY(-3px);}
+.yt-thumb{position:relative;}
+.yt-thumb img{width:100%;display:block;}
+.yt-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#fff;text-shadow:0 0 12px rgba(0,0,0,0.8);opacity:0.85;}
+.yt-card:hover .yt-play{opacity:1;}
+.yt-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.18rem;letter-spacing:0.08em;color:var(--text);padding:0.6rem 0.75rem 0.2rem;}
+.yt-sub{font-size:0.72rem;color:var(--muted);padding:0 0.75rem 0.75rem;}
+
+footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:0.75rem;color:var(--muted);line-height:1.8;}
+footer a{color:var(--ui);text-decoration:none;}
+
+#lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:1000;align-items:center;justify-content:center;cursor:zoom-out;}
+#lightbox.open{display:flex;}
+#lightbox img{max-width:90vw;max-height:90vh;border-radius:8px;box-shadow:0 0 60px rgba(var(--accent-rgb),0.4);}
+
+@media (max-width:600px){
+  .chapter-header{padding:2rem 1rem 1.5rem;}
+  .card-row img{height:170px;}
+  .card-img img{max-width:100%;}
+  .board-pair{grid-template-columns:1fr;}
+  .img-pair{grid-template-columns:1fr;}
+}
+
+
+.tag-invited{border-color:#5ec8c8;color:#5ec8c8;}
+.chapter-sub{font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:1.05rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-top:0.35rem;}
+.toc2{max-width:960px;margin:1.5rem auto 0;padding:0 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem 1.5rem;}
+.toc2 .grp{border-left:2px solid var(--border);padding-left:0.9rem;}
+.toc2 .grp-h{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.3rem;}
+.toc2 ol{list-style:none;}
+.toc2 li{font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:0.84rem;letter-spacing:0.03em;line-height:1.3;margin-bottom:0.45rem;}
+.toc2 a{display:inline-block;color:var(--accent2);text-decoration:none;}
+.toc2 a:hover{color:#fff;text-decoration:underline;}
+.ex-jump{max-width:860px;margin:1rem auto 0;padding:0 1.5rem;display:flex;flex-wrap:wrap;gap:0.3rem;align-items:center;}
+.ex-jump a{font-family:'Antonio',sans-serif;font-size:0.8rem;color:var(--accent2);text-decoration:none;border:1px solid var(--border);border-radius:999px;padding:0 0.55rem;line-height:1.6;}
+.ex-jump a:hover{background:rgba(var(--accent-rgb),0.2);color:#fff;}
+.ex-jump button{margin-left:auto;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;background:none;border:1px solid var(--accent);color:var(--accent2);border-radius:2px;padding:0.1rem 0.6rem;cursor:pointer;}
+h2{scroll-margin-top:1rem;}
+
+details.ex{border:1px solid var(--border);border-radius:6px;background:var(--bg2);margin:1.1rem 0 1.4rem;scroll-margin-top:1rem;}
+details.ex > summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;gap:0.6rem;padding:0.55rem 0.9rem;border-bottom:1px solid transparent;}
+details.ex[open] > summary{border-bottom-color:var(--border);}
+details.ex > summary::-webkit-details-marker{display:none;}
+details.ex > summary::before{content:'\25B8';color:var(--accent);font-size:0.8rem;transition:transform 0.15s;}
+details.ex[open] > summary::before{transform:rotate(90deg);}
+.ex-num{font-family:'Antonio',sans-serif;font-weight:600;font-size:1rem;letter-spacing:0.06em;color:#fff;text-transform:uppercase;}
+.ex-body{padding:0.8rem 0.95rem 0.4rem;}
+.ex-body p{font-size:0.92rem;}
+
+.op{display:flex;border-radius:0 4px 4px 0;overflow:hidden;font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:0.95rem;line-height:1.45;margin:-0.5rem 0 1rem;}
+.op .bar{flex:none;width:4px;}
+.op .body{padding:0.25rem 0.6rem;}
+.op-table .bar{background:#237ccf;} .op-table .body{background:#8aacd9;color:#0b1730;}
+.op-play .bar{background:#d6d6d5;} .op-play .body{background:#e9e8e2;color:#14161c;}
+.op-act .bar{background:#096abd;} .op-act .body{background:#7ea3cc;color:#0b1730;}
+.op-ctl .bar{background:#2e9e6a;} .op-ctl .body{background:#cfe7da;color:#0f2a1d;}
+
+
+.cardq{display:grid;grid-template-columns:52px 1fr;gap:0 0.8rem;align-items:start;margin:0 0 1rem;}
+.cardq img{width:52px;border-radius:4px;border:1px solid var(--border);cursor:zoom-in;transition:transform 0.15s;}
+.cardq img:hover{transform:scale(1.05);border-color:var(--accent);}
+.cardq .cn{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1rem;letter-spacing:0.03em;color:#fff;line-height:1.2;}
+.cardq .cn .suit{font-weight:500;color:var(--muted);margin-left:0.4rem;}
+.cardq p.ctx{font-size:0.86rem;color:#aab8d4;font-style:italic;margin:0.1rem 0 0.35rem;}
+.cardq .op{margin:0 0 2px;}
+.op .kw{font-family:'Antonio',sans-serif;font-weight:600;letter-spacing:0.03em;margin-right:0.2rem;}
+.op-table .kw,.op-act .kw{color:#fff;text-shadow:0 0 2px rgba(10,20,40,.9);}
+.op-play .kw{color:#14161c;}
+.op-ctl .kw{color:#1d7a50;}
+.stripimg{height:1.35em;width:auto;vertical-align:-.32em;margin:0 .08em;}
+.stripimg.awayteam-tok{height:1.45em;vertical-align:-.38em;}
+.specpill{display:inline-flex;align-items:center;height:1.35em;border-radius:999px;
+  overflow:hidden;vertical-align:-.32em;margin:0 .08em;}
+.specpill img{height:1.35em;width:auto;display:block;}
+.stripimg.cost{margin:0 .22em 0 0;}
+.stripchip{display:inline-flex;align-items:center;gap:.18em;height:1.2em;padding:0 .38em 0 .1em;
+  border-radius:999px;font-family:'Antonio',sans-serif;font-weight:600;font-size:.85em;
+  letter-spacing:.03em;text-transform:uppercase;color:#fff;vertical-align:-.2em;}
+.stripchip img{height:1em;width:auto;}
+.stripchip.plain{padding-left:.38em;}
+.vpchip{display:inline-flex;align-items:center;gap:.12em;vertical-align:-.2em;}
+.vpchip b{font-family:'Antonio',sans-serif;font-weight:600;}
+.req-marker{--rm-h:0.95em;--rm-ink:#232122;display:inline-flex;align-items:center;
+  height:var(--rm-h);background:var(--rm-ink);border-radius:.1em;
+  padding:0 calc(var(--rm-h)*0.37) 0 calc(var(--rm-h)*2.05);
+  margin:0 .16em;position:relative;vertical-align:-.30em;white-space:nowrap;}
+.req-marker .rm-dia{position:absolute;left:calc(var(--rm-h)*1.071);top:47%;
+  width:calc(var(--rm-h)*1.246);height:calc(var(--rm-h)*1.246);
+  transform:translate(-50%,-50%) rotate(45deg);transform-origin:center;
+  background:var(--rm-ink);border-radius:.1em;
+  display:flex;align-items:center;justify-content:center;}
+.req-marker .rm-med{width:calc(var(--rm-h)*1.214);height:calc(var(--rm-h)*1.214);
+  border-radius:50%;overflow:hidden;transform:rotate(-45deg);position:relative;}
+.req-marker .rm-med img{position:absolute;height:100%;width:auto;max-width:none;display:block;}
+.req-marker b{font-family:'Orbitron',sans-serif;font-weight:900;
+  font-size:calc(var(--rm-h)*1.32);line-height:1;color:#fff;letter-spacing:.01em;
+  text-shadow:0 -.17em 0 var(--rm-ink),0 .17em 0 var(--rm-ink),
+    -.14em 0 0 var(--rm-ink),.14em 0 0 var(--rm-ink),
+    -.11em -.13em 0 var(--rm-ink),.11em -.13em 0 var(--rm-ink),
+    -.11em .13em 0 var(--rm-ink),.11em .13em 0 var(--rm-ink);}
+
+ol.seq{list-style:none;margin:0.2rem 0 1rem;padding:0;}
+ol.seq > li{position:relative;padding:0.3rem 0.5rem 0.3rem 2.3rem;font-size:0.9rem;line-height:1.55;border-left:2px solid var(--border);margin-left:0.75rem;}
+ol.seq > li::before{content:attr(data-n);position:absolute;left:-0.78rem;top:0.32rem;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--bg3);border:1px solid var(--accent);color:var(--accent2);font-family:'Antonio',sans-serif;font-size:0.8rem;display:flex;align-items:center;justify-content:center;}
+ol.seq > li.react{background:linear-gradient(90deg,rgba(35,124,207,0.22),rgba(35,124,207,0.04) 70%);border-left-color:#237ccf;}
+ol.seq > li.react::before{background:#237ccf;border-color:#8aacd9;color:#fff;}
+ol.seq > li p{font-size:0.84rem;color:#aab8d4;margin:0.25rem 0 0.1rem;}
+.ex-note{border-left:3px solid rgba(200,168,75,0.45);padding:0.1rem 0 0.1rem 0.8rem;margin:0.2rem 0 0.9rem;}
+.ex-note p{font-size:0.88rem;color:#b9c6de;margin-bottom:0.5rem;}
+.paren{font-family:'Antonio',sans-serif;background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:0.5rem 0.9rem;margin:0 0 1rem;color:var(--accent2);letter-spacing:0.03em;}
+a.cl{color:var(--accent2);text-decoration:none;border-bottom:1px dotted rgba(126,200,240,0.45);}
+a.cl:hover{color:#fff;}
+.fab{position:fixed;right:1rem;bottom:1rem;z-index:60;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;background:var(--bg3);color:var(--accent2);border:1px solid var(--accent);border-radius:999px;padding:0.4rem 0.9rem;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.5);}
+.fab:hover{background:var(--accent);color:#fff;}
+ol.seq > li .op{margin:0.35rem 0 0.2rem;}
+@media (max-width:600px){ol.seq > li{padding-left:1.9rem;}}
+</style>
+</head>
+<body>
+
+<div id="top" class="nav-bar"><a href="index.html">← Back to Compendium</a></div>
+
+<header class="chapter-header">
+  <div class="chapter-label">Captain's Chair</div>
+  <h1 class="chapter-title">Everything You Wanted To Know About <span>Reactions</span> But Were Too Afraid To Ask</h1>
+  <div class="chapter-sub">A Complete Guide to Reactions</div>
+  <div class="chapter-meta">By Esquire_Sandwich</div>
+</header>
+
+<nav class="toc2">
+  <div class="grp"><div class="grp-h">The basics</div><ol>
+    <li><a href="#available">WHEN IS A REACTION AVAILABLE?</a></li>
+    <li><a href="#optional">DO I HAVE TO USE A REACTION?</a></li>
+    <li><a href="#when-use">WHEN CAN I USE A REACTION?</a></li>
+    <li><a href="#multiple">WHAT IF I HAVE MULTIPLE REACTIONS?</a></li>
+    <li><a href="#interrupt">THE RULEBOOK SAYS REACTIONS CAN INTERRUPT ANOTHER OPERATION, DOES THAT MEAN AS SOON AS A CARD LEAVES MY HAND I SHOULD ACTIVATE THE REACTION IMMEDIATELY?</a></li>
+  </ol></div>
+  <div class="grp"><div class="grp-h">Timing windows</div><ol>
+    <li><a href="#window">WHEN EXACTLY DOES A REACTION WINDOW OPEN/WHEN CAN THE REACTION BE ACTIVATED?</a></li>
+    <li><a href="#when">EXPLAIN REACTIONS USING WHEN!</a></li>
+    <li><a href="#after">EXPLAIN REACTIONS USING AFTER!</a></li>
+    <li><a href="#in-play">IS THERE A DIFFERENCE BETWEEN BEING "IN PLAY" AND "PUTTING INTO PLAY"?</a></li>
+    <li><a href="#via-play">REACTING TO “PUT INTO PLAY” VIA A PLAY OPERATION</a></li>
+    <li><a href="#neutral">WHEN IS A CONTROLLED NEUTRAL LOCATION “PUT INTO PLAY”</a></li>
+    <li><a href="#beam-promote">WHAT ABOUT CARDS BEING “PUT INTO PLAY” VIA BEAMING/PROMOTING</a></li>
+    <li><a href="#promoted">ANY EXAMPLES OF A PLAY OPERATION ALSO CAUSING A CARD TO BE PROMOTED?</a></li>
+    <li><a href="#shortcut">ANY OTHER SHORTCUT WAYS TO THINK ABOUT WHEN REACTION WINDOWS OPEN AND CLOSE WITHIN OTHER OPERATIONS?</a></li>
+    <li><a href="#staging">ANY EXAMPLES OF A CARD BEING PUT INTO THE STAGING AREA BY ANOTHER CARD?</a></li>
+    <li><a href="#other-events">REACTING TO OTHER EVENTS (SENDING AN AWAY TEAM, WARPING A SHIP, TAKING AN INCIDENT, ETC.)</a></li>
+  </ol></div>
+  <div class="grp"><div class="grp-h">Edge cases &amp; FAQ</div><ol>
+    <li><a href="#moved">DOES IT MATTER IF THE CARD THAT TRIGGERED THE REACTION MOVED AFTER IT INITIALLY ENTERED PLAY?</a></li>
+    <li><a href="#moving">WHAT IF I HAVE MULTIPLE REACTIONS THAT ALL TRIGGER OFF THE SAME EVENT AND IT MOVES RELEVANT CARDS TO DIFFERENT LOCATIONS?</a></li>
+    <li><a href="#log">WHAT WAS THAT ABOUT NOT BEING ABLE TO INTERACT WITH CARDS IN THE LOG?</a></li>
+    <li><a href="#wildcard">HOW DOES THE WILDCARD TRAIT WORK WITH REACTIONS?</a></li>
+    <li><a href="#faq">SPECIFIC FREQUENTLY ASKED REACTION QUESTIONS</a></li>
+  </ol></div>
+</nav>
+
+<div class="ex-jump">
+  <button type="button" id="toggleAll">Expand all</button>
+</div>
+
+<main class="content">
+
+  <p>This guide references cards from Captain’s Chair, To Boldly Go, and Second Contact for various examples. The relevant text for all cards is included, but you can review images of every card: <a class="cl" href="cards.html">here in the Compendium</a></p>
+  <p>Thanks to Periodic Agent for creating the Compendium and assisting with editing this guide. Thanks to other members of the Captain’s Chair Fans Discord for their assistance with this guide and for asking questions which formed many of the examples included. Thanks, of course, to the developers and playtesters whose answers to those questions formed parts of this guide.</p>
+
+  <h2 id="available">WHEN IS A REACTION AVAILABLE?</h2>
+  <p>Reactions are a table operation, which is indicated by the fact that they are in a blue box on the card. Table operations can only be activated on cards that are in play but not in the Staging Area or beamed. Reactions are most often found on promoted Duty Officers, deployed cards (usually Ships or cards with the ONGOING trait), controlled Locations, Status cards, and Captain cards.</p>
+  <p>Beamed cards are tucked under the card to which they are beamed, covering the table operations along with everything else but the trait(s) and suit. Since the table operations on the beamed card are covered, it is clear that they are not available (out of sight, out of mind). You also cannot activate a table operation, like Reactions, from a card in your Staging Area. The biggest trap here is usually Person cards. In order to use a table operation of a Person card, it must be promoted to Duty Officer (unless a specific operation allows use of table operations from cards in the Staging Area). If a Person card is played for its Play operation, usually the table operations are not available.</p>
+  <p>Other cards with Reaction operations, like some Ships and Cargo cards, will deploy as part of their Play operation. This means the card is moved from the Staging Area to the Fleet Area. Once the card is in the Fleet Area, the table operations, including Reactions, are available.</p>
+  <p>Using a Reaction operation exhausts the card and Reactions cannot be used on cards that are already exhausted.</p>
+  <p>Reactions can be used on your turn or your opponent's turn and using the activation exhausts the card. It Refreshes/un-exhausts during your next Clean-Up step (unless another operation Refreshes the card sooner). This means that using a reaction during your opponent's turn would leave the card already exhausted at the start of your next turn.</p>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="optional">DO I HAVE TO USE A REACTION?</h2>
+  <p>Reactions are optional. If you do not wish to activate a Reaction, you can choose not to. If you do activate the Reaction you must resolve the entirety of the operation following the usual rule for resolving operations (i.e. everything is mandatory unless indicated otherwise, if there is a cost it must be paid to gain the benefit, etc.).</p>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="when-use">WHEN CAN I USE A REACTION?</h2>
+  <p>If you choose to use a Reaction, you must do so as soon as the triggering event occurs. If you do anything besides activating Reactions (and performing whatever actions are included within those Reactions) the window has closed. This could include playing another card, activating an operation, or even moving on to complete the remainder of the Play operation on the card that triggered the Reaction.</p>
+  <p>Reactions can trigger off many different events and each trigger will explain the condition to activate it. Reactions that trigger after a certain trait has been “Put into Play” can activate when any card containing that trait has been put into play.</p>
+  <p>Please see the explanation/examples below to better understand when this window opens and closes.</p>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="multiple">WHAT IF I HAVE MULTIPLE REACTIONS?</h2>
+  <p>If you have multiple available Reactions that trigger on the same condition, you may resolve any number of them in the order of your choosing. Activating one Reaction, and doing all of the actions associated with that Reaction, does not prevent you from activating a second Reaction that was triggered by the initial event. This is explained in more detail below but here is a basic and not so basic example to help understand:</p>
+
+  <details class="ex" id="ex1"><summary><span class="ex-num">Example 1:</span></summary><div class="ex-body">
+    <div class="cardq"><img src="img/box2/kirk-james-t-kirk.jpg" alt="James T. Kirk" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">James T. Kirk<span class="suit">Captain</span></div><p class="ctx">You are playing as <a class="cl" href="cards.html#card=2KIRK01/25" target="_blank">Captain Kirk</a> whose Captain card has</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>“REACTION: After putting a KLINGON into play, discard a card to gain 1 Military.</span></div></div></div><div class="cardq"><img src="img/box2/augmentation-plague.jpg" alt="Augmentation Plague" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Augmentation Plague<span class="suit">Cargo</span></div><p class="ctx">You also have the <a class="cl" href="cards.html#card=2CAR01/18" target="_blank">Augmentation Plague</a> (Cargo) deployed, which has</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>“REACTION: After putting a KLINGON into play, gain 1 Glory.”</span></div></div></div><p>You play and deploy the <a class="cl" href="cards.html#card=2SHI11/13" target="_blank">Vor’cha Attack Cruiser</a> (Ship) which has the KLINGON trait. Which triggers the Reaction of both cards. You can activate them in either order but for this example we’ll just say you choose to activate Kirk and then the Augmentation Plague..</p>
+    <div class="ex-note"><p>The definition of when a card is “Put into play” is detailed below but for now suffice it to say that by deploying this Ship with the KLINGON trait, you have put a KLINGON into play.</p></div>
+    <ol class="seq">
+      <li data-n="1">You play the Vor’cha Attack Cruiser (Ship with KLINGON)</li>
+      <li data-n="2" class="react">REACTION (Kirk)- Discard a card to gain 1 Military</li>
+      <li data-n="3" class="react">REACTION (Augmentation Plague)- Gain 1 Glory</li>
+    </ol>
+    <div class="ex-note"><p>Note that activating the Reaction on Kirk, discarding a card, and gaining 1 Military do not prevent you from going back to then also activate the Reaction of the Augmentation Plague. The Reaction window stays open while you complete other Reactions that triggered on the same event.</p></div>
+  </div></details>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="interrupt">THE RULEBOOK SAYS REACTIONS CAN INTERRUPT ANOTHER OPERATION, DOES THAT MEAN AS SOON AS A CARD LEAVES MY HAND I SHOULD ACTIVATE THE REACTION IMMEDIATELY?</h2>
+  <p>Not entirely. The next portion explains in more detail when the window for a Reaction opens which is the most complicated part; but, let’s use a slight variation on the above example just to see how a Reaction could interrupt another operation (including another Reaction).</p>
+
+  <details class="ex" id="ex2"><summary><span class="ex-num">Example 2:</span></summary><div class="ex-body">
+    <div class="cardq"><img src="img/box2/kirk-leonard-mccoy.jpg" alt="Leonard McCoy" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Leonard McCoy<span class="suit">Person</span></div><p class="ctx">Same as Example 1 above but you also have <a class="cl" href="cards.html#card=2KIRK23/25" target="_blank">Leonard McCoy</a> (Person) as your Duty Officer which has</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>“REACTION: After discarding or logging a Person during your Action step, free play an Incident from your hand or Discard pile.”</span></div></div></div><p>Presume you have a Person in hand and an Incident in your discard pile.</p>
+    <p>Now the sequence could be:</p>
+    <ol class="seq">
+      <li data-n="1">You play the Vor’cha Attack Cruiser (Ship with KLINGON)</li>
+      <li data-n="2" class="react">REACTION (Kirk)- Discard the Person from hand to Discard pile.</li>
+      <li data-n="3" class="react">REACTION (McCoy)- free play and resolve an Incident.</li>
+      <li data-n="4" class="react">REACTION (Kirk) (continued) gain 1 Military.</li>
+      <li data-n="5" class="react">REACTION (Augmentation Plague) Gain 1 Glory.</li>
+    </ol>
+    <div class="ex-note"><p>Note how a window for McCoy’s Reaction opened up within Kirk’s Reaction operation. As soon as you completed the triggering action of “discarding a person” the window for McCoy opened. That window would close as soon as you move onto the next game action which in this case was gaining 1 military. Therefore, McCoy’s Reaction can interrupt Kirk’s Reaction and it must interrupt it, if you choose to use it.</p></div>
+  </div></details>
+  <p>See <a class="cl" href="#ex16">Example 16</a> below for a more complicated example of multiple reactions.</p>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="window">WHEN EXACTLY DOES A REACTION WINDOW OPEN/WHEN CAN THE REACTION BE ACTIVATED?</h2>
+  <p>If you choose to activate a Reaction you must do it as soon as the triggering event occurs. If you do not activate the Reaction at that opportunity, you must wait for a different triggering event.</p>
+  <p>So when is this timing window? It depends on the exact language of the Reaction and the exact language of the triggering event.</p>
+  <p>Most Reactions occur "After" a specific event occurs. Some occur "When" an event occurs. Reactions that occur "After" will trigger once the event that triggered it has finished; Reactions that occur "When" will trigger before or instead of the event that is triggering it.</p>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="when">EXPLAIN REACTIONS USING WHEN!</h2>
+  <p>Reactions that say "When X happens/would happen…" immediately interrupt the attempted operation and the Reaction occurs before or instead of the event that triggered it resolves. Some examples of card text and the order of events surrounding their use will help explain this:</p>
+
+  <details class="ex" id="ex3"><summary><span class="ex-num">Example 3:</span></summary><div class="ex-body">
+    <div class="cardq"><img src="img/box1/phasers.jpg" alt="Phasers" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Phasers<span class="suit">Cargo</span></div><p class="ctx">During your turn you played and deployed <a class="cl" href="cards.html#card=1CAR11/16" target="_blank">Phasers</a> (Cargo)-</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>"REACTION: When you would be forced by an attack to remove 1 or more Away Teams, dismiss this card to ignore the negative effect."</span></div></div></div><p>Now it is your opponent’s turn.</p>
+    <ol class="seq">
+      <li data-n="1">The opponent plays <a class="cl" href="cards.html#card=1CAR15/16" target="_blank">Type III Disruptor Pistols</a> which costs an action and states
+        <div class="op op-play"><span class="bar"></span><span class="body" data-r>"PLAY: Gain 1 Military. Junk a card from the Market. You may discard a KLINGON/ROMULAN/BREEN to remove up to 2 opponent Away Teams from the same Location. Gain 1 Glory for each Away Team removed.</span></div>
+        <p>The opponent spends an action and puts Type III Disruptor Pistols into the Staging Area. They gain 1 Military, junk a card from the Market, and discard a ROMULAN card from their hand.</p></li>
+      <li data-n="2">At this point, the next step of the Play operation would require you to remove up to 2 Away Teams.</li>
+      <li data-n="3" class="react">You interrupt the Play operation of the Type III Disruptor Pistols by activating Phaser's Reaction operation. You pay the cost of dismissing Phasers (i.e. moving it from the Fleet Area to Discard) and the negative effect of the attack is ignored. You do not remove any Away Teams</li>
+      <li data-n="4">Your opponent continues with the rest of the operation, in this case gaining a glory for each Away Team removed, which would be 0. But, if the operation causing the Attack card had other effects, such as deploying the card, gaining other resources, etc. they could still occur.</li>
+    </ol>
+  </div></details>
+
+  <details class="ex" id="ex4"><summary><span class="ex-num">Example 4:</span></summary><div class="ex-body">
+    <div class="cardq"><img src="img/box2/ambassador-gral.jpg" alt="Ambassador Gral" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Ambassador Gral<span class="suit">Person</span></div><p class="ctx">You have <a class="cl" href="cards.html#card=2PER02/26" target="_blank">Ambassador Gral</a> (Person) as your Duty Officer with,</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>“REACTION: When you would return an Incident, give it to your opponent instead.”</span></div></div></div><ol class="seq">
+      <li data-n="1">You play the Incident- <a class="cl" href="cards.html#card=1INC01/6" target="_blank">Energy Drain</a> which costs an action and states,
+        <div class="op op-play"><span class="bar"></span><span class="body" data-r>"PLAY: Spend 2 Dilithium to return this card. If you have an ENGINEER in play, gain an Action."</span></div></li>
+      <li data-n="2">You spend the action and spend 2 Dilithium.</li>
+      <li data-n="3" class="react">You activate the REACTION of Ambassador Gral.</li>
+      <li data-n="4" class="react">Instead of returning the Incident to the Incident deck, you give it to your opponent (the equivalent of you giving a card is for your opponent to "take" it, so it goes directly to their hand).</li>
+      <li data-n="5">You complete the rest of the Play operation of Energy Drain to check if you have an Engineer in play to gain an Action.</li>
+    </ol>
+  </div></details>
+  <p>Note that in these cases, the "When" Reaction interrupts the operation that triggered it and occurs before/replaces the usual effect. It does not matter if the event triggering the Reaction is from a played card, an activated operation, a Location's CONTROL operation, or any other source.</p>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="after">EXPLAIN REACTIONS USING AFTER!</h2>
+  <p>Reactions that say "After X happens…" occur, as you might guess, after the triggering event. However, “After” can be surprisingly tricky depending on what exactly the event is that is causing the trigger.</p>
+  <p>If a Reaction triggers "After putting X into play" then the method of entering play determines when this has occurred.</p>
+  <ul class="card-props">
+    <li>When you play a card using one of its Play operations, it has been "put into play" after the Play operation has resolved. (See <a href="#ex5">Examples 5-7</a>)</li>
+    <li>When you take control of a Neutral location, it has been "put into play" before the Control operation is resolved. (See <a href="#ex8">Example 8</a>)</li>
+    <li>When you beam a card from your hand or discard or promote a card from hand or discard to Duty Officer it has been “put into play” immediately. (See <a href="#ex9">Examples 9-11</a>)<br>NOTE: Cards beamed/promoted from a different location (direct from deck, from the Staging Area, etc.) are not being put into play via beaming/promoting.</li>
+    <li>When a card explicitly instructs you to “put [a card] into your Staging Area” the card being put into the Staging Area has been “put into play” immediately. (See <a href="#ex12">Example 12</a>)</li>
+  </ul>
+  <p>If a Reaction triggers “After” an event or action such as sending an away team, warping a ship, etc., it can trigger immediately upon completion of the event/action. (See <a class="cl" href="#ex13">Examples 13-14</a>)</p>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="in-play">IS THERE A DIFFERENCE BETWEEN BEING "IN PLAY" AND "PUTTING INTO PLAY"?</h2>
+  <p>Yes, there is an important difference. Everything discussed above relates to X being "Put into play" or "Putting X into play." Putting X into play encompasses the whole process of the card entering the staging area, resolving the Play operation, deploying it, etc. But the card is "in play" as soon as it enters the staging area or any other part of the play area (beamed, promoted, etc.).</p>
+  <p>This is important because if a card's Play operation checks for a certain number of traits "in play" it will count itself. Thus, the card is "in play" even though you have not yet finished "putting it into play".</p>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="via-play">REACTING TO “PUT INTO PLAY” VIA A PLAY OPERATION:</h2>
+  <p>For cards entering via a Play operation, the card has been put into play after the Play operation is complete.</p>
+  <p>When you play a card via a Play operation consider this simplified sequence:</p>
+  <ol class="seq">
+    <li data-n="1">Lay the card in the staging area.</li>
+    <li data-n="2">The Card is now "in play".</li>
+    <li data-n="3">Resolve the Play operation.<p>1,2, and 3 together is the process of it “being put into play"</p></li>
+    <li data-n="4" class="react">Trigger "after putting X into play" Reactions</li>
+  </ol>
+  <div class="cardq"><img src="img/box1/peanut-hamper.jpg" alt="Peanut Hamper" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Peanut Hamper<span class="suit">Person</span></div><p class="ctx">Here are some examples of that in practice, by having <a class="cl" href="cards.html#card=1PER17/25" target="_blank">Peanut Hamper</a> (Person) as our Duty Officer which has,</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>"REACTION: After putting a SHADY into play, put this card on the top of your deck and gain 1 Latinum.”</span></div></div></div><details class="ex" id="ex5"><summary><span class="ex-num">Example 5:</span></summary><div class="ex-body">
+    <div class="cardq"><img src="img/box1/admiral-pressman.jpg" alt="Admiral Pressman" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Admiral Pressman<span class="suit">Person</span></div><p class="ctx">You play <a class="cl" href="cards.html#card=1PER03/25" target="_blank">Admiral Pressman</a> (Person with the SHADY trait) from your hand for his Play operation which states,</p><div class="op op-play"><span class="bar"></span><span class="body" data-r>"Play: Free play an ATTACK. If you have no Duty Officer, you may promote a Person to Duty Officer from your hand or Discard pile."</span></div></div></div><p>For this example, let's presume you have no Attack card in hand.</p>
+    <ol class="seq">
+      <li data-n="1">You play Admiral Pressman to your Staging Area.</li>
+      <li data-n="2">The first sentence says, "Free play an ATTACK."<p>It does not say may so this is mandatory, but it is also not listed as a cost (which would be in the format Do/Spend X to Y) which means if you have an Attack you must play it but if you do not have one, you can still play Admiral Pressman and just get no benefit for this sentence.</p></li>
+      <li data-n="3">The next sentence says, "If you have no Duty Officer…"<p>At this point you do still have Peanut Hamper on duty. Since you have not completed the Play operation of Admiral Pressman, you have not yet put a SHADY into play, therefore you cannot activate Peanut Hamper's Reaction which would move her to the top of the deck.</p></li>
+      <li data-n="4" class="react">Now that Admiral Pressman's Play operation is complete, you have put a SHADY into play.<p>If you want to react with Peanut Hamper (or any other Reaction that triggers from Admiral Pressman being put into play) you can do so at this point. If you do not do so now, you must wait until after putting a different SHADY into play.</p></li>
+    </ol>
+  </div></details>
+
+  <details class="ex" id="ex6"><summary><span class="ex-num">Example 6:</span></summary><div class="ex-body">
+    <p>Same as Example 5 except in addition to Admiral Pressman, you have <a class="cl" href="cards.html#card=1PER07/25" target="_blank">Captain Dorg</a> (Person with SHADY, ATTACK, and KLINGON) in hand. His Play operation is irrelevant for this example (except to note that even though his Play operation is not an Attack operation, the card has the ATTACK trait which is all that is required for Admiral Pressman)</p>
+    <ol class="seq">
+      <li data-n="1">You play Admiral Pressman to your Staging Area.</li>
+      <li data-n="2">You free play an Attack- Captain Dorg.</li>
+      <li data-n="3">Complete the Play operation of Captain Dorg.</li>
+      <li data-n="4" class="react">Now, before proceeding to the next sentence of Admiral Pressman's operation, you can interrupt it and activate Peanut Hamper's REACTION operation.<p>This is because you have completed "putting a SHADY into play" by completing the Play operation of Captain Dorg. In this way Reactions that trigger "After X" can interrupt a Play operation, but only when that event X has itself completely resolved.</p></li>
+      <li data-n="5" class="react">So you react with Peanut Hamper. Moving her to the top of your deck and gaining 1 Latinum.</li>
+      <li data-n="6">Continue with Admiral Pressman's Play operation. The next sentence is "If you have no Duty Officer…"<p>Now, you do not have a duty officer so you can take advantage of Admiral Pressman's operation to promote a Person from hand or the discard pile.</p></li>
+    </ol>
+  </div></details>
+
+  <details class="ex" id="ex7"><summary><span class="ex-num">Example 7:</span></summary><div class="ex-body">
+    <div class="cardq"><img src="img/box1/harry-mudd.jpg" alt="Harry Mudd" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Harry Mudd<span class="suit">Person</span></div><p class="ctx">You have Peanut Hamper as Duty Officer and choose to play <a class="cl" href="cards.html#card=1PER08/25" target="_blank">Harry Mudd</a> (Person with SHADY). The relevant portion of Harry Mudd's Play operation is the last sentence,</p><div class="op op-play"><span class="bar"></span><span class="body" data-r>"You may promote this card to Duty Officer."</span></div></div></div><p>For this example, presume you do not have any operation in play that would allow you to have a second duty officer.</p>
+    <ol class="seq">
+      <li data-n="1">You play Harry Mudd, spending an action and placing the card in your Staging Area.</li>
+      <li data-n="2">You complete the first three sentences of his Play operation.<p>Finally, you choose to use the last sentence of his Play operation to promote him to Duty Officer.</p></li>
+      <li data-n="3">As part of the promotion process you see that you have too many duty officers, so you choose to dismiss Peanut Hamper. Leaving Harry Mudd as your sole Duty Officer.</li>
+      <li data-n="4">You never had an opportunity to react with Peanut Hamper because by the time Harry Mudd's Play operation was complete (which was also the time "After you put a SHADY into play") Peanut Hamper was no longer the Duty Officer so the Reaction operation was no longer available.</li>
+    </ol>
+  </div></details>
+
+  <p>NOTE ABOUT LOCATIONS: Locations that start in your deck have a Play operation, "Play: Take control of this Location." Then, they may have a separate Control operation. These are two distinct operations. These Locations are put into play after the Play operation resolves and before the Control operation resolves. So they follow the same rules for cards entering via Play operations and the rules for neutral locations, which are also put into play before their Control operation, if any, resolves, as discussed in the next section.</p>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="neutral">WHEN IS A CONTROLLED NEUTRAL LOCATION “PUT INTO PLAY”:</h2>
+  <p>Secured neutral locations that you are taking control of are put into play before their Control operation.</p>
+  <p>Let's see an example continuing to use Peanut Hamper (Person) as our Duty Officer ("REACTION: After putting a SHADY into play, put this card on the top of your deck and gain 1 Latinum.”)</p>
+
+  <details class="ex" id="ex8"><summary><span class="ex-num">Example 8:</span></summary><div class="ex-body">
+    <div class="cardq"><img src="img/box1/freecloud.jpg" alt="Freecloud" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Freecloud<span class="suit">Location</span></div><p class="ctx">During your Control step, you take control of <a class="cl" href="cards.html#card=1LOC11/20" target="_blank">Freecloud</a> (Location with SHADY) which has a Control operation,</p><div class="op op-ctl"><span class="bar"></span><span class="body" data-r>"CONTROL: You may spend 1 Latinum to scan for BUSINESS.</span></div></div></div><ol class="seq">
+      <li data-n="1">You move Freecloud from the Neutral Zone into your Location Area. You have now put a SHADY into play.</li>
+      <li data-n="2">Before you perform the Control operation, you choose whether you want to use Peanut Hamper's Reaction.</li>
+      <li data-n="3" class="react">For this example, you want the Latinum from Peanut Hamper so you choose to activate the Reaction, placing Peanut Hamper on top of your deck and gaining 1 Latinum.</li>
+      <li data-n="4">Now you resolve the Control operation of Freecloud, spending the Latinum you just gained.</li>
+    </ol>
+  </div></details>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="beam-promote">WHAT ABOUT CARDS BEING “PUT INTO PLAY” VIA BEAMING/PROMOTING</h2>
+  <p>A card is put into play immediately if it is beamed from hand or Discard or if it is promoted to Duty Officer from hand or Discard. Going forward any reference to a card being put into play via beaming/promoting will refer only to cards that were beamed/promoted from hand or discard. Cards beamed/promoted from a different location (direct from deck, from the Staging Area, etc.) are not being put into play.</p>
+  <div class="ex-note"><p>NOTE: The reason cards that are beamed/promoted from locations other than hand or Discard are not being put into play is to resolve situations such as <a class="cl" href="cards.html#card=1PER13/25" target="_blank">Lursa</a> (Person) or <a class="cl" href="cards.html#card=2KIRK08/25" target="_blank">Sarek</a> (Person). Lursa has a Play operation which includes the option of beaming her to a ship. So you play her to your Staging Area, begin resolving her Play operation, and then partway through beam her from the Staging Area to a ship. Since she is not being beamed from hand or Discard, this does not put her into play. She will be put into play at the end of her Play operation like any other card being played for its Play operation. Similarly, Sarek’s Play operation promotes himself and optionally another Person in your Staging Area to Duty Officer, these cards are not put into play twice, they are put into play at the conclusion of their Play operations.</p>
+  <p>NOTE: Operations that “Find and beam/promote” a card first bring the card to your hand (via Find) and then beam/promote them from your hand.</p></div>
+  <p>Once a card is beamed/promoted, it has been put into play and Reactions that trigger “After putting X into play” can be activated. Potentially even Reactions on itself, if it is being promoted.</p>
+  <p>If a card is beamed/promoted through another card's Play operation, the Reaction can interrupt the Play operation. This is because even though the card with the Play operation has not finished being put into play, the card being beamed/promoted has.</p>
+
+  <details class="ex" id="ex9"><summary><span class="ex-num">Example 9:</span></summary><div class="ex-body">
+    <div class="cardq"><img src="img/box1/captain-dorg.jpg" alt="Captain Dorg" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Captain Dorg<span class="suit">Person</span></div><p class="ctx">You have <a class="cl" href="cards.html#card=1PER07/25" target="_blank">Captain Dorg</a> (Person with SHADY, ATTACK and KLINGON) in hand. He has two Reactions.</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>“REACTION: After putting a SHADY into play…” as well as</span></div><div class="op op-table"><span class="bar"></span><span class="body" data-r>“ATTACK REACTION: After putting a KLINGON/PAKLED into play…”</span></div></div></div><div class="ex-note"><p>Note- The only difference between operations and Attack operations is that Attack operations tend to affect your opponent and count as them being attacked for purposes of certain triggers.</p></div>
+    <p>Captain Dorg has traits that match both Reactions. Once you Promote him, you can immediately react with him. He can be a KLINGON Reacting to a KLINGON being put into play.</p>
+  </div></details>
+  <p>Many of the examples above used reactions after a certain trait has been put into play, but the analysis is the same if the Reaction triggers on a certain type of card being put into play.</p>
+
+  <details class="ex" id="ex10"><summary><span class="ex-num">Example 10:</span></summary><div class="ex-body">
+    <p>You are playing Captain Pike.</p>
+    <div class="cardq"><img src="img/box3/pike-improbable-unstoppable-sensational.jpg" alt="Improbable, Unstoppable, Sensational" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Improbable, Unstoppable, Sensational<span class="suit">Status</span></div><p class="ctx">You have the Status card <a class="cl" href="cards.html#card=3PIK02/26" target="_blank">Improbable, Unstoppable, Sensational</a> which says,</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>"REACTION: After you put a card with one or more Skill icons into play (excluding beaming), gain 1 on the Specialty track matching one of those icons."</span></div></div></div><div class="cardq"><img src="img/box3/pike-uss-enterprise.jpg" alt="U.S.S. Enterprise" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">U.S.S. Enterprise<span class="suit">Ship</span></div><p class="ctx">You have the <a class="cl" href="cards.html#card=3PIK19/26" target="_blank">U.S.S. Enterprise</a> which has the Activation,</p><div class="op op-act"><span class="bar"></span><span class="body" data-r>"Promote a Person from your hand to Duty Officer to refresh Improbable, Unstoppable, Sensational.</span></div></div></div><p>You have <a class="cl" href="cards.html#card=3PIK21/26" target="_blank">Lt. Spock</a> in hand who has a Research skill icon.</p>
+    <p>For this example, presume that no cards are currently exhausted.</p>
+    <p>The sequence of play here could be:</p>
+    <ol class="seq">
+      <li data-n="1">Use the U.S.S. Enterprise to Promote Lt. Spock from hand to Duty Officer.</li>
+      <li data-n="2">You have now put a card with a Research skill icon into play so you can interrupt the Enterprise's Activation operation.</li>
+      <li data-n="3" class="react">React with Improbable, Unstoppable, Sensational to gain 1 step on the Research track. Exhaust Improbable, Unstoppable, Sensational.</li>
+      <li data-n="4">You return to the Activation operation which says to refresh Improbable, Unstoppable, Sensational.</li>
+      <li data-n="5">Refresh that card so it is ready to be triggered again if you play another card with a skill icon this turn.</li>
+    </ol>
+    <p>This is permissible because as soon as Lt. Spock was promoted, the condition for the Reaction (putting a card with a skill icon into play) was complete. There was no need (and in fact it would not be permitted) to wait for the rest of the Enterprise's Activation operation to complete.</p>
+    <p>As discussed above, this is very different from a card being put into play via a Play operation, where you need to wait for the Play operation to complete before you can react with "After putting X into play".</p>
+    <p>Let's take the example above, but change it so instead of using a promotion Activation, you have a hypothetical card that has a skill icon and a Play operation that says "Refresh Improbable, Unstoppable, Sensational." The sequence would look like this:</p>
+    <ol class="seq">
+      <li data-n="1">You start the turn and Improbable, Unstoppable, Sensational is not exhausted.</li>
+      <li data-n="2">You play this hypothetical card for its Play operation.</li>
+      <li data-n="3">As part of the Play operation you can refresh Improbable, Unstoppable, Sensational but this is wasted.</li>
+      <li data-n="4" class="react">Now that the Play operation is complete, the card is in play and you can activate Improbable, Unstoppable, Sensational, exhausting it.</li>
+    </ol>
+    <p>The key difference is that before we were able to refresh the card immediately for a potential second use this turn, now we cannot because the operation causing the card to refresh came before we were able to use the Reaction.</p>
+  </div></details>
+
+  <h3 id="promoted">ANY EXAMPLES OF A PLAY OPERATION ALSO CAUSING A CARD TO BE PROMOTED?</h3>
+  <details class="ex" id="ex11"><summary><span class="ex-num">Example 11:</span></summary><div class="ex-body">
+    <p>You are playing as Captain Soval.</p>
+    <div class="cardq"><img src="img/box2/soval-vlar.jpg" alt="V&#x27;Lar" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">V&#x27;Lar<span class="suit">Person</span></div><p class="ctx">You have <a class="cl" href="cards.html#card=2SOV12/24" target="_blank">V’Lar</a> (Person) in your hand who has,</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>“REACTION: After putting an Ally Into play, draw a card, gain 1 Glory and 1 Latinum.</span></div></div></div><div class="cardq"><img src="img/box3/illyrians.jpg" alt="Illyrians" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Illyrians<span class="suit">Ally</span></div><p class="ctx">You also have in hand the <a class="cl" href="cards.html#card=3ALL02/3" target="_blank">Illyrians</a> (Ally) who have,</p><div class="op op-play"><span class="bar"></span><span class="body" data-r>“PLAY: Promote a Person from your hand or the Staging Area to Duty Officer.”</span></div></div></div><ol class="seq">
+      <li data-n="1">You play the Illyrians.</li>
+      <li data-n="2">Using their Play operation, you promote V’Lar to Duty Officer.<p>V’Lar has now been put into Play. Any Reactions to her being put into play would trigger now.</p></li>
+      <li data-n="3">Now that the Play operation of the Illyrians is complete an Ally has been put into play.</li>
+      <li data-n="4" class="react">React with V’Lar to an Ally being put into play.</li>
+    </ol>
+    <p>Here, V’Lar is promoted within the Play operation and therefore is in Play when the Play operation resolved, which is when the Illyrians were put into play. Thus, she can react after the Ally was put into play. Even though the promotion was the entirety of the Play operation, it happens before the Play operation is completed.</p>
+  </div></details>
+
+  <h3 id="shortcut">ANY OTHER SHORTCUT WAYS TO THINK ABOUT WHEN REACTION WINDOWS OPEN AND CLOSE WITHIN OTHER OPERATIONS?</h3>
+  <p>You could think of this as a series of parentheses around blocks of things, which could nest within each other.</p>
+  <div class="paren">(PLAY: (effect 1) (effect 2)).</div>
+  <p>If you want to react to effect 1, you must do so after effect 1 resolves but before effect 2. If you want to react to the card with this Play operation being put into play, you do so after effect 2 is resolved.</p>
+  <p>In the above Example 11 there was only 1 effect but you can still consider it:</p>
+  <div class="paren">(PLAY: (effect 1))</div>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="staging">ANY EXAMPLES OF A CARD BEING PUT INTO THE STAGING AREA BY ANOTHER CARD?</h2>
+  <p>Some cards have an operation that explicitly instructs you to put another card into your Staging Area. That card entering the Staging Area has been “put into play” as soon as it enters the Staging Area (even though none of its Play operations are being resolved).</p>
+
+  <details class="ex" id="ex12"><summary><span class="ex-num">Example 12:</span></summary><div class="ex-body">
+    <div class="cardq"><img src="img/box1/lwaxana-troi.jpg" alt="Lwaxana Troi" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Lwaxana Troi<span class="suit">Person</span></div><p class="ctx">You have <a class="cl" href="cards.html#card=1PER14/25" target="_blank">Lwaxana Troi</a> (Person) as Duty Officer who has</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>“REACTION: After putting a Person into play, draw a card.”</span></div></div></div><p>Presume you have the necessary Influence requirement to trigger this reaction.</p>
+    <div class="cardq"><img src="img/box1/laas.jpg" alt="Laas" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Laas<span class="suit">Person</span></div><p class="ctx">In hand you have <a class="cl" href="cards.html#card=1PER10/25" target="_blank">Laas</a> (Person) who has</p><div class="op op-play"><span class="bar"></span><span class="body" data-r>“PLAY: Put a Person into your Staging Area (without triggering their play operation) to duplicate a play operation of a Person or Cargo from the Market or your Discard pile.”</span></div></div></div><p>In your hand you also have Peanut Hamper (Person); her Operations are not relevant for this example.</p>
+    <div class="cardq"><img src="img/box1/holosuite.jpg" alt="Holosuite" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Holosuite<span class="suit">Cargo</span></div><p class="ctx">In the Market there is <a class="cl" href="cards.html#card=1CAR06/16" target="_blank">Holosuite</a> (Cargo) that has</p><div class="op op-play"><span class="bar"></span><span class="body" data-r>“PLAY: Gain 2 Latinum. You may refresh your Duty Officer. Junk a card from the Market.”</span></div></div></div><ol class="seq">
+      <li data-n="1">You play Laas, moving him to the Staging Area.</li>
+      <li data-n="2">As part of Laas’ Play operation you put Peanut Hamper into the Staging Area without triggering any play operation.</li>
+      <li data-n="3" class="react">Peanut Hamper is a Person that has been put into play so you react with Lwaxana Troi and draw a card, exhausting Lwaxana Troi.</li>
+      <li data-n="4">You continue the Play operation of Laas and duplicate the Holosuite from the Market. You gain 2 Latinum and you choose to refresh Lwaxana Troi. You junk a card in the market (which could be Holosuite).</li>
+      <li data-n="5" class="react">Laas’ Play operation is now complete so he has been put into play. You react with the refreshed Lwaxana Troi to draw a card.</li>
+    </ol>
+  </div></details>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="other-events">REACTING TO OTHER EVENTS (SENDING AN AWAY TEAM, WARPING A SHIP, TAKING AN INCIDENT, ETC.)</h2>
+  <p>Similar to beaming/promoting, a Reaction can be triggered by these events as soon as they occur. If they occur as a result of a Play operation, a Reaction can interrupt the Play operation because the relevant event has completed, even if the Play operation has not.</p>
+
+  <details class="ex" id="ex13"><summary><span class="ex-num">Example 13:</span></summary><div class="ex-body">
+    <p>You are playing as Captain Burnham.</p>
+    <div class="cardq"><img src="img/box1/phlox.jpg" alt="Phlox" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Phlox<span class="suit">Person</span></div><p class="ctx">You have <a class="cl" href="cards.html#card=1PER18/25" target="_blank">Phlox</a> (Person) as your Duty Officer who has,</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>"REACTION: After sending an Away Team to a neutral Location, spend 1 Dilithium to gain 1 Research.</span></div></div></div><div class="cardq"><img src="img/box1/burnham-joann-owosekun.jpg" alt="Joann Owosekun" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Joann Owosekun<span class="suit">Person</span></div><p class="ctx">You also have <a class="cl" href="cards.html#card=1BUR21/26" target="_blank">Joann Owosekun</a> (Person) in hand with,</p><div class="op op-play"><span class="bar"></span><span class="body" data-r>"PLAY: You may send an Away Team to the U.S.S. Discovery-A's Location. You may beam a card from your hand or Discard pile to the U.S.S Discovery-A. If you do both, gain 1 Glory."</span></div></div></div><p>For purposes of this example presume that <a class="cl" href="cards.html#card=1BUR03/26" target="_blank">U.S.S. Discovery-A</a> is at a neutral Location, that "<a class="cl" href="cards.html#card=1BUR02/26" target="_blank">Inert Dilithium</a>" is logged so you may use glory as dilithium, and that you are completely out of both glory and dilithium.</p>
+    <p>You may intend to use Joann Owosekun's Play operation to send the away team, beam a card, gain the glory, and then use that glory as Dilithium for Phlox's Reaction. But you cannot do it. This is because the opportunity to react with Phlox is when the away team is sent, not at the end of the Play operation. So the sequence is as follows:</p>
+    <ol class="seq">
+      <li data-n="1">Play Joann Owosekun, moving her into the staging area.</li>
+      <li data-n="2">Choose to send an Away Team to the U.S.S. Discovery-A's location</li>
+      <li data-n="3" class="react">Decide if you want to react with Phlox because you have just "sent an Away Team to a neutral location" If you do not react at this point, you lose the opportunity until another operation sends another Away Team.</li>
+      <li data-n="4">Continue the Play operation by choosing to beam a card to the U.S.S. Discovery-A.</li>
+      <li data-n="5">Gain a Glory.</li>
+    </ol>
+  </div></details>
+  <p>A similar sequence occurs if a Reaction triggers when you take an Incident as part of a Play operation. Once you have taken the incident you are in the window of "After taking an Incident…" and that interrupts the Play operation to allow the Reaction to trigger, if you choose. Then, the rest of the Play operation commences.</p>
+
+  <details class="ex" id="ex14"><summary><span class="ex-num">Example 14:</span></summary><div class="ex-body">
+    <p>You are playing as Captain Picard</p>
+    <div class="cardq"><img src="img/box1/picard-beverly-crusher.jpg" alt="Beverly Crusher" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Beverly Crusher<span class="suit">Person</span></div><p class="ctx"><a class="cl" href="cards.html#card=1PIC13/24" target="_blank">Beverly Crusher</a> is your Duty Officer with</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>"REACTION: After taking an Incident, discard a different card to return the incident, and gain 1 Glory.</span></div></div></div><p>Presume that you have entered the Draw part of the Clean-Up step. You have no cards in hand, the draw deck is empty, and you are out of Reserves.</p>
+    <ol class="seq">
+      <li data-n="1">You choose to enlist the <a class="cl" href="cards.html#card=1PIC04/24" target="_blank">Tamarians</a>.</li>
+      <li data-n="2">You pay the cost of 2 Dilithium and take an incident.</li>
+      <li data-n="3">Before you draw any cards, including the Tamarians you just enlisted, you must now choose whether to react with Beverly Crusher.</li>
+      <li data-n="4">Since you have no other cards in hand, you cannot pay the cost of discarding a different card. Therefore, you must choose not to react with Beverly Crusher.</li>
+      <li data-n="5">Continue drawing your hand.<p>(Note also that the incident you took from the cost of the Development counts towards your hand size).</p></li>
+    </ol>
+  </div></details>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="moved">DOES IT MATTER IF THE CARD THAT TRIGGERED THE REACTION MOVED AFTER IT INITIALLY ENTERED PLAY?</h2>
+  <p>Reactions do not care where the card that triggered the Reaction ends up except that cards in the Log cannot be interacted with unless an operation specifies otherwise.</p>
+
+  <details class="ex" id="ex15"><summary><span class="ex-num">Example 15:</span></summary><div class="ex-body">
+    <p>You once again have Peanut Hamper as your duty officer, “REACTION: After putting a SHADY into play…”</p>
+    <p><a class="cl" href="cards.html#card=1ALL10/13" target="_blank">Letheans</a> (Ally with SHADY) have a Play operation that ends with "log this card".</p>
+    <p>After you play the Letheans , complete the Play operation, and log the card you can THEN react with Peanut Hamper because you did put the SHADY into play, even though that card is no longer in play but rather in the Log.</p>
+    <div class="ex-note"><p>You are not interacting with the Letheans, just Reacting to the fact that they were put into play, so this does not implicate the rule about targeting the Log. (see <a class="cl" href="#ex16">Example 16</a> below for an attempt to target the Log)</p></div>
+  </div></details>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="moving">WHAT IF I HAVE MULTIPLE REACTIONS THAT ALL TRIGGER OFF THE SAME EVENT AND IT MOVES RELEVANT CARDS TO DIFFERENT LOCATIONS?</h2>
+  <p>As noted above, when you have multiple Reactions you may resolve any number of them in the order of your choosing. Reactions can sometimes move cards to different positions (beaming them, free playing them, logging them, etc.). This can get very complicated.</p>
+
+  <details class="ex" id="ex16"><summary><span class="ex-num">Example 16:</span></summary><div class="ex-body">
+    <div class="cardq"><img src="img/box1/picard-jean-luc-picard.jpg" alt="Jean-Luc Picard" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Jean-Luc Picard<span class="suit">Captain</span></div><p class="ctx">You are playing as <a class="cl" href="cards.html#card=1PIC01/24" target="_blank">Captain Picard</a> with,</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>“REACTION: After gaining an ally, discard a card to gain 1 Glory and you may beam the gained card to a ship.</span></div></div></div><div class="cardq"><img src="img/box1/kazon-raider.jpg" alt="Kazon Raider" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Kazon Raider<span class="suit">Ship</span></div><p class="ctx">You have the <a class="cl" href="cards.html#card=1SHI06/13" target="_blank">Kazon Raider</a> (Ship) in play with</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>“REACTION: After gaining a card to the top of your deck, spend 1 Latinum to draw a card and refresh this card”</span></div></div></div><div class="cardq"><img src="img/box3/freeman-tlyn.jpg" alt="T&#x27;Lyn" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">T&#x27;Lyn<span class="suit">Person</span></div><p class="ctx">You also have <a class="cl" href="cards.html#card=3FRE05/25" target="_blank">T’Lyn</a> as your duty officer somehow (she is part of Freeman’s deck but we’re just looking at a complicated hypothetical). She has,</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>“REACTION: After gaining a card, except during your Resupply step, gain 1 Research and you may spend 1 Dilithium to free play the gained card.</span></div></div></div><div class="cardq"><img src="img/box2/holosuite.jpg" alt="Holosuite" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Holosuite<span class="suit">Cargo</span></div><p class="ctx">Finally, you have <a class="cl" href="cards.html#card=2CAR07/18" target="_blank">Holosuite</a> (cargo),</p><div class="op op-play"><span class="bar"></span><span class="body" data-r>“PLAY: Spend 1/2/3 Latinum to scan 1/2/3 of either Person, Cargo, or Ally. If you spent 2 or more, draw a card.”</span></div></div></div><ol class="seq">
+      <li data-n="1">You play Holosuite, paying 2 Latinum, to scan the Ally Deck.</li>
+      <li data-n="2">You gain the <a class="cl" href="cards.html#card=1ALL02/13" target="_blank">Bolians</a> (Ally) who have,
+        <div class="op op-play"><span class="bar"></span><span class="body" data-r>“PLAY: Gain 1 Influence. Draw a card. You may free play the drawn card.”</span></div>
+        <p>You put them on top of your deck.</p></li>
+      <li data-n="3">Before the Holosuite card draw, you react with “After gaining…” effects, and you choose the order.<p>You have Kazon, Picard, and T’Lyn who all have relevant Reactions. If you use them in that order:</p></li>
+      <li data-n="4" class="react">Kazon Raider draws the Bolians</li>
+      <li data-n="5" class="react">Picard allows you to discard a card to beam the Bolians to a Ship.<p>Note- This is a very unique interaction. Since Picard’s Reaction specifies that the gained Ally (here the Bolians) is the card that will be beamed, and there is no restriction that the discarded card be different, you could discard the Bolians to beam the Bolians.</p></li>
+      <li data-n="5" class="react">T’Lyn allows you to free play the Bolians (moving them from the beamed location to the Staging Area)</li>
+      <li data-n="6">You play Bolians, drawing and potentially free playing the next card in your deck.</li>
+      <li data-n="7">Complete Holosuite’s Play operation by drawing the next card.</li>
+    </ol>
+    <p>Let’s switch the prior example up a bit by changing the order of our Reactions to- T’Lyn, Kazon, Picard.</p>
+    <p>Steps 1,2, and 3 are identical:</p>
+    <ol class="seq">
+      <li data-n="3" class="react">T’Lyn allows you to free play the Bolians straight from the deck.</li>
+      <li data-n="4">You play the Bolians, drawing and potentially free playing the next card in your deck.</li>
+      <li data-n="5" class="react">Kazon Raider allows you to draw the next card in your deck</li>
+      <li data-n="6" class="react">Picard allows you to discard a card (could be one of the two you just drew) to beam the Bolians from the Staging Area to a ship</li>
+      <li data-n="7">Complete Holosuite’s Play operation by drawing the next card</li>
+    </ol>
+    <p>So the order that you choose to activate Reactions can significantly change the results.</p>
+  </div></details>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="log">WHAT WAS THAT ABOUT NOT BEING ABLE TO INTERACT WITH CARDS IN THE LOG?</h2>
+  <details class="ex" id="ex17"><summary><span class="ex-num">Example 17.</span></summary><div class="ex-body">
+    <div class="cardq"><img src="img/box3/kranch.jpg" alt="K&#x27;ranch" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">K&#x27;ranch<span class="suit">Person</span></div><p class="ctx">To illustrate the above rule about cards in the log cannot be targeted, we will take Example 16 and add <a class="cl" href="cards.html#card=3PER11/13" target="_blank">K’Ranch</a> into the mix. He has,</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>“REACTION: After gaining a card, log the gained card to gain 1 Dilithium and draw a card.</span></div></div></div><p>Steps 1,2, and 3 are identical.</p>
+    <ol class="seq">
+      <li data-n="4" class="react">If you then used K’Ranch as your first reaction, K’Ranch would log the Bolians.</li>
+      <li data-n="5">T’Lyn’s Reaction to “free play the gained card” fails because she cannot target the Bolians in the Log.</li>
+      <li data-n="6">Picard’s Reaction to “beam the gained card” fails</li>
+      <li data-n="7" class="react">Kazon Raider still allows you to draw a card.</li>
+      <li data-n="8">Complete Holosuite’s Play operation by drawing the next card.</li>
+    </ol>
+  </div></details>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="wildcard">HOW DOES THE WILDCARD TRAIT WORK WITH REACTIONS?</h2>
+  <p>A WILDCARD can be any one trait for the duration of one operation/mission. Once that operation/mission has resolved you can change what trait the WILDCARD represents. A Reaction counts as a single operation. This means that each time you activate a Reaction operation, you can change what the Wildcard represents.</p>
+
+  <details class="ex" id="ex18"><summary><span class="ex-num">Example 18:</span></summary><div class="ex-body">
+    <p>You are playing as Captain Rebner with a card with WILDCARD in hand.</p>
+    <div class="cardq"><img src="img/box2/rebner-pakled-decree.jpg" alt="Pakled Decree" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Pakled Decree<span class="suit">Directive</span></div><p class="ctx">You have <a class="cl" href="cards.html#card=2REB16/22" target="_blank">Pakled Decree</a> (Directive) deployed which has</p><div class="op op-act"><span class="bar"></span><span class="body" data-r>“ACTIVATION: Beam a HELMET here….”</span></div></div></div><ol class="seq">
+      <li data-n="1">You activate Pakled Decree to beam the WILDCARD as though it had HELMET.</li>
+      <li data-n="2" class="react">You may react using <a class="cl" href="cards.html#card=2PER13/26" target="_blank">Petra Aberdeen</a>'s, "REACTION: After putting an ALIEN into play…"</li>
+      <li data-n="3" class="react">You may then also react using Augmentation Plague's,"REACTION: After putting a KLINGON into play…".</li>
+    </ol>
+    <p>It does not matter what the WILDCARD was considered when it entered play, each individual operation, including Reaction operations, gives it a chance to be a new trait.</p>
+  </div></details>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+  <h2 id="faq">SPECIFIC FREQUENTLY ASKED REACTION QUESTIONS</h2>
+
+  <h3>Captain Pike's U.S.S. Enterprise Promotion and Improbable, Unstoppable, Sensational:</h3>
+  <p>See <a class="cl" href="#ex10">Example 10</a> above.</p>
+
+  <h3>Sela, Sub Commander T'Rul, and Cloaking Device:</h3>
+  <div class="cardq"><img src="img/box1/sela-sub-commander-trul.jpg" alt="Sub-Commander T&#x27;Rul" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Sub-Commander T&#x27;Rul<span class="suit">Person</span></div><p class="ctx"><a class="cl" href="cards.html#card=1SEL16/24" target="_blank">Sub Commander T'Rul</a> (Person)-</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>"REACTION: After putting a CLOAK into play, gain 1 (Latinum).</span></div></div></div><div class="cardq"><img src="img/box1/cloaking-device.jpg" alt="Cloaking Device" loading="lazy" onclick="openLightbox(this)"><div class="cq-main"><div class="cn">Cloaking Device<span class="suit">Cargo</span></div><p class="ctx"><a class="cl" href="cards.html#card=1CAR03/16" target="_blank">Cloaking Device</a> (Cargo)-</p><div class="op op-table"><span class="bar"></span><span class="body" data-r>"REACTION: After deploying a Ship without CLOAK that Ship is additionally treated as CLOAK for the remainder of your turn…."</span></div></div></div><p>The interaction between these cards works in Sela's favor because Cloaking Device Reacts to a Ship being deployed while Sub Commander T'Rul Reacts "After putting a cloak into play". As discussed above, being put into play is after the entirety of the Play operation is resolved and a Ship being deployed is a portion of the Play operation. Here is the sequence:</p>
+  <ol class="seq">
+    <li data-n="1">Play a Ship to your staging area.</li>
+    <li data-n="2">As part of the Play operation the Ship deploys-move it to your Fleet Area</li>
+    <li data-n="3" class="react">Now that the Ship is deployed, react with Cloaking Device to give it CLOAK</li>
+    <li data-n="4">Now that the Play operation of the Ship is complete, it has been put into play and it has CLOAK</li>
+    <li data-n="5" class="react">React with T’Rul to a CLOAK being put into play.</li>
+  </ol>
+
+  <h3>Why does <a class="cl" href="cards.html#card=1PER24/25" target="_blank">Tevrin Krit</a> (Person) say to “immediately” beam a gained card and what impact does that have on Reactions?</h3>
+  <p>This is legacy language and it has no impact on the above rules about Reactions.</p>
+  <a href="#top" class="back-top">↑ back to top</a>
+
+</main>
+
+<a class="fab" href="#top">Contents</a>
+
+<div class="nav-bar" style="padding:0.75rem 1.5rem;"><a href="index.html">← Back to Compendium</a></div>
+
+<footer>
+  Card images &copy; WizKids.<br>
+  Guide by Esquire_Sandwich &middot; Website by Periodic_agent
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('open')">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script src="cardface-assets.js"></script>
+<script>
+let allSpecies=["Aenar", "Alien", "Andorian", "Android", "Bajoran", "Betazoid", "Borg", "Breen", "Cardassian", "Changeling", "Ferengi", "Human", "Kazon", "Kelpien", "Klingon", "Orion", "Pakled", "Reman", "Romulan", "Synthetic", "Tellarite", "Transcendent", "Trill", "Vau N'Akat", "Vulcan", "Xindi"], allRegular=["Ambassador", "Ancient", "Anomaly", "Augment", "Beverage", "Business", "Cloak", "Communication", "Creature", "Crossover", "Doctor", "Dominion", "Engineer", "Helmet", "Hologram", "Imperial", "Maquis", "Mind Control", "NX-01", "Ops", "Path of Surak", "Pilot", "Scientist", "Security", "Shady", "Spy", "Starbase", "Starfleet", "Telepath", "Time Travel", "Weapon"], allOther=["Attack", "Lower Decker", "Ongoing", "Surprise", "Wildcard"];
+const STRIP_SUIT_COL={Person:'#c9ab35',Ally:'#9b6ecf',Ship:'#7a8aaa',Cargo:'#3a6aaa',
+  Location:'#4ac48a',Encounter:'#d4699f',Incident:'#e05a5a',Captain:'#c8a84b',
+  Directive:'#a09363',Status:'#88aacc',Mission:'#000000'};
+const STRIP_RES={dilithium:'dilithium',latinum:'latinum',glory:'glory-token',
+                 action:'action',actions:'action'};
+const STRIP_SPEC=['Research','Influence','Military','Any','Variable'];
+const SPEC_COL={military:'#ab2242',research:'#015c80',influence:'#c0b422',
+                any:'#5a6678',variable:'#5a6678'};
+const REQ_GLYPH_CX={research:34.5,military:35.0,influence:36.4,any:31.2,
+                    variable:49.3,collective:50};
+function specPill(spec,src,alt){
+  const col=SPEC_COL[String(spec).toLowerCase()];
+  if(!src) return alt;
+  if(!col) return '<img class="stripimg" src="'+src+'" alt="'+alt+'">';
+  return '<span class="specpill" style="background:'+col+'"><img src="'+src+'" alt="'+alt+'"></span>';
+}
+
+const TRAIT_FAM_COL={species:'#e2a04a',regular:'#79b3c7',other:'#c85340',variable:'#f6c9bd'};
+function traitWeight(t){
+  let w=0;
+  for(const ch of String(t).toUpperCase()) if(ch!=='-'&&ch!=='I'&&ch!=='1') w++;
+  return w;
+}
+function sortTraits(list){
+  return list.map((t,i)=>[t,i])
+             .sort((a,b)=>(traitWeight(a[0])-traitWeight(b[0]))||(a[1]-b[1]))
+             .map(p=>p[0]);
+}
+const SPECIES_MARKERS=['any species','different species'];
+function traitFamily(name){
+  if(String(name).toLowerCase()==='wildcard') return 'variable';
+  if(SPECIES_MARKERS.includes(String(name).toLowerCase())) return 'species';
+  const has=(list,n)=>Array.isArray(list)&&list.some(x=>x.toLowerCase()===n);
+  const n=String(name).toLowerCase();
+  if(has(allSpecies,n)) return 'species';
+  if(has(allOther,n))   return 'other';
+  if(has(allRegular,n)) return 'regular';
+  return 'regular';
+}
+
+const AWAY_TOKEN_STRIP='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0wLjYgLTAuNiAyNC4wMDMgMjYuMTg5IiB3aWR0aD0iMjIuODAzIiBoZWlnaHQ9IjI0Ljk4OSI+PHBhdGggc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0yMi40MDMgMi40NTFDMjEuNjAzIDEuNjUxIDIxLjE1MiAxLjIgMjAuMzUyIDAuNEwyLjQzNyAwLjRDMS42NSAxLjIgMS4yIDEuNjUxIDAuNCAyLjQ1MUwwLjQgMTcuNTU0QzEuMiAxOC4zNCAxLjY1IDE4Ljc5MSAyLjQzNyAxOS41OTFMNi4zNjQgMTkuNTkxTDExLjM2MiAyNC41ODlMMTYuMzYxIDE5LjU5MUwyMC4zNTIgMTkuNTkxQzIxLjE1MiAxOC43OTEgMjEuNjAzIDE4LjM0IDIyLjQwMyAxNy41NTRaIiBmaWxsPSJyZ2IoNCwzOCw2MykiLz48cGF0aCBkPSJNMTkuODE1IDEuNjk2TDIxLjEwNyAyLjk4OEwyMS4xMDcgMTcuMDExQzIwLjY0NCAxNy40NjcgMjAuMjgxIDE3LjgzIDE5LjgxNSAxOC4yOTVMMTUuODI0IDE4LjI5NUwxMS4zNjEgMjIuNzU4TDYuODk4IDE4LjI5NUwyLjk3OSAxOC4yOTVDMi41MjIgMTcuODMyIDIuMTU5IDE3LjQ2OSAxLjY5NiAxNy4wMTFMMS42OTYgMi45ODhDMi4xNiAyLjUyNCAyLjUyMiAyLjE2MSAyLjk3OSAxLjY5NkwxOS44MTUgMS42OTZNMjAuMzUyIDAuNEwyLjQzNyAwLjRDMS42NTEgMS4yIDEuMiAxLjY1MSAwLjQgMi40NTFMMC40IDE3LjU1NEMxLjIgMTguMzQgMS42NTEgMTguNzkxIDIuNDM3IDE5LjU5MUw2LjM2NCAxOS41OTFMMTEuMzYzIDI0LjU4OUwxNi4zNjEgMTkuNTkxTDIwLjM1MiAxOS41OTFDMjEuMTUyIDE4Ljc5MSAyMS42MDMgMTguMzQgMjIuNDAzIDE3LjU1NEwyMi40MDMgMi40NTFDMjEuNjAzIDEuNjUxIDIxLjE1MiAxLjIgMjAuMzUyIDAuNFoiIGZpbGw9InJnYigyNTUsMjU1LDI1NSkiLz48cGF0aCBkPSJNMTcuMTk3IDUuOTI2QzE4LjA5MiA1LjkyNiAxOC44MDkgNi42NDUgMTguODA5IDcuNTM4QzE4LjgwOSA4LjQ0NSAxOC4wOSA5LjE2NCAxNy4xOTcgOS4xNjRDMTYuMjkgOS4xNjQgMTUuNTcxIDguNDQ1IDE1LjU3MSA3LjUzOEMxNS41NzEgNi42NDMgMTYuMjkgNS45MjYgMTcuMTk3IDUuOTI2TTExLjMxNiAzLjYyM0MxMi44MDcgMy42MjMgMTQuMDEzIDQuODI5IDE0LjAxMyA2LjMyQzE0LjAxMyA3LjgxMSAxMi44MDcgOS4wMTcgMTEuMzE2IDkuMDE3QzkuODM4IDkuMDE3IDguNjMyIDcuODExIDguNjMyIDYuMzJDOC42MzIgNC44MjkgOS44MzggMy42MjMgMTEuMzE2IDMuNjIzTTUuMTkxIDYuMzJDNi4wOTggNi4zMiA2LjgxNiA3LjA1MSA2LjgxNiA3Ljk0NkM2LjgxNiA4Ljg0MSA2LjA5OCA5LjU3MiA1LjE5MSA5LjU3MkM0LjI5NiA5LjU3MiAzLjU3OSA4LjgzOSAzLjU3OSA3Ljk0NkMzLjU3OSA3LjA1MiA0LjI5NyA2LjMyIDUuMTkxIDYuMzJNNi4zMDIgMTEuNzRMNi4zMDIgMTMuOTQzTDUuNTk3IDEyLjk2N0wyLjU3NSAxNC4xNDVMMi41NzUgMTEuMDc1QzIuNTc1IDEwLjQ2NSAzLjA3NiA5Ljk2NCAzLjY4NiA5Ljk2NEw2LjkyNCA5Ljk2NEw3LjA1OCA5Ljk5MUM2LjU5NyAxMC40MjUgNi4zIDExLjA0OSA2LjMgMTEuNzRMNi4zMDIgMTEuNzRNMTUuNzQ2IDE2LjUwNUwxMy42MzMgMTQuNjg5TDcuMzE4IDE3LjAzNEM3LjMwNCAxNi45MzkgNy4yNjQgMTUuMTI4IDcuMjY0IDE1LjAzM0w3LjI2NCAxMS43NEM3LjI2NCAxMC45NCA3LjkxNCAxMC4yOSA4LjcxNCAxMC4yOUwxNC4yOTYgMTAuMjlDMTUuMDk2IDEwLjI5IDE1Ljc0NiAxMC45NCAxNS43NDYgMTEuNzRMMTUuNzQ2IDE2LjUwNU0yMC4wMjcgMTMuODg5TDE5LjAyNSAxMi45NjhMMTYuNzA4IDEzLjgyMkwxNi43MDggMTEuNzRDMTYuNzA4IDEwLjgxOSAxNi4xNzkgMTAuMDE5IDE1LjQyMSA5LjYxM0MxNS41MDIgOS41OTkgMTUuNTgzIDkuNTYgMTUuNjc4IDkuNTZMMTguOTE2IDkuNTZDMTkuNTI2IDkuNTYgMjAuMDI3IDEwLjA2MSAyMC4wMjcgMTAuNjg0TDIwLjAyNyAxMy44OTFaIiBmaWxsPSJyZ2IoMjU1LDI1NSwyNTUpIi8+PC9zdmc+';
+function stripIcon(key){
+  return (typeof CARDFACE!=='undefined' && CARDFACE.token && CARDFACE.token[key])||'';
+}
+function titleCase(w){ return w.charAt(0).toUpperCase()+w.slice(1); }
+
+function stripToken(t){
+  let m;
+  if((m=t.match(/^suit:(.+)$/))){
+    const s=m[1], col=STRIP_SUIT_COL[s]||'#8494ad';
+    const gi=(CARDFACE.suitFont&&CARDFACE.suitFont[s.toLowerCase()])||CARDFACE.suit[s.toLowerCase()];
+    return '<span class="stripchip'+(gi?'':' plain')+'" style="background:'+col+'">'
+      +(gi?'<img src="'+gi+'" alt="">':'')+s.toUpperCase()+'</span>';
+  }
+  if((m=t.match(/^trait:(.+)$/))){
+    const k=m[1].toLowerCase().replace(/['\u2019]/g,'').replace(/\s+/g,'-');
+    const ic=CARDFACE.traitChip[k];
+    const fam=traitFamily(m[1]);
+    const col=TRAIT_FAM_COL[fam]||'#556';
+    const ink=fam==='variable'?'#141821':'#fff';
+    return '<span class="stripchip'+(ic?'':' plain')+'" style="background:'+col+';color:'+ink+'">'
+      +(ic?'<img src="'+ic+'" alt="">':'')+m[1].toUpperCase()+'</span>';
+  }
+  if((m=t.match(/^spec:(.+)$/))){
+    const src=(CARDFACE.skillChip||CARDFACE.skill||{})[m[1].toLowerCase()];
+    return specPill(m[1],src,m[1]);
+  }
+  if((m=t.match(/^(skill|focus):(.+)$/))){
+    const bank=m[1]==='focus'?CARDFACE.focus:CARDFACE.skillChip;
+    const src=bank&&bank[m[2].toLowerCase()];
+    if(!src) return m[2]+' '+m[1];
+    return m[1]==='focus'
+      ? '<img class="stripimg" src="'+src+'" alt="'+m[2]+'">'
+      : specPill(m[2],src,m[2]);
+  }
+  if((m=t.match(/^res:(.+)$/))){
+    const src=stripIcon(STRIP_RES[m[1].toLowerCase()]);
+    return src?'<img class="stripimg" src="'+src+'" alt="'+m[1]+'">':titleCase(m[1]);
+  }
+  if((m=t.match(/^restr:(.+)$/))){
+    const src=(CARDFACE.skillChip||CARDFACE.skill||{})[m[1].toLowerCase()];
+    return specPill(m[1],src,m[1])+'<span class="restr">restriction</span>';
+  }
+  if((m=t.match(/^req:([^:]+):(.+)$/))){
+    const rspec=m[1], rk=String(rspec).toLowerCase();
+    const rsrc=(rk==='collective')?stripIcon('borg-collective')
+                                  :((CARDFACE.skillChip||CARDFACE.skill||{})[rk]||'');
+    if(!rsrc) return rspec+' '+m[2];
+    const rcol=SPEC_COL[rk]?' style="background:'+SPEC_COL[rk]+'"':'';
+    const rgx=(REQ_GLYPH_CX[rk]!==undefined)?REQ_GLYPH_CX[rk]:50;
+    return '<span class="req-marker" title="Requires '+m[2]+' '+rspec+'">'
+      +'<span class="rm-dia"><span class="rm-med"'+rcol+'>'
+      +'<img src="'+rsrc+'" alt="'+rspec+'" '
+      +'style="left:50%;top:50%;transform:translate(-'+rgx+'%,-50%)"></span></span>'
+      +'<b>'+m[2]+'</b></span>';
+  }
+  if((m=t.match(/^tok:(.+)$/))){
+    const src=stripIcon(m[1]);
+    return src?'<img class="stripimg" src="'+src+'" alt="'+m[1]+'">':m[1].replace(/-/g,' ');
+  }
+  if((m=t.match(/^vp:(.+)$/))){
+    const src=stripIcon('vp');
+    return '<span class="vpchip">'+(src?'<img src="'+src+'" alt="VP">':'')+'<b>'+m[1]+'</b></span>';
+  }
+  if(t==='awayteam'){
+    const src=AWAY_TOKEN_STRIP||stripIcon('away-team');
+    return src?'<img class="stripimg awayteam-tok" src="'+src+'" alt="Away Team">':'Away Team';
+  }
+  if(t==='action'){
+    const src=stripIcon('action');
+    return src?'<img class="stripimg" src="'+src+'" alt="action">':'action';
+  }
+  return t;
+}
+
+function outsideTokens(t,fn){
+  return String(t).split(/(\{[^}]*\})/).map(seg=>seg.charAt(0)==='{'?seg:fn(seg)).join('');
+}
+
+function stripAutoTokens(text){
+  let t=text;
+  STRIP_SPEC.forEach(sp=>{
+    t=t.replace(new RegExp('\\b'+sp+' (Skill|Focus)\\b','g'),
+      (_,k)=>'{'+(k==='Focus'?'focus':'skill')+':'+sp+'}');
+  });
+  STRIP_SPEC.forEach(sp=>{
+    if(sp==='Any'||sp==='Variable') return;
+    t=outsideTokens(t,seg=>seg.replace(new RegExp('\\b'+sp+'\\b','g'),'{spec:'+sp+'}'));
+  });
+  t=outsideTokens(t,seg=>seg.replace(/\bAway Teams?\b/g,'{awayteam}'));
+  Object.keys(STRIP_SUIT_COL).forEach(w=>{
+    t=t.replace(new RegExp('\\b'+w+'s?\\b','g'),()=>'{suit:'+w+'}');
+  });
+  Object.keys(STRIP_RES).forEach(w=>{
+    t=t.replace(new RegExp('\\b'+w+'\\b','gi'),
+      m=>/^(dilithium|latinum|glory)$/i.test(m)?'{res:'+m.toLowerCase()+'}':'{action}');
+  });
+  Object.keys(CARDFACE.traitChip).forEach(k=>{
+    t=t.replace(new RegExp('\\b'+k.replace(/-/g,'[- ]')+'\\b','gi'),
+      m=>(m[0]===m[0].toUpperCase()?'{trait:'+m+'}':m));
+  });
+  return t;
+}
+
+function stripBody(text, explicit){
+  return (explicit ? String(text||'') : stripAutoTokens(String(text||'')))
+    .replace(/\{([^}]+)\}/g,(_,t)=>stripToken(t))
+    .replace(/_([^_]+)_/g,'<em>$1</em>');
+}
+
+
+const KW_RE=/^([\u201c"]?)((?:ATTACK )?(?:REACTION|PLAY|Play|CONTROL|ACTIVATION):)?\s*([\s\S]*)$/;
+document.querySelectorAll('[data-r]').forEach(el=>{
+  const m=el.textContent.match(KW_RE);
+  try{ el.innerHTML=m[1]+(m[2]?'<span class="kw">'+m[2]+'</span>':'')+stripBody(m[3]); }catch(e){}
+});
+function openLightbox(img){document.getElementById('lightbox-img').src=img.src;document.getElementById('lightbox').classList.add('open');}
+</script>
+<script>
+const exs=[...document.querySelectorAll('details.ex')];
+const btn=document.getElementById('toggleAll');
+btn.addEventListener('click',()=>{const open=!exs.every(d=>d.open);exs.forEach(d=>d.open=open);btn.textContent=open?'Collapse all':'Expand all';});
+function openTarget(){const id=location.hash.slice(1);const el=id&&document.getElementById(id);if(el&&el.tagName==='DETAILS'){el.open=true;el.scrollIntoView();}}
+window.addEventListener('hashchange',openTarget);openTarget();
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('lightbox').classList.remove('open');});
+</script>
+</body>
+</html>
