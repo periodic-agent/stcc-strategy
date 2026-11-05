@@ -37,6 +37,7 @@
   "georgiou.html": "georgiou",
   "soval.html": "soval",
   "kirk.html": "kirk",
+  "khan.html": "khan",
   "archer.html": "archer"
  },
  "exclude_files": [
@@ -54,6 +55,7 @@
   "burnham.html": "Burnham guide",
   "georgiou.html": "Georgiou guide",
   "kirk.html": "Kirk guide",
+  "khan.html": "Khan guide",
   "koloth.html": "Koloth guide",
   "picard.html": "Picard guide",
     "rebner.html": "Rebner guide",
