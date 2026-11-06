@@ -1660,6 +1660,8 @@ function applyQuery(text){
     list.forEach(d=>{ if(d!=='::common') out.add(d); });
     return out; };
   activeDecks=expand(q.decks); negDecks=expand(q.negDecks);
+  if(showPromo && ['Common:core','Common:tbg','Common:2nd'].some(k=>activeDecks.has(k))){
+    activeDecks.add('Common:promo1'); activeDecks.add('Common:promo2'); }
   activeSuits=new Set(q.suits); negSuits=new Set(q.negSuits);
   activeTags=new Set(q.tags);  negTags=new Set(q.negTags);
   activeSkills=new Set(q.skills); negSkills=new Set(q.negSkills);
