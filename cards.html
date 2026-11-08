@@ -151,7 +151,8 @@ a{color:var(--blue);text-decoration:none;}
 .box-pill[data-box="promo"]:hover{border-color:#a8b4c8;color:#c8d2e0;}
 .box-pill[data-box="promo"].active{background:#7a8aaa;border-color:#7a8aaa;border-style:solid;color:#0a0e1a;font-weight:600;}
 body.bot-mode #suitFilters,body.bot-mode #speciesBody,body.bot-mode #regularBody,body.bot-mode #otherBody,
-body.bot-mode #skillsBody,body.bot-mode #focusBody,body.bot-mode #stripBody,body.bot-mode #statusBody{opacity:.35;pointer-events:none;}
+body.bot-mode #skillsBody,body.bot-mode #stripBody,body.bot-mode #statusBody{opacity:.35;pointer-events:none;}
+.focus-row{margin-top:0.45rem;}
 
 .promo-pill{font-family:'Exo 2',sans-serif;font-size:0.72rem;padding:0.22rem 0.75rem;border-radius:3px;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:all 0.15s;user-select:none;}
 .promo-pill[data-promo="promo1"]{border-color:#4a9fd4;color:#4a9fd4;}
@@ -170,15 +171,9 @@ body.bot-mode #skillsBody,body.bot-mode #focusBody,body.bot-mode #stripBody,body
 .deck-pill.second{border-color:rgba(200,168,75,0.4);color:#c8a84b;}
 .deck-pill.second:hover{background:rgba(200,168,75,0.15);border-color:#e8c96a;color:#f0d878;}
 .deck-pill.second.active{background:#c8a84b;border-color:#c8a84b;color:#000;font-weight:600;}
-.deck-pill.common{border-color:rgba(74,159,212,0.4);color:#4a9fd4;}
-.deck-pill.common:hover{background:rgba(74,159,212,0.15);border-color:#4a9fd4;color:#7ec8f0;}
-.deck-pill.common.active{background:#4a9fd4;border-color:#4a9fd4;color:#000;font-weight:600;}
-.deck-pill.common-tbg{border-color:rgba(192,57,43,0.4);color:#c0392b;}
-.deck-pill.common-tbg:hover{background:rgba(192,57,43,0.15);border-color:#e05a5a;color:#ff8080;}
-.deck-pill.common-tbg.active{background:#c0392b;border-color:#c0392b;color:#fff;font-weight:600;}
-.deck-pill.common-2nd{border-color:rgba(200,168,75,0.4);color:#c8a84b;}
-.deck-pill.common-2nd:hover{background:rgba(200,168,75,0.15);border-color:#e8c96a;color:#f0d878;}
-.deck-pill.common-2nd.active{background:#c8a84b;border-color:#c8a84b;color:#000;font-weight:600;}
+.deck-pill.commons{border-color:#7a8aaa;color:#9aa8bc;margin-right:0.35rem;}
+.deck-pill.commons:hover{border-color:#a8b4c8;color:#c8d2e0;}
+.deck-pill.commons.active{background:#7a8aaa;border-color:#7a8aaa;color:#0a0e1a;font-weight:600;}
 
 .suit-pill{font-family:'Exo 2',sans-serif;font-size:0.72rem;padding:0.22rem 0.65rem;border-radius:3px;border:1px solid;cursor:pointer;transition:background 0.15s;user-select:none;}
 .suit-pill[data-suit="Person"]{border-color:var(--person);color:var(--person);}
@@ -768,6 +763,7 @@ footer a{color:var(--muted);text-decoration:underline;}
     <div class="qh-row"><code>errata:wording</code> · <code>errata:"operation redesign"</code><span>errata of that type: card name change, card trait change, operation added/removed, operation redesign, wording correction, card replacement</span></div>
     <div class="qh-row"><code>notes</code> · <code>strategy</code> · <code>faq</code><span>cards with a designer's note, with their own section in a strategy guide, or with a rules note in their FAQ section</span></div>
     <div class="qh-note">Click a card for its scan, errata, notes and guide links; the arrows page through the results. Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>
+    <div class="qh-note">Card text follows the current wording; promo packs are still transcriptions.</div>
   </div>
 
   <div class="filter-section">
@@ -827,26 +823,14 @@ footer a{color:var(--muted);text-decoration:underline;}
   <div class="filter-section">
     <div class="collapsible-header" id="skillsHead" onclick="toggleSection(this,'skillsBody','skillsSummary')">
       <div style="display:flex;align-items:center;gap:0.4rem;">
-        <div class="filter-label">Skills</div>
+        <div class="filter-label">Skills &amp; Focus</div>
         <span class="active-summary skill" id="skillsSummary"></span>
       </div>
       <span class="collapsible-arrow">&#9660;</span>
     </div>
     <div class="collapsible-body" id="skillsBody">
       <div class="pill-row" id="skillFilters"></div>
-    </div>
-  </div>
-
-  <div class="filter-section">
-    <div class="collapsible-header" id="focusHead" onclick="toggleSection(this,'focusBody','focusSummary')">
-      <div style="display:flex;align-items:center;gap:0.4rem;">
-        <div class="filter-label">Focus</div>
-        <span class="active-summary skill" id="focusSummary"></span>
-      </div>
-      <span class="collapsible-arrow">&#9660;</span>
-    </div>
-    <div class="collapsible-body" id="focusBody">
-      <div class="pill-row" id="focusFilters"></div>
+      <div class="pill-row focus-row" id="focusFilters"></div>
     </div>
   </div>
 
@@ -860,7 +844,6 @@ footer a{color:var(--muted);text-decoration:underline;}
     </div>
     <div class="collapsible-body" id="stripBody">
       <div class="pill-row" id="stripFilters"></div>
-      <div class="strip-note">Card text follows the current wording; promo packs are still transcriptions.</div>
     </div>
   </div>
 
@@ -1080,6 +1063,7 @@ function buildFullPool(){
   FULL_POOL.forEach(c=>{ (FULL_BY_ID[c.id]=FULL_BY_ID[c.id]||[]).push(c); });
 }
 
+let FULL_RESOLVED = null;
 function resolveSelected(){
   const selected = FULL_POOL.filter(c=>activeBoxes.has(rawBoxKey(c)));
   ALL_CARDS = resolveCards(selected, showDupes);
@@ -1763,7 +1747,8 @@ function syncFilterPills(){
   document.querySelectorAll('.suit-pill').forEach(p=>p.classList.toggle('active',activeSuits.has(p.dataset.suit)));
   document.querySelectorAll('.species-pill,.regular-pill,.other-pill').forEach(p=>p.classList.toggle('active',activeTags.has(p.dataset.value)));
   document.querySelectorAll('.skill-pill').forEach(p=>p.classList.toggle('active',activeSkills.has(p.dataset.value)));
-  document.querySelectorAll('.deck-pill').forEach(p=>p.classList.toggle('active',activeDecks.has(p.dataset.deck)));
+  document.querySelectorAll('.deck-pill').forEach(p=>p.classList.toggle('active',
+    p.dataset.deck==='::common' ? [...activeDecks].some(k=>k.startsWith('Common:')) : activeDecks.has(p.dataset.deck)));
 }
 
 function syncBoxPills(){
@@ -1851,9 +1836,7 @@ function updateSummaries(){
   document.getElementById('speciesSummary').textContent=sp.length?sp.join(', '):'';
   document.getElementById('regularSummary').textContent=rg.length?rg.join(', '):'';
   document.getElementById('otherSummary').textContent=ot.length?ot.join(', '):'';
-  const skOnly=sk.filter(v=>!/Focus$/.test(v)), foOnly=sk.filter(v=>/Focus$/.test(v));
-  document.getElementById('skillsSummary').textContent=skOnly.length?skOnly.join(', '):'';
-  document.getElementById('focusSummary').textContent=foOnly.length?foOnly.join(', '):'';
+  document.getElementById('skillsSummary').textContent=sk.length?sk.join(', '):'';
   const stripLabel=Object.fromEntries(STRIP_KINDS);
   document.getElementById('stripSummary').textContent=[...activeStrips].map(k=>stripLabel[k]||k).join(', ');
   const st=STATUS_PILLS.filter(d=>d.word && d.on()).map(d=>d.name);
@@ -1864,8 +1847,7 @@ function updateSummaries(){
     species:allSpecies.some(t=>negTags.has(t)),
     regular:allRegular.some(t=>negTags.has(t)),
     other:allOther.some(t=>negTags.has(t)),
-    skills:negSk.some(v=>!/Focus$/.test(v)),
-    focus:negSk.some(v=>/Focus$/.test(v)),
+    skills:negSk.length>0,
     strip:negStrips.size>0,
     status:false};
   Object.keys(used).forEach(s=>{
@@ -1922,8 +1904,11 @@ function updateBadges(){
     p.classList.toggle('active', activeStrips.has(kind));
     p.classList.toggle('zero', n===0);
   });
+  if(!FULL_RESOLVED) FULL_RESOLVED = resolveCards(FULL_POOL, true);
   document.getElementById('statusFilters').querySelectorAll('.st-pill').forEach(p=>{
     const d=STATUS_PILLS.find(x=>x.k===p.dataset.st);
+    const anywhere=FULL_RESOLVED.some(d.test);
+    p.style.display = anywhere ? '' : 'none';
     const n=new Set(ALL_CARDS.filter(d.test).map(x=>x.id)).size;
     const cnt=p.querySelector('.cnt');
     if(cnt) cnt.textContent='('+n+')';
@@ -2524,19 +2509,27 @@ boxDefs.forEach(({id,label})=>{
 syncBoxPills();
 
 const deckContainer = document.getElementById('deckFilters');
-DECK_ORDER.forEach(d=>{
+{
+  const p=document.createElement('span');
+  p.className='deck-pill commons'; p.textContent='Commons'; p.dataset.deck='::common';
+  p.onclick=()=>{
+    const toks=tokenList(currentQuery());
+    const isCommon=t=>/^deck:common(-cc|-tbg|-2nd)?$/i.test(t);
+    const had=toks.some(isCommon);
+    const kept=toks.filter(t=>!isCommon(t));
+    if(!had) kept.push('deck:common');
+    setQuery(kept.join(' '));
+  };
+  deckContainer.appendChild(p);
+}
+DECK_ORDER.filter(d=>!d.startsWith('Common:')).forEach(d=>{
   const p=document.createElement('span');
   const box=DECK_BOX[d];
-  let cls;
-  if(d.startsWith('Common:')){
-    cls = box==='tbg'?'common-tbg':box==='2nd'?'common-2nd':'common';
-  } else {
-    cls = box==='tbg'?'tbg':box==='2nd'?'second':'core';
-  }
+  const cls = box==='tbg'?'tbg':box==='2nd'?'second':'core';
   p.className='deck-pill '+cls;
   p.textContent=deckLabel(d); p.dataset.deck=d;
   p.onclick=()=>{
-    const tok = d.startsWith('Common:') ? 'deck:'+COMMON_TOKEN_FOR[d] : tokenOf('deck',d);
+    const tok = tokenOf('deck',d);
     let text=currentQuery();
     if(box && !activeBoxes.has(box)) text=withBoxAdded(text,box);
     const toks=tokenList(text);
