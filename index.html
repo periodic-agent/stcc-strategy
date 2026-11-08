@@ -404,6 +404,11 @@
     .card-grid:has(.entry-sub:not(:empty)) { grid-template-columns: 1fr; }
   }
 
+  .entry:has(.entry-vig) { min-height: 58px; padding-right: 3.8rem; overflow: hidden; }
+  .entry-vig { position: absolute; right: 0; top: 0; height: 100%; width: 3.4rem; object-fit: cover; object-position: top center; pointer-events: none; mask-image: linear-gradient(to left, #000 70%, transparent); -webkit-mask-image: linear-gradient(to left, #000 70%, transparent); }
+  .entry:has(.entry-vig) .entry-badge { top: auto; bottom: 0.25rem; right: 0.25rem; transform: none; font-size: 0.6rem; padding: 0.05rem 0.3rem; background: rgba(6,8,15,0.75); border-radius: 2px; }
+  .entry.soon .entry-vig { filter: grayscale(1); opacity: 0.6; }
+
 </style>
 </head>
 <body>
@@ -449,39 +454,45 @@
   <div class="section-label">Captains</div>
   <div class="card-grid">
     <a href="picard.html" class="entry blue-box has-video" data-faction="starfleet">
+      <img class="entry-vig" src="img/chips/cap-picard.png" alt="">
       <span class="entry-badge badge-video">▶</span>
       <div class="entry-name">Picard</div>
-      <div class="entry-sub">Starfleet · Complexity 1/10</div>
+      <div class="entry-sub">Starfleet · 1/10</div>
     </a>
 
     <a href="shran.html" class="entry blue-box has-video" data-faction="andorian">
+      <img class="entry-vig" src="img/chips/cap-shran.png" alt="">
       <span class="entry-badge badge-video">▶</span>
       <div class="entry-name">Shran</div>
-      <div class="entry-sub">Andorian · Complexity 2/10</div>
+      <div class="entry-sub">Andorian · 2/10</div>
     </a>
 
     <a href="koloth.html" class="entry blue-box has-video" data-faction="klingon">
+      <img class="entry-vig" src="img/chips/cap-koloth.png" alt="">
       <span class="entry-badge badge-video">▶</span>
       <div class="entry-name">Koloth</div>
-      <div class="entry-sub">Klingon · Complexity 3/10</div>
+      <div class="entry-sub">Klingon · 3/10</div>
     </a>
 
     <a href="sisko.html" class="entry blue-box has-video" data-faction="starfleet">
+      <img class="entry-vig" src="img/chips/cap-sisko.png" alt="">
       <span class="entry-badge badge-video">▶</span>
       <div class="entry-name">Sisko</div>
-      <div class="entry-sub">Starfleet · Complexity 4/10</div>
+      <div class="entry-sub">Starfleet · 4/10</div>
     </a>
 
     <a href="sela.html" class="entry blue-box has-video" data-faction="romulan">
+      <img class="entry-vig" src="img/chips/cap-sela.png" alt="">
       <span class="entry-badge badge-video">▶</span>
       <div class="entry-name">Sela</div>
-      <div class="entry-sub">Romulan · Complexity 5/10</div>
+      <div class="entry-sub">Romulan · 5/10</div>
     </a>
 
     <a href="burnham.html" class="entry blue-box has-video" data-faction="starfleet">
+      <img class="entry-vig" src="img/chips/cap-burnham.png" alt="">
       <span class="entry-badge badge-video">▶</span>
       <div class="entry-name">Burnham</div>
-      <div class="entry-sub">Starfleet · Complexity 7/10</div>
+      <div class="entry-sub">Starfleet · 7/10</div>
     </a>
 
   </div>
@@ -533,39 +544,45 @@
   <div class="section-label">Captains</div>
   <div class="card-grid">
     <a href="georgiou.html" class="entry red-box has-video" data-faction="starfleet">
+      <img class="entry-vig" src="img/chips/cap-georgiou.png" alt="">
       <span class="entry-badge badge-video">▶</span>
       <div class="entry-name">Georgiou</div>
-      <div class="entry-sub">Starfleet · Complexity 2/10</div>
+      <div class="entry-sub">Starfleet · 2/10</div>
     </a>
 
     <a href="soval.html" class="entry red-box has-video" data-faction="vulcan">
+      <img class="entry-vig" src="img/chips/cap-soval.png" alt="">
       <span class="entry-badge badge-video">▶</span>
       <div class="entry-name">Soval</div>
-      <div class="entry-sub">Vulcan · Complexity 3/10</div>
+      <div class="entry-sub">Vulcan · 3/10</div>
     </a>
 
     <a href="kirk.html" class="entry red-box has-video" data-faction="starfleet">
+      <img class="entry-vig" src="img/chips/cap-kirk.png" alt="">
       <span class="entry-badge badge-video">▶</span>
       <div class="entry-name">Kirk</div>
-      <div class="entry-sub">Starfleet · Complexity 4/10</div>
+      <div class="entry-sub">Starfleet · 4/10</div>
     </a>
 
 <a href="archer.html" class="entry red-box has-video" data-faction="starfleet">
+      <img class="entry-vig" src="img/chips/cap-archer.png" alt="">
       <span class="entry-badge badge-video">▶</span>
       <div class="entry-name">Archer</div>
-      <div class="entry-sub">Starfleet · Complexity 6/10</div>
+      <div class="entry-sub">Starfleet · 6/10</div>
     </a>
 
     <a href="rebner.html" class="entry red-box has-video" data-faction="neutral">
+      <img class="entry-vig" src="img/chips/cap-rebner.png" alt="">
       <span class="entry-badge badge-video">▶</span>
       <div class="entry-name">Rebner</div>
-      <div class="entry-sub">Pakled · Complexity 8/10</div>
+      <div class="entry-sub">Pakled · 8/10</div>
     </a>
 
     <a href="khan.html" class="entry red-box has-video" data-faction="augment">
+      <img class="entry-vig" src="img/chips/cap-khan.png" alt="">
       <span class="entry-badge badge-video">▶</span>
       <div class="entry-name">Khan</div>
-      <div class="entry-sub">Augment · Complexity 9/10</div>
+      <div class="entry-sub">Augment · 9/10</div>
     </a>
 
   </div>
@@ -671,8 +688,7 @@
 
     <a href="rxn_guide.html" class="entry gray-box" data-faction="contributed">
       <div class="entry-name">Reactions</div>
-      <div class="entry-sub">Esquire_Sandwich</div>
-      <span class="entry-badge badge-contributed">Contributed</span>
+      <div class="entry-sub">by Esquire_Sandwich</div>
     </a>
 
 
