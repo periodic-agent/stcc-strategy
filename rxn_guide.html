@@ -157,17 +157,48 @@ footer a{color:var(--ui);text-decoration:none;}
 
 
 .chapter-sub{font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:1.05rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-top:0.35rem;}
-.toc2{max-width:960px;margin:1.5rem auto 0;padding:0 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem 1.5rem;}
-.toc2 .grp{border-left:2px solid var(--border);padding-left:0.9rem;}
-.toc2 .grp-h{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.3rem;}
-.toc2 ol{list-style:none;}
-.toc2 li{font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:0.84rem;letter-spacing:0.03em;line-height:1.3;margin-bottom:0.45rem;}
-.toc2 a{display:inline-block;color:var(--accent2);text-decoration:none;}
-.toc2 a:hover{color:#fff;text-decoration:underline;}
-.ex-jump{max-width:860px;margin:1rem auto 0;padding:0 1.5rem;display:flex;flex-wrap:wrap;gap:0.3rem;align-items:center;}
-.ex-jump a{font-family:'Antonio',sans-serif;font-size:0.8rem;color:var(--accent2);text-decoration:none;border:1px solid var(--border);border-radius:999px;padding:0 0.55rem;line-height:1.6;}
-.ex-jump a:hover{background:rgba(var(--accent-rgb),0.2);color:#fff;}
-.ex-jump button{margin-left:auto;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;background:none;border:1px solid var(--accent);color:var(--accent2);border-radius:2px;padding:0.1rem 0.6rem;cursor:pointer;}
+.toc-top{max-width:1220px;margin:1.4rem auto 0;padding:0 1.5rem;}
+.tt-row{display:flex;flex-wrap:wrap;align-items:center;gap:0.4rem 0.5rem;border-bottom:1px solid var(--border);padding-bottom:0.7rem;}
+.tt-lbl{font-family:'Antonio',sans-serif;font-size:0.9rem;letter-spacing:0.12em;text-transform:uppercase;color:#fff;margin-right:0.4rem;}
+.tt-grp{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent2);text-decoration:none;border:1px solid var(--border);border-radius:999px;padding:0.1rem 0.7rem;}
+.tt-grp:hover{background:rgba(var(--accent-rgb),0.2);color:#fff;}
+.tt-more{margin-left:auto;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;background:none;border:1px solid var(--accent);color:var(--accent2);border-radius:2px;padding:0.1rem 0.55rem;cursor:pointer;}
+.tt-all{display:none;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem 1.5rem;padding:1rem 0 0.4rem;}
+.toc-top.open .tt-all{display:grid;}
+.tt-all .grp{border-left:2px solid var(--border);padding-left:0.9rem;}
+.tt-all .grp-h{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.3rem;}
+.tt-all ol{list-style:none;}
+.tt-all li{font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:0.84rem;letter-spacing:0.03em;line-height:1.3;margin-bottom:0.45rem;}
+.tt-all a{color:var(--accent2);text-decoration:none;}
+.tt-all a:hover{color:#fff;text-decoration:underline;}
+@media (max-width:600px){.tt-more{margin-left:0;}}
+@media (min-width:1100px){.toc-top{display:none;}}
+.rxn-layout{max-width:1220px;margin:0 auto;display:grid;grid-template-columns:270px minmax(0,1fr);gap:0 1rem;align-items:start;padding-left:1.5rem;}
+.rxn-layout .content{margin:0;}
+.toc-side{position:sticky;top:1rem;max-height:calc(100vh - 2rem);overflow-y:auto;padding:2rem 0.4rem 1rem 0;scrollbar-width:thin;}
+.toc-side .grp{border-left:2px solid var(--border);padding-left:0.8rem;margin-bottom:1.1rem;}
+.toc-side .grp-h{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.35rem;}
+.toc-side ol{list-style:none;}
+.toc-side li{font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:0.78rem;letter-spacing:0.02em;line-height:1.25;margin-bottom:0.4rem;}
+.toc-side a{color:#8fa3c4;text-decoration:none;display:block;border-left:2px solid transparent;margin-left:calc(-0.8rem - 2px);padding-left:0.8rem;}
+.toc-side a:hover{color:#fff;}
+.toc-side a.on{color:#fff;border-left-color:var(--accent2);}
+.toc-tools{display:flex;justify-content:space-between;align-items:center;margin:0 0 1rem;}
+.toc-tools .lbl{font-family:'Antonio',sans-serif;font-size:0.9rem;letter-spacing:0.12em;text-transform:uppercase;color:#fff;}
+.toc-tools button{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;background:none;border:1px solid var(--accent);color:var(--accent2);border-radius:2px;padding:0.1rem 0.55rem;cursor:pointer;}
+.toc-close{display:none;}
+.fab{display:none;}
+.toc-scrim{display:none;}
+@media (max-width:1099px){
+  .rxn-layout{display:block;padding-left:0;}
+  .rxn-layout .content{margin:0 auto;}
+  .toc-side{position:fixed;top:0;right:0;bottom:0;width:min(340px,88vw);max-height:none;z-index:80;background:var(--bg2);border-left:1px solid var(--border);padding:1.2rem 1.1rem 2rem;transform:translateX(105%);transition:transform 0.2s ease;box-shadow:-12px 0 30px rgba(0,0,0,0.5);}
+  body.toc-open .toc-side{transform:none;}
+  .toc-scrim{position:fixed;inset:0;z-index:70;background:rgba(0,0,0,0.45);}
+  body.toc-open .toc-scrim{display:block;}
+  .toc-close{display:inline-block;margin-left:0.5rem;}
+  .fab{display:block;}
+}
 h2{scroll-margin-top:1rem;}
 
 details.ex{border:1px solid var(--border);border-radius:6px;background:var(--bg2);margin:1.1rem 0 1.4rem;scroll-margin-top:1rem;}
@@ -260,7 +291,42 @@ ol.seq > li .op{margin:0.35rem 0 0.2rem;}
   <div class="chapter-meta">By Esquire_Sandwich</div>
 </header>
 
-<nav class="toc2">
+<div class="toc-top" id="tocTop">
+  <div class="tt-row"><span class="tt-lbl">Contents</span><a class="tt-grp" href="#available">The basics</a><a class="tt-grp" href="#window">Timing windows</a><a class="tt-grp" href="#moved">Edge cases &amp; FAQ</a><button type="button" class="tt-more" id="ttMore" aria-expanded="false">Show all</button></div>
+  <div class="tt-all">
+    <div class="grp"><div class="grp-h">The basics</div><ol>
+    <li><a href="#available">WHEN IS A REACTION AVAILABLE?</a></li>
+    <li><a href="#optional">DO I HAVE TO USE A REACTION?</a></li>
+    <li><a href="#when-use">WHEN CAN I USE A REACTION?</a></li>
+    <li><a href="#multiple">WHAT IF I HAVE MULTIPLE REACTIONS?</a></li>
+    <li><a href="#interrupt">THE RULEBOOK SAYS REACTIONS CAN INTERRUPT ANOTHER OPERATION, DOES THAT MEAN AS SOON AS A CARD LEAVES MY HAND I SHOULD ACTIVATE THE REACTION IMMEDIATELY?</a></li>
+  </ol></div>
+    <div class="grp"><div class="grp-h">Timing windows</div><ol>
+    <li><a href="#window">WHEN EXACTLY DOES A REACTION WINDOW OPEN/WHEN CAN THE REACTION BE ACTIVATED?</a></li>
+    <li><a href="#when">EXPLAIN REACTIONS USING WHEN!</a></li>
+    <li><a href="#after">EXPLAIN REACTIONS USING AFTER!</a></li>
+    <li><a href="#in-play">IS THERE A DIFFERENCE BETWEEN BEING "IN PLAY" AND "PUTTING INTO PLAY"?</a></li>
+    <li><a href="#via-play">REACTING TO “PUT INTO PLAY” VIA A PLAY OPERATION</a></li>
+    <li><a href="#neutral">WHEN IS A CONTROLLED NEUTRAL LOCATION “PUT INTO PLAY”</a></li>
+    <li><a href="#beam-promote">WHAT ABOUT CARDS BEING “PUT INTO PLAY” VIA BEAMING/PROMOTING</a></li>
+    <li><a href="#promoted">ANY EXAMPLES OF A PLAY OPERATION ALSO CAUSING A CARD TO BE PROMOTED?</a></li>
+    <li><a href="#shortcut">ANY OTHER SHORTCUT WAYS TO THINK ABOUT WHEN REACTION WINDOWS OPEN AND CLOSE WITHIN OTHER OPERATIONS?</a></li>
+    <li><a href="#staging">ANY EXAMPLES OF A CARD BEING PUT INTO THE STAGING AREA BY ANOTHER CARD?</a></li>
+    <li><a href="#other-events">REACTING TO OTHER EVENTS (SENDING AN AWAY TEAM, WARPING A SHIP, TAKING AN INCIDENT, ETC.)</a></li>
+  </ol></div>
+    <div class="grp"><div class="grp-h">Edge cases &amp; FAQ</div><ol>
+    <li><a href="#moved">DOES IT MATTER IF THE CARD THAT TRIGGERED THE REACTION MOVED AFTER IT INITIALLY ENTERED PLAY?</a></li>
+    <li><a href="#moving">WHAT IF I HAVE MULTIPLE REACTIONS THAT ALL TRIGGER OFF THE SAME EVENT AND IT MOVES RELEVANT CARDS TO DIFFERENT LOCATIONS?</a></li>
+    <li><a href="#log">WHAT WAS THAT ABOUT NOT BEING ABLE TO INTERACT WITH CARDS IN THE LOG?</a></li>
+    <li><a href="#wildcard">HOW DOES THE WILDCARD TRAIT WORK WITH REACTIONS?</a></li>
+    <li><a href="#faq">SPECIFIC FREQUENTLY ASKED REACTION QUESTIONS</a></li>
+  </ol></div>
+  </div>
+</div>
+<div class="toc-scrim" id="tocScrim"></div>
+<div class="rxn-layout">
+<nav class="toc-side" id="toc">
+  <div class="toc-tools"><span class="lbl">Contents</span><span><button type="button" id="toggleAll">Expand all</button><button type="button" class="toc-close" id="tocClose">Close</button></span></div>
   <div class="grp"><div class="grp-h">The basics</div><ol>
     <li><a href="#available">WHEN IS A REACTION AVAILABLE?</a></li>
     <li><a href="#optional">DO I HAVE TO USE A REACTION?</a></li>
@@ -289,10 +355,6 @@ ol.seq > li .op{margin:0.35rem 0 0.2rem;}
     <li><a href="#faq">SPECIFIC FREQUENTLY ASKED REACTION QUESTIONS</a></li>
   </ol></div>
 </nav>
-
-<div class="ex-jump">
-  <button type="button" id="toggleAll">Expand all</button>
-</div>
 
 <main class="content">
 
@@ -649,8 +711,9 @@ ol.seq > li .op{margin:0.35rem 0 0.2rem;}
   <a href="#top" class="back-top">↑ back to top</a>
 
 </main>
+</div>
 
-<a class="fab" href="#top">Contents</a>
+<button type="button" class="fab" id="tocOpen">Contents</button>
 
 <div class="nav-bar" style="padding:0.75rem 1.5rem;"><a href="index.html">← Back to Compendium</a></div>
 
@@ -830,6 +893,17 @@ const btn=document.getElementById('toggleAll');
 btn.addEventListener('click',()=>{const open=!exs.every(d=>d.open);exs.forEach(d=>d.open=open);btn.textContent=open?'Collapse all':'Expand all';});
 function openTarget(){const id=location.hash.slice(1);const el=id&&document.getElementById(id);if(el&&el.tagName==='DETAILS'){el.open=true;el.scrollIntoView();}}
 window.addEventListener('hashchange',openTarget);openTarget();
+const TT=document.getElementById('tocTop'),TM=document.getElementById('ttMore');
+TM.addEventListener('click',()=>{const o=TT.classList.toggle('open');TM.textContent=o?'Hide':'Show all';TM.setAttribute('aria-expanded',o);});
+const B=document.body;
+document.getElementById('tocOpen').addEventListener('click',()=>B.classList.add('toc-open'));
+document.getElementById('tocClose').addEventListener('click',()=>B.classList.remove('toc-open'));
+document.getElementById('tocScrim').addEventListener('click',()=>B.classList.remove('toc-open'));
+document.querySelectorAll('#toc a').forEach(a=>a.addEventListener('click',()=>B.classList.remove('toc-open')));
+const links=new Map([...document.querySelectorAll('#toc a')].map(a=>[a.getAttribute('href').slice(1),a]));
+const heads=[...links.keys()].map(id=>document.getElementById(id)).filter(Boolean);
+function spy(){let cur=heads[0];for(const h of heads){if(h.getBoundingClientRect().top<120)cur=h;else break;}links.forEach(a=>a.classList.remove('on'));const a=links.get(cur.id);a.classList.add('on');}
+addEventListener('scroll',spy,{passive:true});spy();
 document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('lightbox').classList.remove('open');});
 </script>
 <script data-goatcounter="https://stcc-compendium.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
