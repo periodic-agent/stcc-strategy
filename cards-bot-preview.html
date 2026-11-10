@@ -698,25 +698,29 @@ footer a{color:var(--muted);text-decoration:underline;}
 .pn-mark{font-weight:700;margin-right:.3rem;}
 .st-pill .st-mk{display:inline-block;font-size:.8em;line-height:1;transform:translateY(-.08em);}
 
-.mi{background:var(--surface,#111827);border:1px solid var(--border,#26304a);border-radius:8px;padding:.7rem .9rem .8rem;margin:.6rem 0 1rem;max-width:760px}
+.mi{background:var(--surface,#111827);border:1px solid var(--border,#26304a);border-radius:8px;padding:.7rem .9rem .8rem;align-self:start;min-width:0}
 .mi-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .8rem;margin-bottom:.2rem}
 .mi-boxes{display:flex;flex-wrap:wrap;gap:.3rem}
 .mi-boxes .box-pill{font-size:.78rem;padding:.12rem .55rem;cursor:pointer}
 .mi-title{font-family:'Antonio',sans-serif;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem;color:#fff}
 .mi-def{font-size:.74rem;color:var(--muted,#7a8aaa);margin:.15rem 0 .35rem}
-.mi-away{font-size:.74rem;color:#f0b323;margin:-.15rem 0 .35rem}
 .mi-leg{display:flex;gap:1rem;font-size:.72rem;color:var(--muted,#7a8aaa);margin-bottom:.4rem;font-family:'Barlow Condensed',sans-serif}
 .mi-leg i{display:inline-block;vertical-align:middle;margin-right:.3rem}
 .mi-leg .lb{width:16px;height:9px;background:#3aa0e6;border-radius:0 3px 3px 0}
-.mi-leg .lt{width:2px;height:13px;background:#f0b323}
+.mi-leg .lt{width:2px;height:13px;background:#d7dce6}
 .mi-grp{font-family:'Antonio',sans-serif;font-weight:600;letter-spacing:.12em;font-size:.72rem;color:var(--muted,#7a8aaa);text-transform:uppercase;margin:.5rem 0 .1rem;border-bottom:1px solid var(--border,#26304a);padding-bottom:.15rem}
-.mi-row{display:grid;grid-template-columns:minmax(90px,32%) 1fr 5.4rem;gap:.6rem;align-items:center;padding:.2rem 0;font-family:'Barlow Condensed',sans-serif;font-size:.95rem}
-.mi-row .lab{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mi-row{display:grid;grid-template-columns:minmax(90px,36%) 1fr 5rem;gap:.6rem;align-items:center;padding:.22rem 0;font-family:'Barlow Condensed',sans-serif;font-size:.95rem}
+.mi-row .lab{min-width:0}
+.mi-chips{display:flex;flex-wrap:wrap;align-items:center;gap:.1rem 0}
+.mi-chips .stripchip{height:1.32em;font-size:.74rem}
+.mi-ksep{margin:0 .2em;font-weight:600;color:var(--muted,#7a8aaa)}
+.mi-suit{display:inline-flex;align-items:center;gap:.3em;height:1.5em;padding:0 .7em 0 .45em;border-radius:0 .95em .95em 0;color:#fff;font-family:'Antonio',sans-serif;font-weight:600;letter-spacing:.06em;font-size:.82rem}
+.mi-suit img{height:1.05em;width:auto}
 .mi-row.muted .lab{color:var(--muted,#7a8aaa)}
 .mi-track{position:relative;height:14px;background:rgba(255,255,255,.05);border-radius:2px}
 .mi-fill{position:absolute;left:0;top:2px;height:10px;background:#3aa0e6;border-radius:0 4px 4px 0;transition:width .45s cubic-bezier(.3,.7,.2,1)}
 .mi-row.muted .mi-fill{background:#7a8aaa}
-.mi-base{position:absolute;top:-3px;width:2px;height:20px;background:#f0b323;border-radius:1px}
+.mi-base{position:absolute;top:-3px;width:2px;height:20px;background:#d7dce6;border-radius:1px}
 .mi-val{text-align:right;font-variant-numeric:tabular-nums}
 .mi-val .n{color:var(--muted,#7a8aaa);font-size:.85em}
 .mi-warn{font-family:'Barlow Condensed',sans-serif;font-size:.95rem;border-left:3px solid #f0b323;padding:.3rem .6rem;background:rgba(240,179,35,.06)}
@@ -2336,9 +2340,13 @@ function miShares(bot,pool){
     if(i>=0){n['t'+i]++;return;}
     if(('s'+c.s) in n) n['s'+c.s]++; else n.none++;
   });
-  const L=rows.map((r,i)=>({k:'t'+i,g:'Traits',lab:r.map(miCap).join(' / ')}));
-  L.push({k:'sur',g:'Traits',lab:'Surprise',muted:true});
-  if(suits.length) suits.forEach(s=>L.push({k:'s'+s,g:'Suits',lab:miCap(s)}));
+  const L=(bot.traits||[]).map((r,i)=>({k:'t'+i,g:'Traits',lab:'<span class="mi-chips">'+botKeyChips(r.key).join('<span class="mi-ksep">/</span>')+'</span>'}));
+  L.push({k:'sur',g:'Traits',lab:'<span class="mi-chips">'+stripToken('trait:Surprise')+'</span>'});
+  if(suits.length) suits.forEach(s=>{
+    const disp=miCap(s), col=BOT_SUIT_COL[disp]||'#8494ad';
+    const gly=CARDFACE.suit[s]||(CARDFACE.suitFont&&CARDFACE.suitFont[s])||'';
+    L.push({k:'s'+s,g:'Suits',lab:'<span class="mi-suit" style="background:'+col+'">'+(gly?'<img src="'+gly+'" alt="">':'')+disp.toUpperCase()+'</span>'});
+  });
   else L.push({k:'none',g:'Traits',lab:'No match',muted:true});
   L.forEach(l=>{l.n=n[l.k];l.p=pool.length?100*l.n/pool.length:0;});
   return L;
@@ -2368,7 +2376,6 @@ function buildMarketInsights(bot){
   const hasBase=origin!=='2nd', base=hasBase?miShares(bot,miPool([origin],false)):null;
   const label=boxes.map(b=>MI_NAME[b]).join(' + ')+(promos?' + Promos':'');
   let h=head+`<div class="mi-def">Share of Market, Location and Encounter cards that resolve on each row, for the boxes selected: ${label} (${pool.length} cards).</div>`;
-  if(!boxes.includes(origin)) h+=`<div class="mi-away">${bot.captain}'s crew deck is from ${MI_NAME[origin]}, which is not in the selected market.</div>`;
   if(hasBase) h+=`<div class="mi-leg"><span><i class="lb"></i>selected market</span><span><i class="lt"></i>${MI_NAME[origin]} alone</span></div>`;
   let g='';
   L.forEach((l,i)=>{
@@ -2541,9 +2548,8 @@ function render(){
     if(deckBots.length){
       const bg=document.createElement('div');
       bg.className='card-grid bot-grid';
-      deckBots.forEach(b=>buildBotFaces(b).forEach(f=>bg.appendChild(f)));
+      deckBots.forEach(b=>{ const fs=buildBotFaces(b); fs.splice(fs.length-(b.campaign?1:0),0,buildMarketInsights(b)); fs.forEach(f=>bg.appendChild(f)); });
       section.appendChild(bg);
-      deckBots.forEach(b=>section.appendChild(buildMarketInsights(b)));
     }
     const grid=document.createElement('div');
     grid.className=viewMode==='pill'?'card-grid':'img-grid';
