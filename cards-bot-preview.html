@@ -699,6 +699,9 @@ footer a{color:var(--muted);text-decoration:underline;}
 .st-pill .st-mk{display:inline-block;font-size:.8em;line-height:1;transform:translateY(-.08em);}
 
 .mi{background:var(--surface,#111827);border:1px solid var(--border,#26304a);border-radius:8px;padding:.7rem .9rem .8rem;margin:.6rem 0 1rem;max-width:760px}
+.mi-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .8rem;margin-bottom:.2rem}
+.mi-boxes{display:flex;flex-wrap:wrap;gap:.3rem}
+.mi-boxes .box-pill{font-size:.78rem;padding:.12rem .55rem;cursor:pointer}
 .mi-title{font-family:'Antonio',sans-serif;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem;color:#fff}
 .mi-def{font-size:.74rem;color:var(--muted,#7a8aaa);margin:.15rem 0 .35rem}
 .mi-away{font-size:.74rem;color:#f0b323;margin:-.15rem 0 .35rem}
@@ -2345,10 +2348,19 @@ function buildMarketInsights(bot){
   const boxes=['core','tbg','2nd'].filter(b=>activeBoxes.has(b));
   const promos=activeBoxes.has('promo1')||activeBoxes.has('promo2');
   const origin=DECK_BOX[bot.captain];
-  const head='<div class="mi-title">Market insights</div>';
+  const chip=(b,l)=>`<span class="box-pill${(b==='promo'?showPromo:activeBoxes.has(b))?' active':''}" data-box="${b}" data-mi="${b}">${l}</span>`;
+  const head='<div class="mi-head"><div class="mi-title">Market insights</div><div class="mi-boxes">'+
+    chip('core',"Captain's Chair")+chip('tbg','To Boldly Go')+chip('2nd','Second Contact')+chip('promo','Promos')+'</div></div>';
+  const wire=()=>el.querySelectorAll('[data-mi]').forEach(p=>p.onclick=()=>{
+    const b=p.dataset.mi;
+    if(b==='promo') return setPromo(!showPromo);
+    const t=new Set(['core','tbg','2nd'].filter(x=>activeBoxes.has(x)));
+    if(t.has(b)) t.delete(b); else t.add(b);
+    setBoxTokens([...t]);
+  });
   if(!boxes.some(b=>b!=='2nd')){
     el.innerHTML=head+'<div class="mi-warn">'+(boxes.length?"Second Contact is an expansion: add Captain's Chair or To Boldly Go.":'Select at least one box.')+'</div>';
-    return el;
+    wire(); return el;
   }
   let scale=1;
   MI_VALID.forEach(v=>[false,true].forEach(pr=>miShares(bot,miPool(v,pr)).forEach(l=>scale=Math.max(scale,l.p))));
@@ -2367,7 +2379,7 @@ function buildMarketInsights(bot){
        (hasBase?`<span class="mi-base" style="left:calc(${100*base[i].p/scale}% - 1px)"></span>`:'')+
        `</span><span class="mi-val">${l.p.toFixed(1)}% <span class="n">(${l.n})</span></span></div>`;
   });
-  el.innerHTML=h;
+  el.innerHTML=h; wire();
   requestAnimationFrame(()=>requestAnimationFrame(()=>el.querySelectorAll('.mi-fill').forEach(f=>{
     f.style.width=f.dataset.w+'%'; MI_PREV[f.dataset.k]=+f.dataset.w;
   })));
