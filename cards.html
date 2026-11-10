@@ -2311,7 +2311,8 @@ function botsForDeck(deck){
 }
 
 
-const MI_SUITS=['person','ally','cargo','ship','location','encounter'];
+const MI_SUITS=['person','ally','cargo','ship','incident'];
+const MI_INC=6;
 const MI_RANK={core:0,tbg:1,'2nd':2,promo1:3,promo2:4};
 const MI_NAME={core:"Captain's Chair",tbg:'To Boldly Go','2nd':'Second Contact'};
 const MI_VALID=[['core'],['tbg'],['core','tbg'],['core','2nd'],['tbg','2nd'],['core','tbg','2nd']];
@@ -2327,28 +2328,32 @@ function miPool(boxes,promos){
     const p=by.get(c.id); if(!p||MI_RANK[b]>MI_RANK[p.b]) by.set(c.id,{b,s:suit,
       t:[...(c.species_traits||[]),...(c.regular_traits||[]),...(c.other_traits||[])].map(x=>x.toLowerCase())});
   });
-  return [...by.values()];
+  const P=[...by.values()], inc=P.filter(c=>c.s==='incident').length;
+  P.forEach(c=>c.w=c.s==='incident'?MI_INC/inc:1);
+  return P;
 }
 function miShares(bot,pool){
   const rows=(bot.traits||[]).map(r=>miTok(r.key));
   const suits=(bot.suits||[]).map(s=>s.suit.toLowerCase()).filter(s=>MI_SUITS.includes(s));
   const n={}; rows.forEach((_,i)=>n['t'+i]=0); n.sur=0; suits.forEach(s=>n['s'+s]=0); n.none=0;
+  let tot=0;
   pool.forEach(c=>{
+    tot+=c.w;
     const set=new Set([...c.t,c.s]);
-    if(set.has('surprise')){n.sur++;return;}
+    if(set.has('surprise')){n.sur+=c.w;return;}
     const i=set.has('wildcard')?0:rows.findIndex(r=>r.some(t=>set.has(t)));
-    if(i>=0){n['t'+i]++;return;}
-    if(('s'+c.s) in n) n['s'+c.s]++; else n.none++;
+    if(i>=0){n['t'+i]+=c.w;return;}
+    if(('s'+c.s) in n) n['s'+c.s]+=c.w; else n.none+=c.w;
   });
-  const L=(bot.traits||[]).map((r,i)=>({k:'t'+i,g:'Traits',lab:'<span class="mi-chips">'+botKeyChips(r.key).join('<span class="mi-ksep">/</span>')+'</span>'}));
-  L.push({k:'sur',g:'Traits',lab:'<span class="mi-chips">'+stripToken('trait:Surprise')+'</span>'});
+  const L=[{k:'sur',g:'Traits',lab:'<span class="mi-chips">'+stripToken('trait:Surprise')+'</span>'}];
+  (bot.traits||[]).forEach((r,i)=>L.push({k:'t'+i,g:'Traits',lab:'<span class="mi-chips">'+botKeyChips(r.key).join('<span class="mi-ksep">/</span>')+'</span>'}));
   if(suits.length) suits.forEach(s=>{
     const disp=miCap(s), col=BOT_SUIT_COL[disp]||'#8494ad';
     const gly=CARDFACE.suit[s]||(CARDFACE.suitFont&&CARDFACE.suitFont[s])||'';
-    L.push({k:'s'+s,g:'Suits',lab:'<span class="mi-suit" style="background:'+col+'">'+(gly?'<img src="'+gly+'" alt="">':'')+disp.toUpperCase()+'</span>'});
+    L.push({k:'s'+s,g:'Suits (no trait matched)',lab:'<span class="mi-suit" style="background:'+col+'">'+(gly?'<img src="'+gly+'" alt="">':'')+disp.toUpperCase()+'</span>'});
   });
   else L.push({k:'none',g:'Traits',lab:'No match',muted:true});
-  L.forEach(l=>{l.n=n[l.k];l.p=pool.length?100*l.n/pool.length:0;});
+  L.forEach(l=>{l.n=n[l.k];l.p=tot?100*l.n/tot:0;});
   return L;
 }
 function buildMarketInsights(bot){
@@ -2375,7 +2380,8 @@ function buildMarketInsights(bot){
   const pool=miPool(boxes,promos), L=miShares(bot,pool);
   const hasBase=origin!=='2nd', base=hasBase?miShares(bot,miPool([origin],false)):null;
   const label=boxes.map(b=>MI_NAME[b]).join(' + ')+(promos?' + Promos':'');
-  let h=head+`<div class="mi-def">Share of Market, Location and Encounter cards that resolve on each row, for the boxes selected: ${label} (${pool.length} cards).</div>`;
+  const nm=pool.filter(c=>c.s!=='incident').length, ni=pool.length-nm;
+  let h=head+`<div class="mi-def">Share of Market cards and of the 6-card Incident deck that resolve on each row, for the boxes selected: ${label} (${nm} Market cards, 6 Incidents drawn from ${ni}).</div>`;
   if(hasBase) h+=`<div class="mi-leg"><span><i class="lb"></i>selected market</span><span><i class="lt"></i>${MI_NAME[origin]} alone</span></div>`;
   let g='';
   L.forEach((l,i)=>{
@@ -2384,7 +2390,7 @@ function buildMarketInsights(bot){
     h+=`<div class="mi-row${l.muted?' muted':''}"><span class="lab">${l.lab}</span><span class="mi-track">`+
        `<span class="mi-fill" data-k="${key}" data-w="${w}" style="width:${MI_PREV[key]!=null?MI_PREV[key]:0}%"></span>`+
        (hasBase?`<span class="mi-base" style="left:calc(${100*base[i].p/scale}% - 1px)"></span>`:'')+
-       `</span><span class="mi-val">${l.p.toFixed(1)}% <span class="n">(${l.n})</span></span></div>`;
+       `</span><span class="mi-val">${l.p.toFixed(1)}% <span class="n">(${Number.isInteger(l.n)?l.n:l.n.toFixed(1)})</span></span></div>`;
   });
   el.innerHTML=h; wire();
   const raf=typeof requestAnimationFrame==='function'?requestAnimationFrame:f=>f();
