@@ -697,6 +697,33 @@ footer a{color:var(--muted);text-decoration:underline;}
 }
 .pn-mark{font-weight:700;margin-right:.3rem;}
 .st-pill .st-mk{display:inline-block;font-size:.8em;line-height:1;transform:translateY(-.08em);}
+
+.mi{background:var(--surface,#111827);border:1px solid var(--border,#26304a);border-radius:8px;padding:.7rem .9rem .8rem;align-self:start;min-width:0}
+.mi-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .8rem;margin-bottom:.2rem}
+.mi-boxes{display:flex;flex-wrap:wrap;gap:.3rem}
+.mi-boxes .box-pill{font-size:.78rem;padding:.12rem .55rem;cursor:pointer}
+.mi-title{font-family:'Antonio',sans-serif;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem;color:#fff}
+.mi-def{font-size:.74rem;color:var(--muted,#7a8aaa);margin:.15rem 0 .35rem}
+.mi-leg{display:flex;gap:1rem;font-size:.72rem;color:var(--muted,#7a8aaa);margin-bottom:.4rem;font-family:'Barlow Condensed',sans-serif}
+.mi-leg i{display:inline-block;vertical-align:middle;margin-right:.3rem}
+.mi-leg .lb{width:16px;height:9px;background:#3aa0e6;border-radius:0 3px 3px 0}
+.mi-leg .lt{width:2px;height:13px;background:#d7dce6}
+.mi-grp{font-family:'Antonio',sans-serif;font-weight:600;letter-spacing:.12em;font-size:.72rem;color:var(--muted,#7a8aaa);text-transform:uppercase;margin:.5rem 0 .1rem;border-bottom:1px solid var(--border,#26304a);padding-bottom:.15rem}
+.mi-row{display:grid;grid-template-columns:minmax(90px,36%) 1fr 5rem;gap:.6rem;align-items:center;padding:.22rem 0;font-family:'Barlow Condensed',sans-serif;font-size:.95rem}
+.mi-row .lab{min-width:0}
+.mi-chips{display:flex;flex-wrap:wrap;align-items:center;gap:.1rem 0}
+.mi-chips .stripchip{height:1.32em;font-size:.74rem}
+.mi-ksep{margin:0 .2em;font-weight:600;color:var(--muted,#7a8aaa)}
+.mi-suit{display:inline-flex;align-items:center;gap:.3em;height:1.5em;padding:0 .7em 0 .45em;border-radius:0 .95em .95em 0;color:#fff;font-family:'Antonio',sans-serif;font-weight:600;letter-spacing:.06em;font-size:.82rem}
+.mi-suit img{height:1.05em;width:auto}
+.mi-row.muted .lab{color:var(--muted,#7a8aaa)}
+.mi-track{position:relative;height:14px;background:rgba(255,255,255,.05);border-radius:2px}
+.mi-fill{position:absolute;left:0;top:2px;height:10px;background:#3aa0e6;border-radius:0 4px 4px 0;transition:width .45s cubic-bezier(.3,.7,.2,1)}
+.mi-row.muted .mi-fill{background:#7a8aaa}
+.mi-base{position:absolute;top:-3px;width:2px;height:20px;background:#d7dce6;border-radius:1px}
+.mi-val{text-align:right;font-variant-numeric:tabular-nums}
+.mi-val .n{color:var(--muted,#7a8aaa);font-size:.85em}
+.mi-warn{font-family:'Barlow Condensed',sans-serif;font-size:.95rem;border-left:3px solid #f0b323;padding:.3rem .6rem;background:rgba(240,179,35,.06)}
 </style>
 <meta name="description" content="Searchable card database for Star Trek: Captain's Chair. Filter every card by box, deck, suit, traits, skills and name — built for mid-game lookups.">
 <link rel="canonical" href="https://periodic-agent.github.io/stcc-strategy/cards.html">
@@ -1725,7 +1752,7 @@ function setBoxTokens(target){
   let toks=tokenList(currentQuery()).filter(t=>!/^-?box:/i.test(t) || /^box:promos?$/i.test(t));
   target=target.filter(b=>DEFAULT_BOXES.includes(b));
   const dropped=DEFAULT_BOXES.filter(b=>!target.includes(b));
-  if(dropped.length) toks=toks.filter(t=>{
+  if(dropped.length && !showBots) toks=toks.filter(t=>{
     const m=t.match(/^-?deck:(.+)$/i);
     if(!m) return true;
     const v=m[1].replace(/^"|"$/g,'').toLowerCase();
@@ -2277,10 +2304,94 @@ function botMatches(bot){
 
 function botsForDeck(deck){
   if(!showBots) return [];
-  if(!activeBoxes.has(DECK_BOX[deck])) return [];
+  if(!activeBoxes.has(DECK_BOX[deck]) && !activeDecks.has(deck)) return [];
   if(activeDecks.size && !activeDecks.has(deck)) return [];
   if(negDecks.has(deck)) return [];
   return BOTS.filter(b=>b.captain===deck && botMatches(b));
+}
+
+
+const MI_SUITS=['person','ally','cargo','ship','location','encounter'];
+const MI_RANK={core:0,tbg:1,'2nd':2,promo1:3,promo2:4};
+const MI_NAME={core:"Captain's Chair",tbg:'To Boldly Go','2nd':'Second Contact'};
+const MI_VALID=[['core'],['tbg'],['core','tbg'],['core','2nd'],['tbg','2nd'],['core','tbg','2nd']];
+const MI_PREV={};
+const miTok=k=>(k.match(/\[\[([^\]]+)\]\]/g)||[]).map(t=>t.slice(2,-2).trim().toLowerCase());
+const miCap=s=>s.replace(/\b[a-z]/g,m=>m.toUpperCase()).replace(/Nx-01/i,'NX-01');
+function miPool(boxes,promos){
+  const by=new Map();
+  FULL_POOL.forEach(c=>{
+    const b=rawBoxKey(c), suit=(c.suit||'').toLowerCase();
+    if(c.virtual||!MI_SUITS.includes(suit)||!(c.source==='Common'||c.source==='Promo')) return;
+    if(b.startsWith('promo') ? !promos : !boxes.includes(b)) return;
+    const p=by.get(c.id); if(!p||MI_RANK[b]>MI_RANK[p.b]) by.set(c.id,{b,s:suit,
+      t:[...(c.species_traits||[]),...(c.regular_traits||[]),...(c.other_traits||[])].map(x=>x.toLowerCase())});
+  });
+  return [...by.values()];
+}
+function miShares(bot,pool){
+  const rows=(bot.traits||[]).map(r=>miTok(r.key));
+  const suits=(bot.suits||[]).map(s=>s.suit.toLowerCase()).filter(s=>MI_SUITS.includes(s));
+  const n={}; rows.forEach((_,i)=>n['t'+i]=0); n.sur=0; suits.forEach(s=>n['s'+s]=0); n.none=0;
+  pool.forEach(c=>{
+    const set=new Set([...c.t,c.s]);
+    if(set.has('surprise')){n.sur++;return;}
+    const i=set.has('wildcard')?0:rows.findIndex(r=>r.some(t=>set.has(t)));
+    if(i>=0){n['t'+i]++;return;}
+    if(('s'+c.s) in n) n['s'+c.s]++; else n.none++;
+  });
+  const L=(bot.traits||[]).map((r,i)=>({k:'t'+i,g:'Traits',lab:'<span class="mi-chips">'+botKeyChips(r.key).join('<span class="mi-ksep">/</span>')+'</span>'}));
+  L.push({k:'sur',g:'Traits',lab:'<span class="mi-chips">'+stripToken('trait:Surprise')+'</span>'});
+  if(suits.length) suits.forEach(s=>{
+    const disp=miCap(s), col=BOT_SUIT_COL[disp]||'#8494ad';
+    const gly=CARDFACE.suit[s]||(CARDFACE.suitFont&&CARDFACE.suitFont[s])||'';
+    L.push({k:'s'+s,g:'Suits',lab:'<span class="mi-suit" style="background:'+col+'">'+(gly?'<img src="'+gly+'" alt="">':'')+disp.toUpperCase()+'</span>'});
+  });
+  else L.push({k:'none',g:'Traits',lab:'No match',muted:true});
+  L.forEach(l=>{l.n=n[l.k];l.p=pool.length?100*l.n/pool.length:0;});
+  return L;
+}
+function buildMarketInsights(bot){
+  const el=document.createElement('div'); el.className='mi';
+  const boxes=['core','tbg','2nd'].filter(b=>activeBoxes.has(b));
+  const promos=activeBoxes.has('promo1')||activeBoxes.has('promo2');
+  const origin=DECK_BOX[bot.captain];
+  const chip=(b,l)=>`<span class="box-pill${(b==='promo'?showPromo:activeBoxes.has(b))?' active':''}" data-box="${b}" data-mi="${b}">${l}</span>`;
+  const head='<div class="mi-head"><div class="mi-title">Market insights</div><div class="mi-boxes">'+
+    chip('core',"Captain's Chair")+chip('tbg','To Boldly Go')+chip('2nd','Second Contact')+chip('promo','Promos')+'</div></div>';
+  const wire=()=>el.querySelectorAll('[data-mi]').forEach(p=>p.onclick=()=>{
+    const b=p.dataset.mi;
+    if(b==='promo') return setPromo(!showPromo);
+    const t=new Set(['core','tbg','2nd'].filter(x=>activeBoxes.has(x)));
+    if(t.has(b)) t.delete(b); else t.add(b);
+    setBoxTokens([...t]);
+  });
+  if(!boxes.some(b=>b!=='2nd')){
+    el.innerHTML=head+'<div class="mi-warn">'+(boxes.length?"Second Contact is an expansion: add Captain's Chair or To Boldly Go.":'Select at least one box.')+'</div>';
+    wire(); return el;
+  }
+  let scale=1;
+  MI_VALID.forEach(v=>[false,true].forEach(pr=>miShares(bot,miPool(v,pr)).forEach(l=>scale=Math.max(scale,l.p))));
+  const pool=miPool(boxes,promos), L=miShares(bot,pool);
+  const hasBase=origin!=='2nd', base=hasBase?miShares(bot,miPool([origin],false)):null;
+  const label=boxes.map(b=>MI_NAME[b]).join(' + ')+(promos?' + Promos':'');
+  let h=head+`<div class="mi-def">Share of Market, Location and Encounter cards that resolve on each row, for the boxes selected: ${label} (${pool.length} cards).</div>`;
+  if(hasBase) h+=`<div class="mi-leg"><span><i class="lb"></i>selected market</span><span><i class="lt"></i>${MI_NAME[origin]} alone</span></div>`;
+  let g='';
+  L.forEach((l,i)=>{
+    if(l.g!==g){g=l.g;h+=`<div class="mi-grp">${g}</div>`;}
+    const key=bot.id+':'+l.k, w=100*l.p/scale;
+    h+=`<div class="mi-row${l.muted?' muted':''}"><span class="lab">${l.lab}</span><span class="mi-track">`+
+       `<span class="mi-fill" data-k="${key}" data-w="${w}" style="width:${MI_PREV[key]!=null?MI_PREV[key]:0}%"></span>`+
+       (hasBase?`<span class="mi-base" style="left:calc(${100*base[i].p/scale}% - 1px)"></span>`:'')+
+       `</span><span class="mi-val">${l.p.toFixed(1)}% <span class="n">(${l.n})</span></span></div>`;
+  });
+  el.innerHTML=h; wire();
+  const raf=typeof requestAnimationFrame==='function'?requestAnimationFrame:f=>f();
+  raf(()=>raf(()=>(el.querySelectorAll?el.querySelectorAll('.mi-fill'):[]).forEach(f=>{
+    f.style.width=f.dataset.w+'%'; MI_PREV[f.dataset.k]=+f.dataset.w;
+  })));
+  return el;
 }
 
 function buildBotFaces(bot){
@@ -2438,7 +2549,7 @@ function render(){
     if(deckBots.length){
       const bg=document.createElement('div');
       bg.className='card-grid bot-grid';
-      deckBots.forEach(b=>buildBotFaces(b).forEach(f=>bg.appendChild(f)));
+      deckBots.forEach(b=>{ const fs=buildBotFaces(b); fs.splice(fs.length-(b.campaign?1:0),0,buildMarketInsights(b)); fs.forEach(f=>bg.appendChild(f)); });
       section.appendChild(bg);
     }
     const grid=document.createElement('div');
@@ -2533,7 +2644,7 @@ DECK_ORDER.filter(d=>!d.startsWith('Common:')).forEach(d=>{
   p.onclick=()=>{
     const tok = tokenOf('deck',d);
     let text=currentQuery();
-    if(box && !activeBoxes.has(box)) text=withBoxAdded(text,box);
+    if(box && !activeBoxes.has(box) && !showBots) text=withBoxAdded(text,box);
     const toks=tokenList(text);
     const i=toks.findIndex(t=>t.toLowerCase()===tok.toLowerCase());
     if(i>=0) toks.splice(i,1); else toks.push(tok);

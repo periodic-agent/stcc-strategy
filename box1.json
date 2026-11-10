@@ -3915,7 +3915,7 @@
     "source": "Burnham",
     "game_box": "Captain's Chair",
     "card_number": "1BUR09/26",
-    "glory": 3,
+    "glory": 5,
     "position_indicator": "Development",
     "species_traits": [
       "Human"
@@ -6146,7 +6146,7 @@
     "source": "Sisko",
     "game_box": "Captain's Chair",
     "card_number": "1SIS05/25",
-    "glory": 1,
+    "glory": 7,
     "position_indicator": "Development",
     "species_traits": [
       "Transcendent"
