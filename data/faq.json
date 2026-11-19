@@ -11,7 +11,8 @@
   "snw-sha-ka-ree": "You can target Sha Ka Ree with Strange New Worlds. The [[ship]] beamed to Sha Ka Ree fulfils the requirement, since the card says “ship” and not “deployed ship”. You also need an [[away team]] there.",
   "jadzia-dax-scan": "This card's reaction can be used on a “scan X of suit” effect, where it sets X to 2, so changing a scan 1 to a scan 2 is beneficial. It cannot be used on a “scan for trait” effect or on a “gain a specific trait” effect.",
   "horta-dilithium": "Getting resources from the Market counts as gaining resources. The Horta triggers when you get a card with [[dilithium]] on it. When you yourself are playing with Burnham, any [[dilithium]] you gain (except from the Market) is placed on your Inert Dilithium Status card. The Horta boosts any [[dilithium]] gain (including, as mentioned, when gaining [[dilithium]] from the Market), but since the additional [[dilithium]] gained from the Horta is not taken from the Market, it is inert.",
-  "amargosa-warp": "When this card is logged, before dismissing any ships at this location, choose another location in play (either controlled by you or in the Neutral Zone) and warp all of your deployed ships to that location."
+  "amargosa-warp": "When this card is logged, before dismissing any ships at this location, choose another location in play (either controlled by you or in the Neutral Zone) and warp all of your deployed ships to that location.",
+  "to-discard-pile-not-discarding": "Taking or gaining a card to your Discard pile is not discarding it, since the card was never in your hand. It triggers Reactions on taking or gaining that card (e.g. “After taking an [[incident]]”), but not Reactions on discarding (e.g. “After discarding a card”). Earlier printings of Worf and Jett Reno read “take an [[incident]] and discard it” / “discard the gained card”; the wording changed to make this clear, not to change the rule."
  },
  "entries": {
   "captain-dorg": [
@@ -210,6 +211,42 @@
   ],
   "amargosa-observatory": [
    "amargosa-warp"
+  ],
+  "picard-worf": [
+   "to-discard-pile-not-discarding"
+  ],
+  "burnham-jett-reno": [
+   "to-discard-pile-not-discarding"
+  ],
+  "kirk-hikaru-sulu": [
+   "to-discard-pile-not-discarding"
+  ],
+  "rebner-salvage": [
+   "to-discard-pile-not-discarding"
+  ],
+  "khan-salvage": [
+   "to-discard-pile-not-discarding"
+  ],
+  "ensign-mariner": [
+   "to-discard-pile-not-discarding"
+  ],
+  "fesarius": [
+   "to-discard-pile-not-discarding"
+  ],
+  "freeman-dooplers": [
+   "to-discard-pile-not-discarding"
+  ],
+  "freeman-jack-ransom": [
+   "to-discard-pile-not-discarding"
+  ],
+  "cold-station-12": [
+   "to-discard-pile-not-discarding"
+  ],
+  "kirk-leonard-mccoy": [
+   "to-discard-pile-not-discarding"
+  ],
+  "pike-joseph-mbenga": [
+   "to-discard-pile-not-discarding"
   ]
  }
 }
