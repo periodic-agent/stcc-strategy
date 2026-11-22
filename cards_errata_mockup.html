@@ -25,8 +25,10 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Exo 2',sans-serif;font-weight:300;background:var(--bg);color:var(--text);min-height:100vh;}
 a{color:var(--blue);text-decoration:none;}
-.nav-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:0.75rem 1.5rem;}
-.nav-bar a{font-family:'Orbitron',sans-serif;font-size:0.69rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--scanner);}
+.nav-bar{position:absolute;top:0;left:0;z-index:2;background:none;border:0;padding:0.7rem 1.25rem;}
+.nav-bar a{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#f0b323;opacity:0.85;text-decoration:none;}
+.nav-bar a:hover{opacity:1;}
+body{position:relative;}
 .chapter-header{background:#06080f;border-bottom:2px solid #f0b323;padding:1.4rem 1.5rem 1.1rem;text-align:center;position:relative;overflow:hidden;}
 .chapter-header::before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,rgba(200,16,46,0.35) 0 22%,transparent 22.3%),linear-gradient(115deg,transparent 0 30%,rgba(28,110,194,0.28) 30.3% 44%,transparent 44.3%),linear-gradient(115deg,transparent 0 52%,rgba(240,179,35,0.22) 52.3% 60%,transparent 60.3%);}
 .chapter-header>*{position:relative;}
@@ -151,7 +153,8 @@ a{color:var(--blue);text-decoration:none;}
 .box-pill[data-box="promo"]:hover{border-color:#a8b4c8;color:#c8d2e0;}
 .box-pill[data-box="promo"].active{background:#7a8aaa;border-color:#7a8aaa;border-style:solid;color:#0a0e1a;font-weight:600;}
 body.bot-mode #suitFilters,body.bot-mode #speciesBody,body.bot-mode #regularBody,body.bot-mode #otherBody,
-body.bot-mode #skillsBody,body.bot-mode #focusBody,body.bot-mode #stripBody,body.bot-mode #statusBody{opacity:.35;pointer-events:none;}
+body.bot-mode #skillsBody,body.bot-mode #stripBody,body.bot-mode #statusBody{opacity:.35;pointer-events:none;}
+.focus-row{margin-top:0.45rem;}
 
 .promo-pill{font-family:'Exo 2',sans-serif;font-size:0.72rem;padding:0.22rem 0.75rem;border-radius:3px;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:all 0.15s;user-select:none;}
 .promo-pill[data-promo="promo1"]{border-color:#4a9fd4;color:#4a9fd4;}
@@ -170,15 +173,9 @@ body.bot-mode #skillsBody,body.bot-mode #focusBody,body.bot-mode #stripBody,body
 .deck-pill.second{border-color:rgba(200,168,75,0.4);color:#c8a84b;}
 .deck-pill.second:hover{background:rgba(200,168,75,0.15);border-color:#e8c96a;color:#f0d878;}
 .deck-pill.second.active{background:#c8a84b;border-color:#c8a84b;color:#000;font-weight:600;}
-.deck-pill.common{border-color:rgba(74,159,212,0.4);color:#4a9fd4;}
-.deck-pill.common:hover{background:rgba(74,159,212,0.15);border-color:#4a9fd4;color:#7ec8f0;}
-.deck-pill.common.active{background:#4a9fd4;border-color:#4a9fd4;color:#000;font-weight:600;}
-.deck-pill.common-tbg{border-color:rgba(192,57,43,0.4);color:#c0392b;}
-.deck-pill.common-tbg:hover{background:rgba(192,57,43,0.15);border-color:#e05a5a;color:#ff8080;}
-.deck-pill.common-tbg.active{background:#c0392b;border-color:#c0392b;color:#fff;font-weight:600;}
-.deck-pill.common-2nd{border-color:rgba(200,168,75,0.4);color:#c8a84b;}
-.deck-pill.common-2nd:hover{background:rgba(200,168,75,0.15);border-color:#e8c96a;color:#f0d878;}
-.deck-pill.common-2nd.active{background:#c8a84b;border-color:#c8a84b;color:#000;font-weight:600;}
+.deck-pill.commons{border-color:#7a8aaa;color:#9aa8bc;margin-right:0.35rem;}
+.deck-pill.commons:hover{border-color:#a8b4c8;color:#c8d2e0;}
+.deck-pill.commons.active{background:#7a8aaa;border-color:#7a8aaa;color:#0a0e1a;font-weight:600;}
 
 .suit-pill{font-family:'Exo 2',sans-serif;font-size:0.72rem;padding:0.22rem 0.65rem;border-radius:3px;border:1px solid;cursor:pointer;transition:background 0.15s;user-select:none;}
 .suit-pill[data-suit="Person"]{border-color:var(--person);color:var(--person);}
@@ -356,18 +353,24 @@ body.lb-open{overflow:hidden;}
   font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;margin:-.1rem 0 .3rem;}
 .multsec .mt-key b{font-weight:400;}
 .multsec .mt-key .kb{color:#7ec8f0;}
-.multsec .mt-key .ka{color:#e09050;}
+.multsec .mt-key .ka{color:var(--muted);}
 .mt-row{display:flex;align-items:center;gap:.3rem;margin:.34rem 0;}
 .mt-chip{flex:none;display:inline-flex;align-items:center;height:1.15em;border-radius:999px;overflow:hidden;}
 .mt-chip img{height:1.15em;width:auto;display:block;}
 .mt-slots{flex:1;display:grid;grid-template-columns:repeat(15,1fr);align-items:center;gap:1px;}
-.mt-slot{position:relative;height:30px;display:flex;align-items:center;justify-content:center;}
+.mt-slot{position:relative;height:22px;display:flex;align-items:center;justify-content:center;}
 .mt-slot::after{content:'';width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.18);}
-.mt-slot.on::after{width:5px;height:5px;background:rgba(255,255,255,.55);}
-.mt-slot b,.mt-slot s{position:absolute;left:0;right:0;text-align:center;text-decoration:none;
-  font-family:'Antonio',sans-serif;font-weight:700;font-size:.62rem;line-height:1;}
-.mt-slot b{top:0;color:#7ec8f0;}
-.mt-slot s{bottom:0;color:#e09050;}
+.mt-slot.on::after{display:none;}
+.mt-slot b{position:relative;z-index:1;text-align:center;
+  font-family:'Antonio',sans-serif;font-weight:700;font-size:.78rem;line-height:1;
+  color:#7ec8f0;background:var(--bg2);padding:1px 0;}
+.mt-slot b i{font-style:normal;font-size:1.55em;line-height:0;vertical-align:-.06em;margin-right:.02em;}
+.mt-scale{margin:.1rem 0 -.1rem;}
+.mt-scale .mt-chip{visibility:hidden;}
+.mt-tick{text-align:center;font-family:'Antonio',sans-serif;font-weight:600;font-size:.62rem;
+  line-height:1;color:var(--muted);letter-spacing:.02em;}
+.mt-slots .mt-slot:nth-child(5n)::before{content:'';position:absolute;left:50%;top:-.17rem;bottom:-.17rem;
+  border-left:1px dashed rgba(255,255,255,.14);}
 .dnote{margin:.9rem 0 .2rem;}
 .dnote-head{display:flex;align-items:center;gap:.45rem;margin-bottom:.35rem;}
 .dnote-rule{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(240,179,35,.7),transparent);}
@@ -403,6 +406,9 @@ body.lb-open{overflow:hidden;}
 .tip-jar .tip-hi{color:var(--blue2);text-decoration:underline;text-underline-offset:3px;}
 .tip-jar .tip-hi:hover{color:#a8ddf8;}
 footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:center;font-size:0.72rem;color:var(--muted);line-height:1.8;}
+footer p{margin:0 0 .6rem;}
+footer p:last-child{margin-bottom:0;}
+footer a{color:var(--muted);text-decoration:underline;}
 
 .box-pill,.promo-pill,.deck-pill,.suit-pill,.species-pill,.regular-pill,.other-pill,.skill-pill{
   border-width:1.5px;border-style:solid;
@@ -524,6 +530,10 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
   font-family:'Antonio',sans-serif;font-size:.56rem;font-weight:600;letter-spacing:.07em;
   padding:.12rem .55rem;border-radius:0 999px 999px 0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22);}
 .cid2 .meta{color:#8a94ac;font-weight:400;margin-left:.35rem;}
+.cid2.has-cap{padding-right:.95rem;}
+.capmini{flex:none;align-self:stretch;position:relative;z-index:2;}
+.capmini img{position:absolute;left:0;bottom:calc(-.7rem - 1px);height:2.3rem;width:auto;display:block;
+  filter:drop-shadow(0 0 .6px rgba(255,255,255,.55));}
 .posin{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1;
   background:#14171f;color:#e8ecf5;white-space:nowrap;
   font-family:'Antonio',sans-serif;font-size:.56rem;font-weight:600;letter-spacing:.07em;
@@ -607,7 +617,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 .active-summary,.qh-note,.strip-note,footer,.deck-count{
   font-family:'Exo 2',sans-serif;font-weight:400;font-size:.72rem;letter-spacing:0;font-style:normal;}
 .query-help code{font-size:.75rem;}
-.nav-bar a,.filter-label,.deck-group-header,.qh-title,.pill-sublabel{
+.filter-label,.deck-group-header,.qh-title,.pill-sublabel{
   font-family:'Orbitron',sans-serif;font-weight:400;font-size:.6875rem;letter-spacing:.12em;}
 .vtoggle,.clear-btn{font-family:'Antonio',sans-serif;font-weight:600;font-size:.8rem;letter-spacing:.04em;
   border-radius:999px;height:22px;box-sizing:border-box;display:inline-flex;align-items:center;padding:0 .8rem;}
@@ -690,6 +700,33 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 }
 .pn-mark{font-weight:700;margin-right:.3rem;}
 .st-pill .st-mk{display:inline-block;font-size:.8em;line-height:1;transform:translateY(-.08em);}
+
+.mi{background:var(--surface,#111827);border:1px solid var(--border,#26304a);border-radius:8px;padding:.7rem .9rem .8rem;align-self:start;min-width:0}
+.mi-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .8rem;margin-bottom:.2rem}
+.mi-boxes{display:flex;flex-wrap:wrap;gap:.3rem}
+.mi-boxes .box-pill{font-size:.78rem;padding:.12rem .55rem;cursor:pointer}
+.mi-title{font-family:'Antonio',sans-serif;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem;color:#fff}
+.mi-def{font-size:.74rem;color:var(--muted,#7a8aaa);margin:.15rem 0 .35rem}
+.mi-leg{display:flex;gap:1rem;font-size:.72rem;color:var(--muted,#7a8aaa);margin-bottom:.4rem;font-family:'Barlow Condensed',sans-serif}
+.mi-leg i{display:inline-block;vertical-align:middle;margin-right:.3rem}
+.mi-leg .lb{width:16px;height:9px;background:#3aa0e6;border-radius:0 3px 3px 0}
+.mi-leg .lt{width:2px;height:13px;background:#d7dce6}
+.mi-grp{font-family:'Antonio',sans-serif;font-weight:600;letter-spacing:.12em;font-size:.72rem;color:var(--muted,#7a8aaa);text-transform:uppercase;margin:.5rem 0 .1rem;border-bottom:1px solid var(--border,#26304a);padding-bottom:.15rem}
+.mi-row{display:grid;grid-template-columns:minmax(90px,36%) 1fr 5rem;gap:.6rem;align-items:center;padding:.22rem 0;font-family:'Barlow Condensed',sans-serif;font-size:.95rem}
+.mi-row .lab{min-width:0}
+.mi-chips{display:flex;flex-wrap:wrap;align-items:center;gap:.1rem 0}
+.mi-chips .stripchip{height:1.32em;font-size:.74rem}
+.mi-ksep{margin:0 .2em;font-weight:600;color:var(--muted,#7a8aaa)}
+.mi-suit{display:inline-flex;align-items:center;gap:.3em;height:1.5em;padding:0 .7em 0 .45em;border-radius:0 .95em .95em 0;color:#fff;font-family:'Antonio',sans-serif;font-weight:600;letter-spacing:.06em;font-size:.82rem}
+.mi-suit img{height:1.05em;width:auto}
+.mi-row.muted .lab{color:var(--muted,#7a8aaa)}
+.mi-track{position:relative;height:14px;background:rgba(255,255,255,.05);border-radius:2px}
+.mi-fill{position:absolute;left:0;top:2px;height:10px;background:#3aa0e6;border-radius:0 4px 4px 0;transition:width .45s cubic-bezier(.3,.7,.2,1)}
+.mi-row.muted .mi-fill{background:#7a8aaa}
+.mi-base{position:absolute;top:-3px;width:2px;height:20px;background:#d7dce6;border-radius:1px}
+.mi-val{text-align:right;font-variant-numeric:tabular-nums}
+.mi-val .n{color:var(--muted,#7a8aaa);font-size:.85em}
+.mi-warn{font-family:'Barlow Condensed',sans-serif;font-size:.95rem;border-left:3px solid #f0b323;padding:.3rem .6rem;background:rgba(240,179,35,.06)}
 </style>
 <meta name="description" content="Searchable card database for Star Trek: Captain's Chair. Filter every card by box, deck, suit, traits, skills and name — built for mid-game lookups.">
 <meta name="robots" content="noindex,nofollow">
@@ -702,7 +739,7 @@ footer{border-top:1px solid var(--border);padding:1.25rem 1.5rem;text-align:cent
 <meta property="og:url" content="https://periodic-agent.github.io/stcc-strategy/cards.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<script src="cardface-assets.js?v=c07331a3"></script>
+<script src="cardface-assets.js?v=0d8ae5c7"></script>
 </head>
 <body>
 
@@ -760,6 +797,7 @@ would appear in the card scanner. <b>Not linked from the site.</b></div>
     <div class="qh-row"><code>errata:wording</code> · <code>errata:"operation redesign"</code><span>errata of that type: card name change, card trait change, operation added/removed, operation redesign, wording correction, card replacement</span></div>
     <div class="qh-row"><code>notes</code> · <code>strategy</code> · <code>faq</code><span>cards with a designer's note, with their own section in a strategy guide, or with a rules note in their FAQ section</span></div>
     <div class="qh-note">Click a card for its scan, errata, notes and guide links; the arrows page through the results. Every search lives in the page address: bookmark or share the link and it reopens the scanner with your filters already applied.</div>
+    <div class="qh-note">Card text follows the current wording; promo packs are still transcriptions.</div>
   </div>
 
   <div class="filter-section">
@@ -819,26 +857,14 @@ would appear in the card scanner. <b>Not linked from the site.</b></div>
   <div class="filter-section">
     <div class="collapsible-header" id="skillsHead" onclick="toggleSection(this,'skillsBody','skillsSummary')">
       <div style="display:flex;align-items:center;gap:0.4rem;">
-        <div class="filter-label">Skills</div>
+        <div class="filter-label">Skills &amp; Focus</div>
         <span class="active-summary skill" id="skillsSummary"></span>
       </div>
       <span class="collapsible-arrow">&#9660;</span>
     </div>
     <div class="collapsible-body" id="skillsBody">
       <div class="pill-row" id="skillFilters"></div>
-    </div>
-  </div>
-
-  <div class="filter-section">
-    <div class="collapsible-header" id="focusHead" onclick="toggleSection(this,'focusBody','focusSummary')">
-      <div style="display:flex;align-items:center;gap:0.4rem;">
-        <div class="filter-label">Focus</div>
-        <span class="active-summary skill" id="focusSummary"></span>
-      </div>
-      <span class="collapsible-arrow">&#9660;</span>
-    </div>
-    <div class="collapsible-body" id="focusBody">
-      <div class="pill-row" id="focusFilters"></div>
+      <div class="pill-row focus-row" id="focusFilters"></div>
     </div>
   </div>
 
@@ -852,7 +878,6 @@ would appear in the card scanner. <b>Not linked from the site.</b></div>
     </div>
     <div class="collapsible-body" id="stripBody">
       <div class="pill-row" id="stripFilters"></div>
-      <div class="strip-note">Card text follows the current wording; promo packs are still transcriptions.</div>
     </div>
   </div>
 
@@ -884,7 +909,7 @@ would appear in the card scanner. <b>Not linked from the site.</b></div>
   <p>If this tool has been helpful to you, you can <a class="tip-hi" href="https://buymeacoffee.com/periodic_agent" target="_blank" rel="noopener">tip here</a>.</p>
 </div>
 
-<footer>Star Trek: Captain's Chair is designed by D&aacute;vid Turczi and Nigel Buckle (To Boldly Go: with Adam Turczi) and published by WizKids. Card images &copy; WizKids. Star Trek and related marks are trademarks of CBS Studios Inc.<br>Card data entered by Periodic_agent, Assmatt, Esquire_Sandwich, Lynette T, Dreadreaper.<br>Card scans from Periodic_agent, Seth Bryant, pepper0nc1n1.<br>This website is unofficial fan content.</footer>
+<footer><p>Star Trek: Captain's Chair is designed by D&aacute;vid Turczi and Nigel Buckle (To Boldly Go: with Adam Turczi) and published by WizKids. Card images &copy; WizKids. Star Trek and related marks are trademarks of CBS Studios Inc. This website is unofficial fan content.</p><p>Card data entered by Periodic_agent, Assmatt, Esquire_Sandwich, Lynette T, Dreadreaper. Card scans from Periodic_agent, Seth Bryant, pepper0nc1n1. The card database (this site's data files) is shared under <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.en" target="_blank" rel="noopener">CC BY-NC 4.0</a>: credit it as "Card data from the ST:CC Card Scanner at https://periodic-agent.github.io/stcc-strategy" and do not use it for commercial purposes. Card names, text and images remain &copy; WizKids. Errata and designer notes are provided by the designers for this site and are not part of the shared data.</p></footer>
 
 <script>
 let ALL_CARDS = [];
@@ -1072,6 +1097,7 @@ function buildFullPool(){
   FULL_POOL.forEach(c=>{ (FULL_BY_ID[c.id]=FULL_BY_ID[c.id]||[]).push(c); });
 }
 
+let FULL_RESOLVED = null;
 function resolveSelected(){
   const selected = FULL_POOL.filter(c=>activeBoxes.has(rawBoxKey(c)));
   ALL_CARDS = resolveCards(selected, showDupes);
@@ -1306,7 +1332,7 @@ function togglePnHelp(ev){
 function errataKind(e){ return (e && e.kind) || 'errata'; }
 
 function markEntries(c){ return (c.errata||[]).filter(e=>errataKind(e)!=='update'); }
-function hasErrataMark(c){ return markEntries(c).length > 0 && c.badgeKind !== 'update'; }
+function hasErrataMark(c){ return markEntries(c).length > 0 && (c.badgeKind !== 'update' || !(FULL_BY_ID[c.id]||[]).some(p=>p.variant!=='updated')); }
 function errataLine(e){
   const k=errataKind(e), t=lbEsc(e.type||'');
   if(k==='update') return t;
@@ -1652,6 +1678,8 @@ function applyQuery(text){
     list.forEach(d=>{ if(d!=='::common') out.add(d); });
     return out; };
   activeDecks=expand(q.decks); negDecks=expand(q.negDecks);
+  if(showPromo && ['Common:core','Common:tbg','Common:2nd'].some(k=>activeDecks.has(k))){
+    activeDecks.add('Common:promo1'); activeDecks.add('Common:promo2'); }
   activeSuits=new Set(q.suits); negSuits=new Set(q.negSuits);
   activeTags=new Set(q.tags);  negTags=new Set(q.negTags);
   activeSkills=new Set(q.skills); negSkills=new Set(q.negSkills);
@@ -1729,7 +1757,7 @@ function setBoxTokens(target){
   let toks=tokenList(currentQuery()).filter(t=>!/^-?box:/i.test(t) || /^box:promos?$/i.test(t));
   target=target.filter(b=>DEFAULT_BOXES.includes(b));
   const dropped=DEFAULT_BOXES.filter(b=>!target.includes(b));
-  if(dropped.length) toks=toks.filter(t=>{
+  if(dropped.length && !showBots) toks=toks.filter(t=>{
     const m=t.match(/^-?deck:(.+)$/i);
     if(!m) return true;
     const v=m[1].replace(/^"|"$/g,'').toLowerCase();
@@ -1753,7 +1781,8 @@ function syncFilterPills(){
   document.querySelectorAll('.suit-pill').forEach(p=>p.classList.toggle('active',activeSuits.has(p.dataset.suit)));
   document.querySelectorAll('.species-pill,.regular-pill,.other-pill').forEach(p=>p.classList.toggle('active',activeTags.has(p.dataset.value)));
   document.querySelectorAll('.skill-pill').forEach(p=>p.classList.toggle('active',activeSkills.has(p.dataset.value)));
-  document.querySelectorAll('.deck-pill').forEach(p=>p.classList.toggle('active',activeDecks.has(p.dataset.deck)));
+  document.querySelectorAll('.deck-pill').forEach(p=>p.classList.toggle('active',
+    p.dataset.deck==='::common' ? [...activeDecks].some(k=>k.startsWith('Common:')) : activeDecks.has(p.dataset.deck)));
 }
 
 function syncBoxPills(){
@@ -1841,9 +1870,7 @@ function updateSummaries(){
   document.getElementById('speciesSummary').textContent=sp.length?sp.join(', '):'';
   document.getElementById('regularSummary').textContent=rg.length?rg.join(', '):'';
   document.getElementById('otherSummary').textContent=ot.length?ot.join(', '):'';
-  const skOnly=sk.filter(v=>!/Focus$/.test(v)), foOnly=sk.filter(v=>/Focus$/.test(v));
-  document.getElementById('skillsSummary').textContent=skOnly.length?skOnly.join(', '):'';
-  document.getElementById('focusSummary').textContent=foOnly.length?foOnly.join(', '):'';
+  document.getElementById('skillsSummary').textContent=sk.length?sk.join(', '):'';
   const stripLabel=Object.fromEntries(STRIP_KINDS);
   document.getElementById('stripSummary').textContent=[...activeStrips].map(k=>stripLabel[k]||k).join(', ');
   const st=STATUS_PILLS.filter(d=>d.word && d.on()).map(d=>d.name);
@@ -1854,8 +1881,7 @@ function updateSummaries(){
     species:allSpecies.some(t=>negTags.has(t)),
     regular:allRegular.some(t=>negTags.has(t)),
     other:allOther.some(t=>negTags.has(t)),
-    skills:negSk.some(v=>!/Focus$/.test(v)),
-    focus:negSk.some(v=>/Focus$/.test(v)),
+    skills:negSk.length>0,
     strip:negStrips.size>0,
     status:false};
   Object.keys(used).forEach(s=>{
@@ -1912,8 +1938,11 @@ function updateBadges(){
     p.classList.toggle('active', activeStrips.has(kind));
     p.classList.toggle('zero', n===0);
   });
+  if(!FULL_RESOLVED) FULL_RESOLVED = resolveCards(FULL_POOL, true);
   document.getElementById('statusFilters').querySelectorAll('.st-pill').forEach(p=>{
     const d=STATUS_PILLS.find(x=>x.k===p.dataset.st);
+    const anywhere=FULL_RESOLVED.some(d.test);
+    p.style.display = anywhere ? '' : 'none';
     const n=new Set(ALL_CARDS.filter(d.test).map(x=>x.id)).size;
     const cnt=p.querySelector('.cnt');
     if(cnt) cnt.textContent='('+n+')';
@@ -1947,26 +1976,31 @@ function deckMultHTML(c){
   if(!c || c.suit!=='Captain') return '';
   const d=DECK_MULT[c.deck];
   if(!d) return '';
-  let rows='';
+  let rows='', firstChip='';
   for(const [k,name,col] of MULT_TRACKS){
     const t=d[k];
     if(!t) continue;
     const src=(CARDFACE.skillChip||CARDFACE.skill||{})[name];
     const chip=src?'<span class="mt-chip" style="background:'+col+'">'
       +'<img src="'+src+'" alt="'+name+'"></span>':'';
+    if(!firstChip) firstChip=chip;
     let slots='';
     for(let i=1;i<=15;i++){
       const v=t[String(i)];
       slots+='<div class="mt-slot'+(v?' on':'')+'"'
         +(v?' title="Space '+i+': basic \u00d7'+(v+1)+', advanced \u00d7'+v+'"':'')+'>'
-        +(v?'<b>\u00d7'+(v+1)+'</b><s>\u00d7'+v+'</s>':'')+'</div>';
+        +(v?'<b><i>\u00d7</i>'+(v+1)+'</b>':'')+'</div>';
     }
     rows+='<div class="mt-row">'+chip+'<div class="mt-slots">'+slots+'</div></div>';
   }
   if(!rows) return '';
+  let ticks='';
+  for(let i=1;i<=15;i++) ticks+='<div class="mt-tick">'+(i%5===0?i:'')+'</div>';
+  const scale='<div class="mt-row mt-scale" aria-hidden="true">'
+    +firstChip.replace(/ alt="[^"]*"/,' alt=""')+'<div class="mt-slots">'+ticks+'</div></div>';
   return '<div class="dnote multsec"><div class="dnote-head"><span class="dnote-rule"></span>'
     +'<span class="dnote-label">Multipliers</span><span class="dnote-rule"></span></div>'
-    +'<div class="mt-key"><b class="kb">Basic</b><b class="ka">Advanced</b></div>'+rows+'</div>';
+    +'<div class="mt-key"><b class="kb">Basic side</b><b class="ka">(Advanced: \u22121)</b></div>'+scale+rows+'</div>';
 }
 const REQ_GLYPH_CX={research:34.5,military:35.0,influence:36.4,any:31.2,
                     variable:49.3,collective:50};
@@ -2275,10 +2309,100 @@ function botMatches(bot){
 
 function botsForDeck(deck){
   if(!showBots) return [];
-  if(!activeBoxes.has(DECK_BOX[deck])) return [];
+  if(!activeBoxes.has(DECK_BOX[deck]) && !activeDecks.has(deck)) return [];
   if(activeDecks.size && !activeDecks.has(deck)) return [];
   if(negDecks.has(deck)) return [];
   return BOTS.filter(b=>b.captain===deck && botMatches(b));
+}
+
+
+const MI_SUITS=['person','ally','cargo','ship','incident'];
+const MI_INC=6;
+const MI_RANK={core:0,tbg:1,'2nd':2,promo1:3,promo2:4};
+const MI_NAME={core:"Captain's Chair",tbg:'To Boldly Go','2nd':'Second Contact'};
+const MI_VALID=[['core'],['tbg'],['core','tbg'],['core','2nd'],['tbg','2nd'],['core','tbg','2nd']];
+const MI_PREV={};
+const miTok=k=>(k.match(/\[\[([^\]]+)\]\]/g)||[]).map(t=>t.slice(2,-2).trim().toLowerCase());
+const miCap=s=>s.replace(/\b[a-z]/g,m=>m.toUpperCase()).replace(/Nx-01/i,'NX-01');
+function miPool(boxes,promos){
+  const by=new Map();
+  FULL_POOL.forEach(c=>{
+    const b=rawBoxKey(c), suit=(c.suit||'').toLowerCase();
+    if(c.virtual||!MI_SUITS.includes(suit)||!(c.source==='Common'||c.source==='Promo')) return;
+    if(b.startsWith('promo') ? !promos : !boxes.includes(b)) return;
+    const p=by.get(c.id); if(!p||MI_RANK[b]>MI_RANK[p.b]) by.set(c.id,{b,s:suit,
+      t:[...(c.species_traits||[]),...(c.regular_traits||[]),...(c.other_traits||[])].map(x=>x.toLowerCase())});
+  });
+  const P=[...by.values()], inc=P.filter(c=>c.s==='incident').length;
+  P.forEach(c=>c.w=c.s==='incident'?MI_INC/inc:1);
+  return P;
+}
+function miShares(bot,pool){
+  const rows=(bot.traits||[]).map(r=>miTok(r.key));
+  const suits=(bot.suits||[]).map(s=>s.suit.toLowerCase()).filter(s=>MI_SUITS.includes(s));
+  const n={}; rows.forEach((_,i)=>n['t'+i]=0); n.sur=0; suits.forEach(s=>n['s'+s]=0); n.none=0;
+  let tot=0;
+  pool.forEach(c=>{
+    tot+=c.w;
+    const set=new Set([...c.t,c.s]);
+    if(set.has('surprise')){n.sur+=c.w;return;}
+    const i=set.has('wildcard')?0:rows.findIndex(r=>r.some(t=>set.has(t)));
+    if(i>=0){n['t'+i]+=c.w;return;}
+    if(('s'+c.s) in n) n['s'+c.s]+=c.w; else n.none+=c.w;
+  });
+  const L=[{k:'sur',g:'Traits',lab:'<span class="mi-chips">'+stripToken('trait:Surprise')+'</span>'}];
+  (bot.traits||[]).forEach((r,i)=>L.push({k:'t'+i,g:'Traits',lab:'<span class="mi-chips">'+botKeyChips(r.key).join('<span class="mi-ksep">/</span>')+'</span>'}));
+  if(suits.length) suits.forEach(s=>{
+    const disp=miCap(s), col=BOT_SUIT_COL[disp]||'#8494ad';
+    const gly=CARDFACE.suit[s]||(CARDFACE.suitFont&&CARDFACE.suitFont[s])||'';
+    L.push({k:'s'+s,g:'Suits (no trait matched)',lab:'<span class="mi-suit" style="background:'+col+'">'+(gly?'<img src="'+gly+'" alt="">':'')+disp.toUpperCase()+'</span>'});
+  });
+  else L.push({k:'none',g:'Traits',lab:'No match',muted:true});
+  L.forEach(l=>{l.n=n[l.k];l.p=tot?100*l.n/tot:0;});
+  return L;
+}
+function buildMarketInsights(bot){
+  const el=document.createElement('div'); el.className='mi';
+  const boxes=['core','tbg','2nd'].filter(b=>activeBoxes.has(b));
+  const promos=activeBoxes.has('promo1')||activeBoxes.has('promo2');
+  const origin=DECK_BOX[bot.captain];
+  const chip=(b,l)=>`<span class="box-pill${(b==='promo'?showPromo:activeBoxes.has(b))?' active':''}" data-box="${b}" data-mi="${b}">${l}</span>`;
+  const head='<div class="mi-head"><div class="mi-title">Market insights</div><div class="mi-boxes">'+
+    chip('core',"Captain's Chair")+chip('tbg','To Boldly Go')+chip('2nd','Second Contact')+chip('promo','Promos')+'</div></div>';
+  const wire=()=>el.querySelectorAll('[data-mi]').forEach(p=>p.onclick=()=>{
+    const b=p.dataset.mi;
+    if(b==='promo') return setPromo(!showPromo);
+    const t=new Set(['core','tbg','2nd'].filter(x=>activeBoxes.has(x)));
+    if(t.has(b)) t.delete(b); else t.add(b);
+    setBoxTokens([...t]);
+  });
+  if(!boxes.some(b=>b!=='2nd')){
+    el.innerHTML=head+'<div class="mi-warn">'+(boxes.length?"Second Contact is an expansion: add Captain's Chair or To Boldly Go.":'Select at least one box.')+'</div>';
+    wire(); return el;
+  }
+  let scale=1;
+  MI_VALID.forEach(v=>[false,true].forEach(pr=>miShares(bot,miPool(v,pr)).forEach(l=>scale=Math.max(scale,l.p))));
+  const pool=miPool(boxes,promos), L=miShares(bot,pool);
+  const hasBase=origin!=='2nd', base=hasBase?miShares(bot,miPool([origin],false)):null;
+  const label=boxes.map(b=>MI_NAME[b]).join(' + ')+(promos?' + Promos':'');
+  const nm=pool.filter(c=>c.s!=='incident').length, ni=pool.length-nm;
+  let h=head+`<div class="mi-def">Share of Market cards and of the 6-card Incident deck that resolve on each row, for the boxes selected: ${label} (${nm} Market cards, 6 Incidents drawn from ${ni}).</div>`;
+  if(hasBase) h+=`<div class="mi-leg"><span><i class="lb"></i>selected market</span><span><i class="lt"></i>${MI_NAME[origin]} alone</span></div>`;
+  let g='';
+  L.forEach((l,i)=>{
+    if(l.g!==g){g=l.g;h+=`<div class="mi-grp">${g}</div>`;}
+    const key=bot.id+':'+l.k, w=100*l.p/scale;
+    h+=`<div class="mi-row${l.muted?' muted':''}"><span class="lab">${l.lab}</span><span class="mi-track">`+
+       `<span class="mi-fill" data-k="${key}" data-w="${w}" style="width:${MI_PREV[key]!=null?MI_PREV[key]:0}%"></span>`+
+       (hasBase?`<span class="mi-base" style="left:calc(${100*base[i].p/scale}% - 1px)"></span>`:'')+
+       `</span><span class="mi-val">${l.p.toFixed(1)}% <span class="n">(${Number.isInteger(l.n)?l.n:l.n.toFixed(1)})</span></span></div>`;
+  });
+  el.innerHTML=h; wire();
+  const raf=typeof requestAnimationFrame==='function'?requestAnimationFrame:f=>f();
+  raf(()=>raf(()=>(el.querySelectorAll?el.querySelectorAll('.mi-fill'):[]).forEach(f=>{
+    f.style.width=f.dataset.w+'%'; MI_PREV[f.dataset.k]=+f.dataset.w;
+  })));
+  return el;
 }
 
 function buildBotFaces(bot){
@@ -2343,10 +2467,15 @@ function buildPillCard(c, opts){
   const badgeMark=badge?(badge.cls==='update'?'\u2020':'\u25CF')+' '+badge.text:'';
   let numline='';
   const posin=(c.position_indicator===undefined||c.position_indicator===null)?'':String(c.position_indicator);
+  const capKey=String(c.deck||'').toLowerCase();
+  const capSrc=(CARDFACE.captain||{})[capKey];
+  const capAR=(CARDFACE.captainAR||{})[capKey]||1;
+  const capFit=(CARDFACE.captainFit||{})[capKey]||[-.217,.413];
   if(c.card_number||badge||posin||errMark){
-    numline='<div class="ce-bottom"><div class="ce-footrow"><span class="cid2">'+(c.card_number||'')
+    numline='<div class="ce-bottom"><div class="ce-footrow"><span class="cid2'+(capSrc?' has-cap" style="padding-right:calc('+capFit[1]+' * 2.3rem)':'')+'">'+(c.card_number||'')
       +(badge?(c.card_number?' ':'')+'<span class="meta">'+badgeMark+'</span>':'')
       +(errMark?' <span class="meta errata '+levelClass(markEntries(c)[0].level)+'" title="'+lbEsc((markEntries(c)[0].type||'')+(levelWord(markEntries(c)[0].level)?' \u00b7 '+levelWord(markEntries(c)[0].level):''))+'">&lt;!&gt; Errata</span>':'')+'</span>'
+      +(capSrc?'<span class="capmini" style="margin-left:calc('+capFit[0]+' * 2.3rem);width:calc('+capAR+' * 2.3rem)"><img src="'+capSrc+'" alt=""></span>':'')
       +(posin?'<span class="posin">'+posin+'</span>':'')+'</div></div>';
   }
   el.innerHTML='<div class="ce-row"><div class="ce-main">'
@@ -2389,10 +2518,16 @@ let VISIBLE_IMG_CARDS=[];
 
 function placePosPills(){
   document.querySelectorAll('.card-entry .posin').forEach(p=>{
-    p.classList.remove('wide');
-    const row=p.parentElement, cid=row.querySelector('.cid2');
+    p.classList.remove('wide'); p.style.left='';
+    const row=p.parentElement, cap=row.querySelector('.capmini'), cid=cap||row.querySelector('.cid2');
     if(!cid) return;
-    if(p.getBoundingClientRect().left < cid.getBoundingClientRect().right + 4) p.classList.add('wide');
+    if(cap){
+      const rr=row.getBoundingClientRect();
+      const from=cap.getBoundingClientRect().right-rr.left;
+      const to=rr.width-(row.closest('.card-entry').classList.contains('has-focus')?38:2);
+      p.style.left=((from+to)/2)+'px';
+    }
+    if(p.getBoundingClientRect().left < cid.getBoundingClientRect().right + 4){ p.style.left=''; p.classList.add('wide'); }
   });
 }
 
@@ -2425,7 +2560,7 @@ function render(){
     if(deckBots.length){
       const bg=document.createElement('div');
       bg.className='card-grid bot-grid';
-      deckBots.forEach(b=>buildBotFaces(b).forEach(f=>bg.appendChild(f)));
+      deckBots.forEach(b=>{ const fs=buildBotFaces(b); fs.splice(fs.length-(b.campaign?1:0),0,buildMarketInsights(b)); fs.forEach(f=>bg.appendChild(f)); });
       section.appendChild(bg);
     }
     const grid=document.createElement('div');
@@ -2498,21 +2633,29 @@ boxDefs.forEach(({id,label})=>{
 syncBoxPills();
 
 const deckContainer = document.getElementById('deckFilters');
-DECK_ORDER.forEach(d=>{
+{
+  const p=document.createElement('span');
+  p.className='deck-pill commons'; p.textContent='Commons'; p.dataset.deck='::common';
+  p.onclick=()=>{
+    const toks=tokenList(currentQuery());
+    const isCommon=t=>/^deck:common(-cc|-tbg|-2nd)?$/i.test(t);
+    const had=toks.some(isCommon);
+    const kept=toks.filter(t=>!isCommon(t));
+    if(!had) kept.push('deck:common');
+    setQuery(kept.join(' '));
+  };
+  deckContainer.appendChild(p);
+}
+DECK_ORDER.filter(d=>!d.startsWith('Common:')).forEach(d=>{
   const p=document.createElement('span');
   const box=DECK_BOX[d];
-  let cls;
-  if(d.startsWith('Common:')){
-    cls = box==='tbg'?'common-tbg':box==='2nd'?'common-2nd':'common';
-  } else {
-    cls = box==='tbg'?'tbg':box==='2nd'?'second':'core';
-  }
+  const cls = box==='tbg'?'tbg':box==='2nd'?'second':'core';
   p.className='deck-pill '+cls;
   p.textContent=deckLabel(d); p.dataset.deck=d;
   p.onclick=()=>{
-    const tok = d.startsWith('Common:') ? 'deck:'+COMMON_TOKEN_FOR[d] : tokenOf('deck',d);
+    const tok = tokenOf('deck',d);
     let text=currentQuery();
-    if(box && !activeBoxes.has(box)) text=withBoxAdded(text,box);
+    if(box && !activeBoxes.has(box) && !showBots) text=withBoxAdded(text,box);
     const toks=tokenList(text);
     const i=toks.findIndex(t=>t.toLowerCase()===tok.toLowerCase());
     if(i>=0) toks.splice(i,1); else toks.push(tok);

@@ -72,7 +72,7 @@
     "icons": [],
     "text": {
       "cost": "",
-      "hand": "Play: You may find an [[engineer]], except in your Reserve deck. Deploy this card.",
+      "hand": "Play: You may find an [[engineer]]. Deploy this card.",
       "table": "Reaction: After logging an [[engineer]], recall a beamed card.",
       "goal": "Endgame: Score [[1vp]] for each [[engineer]] in your Log.",
       "reward": ""
