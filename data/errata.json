@@ -569,7 +569,7 @@
     {
      "type": "Minor Effect Change",
      "level": "Yellow Alert",
-     "note": "`Beam this card to a SHIP <<ship>>. Either:` has been changed to `Beam this card to a SHIP <<ship>> to either:`, to enforce the card's intention that beaming is a cost.",
+     "note": "`Beam this card to a SHIP <<ship>>. Either:` has been changed to `Beam this card to a SHIP <<ship>> to either:`, to enforce the card's intention that beaming is a cost. The \"You may spend 1 [[dilithium]] to do both instead.\", has been moved to a separate sentence, for clarity.",
      "affected": [
       "Promo pack 2",
       "English 1st print"
@@ -853,6 +853,23 @@
      ],
      "correct": [
       "Second Contact, 3rd print and later"
+     ],
+     "live": true
+    }
+   ]
+  },
+  "uss-cabot": {
+   "promo2": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "Previously said `scan for [[creature]]` and `Draw a card for each [[creature]] in play`, has been changed to `scan for a [[creature]]` and `Draw a card for each [[creature]] you have in play`.",
+     "affected": [
+      "Promo pack 2",
+      "1st print"
+     ],
+     "correct": [
+      "Promo pack 2, 2nd print and later"
      ],
      "live": true
     }

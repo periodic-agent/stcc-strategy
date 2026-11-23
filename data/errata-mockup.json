@@ -857,6 +857,23 @@
      "live": true
     }
    ]
+  },
+  "uss-cabot": {
+   "promo2": [
+    {
+     "type": "Minor Wording Change",
+     "level": "Green",
+     "note": "Previously said `scan for [[creature]]` and `Draw a card for each [[creature]] in play`, has been changed to `scan for a [[creature]]` and `Draw a card for each [[creature]] you have in play`.",
+     "affected": [
+      "Promo pack 2",
+      "1st print"
+     ],
+     "correct": [
+      "Promo pack 2, 2nd print and later"
+     ],
+     "live": true
+    }
+   ]
   }
  }
 }
