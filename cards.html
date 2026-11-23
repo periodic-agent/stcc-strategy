@@ -1208,7 +1208,8 @@ function traitByKey(k){
 }
 const TOKEN_ALIAS = {'col-restriction':'collective'};
 const PROSE_FIX = [
-  ['a 6 [[col-restriction]] added', 'a Requires [[col6]] restriction has been added']
+  ['a 6 [[col-restriction]] added', 'a Requires [[col6]] restriction has been added'],
+  ['SHIP <<ship>>', '[[ship]]']
 ];
 function errataFix(s){
   let t = String(s||'');

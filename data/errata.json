@@ -569,7 +569,7 @@
     {
      "type": "Minor Effect Change",
      "level": "Yellow Alert",
-     "note": "`Beam this card to a SHIP <<ship>>. Either:` has been changed to `Beam this card to a SHIP <<ship>> to either:`, to enforce the card's intention that beaming is a cost.",
+     "note": "`Beam this card to a SHIP <<ship>>. Either:` has been changed to `Beam this card to a SHIP <<ship>> to either:`, to enforce the card's intention that beaming is a cost. The \"You may spend 1 [[dilithium]] to do both instead.\", has been moved to a separate sentence, for clarity.",
      "affected": [
       "Promo pack 2",
       "English 1st print"
